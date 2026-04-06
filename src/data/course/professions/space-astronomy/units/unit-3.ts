@@ -36,6 +36,9 @@ export const unit3: Unit = {
           question: "Seasons happen because Earth gets closer to the Sun in summer.",
           correctAnswer: false,
           explanation: "This is the most common misconception in astronomy. Earth is actually slightly closer to the Sun during the Northern Hemisphere's winter.",
+          distractorExplanations: {
+            0: 'This is the most common misconception in astronomy',
+          },
         },
         {
           id: "sp-u3-L1-Q2",
@@ -50,6 +53,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Earth is tilted 23.5 degrees on its axis. This tilt means different hemispheres get more direct sunlight at different times of year, giving them opposite seasons.",
+          distractorExplanations: {
+            1: 'Earth is tilted 23.5 degrees on its axis',
+            2: 'Earth is tilted 23.5 degrees on its axis',
+            3: 'Earth is tilted 23.5 degrees on its axis',
+          },
         },
         {
           id: "sp-u3-L1-T2",
@@ -78,6 +86,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 1,
           explanation: "The hemispheres have opposite seasons. When the Northern Hemisphere tilts toward the Sun, the Southern Hemisphere tilts away.",
+          distractorExplanations: {
+            0: 'The hemispheres have opposite seasons',
+            2: 'The hemispheres have opposite seasons',
+            3: 'The hemispheres have opposite seasons',
+          },
         },
         {
           id: "sp-u3-L1-Q5",
@@ -100,6 +113,9 @@ export const unit3: Unit = {
           question: "The summer solstice is the longest day of the year.",
           correctAnswer: true,
           explanation: "The summer solstice is when your hemisphere tilts most toward the Sun, giving you the most hours of daylight.",
+          distractorExplanations: {
+            1: 'The summer solstice is when your hemisphere tilts most toward the Sun, giving you the most hours of daylight',
+          },
         },
         {
           id: "sp-u3-L1-Q6b",
@@ -116,6 +132,9 @@ export const unit3: Unit = {
           question: "If Earth had no axial tilt, we would have no seasons.",
           correctAnswer: true,
           explanation: "Without the tilt, every place on Earth would receive the same angle of sunlight year-round. No tilt means no seasons.",
+          distractorExplanations: {
+            1: 'Without the tilt, every place on Earth would receive the same angle of sunlight year-round',
+          },
         },
         {
           id: "sp-u3-L1-Q8",
@@ -155,6 +174,9 @@ export const unit3: Unit = {
           question: "The Moon produces its own light.",
           correctAnswer: false,
           explanation: "The Moon has no light of its own. It reflects sunlight. The phases we see depend on how much of the sunlit half faces us.",
+          distractorExplanations: {
+            0: 'The Moon has no light of its own. It reflects sunlight',
+          },
         },
         {
           id: "sp-u3-L2-Q2",
@@ -168,6 +190,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "As the Moon orbits Earth, the angle between the Sun, Moon, and Earth changes. This determines how much of the lit half we can see.",
+          distractorExplanations: {
+            0: 'As the Moon orbits Earth, the angle between the Sun, Moon, and Earth changes',
+            1: 'As the Moon orbits Earth, the angle between the Sun, Moon, and Earth changes',
+            3: 'As the Moon orbits Earth, the angle between the Sun, Moon, and Earth changes',
+          },
         },
         {
           id: "sp-u3-L2-T2",
@@ -219,6 +246,9 @@ export const unit3: Unit = {
           question: "We always see the same side of the Moon from Earth.",
           correctAnswer: true,
           explanation: "The Moon is tidally locked to Earth. Its rotation period equals its orbital period, so the same hemisphere always faces us.",
+          distractorExplanations: {
+            1: 'The Moon is tidally locked to Earth',
+          },
         },
         {
           id: "sp-u3-L2-Q7",
@@ -232,6 +262,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "\"Gibbous\" means more than half illuminated. It comes from a Latin word meaning \"hump\" or \"swelling.\"",
+          distractorExplanations: {
+            1: '\"Gibbous\" means more than half illuminated',
+            2: '\"Gibbous\" means more than half illuminated',
+            3: '\"Gibbous\" means more than half illuminated',
+          },
         },
         {
           id: "sp-u3-L2-Q8",
@@ -284,6 +319,9 @@ export const unit3: Unit = {
           question: "A lunar eclipse happens when Earth's shadow falls on the Moon.",
           correctAnswer: true,
           explanation: "During a lunar eclipse, Earth is between the Sun and Moon. Earth's shadow darkens the Moon, often turning it a deep red color.",
+          distractorExplanations: {
+            1: 'During a lunar eclipse, Earth is between the Sun and Moon',
+          },
         },
         {
           id: "sp-u3-L3-T2",
@@ -311,6 +349,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Moon's orbit is slightly tilted, so it usually passes above or below the Sun's position from our perspective. Perfect alignment is rare.",
+          distractorExplanations: {
+            0: 'The Moon\'s orbit is slightly tilted, so it usually passes above or below the Sun\'s position from our perspective',
+            2: 'The Moon\'s orbit is slightly tilted, so it usually passes above or below the Sun\'s position from our perspective',
+            3: 'The Moon\'s orbit is slightly tilted, so it usually passes above or below the Sun\'s position from our perspective',
+          },
         },
         {
           id: "sp-u3-L3-Q5",
@@ -339,6 +382,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 3,
           explanation: "Earth's atmosphere filters out blue light and bends red light into the shadow. It's the same reason sunsets appear red.",
+          distractorExplanations: {
+            0: 'Earth\'s atmosphere filters out blue light and bends red light into the shadow',
+            1: 'Earth\'s atmosphere filters out blue light and bends red light into the shadow',
+            2: 'Earth\'s atmosphere filters out blue light and bends red light into the shadow',
+          },
         },
         {
           id: "sp-u3-L3-Q7",
@@ -346,6 +394,9 @@ export const unit3: Unit = {
           question: "You should never look directly at a solar eclipse without special eclipse glasses.",
           correctAnswer: true,
           explanation: "The Sun's light can permanently damage your eyes in seconds. Only use certified eclipse glasses or indirect viewing methods.",
+          distractorExplanations: {
+            1: 'The Sun\'s light can permanently damage your eyes in seconds',
+          },
         },
         {
           id: "sp-u3-L3-Q8",
@@ -379,6 +430,9 @@ export const unit3: Unit = {
           question: "The Moon's gravity is the main cause of ocean tides on Earth.",
           correctAnswer: true,
           explanation: "The Moon is the primary driver of tides. The Sun also contributes, but its tidal effect is only about half as strong as the Moon's.",
+          distractorExplanations: {
+            1: 'The Moon is the primary driver of tides',
+          },
         },
         {
           id: "sp-u3-L4-Q2",
@@ -393,6 +447,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "Most coastlines get 2 high tides and 2 low tides every day as Earth rotates through the two tidal bulges caused by the Moon's gravitational pull.",
+          distractorExplanations: {
+            0: 'Most coastlines get 2 high tides and 2 low tides every day as Earth rotates through the two tidal bulges caused by the Moon\'s gravitational pull',
+            1: 'Most coastlines get 2 high tides and 2 low tides every day as Earth rotates through the two tidal bulges caused by the Moon\'s gravitational pull',
+            3: 'Most coastlines get 2 high tides and 2 low tides every day as Earth rotates through the two tidal bulges caused by the Moon\'s gravitational pull',
+          },
         },
         {
           id: "sp-u3-L4-T2",
@@ -420,6 +479,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "At quarter Moons, the Sun and Moon pull at 90-degree angles to each other, partially canceling their tidal forces. This creates smaller tidal ranges.",
+          distractorExplanations: {
+            0: 'At quarter Moons, the Sun and Moon pull at 90-degree angles to each other, partially canceling their tidal forces',
+            1: 'At quarter Moons, the Sun and Moon pull at 90-degree angles to each other, partially canceling their tidal forces',
+            3: 'At quarter Moons, the Sun and Moon pull at 90-degree angles to each other, partially canceling their tidal forces',
+          },
         },
         {
           id: "sp-u3-L4-Q5",
@@ -443,6 +507,9 @@ export const unit3: Unit = {
           question: "The Sun also affects Earth's tides, not just the Moon.",
           correctAnswer: true,
           explanation: "The Sun's gravity contributes to tides too. Its effect is about 46% as strong as the Moon's. When they align, tides are strongest (spring tides).",
+          distractorExplanations: {
+            1: 'The Sun\'s gravity contributes to tides too',
+          },
         },
         {
           id: "sp-u3-L4-Q7",
@@ -465,6 +532,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "Tidal force depends heavily on distance. The Moon is about 400 times closer than the Sun, which makes its tidal pull stronger despite its smaller mass.",
+          distractorExplanations: {
+            0: 'Tidal force depends heavily on distance',
+            1: 'Tidal force depends heavily on distance',
+            3: 'Tidal force depends heavily on distance',
+          },
         },
       ],
     },
@@ -489,6 +561,9 @@ export const unit3: Unit = {
           question: "Earth's magnetic field protects us from harmful solar radiation.",
           correctAnswer: true,
           explanation: "The magnetosphere acts like a force field, deflecting the stream of charged particles (solar wind) that constantly flows from the Sun.",
+          distractorExplanations: {
+            1: 'The magnetosphere acts like a force field, deflecting the stream of charged particles (solar wind) that constantly flows from the Sun',
+          },
         },
         {
           id: "sp-u3-L5-Q2",
@@ -502,6 +577,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 1,
           explanation: "Earth's outer core is molten iron. As it flows, it generates electric currents that create the magnetic field, like a giant natural dynamo.",
+          distractorExplanations: {
+            0: 'Earth\'s outer core is molten iron. As it flows, it generates electric currents that create the magnetic field, like a giant natural dynamo',
+            2: 'Earth\'s outer core is molten iron. As it flows, it generates electric currents that create the magnetic field, like a giant natural dynamo',
+            3: 'Earth\'s outer core is molten iron. As it flows, it generates electric currents that create the magnetic field, like a giant natural dynamo',
+          },
         },
         {
           id: "sp-u3-L5-T2",
@@ -556,6 +636,9 @@ export const unit3: Unit = {
           question: "Mars has lost most of its atmosphere partly because it lacks a strong magnetic field.",
           correctAnswer: true,
           explanation: "Mars lost its global magnetic field billions of years ago. Without that shield, solar wind gradually stripped away most of its atmosphere.",
+          distractorExplanations: {
+            1: 'Mars lost its global magnetic field billions of years ago',
+          },
         },
         {
           id: "sp-u3-L5-Q8",

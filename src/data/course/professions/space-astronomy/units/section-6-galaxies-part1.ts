@@ -32,6 +32,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "A galaxy is a collection of stars held together by gravity.",
             correctAnswer: true,
             explanation: "Gravity is the force that binds stars, gas, dust, and dark matter into the structure we call a galaxy.",
+            distractorExplanations: {
+              1: 'Gravity is the force that binds stars, gas, dust, and dark matter into the structure we call a galaxy.',
+            },
           },
           {
             id: "sp-sec6-u1-L1-Q2",
@@ -45,6 +48,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gravity is the dominant force on galactic scales. It pulls stars, gas, and dark matter into a bound structure.",
+            distractorExplanations: {
+              0: 'Magnetic fields between stars is incorrect; gravity is the dominant force on galactic scales.',
+              2: 'Light pressure from the brightest stars is incorrect; gravity is the dominant force on galactic scales.',
+              3: 'Collisions between gas clouds is incorrect; gravity is the dominant force on galactic scales.',
+            },
           },
           {
             id: "sp-sec6-u1-L1-T2",
@@ -75,6 +83,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Galaxies contain stars plus vast amounts of gas, dust, and dark matter. The gas and dust serve as raw material for forming new stars.",
+            distractorExplanations: {
+              0: 'Only empty space between stars is incorrect; galaxies contain stars plus vast amounts of gas, dust, and dark matter.',
+              2: 'Liquid water in large quantities is incorrect; galaxies contain stars plus vast amounts of gas, dust, and dark matter.',
+              3: 'Solid rock filling gaps between stars is incorrect; galaxies contain stars plus vast amounts of gas, dust, and dark matter.',
+            },
           },
           {
             id: "sp-sec6-u1-L1-T3",
@@ -121,6 +134,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Edwin Hubble classified galaxies based on their color.",
             correctAnswer: false,
             explanation: "Hubble classified galaxies based on their shape (morphology), not their color. His system groups them into elliptical, spiral, and barred spiral types.",
+            distractorExplanations: {
+              0: 'Hubble classified galaxies based on their shape (morphology), not their color.',
+            },
           },
           {
             id: "sp-sec6-u1-L2-Q2",
@@ -134,6 +150,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Hubble tuning fork is a morphological classification scheme that sorts galaxies by their visual appearance and shape.",
+            distractorExplanations: {
+              0: 'Stars by temperature is incorrect; the Hubble tuning fork is a morphological classification scheme that sorts galaxies by their visual appearance and shape.',
+              2: 'Nebulae by brightness is incorrect; the Hubble tuning fork is a morphological classification scheme that sorts galaxies by their visual appearance and shape.',
+              3: 'Planets by distance from Earth is incorrect; the Hubble tuning fork is a morphological classification scheme that sorts galaxies by their visual appearance.',
+            },
           },
           {
             id: "sp-sec6-u1-L2-T2",
@@ -163,6 +184,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Irregular galaxies lack the organized structure of ellipticals or spirals. They often result from gravitational interactions with other galaxies.",
+            distractorExplanations: {
+              0: 'Elliptical is incorrect; irregular galaxies lack the organized structure of ellipticals or spirals.',
+              1: 'Spiral is incorrect; irregular galaxies lack the organized structure of ellipticals or spirals.',
+              2: 'Barred spiral is incorrect; irregular galaxies lack the organized structure of ellipticals or spirals.',
+            },
           },
           {
             id: "sp-sec6-u1-L2-Q5",
@@ -203,6 +229,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Elliptical galaxies form new stars at a high rate.",
             correctAnswer: false,
             explanation: "Elliptical galaxies have little gas and dust left, so star formation has mostly stopped. They are dominated by old stars.",
+            distractorExplanations: {
+              0: 'Elliptical galaxies have little gas and dust left, so star formation has mostly stopped.',
+            },
           },
           {
             id: "sp-sec6-u1-L3-Q2",
@@ -216,6 +245,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Elliptical galaxies are red because their stellar populations are old. Young blue stars have already burned out, leaving cooler red and yellow stars behind.",
+            distractorExplanations: {
+              0: 'They are very hot and emit red radiation is incorrect; elliptical galaxies are red because their stellar populations are old.',
+              1: 'Dust clouds filter out blue light is incorrect; elliptical galaxies are red because their stellar populations are old.',
+              3: 'They are moving away from us very fast is incorrect; elliptical galaxies are red because their stellar populations are old.',
+            },
           },
           {
             id: "sp-sec6-u1-L3-T2",
@@ -235,6 +269,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "E0 means zero ellipticity, so the galaxy appears perfectly circular. Higher numbers mean more elongated shapes.",
+            distractorExplanations: {
+              1: 'Very elongated is incorrect; e0 means zero ellipticity, so the galaxy appears perfectly circular.',
+              2: 'Spiral-shaped is incorrect; e0 means zero ellipticity, so the galaxy appears perfectly circular.',
+              3: 'Irregular and blobby is incorrect; e0 means zero ellipticity, so the galaxy appears perfectly circular.',
+            },
           },
           {
             id: "sp-sec6-u1-L3-Q4",
@@ -275,6 +314,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The smooth shape, lack of arms, and red-yellow color all point to an elliptical galaxy with an old stellar population and depleted gas reserves.",
+            distractorExplanations: {
+              1: 'This is incorrect; the smooth shape, lack of arms, and red-yellow color all point to an elliptical galaxy with an old stellar.',
+              2: 'This is incorrect; the smooth shape, lack of arms, and red-yellow color all point to an elliptical galaxy with an old stellar.',
+              3: 'Bright blue supergiant stars throughout is incorrect; the smooth shape, lack of arms, and red-yellow color all point to an elliptical galaxy with an old.',
+            },
           },
         ],
       },
@@ -298,6 +342,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "The same stars stay permanently locked inside a spiral arm.",
             correctAnswer: false,
             explanation: "Stars orbit through the arms like cars passing through a traffic jam. The jam stays in place, but the cars (stars) keep moving.",
+            distractorExplanations: {
+              0: 'Stars orbit through the arms like cars passing through a traffic jam.',
+            },
           },
           {
             id: "sp-sec6-u1-L4-Q2",
@@ -311,6 +358,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gas gets compressed as it enters a density wave. The compression triggers new star formation, and the young hot stars make the arms glow brightly.",
+            distractorExplanations: {
+              0: 'Stars move faster in the arms is incorrect; gas gets compressed as it enters a density wave.',
+              2: 'Arms contain different types of atoms is incorrect; gas gets compressed as it enters a density wave.',
+              3: 'This is incorrect; gas gets compressed as it enters a density wave.',
+            },
           },
           {
             id: "sp-sec6-u1-L4-T2",
@@ -365,6 +417,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The spiral arms are where gas compresses and forms new stars. These young, hot, blue stars make the arms appear bright.",
+            distractorExplanations: {
+              0: 'In the central bulge is incorrect; the spiral arms are where gas compresses and forms new stars.',
+              1: 'In the halo is incorrect; the spiral arms are where gas compresses and forms new stars.',
+              3: 'Evenly distributed everywhere is incorrect; the spiral arms are where gas compresses and forms new stars.',
+            },
           },
         ],
       },
@@ -388,6 +445,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Irregular galaxies often result from gravitational interactions with other galaxies.",
             correctAnswer: true,
             explanation: "Close encounters and collisions can tear apart a galaxy's structure, leaving behind an irregular shape with no clear symmetry.",
+            distractorExplanations: {
+              1: 'Close encounters and collisions can tear apart a galaxy\'s structure, leaving behind an irregular shape with no clear symmetry.',
+            },
           },
           {
             id: "sp-sec6-u1-L5-Q2",
@@ -401,6 +461,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Large Magellanic Cloud (LMC) is an irregular galaxy and a satellite of the Milky Way. It has some bar structure but is classified as irregular overall.",
+            distractorExplanations: {
+              0: 'Giant elliptical is incorrect; the Large Magellanic Cloud (LMC) is an irregular galaxy and a satellite of the Milky Way.',
+              1: 'Barred spiral is incorrect; the Large Magellanic Cloud (LMC) is an irregular galaxy and a satellite of the Milky Way.',
+              3: 'Lenticular is incorrect; the Large Magellanic Cloud (LMC) is an irregular galaxy and a satellite of the Milky Way.',
+            },
           },
           {
             id: "sp-sec6-u1-L5-T2",
@@ -444,6 +509,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A flat disk with curving arms makes it a spiral. The bar connecting the core to the arms specifically makes it a barred spiral galaxy.",
+            distractorExplanations: {
+              0: 'Elliptical galaxy is incorrect; a flat disk with curving arms makes it a spiral.',
+              2: 'Irregular galaxy is incorrect; a flat disk with curving arms makes it a spiral.',
+              3: 'Lenticular galaxy is incorrect; a flat disk with curving arms makes it a spiral.',
+            },
           },
           {
             id: "sp-sec6-u1-L5-Q6",
@@ -457,6 +527,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Spiral galaxies have abundant gas in their arms, fueling ongoing star formation. Ellipticals and lenticulars have used up most of their gas.",
+            distractorExplanations: {
+              0: 'Elliptical galaxies is incorrect; spiral galaxies have abundant gas in their arms, fueling ongoing star formation.',
+              2: 'Lenticular galaxies is incorrect; spiral galaxies have abundant gas in their arms, fueling ongoing star formation.',
+              3: 'All types form stars at equal rates is incorrect; spiral galaxies have abundant gas in their arms, fueling ongoing star formation.',
+            },
           },
         ],
       },
@@ -494,6 +569,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "The Milky Way is an elliptical galaxy.",
             correctAnswer: false,
             explanation: "The Milky Way is a barred spiral galaxy, not elliptical. It has a central bar, a flat disk, and multiple spiral arms.",
+            distractorExplanations: {
+              0: 'The Milky Way is a barred spiral galaxy, not elliptical.',
+            },
           },
           {
             id: "sp-sec6-u2-L1-Q2",
@@ -507,6 +585,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Milky Way is classified as a barred spiral galaxy (type SBbc). Its central bar connects to at least two major spiral arms.",
+            distractorExplanations: {
+              0: 'Giant elliptical is incorrect; the Milky Way is classified as a barred spiral galaxy (type SBbc).',
+              2: 'Irregular is incorrect; the Milky Way is classified as a barred spiral galaxy (type SBbc).',
+              3: 'Lenticular is incorrect; the Milky Way is classified as a barred spiral galaxy (type SBbc).',
+            },
           },
           {
             id: "sp-sec6-u2-L1-T2",
@@ -537,6 +620,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The disk is about 100,000 light-years wide but only about 1,000 light-years thick. That's a 100:1 ratio, like a very thin pancake.",
+            distractorExplanations: {
+              0: 'This is incorrect; the disk is about 100,000 light-years wide but only about 1,000 light-years thick.',
+              2: 'It\'s twice as thick as it is wide is incorrect; the disk is about 100,000 light-years wide but only about 1,000 light-years thick.',
+              3: 'Thickness and width are about equal is incorrect; the disk is about 100,000 light-years wide but only about 1,000 light-years thick.',
+            },
           },
           {
             id: "sp-sec6-u2-L1-T3",
@@ -585,6 +673,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "The Milky Way's halo is disk-shaped, just like its main body.",
             correctAnswer: false,
             explanation: "The halo is roughly spherical, surrounding the disk like a bubble. It contains old stars, globular clusters, and dark matter.",
+            distractorExplanations: {
+              0: 'The halo is roughly spherical, surrounding the disk like a bubble.',
+            },
           },
           {
             id: "sp-sec6-u2-L2-Q2",
@@ -613,6 +704,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Sun sits on the Orion Arm (sometimes called the Orion Spur), a minor arm between the larger Perseus and Sagittarius arms.",
+            distractorExplanations: {
+              0: 'The Perseus Arm is incorrect; the Sun sits on the Orion Arm (sometimes called the Orion Spur), a minor arm between the larger Perseus and Sagittarius arms.',
+              1: 'The Sagittarius Arm is incorrect; the Sun sits on the Orion Arm (sometimes called the Orion Spur), a minor arm between the larger Perseus and Sagittarius arms.',
+              3: 'The Centaurus Arm is incorrect; the Sun sits on the Orion Arm (sometimes called the Orion Spur), a minor arm between the larger Perseus and Sagittarius arms.',
+            },
           },
           {
             id: "sp-sec6-u2-L2-Q4",
@@ -651,6 +747,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Astronomers tracked individual stars orbiting Sagittarius A* for decades. Their speeds and paths revealed the mass of the invisible object pulling on them.",
+            distractorExplanations: {
+              0: 'By measuring the black hole\'s color is incorrect; astronomers tracked individual stars orbiting Sagittarius A* for decades.',
+              2: 'This is incorrect; astronomers tracked individual stars orbiting Sagittarius A* for decades.',
+              3: 'This is incorrect; astronomers tracked individual stars orbiting Sagittarius A* for decades.',
+            },
           },
         ],
       },
@@ -675,6 +776,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "The Sun is located near the center of the Milky Way.",
             correctAnswer: false,
             explanation: "The Sun is about 26,000 light-years from the center, roughly halfway out in the disk. We are far from the central bulge.",
+            distractorExplanations: {
+              0: 'The Sun is about 26,000 light-years from the center, roughly halfway out in the disk.',
+            },
           },
           {
             id: "sp-sec6-u2-L3-Q2",
@@ -705,6 +809,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "One galactic year is roughly 225 to 250 million years. Since the Sun formed about 4.6 billion years ago, it has completed around 20 orbits.",
+            distractorExplanations: {
+              0: 'About 1 million years is incorrect; one galactic year is roughly 225 to 250 million years.',
+              1: 'About 10 million years is incorrect; one galactic year is roughly 225 to 250 million years.',
+              3: 'About 10 billion years is incorrect; one galactic year is roughly 225 to 250 million years.',
+            },
           },
           {
             id: "sp-sec6-u2-L3-Q4",
@@ -746,6 +855,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The circumference of the Sun's orbit is about 160,000 light-years. Even at 220 km/s, covering that distance takes over 200 million years.",
+            distractorExplanations: {
+              0: 'The Sun keeps slowing down is incorrect; the circumference of the Sun\'s orbit is about 160,000 light-years.',
+              2: 'Gravity at the center is weak is incorrect; the circumference of the Sun\'s orbit is about 160,000 light-years.',
+              3: 'The Sun orbits in the wrong direction is incorrect; the circumference of the Sun\'s orbit is about 160,000 light-years.',
+            },
           },
         ],
       },
@@ -769,6 +883,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "The Milky Way has smaller galaxies orbiting around it.",
             correctAnswer: true,
             explanation: "Over 50 satellite galaxies have been identified around the Milky Way. Most are small dwarf galaxies, though the Magellanic Clouds are notable exceptions.",
+            distractorExplanations: {
+              1: 'Over 50 satellite galaxies have been identified around the Milky Way.',
+            },
           },
           {
             id: "sp-sec6-u2-L4-Q2",
@@ -782,6 +899,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Large and Small Magellanic Clouds are the Milky Way's biggest satellites. They are visible as fuzzy patches in Southern Hemisphere skies.",
+            distractorExplanations: {
+              0: 'Andromeda and Triangulum is incorrect; the Large and Small Magellanic Clouds are the Milky Way\'s biggest satellites.',
+              2: 'Sagittarius and Canis Major dwarfs is incorrect; the Large and Small Magellanic Clouds are the Milky Way\'s biggest satellites.',
+              3: 'Centaurus A and Fornax is incorrect; the Large and Small Magellanic Clouds are the Milky Way\'s biggest satellites.',
+            },
           },
           {
             id: "sp-sec6-u2-L4-T2",
@@ -830,6 +952,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Andromeda Galaxy (M31) is the nearest large galaxy to the Milky Way at about 2.5 million light-years away.",
+            distractorExplanations: {
+              0: 'Triangulum (M33) is incorrect; the Andromeda Galaxy (M31) is the nearest large galaxy to the Milky Way at about 2.5 million light-years away.',
+              1: 'Centaurus A is incorrect; the Andromeda Galaxy (M31) is the nearest large galaxy to the Milky Way at about 2.5 million light-years away.',
+              3: 'Sombrero Galaxy is incorrect; the Andromeda Galaxy (M31) is the nearest large galaxy to the Milky Way at about 2.5 million light-years away.',
+            },
           },
         ],
       },
@@ -853,6 +980,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Astronomers can photograph the Milky Way from outside to see its full shape.",
             correctAnswer: false,
             explanation: "We've never left the Milky Way. Every image showing our galaxy's full shape is an artist's illustration based on measurements and models.",
+            distractorExplanations: {
+              0: 'We\'ve never left the Milky Way.',
+            },
           },
           {
             id: "sp-sec6-u2-L5-Q2",
@@ -866,6 +996,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Interstellar dust in the galactic disk absorbs and scatters visible light. This is why astronomers use radio and infrared telescopes, which can see through dust.",
+            distractorExplanations: {
+              0: 'The stars are too bright to see past is incorrect; interstellar dust in the galactic disk absorbs and scatters visible light.',
+              2: 'This claim is incorrect; interstellar dust in the galactic disk absorbs and scatters visible light.',
+              3: 'We don\'t have large enough telescopes is incorrect; interstellar dust in the galactic disk absorbs and scatters visible light.',
+            },
           },
           {
             id: "sp-sec6-u2-L5-T2",
@@ -920,6 +1055,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Radio and infrared wavelengths penetrate dust. A bigger optical telescope or higher altitude won't help because the dust still blocks visible light completely.",
+            distractorExplanations: {
+              0: 'This is incorrect; radio and infrared wavelengths penetrate dust.',
+              2: 'This is incorrect; radio and infrared wavelengths penetrate dust.',
+              3: 'A telescope placed higher on a mountain is incorrect; radio and infrared wavelengths penetrate dust.',
+            },
           },
         ],
       },
@@ -943,6 +1083,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "The Andromeda Galaxy is moving toward the Milky Way.",
             correctAnswer: true,
             explanation: "Andromeda is approaching at about 110 km/s. The two galaxies are on a collision course, though the merger is still billions of years away.",
+            distractorExplanations: {
+              1: 'Andromeda is approaching at about 110 km/s.',
+            },
           },
           {
             id: "sp-sec6-u2-L6-Q2",
@@ -974,6 +1117,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Stars are so far apart that direct collisions are extremely unlikely. Gravity slowly rearranges the stars into a new combined galaxy.",
+            distractorExplanations: {
+              0: 'Most stars collide and are destroyed is incorrect; stars are so far apart that direct collisions are extremely unlikely.',
+              2: 'Stars stop moving during the merger is incorrect; stars are so far apart that direct collisions are extremely unlikely.',
+              3: 'All stars are flung out of both galaxies is incorrect; stars are so far apart that direct collisions are extremely unlikely.',
+            },
           },
           {
             id: "sp-sec6-u2-L6-Q4",
@@ -1001,6 +1149,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Major mergers between large spiral galaxies typically produce elliptical galaxies. The new galaxy will eventually settle into a smooth, rounded shape.",
+            distractorExplanations: {
+              0: 'A new spiral galaxy is incorrect; major mergers between large spiral galaxies typically produce elliptical galaxies.',
+              2: 'An irregular galaxy forever is incorrect; major mergers between large spiral galaxies typically produce elliptical galaxies.',
+              3: 'The galaxies will bounce apart again is incorrect; major mergers between large spiral galaxies typically produce elliptical galaxies.',
+            },
           },
           {
             id: "sp-sec6-u2-L6-Q6",
@@ -1046,6 +1199,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Stars at the edges of galaxies orbit slower than astronomers expected.",
             correctAnswer: false,
             explanation: "Stars at the edges orbit faster than expected. Based on visible matter alone, they should be moving much slower or flying away from the galaxy entirely.",
+            distractorExplanations: {
+              0: 'Stars at the edges orbit faster than expected.',
+            },
           },
           {
             id: "sp-sec6-u3-L1-Q2",
@@ -1059,6 +1215,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Rotation curves showed that outer stars orbit too fast for the gravity of visible matter alone. Something unseen must be adding extra gravitational pull.",
+            distractorExplanations: {
+              0: 'Galaxies were not rotating at all is incorrect; rotation curves showed that outer stars orbit too fast for the gravity of visible matter alone.',
+              2: 'This claim is incorrect; rotation curves showed that outer stars orbit too fast for the gravity of visible matter alone.',
+              3: 'Galaxies rotated in the wrong direction is incorrect; rotation curves showed that outer stars orbit too fast for the gravity of visible matter alone.',
+            },
           },
           {
             id: "sp-sec6-u3-L1-T2",
@@ -1086,6 +1247,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A rotation curve plots orbital speed versus distance from the galactic center. Flat rotation curves at large distances are the key evidence for dark matter.",
+            distractorExplanations: {
+              0: 'A graph of galaxy brightness over time is incorrect; a rotation curve plots orbital speed versus distance from the galactic center.',
+              1: 'A map of star colors in the galaxy is incorrect; a rotation curve plots orbital speed versus distance from the galactic center.',
+              3: 'This is incorrect; a rotation curve plots orbital speed versus distance from the galactic center.',
+            },
           },
           {
             id: "sp-sec6-u3-L1-T3",
@@ -1105,6 +1271,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dark matter is invisible to all forms of electromagnetic radiation. It doesn't interact with light at all, which is why we call it dark.",
+            distractorExplanations: {
+              0: 'It is black in color is incorrect; dark matter is invisible to all forms of electromagnetic radiation.',
+              1: 'It only exists in dark regions of space is incorrect; dark matter is invisible to all forms of electromagnetic radiation.',
+              3: 'It destroys light that passes near it is incorrect; dark matter is invisible to all forms of electromagnetic radiation.',
+            },
           },
           {
             id: "sp-sec6-u3-L1-Q6",
@@ -1119,6 +1290,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When orbital speeds far exceed what visible matter can explain, the most accepted explanation is that dark matter provides the additional gravitational pull.",
+            distractorExplanations: {
+              0: 'The measurements must be wrong is incorrect; when orbital speeds far exceed what visible matter can explain, the most accepted explanation is that dark matter.',
+              2: 'This is incorrect; when orbital speeds far exceed what visible matter can explain, the most accepted explanation is that dark matter.',
+              3: 'The galaxy is much smaller than it appears is incorrect; when orbital speeds far exceed what visible matter can explain, the most accepted explanation is.',
+            },
           },
         ],
       },
@@ -1142,6 +1318,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "A galaxy's dark matter halo is smaller than its visible disk.",
             correctAnswer: false,
             explanation: "Dark matter halos are much larger than the visible galaxy. The Milky Way's dark matter halo extends roughly 10 times farther than its visible disk of stars.",
+            distractorExplanations: {
+              0: 'Dark matter halos are much larger than the visible galaxy.',
+            },
           },
           {
             id: "sp-sec6-u3-L2-Q2",
@@ -1155,6 +1334,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dark matter forms a vast spherical halo surrounding the entire galaxy. This halo provides the gravitational scaffolding that holds the visible galaxy together.",
+            distractorExplanations: {
+              0: 'Concentrated in the central bulge is incorrect; dark matter forms a vast spherical halo surrounding the entire galaxy.',
+              1: 'Only in the spiral arms is incorrect; dark matter forms a vast spherical halo surrounding the entire galaxy.',
+              3: 'Between galaxies in empty space is incorrect; dark matter forms a vast spherical halo surrounding the entire galaxy.',
+            },
           },
           {
             id: "sp-sec6-u3-L2-T2",
@@ -1196,6 +1380,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gravitational lensing bends light around massive objects. By measuring how much light is bent, astronomers can map the total mass, including invisible dark matter.",
+            distractorExplanations: {
+              0: 'It makes dark matter glow visibly is incorrect; gravitational lensing bends light around massive objects.',
+              2: 'This claim is incorrect; gravitational lensing bends light around massive objects.',
+              3: 'This claim is incorrect; gravitational lensing bends light around massive objects.',
+            },
           },
           {
             id: "sp-sec6-u3-L2-Q6",
@@ -1228,6 +1417,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Visible matter makes up most of a galaxy's mass.",
             correctAnswer: false,
             explanation: "Visible matter is only about 15% of a galaxy's total mass. Dark matter makes up roughly 85%. What we can see is the small fraction.",
+            distractorExplanations: {
+              0: 'Visible matter is only about 15% of a galaxy\'s total mass.',
+            },
           },
           {
             id: "sp-sec6-u3-L3-Q2",
@@ -1258,6 +1450,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dark energy accounts for about 68% of the universe's total energy content. Dark matter is about 27%, and ordinary matter is just 5%.",
+            distractorExplanations: {
+              0: 'This is incorrect; dark energy accounts for about 68% of the universe\'s total energy content.',
+              1: 'Dark matter is incorrect; dark energy accounts for about 68% of the universe\'s total energy content.',
+              3: 'Electromagnetic radiation is incorrect; dark energy accounts for about 68% of the universe\'s total energy content.',
+            },
           },
           {
             id: "sp-sec6-u3-L3-Q4",
@@ -1297,6 +1494,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Some dwarf galaxies are up to 99% dark matter, leaving very few stars to produce visible light. This makes them extremely faint and easy to miss.",
+            distractorExplanations: {
+              0: 'They move too fast to photograph is incorrect; some dwarf galaxies are up to 99% dark matter, leaving very few stars to produce visible light.',
+              2: 'They only exist in the infrared spectrum is incorrect; some dwarf galaxies are up to 99% dark matter, leaving very few stars to produce visible light.',
+              3: 'They are always behind larger galaxies is incorrect; some dwarf galaxies are up to 99% dark matter, leaving very few stars to produce visible light.',
+            },
           },
         ],
       },
@@ -1320,6 +1522,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Dark matter could just be normal matter that doesn't produce light, like cold rocks.",
             correctAnswer: false,
             explanation: "Ordinary matter (even dark, cold ordinary matter) interacts with light. Dark matter doesn't interact with electromagnetic radiation at all, so it must be something fundamentally different.",
+            distractorExplanations: {
+              0: 'Ordinary matter (even dark, cold ordinary matter) interacts with light.',
+            },
           },
           {
             id: "sp-sec6-u3-L4-Q2",
@@ -1333,6 +1538,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dark matter must be a new kind of particle, not found in the standard model of physics. It interacts with gravity but not with light or the electromagnetic force.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; dark matter must be a new kind of particle, not found in the standard model of physics.',
+              2: 'It is concentrated inside stars is incorrect; dark matter must be a new kind of particle, not found in the standard model of physics.',
+              3: 'This claim is incorrect; dark matter must be a new kind of particle, not found in the standard model of physics.',
+            },
           },
           {
             id: "sp-sec6-u3-L4-T2",
@@ -1384,6 +1594,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The rock above filters out cosmic rays and other particles that would trigger false detections. Only dark matter (and neutrinos) could pass through all that rock.",
+            distractorExplanations: {
+              0: 'Dark matter is found underground is incorrect; the rock above filters out cosmic rays and other particles that would trigger false detections.',
+              2: 'This is incorrect; the rock above filters out cosmic rays and other particles that would trigger false detections.',
+              3: 'This is incorrect; the rock above filters out cosmic rays and other particles that would trigger false detections.',
+            },
           },
         ],
       },
@@ -1407,6 +1622,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Dark matter and dark energy have the same effect on the universe.",
             correctAnswer: false,
             explanation: "They have opposite effects. Dark matter attracts and holds structures together. Dark energy repels and drives the accelerating expansion of the universe.",
+            distractorExplanations: {
+              0: 'They have opposite effects.',
+            },
           },
           {
             id: "sp-sec6-u3-L5-Q2",
@@ -1436,6 +1654,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Distant Type Ia supernovae appeared fainter than expected, meaning they were farther away than a decelerating universe would allow. The expansion of the universe is accelerating.",
+            distractorExplanations: {
+              0: 'This is incorrect; distant Type Ia supernovae appeared fainter than expected, meaning they were farther away than a decelerating.',
+              2: 'By watching galaxies collide is incorrect; distant Type Ia supernovae appeared fainter than expected, meaning they were farther away than a decelerating.',
+              3: 'By measuring dark matter halos is incorrect; distant Type Ia supernovae appeared fainter than expected, meaning they were farther away than a decelerating.',
+            },
           },
           {
             id: "sp-sec6-u3-L5-Q4",
@@ -1476,6 +1699,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The extra mass in the cluster points to dark matter. The accelerating recession of distant galaxies points to dark energy. These are two separate phenomena requiring two different explanations.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; the extra mass in the cluster points to dark matter.',
+              1: 'This claim is incorrect; the extra mass in the cluster points to dark matter.',
+              3: 'The observations must be measurement errors is incorrect; the extra mass in the cluster points to dark matter.',
+            },
           },
         ],
       },
@@ -1518,6 +1746,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Spiral galaxies have gas-rich arms where new stars form constantly. Ellipticals and lenticulars have largely used up their gas.",
+            distractorExplanations: {
+              0: 'Elliptical is incorrect; spiral galaxies have gas-rich arms where new stars form constantly.',
+              2: 'Lenticular is incorrect; spiral galaxies have gas-rich arms where new stars form constantly.',
+              3: 'All types form stars at the same rate is incorrect; spiral galaxies have gas-rich arms where new stars form constantly.',
+            },
           },
           {
             id: "sp-sec6-u4-L1-Q2",
@@ -1541,6 +1774,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A smooth, round, reddish blob with no arms or star formation regions matches an E0 elliptical galaxy. The red color tells you its stars are old.",
+            distractorExplanations: {
+              0: 'Spiral galaxy is incorrect; a smooth, round, reddish blob with no arms or star formation regions matches an E0 elliptical galaxy.',
+              2: 'Barred spiral galaxy is incorrect; a smooth, round, reddish blob with no arms or star formation regions matches an E0 elliptical galaxy.',
+              3: 'Irregular galaxy is incorrect; a smooth, round, reddish blob with no arms or star formation regions matches an E0 elliptical galaxy.',
+            },
           },
           {
             id: "sp-sec6-u4-L1-Q4",
@@ -1571,6 +1809,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Hubble tuning fork, created by Edwin Hubble, classifies galaxies into elliptical, spiral, barred spiral, and lenticular types based on shape.",
+            distractorExplanations: {
+              0: 'The Hertzsprung-Russell diagram is incorrect; it classifies stars, not galaxies. The Hubble tuning fork classifies galaxy shapes.',
+              2: 'The Drake equation is incorrect; it estimates intelligent civilizations, not galaxy shapes. The Hubble tuning fork classifies galaxies.',
+              3: 'The Chandrasekhar limit is incorrect; it defines a mass limit for white dwarfs, not a galaxy classification scheme.',
+            },
           },
         ],
       },
@@ -1611,6 +1854,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Sagittarius A* is a supermassive black hole with about 4 million solar masses at the heart of our galaxy.",
+            distractorExplanations: {
+              0: 'A massive star cluster only is incorrect; sagittarius A* is a supermassive black hole with about 4 million solar masses at the heart of our galaxy.',
+              2: 'A bright nebula is incorrect; sagittarius A* is a supermassive black hole with about 4 million solar masses at the heart of our galaxy.',
+              3: 'An empty region with no matter is incorrect; sagittarius A* is a supermassive black hole with about 4 million solar masses at the heart of our galaxy.',
+            },
           },
           {
             id: "sp-sec6-u4-L2-Q3",
@@ -1626,6 +1874,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "The Milky Way and Andromeda are moving away from each other.",
             correctAnswer: false,
             explanation: "Andromeda is approaching the Milky Way at about 110 km/s. The two galaxies will merge in roughly 4 to 5 billion years.",
+            distractorExplanations: {
+              0: 'Andromeda is approaching the Milky Way at about 110 km/s.',
+            },
           },
           {
             id: "sp-sec6-u4-L2-Q5",
@@ -1647,6 +1898,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "We have no spacecraft or probe outside the Milky Way. All images showing the galaxy's full shape are artist illustrations based on careful measurements from the inside.",
+            distractorExplanations: {
+              0: 'Our cameras aren\'t powerful enough is incorrect; we have no spacecraft or probe outside the Milky Way.',
+              2: 'The Milky Way is invisible to cameras is incorrect; we have no spacecraft or probe outside the Milky Way.',
+              3: 'This claim is incorrect; we have no spacecraft or probe outside the Milky Way.',
+            },
           },
         ],
       },
@@ -1676,6 +1932,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Galaxy rotation curves showed outer stars orbiting much faster than visible matter could explain. This was the key evidence that unseen mass must exist.",
+            distractorExplanations: {
+              1: 'Dark patches visible through telescopes is incorrect; galaxy rotation curves showed outer stars orbiting much faster than visible matter could explain.',
+              2: 'Radio signals from invisible sources is incorrect; galaxy rotation curves showed outer stars orbiting much faster than visible matter could explain.',
+              3: 'Temperature measurements of empty space is incorrect; galaxy rotation curves showed outer stars orbiting much faster than visible matter could explain.',
+            },
           },
           {
             id: "sp-sec6-u4-L3-Q2",
@@ -1718,6 +1979,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Excess gravitational lensing (Team A) reveals hidden mass, which is dark matter. Accelerating expansion (Team B) is driven by dark energy. These are separate phenomena.",
+            distractorExplanations: {
+              0: 'Both results point to dark matter is incorrect; excess gravitational lensing (Team A) reveals hidden mass, which is dark matter.',
+              1: 'Both results point to dark energy is incorrect; excess gravitational lensing (Team A) reveals hidden mass, which is dark matter.',
+              3: 'This claim is incorrect; excess gravitational lensing (Team A) reveals hidden mass, which is dark matter.',
+            },
           },
           {
             id: "sp-sec6-u4-L3-Q6",
@@ -1731,6 +1997,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dark matter (27%) plus dark energy (68%) equals about 95%. Only 5% of the universe is ordinary matter that we understand well.",
+            distractorExplanations: {
+              0: 'About 50% is incorrect; dark matter (27%) plus dark energy (68%) equals about 95%.',
+              1: 'About 75% is incorrect; dark matter (27%) plus dark energy (68%) equals about 95%.',
+              3: 'About 99% is incorrect; dark matter (27%) plus dark energy (68%) equals about 95%.',
+            },
           },
         ],
       },
@@ -1768,6 +2039,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Galaxy collisions are extremely rare events in the universe.",
             correctAnswer: false,
             explanation: "Galaxies in groups and clusters are relatively close to each other compared to their sizes. Collisions and close encounters happen frequently over cosmic timescales.",
+            distractorExplanations: {
+              0: 'Galaxies in groups and clusters are relatively close to each other compared to their sizes.',
+            },
           },
           {
             id: "sp-sec6-u5-L1-Q2",
@@ -1781,6 +2055,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The distance between galaxies in a group is often only 10 to 20 times a galaxy's diameter. Stars within a galaxy are separated by millions of times their own diameter.",
+            distractorExplanations: {
+              0: 'Galaxies move faster than stars is incorrect; the distance between galaxies in a group is often only 10 to 20 times a galaxy\'s diameter.',
+              2: 'Galaxies have stronger magnetic fields is incorrect; the distance between galaxies in a group is often only 10 to 20 times a galaxy\'s diameter.',
+              3: 'This is incorrect; the distance between galaxies in a group is often only 10 to 20 times a galaxy\'s diameter.',
+            },
           },
           {
             id: "sp-sec6-u5-L1-T2",
@@ -1800,6 +2079,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Gravity is the dominant force on galactic scales. Mutual gravitational attraction pulls galaxies toward each other when they are close enough.",
+            distractorExplanations: {
+              0: 'This is incorrect; gravity is the dominant force on galactic scales.',
+              1: 'Dark energy pushing galaxies together is incorrect; gravity is the dominant force on galactic scales.',
+              3: 'Pressure from surrounding gas clouds is incorrect; gravity is the dominant force on galactic scales.',
+            },
           },
           {
             id: "sp-sec6-u5-L1-Q4",
@@ -1832,6 +2116,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "A galaxy merger is a slow process that takes hundreds of millions of years.",
             correctAnswer: true,
             explanation: "Galaxy mergers are not instantaneous events. They unfold over hundreds of millions of years as the galaxies interact, separate, and fall back together repeatedly.",
+            distractorExplanations: {
+              1: 'Galaxy mergers are not instantaneous events.',
+            },
           },
         ],
       },
@@ -1855,6 +2142,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Tidal tails are streams of stars pulled out of galaxies by gravitational forces.",
             correctAnswer: true,
             explanation: "Tidal forces during close encounters stretch galaxies, pulling long tails of stars and gas out into intergalactic space.",
+            distractorExplanations: {
+              1: 'Tidal forces during close encounters stretch galaxies, pulling long tails of stars and gas out into intergalactic space.',
+            },
           },
           {
             id: "sp-sec6-u5-L2-Q2",
@@ -1868,6 +2158,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The near side of a galaxy feels stronger gravitational pull than the far side. This difference in force stretches the galaxy, producing tidal tails.",
+            distractorExplanations: {
+              0: 'Magnetic repulsion between galaxy cores is incorrect; the near side of a galaxy feels stronger gravitational pull than the far side.',
+              2: 'Radiation pressure from new stars is incorrect; the near side of a galaxy feels stronger gravitational pull than the far side.',
+              3: 'This is incorrect; the near side of a galaxy feels stronger gravitational pull than the far side.',
+            },
           },
           {
             id: "sp-sec6-u5-L2-T2",
@@ -1922,6 +2217,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "When gas clouds collide and compress, they trigger intense star formation. These starburst events can create millions of new stars in a short period.",
+            distractorExplanations: {
+              0: 'New black holes only is incorrect; when gas clouds collide and compress, they trigger intense star formation.',
+              1: 'New planets but not new stars is incorrect; when gas clouds collide and compress, they trigger intense star formation.',
+              3: 'New galaxies separate from the originals is incorrect; when gas clouds collide and compress, they trigger intense star formation.',
+            },
           },
         ],
       },
@@ -1945,6 +2245,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "A minor merger occurs between two galaxies of roughly equal size.",
             correctAnswer: false,
             explanation: "A minor merger involves a large galaxy absorbing a much smaller one. When the galaxies are similar in size, it's called a major merger.",
+            distractorExplanations: {
+              0: 'A minor merger involves a large galaxy absorbing a much smaller one.',
+            },
           },
           {
             id: "sp-sec6-u5-L3-Q2",
@@ -1973,6 +2276,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Sagittarius Dwarf Galaxy is being tidally disrupted by the Milky Way. Its stars form streams that wrap around our galaxy.",
+            distractorExplanations: {
+              0: 'The Andromeda Galaxy is incorrect; the Sagittarius Dwarf Galaxy is being tidally disrupted by the Milky Way.',
+              2: 'The Large Magellanic Cloud is incorrect; the Sagittarius Dwarf Galaxy is being tidally disrupted by the Milky Way.',
+              3: 'The Triangulum Galaxy is incorrect; the Sagittarius Dwarf Galaxy is being tidally disrupted by the Milky Way.',
+            },
           },
           {
             id: "sp-sec6-u5-L3-Q4",
@@ -2000,6 +2308,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Major mergers scramble the ordered rotation of spiral disks. Stars end up on random orbits, producing a smooth, spheroidal elliptical galaxy.",
+            distractorExplanations: {
+              0: 'A larger spiral galaxy is incorrect; major mergers scramble the ordered rotation of spiral disks.',
+              2: 'Two smaller irregular galaxies is incorrect; major mergers scramble the ordered rotation of spiral disks.',
+              3: 'A ring galaxy is incorrect; major mergers scramble the ordered rotation of spiral disks.',
+            },
           },
           {
             id: "sp-sec6-u5-L3-Q6",
@@ -2014,6 +2327,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Galaxy B is much smaller than Galaxy A, and Galaxy A's structure is largely intact. This is a classic minor merger where the smaller galaxy gets tidally torn apart and absorbed.",
+            distractorExplanations: {
+              0: 'This is incorrect; galaxy B is much smaller than Galaxy A, and Galaxy A\'s structure is largely intact.',
+              2: 'This is incorrect; galaxy B is much smaller than Galaxy A, and Galaxy A\'s structure is largely intact.',
+              3: 'A major merger that has just begun is incorrect; galaxy B is much smaller than Galaxy A, and Galaxy A\'s structure is largely intact.',
+            },
           },
         ],
       },
@@ -2037,6 +2355,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "Galaxy collisions can trigger bursts of new star formation.",
             correctAnswer: true,
             explanation: "Collisions compress gas clouds, which triggers rapid star formation. Some merging galaxies form new stars 10 to 100 times faster than normal galaxies.",
+            distractorExplanations: {
+              1: 'Collisions compress gas clouds, which triggers rapid star formation.',
+            },
           },
           {
             id: "sp-sec6-u5-L4-Q2",
@@ -2067,6 +2388,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The intense star formation consumes gas rapidly. New massive stars also produce powerful winds and supernovae that blow remaining gas out of the starburst region.",
+            distractorExplanations: {
+              0: 'The galaxy\'s gravity weakens over time is incorrect; the intense star formation consumes gas rapidly.',
+              2: 'This is incorrect; the intense star formation consumes gas rapidly.',
+              3: 'Dark matter absorbs the remaining gas is incorrect; the intense star formation consumes gas rapidly.',
+            },
           },
           {
             id: "sp-sec6-u5-L4-Q4",
@@ -2102,6 +2428,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "New stars produce visible and UV light, but the surrounding dust absorbs it. The heated dust then glows in infrared, making ULIRGs extremely bright at those wavelengths.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; new stars produce visible and UV light, but the surrounding dust absorbs it.',
+              2: 'This claim is incorrect; new stars produce visible and UV light, but the surrounding dust absorbs it.',
+              3: 'This is incorrect; new stars produce visible and UV light, but the surrounding dust absorbs it.',
+            },
           },
         ],
       },
@@ -2125,6 +2456,9 @@ export const spaceSection6Part1: Unit[] = [
             question: "The Mice Galaxies got their name from their long tidal tails.",
             correctAnswer: true,
             explanation: "NGC 4676A and 4676B each have a long tidal tail pulled out by their mutual gravity, giving the pair a mouse-like appearance.",
+            distractorExplanations: {
+              1: 'NGC 4676A and 4676B each have a long tidal tail pulled out by their mutual gravity, giving the pair a mouse-like appearance.',
+            },
           },
           {
             id: "sp-sec6-u5-L5-Q2",
@@ -2138,6 +2472,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Major mergers between two spiral galaxies typically result in an elliptical galaxy. The Mice are in the early stages of this process.",
+            distractorExplanations: {
+              0: 'Two separate spiral galaxies is incorrect; major mergers between two spiral galaxies typically result in an elliptical galaxy.',
+              2: 'A ring galaxy is incorrect; major mergers between two spiral galaxies typically result in an elliptical galaxy.',
+              3: 'They will fly apart permanently is incorrect; major mergers between two spiral galaxies typically result in an elliptical galaxy.',
+            },
           },
           {
             id: "sp-sec6-u5-L5-T2",
@@ -2180,6 +2519,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The early universe was smaller and denser, so galaxies were packed more closely together. Collisions and mergers happened much more often than they do today.",
+            distractorExplanations: {
+              0: 'In the very recent past is incorrect; the early universe was smaller and denser, so galaxies were packed more closely together.',
+              2: 'This claim is incorrect; the early universe was smaller and denser, so galaxies were packed more closely together.',
+              3: 'This claim is incorrect; the early universe was smaller and denser, so galaxies were packed more closely together.',
+            },
           },
           {
             id: "sp-sec6-u5-L5-Q6",
@@ -2194,6 +2538,11 @@ export const spaceSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An expanding ring of star formation around a central gap, with a small companion nearby, is the signature of a bull's-eye collision, just like the Cartwheel Galaxy.",
+            distractorExplanations: {
+              0: 'A minor merger still in progress is incorrect; an expanding ring of star formation around a central gap, with a small companion nearby, is the signature of a.',
+              2: 'This is incorrect; an expanding ring of star formation around a central gap, with a small companion nearby, is the signature of a.',
+              3: 'This is incorrect; an expanding ring of star formation around a central gap, with a small companion nearby, is the signature of a.',
+            },
           },
         ],
       },

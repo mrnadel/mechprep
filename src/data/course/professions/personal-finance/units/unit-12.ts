@@ -43,6 +43,9 @@ export const unit12: Unit = {
           question: "Before making a big purchase, you should pause and think it through instead of buying on impulse.",
           correctAnswer: true,
           explanation: "That's the core idea. A few minutes of thinking can save you hundreds or thousands of dollars.",
+          distractorExplanations: {
+            1: 'That\'s the core idea. A few minutes of thinking can save you hundreds or thousands of dollars',
+          },
         },
         {
           id: "pf-u12-L1-Q1",
@@ -71,6 +74,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "A 'deal' on the wrong thing isn't a deal at all. If you haven't researched what you need, you might buy a $480 laptop that doesn't fit your needs. When a $400 model would've been perfect. Research first, buy second. Sales always come back.",
+          distractorExplanations: {
+            0: 'A \'deal\' on the wrong thing isn\'t a deal at all',
+            2: 'A \'deal\' on the wrong thing isn\'t a deal at all',
+            3: 'A \'deal\' on the wrong thing isn\'t a deal at all',
+          },
         },
         {
           id: "pf-u12-L1-Q3",
@@ -84,6 +92,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Retailers know you buy more when you're excited. The 48-hour rule lets that emotional spike calm down. If you still want it after 2 days of clear thinking, it's probably a solid purchase. If you forgot about it. You just saved yourself money.",
+          distractorExplanations: {
+            0: 'Retailers know you buy more when you\'re excited',
+            2: 'Retailers know you buy more when you\'re excited',
+            3: 'Retailers know you buy more when you\'re excited',
+          },
         },
         {
           id: "pf-u12-L1-Q4",
@@ -107,6 +120,9 @@ export const unit12: Unit = {
           question: "If a big purchase requires going into debt, it automatically fails the Big Purchase Framework.",
           correctAnswer: false,
           explanation: "Not automatically. Some debt-funded purchases are smart. Like a reliable car to get to work or a tool that generates income. The framework asks you to consider it carefully, not to ban all debt. Context matters.",
+          distractorExplanations: {
+            0: 'Not automatically. Some debt-funded purchases are smart',
+          },
         },
         {
           id: "pf-u12-L1-Q6",
@@ -139,6 +155,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "While all are helpful, the 'never buy same day' rule prevents the most damage because it blocks impulse decisions entirely. Comparison shopping and reviews help you buy smarter, but the waiting period stops you from buying things you don't need at all.",
+          distractorExplanations: {
+            0: 'While all are helpful, the \'never buy same day\' rule prevents the most damage because it blocks impulse decisions entirely',
+            2: 'While all are helpful, the \'never buy same day\' rule prevents the most damage because it blocks impulse decisions entirely',
+            3: 'While all are helpful, the \'never buy same day\' rule prevents the most damage because it blocks impulse decisions entirely',
+          },
         },
       ],
     },
@@ -171,6 +192,9 @@ export const unit12: Unit = {
           question: "Many everyday costs like your salary, bills, and interest rates can be negotiated if you simply ask.",
           correctAnswer: true,
           explanation: "Most people never ask, so they never get a better deal. The worst that can happen is they say no.",
+          distractorExplanations: {
+            1: 'Most people never ask, so they never get a better deal',
+          },
         },
         {
           id: "pf-u12-L2-Q1",
@@ -193,6 +217,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Ask higher than your target. If you want $62,000, open at $67,000. They'll counter somewhere in the $60-63K range. Exactly where you wanted to be. Accepting the first offer or asking for an unrealistic number both hurt you.",
+          distractorExplanations: {
+            0: 'Ask higher than your target. If you want $62,000, open at $67,000',
+            2: 'Ask higher than your target. If you want $62,000, open at $67,000',
+            3: 'Ask higher than your target. If you want $62,000, open at $67,000',
+          },
         },
         {
           id: "pf-u12-L2-Q3",
@@ -221,6 +250,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 2,
           explanation: "This is the magic formula: show you've done your research, name the competitor and price, and be willing to walk. Most retention departments have authority to offer discounts of 20-40%. But only if you ask and show you're serious about leaving.",
+          distractorExplanations: {
+            0: 'This is the magic formula: show you\'ve done your research, name the competitor and price, and be willing to walk',
+            1: 'This is the magic formula: show you\'ve done your research, name the competitor and price, and be willing to walk',
+            3: 'This is the magic formula: show you\'ve done your research, name the competitor and price, and be willing to walk',
+          },
         },
         {
           id: "pf-u12-L2-Q5",
@@ -248,6 +282,9 @@ export const unit12: Unit = {
           question: "You should always accept the first offer in a negotiation to avoid seeming greedy.",
           correctAnswer: false,
           explanation: "Never accept the first offer. The first offer is almost always a starting point, not the final number. Countering isn't greedy. It's expected. In fact, the other side often respects you more when you negotiate because it shows you know your value.",
+          distractorExplanations: {
+            0: 'Never accept the first offer. The first offer is almost always a starting point, not the final number',
+          },
         },
         {
           id: "pf-u12-L2-Q8",
@@ -309,6 +346,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Financial infidelity is secretly hiding money-related information from your partner. Secret credit cards, hidden debt, undisclosed purchases. It breaks trust just like other forms of dishonesty. Having separate accounts is fine; hiding them is not.",
+          distractorExplanations: {
+            0: 'Financial infidelity is secretly hiding money-related information from your partner',
+            2: 'Financial infidelity is secretly hiding money-related information from your partner',
+            3: 'Financial infidelity is secretly hiding money-related information from your partner',
+          },
         },
         {
           id: "pf-u12-L3-Q3",
@@ -322,6 +364,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 2,
           explanation: "The hybrid approach works best for most couples because it creates shared responsibility for joint goals (rent, savings, bills) while preserving individual freedom for personal spending. Full joint can create friction over small purchases. Full separate can feel like roommates. One-person control breeds resentment.",
+          distractorExplanations: {
+            0: 'The hybrid approach works best for most couples because it creates shared responsibility for joint goals (rent, savings, bills) while preserving in...',
+            1: 'The hybrid approach works best for most couples because it creates shared responsibility for joint goals (rent, savings, bills) while preserving in...',
+            3: 'The hybrid approach works best for most couples because it creates shared responsibility for joint goals (rent, savings, bills) while preserving in...',
+          },
         },
         {
           id: "pf-u12-L3-Q4",
@@ -336,6 +383,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "A proportional split based on income is the fairest approach for most couples with different earnings. You earn 64% of the household income, so you cover 64% of shared costs. This way both partners feel the same financial 'squeeze' and neither feels taken advantage of.",
+          distractorExplanations: {
+            0: 'A proportional split based on income is the fairest approach for most couples with different earnings',
+            2: 'A proportional split based on income is the fairest approach for most couples with different earnings',
+            3: 'A proportional split based on income is the fairest approach for most couples with different earnings',
+          },
         },
         {
           id: "pf-u12-L3-Q5",
@@ -365,6 +417,9 @@ export const unit12: Unit = {
           question: "Having separate bank accounts in a marriage is a sign of distrust.",
           correctAnswer: false,
           explanation: "Not quite. Many happy, trusting couples maintain separate accounts alongside a joint one. It's about having personal autonomy and avoiding micromanaging each other's spending. Trust is about transparency, not having one single account.",
+          distractorExplanations: {
+            0: 'Many happy, trusting couples maintain separate accounts alongside a joint one',
+          },
         },
         {
           id: "pf-u12-L3-Q8",
@@ -432,6 +487,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 2,
           explanation: "A base allowance teaches money management, while bonus chores teach the work-money connection. Paying only for chores risks kids refusing to help without pay. No allowance at all means no practice managing money during the years when habits form most.",
+          distractorExplanations: {
+            0: 'A base allowance teaches money management, while bonus chores teach the work-money connection',
+            1: 'A base allowance teaches money management, while bonus chores teach the work-money connection',
+            3: 'A base allowance teaches money management, while bonus chores teach the work-money connection',
+          },
         },
         {
           id: "pf-u12-L4-Q3",
@@ -455,6 +515,9 @@ export const unit12: Unit = {
           question: "Children who receive financial education at home are more likely to save money and avoid debt as adults.",
           correctAnswer: true,
           explanation: "Multiple studies confirm this. Kids who have money conversations at home, practice saving, and see healthy financial behaviors are significantly more likely to be financially responsible adults. You're not just teaching a lesson. You're shaping decades of behavior.",
+          distractorExplanations: {
+            1: 'Multiple studies confirm this. Kids who have money conversations at home, practice saving, and see healthy financial behaviors are significantly mo...',
+          },
         },
         {
           id: "pf-u12-L4-Q5",
@@ -483,6 +546,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 2,
           explanation: "This is a golden teaching moment! Help them do the math: they need $18 more at $3/week, so 6 weeks of saving. They learn patience, goal-setting, and delayed gratification. And when they finally buy it with their own money, they'll value it 10x more than if you just bought it.",
+          distractorExplanations: {
+            0: 'This is a golden teaching moment! Help them do the math: they need $18 more at $3/week, so 6 weeks of saving',
+            1: 'This is a golden teaching moment! Help them do the math: they need $18 more at $3/week, so 6 weeks of saving',
+            3: 'This is a golden teaching moment! Help them do the math: they need $18 more at $3/week, so 6 weeks of saving',
+          },
         },
         {
           id: "pf-u12-L4-Q7",
@@ -504,6 +572,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Letting kids fail with small amounts of their own money teaches decision-making, consequences, and self-correction. Skills that last a lifetime. A kid who blows their $10 on candy and regrets it learns more than a kid who's told 'don't waste money' a hundred times.",
+          distractorExplanations: {
+            0: 'Letting kids fail with small amounts of their own money teaches decision-making, consequences, and self-correction',
+            2: 'Letting kids fail with small amounts of their own money teaches decision-making, consequences, and self-correction',
+            3: 'Letting kids fail with small amounts of their own money teaches decision-making, consequences, and self-correction',
+          },
         },
       ],
     },
@@ -676,6 +749,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Always leverage your highest-value skill. Your software skills are worth $75/hour freelance. That's 5x what delivery driving pays. An hour of freelance dev work equals 5 hours of DoorDash. Work smarter, not harder.",
+          distractorExplanations: {
+            0: 'Always leverage your highest-value skill',
+            2: 'Always leverage your highest-value skill',
+            3: 'Always leverage your highest-value skill',
+          },
         },
         {
           id: "pf-u12-L5-Q3",
@@ -711,6 +789,9 @@ export const unit12: Unit = {
           question: "Side hustle income is tax-free as long as you earn less than $600.",
           correctAnswer: false,
           explanation: "All income is taxable, period. The $600 threshold is when platforms are required to send you a 1099 form, but you're legally required to report ALL income regardless of amount. Not reporting it is tax evasion.",
+          distractorExplanations: {
+            0: 'All income is taxable, period. The $600 threshold is when platforms are required to send you a 1099 form, but you\'re legally required to report ALL...',
+          },
         },
         {
           id: "pf-u12-L5-Q7",
@@ -725,6 +806,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Net income: $9,600 - $1,200 expenses = $8,400. You owe self-employment tax (~15.3% = $1,285) PLUS income tax (~22% = $1,848). Total: ~$3,133. Side hustle income gets hit with both regular income tax AND self-employment tax. Set aside 30-35% for taxes.",
+          distractorExplanations: {
+            0: 'Net income: $9,600 - $1,200 expenses = $8,400',
+            2: 'Net income: $9,600 - $1,200 expenses = $8,400',
+            3: 'Net income: $9,600 - $1,200 expenses = $8,400',
+          },
         },
         {
           id: "pf-u12-L5-Q8",
@@ -795,6 +881,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 2,
           explanation: "Diversified income is like a financial safety net. If you lose your job but still have rental income, dividends, and freelance clients, you can survive while you find a new position. Nobody is recession-proof, but multiple streams make you recession-resistant.",
+          distractorExplanations: {
+            0: 'Diversified income is like a financial safety net',
+            1: 'Diversified income is like a financial safety net',
+            3: 'Diversified income is like a financial safety net',
+          },
         },
         {
           id: "pf-u12-L6-Q4",
@@ -816,6 +907,9 @@ export const unit12: Unit = {
           question: "Passive income requires zero effort once it's set up.",
           correctAnswer: false,
           explanation: "Nothing is truly 100% passive. Rental properties need maintenance decisions. Investment portfolios need rebalancing. Online businesses need updates. 'Passive' really means 'less active'. You invest effort upfront and maintain with minimal ongoing work. But zero effort? That's a myth.",
+          distractorExplanations: {
+            0: 'Nothing is truly 100% passive. Rental properties need maintenance decisions',
+          },
         },
         {
           id: "pf-u12-L6-Q6",
@@ -841,6 +935,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "You still have $600/month flowing in from freelancing ($400) and dividends ($200). That won't cover everything, but it buys you TIME to find a new job without total panic. You may also qualify for unemployment benefits. This is exactly why multiple streams matter.",
+          distractorExplanations: {
+            0: 'You still have $600/month flowing in from freelancing ($400) and dividends ($200)',
+            2: 'You still have $600/month flowing in from freelancing ($400) and dividends ($200)',
+            3: 'You still have $600/month flowing in from freelancing ($400) and dividends ($200)',
+          },
         },
         {
           id: "pf-u12-L6-Q8",
@@ -854,6 +953,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Freelancing your professional skill is the best first move: $50/hour x 10 hours/week = $2,000/month with zero startup cost. Dividend income on $5,000 would only generate ~$15/month. A rental property is too complex for someone just starting. An online store has high failure rates and startup costs.",
+          distractorExplanations: {
+            0: 'Freelancing your professional skill is the best first move: $50/hour x 10 hours/week = $2,000/month with zero startup cost',
+            2: 'Freelancing your professional skill is the best first move: $50/hour x 10 hours/week = $2,000/month with zero startup cost',
+            3: 'Freelancing your professional skill is the best first move: $50/hour x 10 hours/week = $2,000/month with zero startup cost',
+          },
         },
       ],
     },
@@ -910,6 +1014,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Person A: $50K savings + $50K home equity ($400K - $350K) + $20K investments - $15K debt = $105,000. Person B: $30K savings + $80K investments - $0 debt = $110,000. Person B wins despite earning less than half of Person A's income. This is why net worth > income.",
+          distractorExplanations: {
+            0: 'Person A: $50K savings + $50K home equity ($400K - $350K) + $20K investments - $15K debt = $105,000',
+            2: 'Person A: $50K savings + $50K home equity ($400K - $350K) + $20K investments - $15K debt = $105,000',
+            3: 'Person A: $50K savings + $50K home equity ($400K - $350K) + $20K investments - $15K debt = $105,000',
+          },
         },
         {
           id: "pf-u12-L7-Q4",
@@ -923,6 +1032,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Paying off $10,000 in debt increases your net worth by $10,000 (you removed a liability). A raise you fully spend changes nothing. A depreciating watch loses value immediately. A more expensive lease is just higher monthly expenses with no asset to show for it.",
+          distractorExplanations: {
+            0: 'Paying off $10,000 in debt increases your net worth by $10,000 (you removed a liability)',
+            2: 'Paying off $10,000 in debt increases your net worth by $10,000 (you removed a liability)',
+            3: 'Paying off $10,000 in debt increases your net worth by $10,000 (you removed a liability)',
+          },
         },
         {
           id: "pf-u12-L7-Q5",
@@ -941,6 +1055,9 @@ export const unit12: Unit = {
           question: "Your car is always an asset that increases your net worth.",
           correctAnswer: false,
           explanation: "Your car is technically an asset (it has resale value), but it's a depreciating asset. It loses value every year. And if you owe more on the car loan than the car is worth, it's actually a NET negative on your balance sheet. A $30,000 car with a $35,000 loan hurts your net worth by $5,000.",
+          distractorExplanations: {
+            0: 'Your car is technically an asset (it has resale value), but it\'s a depreciating asset',
+          },
         },
         {
           id: "pf-u12-L7-Q7",
@@ -1008,6 +1125,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 2,
           explanation: "$50,000 × 25 = $1,250,000. That's the amount you'd need invested so that a 4% annual withdrawal covers your expenses. Once you hit that number, work becomes optional.",
+          distractorExplanations: {
+            0: 'The correct answer is $1,250,000, not $500,000',
+            1: 'The correct answer is $1,250,000, not $1,000,000',
+            3: 'The correct answer is $1,250,000, not $2,000,000',
+          },
         },
         {
           id: "pf-u12-L8-Q2",
@@ -1041,6 +1163,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Option A: saves $35K/year, FI number stays $1.5M. Needs $1.3M more ÷ $35K/year = many years. Option B: saves $35K/year AND lowers FI number to $1,125,000 ($45K × 25). Needs $925K more ÷ $35K/year = significantly fewer years. Option B wins because reducing expenses has a double effect!",
+          distractorExplanations: {
+            0: 'Option A: saves $35K/year, FI number stays $1.5M',
+            2: 'Option A: saves $35K/year, FI number stays $1.5M',
+            3: 'Option A: saves $35K/year, FI number stays $1.5M',
+          },
         },
         {
           id: "pf-u12-L8-Q5",
@@ -1048,6 +1175,9 @@ export const unit12: Unit = {
           question: "Financial independence means you must stop working entirely.",
           correctAnswer: false,
           explanation: "FI means you have the OPTION to stop working. Many people who reach FI keep working. But on their own terms. They might switch to passion projects, part-time work, volunteering, or starting a business without income pressure. FI is about freedom, not retirement.",
+          distractorExplanations: {
+            0: 'FI means you have the OPTION to stop working',
+          },
         },
         {
           id: "pf-u12-L8-Q6",
@@ -1079,6 +1209,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Going from a 15% savings rate to 40% cuts your FI timeline roughly in half (from ~43 years to ~22 years). A 10% raise helps, but only if you save it. Better bank interest is negligible. Starting 1 year earlier helps, but not as much as a massive savings rate increase.",
+          distractorExplanations: {
+            0: 'Going from a 15% savings rate to 40% cuts your FI timeline roughly in half (from ~43 years to ~22 years)',
+            2: 'Going from a 15% savings rate to 40% cuts your FI timeline roughly in half (from ~43 years to ~22 years)',
+            3: 'Going from a 15% savings rate to 40% cuts your FI timeline roughly in half (from ~43 years to ~22 years)',
+          },
         },
       ],
     },
@@ -1117,6 +1252,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 0,
           explanation: "Starting at 25: $300/month × 40 years at 10% = ~$1,897,000. Starting at 35: $600/month × 30 years at 10% = ~$1,317,000. The early starter wins by $580,000 despite investing HALF as much per month. Time in the market is the ultimate wealth hack.",
+          distractorExplanations: {
+            1: 'Starting at 25: $300/month × 40 years at 10% = ~$1,897,000',
+            2: 'Starting at 25: $300/month × 40 years at 10% = ~$1,897,000',
+            3: 'Starting at 25: $300/month × 40 years at 10% = ~$1,897,000',
+          },
         },
         {
           id: "pf-u12-L9-Q2",
@@ -1159,6 +1299,9 @@ export const unit12: Unit = {
           question: "You need to earn at least $100,000/year to become a millionaire.",
           correctAnswer: false,
           explanation: "Absolutely not. Research from Thomas Stanley (The Millionaire Next Door) shows that roughly a third of millionaires never had a six-figure income. A median-income earner who saves 15-20% consistently and invests in low-cost index funds can absolutely reach millionaire status over a 30-40 year career.",
+          distractorExplanations: {
+            0: 'Not. Research from Thomas Stanley (The Millionaire Next Door) shows that roughly a third of millionaires never had a six-figure income',
+          },
         },
         {
           id: "pf-u12-L9-Q6",
@@ -1187,6 +1330,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Jake: $9,000/year × 25 years at 10% = approximately $885,000. Tyler: $4,500/year × 25 years at 10% = approximately $443,000. Jake ends up with DOUBLE Tyler's wealth despite earning HALF the salary. Your savings rate matters infinitely more than your income.",
+          distractorExplanations: {
+            0: 'Jake: $9,000/year × 25 years at 10% = approximately $885,000',
+            2: 'Jake: $9,000/year × 25 years at 10% = approximately $885,000',
+            3: 'Jake: $9,000/year × 25 years at 10% = approximately $885,000',
+          },
         },
         {
           id: "pf-u12-L9-Q8",
@@ -1248,6 +1396,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "The original quote (1 Timothy 6:10) is 'the LOVE of money is the root of all evil'. It's about greed and obsession, not about money itself. Money is a tool. A hammer can build a house or break a window. The tool isn't evil. How you use it matters.",
+          distractorExplanations: {
+            0: 'The original quote (1 Timothy 6:10) is \'the LOVE of money is the root of all evil\'',
+            2: 'The original quote (1 Timothy 6:10) is \'the LOVE of money is the root of all evil\'',
+            3: 'The original quote (1 Timothy 6:10) is \'the LOVE of money is the root of all evil\'',
+          },
         },
         {
           id: "pf-u12-L10-Q3",
@@ -1274,6 +1427,9 @@ export const unit12: Unit = {
           question: "Most wealthy people inherited their money rather than building it themselves.",
           correctAnswer: false,
           explanation: "According to multiple studies (Fidelity, Ramsey Solutions), about 80% of millionaires are first-generation wealthy. Meaning they built it themselves. The 'trust fund baby' stereotype is a myth for the vast majority of wealthy people. Most got there through consistent saving, investing, and smart career moves.",
+          distractorExplanations: {
+            0: 'According to multiple studies (Fidelity, Ramsey Solutions), about 80% of millionaires are first-generation wealthy',
+          },
         },
         {
           id: "pf-u12-L10-Q5",
@@ -1288,6 +1444,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 2,
           explanation: "Concrete examples are more persuasive than abstract arguments. Showing real math proves that the system DOES work for regular people who invest consistently. You're not dismissing systemic issues. You're showing that personal action still produces results within any system.",
+          distractorExplanations: {
+            0: 'Concrete examples are more persuasive than abstract arguments',
+            1: 'Concrete examples are more persuasive than abstract arguments',
+            3: 'Concrete examples are more persuasive than abstract arguments',
+          },
         },
         {
           id: "pf-u12-L10-Q6",
@@ -1309,6 +1470,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "All are good habits, but believing your financial future is in your control is the foundation that makes all other habits stick. Without that belief, you'll eventually stop automating savings, stop reading, and stop checking. Mindset drives behavior, behavior drives results.",
+          distractorExplanations: {
+            0: 'All are good habits, but believing your financial future is in your control is the foundation that makes all other habits stick',
+            2: 'All are good habits, but believing your financial future is in your control is the foundation that makes all other habits stick',
+            3: 'All are good habits, but believing your financial future is in your control is the foundation that makes all other habits stick',
+          },
         },
         {
           id: "pf-u12-L10-Q8",
@@ -1405,6 +1571,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 1,
           explanation: "Step 1: Budget (you can't manage what you don't measure). Step 2: Contribute at least 4% to get the full employer match (free money). Step 3: Throw everything extra at that 22% credit card debt. You're not behind. You're 28 with awareness and a plan. That's ahead of most people.",
+          distractorExplanations: {
+            0: 'Step 1: Budget (you can\'t manage what you don\'t measure)',
+            2: 'Step 1: Budget (you can\'t manage what you don\'t measure)',
+            3: 'Step 1: Budget (you can\'t manage what you don\'t measure)',
+          },
         },
         {
           id: "pf-u12-L11-Q5",
@@ -1412,6 +1583,9 @@ export const unit12: Unit = {
           question: "A financial plan only needs to be created once and then followed forever without changes.",
           correctAnswer: false,
           explanation: "Life changes constantly. New jobs, marriage, kids, health events, market shifts. Your financial plan needs to be a living document that you revisit at least once a year (and any time a major life event happens). The plan you make at 25 will look very different from the one you need at 40.",
+          distractorExplanations: {
+            0: 'Life changes constantly. New jobs, marriage, kids, health events, market shifts',
+          },
         },
         {
           id: "pf-u12-L11-Q6",
@@ -1449,6 +1623,11 @@ export const unit12: Unit = {
           ],
           correctIndex: 2,
           explanation: "Knowledge without action is just entertainment. The person who opens a HYSA today beats the person who reads 10 more books but does nothing. Pick ONE thing from this course and do it TODAY. Automate a savings transfer. Calculate your net worth. Pay an extra $50 on your debt. Action creates momentum, and momentum creates wealth.",
+          distractorExplanations: {
+            0: 'Knowledge without action is just entertainment',
+            1: 'Knowledge without action is just entertainment',
+            3: 'Knowledge without action is just entertainment',
+          },
         },
         {
           id: "pf-u12-L11-Q9",
@@ -1669,6 +1848,11 @@ export const unit12: Unit = {
             options: ["To bluff the employer into paying more", "To prevent emotions from making you accept a bad deal", "Because HR always asks for one", "To make the negotiation go faster"],
             correctIndex: 1,
             explanation: "A walk-away number is your predetermined minimum. Without it, you'll rationalize accepting less in the heat of the moment. It removes emotion from the decision.",
+            distractorExplanations: {
+              0: 'A walk-away number is your predetermined minimum',
+              2: 'A walk-away number is your predetermined minimum',
+              3: 'A walk-away number is your predetermined minimum',
+            },
           },
         },
         {
@@ -1680,6 +1864,9 @@ export const unit12: Unit = {
             question: "Priya should have led with the external offer as her opening argument.",
             correctAnswer: false,
             explanation: "Leading with 'I have another offer, pay me more' comes across as a threat. Priya correctly led with her VALUE (achievements, market data) and only mentioned the offer as supporting evidence when the initial response was low.",
+            distractorExplanations: {
+              0: 'Leading with \'I have another offer, pay me more\' comes across as a threat',
+            },
           },
         },
         {
@@ -1693,6 +1880,11 @@ export const unit12: Unit = {
             options: ["No. Always take the highest paying offer", "Yes. The $5K gap is offset by reduced risk, title, RSUs, and known culture", "No. She should have pushed harder or walked away", "Yes. But only because her manager was nice about it"],
             correctIndex: 1,
             explanation: "A ~$5K annual difference is easily offset by job stability, title progression, RSUs, and avoiding the risk of joining an unknown team. Total compensation includes non-monetary factors. Plus, the title bump positions her for a bigger jump next time.",
+            distractorExplanations: {
+              0: 'A ~$5K annual difference is easily offset by job stability, title progression, RSUs, and avoiding the risk of joining an unknown team',
+              2: 'A ~$5K annual difference is easily offset by job stability, title progression, RSUs, and avoiding the risk of joining an unknown team',
+              3: 'A ~$5K annual difference is easily offset by job stability, title progression, RSUs, and avoiding the risk of joining an unknown team',
+            },
           },
         },
         {

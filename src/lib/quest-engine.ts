@@ -135,6 +135,7 @@ export function createQuests(
     filter: def.filter,
     completed: false,
     claimed: false,
+    tooltip: def.tooltip,
   }));
 }
 

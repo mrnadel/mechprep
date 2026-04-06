@@ -49,6 +49,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "Stock prices are set by supply and demand. If more people want to buy than sell, the price goes up. If more want to sell, it drops. It's a continuous auction happening every second the market is open.",
+ distractorExplanations: {
+   0: 'Stock prices are set by supply and demand',
+   2: 'Stock prices are set by supply and demand',
+   3: 'Stock prices are set by supply and demand',
+ },
  },
  {
  id: "pf-u7-L1-Q2",
@@ -56,6 +61,9 @@ export const unit7: Unit = {
  question: "Every time you buy a stock, someone else is selling that exact stock to you.",
  correctAnswer: true,
  explanation: "Every trade has two sides. You can't buy a share unless someone is willing to sell one at or near your price. The exchange's job is to match buyers with sellers instantly.",
+ distractorExplanations: {
+   1: 'Every trade has two sides. You can\'t buy a share unless someone is willing to sell one at or near your price',
+ },
  },
  {
  id: "pf-u7-L1-Q3",
@@ -95,6 +103,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "The market is still open! You can place your order in the next 5 minutes. If you miss the window, you'd have to wait until Monday (or use after-hours trading, which has lower volume and wider spreads).",
+ distractorExplanations: {
+   1: 'The market is still open! You can place your order in the next 5 minutes',
+   2: 'The market is still open! You can place your order in the next 5 minutes',
+   3: 'The market is still open! You can place your order in the next 5 minutes',
+ },
  },
  {
  id: "pf-u7-L1-Q7",
@@ -117,6 +130,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "Everything on this list matters, but at the end of the day, price is determined by supply and demand. Earnings, predictions, and the economy all influence supply and demand, but the actual buying and selling pressure is what moves the price.",
+ distractorExplanations: {
+   1: 'Everything on this list matters, but at the end of the day, price is determined by supply and demand',
+   2: 'Everything on this list matters, but at the end of the day, price is determined by supply and demand',
+   3: 'Everything on this list matters, but at the end of the day, price is determined by supply and demand',
+ },
  },
  ],
  },
@@ -155,6 +173,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "A green (or white) candlestick means the closing price was higher than the opening price for that period. It doesn't mean the company is profitable or the stock is a good buy, just that the price ended higher than where it started that day.",
+ distractorExplanations: {
+   1: 'A green (or white) candlestick means the closing price was higher than the opening price for that period',
+   2: 'A green (or white) candlestick means the closing price was higher than the opening price for that period',
+   3: 'A green (or white) candlestick means the closing price was higher than the opening price for that period',
+ },
  },
  {
  id: "pf-u7-L2-Q2",
@@ -162,6 +185,9 @@ export const unit7: Unit = {
  question: "A stock chart can reliably predict what a stock's price will do tomorrow.",
  correctAnswer: false,
  explanation: "Charts show historical data, what already happened. Some traders use patterns to guess future moves (technical analysis), but no chart can predict the future reliably. If it could, everyone would be rich.",
+ distractorExplanations: {
+   0: 'Charts show historical data, what already happened',
+ },
  },
  {
  id: "pf-u7-L2-Q3",
@@ -213,6 +239,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "When a stock breaks above a level it's been stuck under (resistance) with high volume, that's a breakout. The heavy volume confirms real buying interest, not just a random spike. Breakouts can signal the start of a new uptrend.",
+ distractorExplanations: {
+   1: 'When a stock breaks above a level it\'s been stuck under (resistance) with high volume, that\'s a breakout',
+   2: 'When a stock breaks above a level it\'s been stuck under (resistance) with high volume, that\'s a breakout',
+   3: 'When a stock breaks above a level it\'s been stuck under (resistance) with high volume, that\'s a breakout',
+ },
  },
  {
  id: "pf-u7-L2-Q8",
@@ -259,6 +290,9 @@ export const unit7: Unit = {
  question: "A company's market cap is calculated by multiplying its stock price by the total number of shares.",
  correctAnswer: true,
  explanation: "That's the formula. Share price times shares outstanding equals market cap, the company's total value in the stock market.",
+ distractorExplanations: {
+   1: 'That\'s the formula. Share price times shares outstanding equals market cap, the company\'s total value in the stock market',
+ },
  },
  {
  id: "pf-u7-L3-Q1",
@@ -267,6 +301,11 @@ export const unit7: Unit = {
  options: ["4", "20", "80", "320"],
  correctIndex: 1,
  explanation: "P/E = price ÷ earnings per share = $80 ÷ $4 = 20. This means investors are paying $20 for every $1 of the company's annual profit. That's roughly in line with the market average.",
+ distractorExplanations: {
+   0: 'The correct answer is 20, not 4',
+   2: 'The correct answer is 20, not 80',
+   3: 'The correct answer is 20, not 320',
+ },
  },
  {
  id: "pf-u7-L3-Q2",
@@ -327,6 +366,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "Stock A has a P/E of 10, meaning you pay $10 for every $1 of earnings. Stock B's P/E of 50 means you pay $50 for each $1 of earnings. Stock A is 5× cheaper relative to profits. Notice: the stock price ($50 vs $200) is irrelevant. P/E is what matters for valuation.",
+ distractorExplanations: {
+   1: 'Stock A has a P/E of 10, meaning you pay $10 for every $1 of earnings',
+   2: 'Stock A has a P/E of 10, meaning you pay $10 for every $1 of earnings',
+   3: 'Stock A has a P/E of 10, meaning you pay $10 for every $1 of earnings',
+ },
  },
  {
  id: "pf-u7-L3-Q8",
@@ -334,6 +378,9 @@ export const unit7: Unit = {
  question: "A stock priced at $500 per share is always more expensive than one priced at $20 per share.",
  correctAnswer: false,
  explanation: "Stock price alone tells you almost nothing about value. A $500 stock with a P/E of 10 is 'cheaper' than a $20 stock with a P/E of 100. You need to look at valuation metrics like P/E, not just the sticker price. This is one of the most common beginner mistakes.",
+ distractorExplanations: {
+   0: 'Stock price alone tells you almost nothing about value',
+ },
  },
  {
  id: "pf-u7-L3-Q9",
@@ -347,6 +394,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "All of these provide some information, but P/E ratio is the best quick gut-check for valuation. It tells you how much you're paying per dollar of earnings. A stock price of $300 is meaningless without knowing what the company earns.",
+ distractorExplanations: {
+   0: 'All of these provide some information, but P/E ratio is the best quick gut-check for valuation',
+   2: 'All of these provide some information, but P/E ratio is the best quick gut-check for valuation',
+   3: 'All of these provide some information, but P/E ratio is the best quick gut-check for valuation',
+ },
  },
  ],
  },
@@ -382,6 +434,11 @@ export const unit7: Unit = {
  options: ["Day trading", "Value investing", "Growth investing", "Crypto trading"],
  correctIndex: 1,
  explanation: "Buffett is the king of value investing. He looks for companies with strong fundamentals that the market has underpriced. His famous quote: 'Be fearful when others are greedy, and greedy when others are fearful.'",
+ distractorExplanations: {
+   0: 'Buffett is the king of value investing',
+   2: 'Buffett is the king of value investing',
+   3: 'Buffett is the king of value investing',
+ },
  },
  {
  id: "pf-u7-L4-Q3",
@@ -389,6 +446,9 @@ export const unit7: Unit = {
  question: "Growth stocks typically pay higher dividends than value stocks.",
  correctAnswer: false,
  explanation: "It's the opposite! Growth companies reinvest their profits into expansion instead of paying dividends. Value companies tend to be mature businesses that return cash to shareholders through dividends. If you want income, value stocks are usually the way to go.",
+ distractorExplanations: {
+   0: 'It\'s the opposite! Growth companies reinvest their profits into expansion instead of paying dividends',
+ },
  },
  {
  id: "pf-u7-L4-Q4",
@@ -411,6 +471,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "Company X has all the value hallmarks, slow but steady growth, low P/E, pays dividends, boring industry. Company Y is textbook growth, explosive revenue, sky-high P/E, no dividends, hot sector. Each attracts a different type of investor.",
+ distractorExplanations: {
+   1: 'Company X has all the value hallmarks, slow but steady growth, low P/E, pays dividends, boring industry',
+   2: 'Company X has all the value hallmarks, slow but steady growth, low P/E, pays dividends, boring industry',
+   3: 'Company X has all the value hallmarks, slow but steady growth, low P/E, pays dividends, boring industry',
+ },
  },
  {
  id: "pf-u7-L4-Q6",
@@ -447,6 +512,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 2,
  explanation: "All approaches can work, but a blend gives you the best of both worlds, growth for appreciation and value for stability and income. Most index funds naturally hold both. Trying to time when to switch styles is extremely difficult, even for pros.",
+ distractorExplanations: {
+   0: 'All approaches can work, but a blend gives you the best of both worlds, growth for appreciation and value for stability and income',
+   1: 'All approaches can work, but a blend gives you the best of both worlds, growth for appreciation and value for stability and income',
+   3: 'All approaches can work, but a blend gives you the best of both worlds, growth for appreciation and value for stability and income',
+ },
  },
  ],
  },
@@ -591,6 +661,11 @@ export const unit7: Unit = {
  options: ["5% from the high", "10% from the high", "20% from the high", "50% from the high"],
  correctIndex: 2,
  explanation: "A 20% drop from a recent high is the official threshold for a bear market. A 10% drop is called a 'correction.' Corrections happen fairly often and are usually shorter-lived.",
+ distractorExplanations: {
+   0: 'A 20% drop from a recent high is the official threshold for a bear market',
+   1: 'A 20% drop from a recent high is the official threshold for a bear market',
+   3: 'A 20% drop from a recent high is the official threshold for a bear market',
+ },
  },
  {
  id: "pf-u7-L5-Q2",
@@ -598,6 +673,9 @@ export const unit7: Unit = {
  question: "Historically, bear markets have lasted longer than bull markets.",
  correctAnswer: false,
  explanation: "It's the opposite! Bull markets last much longer on average (~5 years) compared to bear markets (~10 months). The market spends far more time going up than going down. This is why staying invested long-term works, time is on the bull's side.",
+ distractorExplanations: {
+   0: 'It\'s the opposite! Bull markets last much longer on average (~5 years) compared to bear markets (~10 months)',
+ },
  },
  {
  id: "pf-u7-L5-Q3",
@@ -648,6 +726,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "At 28 with a 30+ year horizon, this bear market is a gift, you're buying stocks on sale. Every bear market in history has eventually recovered. Selling locks in your losses. The worst thing you can do is stop investing and miss the recovery.",
+ distractorExplanations: {
+   1: 'At 28 with a 30+ year horizon, this bear market is a gift, you\'re buying stocks on sale',
+   2: 'At 28 with a 30+ year horizon, this bear market is a gift, you\'re buying stocks on sale',
+   3: 'At 28 with a 30+ year horizon, this bear market is a gift, you\'re buying stocks on sale',
+ },
  },
  {
  id: "pf-u7-L5-Q8",
@@ -708,6 +791,11 @@ export const unit7: Unit = {
  options: ["Technology", "Consumer Staples", "Energy", "Financials"],
  correctIndex: 1,
  explanation: "Consumer Staples, companies like Procter & Gamble, Coca-Cola, and Walmart. People cut back on iPhones and vacations in a recession, but they still buy groceries, soap, and cleaning supplies. That's why staples are called 'defensive.'",
+ distractorExplanations: {
+   0: 'Consumer Staples, companies like Procter & Gamble, Coca-Cola, and Walmart',
+   2: 'Consumer Staples, companies like Procter & Gamble, Coca-Cola, and Walmart',
+   3: 'Consumer Staples, companies like Procter & Gamble, Coca-Cola, and Walmart',
+ },
  },
  {
  id: "pf-u7-L6-Q3",
@@ -732,6 +820,9 @@ export const unit7: Unit = {
  question: "If your entire portfolio is in tech stocks, you're well-diversified.",
  correctAnswer: false,
  explanation: "Not quite. That's sector concentration, the opposite of diversification. If tech crashes (like it did in 2000-2002 and 2022), your entire portfolio gets crushed. True diversification means spreading across multiple sectors.",
+ distractorExplanations: {
+   0: 'That\'s sector concentration, the opposite of diversification',
+ },
  },
  {
  id: "pf-u7-L6-Q6",
@@ -746,6 +837,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "Banks and financial companies benefit from rising rates because they charge more interest on loans while deposit rates rise more slowly. Tech suffers because higher rates reduce the present value of future earnings. Real estate gets hurt because mortgages become more expensive.",
+ distractorExplanations: {
+   0: 'Banks and financial companies benefit from rising rates because they charge more interest on loans while deposit rates rise more slowly',
+   2: 'Banks and financial companies benefit from rising rates because they charge more interest on loans while deposit rates rise more slowly',
+   3: 'Banks and financial companies benefit from rising rates because they charge more interest on loans while deposit rates rise more slowly',
+ },
  },
  {
  id: "pf-u7-L6-Q7",
@@ -794,6 +890,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "They beat the consensus estimate by $0.20 per share, that's an earnings beat. The stock typically jumps because investors see the company performing better than expected. The size of the jump depends on how big the beat is and what guidance they give.",
+ distractorExplanations: {
+   1: 'They beat the consensus estimate by $0.20 per share, that\'s an earnings beat',
+   2: 'They beat the consensus estimate by $0.20 per share, that\'s an earnings beat',
+   3: 'They beat the consensus estimate by $0.20 per share, that\'s an earnings beat',
+ },
  },
  {
  id: "pf-u7-L7-Q2",
@@ -801,6 +902,9 @@ export const unit7: Unit = {
  question: "A company can report record profits and still see its stock price drop.",
  correctAnswer: true,
  explanation: "Absolutely! If the record profit was BELOW what analysts expected, or if the company gave weak guidance for next quarter, the stock can still tank. The market is forward-looking, it prices in expectations. So even great results can disappoint if they're not great enough.",
+ distractorExplanations: {
+   1: 'If the record profit was BELOW what analysts expected, or if the company gave weak guidance for next quarter, the stock can still tank',
+ },
  },
  {
  id: "pf-u7-L7-Q3",
@@ -831,6 +935,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "Even though they beat this quarter, the weak forward guidance is a red flag. The market is always looking ahead. If the company is signaling slower growth, investors will sell. Guidance often matters more than the actual results because it tells you where the company is headed.",
+ distractorExplanations: {
+   1: 'Even though they beat this quarter, the weak forward guidance is a red flag',
+   2: 'Even though they beat this quarter, the weak forward guidance is a red flag',
+   3: 'Even though they beat this quarter, the weak forward guidance is a red flag',
+ },
  },
  {
  id: "pf-u7-L7-Q6",
@@ -862,6 +971,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 2,
  explanation: "All of these reflect a strategy, but for long-term investors, staying the course is the best approach. One quarter doesn't define a company's future. Trying to trade around earnings is essentially gambling, even professional analysts get it wrong more often than you'd think.",
+ distractorExplanations: {
+   0: 'All of these reflect a strategy, but for long-term investors, staying the course is the best approach',
+   1: 'All of these reflect a strategy, but for long-term investors, staying the course is the best approach',
+   3: 'All of these reflect a strategy, but for long-term investors, staying the course is the best approach',
+ },
  },
  {
  id: "pf-u7-L7-Q9",
@@ -920,6 +1034,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "When the stock hits $90, your stop-loss converts to a market order and sells. You might get $90, $89.50, or slightly less depending on how fast the price is falling (this is called slippage). But you're protected from riding it down to $88, $70, or worse.",
+ distractorExplanations: {
+   1: 'When the stock hits $90, your stop-loss converts to a market order and sells',
+   2: 'When the stock hits $90, your stop-loss converts to a market order and sells',
+   3: 'When the stock hits $90, your stop-loss converts to a market order and sells',
+ },
  },
  {
  id: "pf-u7-L8-Q3",
@@ -927,6 +1046,9 @@ export const unit7: Unit = {
  question: "A limit order guarantees your trade will execute.",
  correctAnswer: false,
  explanation: "A limit order only executes if the stock reaches your specified price. If you set a buy limit at $45 and the stock never drops below $48, your order just sits there unfilled. The tradeoff: you get price control but no execution guarantee.",
+ distractorExplanations: {
+   0: 'A limit order only executes if the stock reaches your specified price',
+ },
  },
  {
  id: "pf-u7-L8-Q4",
@@ -949,6 +1071,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "A stop-loss at $65 gives you protection: if the stock drops to $65, it auto-sells and you lose about 13% instead of potentially 30-50%. If the stock goes up, the stop-loss just sits there and never triggers. Best of both worlds.",
+ distractorExplanations: {
+   1: 'A stop-loss at $65 gives you protection: if the stock drops to $65, it auto-sells and you lose about 13% instead of potentially 30-50%',
+   2: 'A stop-loss at $65 gives you protection: if the stock drops to $65, it auto-sells and you lose about 13% instead of potentially 30-50%',
+   3: 'A stop-loss at $65 gives you protection: if the stock drops to $65, it auto-sells and you lose about 13% instead of potentially 30-50%',
+ },
  },
  {
  id: "pf-u7-L8-Q6",
@@ -985,6 +1112,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "A buy limit at $48 gets you the stock only at your target price. If it dips, you get a deal. If it doesn't, you don't overpay. All these options have some logic, but the limit order is the best match for your belief that the stock will dip, it automates your plan and removes emotion.",
+ distractorExplanations: {
+   0: 'A buy limit at $48 gets you the stock only at your target price',
+   2: 'A buy limit at $48 gets you the stock only at your target price',
+   3: 'A buy limit at $48 gets you the stock only at your target price',
+ },
  },
  ],
  },
@@ -1023,6 +1155,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "Diversification reduces the damage from any one investment tanking. It doesn't guarantee profits or eliminate risk, nothing does. But it prevents a single bad pick from ruining your entire financial plan.",
+ distractorExplanations: {
+   0: 'Diversification reduces the damage from any one investment tanking',
+   2: 'Diversification reduces the damage from any one investment tanking',
+   3: 'Diversification reduces the damage from any one investment tanking',
+ },
  },
  {
  id: "pf-u7-L9-Q2",
@@ -1039,6 +1176,9 @@ export const unit7: Unit = {
  question: "Owning 10 tech stocks means you're well-diversified.",
  correctAnswer: false,
  explanation: "Not quite. That's 10 stocks but only ONE sector. If tech crashes, all 10 drop together. True diversification means spreading across different sectors, asset classes, and geographies, not just buying more of the same kind of thing.",
+ distractorExplanations: {
+   0: 'That\'s 10 stocks but only ONE sector',
+ },
  },
  {
  id: "pf-u7-L9-Q4",
@@ -1081,6 +1221,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "This is called 'concentration risk' on steroids. If the company fails, your friend loses their income (job) AND 80% of their savings simultaneously. This exact scenario played out at Enron, where employees lost their retirement savings and their jobs overnight. Always diversify away from your employer's stock.",
+ distractorExplanations: {
+   1: 'This is called \'concentration risk\' on steroids',
+   2: 'This is called \'concentration risk\' on steroids',
+   3: 'This is called \'concentration risk\' on steroids',
+ },
  },
  {
  id: "pf-u7-L9-Q8",
@@ -1116,6 +1261,11 @@ export const unit7: Unit = {
  options: ["About 25%", "About 50%", "About 75%", "About 90%"],
  correctIndex: 3,
  explanation: "About 90% of professional fund managers underperform the S&P 500 over 15 years. This is one of the most well-documented facts in finance. If the pros can't beat the index consistently, chances are most individual investors can't either.",
+ distractorExplanations: {
+   0: 'The correct answer is About 90%, not About 25%',
+   1: 'The correct answer is About 90%, not About 50%',
+   2: 'The correct answer is About 90%, not About 75%',
+ },
  },
  {
  id: "pf-u7-L10-Q2",
@@ -1123,6 +1273,9 @@ export const unit7: Unit = {
  question: "Index funds typically have higher fees than actively managed funds.",
  correctAnswer: false,
  explanation: "It's the opposite! Index funds charge very low fees (often 0.03% to 0.10%) because they don't need expensive analysts or managers, they just buy everything in the index. Actively managed funds charge 0.5% to 1.5% or more for the research and stock picking. Over decades, that fee difference compounds into tens of thousands of dollars.",
+ distractorExplanations: {
+   0: 'It\'s the opposite! Index funds charge very low fees (often 0.03% to 0.10%) because they don\'t need expensive analysts or managers, they just buy ev...',
+ },
  },
  {
  id: "pf-u7-L10-Q3",
@@ -1165,6 +1318,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 2,
  explanation: "Option C is the sweet spot for many investors. The $7,000 in an index fund gives you a diversified foundation. The $3,000 in researched stocks gives you skin in the game and learning experience, without risking your entire savings. This 'core and satellite' approach is used by many financial advisors.",
+ distractorExplanations: {
+   0: 'Option C is the sweet spot for many investors',
+   1: 'Option C is the sweet spot for many investors',
+   3: 'Option C is the sweet spot for many investors',
+ },
  },
  {
  id: "pf-u7-L10-Q7",
@@ -1201,6 +1359,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "All these approaches have some merit, but an S&P 500 index fund is the best starting point. It's diversified, cheap, requires zero stock analysis, and historically returns about 10% annually. You can always add individual stocks later once you've learned more, but waiting to 'master' investing before starting costs you years of compound growth.",
+ distractorExplanations: {
+   0: 'All these approaches have some merit, but an S&P 500 index fund is the best starting point',
+   2: 'All these approaches have some merit, but an S&P 500 index fund is the best starting point',
+   3: 'All these approaches have some merit, but an S&P 500 index fund is the best starting point',
+ },
  },
  ],
  },
@@ -1241,6 +1404,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "If the company is performing well (strong earnings, raised guidance), a price drop is likely temporary and might be a buying opportunity. The market sometimes overreacts to short-term noise. Focus on the business, not the stock price.",
+ distractorExplanations: {
+   1: 'If the company is performing well (strong earnings, raised guidance), a price drop is likely temporary and might be a buying opportunity',
+   2: 'If the company is performing well (strong earnings, raised guidance), a price drop is likely temporary and might be a buying opportunity',
+   3: 'If the company is performing well (strong earnings, raised guidance), a price drop is likely temporary and might be a buying opportunity',
+ },
  },
  {
  id: "pf-u7-L11-Q3",
@@ -1248,6 +1416,9 @@ export const unit7: Unit = {
  question: "You should always sell a stock once it doubles in price to 'lock in gains.'",
  correctAnswer: false,
  explanation: "If you sold Amazon after it doubled from its IPO, you'd have missed a 100,000%+ return. Selling just because a stock went up ignores whether the company still has room to grow. The best investors let winners run. Only sell if the business thesis changes, not just because the price moved.",
+ distractorExplanations: {
+   0: 'If you sold Amazon after it doubled from its IPO, you\'d have missed a 100,000%+ return',
+ },
  },
  {
  id: "pf-u7-L11-Q4",
@@ -1278,6 +1449,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "This isn't a temporary dip, the company lost 40% of its revenue AND its CEO. The fundamentals are broken. Holding on just because you're down (or because a friend says to) is the 'sunk cost fallacy.' Selling at a loss hurts, but holding a dying stock hurts more. The tax benefit of waiting 2 months isn't worth the risk of further decline.",
+ distractorExplanations: {
+   1: 'This isn\'t a temporary dip, the company lost 40% of its revenue AND its CEO',
+   2: 'This isn\'t a temporary dip, the company lost 40% of its revenue AND its CEO',
+   3: 'This isn\'t a temporary dip, the company lost 40% of its revenue AND its CEO',
+ },
  },
  {
  id: "pf-u7-L11-Q7",
@@ -1300,6 +1476,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "Writing down your investment thesis before buying creates an objective benchmark. When you're emotional later, you can check your notes: 'Did the reason I bought change?' Every other approach is either reactive, arbitrary, or based on someone else's judgment.",
+ distractorExplanations: {
+   0: 'Writing down your investment thesis before buying creates an objective benchmark',
+   2: 'Writing down your investment thesis before buying creates an objective benchmark',
+   3: 'Writing down your investment thesis before buying creates an objective benchmark',
+ },
  },
  {
  id: "pf-u7-L11-Q9",
@@ -1361,6 +1542,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 0,
  explanation: "FOMO = Fear Of Missing Out. It's the anxiety you feel when a stock is soaring and everyone else seems to be getting rich. It causes people to buy at the worst possible time, the peak, and then ride the stock all the way back down.",
+ distractorExplanations: {
+   1: 'FOMO = Fear Of Missing Out. It\'s the anxiety you feel when a stock is soaring and everyone else seems to be getting rich',
+   2: 'FOMO = Fear Of Missing Out. It\'s the anxiety you feel when a stock is soaring and everyone else seems to be getting rich',
+   3: 'FOMO = Fear Of Missing Out. It\'s the anxiety you feel when a stock is soaring and everyone else seems to be getting rich',
+ },
  },
  {
  id: "pf-u7-L12-Q3",
@@ -1368,6 +1554,9 @@ export const unit7: Unit = {
  question: "Frequently buying and selling stocks (day trading) usually leads to higher returns than buy-and-hold investing.",
  correctAnswer: false,
  explanation: "Studies show the opposite. Frequent traders earn less than buy-and-hold investors because of transaction costs, taxes on short-term gains, and emotional mistakes. One famous study found that the most active traders underperformed the market by 6.5% per year. Trading more = earning less for most people.",
+ distractorExplanations: {
+   0: 'Studies show the opposite. Frequent traders earn less than buy-and-hold investors because of transaction costs, taxes on short-term gains, and emot...',
+ },
  },
  {
  id: "pf-u7-L12-Q4",
@@ -1391,6 +1580,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "This is textbook FOMO. That meme stock eventually crashed back to $20. Anyone who bought at $350 lost over 94%. The smart move is always to stick to your plan. Missing one rocket ship is fine, there will always be another opportunity. But going broke chasing hype is a mistake you might not recover from.",
+ distractorExplanations: {
+   0: 'This is textbook FOMO. That meme stock eventually crashed back to $20',
+   2: 'This is textbook FOMO. That meme stock eventually crashed back to $20',
+   3: 'This is textbook FOMO. That meme stock eventually crashed back to $20',
+ },
  },
  {
  id: "pf-u7-L12-Q6",
@@ -1438,6 +1632,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 2,
  explanation: "Charts, stock picking, and staying informed all have value, but patience, diversification, low costs, and emotional control are what actually determine your long-term results. The most successful investors aren't the smartest. They're the most disciplined. You now have the knowledge. The rest is execution.",
+ distractorExplanations: {
+   0: 'Charts, stock picking, and staying informed all have value, but patience, diversification, low costs, and emotional control are what actually deter...',
+   1: 'Charts, stock picking, and staying informed all have value, but patience, diversification, low costs, and emotional control are what actually deter...',
+   3: 'Charts, stock picking, and staying informed all have value, but patience, diversification, low costs, and emotional control are what actually deter...',
+ },
  },
  ],
  },
@@ -1573,6 +1772,9 @@ export const unit7: Unit = {
  question: "When you short a stock, your potential losses are unlimited.",
  correctAnswer: true,
  explanation: "Correct! When you buy a stock, the most you can lose is 100% (it goes to $0). When you short, the stock can theoretically rise forever, your losses have no ceiling. This is why short selling is extremely risky.",
+ distractorExplanations: {
+   1: 'When you buy a stock, the most you can lose is 100% (it goes to $0)',
+ },
  },
  },
  {
@@ -1585,6 +1787,11 @@ export const unit7: Unit = {
  options: ["Short sellers buy back shares as the price rises, pushing it higher", "The company issues new shares to raise money", "Investors sell all their shares at once", "The SEC halts trading on a stock"],
  correctIndex: 0,
  explanation: "A short squeeze is a feedback loop: rising prices force short sellers to buy shares to limit their losses, which pushes the price even higher, which forces more short sellers to buy, and so on.",
+ distractorExplanations: {
+   1: 'A short squeeze is a feedback loop: rising prices force short sellers to buy shares to limit their losses, which pushes the price even higher, whic...',
+   2: 'A short squeeze is a feedback loop: rising prices force short sellers to buy shares to limit their losses, which pushes the price even higher, whic...',
+   3: 'A short squeeze is a feedback loop: rising prices force short sellers to buy shares to limit their losses, which pushes the price even higher, whic...',
+ },
  },
  },
  {
@@ -1598,6 +1805,11 @@ export const unit7: Unit = {
  options: ["Buy as much as you can, this is a once-in-a-lifetime opportunity", "Put $500 in, only what you can afford to lose completely", "Don't buy, the risk/reward at $350 is terrible", "Short the stock, it has to come back down eventually"],
  correctIndex: 2,
  explanation: "At $350, you're buying AFTER a 1,650% run-up. The risk/reward is terrible, limited upside, massive downside. FOMO is the most expensive emotion in investing. The stock crashed to $40 within weeks.",
+ distractorExplanations: {
+   0: 'At $350, you\'re buying AFTER a 1,650% run-up',
+   1: 'At $350, you\'re buying AFTER a 1,650% run-up',
+   3: 'At $350, you\'re buying AFTER a 1,650% run-up',
+ },
  },
  },
  {
@@ -1626,6 +1838,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "Compound interest means your interest earns interest. Over time, this snowball effect is the most powerful force in investing.",
+ distractorExplanations: {
+   0: 'Compound interest means your interest earns interest',
+   2: 'Compound interest means your interest earns interest',
+   3: 'Compound interest means your interest earns interest',
+ },
  },
  {
  id: "pf-u7-rev-Q2",
@@ -1633,6 +1850,9 @@ export const unit7: Unit = {
  question: "A Roth IRA is funded with after-tax dollars, so withdrawals in retirement are tax-free.",
  correctAnswer: true,
  explanation: "With a Roth IRA, you pay taxes now on your contributions. In return, your money grows tax-free and you pay zero taxes when you withdraw in retirement.",
+ distractorExplanations: {
+   1: 'With a Roth IRA, you pay taxes now on your contributions',
+ },
  },
  {
  id: "pf-u7-rev-Q3",
@@ -1648,6 +1868,9 @@ export const unit7: Unit = {
  question: "Dollar-cost averaging means investing a fixed amount at regular intervals regardless of the stock price.",
  correctAnswer: true,
  explanation: "By investing the same amount regularly, you buy more shares when prices are low and fewer when prices are high. It removes the stress of timing the market.",
+ distractorExplanations: {
+   1: 'By investing the same amount regularly, you buy more shares when prices are low and fewer when prices are high',
+ },
  },
  {
  id: "pf-u7-rev-Q5",
@@ -1687,6 +1910,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 2,
  explanation: "A bull market means prices are rising or expected to rise. A bear market is the opposite: prices falling 20% or more.",
+ distractorExplanations: {
+   0: 'A bull market means prices are rising or expected to rise',
+   1: 'A bull market means prices are rising or expected to rise',
+   3: 'A bull market means prices are rising or expected to rise',
+ },
  },
  {
  id: "pf-u7-rev-Q9",
@@ -1700,6 +1928,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "The 4% rule says you can withdraw 4% of your savings per year in retirement and your money should last about 30 years.",
+ distractorExplanations: {
+   0: 'The 4% rule says you can withdraw 4% of your savings per year in retirement and your money should last about 30 years',
+   2: 'The 4% rule says you can withdraw 4% of your savings per year in retirement and your money should last about 30 years',
+   3: 'The 4% rule says you can withdraw 4% of your savings per year in retirement and your money should last about 30 years',
+ },
  },
  {
  id: "pf-u7-rev-Q10",
@@ -1714,6 +1947,11 @@ export const unit7: Unit = {
  ],
  correctIndex: 1,
  explanation: "The employer match is a 50% instant return on her money. That beats the 5% loan interest. Get the free money first, then attack the debt.",
+ distractorExplanations: {
+   0: 'The employer match is a 50% instant return on her money',
+   2: 'The employer match is a 50% instant return on her money',
+   3: 'The employer match is a 50% instant return on her money',
+ },
  },
  ],
  },

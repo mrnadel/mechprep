@@ -35,6 +35,9 @@ export const spaceSection15Part1: Unit[] = [
             question: "Good science communication requires using as many technical terms as possible.",
             correctAnswer: false,
             explanation: "Using jargon pushes people away. Great communicators use everyday language and only introduce technical terms when necessary.",
+            distractorExplanations: {
+              0: 'Using jargon pushes people away. Great communicators use everyday language and only introduce technical terms when necessary.',
+            },
           },
           {
             id: "sp-sec15-u1-L1-Q2",
@@ -48,6 +51,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Starting from what someone already knows lets you build a bridge to new ideas. Meeting people where they are is key.",
+            distractorExplanations: {
+              0: 'List all the equations involved is incorrect; starting from what someone already knows lets you build a bridge to new ideas. Meeting people where they are is key.',
+              2: 'Show them the original research paper is incorrect; starting from what someone already knows lets you build a bridge to new ideas. Meeting people where they are is key.',
+              3: 'Start with the most advanced details is incorrect; starting from what someone already knows lets you build a bridge to new ideas. Meeting people where they are is key.',
+            },
           },
           {
             id: "sp-sec15-u1-L1-T2",
@@ -85,6 +93,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A familiar analogy (drain) paired with the key fact (nothing escapes) makes the concept accessible without dumbing it down.",
+            distractorExplanations: {
+              0: 'It\'s a region where spacetime curvature becomes infinite ... is incorrect; a familiar analogy (drain) paired with the key fact (nothing escapes) makes the concept accessible without dumbing it down.',
+              2: 'Read this textbook chapter on general relativity first is incorrect; a familiar analogy (drain) paired with the key fact (nothing escapes) makes the concept accessible without dumbing it down.',
+              3: 'It\'s too complicated to explain without math is incorrect; a familiar analogy (drain) paired with the key fact (nothing escapes) makes the concept accessible without dumbing it down.',
+            },
           },
           {
             id: "sp-sec15-u1-L1-T3",
@@ -104,6 +117,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "4 million tons per second is vivid and dramatic. It sparks wonder before any technical detail. The other options feel like textbook entries.",
+            distractorExplanations: {
+              0: 'The Sun\'s core temperature is 15 million degrees Celsius is incorrect; 4 million tons per second is vivid and dramatic. It sparks wonder before any technical detail. The other options feel like textbook entries.',
+              2: 'Solar luminosity is 3.8 times 10 to the 26 watts is incorrect; 4 million tons per second is vivid and dramatic. It sparks wonder before any technical detail. The other options feel like textbook entries.',
+              3: 'The Sun is a G-type main sequence star is incorrect; 4 million tons per second is vivid and dramatic. It sparks wonder before any technical detail. The other options feel like textbook entries.',
+            },
           },
           {
             id: "sp-sec15-u1-L1-Q7",
@@ -138,6 +156,9 @@ export const spaceSection15Part1: Unit[] = [
             question: "A good analogy should be a perfect match for the concept in every detail.",
             correctAnswer: false,
             explanation: "No analogy is perfect. A good one captures the key idea while being honest about where it breaks down.",
+            distractorExplanations: {
+              0: 'No analogy is perfect. A good one captures the key idea while being honest about where it breaks down.',
+            },
           },
           {
             id: "sp-sec15-u1-L2-Q2",
@@ -151,6 +172,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The balloon analogy shows that space itself stretches, carrying galaxies with it. No galaxy is at the center, just like no dot is the center of a balloon's surface.",
+            distractorExplanations: {
+              1: 'The universe is like a bomb that exploded outward is incorrect; the balloon analogy shows that space itself stretches, carrying galaxies with it. No galaxy is at the center, just like no dot is the center of a balloon\'s surface.',
+              2: 'Space is like a river carrying galaxies downstream is incorrect; the balloon analogy shows that space itself stretches, carrying galaxies with it. No galaxy is at the center, just like no dot is the center of a balloon\'s surface.',
+              3: 'The universe is like a room getting bigger as you walk th... is incorrect; the balloon analogy shows that space itself stretches, carrying galaxies with it. No galaxy is at the center, just like no dot is the center of a balloon\'s surface.',
+            },
           },
           {
             id: "sp-sec15-u1-L2-T2",
@@ -179,6 +205,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The solar system is incredibly tiny compared to the galaxy. On a dinner plate Milky Way, our entire solar system would be too small to see with the naked eye.",
+            distractorExplanations: {
+              0: 'The size of a marble is incorrect; the solar system is incredibly tiny compared to the galaxy. On a dinner plate Milky Way, our entire solar system would be too small to see with the naked eye.',
+              1: 'The size of a grain of rice is incorrect; the solar system is incredibly tiny compared to the galaxy. On a dinner plate Milky Way, our entire solar system would be too small to see with the naked eye.',
+              3: 'The size of a golf ball is incorrect; the solar system is incredibly tiny compared to the galaxy. On a dinner plate Milky Way, our entire solar system would be too small to see with the naked eye.',
+            },
           },
           {
             id: "sp-sec15-u1-L2-Q5",
@@ -207,6 +238,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Acknowledging the analogy's limits while explaining the real physics shows expertise and honesty. Friction exists on trampolines but not in space.",
+            distractorExplanations: {
+              1: 'They actually do spiral inward, very slowly is incorrect; acknowledging the analogy\'s limits while explaining the real physics shows expertise and honesty. Friction exists on trampolines but not in space.',
+              2: 'The trampoline analogy is perfect and has no flaws is incorrect; acknowledging the analogy\'s limits while explaining the real physics shows expertise and honesty. Friction exists on trampolines but not in space.',
+              3: 'You need to study general relativity to understand is incorrect; acknowledging the analogy\'s limits while explaining the real physics shows expertise and honesty. Friction exists on trampolines but not in space.',
+            },
           },
           {
             id: "sp-sec15-u1-L2-Q7",
@@ -239,6 +275,9 @@ export const spaceSection15Part1: Unit[] = [
             question: "Seasons are caused by Earth being closer to the Sun in summer.",
             correctAnswer: false,
             explanation: "Seasons are caused by Earth's 23.5-degree axial tilt, not distance. In fact, Earth is closest to the Sun during the Northern Hemisphere's winter.",
+            distractorExplanations: {
+              0: 'Seasons are caused by Earth\'s 23.5-degree axial tilt, not distance. In fact, Earth is closest to the Sun during the Northern Hemisphere\'s winter.',
+            },
           },
           {
             id: "sp-sec15-u1-L3-Q2",
@@ -252,6 +291,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Astronauts float because they're in free fall, not because gravity is absent. The ISS experiences about 90% of Earth's surface gravity.",
+            distractorExplanations: {
+              0: 'Because gravity actually stops at the edge of the atmosphere is incorrect; astronauts float because they\'re in free fall, not because gravity is absent. The ISS experiences about 90% of Earth\'s surface gravity.',
+              2: 'Because NASA says there\'s no gravity on the ISS is incorrect; astronauts float because they\'re in free fall, not because gravity is absent. The ISS experiences about 90% of Earth\'s surface gravity.',
+              3: 'Because space is a perfect vacuum is incorrect; astronauts float because they\'re in free fall, not because gravity is absent. The ISS experiences about 90% of Earth\'s surface gravity.',
+            },
           },
           {
             id: "sp-sec15-u1-L3-T2",
@@ -281,6 +325,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The far side gets just as much sunlight as the near side. Tidal locking makes the Moon rotate once per orbit, so the same face always points toward Earth.",
+            distractorExplanations: {
+              0: 'Tell them they\'re wrong and walk away is incorrect; the far side gets just as much sunlight as the near side. Tidal locking makes the Moon rotate once per orbit, so the same face always points toward Earth.',
+              2: 'Say \'look it up yourself\' is incorrect; the far side gets just as much sunlight as the near side. Tidal locking makes the Moon rotate once per orbit, so the same face always points toward Earth.',
+              3: 'Show them a complex orbital mechanics diagram is incorrect; the far side gets just as much sunlight as the near side. Tidal locking makes the Moon rotate once per orbit, so the same face always points toward Earth.',
+            },
           },
           {
             id: "sp-sec15-u1-L3-Q5",
@@ -295,6 +344,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Connecting the Sun to other stars using distance as the explanation is gentle, factual, and memorable.",
+            distractorExplanations: {
+              1: 'Stars and the Sun have nothing in common is incorrect; connecting the Sun to other stars using distance as the explanation is gentle, factual, and memorable.',
+              2: 'The Sun is technically a planet that\'s on fire is incorrect; connecting the Sun to other stars using distance as the explanation is gentle, factual, and memorable.',
+              3: 'You should have paid attention in school is incorrect; connecting the Sun to other stars using distance as the explanation is gentle, factual, and memorable.',
+            },
           },
           {
             id: "sp-sec15-u1-L3-T3",
@@ -323,6 +377,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "You'd remain conscious for about 10 to 15 seconds. You wouldn't explode or instantly freeze. Holding your breath would actually cause lung damage.",
+            distractorExplanations: {
+              0: 'Instant death is incorrect; you\'d remain conscious for about 10 to 15 seconds. You wouldn\'t explode or instantly freeze. Holding your breath would actually cause lung damage.',
+              2: 'Several minutes with no issues is incorrect; you\'d remain conscious for about 10 to 15 seconds. You wouldn\'t explode or instantly freeze. Holding your breath would actually cause lung damage.',
+              3: 'Hours, if they hold their breath is incorrect; you\'d remain conscious for about 10 to 15 seconds. You wouldn\'t explode or instantly freeze. Holding your breath would actually cause lung damage.',
+            },
           },
         ],
       },
@@ -585,6 +644,9 @@ export const spaceSection15Part1: Unit[] = [
             question: "A headline saying 'Earth-like planet found!' means scientists discovered a planet identical to Earth.",
             correctAnswer: false,
             explanation: "'Earth-like' in science usually means similar in size or distance from its star. It says nothing about water, atmosphere, or habitability.",
+            distractorExplanations: {
+              0: '\'Earth-like\' in science usually means similar in size or distance from its star. It says nothing about water, atmosphere, or habitability.',
+            },
           },
           {
             id: "sp-sec15-u2-L1-Q2",
@@ -598,6 +660,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "'Could' is doing heavy lifting. The actual probability is usually 1 in millions or less. Always check the numbers behind dramatic words.",
+            distractorExplanations: {
+              0: 'Start building a bunker immediately is incorrect; \'Could\' is doing heavy lifting. The actual probability is usually 1 in millions or less. Always check the numbers behind dramatic words.',
+              2: 'Which asteroid it is by its catalog number is incorrect; \'Could\' is doing heavy lifting. The actual probability is usually 1 in millions or less. Always check the numbers behind dramatic words.',
+              3: 'Whether NASA has commented on social media is incorrect; \'Could\' is doing heavy lifting. The actual probability is usually 1 in millions or less. Always check the numbers behind dramatic words.',
+            },
           },
           {
             id: "sp-sec15-u2-L1-T2",
@@ -627,6 +694,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A theoretical model is a starting point, not proof. The headline massively overstates what the paper actually claims.",
+            distractorExplanations: {
+              0: 'We\'ll have warp drives within a decade is incorrect; a theoretical model is a starting point, not proof. The headline massively overstates what the paper actually claims.',
+              2: 'The paper is definitely wrong because faster-than-light t... is incorrect; a theoretical model is a starting point, not proof. The headline massively overstates what the paper actually claims.',
+              3: 'Only NASA can confirm if this is real is incorrect; a theoretical model is a starting point, not proof. The headline massively overstates what the paper actually claims.',
+            },
           },
           {
             id: "sp-sec15-u2-L1-Q5",
@@ -654,6 +726,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The abstract is the most direct statement of what the study actually found. Headlines often distort this for clicks.",
+            distractorExplanations: {
+              0: 'It\'s written in plain English for non-scientists is incorrect; the abstract is the most direct statement of what the study actually found. Headlines often distort this for clicks.',
+              2: 'It always disagrees with the headline is incorrect; the abstract is the most direct statement of what the study actually found. Headlines often distort this for clicks.',
+              3: 'It contains the journalist\'s sources is incorrect; the abstract is the most direct statement of what the study actually found. Headlines often distort this for clicks.',
+            },
           },
         ],
       },
@@ -678,6 +755,9 @@ export const spaceSection15Part1: Unit[] = [
             question: "Press releases from universities are always 100% objective and unbiased.",
             correctAnswer: false,
             explanation: "Press releases are promotional. They emphasize the most exciting interpretation of results. They're better than news articles but still require critical reading.",
+            distractorExplanations: {
+              0: 'Press releases are promotional. They emphasize the most exciting interpretation of results. They\'re better than news articles but still require critical reading.',
+            },
           },
           {
             id: "sp-sec15-u2-L2-Q2",
@@ -691,6 +771,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The peer-reviewed paper is the primary source. Everything else is an interpretation of that paper, with varying degrees of accuracy.",
+            distractorExplanations: {
+              0: 'A social media post from a fan account is incorrect; the peer-reviewed paper is the primary source. Everything else is an interpretation of that paper, with varying degrees of accuracy.',
+              1: 'A university press release is incorrect; the peer-reviewed paper is the primary source. Everything else is an interpretation of that paper, with varying degrees of accuracy.',
+              3: 'A news aggregator headline is incorrect; the peer-reviewed paper is the primary source. Everything else is an interpretation of that paper, with varying degrees of accuracy.',
+            },
           },
           {
             id: "sp-sec15-u2-L2-T2",
@@ -728,6 +813,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Science advances incrementally. 'Breakthrough' is marketing language. The actual advance is usually one small step forward in a much larger program.",
+            distractorExplanations: {
+              0: 'Everything we knew before was wrong is incorrect; science advances incrementally. \'Breakthrough\' is marketing language. The actual advance is usually one small step forward in a much larger program.',
+              2: 'The discovery will change daily life within a year is incorrect; science advances incrementally. \'Breakthrough\' is marketing language. The actual advance is usually one small step forward in a much larger program.',
+              3: 'The researchers won a Nobel Prize is incorrect; science advances incrementally. \'Breakthrough\' is marketing language. The actual advance is usually one small step forward in a much larger program.',
+            },
           },
           {
             id: "sp-sec15-u2-L2-T3",
@@ -748,6 +838,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The company's marketing team turned a 15% improvement into a '10x' claim. Always compare the press release to the actual data.",
+            distractorExplanations: {
+              0: 'The press release accurately summarized the paper is incorrect; the company\'s marketing team turned a 15% improvement into a \'10x\' claim. Always compare the press release to the actual data.',
+              1: 'The paper must be wrong because the company knows its own... is incorrect; the company\'s marketing team turned a 15% improvement into a \'10x\' claim. Always compare the press release to the actual data.',
+              3: 'A 15% improvement is the same as 10x in engineering terms is incorrect; the company\'s marketing team turned a 15% improvement into a \'10x\' claim. Always compare the press release to the actual data.',
+            },
           },
           {
             id: "sp-sec15-u2-L2-Q7",
@@ -780,6 +875,9 @@ export const spaceSection15Part1: Unit[] = [
             question: "A study posted only on a preprint server has been fully peer-reviewed.",
             correctAnswer: false,
             explanation: "Preprint servers like arXiv publish papers before peer review. They're useful for fast access but haven't been validated by independent experts yet.",
+            distractorExplanations: {
+              0: 'Preprint servers like arXiv publish papers before peer review. They\'re useful for fast access but haven\'t been validated by independent experts yet.',
+            },
           },
           {
             id: "sp-sec15-u2-L3-Q2",
@@ -793,6 +891,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Peer reviewers evaluate whether the research methods are valid and whether the data actually supports the conclusions being drawn.",
+            distractorExplanations: {
+              0: 'To make sure the writing style is good is incorrect; peer reviewers evaluate whether the research methods are valid and whether the data actually supports the conclusions being drawn.',
+              2: 'To prevent other scientists from copying the work is incorrect; peer reviewers evaluate whether the research methods are valid and whether the data actually supports the conclusions being drawn.',
+              3: 'To delay publication as long as possible is incorrect; peer reviewers evaluate whether the research methods are valid and whether the data actually supports the conclusions being drawn.',
+            },
           },
           {
             id: "sp-sec15-u2-L3-T2",
@@ -845,6 +948,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An extraordinary claim (overturning dark matter) from a single unreviewed paper is interesting but far from conclusive. The scientific process takes time.",
+            distractorExplanations: {
+              0: 'Dark matter is officially disproven since a study said so is incorrect; an extraordinary claim (overturning dark matter) from a single unreviewed paper is interesting but far from conclusive. The scientific process takes time.',
+              2: 'Preprints are always wrong, so ignore it completely is incorrect; an extraordinary claim (overturning dark matter) from a single unreviewed paper is interesting but far from conclusive. The scientific process takes time.',
+              3: 'The news article must be right because it was published is incorrect; an extraordinary claim (overturning dark matter) from a single unreviewed paper is interesting but far from conclusive. The scientific process takes time.',
+            },
           },
           {
             id: "sp-sec15-u2-L3-Q7",
@@ -858,6 +966,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "arXiv (pronounced 'archive') is the standard preprint server for physics and astronomy. Papers appear there before journal publication.",
+            distractorExplanations: {
+              0: 'Wikipedia is incorrect; arXiv (pronounced \'archive\') is the standard preprint server for physics and astronomy. Papers appear there before journal publication.',
+              2: 'Google Scholar is incorrect; arXiv (pronounced \'archive\') is the standard preprint server for physics and astronomy. Papers appear there before journal publication.',
+              3: 'PubMed is incorrect; arXiv (pronounced \'archive\') is the standard preprint server for physics and astronomy. Papers appear there before journal publication.',
+            },
           },
         ],
       },
@@ -1120,6 +1233,9 @@ export const spaceSection15Part1: Unit[] = [
             question: "The overview effect is a cognitive shift astronauts experience when seeing Earth from space.",
             correctAnswer: true,
             explanation: "Nearly every astronaut reports some version of this experience. Seeing the whole planet at once fundamentally changes how they think about it.",
+            distractorExplanations: {
+              1: 'This statement is correct because nearly every astronaut reports some version of this experience. Seeing the whole planet at once fundamentally changes how they think about it.',
+            },
           },
           {
             id: "sp-sec15-u3-L1-Q2",
@@ -1133,6 +1249,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Author Frank White coined the term in his 1987 book 'The Overview Effect' after interviewing astronauts about their experiences.",
+            distractorExplanations: {
+              0: 'Neil Armstrong in 1969 is incorrect; author Frank White coined the term in his 1987 book \'The Overview Effect\' after interviewing astronauts about their experiences.',
+              2: 'Carl Sagan in 1990 is incorrect; author Frank White coined the term in his 1987 book \'The Overview Effect\' after interviewing astronauts about their experiences.',
+              3: 'Buzz Aldrin in 1975 is incorrect; author Frank White coined the term in his 1987 book \'The Overview Effect\' after interviewing astronauts about their experiences.',
+            },
           },
           {
             id: "sp-sec15-u3-L1-T2",
@@ -1169,6 +1290,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Political borders don't exist physically. From space, Earth looks like one connected system with no dividing lines.",
+            distractorExplanations: {
+              0: 'They can clearly see every country\'s border is incorrect; political borders don\'t exist physically. From space, Earth looks like one connected system with no dividing lines.',
+              2: 'Only continent edges are visible is incorrect; political borders don\'t exist physically. From space, Earth looks like one connected system with no dividing lines.',
+              3: 'They can read country names on the surface is incorrect; political borders don\'t exist physically. From space, Earth looks like one connected system with no dividing lines.',
+            },
           },
           {
             id: "sp-sec15-u3-L1-T3",
@@ -1189,6 +1315,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The overview effect can occur from even brief exposure. Seeing the whole planet, even for minutes, is enough to shift perspective for many people.",
+            distractorExplanations: {
+              0: 'No, you need to orbit for days to experience it is incorrect; the overview effect can occur from even brief exposure. Seeing the whole planet, even for minutes, is enough to shift perspective for many people.',
+              2: 'No, only professional astronauts experience it is incorrect; the overview effect can occur from even brief exposure. Seeing the whole planet, even for minutes, is enough to shift perspective for many people.',
+              3: 'No, suborbital flights don\'t go high enough is incorrect; the overview effect can occur from even brief exposure. Seeing the whole planet, even for minutes, is enough to shift perspective for many people.',
+            },
           },
           {
             id: "sp-sec15-u3-L1-Q7",
@@ -1202,6 +1333,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Carl Sagan requested that Voyager 1 turn its camera back toward Earth from beyond Neptune. Earth appears as a tiny dot in a sunbeam.",
+            distractorExplanations: {
+              0: 'The first photo of Earth from the Moon is incorrect; carl Sagan requested that Voyager 1 turn its camera back toward Earth from beyond Neptune. Earth appears as a tiny dot in a sunbeam.',
+              2: 'A close-up of Earth\'s atmosphere from the ISS is incorrect; carl Sagan requested that Voyager 1 turn its camera back toward Earth from beyond Neptune. Earth appears as a tiny dot in a sunbeam.',
+              3: 'An artist\'s painting of Earth from Mars is incorrect; carl Sagan requested that Voyager 1 turn its camera back toward Earth from beyond Neptune. Earth appears as a tiny dot in a sunbeam.',
+            },
           },
         ],
       },
@@ -1226,6 +1362,9 @@ export const spaceSection15Part1: Unit[] = [
             question: "Most astronauts say their spaceflight had no lasting impact on their worldview.",
             correctAnswer: false,
             explanation: "The opposite is true. Nearly every astronaut reports a lasting change in how they think about Earth, humanity, and the environment.",
+            distractorExplanations: {
+              0: 'The opposite is true. Nearly every astronaut reports a lasting change in how they think about Earth, humanity, and the environment.',
+            },
           },
           {
             id: "sp-sec15-u3-L2-Q2",
@@ -1239,6 +1378,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The atmosphere's thinness is the most universally cited shock. It looks like a fragile membrane rather than the vast sky we experience from the ground.",
+            distractorExplanations: {
+              0: 'How small the oceans look is incorrect; the atmosphere\'s thinness is the most universally cited shock. It looks like a fragile membrane rather than the vast sky we experience from the ground.',
+              2: 'How bright city lights are is incorrect; the atmosphere\'s thinness is the most universally cited shock. It looks like a fragile membrane rather than the vast sky we experience from the ground.',
+              3: 'How flat the continents look is incorrect; the atmosphere\'s thinness is the most universally cited shock. It looks like a fragile membrane rather than the vast sky we experience from the ground.',
+            },
           },
           {
             id: "sp-sec15-u3-L2-T2",
@@ -1268,6 +1412,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Apollo 8 astronaut Bill Anders took the Earthrise photo on December 24, 1968. It became one of the most influential photographs in history.",
+            distractorExplanations: {
+              0: 'Apollo 11 is incorrect; apollo 8 astronaut Bill Anders took the Earthrise photo on December 24, 1968. It became one of the most influential photographs in history.',
+              1: 'Apollo 13 is incorrect; apollo 8 astronaut Bill Anders took the Earthrise photo on December 24, 1968. It became one of the most influential photographs in history.',
+              3: 'Apollo 17 is incorrect; apollo 8 astronaut Bill Anders took the Earthrise photo on December 24, 1968. It became one of the most influential photographs in history.',
+            },
           },
           {
             id: "sp-sec15-u3-L2-Q5",
@@ -1305,6 +1454,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This blend of beauty and worry is the hallmark of the overview effect. It's a genuine emotional and cognitive shift, not a performance.",
+            distractorExplanations: {
+              0: 'The astronaut didn\'t enjoy the mission is incorrect; this blend of beauty and worry is the hallmark of the overview effect. It\'s a genuine emotional and cognitive shift, not a performance.',
+              2: 'The astronaut was just performing for the audience is incorrect; this blend of beauty and worry is the hallmark of the overview effect. It\'s a genuine emotional and cognitive shift, not a performance.',
+              3: 'Space travel causes depression is incorrect; this blend of beauty and worry is the hallmark of the overview effect. It\'s a genuine emotional and cognitive shift, not a performance.',
+            },
           },
         ],
       },
@@ -1329,6 +1483,9 @@ export const spaceSection15Part1: Unit[] = [
             question: "The atoms in your body were originally created inside stars.",
             correctAnswer: true,
             explanation: "Elements heavier than hydrogen and helium were created by nuclear fusion inside stars and spread through space by supernovae. You are literally made of star stuff.",
+            distractorExplanations: {
+              1: 'This statement is correct because elements heavier than hydrogen and helium were created by nuclear fusion inside stars and spread through space by supernovae. You are literally made of star stuff.',
+            },
           },
           {
             id: "sp-sec15-u3-L3-Q2",
@@ -1342,6 +1499,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Sagan wrote that every king, every war, every love story happened on that tiny dot. It puts human importance in a humbling perspective.",
+            distractorExplanations: {
+              0: 'Earth is the center of the universe is incorrect; sagan wrote that every king, every war, every love story happened on that tiny dot. It puts human importance in a humbling perspective.',
+              1: 'Humans are the most important beings in the cosmos is incorrect; sagan wrote that every king, every war, every love story happened on that tiny dot. It puts human importance in a humbling perspective.',
+              3: 'Space travel is too dangerous to attempt is incorrect; sagan wrote that every king, every war, every love story happened on that tiny dot. It puts human importance in a humbling perspective.',
+            },
           },
           {
             id: "sp-sec15-u3-L3-T2",
@@ -1392,6 +1554,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "16 nations including the US, Russia, Japan, Canada, and 11 European countries cooperate to operate the ISS.",
+            distractorExplanations: {
+              0: '5 is incorrect; 16 nations including the US, Russia, Japan, Canada, and 11 European countries cooperate to operate the ISS.',
+              1: '10 is incorrect; 16 nations including the US, Russia, Japan, Canada, and 11 European countries cooperate to operate the ISS.',
+              3: '30 is incorrect; 16 nations including the US, Russia, Japan, Canada, and 11 European countries cooperate to operate the ISS.',
+            },
           },
           {
             id: "sp-sec15-u3-L3-Q7",
@@ -1406,6 +1573,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Space exploration directly benefits Earth through technology and inspires the kind of global cooperation needed to solve big problems.",
+            distractorExplanations: {
+              0: 'You\'re right, we should stop all space programs is incorrect; space exploration directly benefits Earth through technology and inspires the kind of global cooperation needed to solve big problems.',
+              2: 'Earth problems don\'t matter compared to space is incorrect; space exploration directly benefits Earth through technology and inspires the kind of global cooperation needed to solve big problems.',
+              3: 'Space is just for scientists, so it\'s not relevant is incorrect; space exploration directly benefits Earth through technology and inspires the kind of global cooperation needed to solve big problems.',
+            },
           },
         ],
       },
@@ -1667,6 +1839,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Experts forget what's confusing to beginners. Being aware of this bias helps you communicate more effectively.",
+            distractorExplanations: {
+              0: 'Knowing too many facts to function is incorrect; experts forget what\'s confusing to beginners. Being aware of this bias helps you communicate more effectively.',
+              2: 'Being afraid to share what you know is incorrect; experts forget what\'s confusing to beginners. Being aware of this bias helps you communicate more effectively.',
+              3: 'Having outdated information is incorrect; experts forget what\'s confusing to beginners. Being aware of this bias helps you communicate more effectively.',
+            },
           },
           {
             id: "sp-sec15-u4-L1-Q2",
@@ -1674,6 +1851,9 @@ export const spaceSection15Part1: Unit[] = [
             question: "A peer-reviewed study that's been replicated by multiple teams is stronger evidence than a single preprint.",
             correctAnswer: true,
             explanation: "Peer review checks one paper's methods. Replication confirms the results independently. Together, they build strong evidence.",
+            distractorExplanations: {
+              1: 'This statement is correct because peer review checks one paper\'s methods. Replication confirms the results independently. Together, they build strong evidence.',
+            },
           },
           {
             id: "sp-sec15-u4-L1-Q3",
@@ -1713,6 +1893,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The overview effect is a profound shift in perspective that makes astronauts see Earth's fragility, beauty, and unity in a new way.",
+            distractorExplanations: {
+              0: 'A feeling of boredom astronauts get after months in space is incorrect; the overview effect is a profound shift in perspective that makes astronauts see Earth\'s fragility, beauty, and unity in a new way.',
+              2: 'A medical condition caused by microgravity is incorrect; the overview effect is a profound shift in perspective that makes astronauts see Earth\'s fragility, beauty, and unity in a new way.',
+              3: 'The effect of looking at too many star charts is incorrect; the overview effect is a profound shift in perspective that makes astronauts see Earth\'s fragility, beauty, and unity in a new way.',
+            },
           },
           {
             id: "sp-sec15-u4-L1-Q7",
@@ -1727,6 +1912,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "An extraordinary claim needs extraordinary evidence. A single unreviewed preprint is interesting but not even close to definitive.",
+            distractorExplanations: {
+              1: 'Dark energy must be fake then is incorrect; an extraordinary claim needs extraordinary evidence. A single unreviewed preprint is interesting but not even close to definitive.',
+              2: 'Ignore it completely since preprints are always wrong is incorrect; an extraordinary claim needs extraordinary evidence. A single unreviewed preprint is interesting but not even close to definitive.',
+              3: 'Share the headline on social media immediately is incorrect; an extraordinary claim needs extraordinary evidence. A single unreviewed preprint is interesting but not even close to definitive.',
+            },
           },
           {
             id: "sp-sec15-u4-L1-Q8",
@@ -1760,6 +1950,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Starting with a vivid image and connecting to something familiar (a flashlight) hooks the audience. Jargon and textbook language lose them immediately.",
+            distractorExplanations: {
+              0: 'A black hole is a region of spacetime where the gravitati... is incorrect; starting with a vivid image and connecting to something familiar (a flashlight) hooks the audience. Jargon and textbook language lose them immediately.',
+              2: 'Please open your textbooks to chapter 14 is incorrect; starting with a vivid image and connecting to something familiar (a flashlight) hooks the audience. Jargon and textbook language lose them immediately.',
+              3: 'Black holes are complicated, so pay close attention is incorrect; starting with a vivid image and connecting to something familiar (a flashlight) hooks the audience. Jargon and textbook language lose them immediately.',
+            },
           },
           {
             id: "sp-sec15-u4-L2-Q2",
@@ -1774,6 +1969,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The real story is an anomalous signal. 'Parallel universe' is one speculative explanation among many. The tweet massively overstated the findings.",
+            distractorExplanations: {
+              0: 'NASA has confirmed a parallel universe exists is incorrect; the real story is an anomalous signal. \'Parallel universe\' is one speculative explanation among many. The tweet massively overstated the findings.',
+              2: 'Time running backward has been proven is incorrect; the real story is an anomalous signal. \'Parallel universe\' is one speculative explanation among many. The tweet massively overstated the findings.',
+              3: 'The tweet must be a joke with no basis in real science is incorrect; the real story is an anomalous signal. \'Parallel universe\' is one speculative explanation among many. The tweet massively overstated the findings.',
+            },
           },
           {
             id: "sp-sec15-u4-L2-Q3",
@@ -1788,6 +1988,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Gently correcting both myths with facts and explaining where the misconception comes from is the most effective and kind approach.",
+            distractorExplanations: {
+              1: 'You might be right about aliens is incorrect; gently correcting both myths with facts and explaining where the misconception comes from is the most effective and kind approach.',
+              2: 'That\'s completely wrong and you should know better is incorrect; gently correcting both myths with facts and explaining where the misconception comes from is the most effective and kind approach.',
+              3: 'Where did you hear that? That source must be terrible is incorrect; gently correcting both myths with facts and explaining where the misconception comes from is the most effective and kind approach.',
+            },
           },
           {
             id: "sp-sec15-u4-L2-Q4",
@@ -1801,6 +2006,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Connecting space to practical, daily technologies makes the relevance immediate and personal. Abstract wonder alone doesn't convince skeptics.",
+            distractorExplanations: {
+              0: 'Space is just cool, that\'s why is incorrect; connecting space to practical, daily technologies makes the relevance immediate and personal. Abstract wonder alone doesn\'t convince skeptics.',
+              2: 'You don\'t have to care is incorrect; connecting space to practical, daily technologies makes the relevance immediate and personal. Abstract wonder alone doesn\'t convince skeptics.',
+              3: 'Only scientists need to understand space is incorrect; connecting space to practical, daily technologies makes the relevance immediate and personal. Abstract wonder alone doesn\'t convince skeptics.',
+            },
           },
           {
             id: "sp-sec15-u4-L2-Q5",
@@ -1815,6 +2025,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Habitable zone and similar mass are promising but insufficient. Without atmospheric data, we can't know if it has water, oxygen, or any conditions for life.",
+            distractorExplanations: {
+              0: 'Yes, it\'s a perfect twin of Earth is incorrect; habitable zone and similar mass are promising but insufficient. Without atmospheric data, we can\'t know if it has water, oxygen, or any conditions for life.',
+              2: 'No. Any planet in the habitable zone is automatically hab... is incorrect; habitable zone and similar mass are promising but insufficient. Without atmospheric data, we can\'t know if it has water, oxygen, or any conditions for life.',
+              3: 'Yes. Being 1.5 times Earth\'s mass makes it identical is incorrect; habitable zone and similar mass are promising but insufficient. Without atmospheric data, we can\'t know if it has water, oxygen, or any conditions for life.',
+            },
           },
           {
             id: "sp-sec15-u4-L2-Q6",
@@ -1837,6 +2052,11 @@ export const spaceSection15Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Validating the person's thinking before redirecting to the truth preserves their dignity and makes them more receptive to the correction.",
+            distractorExplanations: {
+              1: 'Obviously that\'s incorrect is incorrect; validating the person\'s thinking before redirecting to the truth preserves their dignity and makes them more receptive to the correction.',
+              2: 'Where did you hear that nonsense? is incorrect; validating the person\'s thinking before redirecting to the truth preserves their dignity and makes them more receptive to the correction.',
+              3: 'Wrong. Let me lecture you is incorrect; validating the person\'s thinking before redirecting to the truth preserves their dignity and makes them more receptive to the correction.',
+            },
           },
           {
             id: "sp-sec15-u4-L2-Q8",

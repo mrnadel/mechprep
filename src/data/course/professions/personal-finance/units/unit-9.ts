@@ -50,6 +50,9 @@ export const unit9: Unit = {
           question: "Buying a home has extra costs beyond the price, like closing costs and agent fees when you sell.",
           correctAnswer: true,
           explanation: "Yes! These transaction costs can total tens of thousands of dollars and are one of the biggest hidden costs of homeownership.",
+          distractorExplanations: {
+            1: 'These transaction costs can total tens of thousands of dollars and are one of the biggest hidden costs of homeownership',
+          },
         },
         {
           id: "pf-u9-L1-Q1",
@@ -57,6 +60,9 @@ export const unit9: Unit = {
           question: "In the first years of a 30-year mortgage, most of your monthly payment goes toward building equity (paying down the principal).",
           correctAnswer: false,
           explanation: "Not quite. It's actually the opposite. In the early years, the vast majority goes to interest. On a $300,000 mortgage at 7%, about $1,750 of your ~$2,000 monthly payment goes to interest in year one. You're barely touching the principal.",
+          distractorExplanations: {
+            0: 'In the early years, the vast majority goes to interest',
+          },
         },
         {
           id: "pf-u9-L1-Q2",
@@ -70,6 +76,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Purchase price: $350,000. Sale price: $365,000. That's a $15,000 gain on paper. But buying costs ($12,000) + selling costs ($21,000) = $33,000. Net result: $15,000 - $33,000 = -$18,000 loss. And that doesn't even count maintenance, taxes, or insurance you paid while owning it.",
+          distractorExplanations: {
+            1: 'Purchase price: $350,000. Sale price: $365,000',
+            2: 'Purchase price: $350,000. Sale price: $365,000',
+            3: 'Purchase price: $350,000. Sale price: $365,000',
+          },
         },
         {
           id: "pf-u9-L1-Q3",
@@ -104,6 +115,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "With only a 2-3 year timeline, Jake would pay $10,000-$17,000 in closing costs to buy plus $18,000-$21,000 to sell. Roughly $30,000+ in transaction costs. That likely wipes out any equity he'd build. Renting at $1,800/month saves him cash and keeps him flexible.",
+          distractorExplanations: {
+            1: 'With only a 2-3 year timeline, Jake would pay $10,000-$17,000 in closing costs to buy plus $18,000-$21,000 to sell',
+            2: 'With only a 2-3 year timeline, Jake would pay $10,000-$17,000 in closing costs to buy plus $18,000-$21,000 to sell',
+            3: 'With only a 2-3 year timeline, Jake would pay $10,000-$17,000 in closing costs to buy plus $18,000-$21,000 to sell',
+          },
         },
         {
           id: "pf-u9-L1-Q6",
@@ -134,6 +150,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "All of these matter, but your timeline is the #1 factor. If you're staying 7+ years, buying usually wins. If you might leave in 2-3 years, renting almost always wins. The other factors are secondary to this fundamental question.",
+          distractorExplanations: {
+            1: 'All of these matter, but your timeline is the #1 factor',
+            2: 'All of these matter, but your timeline is the #1 factor',
+            3: 'All of these matter, but your timeline is the #1 factor',
+          },
         },
       ],
     },
@@ -166,6 +187,9 @@ export const unit9: Unit = {
           question: "A fixed-rate mortgage keeps the same interest rate for the entire life of the loan.",
           correctAnswer: true,
           explanation: "That's what 'fixed' means. Your rate never changes, so your payment stays predictable for the full 15 or 30 years.",
+          distractorExplanations: {
+            1: 'That\'s what \'fixed\' means. Your rate never changes, so your payment stays predictable for the full 15 or 30 years',
+          },
         },
         {
           id: "pf-u9-L2-Q1",
@@ -196,6 +220,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "At 7% over 30 years, you'd pay roughly $419,000 in interest on a $300,000 loan. That means you're paying back about $719,000 total for a $300,000 house. The interest costs more than the house itself.",
+          distractorExplanations: {
+            1: 'At 7% over 30 years, you\'d pay roughly $419,000 in interest on a $300,000 loan',
+            2: 'At 7% over 30 years, you\'d pay roughly $419,000 in interest on a $300,000 loan',
+            3: 'At 7% over 30 years, you\'d pay roughly $419,000 in interest on a $300,000 loan',
+          },
         },
         {
           id: "pf-u9-L2-Q4",
@@ -203,6 +232,9 @@ export const unit9: Unit = {
           question: "A 15-year mortgage has higher monthly payments than a 30-year, but you'll pay significantly less total interest.",
           correctAnswer: true,
           explanation: "Correct. A $300,000 loan at 6.5%: 30-year = ~$1,896/mo and ~$382K total interest. 15-year = ~$2,613/mo and ~$170K total interest. The 15-year costs $717 more per month but saves you over $212,000 in interest.",
+          distractorExplanations: {
+            1: 'A $300,000 loan at 6.5%: 30-year = ~$1,896/mo and ~$382K total interest',
+          },
         },
         {
           id: "pf-u9-L2-Q5",
@@ -226,6 +258,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "Trick question! With only a 4-year timeline, Lisa probably shouldn't buy at all. Closing costs to buy ($10,000-$17,000) plus selling costs ($18,000-$21,000) would likely exceed any equity she'd build. But IF she's set on buying, the ARM would save money since she'd sell before it adjusts.",
+          distractorExplanations: {
+            0: 'Trick question! With only a 4-year timeline, Lisa probably shouldn\'t buy at all',
+            1: 'Trick question! With only a 4-year timeline, Lisa probably shouldn\'t buy at all',
+            3: 'Trick question! With only a 4-year timeline, Lisa probably shouldn\'t buy at all',
+          },
         },
         {
           id: "pf-u9-L2-Q7",
@@ -278,6 +315,9 @@ export const unit9: Unit = {
           question: "When buying a home, you need cash for both the down payment and closing costs.",
           correctAnswer: true,
           explanation: "Yes. The down payment is your upfront investment in the home, and closing costs (2-5% of the price) cover fees for appraisal, title search, and more.",
+          distractorExplanations: {
+            1: 'The down payment is your upfront investment in the home, and closing costs (2-5% of the price) cover fees for appraisal, title search, and more',
+          },
         },
         {
           id: "pf-u9-L3-Q1",
@@ -302,6 +342,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Down payment: 10% of $400,000 = $40,000. Closing costs: 3% of $400,000 = $12,000. Total: $40,000 + $12,000 = $52,000. This is why saving for a home takes so long: it's not just the down payment.",
+          distractorExplanations: {
+            1: 'The correct answer is $52,000, not $40,000',
+            2: 'The correct answer is $52,000, not $12,000',
+            3: 'The correct answer is $52,000, not $44,000',
+          },
         },
         {
           id: "pf-u9-L3-Q3",
@@ -309,6 +354,9 @@ export const unit9: Unit = {
           question: "PMI (Private Mortgage Insurance) protects the homebuyer if they can't make payments.",
           correctAnswer: false,
           explanation: "PMI protects the LENDER, not you. If you default, PMI reimburses the bank. But you still lose the home. It's an insurance policy you pay for that only benefits the bank. That's why avoiding PMI by putting 20% down is such a big deal.",
+          distractorExplanations: {
+            0: 'PMI protects the LENDER, not you. If you default, PMI reimburses the bank',
+          },
         },
         {
           id: "pf-u9-L3-Q4",
@@ -362,6 +410,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "While all options get you into a home, saving 20% avoids PMI entirely, which saves $1,200-$3,600/year for potentially 5-10+ years. That's $6,000 to $36,000 in savings. The grant is free money (great!), but 20% down saves the most over the life of the loan.",
+          distractorExplanations: {
+            1: 'While all options get you into a home, saving 20% avoids PMI entirely, which saves $1,200-$3,600/year for potentially 5-10+ years',
+            2: 'While all options get you into a home, saving 20% avoids PMI entirely, which saves $1,200-$3,600/year for potentially 5-10+ years',
+            3: 'While all options get you into a home, saving 20% avoids PMI entirely, which saves $1,200-$3,600/year for potentially 5-10+ years',
+          },
         },
       ],
     },
@@ -400,6 +453,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "$7,000 x 0.28 = $1,960. That's your max for PITI (principal, interest, taxes, and insurance combined). If property taxes and insurance add $400/month, your actual mortgage payment should be $1,560 or less.",
+          distractorExplanations: {
+            1: 'The correct answer is $1,960, not $2,520',
+            2: 'The correct answer is $1,960, not $2,800',
+            3: 'The correct answer is $1,960, not $1,400',
+          },
         },
         {
           id: "pf-u9-L4-Q2",
@@ -425,6 +483,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "28% of $5,500 = $1,540. The home costs $1,700, which exceeds the 28% limit. Also check 36%: $5,500 x 0.36 = $1,980. Total debt would be $1,700 + $350 + $200 = $2,250, which also exceeds $1,980. She fails BOTH rules. She needs a cheaper home or to pay off some debt first.",
+          distractorExplanations: {
+            1: '28% of $5,500 = $1,540. The home costs $1,700, which exceeds the 28% limit',
+            2: '28% of $5,500 = $1,540. The home costs $1,700, which exceeds the 28% limit',
+            3: '28% of $5,500 = $1,540. The home costs $1,700, which exceeds the 28% limit',
+          },
         },
         {
           id: "pf-u9-L4-Q4",
@@ -432,6 +495,9 @@ export const unit9: Unit = {
           question: "The amount a bank pre-approves you for is the ideal amount you should spend on a home.",
           correctAnswer: false,
           explanation: "Not quite. Banks want to lend you as much as possible: that's how they make money. Pre-approval is your ceiling, not your target. Smart buyers spend 10-20% below their max approval to maintain financial flexibility.",
+          distractorExplanations: {
+            0: 'Banks want to lend you as much as possible: that\'s how they make money',
+          },
         },
         {
           id: "pf-u9-L4-Q5",
@@ -526,6 +592,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Pre-approval does two things: tells YOU how much you can actually borrow, and tells SELLERS you're financially ready. In competitive markets, sellers often won't even consider offers without a pre-approval letter.",
+          distractorExplanations: {
+            1: 'Pre-approval does two things: tells YOU how much you can actually borrow, and tells SELLERS you\'re financially ready',
+            2: 'Pre-approval does two things: tells YOU how much you can actually borrow, and tells SELLERS you\'re financially ready',
+            3: 'Pre-approval does two things: tells YOU how much you can actually borrow, and tells SELLERS you\'re financially ready',
+          },
         },
         {
           id: "pf-u9-L5-Q3",
@@ -542,6 +613,9 @@ export const unit9: Unit = {
           question: "A home inspection is the same thing as a home appraisal.",
           correctAnswer: false,
           explanation: "Very different! An inspection checks the home's CONDITION (roof, plumbing, foundation, electrical: is it falling apart?). An appraisal determines the home's VALUE (is it worth what you're paying?). You want both. The inspection protects you from hidden problems; the appraisal protects you from overpaying.",
+          distractorExplanations: {
+            0: 'Very different! An inspection checks the home\'s CONDITION (roof, plumbing, foundation, electrical: is it falling apart?)',
+          },
         },
         {
           id: "pf-u9-L5-Q5",
@@ -564,6 +638,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "On a 40-year-old home, there could be $50,000+ in hidden issues (roof, foundation, plumbing, electrical). Waiving the inspection to save $10,000 on the purchase price is penny-wise and pound-foolish. Walk away from this bidding war if needed: another house will come along.",
+          distractorExplanations: {
+            1: 'On a 40-year-old home, there could be $50,000+ in hidden issues (roof, foundation, plumbing, electrical)',
+            2: 'On a 40-year-old home, there could be $50,000+ in hidden issues (roof, foundation, plumbing, electrical)',
+            3: 'On a 40-year-old home, there could be $50,000+ in hidden issues (roof, foundation, plumbing, electrical)',
+          },
         },
         {
           id: "pf-u9-L5-Q7",
@@ -646,6 +725,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "$350,000 x 0.018 = $6,300 per year, or $525/month. That's on top of your mortgage, insurance, and maintenance. Property taxes are one of the biggest \"hidden\" costs that catch first-time buyers off guard.",
+          distractorExplanations: {
+            1: 'The correct answer is $6,300, not $3,500',
+            2: 'The correct answer is $6,300, not $1,800',
+            3: 'The correct answer is $6,300, not $8,400',
+          },
         },
         {
           id: "pf-u9-L6-Q4",
@@ -653,6 +737,9 @@ export const unit9: Unit = {
           question: "HOA fees are optional: you can choose not to pay them if you don't use the amenities.",
           correctAnswer: false,
           explanation: "HOA fees are mandatory if your property is in an HOA community. You can't opt out, and failing to pay can result in liens on your home or even foreclosure. Before buying, always check if there's an HOA and what the fees cover. Some HOAs are $50/month; others are $800+.",
+          distractorExplanations: {
+            0: 'HOA fees are mandatory if your property is in an HOA community',
+          },
         },
         {
           id: "pf-u9-L6-Q5",
@@ -693,6 +780,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Home A: $320,000 x 1.2% = $3,840/year taxes, no HOA = $3,840 total. Home B: $295,000 x 1.8% = $5,310 taxes + $4,200 HOA ($350 x 12) = $9,510 total. Home B is $25,000 cheaper to buy but costs $5,670 MORE per year in recurring expenses. Over 10 years, that's $56,700 extra!",
+          distractorExplanations: {
+            1: 'Home A: $320,000 x 1.2% = $3,840/year taxes, no HOA = $3,840 total',
+            2: 'Home A: $320,000 x 1.2% = $3,840/year taxes, no HOA = $3,840 total',
+            3: 'Home A: $320,000 x 1.2% = $3,840/year taxes, no HOA = $3,840 total',
+          },
         },
         {
           id: "pf-u9-L6-Q9",
@@ -706,6 +798,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "All are important, but property taxes are typically the single largest hidden cost and they vary enormously by location. A 1% difference in tax rate on a $350,000 home = $3,500/year. Over 30 years, that's $105,000. Always check the tax rate first.",
+          distractorExplanations: {
+            1: 'All are important, but property taxes are typically the single largest hidden cost and they vary enormously by location',
+            2: 'All are important, but property taxes are typically the single largest hidden cost and they vary enormously by location',
+            3: 'All are important, but property taxes are typically the single largest hidden cost and they vary enormously by location',
+          },
         },
       ],
     },
@@ -744,6 +841,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "$8,000 / $250/month = 32 months = 2 years and 8 months. After that, every month saves you $250. If you plan to stay 5+ more years, that's $250 x (60 - 32) = $7,000 in net savings after breakeven. Worth it!",
+          distractorExplanations: {
+            1: '$8,000 / $250/month = 32 months = 2 years and 8 months',
+            2: '$8,000 / $250/month = 32 months = 2 years and 8 months',
+            3: '$8,000 / $250/month = 32 months = 2 years and 8 months',
+          },
         },
         {
           id: "pf-u9-L7-Q2",
@@ -751,6 +853,9 @@ export const unit9: Unit = {
           question: "A cash-out refinance lets you borrow against your home equity to get cash, but it increases your loan balance.",
           correctAnswer: true,
           explanation: "Correct. A cash-out refi replaces your mortgage with a larger one and gives you the difference in cash. If you owe $200,000 and your home is worth $350,000, you might refinance to $250,000 and pocket $50,000. But now you owe $50,000 more. Use it wisely (renovations that add value). Not for vacations or cars.",
+          distractorExplanations: {
+            1: 'A cash-out refi replaces your mortgage with a larger one and gives you the difference in cash',
+          },
         },
         {
           id: "pf-u9-L7-Q3",
@@ -782,6 +887,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Breakeven: $7,500 / $320 = ~23 months (under 2 years). With 8 years left in the home: 96 months - 23 = 73 months of savings. 73 x $320 = $23,360 in net savings after breakeven. A 1.75% rate drop with a 23-month breakeven and 8+ years of staying? That's a no-brainer.",
+          distractorExplanations: {
+            1: 'Breakeven: $7,500 / $320 = ~23 months (under 2 years)',
+            2: 'Breakeven: $7,500 / $320 = ~23 months (under 2 years)',
+            3: 'Breakeven: $7,500 / $320 = ~23 months (under 2 years)',
+          },
         },
         {
           id: "pf-u9-L7-Q6",
@@ -819,6 +929,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "The breakeven timeline is the single most important factor. A great rate drop with low closing costs still loses money if you move before breakeven. All the other factors feed into the breakeven calculation. But the question is always: will I be here long enough for this to pay off?",
+          distractorExplanations: {
+            1: 'The breakeven timeline is the single most important factor',
+            2: 'The breakeven timeline is the single most important factor',
+            3: 'The breakeven timeline is the single most important factor',
+          },
         },
       ],
     },
@@ -868,6 +983,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "The home gained $15,000 in value (5% of $300,000). But YOU only put in $60,000. So your return on investment is $15,000 / $60,000 = 25%. That's the power of leverage. A 5% home gain becomes a 25% return on your cash. Of course, leverage works both ways if prices drop..",
+          distractorExplanations: {
+            1: 'The home gained $15,000 in value (5% of $300,000)',
+            2: 'The home gained $15,000 in value (5% of $300,000)',
+            3: 'The home gained $15,000 in value (5% of $300,000)',
+          },
         },
         {
           id: "pf-u9-L8-Q3",
@@ -875,6 +995,9 @@ export const unit9: Unit = {
           question: "When you sell your primary residence, you can exclude up to $250,000 in capital gains from taxes ($500,000 if married filing jointly).",
           correctAnswer: true,
           explanation: "This is one of the most powerful tax benefits in the US tax code. If you've lived in your home for 2 of the last 5 years, you can exclude up to $250K ($500K married) in profit from taxes. Buy for $300K, sell for $700K? That $400K gain is tax-free for a married couple.",
+          distractorExplanations: {
+            1: 'This is one of the most powerful tax benefits in the US tax code',
+          },
         },
         {
           id: "pf-u9-L8-Q4",
@@ -907,6 +1030,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Friend A: $300,000 x 1.035^10 = ~$423,000. With ~$240,000 still owed on mortgage (simplified), equity is ~$183,000. But remember. They also paid ~$170,000+ in mortgage payments (mostly interest) and ~$50,000+ in taxes/insurance/maintenance. Friend B: $60,000 x 1.10^10 = ~$155,600, no extra costs. The real comparison is more nuanced than it appears!",
+          distractorExplanations: {
+            1: 'Friend A: $300,000 x 1.035^10 = ~$423,000',
+            2: 'Friend A: $300,000 x 1.035^10 = ~$423,000',
+            3: 'Friend A: $300,000 x 1.035^10 = ~$423,000',
+          },
         },
         {
           id: "pf-u9-L8-Q7",
@@ -968,6 +1096,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "1% of $180,000 = $1,800. The rent is $1,600, which falls short by $200/month. It doesn't pass the 1% rule. That doesn't mean it's a terrible investment, but it's a yellow flag. The numbers will be tighter.",
+          distractorExplanations: {
+            1: '1% of $180,000 = $1,800. The rent is $1,600, which falls short by $200/month',
+            2: '1% of $180,000 = $1,800. The rent is $1,600, which falls short by $200/month',
+            3: '1% of $180,000 = $1,800. The rent is $1,600, which falls short by $200/month',
+          },
         },
         {
           id: "pf-u9-L9-Q2",
@@ -999,6 +1132,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Revenue: $2,200. Expenses: $1,200 + $350 + $220 + $130 + $220 = $2,120. Cash flow: $2,200 - $2,120 = $80/month. That's barely positive. One surprise repair could wipe out months of profit. This property passes the 1% rule ($2,200 / $220,000 = 1.0%) but the cash flow is thin.",
+          distractorExplanations: {
+            1: 'Revenue: $2,200. Expenses: $1,200 + $350 + $220 + $130 + $220 = $2,120',
+            2: 'Revenue: $2,200. Expenses: $1,200 + $350 + $220 + $130 + $220 = $2,120',
+            3: 'Revenue: $2,200. Expenses: $1,200 + $350 + $220 + $130 + $220 = $2,120',
+          },
         },
         {
           id: "pf-u9-L9-Q5",
@@ -1017,6 +1155,9 @@ export const unit9: Unit = {
           question: "Being a landlord is mostly passive income. You just collect rent checks every month.",
           correctAnswer: false,
           explanation: "Ask any landlord. You'll deal with midnight plumbing emergencies, difficult tenants, vacancy periods, property damage, eviction proceedings, and constant maintenance. You can hire a property manager (8-10% of rent), but that cuts into your cash flow. Rental income is semi-passive at best.",
+          distractorExplanations: {
+            0: 'Ask any landlord. You\'ll deal with midnight plumbing emergencies, difficult tenants, vacancy periods, property damage, eviction proceedings, and co...',
+          },
         },
         {
           id: "pf-u9-L9-Q7",
@@ -1067,6 +1208,9 @@ export const unit9: Unit = {
           question: "REITs are required by law to distribute at least 90% of their taxable income to shareholders as dividends.",
           correctAnswer: true,
           explanation: "This is a defining feature of REITs. The 90% payout requirement is what makes REITs such great dividend-payers. In exchange for this distribution requirement, REITs get favorable tax treatment at the corporate level (they don't pay corporate income tax on distributed earnings).",
+          distractorExplanations: {
+            1: 'This is a defining feature of REITs',
+          },
         },
         {
           id: "pf-u9-L10-Q2",
@@ -1089,6 +1233,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Mortgage REITs (mREITs) don't own buildings. They own mortgages and mortgage-backed securities, earning money from interest payments. Equity REITs own actual properties (apartments, malls, warehouses). Mortgage REITs tend to have higher yields but more risk and volatility.",
+          distractorExplanations: {
+            1: 'Mortgage REITs (mREITs) don\'t own buildings',
+            2: 'Mortgage REITs (mREITs) don\'t own buildings',
+            3: 'Mortgage REITs (mREITs) don\'t own buildings',
+          },
         },
         {
           id: "pf-u9-L10-Q4",
@@ -1129,6 +1278,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Tom specifically wants simplicity and diversification. The REIT index fund provides both: zero management, hundreds of properties across many sectors, and he can sell anytime. The rental property might earn more with leverage, but it requires active work and concentrates risk in one property in one location.",
+          distractorExplanations: {
+            1: 'Tom specifically wants simplicity and diversification',
+            2: 'Tom specifically wants simplicity and diversification',
+            3: 'Tom specifically wants simplicity and diversification',
+          },
         },
         {
           id: "pf-u9-L10-Q8",
@@ -1142,6 +1296,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "A broad REIT index fund gives you instant diversification across hundreds of properties and sectors, low fees, high liquidity, and a proven track record. Single REITs concentrate risk, rental properties require capital and work, and crowdfunding platforms are newer and less liquid. Start simple, get fancy later.",
+          distractorExplanations: {
+            1: 'A broad REIT index fund gives you instant diversification across hundreds of properties and sectors, low fees, high liquidity, and a proven track r...',
+            2: 'A broad REIT index fund gives you instant diversification across hundreds of properties and sectors, low fees, high liquidity, and a proven track r...',
+            3: 'A broad REIT index fund gives you instant diversification across hundreds of properties and sectors, low fees, high liquidity, and a proven track r...',
+          },
         },
       ],
     },
@@ -1180,6 +1339,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Total rent collected: $1,100 x 2 = $2,200. Your mortgage: $2,500. Net cost: $2,500 - $2,200 = $300/month. You're living in a triplex for $300/month while building equity in a $350,000 asset. Compare that to renting a similar unit for $1,100. You're saving $800/month.",
+          distractorExplanations: {
+            1: 'Total rent collected: $1,100 x 2 = $2,200',
+            2: 'Total rent collected: $1,100 x 2 = $2,200',
+            3: 'Total rent collected: $1,100 x 2 = $2,200',
+          },
         },
         {
           id: "pf-u9-L11-Q2",
@@ -1187,6 +1351,9 @@ export const unit9: Unit = {
           question: "You can use an FHA loan (3.5% down) to buy a property with up to 4 units, as long as you live in one of them.",
           correctAnswer: true,
           explanation: "This is one of the best-kept secrets in real estate. FHA loans allow up to 4 units for owner-occupied properties with just 3.5% down. A traditional investment property loan requires 15-25% down. Living in one unit of a fourplex gives you incredible leverage with minimal cash upfront.",
+          distractorExplanations: {
+            1: 'This is one of the best-kept secrets in real estate',
+          },
         },
         {
           id: "pf-u9-L11-Q3",
@@ -1233,6 +1400,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Down payment ($9,800) + closing costs ($5,000) = $14,800. You have $15,000. Barely enough! Net cost: $2,100 - $1,350 = $750/month. That's $650/month less than your current rent ($1,400). Over a year, you save $7,800 in housing costs while building equity. Just make sure to keep a small emergency fund too.",
+          distractorExplanations: {
+            1: 'Down payment ($9,800) + closing costs ($5,000) = $14,800',
+            2: 'Down payment ($9,800) + closing costs ($5,000) = $14,800',
+            3: 'Down payment ($9,800) + closing costs ($5,000) = $14,800',
+          },
         },
         {
           id: "pf-u9-L11-Q7",
@@ -1261,6 +1433,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "A fourplex with FHA financing is the holy grail: minimal cash down (3.5%), three rental units generating income, and owner-occupancy qualifies for the best loan terms. Three tenants covering the mortgage gives the best chance of living for free or even profiting. It takes more work than a single room rental, but the financial return is significantly higher.",
+          distractorExplanations: {
+            1: 'A fourplex with FHA financing is the holy grail: minimal cash down (3.5%), three rental units generating income, and owner-occupancy qualifies for ...',
+            2: 'A fourplex with FHA financing is the holy grail: minimal cash down (3.5%), three rental units generating income, and owner-occupancy qualifies for ...',
+            3: 'A fourplex with FHA financing is the holy grail: minimal cash down (3.5%), three rental units generating income, and owner-occupancy qualifies for ...',
+          },
         },
       ],
     },
@@ -1324,6 +1501,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: "Never waive the inspection on a major purchase. Never exceed your pre-approval (the bank may not fund it anyway). Option B is reasonable: competitive offer, but with protection and within your budget. If someone outbids you? Let them. Another home will come along. The worst deal is one that bankrupts you.",
+          distractorExplanations: {
+            0: 'Never waive the inspection on a major purchase',
+            2: 'Never waive the inspection on a major purchase',
+            3: 'Never waive the inspection on a major purchase',
+          },
         },
         {
           id: "pf-u9-L12-Q4",
@@ -1331,6 +1513,9 @@ export const unit9: Unit = {
           question: "Shopping around with multiple mortgage lenders can save you $10,000 or more over the life of your loan.",
           correctAnswer: true,
           explanation: "Rates vary by 0.25-0.75% between lenders on the same day. On a $300,000 loan, a 0.5% rate difference = about $30,000 in extra interest over 30 years. Get quotes from at least 3-5 lenders. All mortgage inquiries within a 14-45 day window count as a single credit pull.",
+          distractorExplanations: {
+            1: 'Rates vary by 0.25-0.75% between lenders on the same day',
+          },
         },
         {
           id: "pf-u9-L12-Q5",
@@ -1393,6 +1578,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "All are critical, but buying below your max is the foundation of everything. When you have financial breathing room, you can handle surprise repairs, rate increases, and life changes without drowning. Being house poor is the #1 mistake that cascades into every other financial problem. Buy less house, have more life.",
+          distractorExplanations: {
+            1: 'All are critical, but buying below your max is the foundation of everything',
+            2: 'All are critical, but buying below your max is the foundation of everything',
+            3: 'All are critical, but buying below your max is the foundation of everything',
+          },
         },
       ],
     },

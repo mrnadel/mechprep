@@ -29,6 +29,9 @@ export const unit9: Unit = {
           question: "Mental models are reusable thinking frameworks that help you analyze problems more clearly.",
           correctAnswer: true,
           explanation: "Mental models are like lenses. Each one shows you a different angle of the same problem, so you see things others miss.",
+          distractorExplanations: {
+            1: 'Mental models are like lenses. Each one shows you a different angle of the same problem, so you see things others miss',
+          },
         },
         {
           id: "psy-u9-L0-Q2",
@@ -42,6 +45,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "Intelligence doesn't protect you from logical fallacies, biases, or bad mental models. You need the right tools, not just raw brainpower.",
+          distractorExplanations: {
+            0: 'Intelligence doesn\'t protect you from logical fallacies, biases, or bad mental models',
+            1: 'Intelligence doesn\'t protect you from logical fallacies, biases, or bad mental models',
+            3: 'Intelligence doesn\'t protect you from logical fallacies, biases, or bad mental models',
+          },
         },
         {
           id: "psy-u9-L0-T2",
@@ -79,6 +87,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "Having many mental models means you can match the right framework to each problem. One tool limits what you can see.",
+          distractorExplanations: {
+            0: 'Having many mental models means you can match the right framework to each problem',
+            1: 'Having many mental models means you can match the right framework to each problem',
+            3: 'Having many mental models means you can match the right framework to each problem',
+          },
         },
         {
           id: "psy-u9-L0-T3",
@@ -92,6 +105,9 @@ export const unit9: Unit = {
           question: "Critical thinking means disagreeing with everything you hear.",
           correctAnswer: false,
           explanation: "Critical thinking means evaluating evidence and reasoning carefully. Sometimes the popular answer is correct. The point is to check, not to argue.",
+          distractorExplanations: {
+            0: 'Critical thinking means evaluating evidence and reasoning carefully',
+          },
         },
       ],
     },
@@ -116,6 +132,9 @@ export const unit9: Unit = {
           question: "First principles thinking starts by asking what is definitely true, rather than what is commonly done.",
           correctAnswer: true,
           explanation: "'What's true?' beats 'What's normal?' Most innovation comes from questioning assumptions everyone else takes for granted.",
+          distractorExplanations: {
+            1: '\'What\'s true?\' beats \'What\'s normal?\' Most innovation comes from questioning assumptions everyone else takes for granted',
+          },
         },
         {
           id: "psy-u9-L1-Q2",
@@ -129,6 +148,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "He broke 'rocket parts are expensive' down to the fundamental materials. The raw truth was: aluminum, titanium, and carbon fiber are cheap.",
+          distractorExplanations: {
+            0: 'He broke \'rocket parts are expensive\' down to the fundamental materials',
+            1: 'He broke \'rocket parts are expensive\' down to the fundamental materials',
+            3: 'He broke \'rocket parts are expensive\' down to the fundamental materials',
+          },
         },
         {
           id: "psy-u9-L1-T2",
@@ -166,6 +190,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: "First principles strips away 'everyone does it' and asks what's actually required. Maybe a degree isn't the only way to get those skills.",
+          distractorExplanations: {
+            0: 'First principles strips away \'everyone does it\' and asks what\'s actually required',
+            2: 'First principles strips away \'everyone does it\' and asks what\'s actually required',
+            3: 'First principles strips away \'everyone does it\' and asks what\'s actually required',
+          },
         },
         {
           id: "psy-u9-L1-T3",
@@ -179,6 +208,9 @@ export const unit9: Unit = {
           question: "You should use first principles thinking for every single decision you make.",
           correctAnswer: false,
           explanation: "First principles is mentally expensive. Use it for important decisions where assumptions might be holding you back. For routine choices, shortcuts are fine.",
+          distractorExplanations: {
+            0: 'First principles is mentally expensive',
+          },
         },
         {
           id: "psy-u9-L1-Q7",
@@ -201,6 +233,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "The hard part isn't intelligence. It's the willingness to question assumptions that feel obviously true. Convention is comfortable.",
+          distractorExplanations: {
+            0: 'The hard part isn\'t intelligence. It\'s the willingness to question assumptions that feel obviously true',
+            1: 'The hard part isn\'t intelligence. It\'s the willingness to question assumptions that feel obviously true',
+            3: 'The hard part isn\'t intelligence. It\'s the willingness to question assumptions that feel obviously true',
+          },
         },
       ],
     },
@@ -225,6 +262,9 @@ export const unit9: Unit = {
           question: "Inversion means solving problems by thinking about what would cause the opposite outcome.",
           correctAnswer: true,
           explanation: "By identifying what leads to failure, you create a checklist of things to avoid. Sometimes avoiding stupidity is easier than seeking brilliance.",
+          distractorExplanations: {
+            1: 'By identifying what leads to failure, you create a checklist of things to avoid',
+          },
         },
         {
           id: "psy-u9-L2-Q2",
@@ -238,6 +278,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Inversion reveals deal-breakers: dishonesty, contempt, poor communication. Avoiding these is often more actionable than chasing vague ideals.",
+          distractorExplanations: {
+            1: 'Inversion reveals deal-breakers: dishonesty, contempt, poor communication',
+            2: 'Inversion reveals deal-breakers: dishonesty, contempt, poor communication',
+            3: 'Inversion reveals deal-breakers: dishonesty, contempt, poor communication',
+          },
         },
         {
           id: "psy-u9-L2-T2",
@@ -274,6 +319,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "Mapping failure modes first helps the team avoid critical mistakes. It's easier to list what kills a product than what makes one succeed.",
+          distractorExplanations: {
+            0: 'Mapping failure modes first helps the team avoid critical mistakes',
+            1: 'Mapping failure modes first helps the team avoid critical mistakes',
+            3: 'Mapping failure modes first helps the team avoid critical mistakes',
+          },
         },
         {
           id: "psy-u9-L2-T3",
@@ -288,6 +338,9 @@ export const unit9: Unit = {
           question: "Inversion should replace forward thinking entirely.",
           correctAnswer: false,
           explanation: "Inversion works best alongside forward thinking. Use both: plan what to do AND what to avoid.",
+          distractorExplanations: {
+            0: 'Inversion works best alongside forward thinking',
+          },
         },
         {
           id: "psy-u9-L2-Q7",
@@ -309,6 +362,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: "There are infinite ways to succeed but a short list of things that guarantee failure. Inversion narrows the field.",
+          distractorExplanations: {
+            0: 'There are infinite ways to succeed but a short list of things that guarantee failure',
+            2: 'There are infinite ways to succeed but a short list of things that guarantee failure',
+            3: 'There are infinite ways to succeed but a short list of things that guarantee failure',
+          },
         },
       ],
     },
@@ -333,6 +391,9 @@ export const unit9: Unit = {
           question: "If two things increase at the same time, one must be causing the other.",
           correctAnswer: false,
           explanation: "Ice cream sales and drownings both rise in summer. Ice cream doesn't cause drowning. Hot weather (a third variable) causes both.",
+          distractorExplanations: {
+            0: 'Ice cream sales and drownings both rise in summer',
+          },
         },
         {
           id: "psy-u9-L3-Q2",
@@ -346,6 +407,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Wealthy countries can afford both chocolate and research funding. Wealth is the hidden third variable, not chocolate consumption.",
+          distractorExplanations: {
+            1: 'Wealthy countries can afford both chocolate and research funding',
+            2: 'Wealthy countries can afford both chocolate and research funding',
+            3: 'Wealthy countries can afford both chocolate and research funding',
+          },
         },
         {
           id: "psy-u9-L3-T2",
@@ -383,6 +449,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Families that prioritize breakfast may also prioritize homework, bedtime, and school involvement. Without controlling for these, you can't prove causation.",
+          distractorExplanations: {
+            1: 'Families that prioritize breakfast may also prioritize homework, bedtime, and school involvement',
+            2: 'Families that prioritize breakfast may also prioritize homework, bedtime, and school involvement',
+            3: 'Families that prioritize breakfast may also prioritize homework, bedtime, and school involvement',
+          },
         },
         {
           id: "psy-u9-L3-T3",
@@ -396,6 +467,9 @@ export const unit9: Unit = {
           question: "A randomized controlled experiment is the gold standard for proving causation.",
           correctAnswer: true,
           explanation: "Randomized trials isolate the variable you're testing. If only that variable changes and the outcome shifts, you've found causation.",
+          distractorExplanations: {
+            1: 'Randomized trials isolate the variable you\'re testing',
+          },
         },
         {
           id: "psy-u9-L3-Q7",
@@ -418,6 +492,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Wine drinkers may also be wealthier, have better healthcare, and exercise more. Without controlling for those, wine gets unearned credit.",
+          distractorExplanations: {
+            1: 'Wine drinkers may also be wealthier, have better healthcare, and exercise more',
+            2: 'Wine drinkers may also be wealthier, have better healthcare, and exercise more',
+            3: 'Wine drinkers may also be wealthier, have better healthcare, and exercise more',
+          },
         },
       ],
     },
@@ -442,6 +521,9 @@ export const unit9: Unit = {
           question: "If a medical test is 99% accurate and you test positive, there's a 99% chance you have the disease.",
           correctAnswer: false,
           explanation: "Not even close. If the disease is rare (say 1 in 10,000), most positive results are false positives. The base rate matters more than the test accuracy.",
+          distractorExplanations: {
+            0: 'Not even close. If the disease is rare (say 1 in 10,000), most positive results are false positives',
+          },
         },
         {
           id: "psy-u9-L4-Q2",
@@ -455,6 +537,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "Out of 1,000 people, 1 has the disease (true positive) and about 10 healthy people test positive (false positives). So roughly 1 out of 11 positives is real: about 9%.",
+          distractorExplanations: {
+            0: 'The correct answer is About 9%, not About 50%',
+            1: 'The correct answer is About 9%, not About 99%',
+            3: 'The correct answer is About 9%, not About 1%',
+          },
         },
         {
           id: "psy-u9-L4-Q2b",
@@ -493,6 +580,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "There are roughly 100x more salespeople than librarians. Even if the description 'fits' a librarian, the base rate makes salesperson far more likely.",
+          distractorExplanations: {
+            1: 'There are roughly 100x more salespeople than librarians',
+            2: 'There are roughly 100x more salespeople than librarians',
+            3: 'There are roughly 100x more salespeople than librarians',
+          },
         },
         {
           id: "psy-u9-L4-Q5",
@@ -516,6 +608,9 @@ export const unit9: Unit = {
           question: "Doctors are immune to base rate neglect.",
           correctAnswer: false,
           explanation: "Studies show that even trained doctors often overestimate the probability of disease after a positive test. Base rate neglect affects everyone.",
+          distractorExplanations: {
+            0: 'Studies show that even trained doctors often overestimate the probability of disease after a positive test',
+          },
         },
         {
           id: "psy-u9-L4-Q7",
@@ -537,6 +632,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 3,
           explanation: "Dramatic events override base rates. Heart disease kills far more people, but it's not on the news every night, so it feels less threatening.",
+          distractorExplanations: {
+            0: 'Dramatic events override base rates',
+            1: 'Dramatic events override base rates',
+            2: 'Dramatic events override base rates',
+          },
         },
       ],
     },
@@ -561,6 +661,9 @@ export const unit9: Unit = {
           question: "An argument can sound persuasive but still be logically flawed.",
           correctAnswer: true,
           explanation: "Persuasiveness and logical validity are different things. Fallacies work precisely because they feel right even when the reasoning is broken.",
+          distractorExplanations: {
+            1: 'Persuasiveness and logical validity are different things',
+          },
         },
         {
           id: "psy-u9-L5-Q2",
@@ -574,6 +677,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Ad hominem means 'against the person.' Attacking Dr. Lee's car says nothing about her research quality.",
+          distractorExplanations: {
+            1: 'Ad hominem means \'against the person.\' Attacking Dr',
+            2: 'Ad hominem means \'against the person.\' Attacking Dr',
+            3: 'Ad hominem means \'against the person.\' Attacking Dr',
+          },
         },
         {
           id: "psy-u9-L5-T2",
@@ -593,6 +701,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "Reducing sugar is not starving kids. Person B replaced the real argument with an extreme version that's easy to dismiss.",
+          distractorExplanations: {
+            0: 'Reducing sugar is not starving kids',
+            1: 'Reducing sugar is not starving kids',
+            3: 'Reducing sugar is not starving kids',
+          },
         },
         {
           id: "psy-u9-L5-Q4",
@@ -632,6 +745,9 @@ export const unit9: Unit = {
           question: "If a popular influencer recommends a product, that alone is good evidence the product works.",
           correctAnswer: false,
           explanation: "That's an appeal to authority (or popularity). An influencer's endorsement says nothing about product quality. Look for independent evidence.",
+          distractorExplanations: {
+            0: 'That\'s an appeal to authority (or popularity)',
+          },
         },
         {
           id: "psy-u9-L5-Q8",
@@ -645,6 +761,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: "Naming the fallacy neutralizes it. Then redirect: 'That's an ad hominem. Let's focus on the data instead.'",
+          distractorExplanations: {
+            0: 'Naming the fallacy neutralizes it. Then redirect: \'That\'s an ad hominem',
+            2: 'Naming the fallacy neutralizes it. Then redirect: \'That\'s an ad hominem',
+            3: 'Naming the fallacy neutralizes it. Then redirect: \'That\'s an ad hominem',
+          },
         },
       ],
     },
@@ -669,6 +790,9 @@ export const unit9: Unit = {
           question: "Knowing about a bias is enough to prevent it from affecting your decisions.",
           correctAnswer: false,
           explanation: "Awareness helps, but biases operate automatically. You need structured tools and habits to consistently counteract them.",
+          distractorExplanations: {
+            0: 'Awareness helps, but biases operate automatically',
+          },
         },
         {
           id: "psy-u9-L6-Q2",
@@ -682,6 +806,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "A pre-mortem flips the question: 'It failed. Why?' This surfaces risks that optimism bias would otherwise hide.",
+          distractorExplanations: {
+            1: 'A pre-mortem flips the question: \'It failed',
+            2: 'A pre-mortem flips the question: \'It failed',
+            3: 'A pre-mortem flips the question: \'It failed',
+          },
         },
         {
           id: "psy-u9-L6-T2",
@@ -719,6 +848,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 3,
           explanation: "Deliberately seeking disconfirming evidence is the direct antidote to confirmation bias. It feels uncomfortable, which is how you know it's working.",
+          distractorExplanations: {
+            0: 'Deliberately seeking disconfirming evidence is the direct antidote to confirmation bias',
+            1: 'Deliberately seeking disconfirming evidence is the direct antidote to confirmation bias',
+            2: 'Deliberately seeking disconfirming evidence is the direct antidote to confirmation bias',
+          },
         },
         {
           id: "psy-u9-L6-T3",
@@ -739,6 +873,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "A pre-mortem flips the dynamic. Instead of asking 'any problems?' (which invites silence), it says 'imagine this failed, why?' This gives permission to voice concerns and fights both optimism bias and groupthink.",
+          distractorExplanations: {
+            1: 'A pre-mortem flips the dynamic. Instead of asking \'any problems?\' (which invites silence), it says \'imagine this failed, why?\' This gives permissio...',
+            2: 'A pre-mortem flips the dynamic. Instead of asking \'any problems?\' (which invites silence), it says \'imagine this failed, why?\' This gives permissio...',
+            3: 'A pre-mortem flips the dynamic. Instead of asking \'any problems?\' (which invites silence), it says \'imagine this failed, why?\' This gives permissio...',
+          },
         },
         {
           id: "psy-u9-L6-Q7",
@@ -746,6 +885,9 @@ export const unit9: Unit = {
           question: "The goal of debiasing is to make every decision perfectly rational.",
           correctAnswer: false,
           explanation: "Perfect rationality is impossible. The goal is to catch the biggest biases on the most important decisions. Better thinking, not perfect thinking.",
+          distractorExplanations: {
+            0: 'Perfect rationality is impossible. The goal is to catch the biggest biases on the most important decisions',
+          },
         },
         {
           id: "psy-u9-L6-Q8",
@@ -759,6 +901,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Systems beat willpower. Pre-mortems, decision journals, and red teams work because they don't rely on you remembering to think better in the moment.",
+          distractorExplanations: {
+            1: 'Systems beat willpower. Pre-mortems, decision journals, and red teams work because they don\'t rely on you remembering to think better in the moment',
+            2: 'Systems beat willpower. Pre-mortems, decision journals, and red teams work because they don\'t rely on you remembering to think better in the moment',
+            3: 'Systems beat willpower. Pre-mortems, decision journals, and red teams work because they don\'t rely on you remembering to think better in the moment',
+          },
         },
       ],
     },

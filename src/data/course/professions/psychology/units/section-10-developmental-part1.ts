@@ -34,6 +34,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Prenatal development is divided into 3 stages.',
             correctAnswer: true,
             explanation: 'The 3 stages are germinal, embryonic, and fetal.',
+            distractorExplanations: {
+              1: 'The 3 stages are germinal, embryonic, and fetal.',
+            },
           },
           {
             id: 'psy-sec10-u1-L1-Q2',
@@ -74,6 +77,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The embryonic stage is the most sensitive period because all major organs are forming.',
+            distractorExplanations: {
+              1: 'The embryonic stage is the most sensitive period because all major organs are forming.',
+              2: 'The embryonic stage is the most sensitive period because all major organs are forming.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u1-L1-T3',
@@ -94,6 +102,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The fetal stage (week 9 to birth) is about growth, maturation, and developing responsiveness to the environment.',
+            distractorExplanations: {
+              0: 'The fetal stage (week 9 to birth) is about growth, maturation, and developing responsiveness to',
+              2: 'The fetal stage (week 9 to birth) is about growth, maturation, and developing responsiveness to',
+              3: 'The fetal stage (week 9 to birth) is about growth, maturation, and developing responsiveness to',
+            },
           },
           {
             id: 'psy-sec10-u1-L1-Q6',
@@ -108,6 +121,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Weeks 3-8 are the embryonic period when organ systems are being established, creating peak vulnerability.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              1: 'Weeks 3-8 are the embryonic period when organ systems are being established, creating peak vuln',
+              3: 'This dismisses a real connection that research has established.',
+            },
           },
         ],
       },
@@ -133,6 +151,9 @@ export const psySection10Part1: Unit[] = [
             question: 'A critical period is a window when a specific organ is most sensitive to disruption.',
             correctAnswer: true,
             explanation: 'Critical periods are times of peak vulnerability for specific organs or systems as they form.',
+            distractorExplanations: {
+              1: 'Critical periods are times of peak vulnerability for specific organs or systems as they form.',
+            },
           },
           {
             id: 'psy-sec10-u1-L2-Q2',
@@ -146,6 +167,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Each organ has its own critical period. The heart forms early, while limbs develop later, so the same substance can affect different structures.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              1: 'Each organ has its own critical period.',
+              2: 'Each organ has its own critical period.',
+            },
           },
           {
             id: 'psy-sec10-u1-L2-T2',
@@ -195,6 +221,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Poverty increases environmental risks and limits access to healthcare, nutrition, and safe living conditions.',
+            distractorExplanations: {
+              1: 'Genetic is a different concept that does not explain this particular phenomenon.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'Poverty increases environmental risks and limits access to healthcare, nutrition, and safe livi',
+            },
           },
           {
             id: 'psy-sec10-u1-L2-Q6',
@@ -209,6 +240,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Timing is crucial. If one exposure occurred during the heart\'s critical period and the other did not, outcomes can differ dramatically.',
+            distractorExplanations: {
+              0: 'Timing is crucial. If one exposure occurred during the heart\'s critical period and the other di',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'This dismisses a real connection that research has established.',
+            },
           },
         ],
       },
@@ -234,6 +270,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Newborns are born without any reflexes and must learn all behaviors.',
             correctAnswer: false,
             explanation: 'Newborns come equipped with several innate reflexes, including rooting, grasping, and sucking.',
+            distractorExplanations: {
+              0: 'Newborns come equipped with several innate reflexes, including rooting, grasping, and sucking.',
+            },
           },
           {
             id: 'psy-sec10-u1-L3-Q2',
@@ -262,6 +301,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Newborn vision is sharpest at 20-30 cm, perfectly suited for seeing the face of whoever is holding them.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              1: 'Newborn vision is sharpest at 20-30 cm, perfectly suited for seeing the face of whoever is hold',
+              3: 'Newborn vision is sharpest at 20-30 cm, perfectly suited for seeing the face of whoever is hold',
+            },
           },
           {
             id: 'psy-sec10-u1-L3-Q4',
@@ -275,6 +319,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Fetuses can hear from about week 25 onward and become familiar with their mother\'s voice before birth.',
+            distractorExplanations: {
+              0: 'Fetuses can hear from about week 25 onward and become familiar with their mother\'s voice before',
+              1: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u1-L3-T3',
@@ -303,6 +352,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The baby habituated to the repeated red circle and dishabituated (showed renewed interest) when a novel stimulus appeared.',
+            distractorExplanations: {
+              1: 'The baby habituated to the repeated red circle and dishabituated (showed renewed interest) when',
+              2: 'The baby habituated to the repeated red circle and dishabituated (showed renewed interest) when',
+              3: 'The baby habituated to the repeated red circle and dishabituated (showed renewed interest) when',
+            },
           },
         ],
       },
@@ -328,6 +382,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Modern developmental psychology views nature and nurture as interacting, not competing.',
             correctAnswer: true,
             explanation: 'Genes and environment constantly interact. Development is never purely one or the other.',
+            distractorExplanations: {
+              1: 'Genes and environment constantly interact. Development is never purely one or the other.',
+            },
           },
           {
             id: 'psy-sec10-u1-L4-Q2',
@@ -341,6 +398,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Genes provide a range (called the reaction range), and environmental conditions determine where within that range development lands.',
+            distractorExplanations: {
+              0: 'Research shows a meaningful effect exists here, not the absence of one.',
+              2: 'Genes provide a range (called the reaction range), and environmental conditions determine where',
+              3: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u1-L4-T2',
@@ -385,6 +447,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Both twins share the same genes, so the difference in outcomes reflects environmental influence on genetic potential.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              1: 'Research shows a meaningful effect exists here, not the absence of one.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u1-L4-Q6',
@@ -398,6 +465,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Development is not a percentage split. Nature and nurture are inseparable, continuously shaping each other.',
+            distractorExplanations: {
+              0: 'Development is not a percentage split.',
+              1: 'Development is not a percentage split.',
+              2: 'Development is not a percentage split.',
+            },
           },
         ],
       },
@@ -423,6 +495,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Most developmental psychology research has been conducted on a narrow, Western population.',
             correctAnswer: true,
             explanation: 'The overrepresentation of WEIRD samples is a well-documented limitation in psychological research.',
+            distractorExplanations: {
+              1: 'The overrepresentation of WEIRD samples is a well-documented limitation in psychological research.',
+            },
           },
           {
             id: 'psy-sec10-u1-L5-Q2',
@@ -450,6 +525,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cultural practices like swaddling, carrying, and physical stimulation influence when infants reach motor milestones.',
+            distractorExplanations: {
+              1: 'Genetic is a different concept that does not explain this particular phenomenon.',
+              2: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              3: 'Cultural practices like swaddling, carrying, and physical stimulation influence when infants re',
+            },
           },
           {
             id: 'psy-sec10-u1-L5-Q4',
@@ -463,6 +543,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Universal milestone timelines often reflect WEIRD norms. Walking age ranges from about 9 to 17 months depending on culture and individual variation.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'This describes the opposite of what actually happens; universal milestone timelines often reflect WEIRD norms.',
+            },
           },
           {
             id: 'psy-sec10-u1-L5-T3',
@@ -483,6 +568,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Cultural context matters. Babies who are carried and swaddled often walk later, but this is within the normal range for their context.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              1: 'Cultural context matters.',
+              3: 'Cultural context matters.',
+            },
           },
           {
             id: 'psy-sec10-u1-L5-Q6',
@@ -538,6 +628,9 @@ export const psySection10Part1: Unit[] = [
             question: 'According to Piaget, children passively absorb knowledge from adults.',
             correctAnswer: false,
             explanation: 'Piaget believed children actively construct knowledge through interaction with the world, not passive absorption.',
+            distractorExplanations: {
+              0: 'Piaget believed children actively construct knowledge through interaction with the world, not passive absorption.',
+            },
           },
           {
             id: 'psy-sec10-u2-L1-Q2',
@@ -565,6 +658,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The child is using the existing "dog" schema to interpret a new animal. This is assimilation.',
+            distractorExplanations: {
+              0: 'The child is using the existing "dog" schema to interpret a new animal. This is assimilation.',
+              1: 'The child is using the existing "dog" schema to interpret a new animal. This is assimilation.',
+              2: 'The child is using the existing "dog" schema to interpret a new animal. This is assimilation.',
+            },
           },
           {
             id: 'psy-sec10-u2-L1-Q4',
@@ -598,6 +696,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Disequilibrium creates the drive to assimilate or accommodate, pushing cognitive development forward.',
+            distractorExplanations: {
+              1: 'Disequilibrium creates the drive to assimilate or accommodate, pushing cognitive development fo',
+              2: 'Biological is a different concept that does not explain this particular phenomenon.',
+              3: 'Disequilibrium creates the drive to assimilate or accommodate, pushing cognitive development fo',
+            },
           },
           {
             id: 'psy-sec10-u2-L1-Q6',
@@ -612,6 +715,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The child initially assimilated (tried to throw the globe) but then accommodated by creating a new schema.',
+            distractorExplanations: {
+              0: 'The child initially assimilated (tried to throw the globe) but then accommodated by creating a ',
+              2: 'The child initially assimilated (tried to throw the globe) but then accommodated by creating a ',
+              3: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -637,6 +745,9 @@ export const psySection10Part1: Unit[] = [
             question: 'During the sensorimotor stage, infants primarily learn through symbols and language.',
             correctAnswer: false,
             explanation: 'Sensorimotor infants learn through direct sensory and motor interaction, not symbols or language.',
+            distractorExplanations: {
+              0: 'Sensorimotor infants learn through direct sensory and motor interaction, not symbols or language.',
+            },
           },
           {
             id: 'psy-sec10-u2-L2-Q2',
@@ -650,6 +761,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The sensorimotor stage spans from birth to approximately age 2.',
+            distractorExplanations: {
+              0: 'The sensorimotor stage spans from birth to approximately age 2.',
+              1: 'The sensorimotor stage spans from birth to approximately age 2.',
+              3: 'The sensorimotor stage spans from birth to approximately age 2.',
+            },
           },
           {
             id: 'psy-sec10-u2-L2-T2',
@@ -678,6 +794,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Before object permanence develops (around 8 months), infants behave as if hidden objects no longer exist.',
+            distractorExplanations: {
+              0: 'Before object permanence develops (around 8 months), infants behave as if hidden objects no lon',
+              1: 'Before object permanence develops (around 8 months), infants behave as if hidden objects no lon',
+              2: 'Before object permanence develops (around 8 months), infants behave as if hidden objects no lon',
+            },
           },
           {
             id: 'psy-sec10-u2-L2-Q5',
@@ -691,6 +812,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'By 12 months, most infants have developed object permanence and will actively search for hidden objects.',
+            distractorExplanations: {
+              1: 'By 12 months, most infants have developed object permanence and will actively search for hidden',
+              2: 'By 12 months, most infants have developed object permanence and will actively search for hidden',
+              3: 'By 12 months, most infants have developed object permanence and will actively search for hidden',
+            },
           },
           {
             id: 'psy-sec10-u2-L2-Q6',
@@ -698,6 +824,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Object permanence develops at exactly the same age in every culture.',
             correctAnswer: false,
             explanation: 'While the general sequence is consistent, the exact age varies depending on cultural practices and individual differences.',
+            distractorExplanations: {
+              0: 'While the general sequence is consistent, the exact age varies depending on cultural practices and individual differences.',
+            },
           },
         ],
       },
@@ -722,6 +851,9 @@ export const psySection10Part1: Unit[] = [
             question: 'In the preoperational stage, children can use language and engage in pretend play.',
             correctAnswer: true,
             explanation: 'The hallmark of the preoperational stage is the emergence of symbolic thinking, including language and imaginative play.',
+            distractorExplanations: {
+              1: 'The hallmark of the preoperational stage is the emergence of symbolic thinking, including language and imaginative play.',
+            },
           },
           {
             id: 'psy-sec10-u2-L3-Q2',
@@ -735,6 +867,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The preoperational stage spans approximately ages 2 through 7.',
+            distractorExplanations: {
+              0: 'The preoperational stage spans approximately ages 2 through 7.',
+              2: 'The preoperational stage spans approximately ages 2 through 7.',
+              3: 'The preoperational stage spans approximately ages 2 through 7.',
+            },
           },
           {
             id: 'psy-sec10-u2-L3-T2',
@@ -763,6 +900,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The child cannot yet understand that grandma has a different visual perspective. This is egocentrism.',
+            distractorExplanations: {
+              0: 'The child cannot yet understand that grandma has a different visual perspective.',
+              1: 'The child cannot yet understand that grandma has a different visual perspective.',
+              3: 'The child cannot yet understand that grandma has a different visual perspective.',
+            },
           },
           {
             id: 'psy-sec10-u2-L3-T3',
@@ -782,6 +924,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Centration causes preoperational children to focus on one dimension (height) and ignore the compensating change in width.',
+            distractorExplanations: {
+              0: 'Centration causes preoperational children to focus on one dimension (height) and ignore the com',
+              1: 'Centration causes preoperational children to focus on one dimension (height) and ignore the com',
+              2: 'Centration causes preoperational children to focus on one dimension (height) and ignore the com',
+            },
           },
           {
             id: 'psy-sec10-u2-L3-Q6',
@@ -822,6 +969,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Children in the concrete operational stage can solve conservation tasks.',
             correctAnswer: true,
             explanation: 'Conservation is mastered during the concrete operational stage, typically around age 7.',
+            distractorExplanations: {
+              1: 'Conservation is mastered during the concrete operational stage, typically around age 7.',
+            },
           },
           {
             id: 'psy-sec10-u2-L4-Q2',
@@ -835,6 +985,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Concrete operational children think logically but only about concrete, tangible things. Abstract reasoning comes in the formal operational stage.',
+            distractorExplanations: {
+              1: 'Concrete operational children think logically but only about concrete, tangible things.',
+              2: 'Concrete operational children think logically but only about concrete, tangible things.',
+              3: 'This describes the opposite of what actually happens; concrete operational children think logically but only about concrete, tangible things.',
+            },
           },
           {
             id: 'psy-sec10-u2-L4-T2',
@@ -886,6 +1041,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Reasoning about hypothetical entities that do not exist requires formal operational thinking.',
+            distractorExplanations: {
+              0: 'Reasoning about hypothetical entities that do not exist requires formal operational thinking.',
+              2: 'Reasoning about hypothetical entities that do not exist requires formal operational thinking.',
+              3: 'Reasoning about hypothetical entities that do not exist requires formal operational thinking.',
+            },
           },
         ],
       },
@@ -911,6 +1071,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Modern research has shown that Piaget overestimated children\'s abilities.',
             correctAnswer: false,
             explanation: 'Piaget actually underestimated children. Newer, simpler tests reveal abilities earlier than he predicted.',
+            distractorExplanations: {
+              0: 'Piaget actually underestimated children. Newer, simpler tests reveal abilities earlier than he predicted.',
+            },
           },
           {
             id: 'psy-sec10-u2-L5-Q2',
@@ -924,6 +1087,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Piaget\'s tasks often required language skills or memory capacity that masked children\'s underlying cognitive abilities.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              1: 'Piaget\'s tasks often required language skills or memory capacity that masked children\'s underly',
+              3: 'Piaget\'s tasks often required language skills or memory capacity that masked children\'s underly',
+            },
           },
           {
             id: 'psy-sec10-u2-L5-T2',
@@ -943,6 +1111,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Children often show abilities from multiple stages simultaneously, suggesting development is more fluid than rigid stages imply.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              1: 'This describes the opposite of what actually happens; children often show abilities from multiple stages simultaneously, suggesting development is mo',
+              2: 'Children often show abilities from multiple stages simultaneously, suggesting development is mo',
+            },
           },
           {
             id: 'psy-sec10-u2-L5-Q4',
@@ -979,6 +1152,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Abstract reasoning can take different forms in different cultures. Piaget\'s tests reflect Western academic contexts.',
+            distractorExplanations: {
+              1: 'Abstract reasoning can take different forms in different cultures.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'This dismisses a real connection that research has established.',
+            },
           },
           {
             id: 'psy-sec10-u2-L5-Q6',
@@ -992,6 +1170,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Piaget\'s greatest insight is that children are not "small adults" but think in fundamentally different ways at different points in development.',
+            distractorExplanations: {
+              0: 'Piaget\'s greatest insight is that children are not "small adults" but think in fundamentally di',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'This dismisses a real connection that research has established.',
+            },
           },
         ],
       },
@@ -1016,6 +1199,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Piaget\'s theory supports a lecture-based approach to teaching young children.',
             correctAnswer: false,
             explanation: 'Piaget\'s view of children as active constructors of knowledge supports hands-on, discovery-based learning, not passive lectures.',
+            distractorExplanations: {
+              0: 'Piaget\'s view of children as active constructors of knowledge supports hands-on, discovery-based learning, not passive lectures.',
+            },
           },
           {
             id: 'psy-sec10-u2-L6-Q2',
@@ -1029,6 +1215,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Piaget emphasized that children construct knowledge through direct interaction with their environment.',
+            distractorExplanations: {
+              0: 'Piaget emphasized that children construct knowledge through direct interaction with their envir',
+              1: 'Piaget emphasized that children construct knowledge through direct interaction with their envir',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u2-L6-T2',
@@ -1049,6 +1240,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Preoperational children struggle with reversibility. Using concrete objects (counting blocks) aligns with their developmental level.',
+            distractorExplanations: {
+              0: 'Preoperational children struggle with reversibility.',
+              1: 'Preoperational children struggle with reversibility.',
+              2: 'Preoperational children struggle with reversibility.',
+            },
           },
           {
             id: 'psy-sec10-u2-L6-Q4',
@@ -1082,6 +1278,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'While exploration is valuable, children often need guided assistance. Vygotsky later emphasized the role of social support in learning.',
+            distractorExplanations: {
+              1: 'This describes the opposite of what actually happens; while exploration is valuable, children often need guided assistance.',
+              2: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+              3: 'This describes the opposite of what actually happens; while exploration is valuable, children often need guided assistance.',
+            },
           },
           {
             id: 'psy-sec10-u2-L6-Q6',
@@ -1132,6 +1333,9 @@ export const psySection10Part1: Unit[] = [
             question: 'According to Bowlby, infants attach to caregivers primarily because caregivers provide food.',
             correctAnswer: false,
             explanation: 'Bowlby argued that attachment is about safety and emotional security, not just feeding. Harlow\'s monkey studies supported this.',
+            distractorExplanations: {
+              0: 'Bowlby argued that attachment is about safety and emotional security, not just feeding. Harlow\'s monkey studies supported this.',
+            },
           },
           {
             id: 'psy-sec10-u3-L1-Q2',
@@ -1145,6 +1349,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The secure base is the caregiver. Children use this relationship as a safe launching pad for exploration.',
+            distractorExplanations: {
+              0: 'The secure base is the caregiver.',
+              2: 'The secure base is the caregiver.',
+              3: 'The secure base is the caregiver.',
+            },
           },
           {
             id: 'psy-sec10-u3-L1-T2',
@@ -1172,6 +1381,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Internal working models begin forming in infancy and early childhood through repeated interactions with primary caregivers.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              1: 'Internal working models begin forming in infancy and early childhood through repeated interacti',
+              3: 'Internal working models begin forming in infancy and early childhood through repeated interacti',
+            },
           },
           {
             id: 'psy-sec10-u3-L1-T3',
@@ -1192,6 +1406,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Early attachment experiences shape internal working models that influence expectations about relationships throughout life.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              1: 'This describes the opposite of what actually happens; early attachment experiences shape internal working models that influence expectations about re',
+              2: 'Early attachment experiences shape internal working models that influence expectations about re',
+            },
           },
           {
             id: 'psy-sec10-u3-L1-Q6',
@@ -1199,6 +1418,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Bowlby believed that attachment can only form with the biological mother.',
             correctAnswer: false,
             explanation: 'While Bowlby initially emphasized the mother, attachment can form with any consistent, responsive caregiver.',
+            distractorExplanations: {
+              0: 'While Bowlby initially emphasized the mother, attachment can form with any consistent, responsive caregiver.',
+            },
           },
         ],
       },
@@ -1224,6 +1446,9 @@ export const psySection10Part1: Unit[] = [
             question: 'In the Strange Situation, the most important behavior is how the infant reacts when the caregiver returns.',
             correctAnswer: true,
             explanation: 'The reunion behavior is the strongest indicator of attachment style. It reveals the child\'s expectations about the caregiver\'s reliability.',
+            distractorExplanations: {
+              1: 'The reunion behavior is the strongest indicator of attachment style.',
+            },
           },
           {
             id: 'psy-sec10-u3-L2-Q2',
@@ -1271,6 +1496,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Secure attachment develops when caregivers consistently respond to the infant\'s needs with warmth and reliability.',
+            distractorExplanations: {
+              1: 'Secure attachment develops when caregivers consistently respond to the infant\'s needs with warm',
+              2: 'Secure attachment develops when caregivers consistently respond to the infant\'s needs with warm',
+              3: 'Secure attachment develops when caregivers consistently respond to the infant\'s needs with warm',
+            },
           },
           {
             id: 'psy-sec10-u3-L2-T3',
@@ -1291,6 +1521,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Avoidant infants appear indifferent to the caregiver\'s departure and return, having learned not to rely on them for comfort.',
+            distractorExplanations: {
+              0: 'Avoidant infants appear indifferent to the caregiver\'s departure and return, having learned not',
+              2: 'Avoidant infants appear indifferent to the caregiver\'s departure and return, having learned not',
+              3: 'Avoidant infants appear indifferent to the caregiver\'s departure and return, having learned not',
+            },
           },
           {
             id: 'psy-sec10-u3-L2-Q6',
@@ -1326,6 +1561,9 @@ export const psySection10Part1: Unit[] = [
             question: 'A caregiver must respond perfectly to every signal to build secure attachment.',
             correctAnswer: false,
             explanation: 'Perfect responsiveness is not required. Consistent, "good enough" sensitivity is what matters.',
+            distractorExplanations: {
+              0: 'Perfect responsiveness is not required. Consistent, "good enough" sensitivity is what matters.',
+            },
           },
           {
             id: 'psy-sec10-u3-L3-Q2',
@@ -1369,6 +1607,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Avoidant infants have learned to suppress attachment behavior because their caregivers typically reject or ignore distress signals.',
+            distractorExplanations: {
+              0: 'Avoidant infants have learned to suppress attachment behavior because their caregivers typicall',
+              1: 'Avoidant infants have learned to suppress attachment behavior because their caregivers typicall',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u3-L3-T3',
@@ -1388,6 +1631,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Attachment patterns can be modified through new relational experiences, though early patterns create a strong baseline.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              1: 'This is too absolute; the word "permanently" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u3-L3-Q6',
@@ -1402,6 +1650,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Anxious-ambivalent attachment involves intense distress and conflicting behavior at reunion, reflecting a history of inconsistent caregiving.',
+            distractorExplanations: {
+              1: 'Anxious-ambivalent attachment involves intense distress and conflicting behavior at reunion, re',
+              2: 'Anxious-ambivalent attachment involves intense distress and conflicting behavior at reunion, re',
+              3: 'Anxious-ambivalent attachment involves intense distress and conflicting behavior at reunion, re',
+            },
           },
         ],
       },
@@ -1427,6 +1680,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Attachment style distributions are identical across all cultures.',
             correctAnswer: false,
             explanation: 'Attachment distributions vary significantly across cultures due to different caregiving norms and values.',
+            distractorExplanations: {
+              0: 'Attachment distributions vary significantly across cultures due to different caregiving norms and values.',
+            },
           },
           {
             id: 'psy-sec10-u3-L4-Q2',
@@ -1440,6 +1696,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Japanese caregiving involves very little infant-caregiver separation. The Strange Situation creates an unusually stressful experience that inflates apparent anxiety.',
+            distractorExplanations: {
+              0: 'Japanese caregiving involves very little infant-caregiver separation.',
+              2: 'Japanese caregiving involves very little infant-caregiver separation.',
+              3: 'Japanese caregiving involves very little infant-caregiver separation.',
+            },
           },
           {
             id: 'psy-sec10-u3-L4-T2',
@@ -1459,6 +1720,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'If separation is uncommon in a culture, the Strange Situation becomes an extreme stressor that may not accurately reflect everyday attachment quality.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              1: 'If separation is uncommon in a culture, the Strange Situation becomes an extreme stressor that ',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u3-L4-Q4',
@@ -1495,6 +1761,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Multiple secure attachments are common in cultures with communal caregiving. The Western single-caregiver model is not universal.',
+            distractorExplanations: {
+              0: 'Multiple secure attachments are common in cultures with communal caregiving.',
+              1: 'Multiple secure attachments are common in cultures with communal caregiving.',
+              2: 'This describes the opposite of what actually happens; multiple secure attachments are common in cultures with communal caregiving.',
+            },
           },
           {
             id: 'psy-sec10-u3-L4-Q6',
@@ -1502,6 +1773,9 @@ export const psySection10Part1: Unit[] = [
             question: 'The need for at least one secure attachment relationship is considered universal across cultures.',
             correctAnswer: true,
             explanation: 'While the number and form of attachments vary, the fundamental need for at least one secure relationship appears to be a human universal.',
+            distractorExplanations: {
+              1: 'While the number and form of attachments vary, the fundamental need for at least one secure relationship appears to be a human uni',
+            },
           },
         ],
       },
@@ -1526,6 +1800,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Attachment theory only applies to infant-caregiver relationships.',
             correctAnswer: false,
             explanation: 'Attachment patterns extend to adult romantic relationships, friendships, and other close bonds.',
+            distractorExplanations: {
+              0: 'Attachment patterns extend to adult romantic relationships, friendships, and other close bonds.',
+            },
           },
           {
             id: 'psy-sec10-u3-L5-Q2',
@@ -1559,6 +1836,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'New positive relational experiences and therapeutic work can modify internal working models over time.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'This describes the opposite of what actually happens; new positive relational experiences and therapeutic work can modify internal working models ove',
+            },
           },
           {
             id: 'psy-sec10-u3-L5-Q4',
@@ -1573,6 +1855,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Anxious-preoccupied attachment involves hypervigilance about the partner\'s availability and a deep fear of abandonment.',
+            distractorExplanations: {
+              0: 'Anxious-preoccupied attachment involves hypervigilance about the partner\'s availability and a d',
+              2: 'Anxious-preoccupied attachment involves hypervigilance about the partner\'s availability and a d',
+              3: 'Anxious-preoccupied attachment involves hypervigilance about the partner\'s availability and a d',
+            },
           },
           {
             id: 'psy-sec10-u3-L5-T3',
@@ -1600,6 +1887,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Early attachment is influential but not deterministic. Many factors, including later relationships and personal growth, shape adult attachment.',
+            distractorExplanations: {
+              0: 'Research shows a meaningful effect exists here, not the absence of one.',
+              1: 'Early attachment is influential but not deterministic.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -1624,6 +1916,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Attachment style is determined entirely by caregiving quality.',
             correctAnswer: false,
             explanation: 'Infant temperament also plays a role. Attachment emerges from the interaction between caregiver behavior and the infant\'s inborn traits.',
+            distractorExplanations: {
+              0: 'Infant temperament also plays a role.',
+            },
           },
           {
             id: 'psy-sec10-u3-L6-Q2',
@@ -1637,6 +1932,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Both temperament and caregiving contribute. A difficult temperament does not guarantee insecure attachment, but it changes the dynamics.',
+            distractorExplanations: {
+              0: 'Both temperament and caregiving contribute.',
+              1: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+              2: 'Research shows a meaningful effect exists here, not the absence of one.',
+            },
           },
           {
             id: 'psy-sec10-u3-L6-T2',
@@ -1672,6 +1972,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Bowlby\'s original focus on mothers has been expanded. Modern attachment research recognizes multiple attachment figures.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u3-L6-T3',
@@ -1692,6 +1997,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Research on adopted children from institutions shows substantial recovery with responsive caregiving, though some effects of early deprivation can persist.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+              2: 'Research on adopted children from institutions shows substantial recovery with responsive careg',
+              3: 'This is too absolute; the word "impossible" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u3-L6-Q6',
@@ -1705,6 +2015,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Attachment theory remains one of the most influential frameworks in developmental psychology, but it works best when its cultural limitations are acknowledged.',
+            distractorExplanations: {
+              0: 'Attachment theory remains one of the most influential frameworks in developmental psychology, b',
+              1: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -1761,6 +2076,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Different organs have different critical periods of maximum vulnerability.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              1: 'Different organs have different critical periods of maximum vulnerability.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u4-L1-Q3',
@@ -1792,6 +2112,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cultural caregiving practices influence motor milestone timing. Variation is normal, and some milestones like crawling are not universal.',
+            distractorExplanations: {
+              1: 'Cultural caregiving practices influence motor milestone timing.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "permanently" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u4-L1-Q6',
@@ -1815,6 +2140,9 @@ export const psySection10Part1: Unit[] = [
             question: 'WEIRD stands for Western, Educated, Industrialized, Rich, and Democratic.',
             correctAnswer: true,
             explanation: 'WEIRD populations are overrepresented in psychology research, limiting generalizability.',
+            distractorExplanations: {
+              1: 'WEIRD populations are overrepresented in psychology research, limiting generalizability.',
+            },
           },
         ],
       },
@@ -1873,6 +2201,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Piaget\'s tasks often required verbal skills that masked children\'s underlying cognitive abilities.',
+            distractorExplanations: {
+              0: 'Piaget\'s tasks often required verbal skills that masked children\'s underlying cognitive abiliti',
+              2: 'This describes the opposite of what actually happens; piaget\'s tasks often required verbal skills that masked children\'s underlying cognitive abiliti',
+              3: 'Piaget\'s tasks often required verbal skills that masked children\'s underlying cognitive abiliti',
+            },
           },
           {
             id: 'psy-sec10-u4-L2-Q4',
@@ -1886,6 +2219,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The child assumes that because they cannot see you, you cannot see them. This is classic preoperational egocentrism.',
+            distractorExplanations: {
+              0: 'The child assumes that because they cannot see you, you cannot see them.',
+              1: 'The child assumes that because they cannot see you, you cannot see them.',
+              3: 'The child assumes that because they cannot see you, you cannot see them.',
+            },
           },
           {
             id: 'psy-sec10-u4-L2-Q5',
@@ -1917,6 +2255,9 @@ export const psySection10Part1: Unit[] = [
             question: 'According to modern research, cognitive development is likely more continuous than Piaget\'s distinct stages suggest.',
             correctAnswer: true,
             explanation: 'While Piaget\'s stages provide a useful framework, development appears more gradual and context-dependent than rigid stages imply.',
+            distractorExplanations: {
+              1: 'While Piaget\'s stages provide a useful framework, development appears more gradual and context-dependent than rigid stages imply.',
+            },
           },
         ],
       },
@@ -1969,6 +2310,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Caregiver sensitivity, accurately reading and responding to infant signals, is the best predictor of secure attachment.',
+            distractorExplanations: {
+              0: 'Biological is a different concept that does not explain this particular phenomenon.',
+              1: 'Caregiver sensitivity, accurately reading and responding to infant signals, is the best predict',
+              2: 'Caregiver sensitivity, accurately reading and responding to infant signals, is the best predict',
+            },
           },
           {
             id: 'psy-sec10-u4-L3-Q4',
@@ -1983,6 +2329,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Attachment distributions reflect cultural values around independence, separation, and caregiving practices.',
+            distractorExplanations: {
+              1: 'Attachment distributions reflect cultural values around independence, separation, and caregivin',
+              2: 'Attachment distributions reflect cultural values around independence, separation, and caregivin',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u4-L3-Q5',
@@ -1990,6 +2341,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Insecure attachment patterns formed in infancy can never be changed.',
             correctAnswer: false,
             explanation: 'Attachment patterns can change through new relationships, therapy, and reflective experiences. "Earned security" is well documented.',
+            distractorExplanations: {
+              0: 'Attachment patterns can change through new relationships, therapy, and reflective experiences.',
+            },
           },
           {
             id: 'psy-sec10-u4-L3-Q6',
@@ -2019,6 +2373,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Earned security describes adults who developed secure attachment despite insecure beginnings, usually through reflection and positive relationships.',
+            distractorExplanations: {
+              0: 'Earned security describes adults who developed secure attachment despite insecure beginnings, u',
+              2: 'Earned security describes adults who developed secure attachment despite insecure beginnings, u',
+              3: 'Earned security describes adults who developed secure attachment despite insecure beginnings, u',
+            },
           },
         ],
       },
@@ -2058,6 +2417,9 @@ export const psySection10Part1: Unit[] = [
             question: 'According to Vygotsky, cognitive development is primarily an individual process.',
             correctAnswer: false,
             explanation: 'Vygotsky saw cognitive development as fundamentally social. Children internalize knowledge from interactions with others.',
+            distractorExplanations: {
+              0: 'Vygotsky saw cognitive development as fundamentally social. Children internalize knowledge from interactions with others.',
+            },
           },
           {
             id: 'psy-sec10-u5-L1-Q2',
@@ -2071,6 +2433,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Piaget saw children as lone scientists. Vygotsky saw them as apprentices who learn through collaboration.',
+            distractorExplanations: {
+              0: 'Piaget saw children as lone scientists.',
+              1: 'Piaget saw children as lone scientists.',
+              3: 'Piaget saw children as lone scientists.',
+            },
           },
           {
             id: 'psy-sec10-u5-L1-T2',
@@ -2120,6 +2487,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Cultural tools like language and number systems directly shape cognitive processes and problem-solving strategies.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "purely" overstates the case — the reality is more nuanced.',
+              1: 'Cultural tools like language and number systems directly shape cognitive processes and problem-',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u5-L1-Q6',
@@ -2134,6 +2506,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The child internalized a strategy from social interaction with a more knowledgeable other, a core Vygotskian principle.',
+            distractorExplanations: {
+              1: 'The child internalized a strategy from social interaction with a more knowledgeable other, a co',
+              2: 'The child internalized a strategy from social interaction with a more knowledgeable other, a co',
+              3: 'The child internalized a strategy from social interaction with a more knowledgeable other, a co',
+            },
           },
         ],
       },
@@ -2159,6 +2536,9 @@ export const psySection10Part1: Unit[] = [
             question: 'The zone of proximal development is the gap between what a child can do alone and what they can do with help.',
             correctAnswer: true,
             explanation: 'The ZPD defines the optimal learning zone where guided support leads to new abilities.',
+            distractorExplanations: {
+              1: 'The ZPD defines the optimal learning zone where guided support leads to new abilities.',
+            },
           },
           {
             id: 'psy-sec10-u5-L2-Q2',
@@ -2172,6 +2552,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Double-digit problems are in the ZPD because the child can succeed with help, even though they cannot do them alone yet.',
+            distractorExplanations: {
+              0: 'Double-digit problems are in the ZPD because the child can succeed with help, even though they ',
+              2: 'Double-digit problems are in the ZPD because the child can succeed with help, even though they ',
+              3: 'Double-digit problems are in the ZPD because the child can succeed with help, even though they ',
+            },
           },
           {
             id: 'psy-sec10-u5-L2-T2',
@@ -2214,6 +2599,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The template provides temporary structure (scaffolding) for a task in the student\'s ZPD. It will be removed as the student improves.',
+            distractorExplanations: {
+              0: 'The template provides temporary structure (scaffolding) for a task in the student\'s ZPD.',
+              1: 'The template provides temporary structure (scaffolding) for a task in the student\'s ZPD.',
+              3: 'This describes the opposite of what actually happens; the template provides temporary structure (scaffolding) for a task in the student\'s ZPD.',
+            },
           },
           {
             id: 'psy-sec10-u5-L2-T3',
@@ -2233,6 +2623,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'As competence grows, the ZPD shifts. Yesterday\'s challenge becomes today\'s independent ability, and new challenges enter the zone.',
+            distractorExplanations: {
+              0: 'As competence grows, the ZPD shifts.',
+              1: 'As competence grows, the ZPD shifts.',
+              2: 'As competence grows, the ZPD shifts.',
+            },
           },
         ],
       },
@@ -2258,6 +2653,9 @@ export const psySection10Part1: Unit[] = [
             question: 'According to Vygotsky, language only expresses existing thoughts but does not shape them.',
             correctAnswer: false,
             explanation: 'Vygotsky argued that language actively shapes thought, not just expresses it. Acquiring new words creates new ways of thinking.',
+            distractorExplanations: {
+              0: 'Vygotsky argued that language actively shapes thought, not just expresses it. Acquiring new words creates new ways of thinking.',
+            },
           },
           {
             id: 'psy-sec10-u5-L3-Q2',
@@ -2271,6 +2669,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Language provides categories, labels, and structures that fundamentally shape how children organize their thinking.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'Language provides categories, labels, and structures that fundamentally shape how children orga',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u5-L3-T2',
@@ -2333,6 +2736,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The child is using private speech to plan and regulate their behavior, exactly as Vygotsky described.',
+            distractorExplanations: {
+              0: 'The child is using private speech to plan and regulate their behavior, exactly as Vygotsky desc',
+              2: 'The child is using private speech to plan and regulate their behavior, exactly as Vygotsky desc',
+              3: 'The child is using private speech to plan and regulate their behavior, exactly as Vygotsky desc',
+            },
           },
         ],
       },
@@ -2357,6 +2765,9 @@ export const psySection10Part1: Unit[] = [
             question: 'According to Vygotsky, the best teaching targets tasks the child can already do independently.',
             correctAnswer: false,
             explanation: 'Teaching should target the ZPD: tasks the child cannot do alone but can achieve with guidance.',
+            distractorExplanations: {
+              0: 'Teaching should target the ZPD: tasks the child cannot do alone but can achieve with guidance.',
+            },
           },
           {
             id: 'psy-sec10-u5-L4-Q2',
@@ -2370,6 +2781,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: '3-step problems are in the student\'s ZPD. Scaffolded practice here will promote the most growth.',
+            distractorExplanations: {
+              0: '3-step problems are in the student\'s ZPD. Scaffolded practice here will promote the most growth.',
+              1: '3-step problems are in the student\'s ZPD. Scaffolded practice here will promote the most growth.',
+              3: 'This describes the opposite of what actually happens; 3-step problems are in the student\'s ZPD. Scaffolded practice here will promote the most growth.',
+            },
           },
           {
             id: 'psy-sec10-u5-L4-T2',
@@ -2404,6 +2820,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Pairing stronger and weaker readers creates MKO relationships and puts the struggling readers\' tasks in their ZPD.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              1: 'This is too absolute; the word "everyone" overstates the case — the reality is more nuanced.',
+              2: 'Pairing stronger and weaker readers creates MKO relationships and puts the struggling readers\' ',
+            },
           },
           {
             id: 'psy-sec10-u5-L4-T3',
@@ -2423,6 +2844,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Adaptive hints that fade as competence grows are a direct application of scaffolding in the ZPD.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              2: 'Adaptive hints that fade as competence grows are a direct application of scaffolding in the ZPD.',
+              3: 'This describes the opposite of what actually happens; adaptive hints that fade as competence grows are a direct application of scaffolding in the ZPD.',
+            },
           },
           {
             id: 'psy-sec10-u5-L4-Q6',
@@ -2463,6 +2889,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Vygotsky provided a detailed, step-by-step method for measuring the ZPD.',
             correctAnswer: false,
             explanation: 'One criticism of Vygotsky\'s theory is that the ZPD is difficult to measure precisely. He did not leave clear operational guidelines.',
+            distractorExplanations: {
+              0: 'One criticism of Vygotsky\'s theory is that the ZPD is difficult to measure precisely.',
+            },
           },
           {
             id: 'psy-sec10-u5-L5-Q2',
@@ -2476,6 +2905,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'While the ZPD is intuitively powerful, defining its boundaries for individual learners is challenging.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u5-L5-T2',
@@ -2495,6 +2929,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The two theories are complementary. Children both construct knowledge independently (Piaget) and learn through guided social interaction (Vygotsky).',
+            distractorExplanations: {
+              0: 'The two theories are complementary.',
+              1: 'The two theories are complementary.',
+              3: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u5-L5-Q4',
@@ -2539,6 +2978,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Combining hands-on exploration (Piaget) with guided questioning and scaffolded vocabulary (Vygotsky) draws on both theories.',
+            distractorExplanations: {
+              0: 'Combining hands-on exploration (Piaget) with guided questioning and scaffolded vocabulary (Vygo',
+              1: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'Combining hands-on exploration (Piaget) with guided questioning and scaffolded vocabulary (Vygo',
+            },
           },
         ],
       },
@@ -2578,6 +3022,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Erikson\'s theory only covers childhood development.',
             correctAnswer: false,
             explanation: 'Erikson\'s 8 stages span the entire lifespan, from infancy through old age.',
+            distractorExplanations: {
+              0: 'Erikson\'s 8 stages span the entire lifespan, from infancy through old age.',
+            },
           },
           {
             id: 'psy-sec10-u6-L1-Q2',
@@ -2591,6 +3038,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Piaget focused on cognitive development in childhood. Erikson focused on psychosocial development from birth to death.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'Piaget focused on cognitive development in childhood.',
+              3: 'Piaget focused on cognitive development in childhood.',
+            },
           },
           {
             id: 'psy-sec10-u6-L1-T2',
@@ -2618,6 +3070,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Successful resolution produces a virtue (e.g., hope, will, purpose) that becomes a lasting psychological resource.',
+            distractorExplanations: {
+              0: 'Successful resolution produces a virtue (e.g.',
+              2: 'Successful resolution produces a virtue (e.g.',
+              3: 'This describes the opposite of what actually happens; successful resolution produces a virtue (e.g.',
+            },
           },
           {
             id: 'psy-sec10-u6-L1-T3',
@@ -2631,6 +3088,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Failing to resolve an early Eriksonian stage makes it impossible to succeed in later stages.',
             correctAnswer: false,
             explanation: 'While earlier stages influence later ones, Erikson believed people can revisit and rework earlier conflicts throughout life.',
+            distractorExplanations: {
+              0: 'While earlier stages influence later ones, Erikson believed people can revisit and rework earlier conflicts throughout life.',
+            },
           },
           {
             id: 'psy-sec10-u6-L1-Q6',
@@ -2667,6 +3127,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Trust vs mistrust is resolved during the toddler years (ages 2-3).',
             correctAnswer: false,
             explanation: 'Trust vs mistrust occurs during infancy, from birth to about 18 months.',
+            distractorExplanations: {
+              0: 'Trust vs mistrust occurs during infancy, from birth to about 18 months.',
+            },
           },
           {
             id: 'psy-sec10-u6-L2-Q2',
@@ -2680,6 +3143,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Hope is the virtue of stage 1. It is the foundational belief that the world is trustworthy and that needs will be met.',
+            distractorExplanations: {
+              0: 'Hope is the virtue of stage 1.',
+              1: 'Hope is the virtue of stage 1.',
+              3: 'Hope is the virtue of stage 1.',
+            },
           },
           {
             id: 'psy-sec10-u6-L2-T2',
@@ -2714,6 +3182,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The insistence on "I do it myself" reflects the autonomy stage, where toddlers assert their ability to act independently.',
+            distractorExplanations: {
+              0: 'The insistence on "I do it myself" reflects the autonomy stage, where toddlers assert their abi',
+              1: 'The insistence on "I do it myself" reflects the autonomy stage, where toddlers assert their abi',
+              2: 'The insistence on "I do it myself" reflects the autonomy stage, where toddlers assert their abi',
+            },
           },
           {
             id: 'psy-sec10-u6-L2-Q5',
@@ -2740,6 +3213,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Industry vs inferiority (ages 6-12) centers on developing competence. Feeling consistently inferior suggests difficulty resolving this stage.',
+            distractorExplanations: {
+              1: 'Industry vs inferiority (ages 6-12) centers on developing competence.',
+              2: 'Industry vs inferiority (ages 6-12) centers on developing competence.',
+              3: 'Industry vs inferiority (ages 6-12) centers on developing competence.',
+            },
           },
         ],
       },
@@ -2764,6 +3242,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Erikson believed that the primary developmental task of adolescence is forming a coherent identity.',
             correctAnswer: true,
             explanation: 'Identity formation is the central challenge of adolescence in Erikson\'s framework.',
+            distractorExplanations: {
+              1: 'Identity formation is the central challenge of adolescence in Erikson\'s framework.',
+            },
           },
           {
             id: 'psy-sec10-u6-L3-Q2',
@@ -2806,6 +3287,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Foreclosure involves committing to an identity (often a parent\'s expectation) without personally exploring alternatives.',
+            distractorExplanations: {
+              0: 'Foreclosure involves committing to an identity (often a parent\'s expectation) without personall',
+              2: 'Foreclosure involves committing to an identity (often a parent\'s expectation) without personall',
+              3: 'This describes the opposite of what actually happens; foreclosure involves committing to an identity (often a parent\'s expectation) without personall',
+            },
           },
           {
             id: 'psy-sec10-u6-L3-T3',
@@ -2825,6 +3311,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'What Marcia calls "foreclosure" may reflect culturally appropriate identity formation in societies that value family roles and collective identity.',
+            distractorExplanations: {
+              0: 'This dismisses a real connection that research has established.',
+              1: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u6-L3-Q6',
@@ -2838,6 +3329,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Identity continues to be renegotiated across the lifespan. Major life events can trigger new periods of identity exploration.',
+            distractorExplanations: {
+              0: 'This dismisses a real connection that research has established.',
+              1: 'This is too absolute; the word "permanently" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -2862,6 +3358,9 @@ export const psySection10Part1: Unit[] = [
             question: 'According to Erikson, a strong sense of identity makes it easier to form intimate relationships.',
             correctAnswer: true,
             explanation: 'Erikson believed that identity must be established before true intimacy is possible. You must know yourself to truly share yourself.',
+            distractorExplanations: {
+              1: 'Erikson believed that identity must be established before true intimacy is possible.',
+            },
           },
           {
             id: 'psy-sec10-u6-L4-Q2',
@@ -2875,6 +3374,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Intimacy vs. isolation is about the capacity for deep emotional bonds, not specific life milestones like careers or children.',
+            distractorExplanations: {
+              1: 'Intimacy vs. isolation is about the capacity for deep emotional bonds, not specific life milest',
+              2: 'Intimacy vs. isolation is about the capacity for deep emotional bonds, not specific life milest',
+              3: 'Intimacy vs. isolation is about the capacity for deep emotional bonds, not specific life milest',
+            },
           },
           {
             id: 'psy-sec10-u6-L4-T2',
@@ -2934,6 +3438,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Looking back on life with satisfaction and acceptance reflects successful resolution of integrity vs. despair.',
+            distractorExplanations: {
+              0: 'Looking back on life with satisfaction and acceptance reflects successful resolution of integri',
+              2: 'Looking back on life with satisfaction and acceptance reflects successful resolution of integri',
+              3: 'Looking back on life with satisfaction and acceptance reflects successful resolution of integri',
+            },
           },
         ],
       },
@@ -2994,6 +3503,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Erikson\'s stages can be revisited. Therapy can help rework early conflicts that were not adequately resolved.',
+            distractorExplanations: {
+              0: 'Erikson\'s stages can be revisited.',
+              1: 'Erikson\'s stages can be revisited.',
+              3: 'Erikson\'s stages can be revisited.',
+            },
           },
           {
             id: 'psy-sec10-u6-L5-Q4',
@@ -3015,6 +3529,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'A midlife crisis often reflects the generativity question: "Am I contributing something meaningful?" It may also revisit identity.',
+            distractorExplanations: {
+              0: 'A midlife crisis often reflects the generativity question: "Am I contributing something meaning',
+              1: 'A midlife crisis often reflects the generativity question: "Am I contributing something meaning',
+              2: 'A midlife crisis often reflects the generativity question: "Am I contributing something meaning',
+            },
           },
           {
             id: 'psy-sec10-u6-L5-T3',
@@ -3061,6 +3580,9 @@ export const psySection10Part1: Unit[] = [
             question: 'Erikson\'s stages assume that all people follow a fixed, linear life path.',
             correctAnswer: true,
             explanation: 'This linearity is a criticism. Modern lives are more fluid, with people revisiting stages out of order.',
+            distractorExplanations: {
+              1: 'This linearity is a criticism. Modern lives are more fluid, with people revisiting stages out of order.',
+            },
           },
           {
             id: 'psy-sec10-u6-L6-Q2',
@@ -3074,6 +3596,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cultural variation, economic circumstances, and individual differences mean that stage timing is not universal.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              2: 'Cultural variation, economic circumstances, and individual differences mean that stage timing i',
+              3: 'Research shows a meaningful effect exists here, not the absence of one.',
+            },
           },
           {
             id: 'psy-sec10-u6-L6-T2',
@@ -3093,6 +3620,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Erikson\'s model of identity achievement through career and ideology reflected male-typical Western patterns more than women\'s diverse developmental paths.',
+            distractorExplanations: {
+              0: 'Erikson\'s model of identity achievement through career and ideology reflected male-typical West',
+              2: 'Erikson\'s model of identity achievement through career and ideology reflected male-typical West',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u6-L6-Q4',
@@ -3129,6 +3661,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Life disruptions can activate multiple Eriksonian challenges at once, challenging the neat sequential model.',
+            distractorExplanations: {
+              0: 'Life disruptions can activate multiple Eriksonian challenges at once, challenging the neat sequ',
+              1: 'Life disruptions can activate multiple Eriksonian challenges at once, challenging the neat sequ',
+              3: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u6-L6-Q6',
@@ -3142,6 +3679,11 @@ export const psySection10Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Erikson\'s greatest legacy is expanding developmental psychology beyond childhood to encompass the full human lifespan.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              1: 'Erikson\'s greatest legacy is expanding developmental psychology beyond childhood to encompass t',
+              2: 'Erikson\'s greatest legacy is expanding developmental psychology beyond childhood to encompass t',
+            },
           },
         ],
       },

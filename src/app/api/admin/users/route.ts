@@ -3,6 +3,7 @@ import { db } from '@/lib/db';
 import { users, userProgress, subscriptions, courseAccess } from '@/lib/db/schema';
 import { requireAdmin } from '@/lib/auth-utils';
 import { eq, desc, inArray } from 'drizzle-orm';
+import { cleanupBeforeBulkDeletion } from '@/lib/account-cleanup';
 
 export async function HEAD() {
   const adminId = await requireAdmin();
@@ -142,6 +143,9 @@ export async function DELETE(req: NextRequest) {
   if (idsToDelete.includes(adminId)) {
     return NextResponse.json({ error: 'Cannot delete your own account' }, { status: 400 });
   }
+
+  // Cancel Paddle subscriptions, archive payments, delete Mixpanel profiles
+  await cleanupBeforeBulkDeletion(idsToDelete);
 
   // All related tables have onDelete: 'cascade'
   await db.delete(users).where(inArray(users.id, idsToDelete));

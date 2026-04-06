@@ -35,6 +35,9 @@ export const spaceSection15Part2: Unit[] = [
             question: "You need to be a military pilot to become a NASA astronaut.",
             correctAnswer: false,
             explanation: "While many early astronauts were military pilots, modern astronauts come from diverse backgrounds including medicine, biology, engineering, and geology.",
+            distractorExplanations: {
+              0: 'While many early astronauts were military pilots, modern astronauts come from diverse backgrounds including medicine, biology, engineering, and geology.',
+            },
           },
           {
             id: "sp-sec15-u5-L1-Q2",
@@ -48,6 +51,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A bachelor's degree in a STEM field is the minimum. Most selected candidates have advanced degrees, but it's not required.",
+            distractorExplanations: {
+              0: 'High school diploma is incorrect; a bachelor\'s degree in a STEM field is the minimum. Most selected candidates have advanced degrees, but it\'s not required.',
+              2: 'Master\'s degree in any field is incorrect; a bachelor\'s degree in a STEM field is the minimum. Most selected candidates have advanced degrees, but it\'s not required.',
+              3: 'PhD in astrophysics only is incorrect; a bachelor\'s degree in a STEM field is the minimum. Most selected candidates have advanced degrees, but it\'s not required.',
+            },
           },
           {
             id: "sp-sec15-u5-L1-T2",
@@ -98,6 +106,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Science is the primary purpose of the ISS. Astronauts execute experiments in biology, physics, medicine, and materials science designed by teams worldwide.",
+            distractorExplanations: {
+              0: 'Looking out the window is incorrect; science is the primary purpose of the ISS. Astronauts execute experiments in biology, physics, medicine, and materials science designed by teams worldwide.',
+              2: 'Performing spacewalks is incorrect; science is the primary purpose of the ISS. Astronauts execute experiments in biology, physics, medicine, and materials science designed by teams worldwide.',
+              3: 'Exercising is incorrect; science is the primary purpose of the ISS. Astronauts execute experiments in biology, physics, medicine, and materials science designed by teams worldwide.',
+            },
           },
           {
             id: "sp-sec15-u5-L1-Q7",
@@ -131,6 +144,9 @@ export const spaceSection15Part2: Unit[] = [
             question: "Mission control operates 24 hours a day, 7 days a week during crewed missions.",
             correctAnswer: true,
             explanation: "Multiple shifts of controllers monitor the spacecraft around the clock. The crew sleeps, but mission control never does.",
+            distractorExplanations: {
+              1: 'This statement is correct because multiple shifts of controllers monitor the spacecraft around the clock. The crew sleeps, but mission control never does.',
+            },
           },
           {
             id: "sp-sec15-u5-L2-Q2",
@@ -144,6 +160,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The flight director is the ultimate authority in mission control. They coordinate all teams and make critical decisions during the mission.",
+            distractorExplanations: {
+              0: 'Flies the spacecraft remotely is incorrect; the flight director is the ultimate authority in mission control. They coordinate all teams and make critical decisions during the mission.',
+              2: 'Designs new rockets is incorrect; the flight director is the ultimate authority in mission control. They coordinate all teams and make critical decisions during the mission.',
+              3: 'Trains astronauts in the pool is incorrect; the flight director is the ultimate authority in mission control. They coordinate all teams and make critical decisions during the mission.',
+            },
           },
           {
             id: "sp-sec15-u5-L2-T2",
@@ -196,6 +217,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A rocket has millions of parts from different teams. Systems engineering is the discipline that makes sure they all integrate and function as one system.",
+            distractorExplanations: {
+              0: 'Because individual components need to be as expensive as ... is incorrect; a rocket has millions of parts from different teams. Systems engineering is the discipline that makes sure they all integrate and function as one system.',
+              2: 'Because it replaces the need for other engineers is incorrect; a rocket has millions of parts from different teams. Systems engineering is the discipline that makes sure they all integrate and function as one system.',
+              3: 'Because it focuses only on software is incorrect; a rocket has millions of parts from different teams. Systems engineering is the discipline that makes sure they all integrate and function as one system.',
+            },
           },
           {
             id: "sp-sec15-u5-L2-Q7",
@@ -210,6 +236,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Space agencies need data scientists, software engineers, and analysts. Modern astronomy and mission operations generate massive amounts of data that needs processing.",
+            distractorExplanations: {
+              0: 'There are no computer jobs in space agencies is incorrect; space agencies need data scientists, software engineers, and analysts. Modern astronomy and mission operations generate massive amounts of data that needs processing.',
+              2: 'You can only work in space if you build hardware is incorrect; space agencies need data scientists, software engineers, and analysts. Modern astronomy and mission operations generate massive amounts of data that needs processing.',
+              3: 'Space agencies only hire pilots and engineers is incorrect; space agencies need data scientists, software engineers, and analysts. Modern astronomy and mission operations generate massive amounts of data that needs processing.',
+            },
           },
         ],
       },
@@ -234,6 +265,9 @@ export const spaceSection15Part2: Unit[] = [
             question: "Professional astronomers typically look through telescopes with their eyes every night.",
             correctAnswer: false,
             explanation: "Modern astronomers use digital detectors and remote observation. Most data comes as numbers on a computer, not images through an eyepiece.",
+            distractorExplanations: {
+              0: 'Modern astronomers use digital detectors and remote observation. Most data comes as numbers on a computer, not images through an eyepiece.',
+            },
           },
           {
             id: "sp-sec15-u5-L3-Q2",
@@ -247,6 +281,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Research positions in astronomy almost always require a PhD. The path typically goes through a bachelor's, then directly to a PhD program (5 to 7 years).",
+            distractorExplanations: {
+              0: 'Bachelor\'s degree is incorrect; research positions in astronomy almost always require a PhD. The path typically goes through a bachelor\'s, then directly to a PhD program (5 to 7 years).',
+              1: 'Master\'s degree is incorrect; research positions in astronomy almost always require a PhD. The path typically goes through a bachelor\'s, then directly to a PhD program (5 to 7 years).',
+              3: 'Medical degree is incorrect; research positions in astronomy almost always require a PhD. The path typically goes through a bachelor\'s, then directly to a PhD program (5 to 7 years).',
+            },
           },
           {
             id: "sp-sec15-u5-L3-T2",
@@ -298,6 +337,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Citizen science projects harness public help to process data that's too vast for small research teams. Real discoveries have been made by volunteers.",
+            distractorExplanations: {
+              0: 'Scientists who are also citizens is incorrect; citizen science projects harness public help to process data that\'s too vast for small research teams. Real discoveries have been made by volunteers.',
+              2: 'Celebrities funding telescope construction is incorrect; citizen science projects harness public help to process data that\'s too vast for small research teams. Real discoveries have been made by volunteers.',
+              3: 'Government-required science education is incorrect; citizen science projects harness public help to process data that\'s too vast for small research teams. Real discoveries have been made by volunteers.',
+            },
           },
           {
             id: "sp-sec15-u5-L3-Q7",
@@ -569,6 +613,9 @@ export const spaceSection15Part2: Unit[] = [
             question: "Gravity is responsible for both keeping planets in orbit and forming stars from gas clouds.",
             correctAnswer: true,
             explanation: "Gravity is the universal sculptor. It holds planets in orbit, collapses gas clouds into stars, and binds galaxies together.",
+            distractorExplanations: {
+              1: 'This statement is correct because gravity is the universal sculptor. It holds planets in orbit, collapses gas clouds into stars, and binds galaxies together.',
+            },
           },
           {
             id: "sp-sec15-u6-L1-Q2",
@@ -582,6 +629,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Light is the messenger of the cosmos. Every photon carries information about its source, allowing us to study objects billions of light-years away.",
+            distractorExplanations: {
+              0: 'Gravity pulls their image toward us is incorrect; light is the messenger of the cosmos. Every photon carries information about its source, allowing us to study objects billions of light-years away.',
+              2: 'Sound waves bounce off galaxies back to Earth is incorrect; light is the messenger of the cosmos. Every photon carries information about its source, allowing us to study objects billions of light-years away.',
+              3: 'Magnetic fields transmit galaxy images is incorrect; light is the messenger of the cosmos. Every photon carries information about its source, allowing us to study objects billions of light-years away.',
+            },
           },
           {
             id: "sp-sec15-u6-L1-T2",
@@ -633,6 +685,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Stars convert a small fraction of hydrogen mass directly into energy via nuclear fusion. Einstein's E = mc squared describes this conversion.",
+            distractorExplanations: {
+              0: 'Conservation of momentum is incorrect; stars convert a small fraction of hydrogen mass directly into energy via nuclear fusion. Einstein\'s E = mc squared describes this conversion.',
+              1: 'Conservation of charge is incorrect; stars convert a small fraction of hydrogen mass directly into energy via nuclear fusion. Einstein\'s E = mc squared describes this conversion.',
+              3: 'Conservation of angular momentum is incorrect; stars convert a small fraction of hydrogen mass directly into energy via nuclear fusion. Einstein\'s E = mc squared describes this conversion.',
+            },
           },
           {
             id: "sp-sec15-u6-L1-Q7",
@@ -647,6 +704,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "This is a great synthesis question. Gravity and expansion operate at different scales. Understanding both is key to modern cosmology.",
+            distractorExplanations: {
+              1: 'The universe isn\'t really expanding, scientists are wrong is incorrect; this is a great synthesis question. Gravity and expansion operate at different scales. Understanding both is key to modern cosmology.',
+              2: 'Gravity doesn\'t exist on large scales is incorrect; this is a great synthesis question. Gravity and expansion operate at different scales. Understanding both is key to modern cosmology.',
+              3: 'The student should just memorize that expansion happens is incorrect; this is a great synthesis question. Gravity and expansion operate at different scales. Understanding both is key to modern cosmology.',
+            },
           },
         ],
       },
@@ -671,6 +733,9 @@ export const spaceSection15Part2: Unit[] = [
             question: "The iron in your blood was created inside a star that exploded long before Earth formed.",
             correctAnswer: true,
             explanation: "Iron is made in the cores of massive stars. When those stars go supernova, iron spreads through space and eventually becomes part of planets and living things.",
+            distractorExplanations: {
+              1: 'This statement is correct because iron is made in the cores of massive stars. When those stars go supernova, iron spreads through space and eventually becomes part of planets and living things.',
+            },
           },
           {
             id: "sp-sec15-u6-L2-Q2",
@@ -684,6 +749,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Elements heavier than iron require extreme energy to form. Supernovae and neutron star collisions provide the conditions to forge gold, platinum, and uranium.",
+            distractorExplanations: {
+              0: 'Normal stellar fusion is incorrect; elements heavier than iron require extreme energy to form. Supernovae and neutron star collisions provide the conditions to forge gold, platinum, and uranium.',
+              2: 'Chemical reactions on planets is incorrect; elements heavier than iron require extreme energy to form. Supernovae and neutron star collisions provide the conditions to forge gold, platinum, and uranium.',
+              3: 'Solar wind interactions is incorrect; elements heavier than iron require extreme energy to form. Supernovae and neutron star collisions provide the conditions to forge gold, platinum, and uranium.',
+            },
           },
           {
             id: "sp-sec15-u6-L2-T2",
@@ -734,6 +804,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Spectroscopy splits starlight into its component wavelengths. Each element leaves a unique fingerprint of absorption or emission lines.",
+            distractorExplanations: {
+              0: 'They send probes to collect samples is incorrect; spectroscopy splits starlight into its component wavelengths. Each element leaves a unique fingerprint of absorption or emission lines.',
+              2: 'They guess based on the star\'s color is incorrect; spectroscopy splits starlight into its component wavelengths. Each element leaves a unique fingerprint of absorption or emission lines.',
+              3: 'They read it in old star catalogs is incorrect; spectroscopy splits starlight into its component wavelengths. Each element leaves a unique fingerprint of absorption or emission lines.',
+            },
           },
           {
             id: "sp-sec15-u6-L2-Q7",
@@ -767,6 +842,9 @@ export const spaceSection15Part2: Unit[] = [
             question: "Astronauts on the ISS can lose 1 to 2% of their bone density per month.",
             correctAnswer: true,
             explanation: "Without gravity loading their bones, astronauts lose bone mass rapidly. They must exercise 2 hours daily to slow this loss.",
+            distractorExplanations: {
+              1: 'This statement is correct because without gravity loading their bones, astronauts lose bone mass rapidly. They must exercise 2 hours daily to slow this loss.',
+            },
           },
           {
             id: "sp-sec15-u6-L3-Q2",
@@ -780,6 +858,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A Mars round trip takes 2 to 3 years. Cumulative radiation exposure outside Earth's magnetosphere increases cancer risk significantly.",
+            distractorExplanations: {
+              0: 'Running out of snacks is incorrect; a Mars round trip takes 2 to 3 years. Cumulative radiation exposure outside Earth\'s magnetosphere increases cancer risk significantly.',
+              2: 'Getting bored during the flight is incorrect; a Mars round trip takes 2 to 3 years. Cumulative radiation exposure outside Earth\'s magnetosphere increases cancer risk significantly.',
+              3: 'Not having internet access is incorrect; a Mars round trip takes 2 to 3 years. Cumulative radiation exposure outside Earth\'s magnetosphere increases cancer risk significantly.',
+            },
           },
           {
             id: "sp-sec15-u6-L3-T2",
@@ -832,6 +915,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Astrobiology draws from every major science. Understanding where life might exist requires knowledge of stars, chemistry, geology, and biology together.",
+            distractorExplanations: {
+              0: 'It only studies biology is incorrect; astrobiology draws from every major science. Understanding where life might exist requires knowledge of stars, chemistry, geology, and biology together.',
+              2: 'It\'s a form of science fiction is incorrect; astrobiology draws from every major science. Understanding where life might exist requires knowledge of stars, chemistry, geology, and biology together.',
+              3: 'It focuses only on Earth organisms is incorrect; astrobiology draws from every major science. Understanding where life might exist requires knowledge of stars, chemistry, geology, and biology together.',
+            },
           },
           {
             id: "sp-sec15-u6-L3-Q7",
@@ -846,6 +934,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Biosignature molecules can have non-biological sources. Detecting one is exciting but not proof of life. Multiple independent lines of evidence are needed.",
+            distractorExplanations: {
+              0: 'Life has been confirmed on that planet is incorrect; biosignature molecules can have non-biological sources. Detecting one is exciting but not proof of life. Multiple independent lines of evidence are needed.',
+              2: 'The molecule is impossible to detect from this distance is incorrect; biosignature molecules can have non-biological sources. Detecting one is exciting but not proof of life. Multiple independent lines of evidence are needed.',
+              3: 'Only DNA counts as evidence of life is incorrect; biosignature molecules can have non-biological sources. Detecting one is exciting but not proof of life. Multiple independent lines of evidence are needed.',
+            },
           },
         ],
       },
@@ -1108,6 +1201,9 @@ export const spaceSection15Part2: Unit[] = [
             question: "Normal matter makes up most of the universe.",
             correctAnswer: false,
             explanation: "Normal matter is only about 5% of the universe's total mass-energy. The rest is dark matter (27%) and dark energy (68%).",
+            distractorExplanations: {
+              0: 'Normal matter is only about 5% of the universe\'s total mass-energy. The rest is dark matter (27%) and dark energy (68%).',
+            },
           },
           {
             id: "sp-sec15-u7-L1-Q2",
@@ -1121,6 +1217,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Galaxy rotation curves show that stars orbit too fast to be held by visible matter alone. Extra invisible mass is needed, and that's what we call dark matter.",
+            distractorExplanations: {
+              0: 'We\'ve captured it in a lab is incorrect; galaxy rotation curves show that stars orbit too fast to be held by visible matter alone. Extra invisible mass is needed, and that\'s what we call dark matter.',
+              2: 'Dark matter glows in infrared light is incorrect; galaxy rotation curves show that stars orbit too fast to be held by visible matter alone. Extra invisible mass is needed, and that\'s what we call dark matter.',
+              3: 'Astronomers assume it exists without evidence is incorrect; galaxy rotation curves show that stars orbit too fast to be held by visible matter alone. Extra invisible mass is needed, and that\'s what we call dark matter.',
+            },
           },
           {
             id: "sp-sec15-u7-L1-T2",
@@ -1172,6 +1273,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dark energy makes up about 68% of the universe's mass-energy content. It's the dominant component and the least understood.",
+            distractorExplanations: {
+              0: '5% is incorrect; dark energy makes up about 68% of the universe\'s mass-energy content. It\'s the dominant component and the least understood.',
+              1: '27% is incorrect; dark energy makes up about 68% of the universe\'s mass-energy content. It\'s the dominant component and the least understood.',
+              3: '95% is incorrect; dark energy makes up about 68% of the universe\'s mass-energy content. It\'s the dominant component and the least understood.',
+            },
           },
           {
             id: "sp-sec15-u7-L1-Q7",
@@ -1186,6 +1292,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Science is strongest when it acknowledges unknowns. The evidence for dark matter and dark energy is robust, even if their nature is still being investigated.",
+            distractorExplanations: {
+              1: 'You\'re right, science is useless is incorrect; science is strongest when it acknowledges unknowns. The evidence for dark matter and dark energy is robust, even if their nature is still being investigated.',
+              2: 'We actually understand 100% of the universe is incorrect; science is strongest when it acknowledges unknowns. The evidence for dark matter and dark energy is robust, even if their nature is still being investigated.',
+              3: 'Dark matter and dark energy are probably just errors in t... is incorrect; science is strongest when it acknowledges unknowns. The evidence for dark matter and dark energy is robust, even if their nature is still being investigated.',
+            },
           },
         ],
       },
@@ -1210,6 +1321,9 @@ export const spaceSection15Part2: Unit[] = [
             question: "Scientists have fully explained how the first living cell emerged from non-living chemistry.",
             correctAnswer: false,
             explanation: "This is still an open question. We have hypotheses and some experimental progress, but no complete explanation of how chemistry became biology.",
+            distractorExplanations: {
+              0: 'This is still an open question. We have hypotheses and some experimental progress, but no complete explanation of how chemistry became biology.',
+            },
           },
           {
             id: "sp-sec15-u7-L2-Q2",
@@ -1223,6 +1337,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hydrothermal vents and warm ponds are the leading candidates. They provide energy, minerals, and concentrated chemistry needed for complex molecules to form.",
+            distractorExplanations: {
+              0: 'In outer space on a comet is incorrect; hydrothermal vents and warm ponds are the leading candidates. They provide energy, minerals, and concentrated chemistry needed for complex molecules to form.',
+              2: 'In the atmosphere during a lightning storm only is incorrect; hydrothermal vents and warm ponds are the leading candidates. They provide energy, minerals, and concentrated chemistry needed for complex molecules to form.',
+              3: 'On the Moon and then transferred to Earth is incorrect; hydrothermal vents and warm ponds are the leading candidates. They provide energy, minerals, and concentrated chemistry needed for complex molecules to form.',
+            },
           },
           {
             id: "sp-sec15-u7-L2-T2",
@@ -1274,6 +1393,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Even finding the simplest life elsewhere would mean life can arise independently. This would imply the universe could be teeming with biology.",
+            distractorExplanations: {
+              0: 'Microbes aren\'t interesting scientifically is incorrect; even finding the simplest life elsewhere would mean life can arise independently. This would imply the universe could be teeming with biology.',
+              2: 'It would only matter if the microbes were intelligent is incorrect; even finding the simplest life elsewhere would mean life can arise independently. This would imply the universe could be teeming with biology.',
+              3: 'Microbes on other worlds would be identical to Earth micr... is incorrect; even finding the simplest life elsewhere would mean life can arise independently. This would imply the universe could be teeming with biology.',
+            },
           },
           {
             id: "sp-sec15-u7-L2-Q7",
@@ -1306,6 +1430,9 @@ export const spaceSection15Part2: Unit[] = [
             question: "The Fermi Paradox asks why we haven't found evidence of extraterrestrial civilizations despite the vast number of stars.",
             correctAnswer: true,
             explanation: "Given the size and age of the universe, intelligent life should have had time to spread widely. The silence is the paradox.",
+            distractorExplanations: {
+              1: 'This statement is correct because given the size and age of the universe, intelligent life should have had time to spread widely. The silence is the paradox.',
+            },
           },
           {
             id: "sp-sec15-u7-L3-Q2",
@@ -1319,6 +1446,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Drake Equation breaks the big question into smaller factors: star formation rate, planets per star, fraction with life, and so on.",
+            distractorExplanations: {
+              0: 'The distance to the nearest star is incorrect; the Drake Equation breaks the big question into smaller factors: star formation rate, planets per star, fraction with life, and so on.',
+              2: 'The age of the universe is incorrect; the Drake Equation breaks the big question into smaller factors: star formation rate, planets per star, fraction with life, and so on.',
+              3: 'The speed of alien spacecraft is incorrect; the Drake Equation breaks the big question into smaller factors: star formation rate, planets per star, fraction with life, and so on.',
+            },
           },
           {
             id: "sp-sec15-u7-L3-T2",
@@ -1371,6 +1503,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Our searches have covered a minuscule portion of possible frequencies, directions, and signal types. The haystack is enormous.",
+            distractorExplanations: {
+              0: 'Radio doesn\'t work in space is incorrect; our searches have covered a minuscule portion of possible frequencies, directions, and signal types. The haystack is enormous.',
+              2: 'Aliens use technology we\'ve already checked for is incorrect; our searches have covered a minuscule portion of possible frequencies, directions, and signal types. The haystack is enormous.',
+              3: 'The universe is too young for any other civilizations to ... is incorrect; our searches have covered a minuscule portion of possible frequencies, directions, and signal types. The haystack is enormous.',
+            },
           },
           {
             id: "sp-sec15-u7-L3-Q7",
@@ -1385,6 +1522,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The analogy of one beach illustrates how small our search has been relative to the cosmos. Absence of evidence in a tiny sample tells us very little.",
+            distractorExplanations: {
+              0: 'You\'re right, aliens don\'t exist is incorrect; the analogy of one beach illustrates how small our search has been relative to the cosmos. Absence of evidence in a tiny sample tells us very little.',
+              2: 'SETI actually found aliens but it\'s a secret is incorrect; the analogy of one beach illustrates how small our search has been relative to the cosmos. Absence of evidence in a tiny sample tells us very little.',
+              3: 'Aliens use technology we can\'t possibly detect ever is incorrect; the analogy of one beach illustrates how small our search has been relative to the cosmos. Absence of evidence in a tiny sample tells us very little.',
+            },
           },
         ],
       },
@@ -1652,6 +1794,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Sun is a G-type main sequence star, about halfway through its 10-billion-year lifespan. It's average in size and temperature.",
+            distractorExplanations: {
+              0: 'Red giant is incorrect; the Sun is a G-type main sequence star, about halfway through its 10-billion-year lifespan. It\'s average in size and temperature.',
+              2: 'White dwarf is incorrect; the Sun is a G-type main sequence star, about halfway through its 10-billion-year lifespan. It\'s average in size and temperature.',
+              3: 'Neutron star is incorrect; the Sun is a G-type main sequence star, about halfway through its 10-billion-year lifespan. It\'s average in size and temperature.',
+            },
           },
           {
             id: "sp-sec15-u8-L1-Q2",
@@ -1690,6 +1837,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This synthesizes stellar physics with biology. A star's mass determines its lifetime, and that lifetime sets the clock for biological evolution.",
+            distractorExplanations: {
+              0: 'It wouldn\'t matter at all is incorrect; this synthesizes stellar physics with biology. A star\'s mass determines its lifetime, and that lifetime sets the clock for biological evolution.',
+              2: 'Life would evolve faster to match the star\'s shorter life is incorrect; this synthesizes stellar physics with biology. A star\'s mass determines its lifetime, and that lifetime sets the clock for biological evolution.',
+              3: 'A more massive star would actually help life evolve is incorrect; this synthesizes stellar physics with biology. A star\'s mass determines its lifetime, and that lifetime sets the clock for biological evolution.',
+            },
           },
           {
             id: "sp-sec15-u8-L1-Q5",
@@ -1725,6 +1877,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Mass is destiny for stars. Low-mass stars become white dwarfs. Medium-mass stars become neutron stars. The most massive stars collapse into black holes.",
+            distractorExplanations: {
+              0: 'Its color at birth is incorrect; mass is destiny for stars. Low-mass stars become white dwarfs. Medium-mass stars become neutron stars. The most massive stars collapse into black holes.',
+              1: 'Its distance from Earth is incorrect; mass is destiny for stars. Low-mass stars become white dwarfs. Medium-mass stars become neutron stars. The most massive stars collapse into black holes.',
+              3: 'Its age is incorrect; mass is destiny for stars. Low-mass stars become white dwarfs. Medium-mass stars become neutron stars. The most massive stars collapse into black holes.',
+            },
           },
           {
             id: "sp-sec15-u8-L1-Q8",
@@ -1738,6 +1895,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Jupiter's magnetic field is about 20,000 times stronger than Earth's. Its rapid rotation and liquid metallic hydrogen interior generate this enormous field.",
+            distractorExplanations: {
+              0: 'Earth is incorrect; jupiter\'s magnetic field is about 20,000 times stronger than Earth\'s. Its rapid rotation and liquid metallic hydrogen interior generate this enormous field.',
+              1: 'Mars is incorrect; jupiter\'s magnetic field is about 20,000 times stronger than Earth\'s. Its rapid rotation and liquid metallic hydrogen interior generate this enormous field.',
+              3: 'Venus is incorrect; jupiter\'s magnetic field is about 20,000 times stronger than Earth\'s. Its rapid rotation and liquid metallic hydrogen interior generate this enormous field.',
+            },
           },
         ],
       },
@@ -1768,6 +1930,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Milky Way is a barred spiral galaxy. It has spiral arms extending from a central bar structure, with our solar system located in one of the arms.",
+            distractorExplanations: {
+              0: 'Elliptical is incorrect; the Milky Way is a barred spiral galaxy. It has spiral arms extending from a central bar structure, with our solar system located in one of the arms.',
+              1: 'Irregular is incorrect; the Milky Way is a barred spiral galaxy. It has spiral arms extending from a central bar structure, with our solar system located in one of the arms.',
+              3: 'Lenticular is incorrect; the Milky Way is a barred spiral galaxy. It has spiral arms extending from a central bar structure, with our solar system located in one of the arms.',
+            },
           },
           {
             id: "sp-sec15-u8-L2-Q2",
@@ -1814,6 +1981,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This synthesizes redshift (distance indicator), lookback time, and galaxy evolution. Distant galaxies show us the universe's youth, when galaxies were still forming.",
+            distractorExplanations: {
+              0: 'The galaxy is broken and needs repair is incorrect; this synthesizes redshift (distance indicator), lookback time, and galaxy evolution. Distant galaxies show us the universe\'s youth, when galaxies were still forming.',
+              2: 'The telescope must be malfunctioning is incorrect; this synthesizes redshift (distance indicator), lookback time, and galaxy evolution. Distant galaxies show us the universe\'s youth, when galaxies were still forming.',
+              3: 'All galaxies look the same regardless of distance is incorrect; this synthesizes redshift (distance indicator), lookback time, and galaxy evolution. Distant galaxies show us the universe\'s youth, when galaxies were still forming.',
+            },
           },
           {
             id: "sp-sec15-u8-L2-Q6",
@@ -1841,6 +2013,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Stars in galaxies are so far apart that direct stellar collisions are extremely rare during mergers. The galaxies gravitationally interact and eventually merge.",
+            distractorExplanations: {
+              0: 'All the stars crash into each other and explode is incorrect; stars in galaxies are so far apart that direct stellar collisions are extremely rare during mergers. The galaxies gravitationally interact and eventually merge.',
+              2: 'Both galaxies are destroyed completely is incorrect; stars in galaxies are so far apart that direct stellar collisions are extremely rare during mergers. The galaxies gravitationally interact and eventually merge.',
+              3: 'They bounce off each other like billiard balls is incorrect; stars in galaxies are so far apart that direct stellar collisions are extremely rare during mergers. The galaxies gravitationally interact and eventually merge.',
+            },
           },
           {
             id: "sp-sec15-u8-L2-Q8",
@@ -1854,6 +2031,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Edwin Hubble discovered that galaxies are moving away from us, with more distant galaxies receding faster. This redshift-distance relationship proved expansion.",
+            distractorExplanations: {
+              0: 'Planets moving away from the Sun is incorrect; edwin Hubble discovered that galaxies are moving away from us, with more distant galaxies receding faster. This redshift-distance relationship proved expansion.',
+              2: 'The Moon getting farther from Earth is incorrect; edwin Hubble discovered that galaxies are moving away from us, with more distant galaxies receding faster. This redshift-distance relationship proved expansion.',
+              3: 'Stars getting dimmer over time is incorrect; edwin Hubble discovered that galaxies are moving away from us, with more distant galaxies receding faster. This redshift-distance relationship proved expansion.',
+            },
           },
         ],
       },
@@ -1884,6 +2066,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Rockets work by expelling mass in one direction. The reaction force pushes the rocket in the opposite direction. No air is needed.",
+            distractorExplanations: {
+              0: 'Bernoulli\'s principle is incorrect; rockets work by expelling mass in one direction. The reaction force pushes the rocket in the opposite direction. No air is needed.',
+              2: 'The second law of thermodynamics is incorrect; rockets work by expelling mass in one direction. The reaction force pushes the rocket in the opposite direction. No air is needed.',
+              3: 'Archimedes\' principle is incorrect; rockets work by expelling mass in one direction. The reaction force pushes the rocket in the opposite direction. No air is needed.',
+            },
           },
           {
             id: "sp-sec15-u8-L3-Q2",
@@ -1930,6 +2117,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This synthesizes radiation biology, mission design, and scientific priorities. Robots can go where humans can't yet safely venture.",
+            distractorExplanations: {
+              0: 'Send crew because humans are better at exploring is incorrect; this synthesizes radiation biology, mission design, and scientific priorities. Robots can go where humans can\'t yet safely venture.',
+              2: 'Cancel the mission entirely is incorrect; this synthesizes radiation biology, mission design, and scientific priorities. Robots can go where humans can\'t yet safely venture.',
+              3: 'Wait until teleportation is invented is incorrect; this synthesizes radiation biology, mission design, and scientific priorities. Robots can go where humans can\'t yet safely venture.',
+            },
           },
           {
             id: "sp-sec15-u8-L3-Q6",
@@ -1957,6 +2149,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Reusable rockets like SpaceX's Falcon 9 cut costs dramatically. Lower launch costs make more missions, stations, and exploration affordable.",
+            distractorExplanations: {
+              0: 'They look more impressive during landing is incorrect; reusable rockets like SpaceX\'s Falcon 9 cut costs dramatically. Lower launch costs make more missions, stations, and exploration affordable.',
+              2: 'They\'re faster than expendable rockets is incorrect; reusable rockets like SpaceX\'s Falcon 9 cut costs dramatically. Lower launch costs make more missions, stations, and exploration affordable.',
+              3: 'They can carry more payload to orbit is incorrect; reusable rockets like SpaceX\'s Falcon 9 cut costs dramatically. Lower launch costs make more missions, stations, and exploration affordable.',
+            },
           },
           {
             id: "sp-sec15-u8-L3-Q8",
@@ -1970,6 +2167,11 @@ export const spaceSection15Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Gravity assists use a planet's orbital energy to speed up or redirect a spacecraft. Voyager used multiple gravity assists to reach the outer solar system.",
+            distractorExplanations: {
+              1: 'Slowing down by hitting a planet\'s atmosphere is incorrect; gravity assists use a planet\'s orbital energy to speed up or redirect a spacecraft. Voyager used multiple gravity assists to reach the outer solar system.',
+              2: 'Launching from a mountaintop for extra altitude is incorrect; gravity assists use a planet\'s orbital energy to speed up or redirect a spacecraft. Voyager used multiple gravity assists to reach the outer solar system.',
+              3: 'Using magnets to accelerate through space is incorrect; gravity assists use a planet\'s orbital energy to speed up or redirect a spacecraft. Voyager used multiple gravity assists to reach the outer solar system.',
+            },
           },
         ],
       },

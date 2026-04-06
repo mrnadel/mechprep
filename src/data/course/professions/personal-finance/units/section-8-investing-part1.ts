@@ -39,6 +39,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Inflation means the general price of goods and services rises over time.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Inflation is a sustained increase in the overall price level, making this statement true.' },
             explanation: "Inflation is a sustained increase in the overall price level. It's a normal part of modern economies.",
           },
           {
@@ -52,6 +53,11 @@ export const finSection8Part1: Unit[] = [
               "It costs about $130",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'It costs about $97 is not correct in this context; at 3% inflation, prices rise by 3% each year.',
+              2: 'It costs exactly $100 is not correct in this context; at 3% inflation, prices rise by 3% each year.',
+              3: 'It costs about $130 is not correct in this context; at 3% inflation, prices rise by 3% each year.',
+            },
             explanation: "At 3% inflation, prices rise by 3% each year. $100 times 1.03 equals $103.",
           },
           {
@@ -89,6 +95,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Most central banks aim for 0% inflation.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Most central banks target about 2% inflation, not 0%.' },
             explanation: "Most central banks target about 2% inflation, not 0%. A small amount of inflation is considered healthy.",
           },
           {
@@ -103,6 +110,11 @@ export const finSection8Part1: Unit[] = [
               "Governments can't control inflation at all",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; A small, steady inflation rate around 2% encourages spending and investment, ...',
+              2: 'This is not the best answer; A small, steady inflation rate around 2% encourages spending and investment, ...',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "A small, steady inflation rate around 2% encourages spending and investment, which keeps the economy growing.",
           },
         ],
@@ -128,6 +140,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "If you keep cash under your mattress, it loses purchasing power over time due to inflation.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Cash doesn\'t grow, but prices do, making this statement true.' },
             explanation: "Cash doesn't grow, but prices do. Over time, each dollar buys less and less.",
           },
           {
@@ -141,6 +154,11 @@ export const finSection8Part1: Unit[] = [
               "About $8,000 worth of goods",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'About $10,000 worth of goods is not correct in this context; at 3% inflation for 20 years, $10,000 loses nearly half its purchasing power.',
+              2: 'About $13,000 worth of goods is not correct in this context; at 3% inflation for 20 years, $10,000 loses nearly half its purchasing power.',
+              3: 'About $8,000 worth of goods is not correct in this context; at 3% inflation for 20 years, $10,000 loses nearly half its purchasing power.',
+            },
             explanation: "At 3% inflation for 20 years, $10,000 loses nearly half its purchasing power. It still says $10,000, but it buys only about $5,500 worth of goods.",
           },
           {
@@ -176,6 +194,11 @@ export const finSection8Part1: Unit[] = [
               "It's growing by 3.5% per year",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'It\'s growing by 0.5% per year is not correct in this context; your real return is 0.',
+              2: 'This is not the best answer; your real return is 0.',
+              3: 'It\'s growing by 3.5% per year is not correct in this context; your real return is 0.',
+            },
             explanation: "Your real return is 0.5% minus 3%, which equals negative 2.5%. Your balance grows slightly, but it buys less each year.",
           },
           {
@@ -189,6 +212,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Inflation compounds over time, making its effect worse the longer you hold cash.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Inflation works like compound interest in reverse, making this statement true.' },
             explanation: "Inflation works like compound interest in reverse. Each year, prices rise on top of the previous year's higher prices.",
           },
           {
@@ -227,6 +251,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Your real return equals your nominal return minus inflation.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Real return shows how much your purchasing power actually grew, making this statement true.' },
             explanation: "Real return shows how much your purchasing power actually grew. It's what matters for building wealth.",
           },
           {
@@ -240,6 +265,11 @@ export const finSection8Part1: Unit[] = [
               "4%",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is About 6%.',
+              1: 'This does not match the correct calculation; the right answer is About 6%.',
+              3: 'This does not match the correct calculation; the right answer is About 6%.',
+            },
             explanation: "Real return is roughly 10% minus 4%, which equals 6%. That's how much your purchasing power actually increased.",
           },
           {
@@ -277,6 +307,11 @@ export const finSection8Part1: Unit[] = [
               "Neither, because inflation cancels out all gains",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that 15% is higher than 6% does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that both made money does not accurately reflect the financial principle at work.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Investment B had a higher real return (6% minus 2% = 4%) compared to A (15% minus 12% = 3%). Real returns matter, not nominal.",
           },
           {
@@ -284,6 +319,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "A savings account earning 2% with 3% inflation is giving you a positive real return.",
             correctAnswer: false,
+            distractorExplanations: { 0: '2% minus 3% equals negative 1%.' },
             explanation: "2% minus 3% equals negative 1%. You're losing purchasing power even though the account balance grows.",
           },
         ],
@@ -309,6 +345,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Keeping all your money in cash is risk-free.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Cash carries inflation risk.' },
             explanation: "Cash carries inflation risk. You're guaranteed to lose purchasing power over time.",
           },
           {
@@ -322,6 +359,11 @@ export const finSection8Part1: Unit[] = [
               "More than $10,000",
             ],
             correctIndex: 3,
+            distractorExplanations: {
+              0: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              1: 'This does not match the correct calculation; the right answer is More than $10,000.',
+              2: 'This does not match the correct calculation; the right answer is More than $10,000.',
+            },
             explanation: "At 3% inflation compounded for 25 years, $20,000 loses about half its purchasing power. That's more than $10,000 of buying power gone.",
           },
           {
@@ -371,6 +413,11 @@ export const finSection8Part1: Unit[] = [
               "About $5,000 more",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'About $20,000 more is not correct in this context; $10,000 at 8% for 30 years grows to about $100,000.',
+              1: 'About $50,000 more is not correct in this context; $10,000 at 8% for 30 years grows to about $100,000.',
+              3: 'About $5,000 more is not correct in this context; $10,000 at 8% for 30 years grows to about $100,000.',
+            },
             explanation: "$10,000 at 8% for 30 years grows to about $100,000. Person B still has $10,000 that buys even less due to inflation. The gap is roughly $90,000.",
           },
           {
@@ -535,6 +582,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Compound interest pays you on both your original amount and any interest already earned.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'That\'s what makes compound interest so powerful, making this statement true.' },
             explanation: "That's what makes compound interest so powerful. You earn returns on your returns.",
           },
           {
@@ -548,6 +596,11 @@ export const finSection8Part1: Unit[] = [
               "It depends on the market",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; simple interest is always calculated on the original $1,000.',
+              2: '$10 every year is not correct in this context; simple interest is always calculated on the original $1,000.',
+              3: 'It depends on the market is not correct in this context; simple interest is always calculated on the original $1,000.',
+            },
             explanation: "Simple interest is always calculated on the original $1,000. So it's $100 every single year, never more.",
           },
           {
@@ -561,6 +614,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "With simple interest, the dollar amount of interest earned stays the same each year.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Simple interest always uses the original principal, making this statement true.' },
             explanation: "Simple interest always uses the original principal. The interest amount never changes.",
           },
           {
@@ -609,6 +663,11 @@ export const finSection8Part1: Unit[] = [
               "$0, they're the same",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: '$300 more is not correct in this context; simple: $1,300.',
+              2: '$100 more is not correct in this context; simple: $1,300.',
+              3: '$0, they\'re the same is not correct in this context; simple: $1,300.',
+            },
             explanation: "Simple: $1,300. Compound: $1,331. The difference is $31 after just 3 years. Over decades, this gap explodes.",
           },
         ],
@@ -634,6 +693,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "With compound interest, most of the growth happens in the later years.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The snowball effect means each year\'s growth is bigger than the last, making this statement true.' },
             explanation: "The snowball effect means each year's growth is bigger than the last. The final years contribute the most.",
           },
           {
@@ -647,6 +707,11 @@ export const finSection8Part1: Unit[] = [
               "About $3,000",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is About $5,400.',
+              1: 'This does not match the correct calculation; the right answer is About $5,400.',
+              3: 'This does not match the correct calculation; the right answer is About $5,400.',
+            },
             explanation: "At year 20 you have $4,661. At year 30 you have $10,063. The last 10 years added $5,402, more than the first 20 combined.",
           },
           {
@@ -689,6 +754,11 @@ export const finSection8Part1: Unit[] = [
               "You should only invest after you've paid off all debt first.",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Those extra 15 years of compounding are worth far more than the same dollars ...',
+              2: 'This is not the best answer; Those extra 15 years of compounding are worth far more than the same dollars ...',
+              3: 'This is not the best answer; Those extra 15 years of compounding are worth far more than the same dollars ...',
+            },
             explanation: "Those extra 15 years of compounding are worth far more than the same dollars invested later. Time is the most powerful variable.",
           },
           {
@@ -696,6 +766,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Investing $5,000 at age 25 will likely grow to more than $10,000 invested at age 45, given the same return rate.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'With 20 extra years of compounding at 8%, $5,000 at 25 grows to about $50,000 by 65, making this statement true.' },
             explanation: "With 20 extra years of compounding at 8%, $5,000 at 25 grows to about $50,000 by 65. $10,000 at 45 only grows to about $46,000.",
           },
         ],
@@ -721,6 +792,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "The Rule of 72 helps you estimate how long it takes money to double.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Divide 72 by the annual return rate, and you get the approximate doubling time in years.' },
             explanation: "Divide 72 by the annual return rate, and you get the approximate doubling time in years.",
           },
           {
@@ -734,6 +806,11 @@ export const finSection8Part1: Unit[] = [
               "72 years",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This timeframe is incorrect based on the facts presented.',
+              2: 'This timeframe is incorrect based on the facts presented.',
+              3: 'This timeframe is incorrect based on the facts presented.',
+            },
             explanation: "72 divided by 6 equals 12. It takes about 12 years to double your money at 6%.",
           },
           {
@@ -770,6 +847,11 @@ export const finSection8Part1: Unit[] = [
               "About 72 years",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'About 3 years is not correct in this context; 72 divided by 3 equals 24.',
+              1: 'About 10 years is not correct in this context; 72 divided by 3 equals 24.',
+              3: 'About 72 years is not correct in this context; 72 divided by 3 equals 24.',
+            },
             explanation: "72 divided by 3 equals 24. In 24 years, your cash buys only half of what it does today.",
           },
           {
@@ -795,6 +877,11 @@ export const finSection8Part1: Unit[] = [
               "It can never reach $20,000 from $5,000",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; $5,000 doubles to $10,000 in 9 years, then doubles again to $20,000 in anothe...',
+              2: 'This is not the best answer; $5,000 doubles to $10,000 in 9 years, then doubles again to $20,000 in anothe...',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "$5,000 doubles to $10,000 in 9 years, then doubles again to $20,000 in another 9 years. Total: about 18 years.",
           },
         ],
@@ -820,6 +907,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Starting to invest 10 years earlier can matter more than investing 3 times as long.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The extra compounding time gives early investments a massive head start that\'s very hard to catch up to.' },
             explanation: "The extra compounding time gives early investments a massive head start that's very hard to catch up to.",
           },
           {
@@ -833,6 +921,11 @@ export const finSection8Part1: Unit[] = [
               "Neither, inflation erases all gains",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that they invested for 33 years does not accurately reflect the financial principle at work.',
+              2: 'This is not the best answer; alex invested only $24,000 total but started earlier.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Alex invested only $24,000 total but started earlier. Pat invested $79,200 but started later. Alex's early start wins thanks to compounding.",
           },
           {
@@ -859,6 +952,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Waiting until you can invest a large amount is better than investing small amounts right away.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Even small amounts benefit from compounding.' },
             explanation: "Even small amounts benefit from compounding. Waiting means losing valuable time that no amount of money can buy back.",
           },
           {
@@ -872,6 +966,11 @@ export const finSection8Part1: Unit[] = [
               "Watching the market every day",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Picking the right stock is not correct in this context; time in the market beats timing the market and size of contributions.',
+              2: 'This is not the best answer; time in the market beats timing the market and size of contributions.',
+              3: 'Watching the market every day is not correct in this context; time in the market beats timing the market and size of contributions.',
+            },
             explanation: "Time in the market beats timing the market and size of contributions. Starting early is the single most powerful advantage.",
           },
           {
@@ -897,6 +996,11 @@ export const finSection8Part1: Unit[] = [
               "Focus on spending your money and enjoying your youth first.",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+              2: 'This is not the best answer; $50/month at 8% for 47 years (age 18 to 65) grows to over $250,000.',
+              3: 'This is not the best answer; $50/month at 8% for 47 years (age 18 to 65) grows to over $250,000.',
+            },
             explanation: "$50/month at 8% for 47 years (age 18 to 65) grows to over $250,000. Starting now, even small, is incredibly powerful.",
           },
         ],
@@ -965,6 +1069,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Buying a stock means you become a part-owner of the company.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Every share of stock represents real ownership, making this statement true.' },
             explanation: "Every share of stock represents real ownership. You own a small percentage of the company's assets and profits.",
           },
           {
@@ -978,6 +1083,11 @@ export const finSection8Part1: Unit[] = [
               "0.01%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is 1%.',
+              2: 'This does not match the correct calculation; the right answer is 1%.',
+              3: 'This does not match the correct calculation; the right answer is 1%.',
+            },
             explanation: "100 divided by 10,000 equals 0.01, which is 1%. You own 1% of the company.",
           },
           {
@@ -1021,6 +1131,11 @@ export const finSection8Part1: Unit[] = [
               "To reduce their tax bill",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'To give away their profits is not correct in this context; Companies sell shares to raise capital for expansion.',
+              2: 'This is not the best answer; Companies sell shares to raise capital for expansion.',
+              3: 'To reduce their tax bill is not correct in this context; Companies sell shares to raise capital for expansion.',
+            },
             explanation: "Companies sell shares to raise capital for expansion, research, or operations without taking on debt.",
           },
           {
@@ -1028,6 +1143,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "When you buy a stock, the company guarantees you'll make money.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Stock returns depend on the company\'s performance.' },
             explanation: "Stock returns depend on the company's performance. There's no guarantee. You could gain or lose money.",
           },
         ],
@@ -1053,6 +1169,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Stock prices go up when more people want to buy than sell.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Higher demand with limited supply pushes prices up, making this statement true.' },
             explanation: "Higher demand with limited supply pushes prices up. It's basic supply and demand.",
           },
           {
@@ -1066,6 +1183,11 @@ export const finSection8Part1: Unit[] = [
               "It will go to exactly zero",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'The reasoning that profits mean taxes does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that profits don\'t affect stock price does not accurately reflect the financial principle at work.',
+              3: 'It will go to exactly zero is not correct in this context; Good news like strong profits usually increases demand for the stock.',
+            },
             explanation: "Good news like strong profits usually increases demand for the stock, pushing the price higher.",
           },
           {
@@ -1088,6 +1210,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "You can predict exactly where a stock price will be tomorrow.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Short-term stock prices are essentially unpredictable.' },
             explanation: "Short-term stock prices are essentially unpredictable. Too many factors influence daily movements.",
           },
           {
@@ -1102,6 +1225,11 @@ export const finSection8Part1: Unit[] = [
               "Short-term drops always recover within a week.",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; short-term drops are normal.',
+              2: 'This is not the best answer; short-term drops are normal.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Short-term drops are normal. Making decisions based on one data point is risky. Review the bigger picture first.",
           },
           {
@@ -1115,6 +1243,11 @@ export const finSection8Part1: Unit[] = [
               "Whatever social media says",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The weather is not correct in this context; Short-term prices can be irrational.',
+              1: 'Random patterns with no logic is not correct in this context; Short-term prices can be irrational.',
+              3: 'Whatever social media says is not correct in this context; Short-term prices can be irrational.',
+            },
             explanation: "Short-term prices can be irrational, but over years and decades, stock prices reflect real business results.",
           },
         ],
@@ -1140,6 +1273,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "A dividend is a cash payment made to shareholders from a company's profits.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Dividends are one way companies return profits to their owners (shareholders).' },
             explanation: "Dividends are one way companies return profits to their owners (shareholders).",
           },
           {
@@ -1153,6 +1287,11 @@ export const finSection8Part1: Unit[] = [
               "Only when the stock price goes up",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Every day is not correct in this context; Most dividend-paying companies distribute payments quarterly.',
+              1: 'Once a year is not correct in this context; Most dividend-paying companies distribute payments quarterly.',
+              3: 'This is not the best answer; Most dividend-paying companies distribute payments quarterly.',
+            },
             explanation: "Most dividend-paying companies distribute payments quarterly, or 4 times per year.",
           },
           {
@@ -1190,6 +1329,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "All companies are required to pay dividends to their shareholders.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Dividends are optional.' },
             explanation: "Dividends are optional. Many growing companies reinvest all profits back into the business instead of paying dividends.",
           },
           {
@@ -1203,6 +1343,11 @@ export const finSection8Part1: Unit[] = [
               "Because the stock market doesn't allow it",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Young, fast-growing companies often prefer to reinvest every dollar into expa...',
+              2: 'This is not the best answer; Young, fast-growing companies often prefer to reinvest every dollar into expa...',
+              3: 'This is not the best answer; Young, fast-growing companies often prefer to reinvest every dollar into expa...',
+            },
             explanation: "Young, fast-growing companies often prefer to reinvest every dollar into expansion rather than paying it out as dividends.",
           },
         ],
@@ -1228,6 +1373,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "A stock exchange is a marketplace where buyers and sellers trade shares.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Exchanges bring together people who want to buy shares with people who want to sell them.' },
             explanation: "Exchanges bring together people who want to buy shares with people who want to sell them.",
           },
           {
@@ -1241,6 +1387,11 @@ export const finSection8Part1: Unit[] = [
               "To lend money to companies",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Exchanges provide a regulated.',
+              2: 'This is not the best answer; Exchanges provide a regulated.',
+              3: 'To lend money to companies is not correct in this context; Exchanges provide a regulated.',
+            },
             explanation: "Exchanges provide a regulated, organized place where stocks can be traded fairly and transparently.",
           },
           {
@@ -1276,6 +1427,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "You need to physically visit a stock exchange building to buy stocks today.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Almost all trading is electronic now.' },
             explanation: "Almost all trading is electronic now. You can buy and sell stocks from your phone or computer through a brokerage app.",
           },
           {
@@ -1441,6 +1593,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "When you buy a bond, you're lending money to the issuer.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Bond buyers are lenders, making this statement true.' },
             explanation: "Bond buyers are lenders. The issuer (government or company) is the borrower who promises to repay with interest.",
           },
           {
@@ -1454,6 +1607,11 @@ export const finSection8Part1: Unit[] = [
               "Let you vote on company decisions",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Bond issuers promise to repay the face value at maturity and make regular int...',
+              2: 'This is not the best answer; Bond issuers promise to repay the face value at maturity and make regular int...',
+              3: 'This is not the best answer; Bond issuers promise to repay the face value at maturity and make regular int...',
+            },
             explanation: "Bond issuers promise to repay the face value at maturity and make regular interest payments. No ownership is involved.",
           },
           {
@@ -1489,6 +1647,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Buying a bond gives you ownership in a company, just like stocks.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Bonds make you a lender, not an owner.' },
             explanation: "Bonds make you a lender, not an owner. You don't get ownership rights or voting power.",
           },
           {
@@ -1502,6 +1661,11 @@ export const finSection8Part1: Unit[] = [
               "$50 once, then $1,000 in 10 years",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: '$500 per year for 10 years is not correct in this context; a 5% coupon on a $1,000 face value pays $50/year in interest.',
+              2: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              3: 'This is not the best answer; a 5% coupon on a $1,000 face value pays $50/year in interest.',
+            },
             explanation: "A 5% coupon on a $1,000 face value pays $50/year in interest. At maturity, you get your $1,000 back.",
           },
         ],
@@ -1527,6 +1691,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "The coupon rate and the yield of a bond are always the same number.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'They\'re the same only if you buy the bond at face value.' },
             explanation: "They're the same only if you buy the bond at face value. If you pay more or less, the yield changes.",
           },
           {
@@ -1540,6 +1705,11 @@ export const finSection8Part1: Unit[] = [
               "Zero, because discount bonds don't pay interest",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'The reasoning that you got a discount does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that the coupon doesn\'t change does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that discount bonds don\'t pay interest does not accurately reflect the financial principle at work.',
+            },
             explanation: "You still get $40/year but paid only $800. Your yield is $40 divided by $800, which equals 5%. That's higher than the 4% coupon.",
           },
           {
@@ -1583,6 +1753,11 @@ export const finSection8Part1: Unit[] = [
               "High yields always mean great investments",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; very high yields signal higher risk.',
+              1: 'This is not the best answer; very high yields signal higher risk.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Very high yields signal higher risk. The issuer must offer more to compensate investors for the chance of not getting repaid.",
           },
           {
@@ -1590,6 +1765,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "If you buy a bond at a price above face value, your yield will be lower than the coupon rate.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'You paid more for the same coupon payments, so your percentage return is lower than the stated coupon rate.' },
             explanation: "You paid more for the same coupon payments, so your percentage return is lower than the stated coupon rate.",
           },
         ],
@@ -1615,6 +1791,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "When interest rates rise, existing bond prices fall.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Older bonds with lower rates become less attractive when new bonds offer higher rates, making this statement true.' },
             explanation: "Older bonds with lower rates become less attractive when new bonds offer higher rates. So their price drops to compensate.",
           },
           {
@@ -1628,6 +1805,11 @@ export const finSection8Part1: Unit[] = [
               "It doubles in value",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The reasoning that your bond is older does not accurately reflect the financial principle at work.',
+              1: 'The reasoning that the coupon is fixed does not accurately reflect the financial principle at work.',
+              3: 'It doubles in value is not correct in this context; your 3% bond is less appealing than new 5% bonds.',
+            },
             explanation: "Your 3% bond is less appealing than new 5% bonds. To attract a buyer, the price must drop until the yield is competitive.",
           },
           {
@@ -1641,6 +1823,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "If you hold a bond to maturity, interest rate changes won't affect your total return.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Holding to maturity means you get every coupon payment and the full face value back, regardless of what happened to market prices in between.' },
             explanation: "Holding to maturity means you get every coupon payment and the full face value back, regardless of what happened to market prices in between.",
           },
           {
@@ -1669,6 +1852,11 @@ export const finSection8Part1: Unit[] = [
               "Convert all bonds to cash immediately",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; If held to maturity, the bondholder still gets all coupon payments plus the f...',
+              2: 'This is not the best answer; If held to maturity, the bondholder still gets all coupon payments plus the f...',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "If held to maturity, the bondholder still gets all coupon payments plus the full face value. The paper loss is only real if they sell early.",
           },
           {
@@ -1707,6 +1895,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Government bonds are generally considered the safest type of bond.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Governments can raise taxes to repay debt, making their bonds the lowest-risk option.' },
             explanation: "Governments can raise taxes to repay debt, making their bonds the lowest-risk option.",
           },
           {
@@ -1720,6 +1909,11 @@ export const finSection8Part1: Unit[] = [
               "All bonds pay the same yield",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Government bonds is not correct in this context; riskier corporate bonds must offer higher yields to attract investors.',
+              1: 'Municipal bonds is not correct in this context; riskier corporate bonds must offer higher yields to attract investors.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Riskier corporate bonds must offer higher yields to attract investors. More risk equals more reward (and more potential for loss).",
           },
           {
@@ -1777,6 +1971,11 @@ export const finSection8Part1: Unit[] = [
               "Backed by the government",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; bB is below the BBB threshold for investment grade.',
+              2: 'This is not the best answer; bB is below the BBB threshold for investment grade.',
+              3: 'Backed by the government is not correct in this context; bB is below the BBB threshold for investment grade.',
+            },
             explanation: "BB is below the BBB threshold for investment grade. It's classified as high-yield or junk, meaning higher risk.",
           },
         ],
@@ -1845,6 +2044,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Stocks generally offer higher potential returns than bonds but with more risk.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Historically, stocks have returned about 8% to 10% per year on average, while bonds return 3% to 5%, making this statement true.' },
             explanation: "Historically, stocks have returned about 8% to 10% per year on average, while bonds return 3% to 5%. But stocks are much more volatile.",
           },
           {
@@ -1874,6 +2074,11 @@ export const finSection8Part1: Unit[] = [
               "Cash in a safe",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'A savings account at 0.5% is not correct in this context; over 30 years, stocks have historically produced the highest returns.',
+              1: 'Government bonds at 3% is not correct in this context; over 30 years, stocks have historically produced the highest returns.',
+              3: 'Cash in a safe is not correct in this context; over 30 years, stocks have historically produced the highest returns.',
+            },
             explanation: "Over 30 years, stocks have historically produced the highest returns. The long time horizon smooths out short-term volatility.",
           },
           {
@@ -1911,6 +2116,11 @@ export const finSection8Part1: Unit[] = [
               "Keep it in cash until the market is perfect",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              1: 'This is not the best answer; With a 40-year time horizon and moderate risk tolerance.',
+              3: 'This is not the best answer; With a 40-year time horizon and moderate risk tolerance.',
+            },
             explanation: "With a 40-year time horizon and moderate risk tolerance, a stock-heavy mix with some bonds provides growth potential and some stability.",
           },
         ],
@@ -1943,6 +2153,11 @@ export const finSection8Part1: Unit[] = [
               "Keep all $10,000 in cash until she figures out what to do",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'This is not the best answer; each goal has a different time frame.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Each goal has a different time frame. Emergency money stays liquid, car money goes somewhere safe, and retirement money grows in stocks.",
           },
           {
@@ -1956,6 +2171,11 @@ export const finSection8Part1: Unit[] = [
               "Borrow more to invest in stocks",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; As retirement approaches.',
+              2: 'Sell everything and keep cash is not correct in this context; As retirement approaches.',
+              3: 'This is not the best answer; As retirement approaches.',
+            },
             explanation: "As retirement approaches, shifting toward bonds reduces the risk of a market crash right when you need the money.",
           },
           {
@@ -1963,6 +2183,7 @@ export const finSection8Part1: Unit[] = [
             type: "true-false",
             question: "Someone saving for a goal 20 years away should consider stocks over bonds for potentially higher returns.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'A 20-year horizon gives plenty of time to ride out stock market volatility and benefit from higher average returns.' },
             explanation: "A 20-year horizon gives plenty of time to ride out stock market volatility and benefit from higher average returns.",
           },
           {
@@ -2012,6 +2233,11 @@ export const finSection8Part1: Unit[] = [
               "The government will tax it more",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The bank might close is not correct in this context; over 20 to 30 years, inflation can cut the value of cash in half or more.',
+              2: 'Cash is too easy to spend is not correct in this context; over 20 to 30 years, inflation can cut the value of cash in half or more.',
+              3: 'This is not the best answer; over 20 to 30 years, inflation can cut the value of cash in half or more.',
+            },
             explanation: "Over 20 to 30 years, inflation can cut the value of cash in half or more. Investing is how you protect and grow long-term wealth.",
           },
         ],

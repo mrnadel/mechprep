@@ -33,6 +33,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "The solar system includes everything that orbits the Sun.",
             correctAnswer: true,
             explanation: "Planets, moons, asteroids, comets, and even tiny dust particles all count as part of the solar system.",
+            distractorExplanations: {
+              1: 'Planets, moons, asteroids, comets, and even tiny dust particles all count as part of the solar system.',
+            },
           },
           {
             id: "sp-sec2-u1-L1-Q2",
@@ -46,6 +49,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "There are eight major planets. Pluto was reclassified as a dwarf planet in 2006.",
+            distractorExplanations: {
+              0: 'Six is incorrect; there are eight major planets.',
+              1: 'Nine is incorrect; there are eight major planets.',
+              3: 'Ten is incorrect; there are eight major planets.',
+            },
           },
           {
             id: "sp-sec2-u1-L1-T2",
@@ -106,6 +114,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The asteroid belt lies between Mars and Jupiter, forming a rough boundary between the rocky and gaseous worlds.",
+            distractorExplanations: {
+              1: 'The Kuiper Belt is incorrect; the asteroid belt lies between Mars and Jupiter, forming a rough boundary between the rocky and gaseous worlds.',
+              2: 'A wall of radiation is incorrect; the asteroid belt lies between Mars and Jupiter, forming a rough boundary between the rocky and gaseous worlds.',
+              3: 'Empty space with nothing in it is incorrect; the asteroid belt lies between Mars and Jupiter, forming a rough boundary between the rocky and gaseous worlds.',
+            },
           },
         ],
       },
@@ -131,6 +144,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "The Sun is the largest star in the universe.",
             correctAnswer: false,
             explanation: "The Sun is a medium-sized star. Some stars, like Betelgeuse, are over 700 times wider than the Sun.",
+            distractorExplanations: {
+              0: 'The Sun is a medium-sized star.',
+            },
           },
           {
             id: "sp-sec2-u1-L2-Q2",
@@ -144,6 +160,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Nuclear fusion in the Sun's core converts hydrogen into helium. This releases enormous amounts of energy as light and heat.",
+            distractorExplanations: {
+              0: 'By burning fuel like a campfire is incorrect; nuclear fusion in the Sun\'s core converts hydrogen into helium.',
+              1: 'By reflecting light from other stars is incorrect; nuclear fusion in the Sun\'s core converts hydrogen into helium.',
+              3: 'By spinning very fast is incorrect; nuclear fusion in the Sun\'s core converts hydrogen into helium.',
+            },
           },
           {
             id: "sp-sec2-u1-L2-T2",
@@ -188,6 +209,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Sunspots are cooler regions on the Sun's surface where strong magnetic fields prevent heat from rising normally. They look dark compared to the surrounding surface.",
+            distractorExplanations: {
+              0: 'Holes in the Sun\'s surface is incorrect; sunspots are cooler regions on the Sun\'s surface where strong magnetic fields prevent heat from rising normally.',
+              2: 'Shadows cast by planets passing in front is incorrect; sunspots are cooler regions on the Sun\'s surface where strong magnetic fields prevent heat from.',
+              3: 'Reflections of nearby stars is incorrect; sunspots are cooler regions on the Sun\'s surface where strong magnetic fields prevent heat from rising normally.',
+            },
           },
           {
             id: "sp-sec2-u1-L2-Q6",
@@ -211,6 +237,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Fire is a chemical reaction that needs oxygen. The Sun uses nuclear fusion, which smashes atoms together. No oxygen is needed.",
+            distractorExplanations: {
+              0: 'This is incorrect; fire is a chemical reaction that needs oxygen.',
+              2: 'The Sun doesn\'t produce energy at all is incorrect; fire is a chemical reaction that needs oxygen.',
+              3: 'Fire and fusion are the same thing is incorrect; fire is a chemical reaction that needs oxygen.',
+            },
           },
         ],
       },
@@ -236,6 +267,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "The planets are packed closely together around the Sun.",
             correctAnswer: false,
             explanation: "Planets are separated by vast empty spaces. Even the closest planet to the Sun, Mercury, is 58 million km away.",
+            distractorExplanations: {
+              0: 'Planets are separated by vast empty spaces.',
+            },
           },
           {
             id: "sp-sec2-u1-L3-Q2",
@@ -249,6 +283,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Earth orbits about 150 million km (1 AU) from the Sun. Light covers that distance in about 8 minutes.",
+            distractorExplanations: {
+              0: '1.5 million km is incorrect; earth orbits about 150 million km (1 AU) from the Sun.',
+              1: '15 million km is incorrect; earth orbits about 150 million km (1 AU) from the Sun.',
+              3: '1.5 billion km is incorrect; earth orbits about 150 million km (1 AU) from the Sun.',
+            },
           },
           {
             id: "sp-sec2-u1-L3-T2",
@@ -293,6 +332,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Neptune is about 30 AU from the Sun, so light takes roughly 30 times longer than the 8-minute trip to Earth.",
+            distractorExplanations: {
+              0: 'About 30 minutes is incorrect; neptune is about 30 AU from the Sun, so light takes roughly 30 times longer than the 8-minute trip to Earth.',
+              2: 'About 2 days is incorrect; neptune is about 30 AU from the Sun, so light takes roughly 30 times longer than the 8-minute trip to Earth.',
+              3: 'About 1 year is incorrect; neptune is about 30 AU from the Sun, so light takes roughly 30 times longer than the 8-minute trip to Earth.',
+            },
           },
           {
             id: "sp-sec2-u1-L3-Q6",
@@ -307,6 +351,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Solar system diagrams almost never show true scale. Mars orbits at 1.5 AU while Jupiter is at 5.2 AU, with the asteroid belt between them.",
+            distractorExplanations: {
+              0: 'This is incorrect; solar system diagrams almost never show true scale.',
+              1: 'This is incorrect; solar system diagrams almost never show true scale.',
+              3: 'This is incorrect; solar system diagrams almost never show true scale.',
+            },
           },
           {
             id: "sp-sec2-u1-L3-Q7",
@@ -341,6 +390,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "The solar system formed from a collapsing cloud of gas and dust.",
             correctAnswer: true,
             explanation: "This cloud, called the solar nebula, provided all the raw material for the Sun, planets, and everything else in our solar system.",
+            distractorExplanations: {
+              1: 'This cloud, called the solar nebula, provided all the raw material for the Sun, planets, and everything else in our solar system.',
+            },
           },
           {
             id: "sp-sec2-u1-L4-Q2",
@@ -354,6 +406,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gravity pulled the gas and dust inward. As material gathered in the center, it grew hotter and denser.",
+            distractorExplanations: {
+              0: 'Magnetic force is incorrect; gravity pulled the gas and dust inward.',
+              2: 'Wind pressure is incorrect; gravity pulled the gas and dust inward.',
+              3: 'Heat from nearby stars is incorrect; gravity pulled the gas and dust inward.',
+            },
           },
           {
             id: "sp-sec2-u1-L4-T2",
@@ -395,6 +452,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Temperature determined what materials could clump together. Near the Sun, only rock and metal survived. Farther out, ice and gas could accumulate too.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; temperature determined what materials could clump together.',
+              2: 'Gas doesn\'t exist close to stars is incorrect; temperature determined what materials could clump together.',
+              3: 'This claim is incorrect; temperature determined what materials could clump together.',
+            },
           },
           {
             id: "sp-sec2-u1-L4-Q6",
@@ -418,6 +480,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The solar nebula flattened into a disk as it spun. Planets formed within that disk, so they all orbit in roughly the same plane.",
+            distractorExplanations: {
+              0: 'The Sun\'s gravity forces them into a plane is incorrect; the solar nebula flattened into a disk as it spun.',
+              2: 'It\'s just a coincidence is incorrect; the solar nebula flattened into a disk as it spun.',
+              3: 'This claim is incorrect; the solar nebula flattened into a disk as it spun.',
+            },
           },
         ],
       },
@@ -573,6 +640,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Mercury is the largest rocky planet.",
             correctAnswer: false,
             explanation: "Mercury is the smallest planet in the solar system. Earth is the largest of the four rocky planets.",
+            distractorExplanations: {
+              0: 'Mercury is the smallest planet in the solar system.',
+            },
           },
           {
             id: "sp-sec2-u2-L1-Q2",
@@ -586,6 +656,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without a thick atmosphere, space rocks hit Mercury's surface directly. Earth's atmosphere burns up most incoming debris before it lands.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; without a thick atmosphere, space rocks hit Mercury\'s surface directly.',
+              2: 'Volcanoes created the crater shapes is incorrect; without a thick atmosphere, space rocks hit Mercury\'s surface directly.',
+              3: 'The Sun\'s heat melted holes in the surface is incorrect; without a thick atmosphere, space rocks hit Mercury\'s surface directly.',
+            },
           },
           {
             id: "sp-sec2-u2-L1-T2",
@@ -616,6 +691,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Mercury zips around the Sun in just 88 days. It's the fastest planet because it's closest to the Sun.",
+            distractorExplanations: {
+              1: 'About 365 Earth days is incorrect; mercury zips around the Sun in just 88 days.',
+              2: 'About 30 Earth days is incorrect; mercury zips around the Sun in just 88 days.',
+              3: 'About 687 Earth days is incorrect; mercury zips around the Sun in just 88 days.',
+            },
           },
           {
             id: "sp-sec2-u2-L1-T3",
@@ -664,6 +744,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Venus is roughly the same size as Earth.",
             correctAnswer: true,
             explanation: "Venus has about 95% of Earth's diameter and 82% of its mass. It's often called Earth's twin in size.",
+            distractorExplanations: {
+              1: 'Venus has about 95% of Earth\'s diameter and 82% of its mass.',
+            },
           },
           {
             id: "sp-sec2-u2-L2-Q2",
@@ -677,6 +760,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Venus's dense carbon dioxide atmosphere creates a runaway greenhouse effect. Heat gets in but can't escape.",
+            distractorExplanations: {
+              0: 'It\'s the closest planet to the Sun is incorrect; venus\'s dense carbon dioxide atmosphere creates a runaway greenhouse effect.',
+              2: 'This is incorrect; venus\'s dense carbon dioxide atmosphere creates a runaway greenhouse effect.',
+              3: 'The planet has no rotation is incorrect; venus\'s dense carbon dioxide atmosphere creates a runaway greenhouse effect.',
+            },
           },
           {
             id: "sp-sec2-u2-L2-T2",
@@ -696,6 +784,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Venus rotates clockwise (retrograde), while most planets spin counterclockwise. On Venus, the Sun would rise in the west.",
+            distractorExplanations: {
+              1: 'Reverse orbit is incorrect; venus rotates clockwise (retrograde), while most planets spin counterclockwise.',
+              2: 'Counter-spin is incorrect; venus rotates clockwise (retrograde), while most planets spin counterclockwise.',
+              3: 'Backward gravity is incorrect; venus rotates clockwise (retrograde), while most planets spin counterclockwise.',
+            },
           },
           {
             id: "sp-sec2-u2-L2-Q4",
@@ -733,6 +826,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Despite being Earth's size twin, Venus's conditions are the most hostile of any planet. The greenhouse effect makes it far worse than you'd expect.",
+            distractorExplanations: {
+              0: 'This is incorrect; despite being Earth\'s size twin, Venus\'s conditions are the most hostile of any planet.',
+              2: 'This reasoning is wrong because despite being Earth\'s size twin, Venus\'s conditions are the most hostile of any planet.',
+              3: 'This is incorrect; despite being Earth\'s size twin, Venus\'s conditions are the most hostile of any planet.',
+            },
           },
         ],
       },
@@ -765,6 +863,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Mercury is hotter than Venus because it's closer to the Sun.",
             correctAnswer: false,
             explanation: "Venus is actually hotter. Its thick atmosphere traps heat so effectively that Venus reaches 465 degrees, while Mercury tops out at 430 degrees.",
+            distractorExplanations: {
+              0: 'Venus is actually hotter.',
+            },
           },
           {
             id: "sp-sec2-u2-L3-T2",
@@ -785,6 +886,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mercury swings from 430 degrees on its dayside to minus 180 on its nightside. Without an atmosphere, heat escapes immediately into space.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because mercury swings from 430 degrees on its dayside to minus 180 on its nightside.',
+              2: 'This reasoning is wrong because mercury swings from 430 degrees on its dayside to minus 180 on its nightside.',
+              3: 'This reasoning is wrong because mercury swings from 430 degrees on its dayside to minus 180 on its nightside.',
+            },
           },
           {
             id: "sp-sec2-u2-L3-Q4",
@@ -815,6 +921,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Mercury and Venus are the only two planets with no moons at all. All other planets have at least one.",
+            distractorExplanations: {
+              1: 'An orbit around the Sun is incorrect; mercury and Venus are the only two planets with no moons at all.',
+              2: 'A solid surface is incorrect; mercury and Venus are the only two planets with no moons at all.',
+              3: 'Gravity is incorrect; mercury and Venus are the only two planets with no moons at all.',
+            },
           },
           {
             id: "sp-sec2-u2-L3-T3",
@@ -835,6 +946,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mercury receives more solar energy per square meter than Venus. With a thick greenhouse atmosphere, it would likely trap even more heat than Venus does.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because mercury receives more solar energy per square meter than Venus.',
+              2: 'This answer is wrong; mercury receives more solar energy per square meter than Venus.',
+              3: 'This claim is incorrect; mercury receives more solar energy per square meter than Venus.',
+            },
           },
         ],
       },
@@ -859,6 +975,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "The planet closest to the Sun is always the hottest.",
             correctAnswer: false,
             explanation: "Venus proves this wrong. Its greenhouse atmosphere makes it hotter than Mercury, even though Mercury is closer to the Sun.",
+            distractorExplanations: {
+              0: 'Venus proves this wrong.',
+            },
           },
           {
             id: "sp-sec2-u2-L4-Q2",
@@ -872,6 +991,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Sunlight warms the surface. The surface radiates infrared heat, but CO2 in the atmosphere absorbs it and sends it back. Heat builds up over time.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; sunlight warms the surface.',
+              2: 'This is incorrect; sunlight warms the surface.',
+              3: 'This claim is incorrect; sunlight warms the surface.',
+            },
           },
           {
             id: "sp-sec2-u2-L4-T2",
@@ -899,6 +1023,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Venus's atmosphere is 96% carbon dioxide. Earth's is only 0.04% CO2, which is why our greenhouse effect is much milder.",
+            distractorExplanations: {
+              0: 'Nitrogen is incorrect; venus\'s atmosphere is 96% carbon dioxide.',
+              1: 'Oxygen is incorrect; venus\'s atmosphere is 96% carbon dioxide.',
+              3: 'Methane is incorrect; venus\'s atmosphere is 96% carbon dioxide.',
+            },
           },
           {
             id: "sp-sec2-u2-L4-T3",
@@ -928,6 +1057,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Distance from the Sun matters, but atmosphere matters more. Venus's extreme greenhouse effect overrides its greater distance.",
+            distractorExplanations: {
+              0: 'This is incorrect; distance from the Sun matters, but atmosphere matters more.',
+              1: 'The Sun actually heats all planets equally is incorrect; distance from the Sun matters, but atmosphere matters more.',
+              3: 'This is incorrect; distance from the Sun matters, but atmosphere matters more.',
+            },
           },
           {
             id: "sp-sec2-u2-L4-Q7",
@@ -1077,6 +1211,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Earth is the only planet in our solar system with liquid water on its surface.",
             correctAnswer: true,
             explanation: "While other bodies may have underground water or ice, Earth is the only planet with stable liquid water on its surface.",
+            distractorExplanations: {
+              1: 'While other bodies may have underground water or ice, Earth is the only planet with stable liquid water on its surface.',
+            },
           },
           {
             id: "sp-sec2-u3-L1-Q2",
@@ -1090,6 +1227,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The habitable zone (or Goldilocks zone) is the range of distances from a star where a planet's surface could support liquid water.",
+            distractorExplanations: {
+              1: 'The area with the most asteroids is incorrect; the habitable zone (or Goldilocks zone) is the range of distances from a star where a planet\'s surface could.',
+              2: 'The zone closest to the Sun is incorrect; the habitable zone (or Goldilocks zone) is the range of distances from a star where a planet\'s surface could.',
+              3: 'The ring around Saturn is incorrect; the habitable zone (or Goldilocks zone) is the range of distances from a star where a planet\'s surface could.',
+            },
           },
           {
             id: "sp-sec2-u3-L1-T2",
@@ -1143,6 +1285,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Nitrogen makes up about 78% of Earth's atmosphere. Oxygen is about 21%. Carbon dioxide is less than 0.1%.",
+            distractorExplanations: {
+              0: 'Oxygen is incorrect; nitrogen makes up about 78% of Earth\'s atmosphere.',
+              1: 'Carbon dioxide is incorrect; nitrogen makes up about 78% of Earth\'s atmosphere.',
+              3: 'Hydrogen is incorrect; nitrogen makes up about 78% of Earth\'s atmosphere.',
+            },
           },
           {
             id: "sp-sec2-u3-L1-Q7",
@@ -1157,6 +1304,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Liquid water is the most important ingredient for life as we know it. The habitable zone determines whether liquid water can exist on the surface.",
+            distractorExplanations: {
+              0: 'Whether the planet has rings is incorrect; liquid water is the most important ingredient for life as we know it.',
+              2: 'This is incorrect; liquid water is the most important ingredient for life as we know it.',
+              3: 'Whether it has the most moons is incorrect; liquid water is the most important ingredient for life as we know it.',
+            },
           },
         ],
       },
@@ -1182,6 +1334,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Mars appears red because of iron oxide in its soil.",
             correctAnswer: true,
             explanation: "Iron-rich minerals on Mars's surface have oxidized (rusted), giving the planet its distinctive red-orange color.",
+            distractorExplanations: {
+              1: 'Iron-rich minerals on Mars\'s surface have oxidized (rusted), giving the planet its distinctive red-orange color.',
+            },
           },
           {
             id: "sp-sec2-u3-L2-Q2",
@@ -1195,6 +1350,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mars has about 53% of Earth's diameter and only 11% of Earth's mass. It's a much smaller world.",
+            distractorExplanations: {
+              0: 'Mars is about the same size as Earth is incorrect; mars has about 53% of Earth\'s diameter and only 11% of Earth\'s mass.',
+              2: 'Mars is twice as big as Earth is incorrect; mars has about 53% of Earth\'s diameter and only 11% of Earth\'s mass.',
+              3: 'Mars is ten times smaller than Earth is incorrect; mars has about 53% of Earth\'s diameter and only 11% of Earth\'s mass.',
+            },
           },
           {
             id: "sp-sec2-u3-L2-T2",
@@ -1222,6 +1382,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Mars takes about 687 Earth days to orbit the Sun. That's nearly two Earth years.",
+            distractorExplanations: {
+              0: 'About 225 Earth days is incorrect; mars takes about 687 Earth days to orbit the Sun.',
+              1: 'About 365 Earth days is incorrect; mars takes about 687 Earth days to orbit the Sun.',
+              3: 'About 88 Earth days is incorrect; mars takes about 687 Earth days to orbit the Sun.',
+            },
           },
           {
             id: "sp-sec2-u3-L2-T3",
@@ -1270,6 +1435,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "There is strong evidence that liquid water once flowed on Mars.",
             correctAnswer: true,
             explanation: "Orbital images show ancient riverbeds and lake basins. Rovers have found minerals like hematite that form in water.",
+            distractorExplanations: {
+              1: 'Orbital images show ancient riverbeds and lake basins.',
+            },
           },
           {
             id: "sp-sec2-u3-L3-Q2",
@@ -1283,6 +1451,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "When Mars lost its magnetic field, solar wind stripped away its atmosphere. Without atmospheric pressure, liquid water couldn't survive on the surface.",
+            distractorExplanations: {
+              1: 'It was absorbed by the Sun is incorrect; when Mars lost its magnetic field, solar wind stripped away its atmosphere.',
+              2: 'It never existed in the first place is incorrect; when Mars lost its magnetic field, solar wind stripped away its atmosphere.',
+              3: 'Asteroids carried it all away is incorrect; when Mars lost its magnetic field, solar wind stripped away its atmosphere.',
+            },
           },
           {
             id: "sp-sec2-u3-L3-T2",
@@ -1310,6 +1483,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mars's atmosphere is less than 1% as thick as Earth's. At such low pressure, water either freezes or evaporates. It can't stay liquid.",
+            distractorExplanations: {
+              0: 'This is incorrect; mars\'s atmosphere is less than 1% as thick as Earth\'s.',
+              2: 'Mars\'s gravity is too strong is incorrect; mars\'s atmosphere is less than 1% as thick as Earth\'s.',
+              3: 'The soil absorbs all moisture instantly is incorrect; mars\'s atmosphere is less than 1% as thick as Earth\'s.',
+            },
           },
           {
             id: "sp-sec2-u3-L3-T3",
@@ -1347,6 +1525,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mars still has significant water, but it's frozen as polar ice caps and underground ice. Liquid water can't survive on the surface due to low atmospheric pressure.",
+            distractorExplanations: {
+              0: 'This is incorrect; mars still has significant water, but it\'s frozen as polar ice caps and underground ice.',
+              2: 'This is incorrect; mars still has significant water, but it\'s frozen as polar ice caps and underground ice.',
+              3: 'Water can\'t exist that far from the Sun is incorrect; mars still has significant water, but it\'s frozen as polar ice caps and underground ice.',
+            },
           },
         ],
       },
@@ -1371,6 +1554,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Humans have already walked on Mars.",
             correctAnswer: false,
             explanation: "No human has visited Mars yet. Only robotic spacecraft, orbiters, and rovers have explored it so far.",
+            distractorExplanations: {
+              0: 'No human has visited Mars yet.',
+            },
           },
           {
             id: "sp-sec2-u3-L4-Q2",
@@ -1384,6 +1570,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Perseverance landed in 2021 to search for signs of ancient life, collect rock samples, and test technology for future human missions.",
+            distractorExplanations: {
+              1: 'To plant trees on Mars is incorrect; perseverance landed in 2021 to search for signs of ancient life, collect rock samples, and test technology for.',
+              2: 'To build a human base is incorrect; perseverance landed in 2021 to search for signs of ancient life, collect rock samples, and test technology for.',
+              3: 'To collect diamonds from the surface is incorrect; perseverance landed in 2021 to search for signs of ancient life, collect rock samples, and test.',
+            },
           },
           {
             id: "sp-sec2-u3-L4-T2",
@@ -1445,6 +1636,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mars's atmosphere is too thin for parachutes alone to work well, but too thick to ignore. Engineers call the landing sequence 'seven minutes of terror.'",
+            distractorExplanations: {
+              0: 'Mars has too much gravity for spacecraft is incorrect; mars\'s atmosphere is too thin for parachutes alone to work well, but too thick to ignore.',
+              2: 'Mars\'s surface is entirely liquid is incorrect; mars\'s atmosphere is too thin for parachutes alone to work well, but too thick to ignore.',
+              3: 'The journey is too short to prepare is incorrect; mars\'s atmosphere is too thin for parachutes alone to work well, but too thick to ignore.',
+            },
           },
           {
             id: "sp-sec2-u3-L4-Q8",
@@ -1459,6 +1655,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Earth laboratories have far more powerful instruments than any rover. Bringing Mars samples home would let scientists study them in extraordinary detail.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because earth laboratories have far more powerful instruments than any rover.',
+              2: 'This is incorrect; earth laboratories have far more powerful instruments than any rover.',
+              3: 'This is incorrect; earth laboratories have far more powerful instruments than any rover.',
+            },
           },
         ],
       },
@@ -1635,6 +1836,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Venus has by far the thickest atmosphere. Its surface pressure is 90 times greater than Earth's.",
+            distractorExplanations: {
+              0: 'Mercury is incorrect; venus has by far the thickest atmosphere.',
+              2: 'Earth is incorrect; venus has by far the thickest atmosphere.',
+              3: 'Mars is incorrect; venus has by far the thickest atmosphere.',
+            },
           },
           {
             id: "sp-sec2-u4-L1-Q4",
@@ -1642,6 +1848,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Mars is larger than Earth.",
             correctAnswer: false,
             explanation: "Mars is about half the diameter of Earth. Earth is the largest of the four rocky planets.",
+            distractorExplanations: {
+              0: 'Mars is about half the diameter of Earth.',
+            },
           },
           {
             id: "sp-sec2-u4-L1-Q5",
@@ -1672,6 +1881,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Earth's magnetic field deflects charged particles, and the atmosphere (especially the ozone layer) blocks ultraviolet radiation.",
+            distractorExplanations: {
+              0: 'Its distance from the Sun is incorrect; earth\'s magnetic field deflects charged particles, and the atmosphere (especially the ozone layer) blocks.',
+              1: 'Its large size is incorrect; earth\'s magnetic field deflects charged particles, and the atmosphere (especially the ozone layer) blocks ultraviolet radiation.',
+              3: 'Its rotation speed is incorrect; earth\'s magnetic field deflects charged particles, and the atmosphere (especially the ozone layer) blocks ultraviolet.',
+            },
           },
           {
             id: "sp-sec2-u4-L1-Q8",
@@ -1711,6 +1925,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Venus has retrograde rotation, 90x Earth's surface pressure, and sulfuric acid clouds. The Soviet Venera probes lasted less than 2 hours on its surface.",
+            distractorExplanations: {
+              0: 'Mercury is incorrect; venus has retrograde rotation, 90x Earth\'s surface pressure, and sulfuric acid clouds.',
+              1: 'Mars is incorrect; venus has retrograde rotation, 90x Earth\'s surface pressure, and sulfuric acid clouds.',
+              3: 'Earth is incorrect; venus has retrograde rotation, 90x Earth\'s surface pressure, and sulfuric acid clouds.',
+            },
           },
           {
             id: "sp-sec2-u4-L2-Q2",
@@ -1725,6 +1944,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This matches Mars's story. Ancient riverbeds suggest a thicker past atmosphere that supported liquid water before being stripped away.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; this matches Mars\'s story.',
+              2: 'This is incorrect; this matches Mars\'s story.',
+              3: 'This is incorrect; this matches Mars\'s story.',
+            },
           },
           {
             id: "sp-sec2-u4-L2-Q3",
@@ -1739,6 +1963,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Venus at 465 degrees Celsius is hotter than Mercury at 430 degrees. The greenhouse effect trumps proximity to the Sun.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because venus at 465 degrees Celsius is hotter than Mercury at 430 degrees.',
+              2: 'This reasoning is wrong because venus at 465 degrees Celsius is hotter than Mercury at 430 degrees.',
+              3: 'This is incorrect; venus at 465 degrees Celsius is hotter than Mercury at 430 degrees.',
+            },
           },
           {
             id: "sp-sec2-u4-L2-Q4",
@@ -1753,6 +1982,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Mars lacks a global magnetic field and has an extremely thin atmosphere. Colonists would be exposed to dangerous levels of cosmic and solar radiation.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because mars lacks a global magnetic field and has an extremely thin atmosphere.',
+              1: 'This reasoning is wrong because mars lacks a global magnetic field and has an extremely thin atmosphere.',
+              3: 'This reasoning is wrong because mars lacks a global magnetic field and has an extremely thin atmosphere.',
+            },
           },
           {
             id: "sp-sec2-u4-L2-Q5",
@@ -1766,6 +2000,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mercury would receive less solar energy and cool further. Venus would receive more energy, and its greenhouse atmosphere would trap even more heat.",
+            distractorExplanations: {
+              0: 'Nothing would change is incorrect; mercury would receive less solar energy and cool further.',
+              2: 'Both planets would become identical is incorrect; mercury would receive less solar energy and cool further.',
+              3: 'Mercury would develop a thick atmosphere is incorrect; mercury would receive less solar energy and cool further.',
+            },
           },
           {
             id: "sp-sec2-u4-L2-Q6",
@@ -1780,6 +2019,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Mars has conditions that spacecraft and rovers can survive. Venus's 465-degree surface, crushing pressure, and acid clouds destroy equipment within hours.",
+            distractorExplanations: {
+              1: 'We\'ve already explored Venus completely is incorrect; mars has conditions that spacecraft and rovers can survive.',
+              2: 'Mars is closer to Earth than Venus is incorrect; mars has conditions that spacecraft and rovers can survive.',
+              3: 'This reasoning is wrong because mars has conditions that spacecraft and rovers can survive.',
+            },
           },
           {
             id: "sp-sec2-u4-L2-Q7",
@@ -1796,6 +2040,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Earth is the only inner planet with a natural satellite.",
             correctAnswer: false,
             explanation: "Both Earth and Mars have moons. Earth has one (the Moon), and Mars has two (Phobos and Deimos). Mercury and Venus have none.",
+            distractorExplanations: {
+              0: 'Both Earth and Mars have moons.',
+            },
           },
         ],
       },
@@ -1937,6 +2184,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Jupiter has more mass than all other planets in the solar system combined.",
             correctAnswer: true,
             explanation: "Jupiter's mass is about 2.5 times the combined mass of every other planet. It dominates the outer solar system.",
+            distractorExplanations: {
+              1: 'Jupiter\'s mass is about 2.5 times the combined mass of every other planet.',
+            },
           },
           {
             id: "sp-sec2-u5-L1-Q2",
@@ -1950,6 +2200,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jupiter is a gas giant composed primarily of hydrogen and helium, similar to the Sun's composition but without nuclear fusion.",
+            distractorExplanations: {
+              0: 'Rock and iron is incorrect; jupiter is a gas giant composed primarily of hydrogen and helium, similar to the Sun\'s composition but without nuclear fusion.',
+              2: 'Water and ice is incorrect; jupiter is a gas giant composed primarily of hydrogen and helium, similar to the Sun\'s composition but without nuclear fusion.',
+              3: 'Carbon dioxide is incorrect; jupiter is a gas giant composed primarily of hydrogen and helium, similar to the Sun\'s composition but without nuclear fusion.',
+            },
           },
           {
             id: "sp-sec2-u5-L1-T2",
@@ -1977,6 +2232,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Jupiter completes one rotation in about 10 hours despite being 11 times wider than Earth. This fast spin creates its visible bands.",
+            distractorExplanations: {
+              1: 'About 24 hours is incorrect; jupiter completes one rotation in about 10 hours despite being 11 times wider than Earth.',
+              2: 'About 3 days is incorrect; jupiter completes one rotation in about 10 hours despite being 11 times wider than Earth.',
+              3: 'About 1 hour is incorrect; jupiter completes one rotation in about 10 hours despite being 11 times wider than Earth.',
+            },
           },
           {
             id: "sp-sec2-u5-L1-T3",
@@ -2017,6 +2277,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jupiter has no solid surface. A spacecraft would descend through layers of increasingly dense and hot gas until it was crushed by pressure.",
+            distractorExplanations: {
+              0: 'The surface is too rocky and mountainous is incorrect; jupiter has no solid surface.',
+              2: 'Jupiter\'s rings would block the approach is incorrect; jupiter has no solid surface.',
+              3: 'The moons would interfere with navigation is incorrect; jupiter has no solid surface.',
+            },
           },
         ],
       },
@@ -2042,6 +2307,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Saturn's rings are made of solid sheets of rock.",
             correctAnswer: false,
             explanation: "The rings are made of billions of separate pieces of ice and rock, orbiting Saturn independently. They look solid from a distance.",
+            distractorExplanations: {
+              0: 'The rings are made of billions of separate pieces of ice and rock, orbiting Saturn independently.',
+            },
           },
           {
             id: "sp-sec2-u5-L2-Q2",
@@ -2055,6 +2323,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Saturn's rings are mostly water ice with some rocky dust mixed in. The particles range from grains of sand to chunks the size of houses.",
+            distractorExplanations: {
+              0: 'Liquid metal is incorrect; saturn\'s rings are mostly water ice with some rocky dust mixed in.',
+              1: 'Gas clouds is incorrect; saturn\'s rings are mostly water ice with some rocky dust mixed in.',
+              3: 'Volcanic ash is incorrect; saturn\'s rings are mostly water ice with some rocky dust mixed in.',
+            },
           },
           {
             id: "sp-sec2-u5-L2-T2",
@@ -2074,6 +2347,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Saturn is the second-largest planet. It's still enormous at 9.5 times Earth's width, but Jupiter is about 20% wider.",
+            distractorExplanations: {
+              0: 'Saturn is larger than Jupiter is incorrect; saturn is the second-largest planet.',
+              2: 'They are exactly the same size is incorrect; saturn is the second-largest planet.',
+              3: 'Saturn is smaller than Earth is incorrect; saturn is the second-largest planet.',
+            },
           },
           {
             id: "sp-sec2-u5-L2-Q4",
@@ -2095,6 +2373,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Saturn's density is lower than water.",
             correctAnswer: true,
             explanation: "Saturn's average density is about 0.69 g/cm cubed, less than water's 1.0 g/cm cubed. No other planet has such low density.",
+            distractorExplanations: {
+              1: 'Saturn\'s average density is about 0.69 g/cm cubed, less than water\'s 1.0 g/cm cubed.',
+            },
           },
           {
             id: "sp-sec2-u5-L2-Q6",
@@ -2137,6 +2418,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Jupiter's moon Ganymede is the largest moon in the solar system.",
             correctAnswer: true,
             explanation: "Ganymede is even bigger than the planet Mercury. It's one of Jupiter's four Galilean moons, discovered by Galileo in 1610.",
+            distractorExplanations: {
+              1: 'Ganymede is even bigger than the planet Mercury.',
+            },
           },
           {
             id: "sp-sec2-u5-L3-Q2",
@@ -2150,6 +2434,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Europa's icy surface likely covers a vast saltwater ocean. Where there's liquid water, there might be conditions for life.",
+            distractorExplanations: {
+              0: 'It has a thick atmosphere like Earth is incorrect; europa\'s icy surface likely covers a vast saltwater ocean.',
+              2: 'This is incorrect; europa\'s icy surface likely covers a vast saltwater ocean.',
+              3: 'It has plant life visible from orbit is incorrect; europa\'s icy surface likely covers a vast saltwater ocean.',
+            },
           },
           {
             id: "sp-sec2-u5-L3-T2",
@@ -2186,6 +2475,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Enceladus has geysers that spray water ice into space through cracks near its south pole. This suggests a subsurface ocean.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; enceladus has geysers that spray water ice into space through cracks near its south pole.',
+              2: 'This is incorrect; enceladus has geysers that spray water ice into space through cracks near its south pole.',
+              3: 'It has active lava flows is incorrect; enceladus has geysers that spray water ice into space through cracks near its south pole.',
+            },
           },
           {
             id: "sp-sec2-u5-L3-T3",
@@ -2215,6 +2509,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Europa's subsurface ocean is considered one of the best places to search for life. Titan has liquid, but it's methane, not water.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because europa\'s subsurface ocean is considered one of the best places to search for life.',
+              1: 'This reasoning is wrong because europa\'s subsurface ocean is considered one of the best places to search for life.',
+              3: 'This reasoning is wrong because europa\'s subsurface ocean is considered one of the best places to search for life.',
+            },
           },
         ],
       },
@@ -2239,6 +2538,9 @@ export const spaceSection2Part1: Unit[] = [
             question: "Jupiter's Great Red Spot is a temporary storm that formed recently.",
             correctAnswer: false,
             explanation: "The Great Red Spot has been observed for at least 350 years. It's one of the longest-lasting storms known anywhere.",
+            distractorExplanations: {
+              0: 'The Great Red Spot has been observed for at least 350 years.',
+            },
           },
           {
             id: "sp-sec2-u5-L4-Q2",
@@ -2252,6 +2554,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jupiter's rapid 10-hour rotation stretches its clouds into parallel bands. Different bands have different compositions and colors.",
+            distractorExplanations: {
+              0: 'Shadows from its moons is incorrect; jupiter\'s rapid 10-hour rotation stretches its clouds into parallel bands.',
+              2: 'Rings casting shadows on the surface is incorrect; jupiter\'s rapid 10-hour rotation stretches its clouds into parallel bands.',
+              3: 'Paint-like minerals in the atmosphere is incorrect; jupiter\'s rapid 10-hour rotation stretches its clouds into parallel bands.',
+            },
           },
           {
             id: "sp-sec2-u5-L4-T2",
@@ -2279,6 +2586,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gas giants have enormous atmospheres, spin very fast, and generate their own internal heat. All three factors drive extreme weather.",
+            distractorExplanations: {
+              0: 'They\'re closer to the Sun is incorrect; gas giants have enormous atmospheres, spin very fast, and generate their own internal heat.',
+              2: 'Their moons create tidal storms is incorrect; gas giants have enormous atmospheres, spin very fast, and generate their own internal heat.',
+              3: 'Their rings channel wind into storms is incorrect; gas giants have enormous atmospheres, spin very fast, and generate their own internal heat.',
+            },
           },
           {
             id: "sp-sec2-u5-L4-T3",
@@ -2317,6 +2629,11 @@ export const spaceSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Great Red Spot is storm-like but far larger and longer-lived than any Earth hurricane. It's been shrinking slowly but has persisted for centuries.",
+            distractorExplanations: {
+              0: 'This answer is wrong; the Great Red Spot is storm-like but far larger and longer-lived than any Earth hurricane.',
+              1: 'This answer is wrong; the Great Red Spot is storm-like but far larger and longer-lived than any Earth hurricane.',
+              3: 'This is incorrect; the Great Red Spot is storm-like but far larger and longer-lived than any Earth hurricane.',
+            },
           },
           {
             id: "sp-sec2-u5-L4-Q8",

@@ -51,9 +51,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Most psychologists agree intelligence involves learning, adapting to new situations, and problem solving.',
             distractorExplanations: {
-              1: 'This is too narrow; most psychologists agree intelligence involves learning, adapting to new situations, and problem solving.',
-              2: 'Physical strength and reaction time is not correct here; most psychologists agree intelligence involves learning, adapting to new situations, and.',
-              3: 'Memorizing facts without understanding them is not correct here; most psychologists agree intelligence involves learning, adapting to new.',
+              1: 'Most psychologists agree intelligence involves learning, adapting to new situations, and problem solving.',
+              2: 'Most psychologists agree intelligence involves learning, adapting to new situations, and problem solving.',
+              3: 'Most psychologists agree intelligence involves learning, adapting to new situations, and problem solving.',
             },
           },
           {
@@ -84,7 +84,7 @@ export const psySection5Part1: Unit[] = [
             explanation: 'Spearman noticed positive correlations across different mental tests, suggesting one general factor underlies performance.',
             distractorExplanations: {
               0: 'This is too absolute; spearman noticed positive correlations across different mental tests, suggesting one general factor underlies performance.',
-              1: 'Brain size correlated perfectly with intelligence is not correct here; spearman noticed positive correlations across different mental tests,.',
+              1: 'Spearman noticed positive correlations across different mental tests, suggesting one general factor underlies performance.',
               2: 'This is too absolute; spearman noticed positive correlations across different mental tests, suggesting one general factor underlies performance.',
             },
           },
@@ -125,9 +125,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'Uneven performance across domains supports the idea of multiple distinct abilities rather than one general factor.',
             distractorExplanations: {
-              0: 'Spearman\'s "g" fully explains it is not correct here; uneven performance across domains supports the idea of multiple distinct abilities rather.',
-              1: 'The student has no intelligence at all is not correct here; uneven performance across domains supports the idea of multiple distinct abilities.',
-              2: 'The tests must be poorly designed is not correct here; uneven performance across domains supports the idea of multiple distinct abilities rather.',
+              0: 'Uneven performance across domains supports the idea of multiple distinct abilities rather than one general factor.',
+              1: 'Uneven performance across domains supports the idea of multiple distinct abilities rather than one general factor.',
+              2: 'Uneven performance across domains supports the idea of multiple distinct abilities rather than one general factor.',
             },
           },
         ],
@@ -186,8 +186,8 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'Fluid intelligence peaks early and declines, while crystallized intelligence continues to increase with experience.',
             distractorExplanations: {
-              0: 'Both types decline sharply after age 30 is not correct here; fluid intelligence peaks early and declines, while crystallized intelligence.',
-              1: 'Neither type changes with age is not correct here; fluid intelligence peaks early and declines, while crystallized intelligence continues to.',
+              0: 'Fluid intelligence peaks early and declines, while crystallized intelligence continues to increase with experience.',
+              1: 'Fluid intelligence peaks early and declines, while crystallized intelligence continues to increase with experience.',
               2: 'This is not accurate; fluid intelligence peaks early and declines, while crystallized intelligence continues to increase with experience.',
             },
           },
@@ -220,9 +220,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Solving a novel problem through reasoning without relying on stored knowledge is primarily fluid intelligence.',
             distractorExplanations: {
-              0: 'Crystallized intelligence is not correct here; solving a novel problem through reasoning without relying on stored knowledge is primarily fluid.',
-              2: 'Neither type is involved is not correct here; solving a novel problem through reasoning without relying on stored knowledge is primarily fluid.',
-              3: 'Both equally, with no distinction possible is not correct here; solving a novel problem through reasoning without relying on stored knowledge is.',
+              0: 'Solving a novel problem through reasoning without relying on stored knowledge is primarily fluid intelligence.',
+              2: 'Solving a novel problem through reasoning without relying on stored knowledge is primarily fluid intelligence.',
+              3: 'Solving a novel problem through reasoning without relying on stored knowledge is primarily fluid intelligence.',
             },
           },
           {
@@ -283,7 +283,7 @@ export const psySection5Part1: Unit[] = [
             explanation: 'Heritability refers to how much of the variation in a trait across a population is due to genetic differences. It does not predict individual scores.',
             distractorExplanations: {
               1: 'This is not accurate; heritability refers to how much of the variation in a trait across a population is due to genetic differences.',
-              2: 'You can only improve your IQ by 40% is not correct here; heritability refers to how much of the variation in a trait across a population is due.',
+              2: 'This is too narrow; heritability refers to how much of the variation in a trait across a population is due to genetic differences.',
               3: 'There is a real effect here; heritability refers to how much of the variation in a trait across a population is due to genetic differences.',
             },
           },
@@ -314,9 +314,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Genes don\'t change fast enough to account for such rapid score increases. Environmental improvements are the most likely explanation.',
             distractorExplanations: {
-              1: 'People have been cheating on tests more over time is not correct here; genes don\'t change fast enough to account for such rapid score increases.',
-              2: 'Genes mutate rapidly enough to explain rising scores is not correct here; genes don\'t change fast enough to account for such rapid score.',
-              3: 'IQ tests have become easier each generation is not correct here; genes don\'t change fast enough to account for such rapid score increases.',
+              1: 'Genes don\'t change fast enough to account for such rapid score increases.',
+              2: 'Genes don\'t change fast enough to account for such rapid score increases.',
+              3: 'Genes don\'t change fast enough to account for such rapid score increases.',
             },
           },
           {
@@ -339,8 +339,8 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'When environmental needs are met equally, genetic differences become the main source of variation. Poverty introduces environmental constraints that suppress potential.',
             distractorExplanations: {
-              0: 'Wealthy people have better genes for intelligence is not correct here; when environmental needs are met equally, genetic differences become the.',
-              1: 'IQ tests are biased toward wealthy families is not correct here; when environmental needs are met equally, genetic differences become the main.',
+              0: 'When environmental needs are met equally, genetic differences become the main source of variation.',
+              1: 'When environmental needs are met equally, genetic differences become the main source of variation.',
               2: 'This is not accurate; when environmental needs are met equally, genetic differences become the main source of variation.',
             },
           },
@@ -401,9 +401,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'The variation within any group far exceeds the variation between groups. Averages cannot predict where any one person falls.',
             distractorExplanations: {
-              0: 'IQ tests only work for individuals, not groups is not correct here; the variation within any group far exceeds the variation between groups.',
+              0: 'This is too narrow; the variation within any group far exceeds the variation between groups. Averages cannot predict where any one person falls.',
               1: 'This is too absolute; the variation within any group far exceeds the variation between groups. Averages cannot predict where any one person falls.',
-              2: 'Individual IQ cannot be measured accurately is not correct here; the variation within any group far exceeds the variation between groups.',
+              2: 'The variation within any group far exceeds the variation between groups. Averages cannot predict where any one person falls.',
             },
           },
           {
@@ -434,9 +434,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Reminding someone of a negative stereotype about their group before a test can impair their performance through stereotype threat.',
             distractorExplanations: {
-              0: 'The placebo effect is not correct here; reminding someone of a negative stereotype about their group before a test can impair their performance.',
-              2: 'Classical conditioning is not correct here; reminding someone of a negative stereotype about their group before a test can impair their.',
-              3: 'The Flynn effect is not correct here; reminding someone of a negative stereotype about their group before a test can impair their performance.',
+              0: 'Reminding someone of a negative stereotype about their group before a test can impair their performance through stereotype threat.',
+              2: 'Reminding someone of a negative stereotype about their group before a test can impair their performance through stereotype threat.',
+              3: 'Reminding someone of a negative stereotype about their group before a test can impair their performance through stereotype threat.',
             },
           },
           {
@@ -459,9 +459,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Culture-fair tests use abstract patterns and non-verbal tasks to reduce the influence of specific cultural knowledge.',
             distractorExplanations: {
-              1: 'Test only people from one culture is not correct here; culture-fair tests use abstract patterns and non-verbal tasks to reduce the influence of.',
-              2: 'Measure cultural awareness instead of reasoning is not correct here; culture-fair tests use abstract patterns and non-verbal tasks to reduce the.',
-              3: 'Give higher scores to underrepresented groups is not correct here; culture-fair tests use abstract patterns and non-verbal tasks to reduce the.',
+              1: 'This is too narrow; culture-fair tests use abstract patterns and non-verbal tasks to reduce the influence of specific cultural knowledge.',
+              2: 'Culture-fair tests use abstract patterns and non-verbal tasks to reduce the influence of specific cultural knowledge.',
+              3: 'Culture-fair tests use abstract patterns and non-verbal tasks to reduce the influence of specific cultural knowledge.',
             },
           },
           {
@@ -514,9 +514,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'CHC unifies Spearman\'s general factor with Cattell and Horn\'s multiple abilities into one hierarchical model.',
             distractorExplanations: {
-              0: 'It ignores both "g" and multiple abilities is not correct here; CHC unifies Spearman\'s general factor with Cattell and Horn\'s multiple abilities.',
-              2: 'It measures only crystallized intelligence is not correct here; CHC unifies Spearman\'s general factor with Cattell and Horn\'s multiple abilities.',
-              3: 'It rejects all previous research on intelligence is not correct here; CHC unifies Spearman\'s general factor with Cattell and Horn\'s multiple.',
+              0: 'CHC unifies Spearman\'s general factor with Cattell and Horn\'s multiple abilities into one hierarchical model.',
+              2: 'This is too narrow; CHC unifies Spearman\'s general factor with Cattell and Horn\'s multiple abilities into one hierarchical model.',
+              3: 'CHC unifies Spearman\'s general factor with Cattell and Horn\'s multiple abilities into one hierarchical model.',
             },
           },
           {
@@ -570,7 +570,7 @@ export const psySection5Part1: Unit[] = [
             explanation: 'A growth mindset responds to failure by adjusting strategy and increasing effort, not by giving up.',
             distractorExplanations: {
               0: 'This is not accurate; a growth mindset responds to failure by adjusting strategy and increasing effort, not by giving up.',
-              1: '"The test was unfair. I shouldn\'t have to study this." is not correct here; a growth mindset responds to failure by adjusting strategy and.',
+              1: 'A growth mindset responds to failure by adjusting strategy and increasing effort, not by giving up.',
               3: 'This is not accurate; a growth mindset responds to failure by adjusting strategy and increasing effort, not by giving up.',
             },
           },
@@ -643,9 +643,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'Alfred Binet created the first intelligence test in 1905 in France.',
             distractorExplanations: {
-              0: 'Charles Spearman is not correct here; alfred Binet created the first intelligence test in 1905 in France.',
-              1: 'Lewis Terman is not correct here; alfred Binet created the first intelligence test in 1905 in France.',
-              2: 'David Wechsler is not correct here; alfred Binet created the first intelligence test in 1905 in France.',
+              0: 'Alfred Binet created the first intelligence test in 1905 in France.',
+              1: 'Alfred Binet created the first intelligence test in 1905 in France.',
+              2: 'Alfred Binet created the first intelligence test in 1905 in France.',
             },
           },
           {
@@ -667,9 +667,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'IQ = (mental age / chronological age) x 100 = (10/8) x 100 = 125.',
             distractorExplanations: {
-              0: '80 is not correct here; IQ = (mental age / chronological age) x 100 = (10/8) x 100 = 125.',
-              1: '100 is not correct here; IQ = (mental age / chronological age) x 100 = (10/8) x 100 = 125.',
-              3: '110 is not correct here; IQ = (mental age / chronological age) x 100 = (10/8) x 100 = 125.',
+              0: 'IQ = (mental age / chronological age) x 100 = (10/8) x 100 = 125.',
+              1: 'IQ = (mental age / chronological age) x 100 = (10/8) x 100 = 125.',
+              3: 'IQ = (mental age / chronological age) x 100 = (10/8) x 100 = 125.',
             },
           },
           {
@@ -760,9 +760,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'About 68% of scores fall within one standard deviation (15 points) above and below the mean of 100.',
             distractorExplanations: {
-              0: '50% is not correct here; about 68% of scores fall within one standard deviation (15 points) above and below the mean of 100.',
-              1: '34% is not correct here; about 68% of scores fall within one standard deviation (15 points) above and below the mean of 100.',
-              2: '95% is not correct here; about 68% of scores fall within one standard deviation (15 points) above and below the mean of 100.',
+              0: 'About 68% of scores fall within one standard deviation (15 points) above and below the mean of 100.',
+              1: 'About 68% of scores fall within one standard deviation (15 points) above and below the mean of 100.',
+              2: 'About 68% of scores fall within one standard deviation (15 points) above and below the mean of 100.',
             },
           },
           {
@@ -793,9 +793,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'WAIS (Wechsler Adult Intelligence Scale) is for ages 16+, while WISC (Wechsler Intelligence Scale for Children) is for ages 6-16.',
             distractorExplanations: {
-              1: 'WAIS measures verbal skills, WISC measures math is not correct here; WAIS (Wechsler Adult Intelligence Scale) is for ages 16+, while WISC.',
-              2: 'WAIS is a group test, WISC is individual is not correct here; WAIS (Wechsler Adult Intelligence Scale) is for ages 16+, while WISC (Wechsler.',
-              3: 'WAIS uses written answers, WISC uses spoken answers is not correct here; WAIS (Wechsler Adult Intelligence Scale) is for ages 16+, while WISC.',
+              1: 'WAIS (Wechsler Adult Intelligence Scale) is for ages 16+, while WISC (Wechsler Intelligence Scale for Children) is for ages 6-16.',
+              2: 'WAIS (Wechsler Adult Intelligence Scale) is for ages 16+, while WISC (Wechsler Intelligence Scale for Children) is for ages 6-16.',
+              3: 'WAIS (Wechsler Adult Intelligence Scale) is for ages 16+, while WISC (Wechsler Intelligence Scale for Children) is for ages 6-16.',
             },
           },
           {
@@ -891,8 +891,8 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'A correlation of 0.5 means IQ explains about 25% of the variance in grades (0.5 squared = 0.25). Other factors explain the rest.',
             distractorExplanations: {
-              0: 'IQ explains 50% of grade differences is not correct here; a correlation of 0.5 means IQ explains about 25% of the variance in grades (0.',
-              2: 'Half of all students have average IQ is not correct here; a correlation of 0.5 means IQ explains about 25% of the variance in grades (0.',
+              0: 'A correlation of 0.5 means IQ explains about 25% of the variance in grades (0.5 squared = 0.25). Other factors explain the rest.',
+              2: 'A correlation of 0.5 means IQ explains about 25% of the variance in grades (0.5 squared = 0.25). Other factors explain the rest.',
               3: 'This is too absolute; a correlation of 0.5 means IQ explains about 25% of the variance in grades (0.5 squared = 0.25).',
             },
           },
@@ -932,8 +932,8 @@ export const psySection5Part1: Unit[] = [
             explanation: 'IQ is just one predictor. Motivation, persistence, social skills, and access to opportunities all influence real-world outcomes.',
             distractorExplanations: {
               0: 'This is too absolute; IQ is just one predictor. Motivation, persistence, social skills, and access to opportunities all influence real-world.',
-              2: 'Success depends on only one factor is not correct here; IQ is just one predictor.',
-              3: 'High IQ actually hinders real-world performance is not correct here; IQ is just one predictor.',
+              2: 'This is too narrow; IQ is just one predictor. Motivation, persistence, social skills, and access to opportunities all influence real-world outcomes.',
+              3: 'IQ is just one predictor. Motivation, persistence, social skills, and access to opportunities all influence real-world outcomes.',
             },
           },
           {
@@ -958,8 +958,8 @@ export const psySection5Part1: Unit[] = [
             explanation: 'Both are above the threshold (around 120). At that level, motivation and persistence become stronger predictors than additional IQ points.',
             distractorExplanations: {
               0: 'This is too absolute; both are above the threshold (around 120).',
-              2: 'IQ is irrelevant, so neither score matters at all is not correct here; both are above the threshold (around 120).',
-              3: 'Person A\'s IQ is too low for research work is not correct here; both are above the threshold (around 120).',
+              2: 'Both are above the threshold (around 120).',
+              3: 'Both are above the threshold (around 120).',
             },
           },
           {
@@ -1023,9 +1023,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'About 2.5% of the population scores more than 2 standard deviations above the mean (above 130).',
             distractorExplanations: {
-              0: '10% is not correct here; about 2.5% of the population scores more than 2 standard deviations above the mean (above 130).',
-              1: '5% is not correct here; about 2.5% of the population scores more than 2 standard deviations above the mean (above 130).',
-              3: '0.1% is not correct here; about 2.5% of the population scores more than 2 standard deviations above the mean (above 130).',
+              0: 'About 2.5% of the population scores more than 2 standard deviations above the mean (above 130).',
+              1: 'About 2.5% of the population scores more than 2 standard deviations above the mean (above 130).',
+              3: 'About 2.5% of the population scores more than 2 standard deviations above the mean (above 130).',
             },
           },
           {
@@ -1063,9 +1063,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Intellectual disability requires both significantly below-average IQ (below 70) and difficulties in daily living skills (adaptive functioning).',
             distractorExplanations: {
-              1: 'IQ below 85 and poor school grades is not correct here; intellectual disability requires both significantly below-average IQ (below 70) and.',
-              2: 'IQ below 70 and a specific genetic condition is not correct here; intellectual disability requires both significantly below-average IQ (below 70).',
-              3: 'IQ below 100 and difficulty with abstract thinking is not correct here; intellectual disability requires both significantly below-average IQ.',
+              1: 'Intellectual disability requires both significantly below-average IQ (below 70) and difficulties in daily living skills.',
+              2: 'Intellectual disability requires both significantly below-average IQ (below 70) and difficulties in daily living skills.',
+              3: 'Intellectual disability requires both significantly below-average IQ (below 70) and difficulties in daily living skills.',
             },
           },
           {
@@ -1097,9 +1097,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'Savant syndrome shows that extraordinary ability can exist in one specific domain while overall intellectual functioning is limited.',
             distractorExplanations: {
-              0: 'His IQ score must be wrong is not correct here; savant syndrome shows that extraordinary ability can exist in one specific domain while overall.',
-              1: 'Drawing is not a real cognitive ability is not correct here; savant syndrome shows that extraordinary ability can exist in one specific domain.',
-              2: 'His adaptive functioning must be normal is not correct here; savant syndrome shows that extraordinary ability can exist in one specific domain.',
+              0: 'Savant syndrome shows that extraordinary ability can exist in one specific domain while overall intellectual functioning is.',
+              1: 'Savant syndrome shows that extraordinary ability can exist in one specific domain while overall intellectual functioning is.',
+              2: 'Savant syndrome shows that extraordinary ability can exist in one specific domain while overall intellectual functioning is.',
             },
           },
         ],
@@ -1143,9 +1143,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'IQ tests are reliable and predict some outcomes, but they emphasize analytical reasoning while missing other important abilities.',
             distractorExplanations: {
-              1: 'They don\'t predict any real-world outcomes is not correct here; IQ tests are reliable and predict some outcomes, but they emphasize analytical.',
-              2: 'They are completely unreliable and give random scores is not correct here; IQ tests are reliable and predict some outcomes, but they emphasize.',
-              3: 'They are too easy for most people to complete is not correct here; IQ tests are reliable and predict some outcomes, but they emphasize analytical.',
+              1: 'IQ tests are reliable and predict some outcomes, but they emphasize analytical reasoning while missing other important abilities.',
+              2: 'IQ tests are reliable and predict some outcomes, but they emphasize analytical reasoning while missing other important abilities.',
+              3: 'IQ tests are reliable and predict some outcomes, but they emphasize analytical reasoning while missing other important abilities.',
             },
           },
           {
@@ -1208,8 +1208,8 @@ export const psySection5Part1: Unit[] = [
             explanation: 'Dynamic testing reveals learning potential by measuring improvement with support, which is fairer for students with limited academic exposure.',
             distractorExplanations: {
               1: 'This is too absolute; dynamic testing reveals learning potential by measuring improvement with support, which is fairer for students with limited.',
-              2: 'Give a harder IQ test with more time is not correct here; dynamic testing reveals learning potential by measuring improvement with support, which.',
-              3: 'Lower the IQ cutoff score for disadvantaged students is not correct here; dynamic testing reveals learning potential by measuring improvement.',
+              2: 'Dynamic testing reveals learning potential by measuring improvement with support, which is fairer for students with limited.',
+              3: 'Dynamic testing reveals learning potential by measuring improvement with support, which is fairer for students with limited.',
             },
           },
         ],
@@ -1267,9 +1267,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Gardner originally proposed 7, later added naturalistic, and has considered others. The core theory includes at least 8.',
             distractorExplanations: {
-              0: '3 is not correct here; gardner originally proposed 7, later added naturalistic, and has considered others. The core theory includes at least 8.',
-              1: '5 is not correct here; gardner originally proposed 7, later added naturalistic, and has considered others. The core theory includes at least 8.',
-              3: 'Exactly 2 is not correct here; gardner originally proposed 7, later added naturalistic, and has considered others.',
+              0: 'Gardner originally proposed 7, later added naturalistic, and has considered others. The core theory includes at least 8.',
+              1: 'Gardner originally proposed 7, later added naturalistic, and has considered others. The core theory includes at least 8.',
+              3: 'Gardner originally proposed 7, later added naturalistic, and has considered others. The core theory includes at least 8.',
             },
           },
           {
@@ -1332,9 +1332,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'Naturalistic intelligence involves recognizing and classifying patterns in the natural world, exactly what this guide demonstrates.',
             distractorExplanations: {
-              0: 'Logical-mathematical intelligence is not correct here; naturalistic intelligence involves recognizing and classifying patterns in the natural.',
-              1: 'Spatial intelligence is not correct here; naturalistic intelligence involves recognizing and classifying patterns in the natural world, exactly.',
-              2: 'Interpersonal intelligence is not correct here; naturalistic intelligence involves recognizing and classifying patterns in the natural world,.',
+              0: 'Naturalistic intelligence involves recognizing and classifying patterns in the natural world, exactly what this guide demonstrates.',
+              1: 'Naturalistic intelligence involves recognizing and classifying patterns in the natural world, exactly what this guide demonstrates.',
+              2: 'Naturalistic intelligence involves recognizing and classifying patterns in the natural world, exactly what this guide demonstrates.',
             },
           },
         ],
@@ -1378,9 +1378,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Critics argue that what Gardner calls "intelligences" might be better described as talents, skills, or personality traits.',
             distractorExplanations: {
-              0: 'It includes too few types of intelligence is not correct here; critics argue that what Gardner calls "intelligences" might be better described as.',
-              2: 'It focuses only on academic abilities is not correct here; critics argue that what Gardner calls "intelligences" might be better described as.',
-              3: 'It is too similar to Spearman\'s "g" factor theory is not correct here; critics argue that what Gardner calls "intelligences" might be better.',
+              0: 'Critics argue that what Gardner calls "intelligences" might be better described as talents, skills, or personality traits.',
+              2: 'This is too narrow; critics argue that what Gardner calls "intelligences" might be better described as talents, skills, or personality traits.',
+              3: 'Critics argue that what Gardner calls "intelligences" might be better described as talents, skills, or personality traits.',
             },
           },
           {
@@ -1402,8 +1402,8 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'Despite widespread belief, research consistently shows that matching instruction to preferred learning styles does not improve outcomes.',
             distractorExplanations: {
-              0: 'It dramatically improves test scores is not correct here; despite widespread belief, research consistently shows that matching instruction to.',
-              1: 'It works for visual learners but not others is not correct here; despite widespread belief, research consistently shows that matching instruction.',
+              0: 'Despite widespread belief, research consistently shows that matching instruction to preferred learning styles does not.',
+              1: 'Despite widespread belief, research consistently shows that matching instruction to preferred learning styles does not.',
               2: 'This is too narrow; despite widespread belief, research consistently shows that matching instruction to preferred learning styles does not.',
             },
           },
@@ -1451,9 +1451,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'Using varied teaching methods is fine, but the belief that matching methods to "learning styles" improves outcomes is not supported by research.',
             distractorExplanations: {
-              0: 'This is excellent practice supported by research is not correct here; using varied teaching methods is fine, but the belief that matching methods.',
-              1: 'This approach harms students and should be banned is not correct here; using varied teaching methods is fine, but the belief that matching.',
-              2: 'Only linguistic and logical approaches work for math is not correct here; using varied teaching methods is fine, but the belief that matching.',
+              0: 'Using varied teaching methods is fine, but the belief that matching methods to "learning styles" improves outcomes is not.',
+              1: 'Using varied teaching methods is fine, but the belief that matching methods to "learning styles" improves outcomes is not.',
+              2: 'This is too narrow; using varied teaching methods is fine, but the belief that matching methods to "learning styles" improves outcomes is not.',
             },
           },
         ],
@@ -1543,9 +1543,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'Beyond a moderate IQ threshold, personality traits like openness to experience and intrinsic motivation are better predictors of creativity.',
             distractorExplanations: {
-              0: 'Even higher IQ scores is not correct here; beyond a moderate IQ threshold, personality traits like openness to experience and intrinsic.',
-              1: 'Age and education level is not correct here; beyond a moderate IQ threshold, personality traits like openness to experience and intrinsic.',
-              2: 'The number of IQ tests previously taken is not correct here; beyond a moderate IQ threshold, personality traits like openness to experience and.',
+              0: 'Beyond a moderate IQ threshold, personality traits like openness to experience and intrinsic motivation are better predictors.',
+              1: 'Beyond a moderate IQ threshold, personality traits like openness to experience and intrinsic motivation are better predictors.',
+              2: 'Beyond a moderate IQ threshold, personality traits like openness to experience and intrinsic motivation are better predictors.',
             },
           },
           {
@@ -1562,9 +1562,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Generating many options uses divergent thinking. Selecting the best ones uses convergent thinking. Creative work typically involves both.',
             distractorExplanations: {
-              0: 'Only convergent thinking throughout is not correct here; generating many options uses divergent thinking.',
-              1: 'Only divergent thinking throughout is not correct here; generating many options uses divergent thinking.',
-              3: 'Neither type applies to design work is not correct here; generating many options uses divergent thinking.',
+              0: 'This is too narrow; generating many options uses divergent thinking.',
+              1: 'This is too narrow; generating many options uses divergent thinking.',
+              3: 'Generating many options uses divergent thinking.',
             },
           },
         ],
@@ -1608,8 +1608,8 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'When focus shifts from the enjoyment of the task to the external reward, intrinsic motivation drops and creativity suffers.',
             distractorExplanations: {
-              0: 'Money makes people too relaxed to think creatively is not correct here; when focus shifts from the enjoyment of the task to the external reward,.',
-              1: 'Creative people don\'t need money is not correct here; when focus shifts from the enjoyment of the task to the external reward, intrinsic.',
+              0: 'When focus shifts from the enjoyment of the task to the external reward, intrinsic motivation drops and creativity suffers.',
+              1: 'When focus shifts from the enjoyment of the task to the external reward, intrinsic motivation drops and creativity suffers.',
               2: 'This is not accurate; when focus shifts from the enjoyment of the task to the external reward, intrinsic motivation drops and creativity suffers.',
             },
           },
@@ -1641,9 +1641,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Functional fixedness prevents the camper from seeing the water bottle as a potential hammering tool because they\'re fixated on its typical use.',
             distractorExplanations: {
-              0: 'Confirmation bias is not correct here; functional fixedness prevents the camper from seeing the water bottle as a potential hammering tool.',
-              1: 'Anchoring effect is not correct here; functional fixedness prevents the camper from seeing the water bottle as a potential hammering tool because.',
-              3: 'The availability heuristic is not correct here; functional fixedness prevents the camper from seeing the water bottle as a potential hammering.',
+              0: 'Functional fixedness prevents the camper from seeing the water bottle as a potential hammering tool because they\'re fixated.',
+              1: 'Functional fixedness prevents the camper from seeing the water bottle as a potential hammering tool because they\'re fixated.',
+              3: 'Functional fixedness prevents the camper from seeing the water bottle as a potential hammering tool because they\'re fixated.',
             },
           },
           {
@@ -1723,8 +1723,8 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Deliberate practice specifically targets weaknesses with focused effort. Simply spending time on an activity is not enough.',
             distractorExplanations: {
-              1: 'It requires exactly 10,000 hours is not correct here; deliberate practice specifically targets weaknesses with focused effort.',
-              2: 'It must be supervised by a professional coach is not correct here; deliberate practice specifically targets weaknesses with focused effort.',
+              1: 'Deliberate practice specifically targets weaknesses with focused effort. Simply spending time on an activity is not enough.',
+              2: 'Deliberate practice specifically targets weaknesses with focused effort. Simply spending time on an activity is not enough.',
               3: 'This is too narrow; deliberate practice specifically targets weaknesses with focused effort. Simply spending time on an activity is not enough.',
             },
           },
@@ -1747,9 +1747,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Practice matters but explains only a fraction of differences. Genetics, opportunity, starting age, and other factors explain the rest.',
             distractorExplanations: {
-              0: 'About 90% is not correct here; practice matters but explains only a fraction of differences.',
-              1: 'Exactly 50% is not correct here; practice matters but explains only a fraction of differences.',
-              3: 'Less than 5% is not correct here; practice matters but explains only a fraction of differences.',
+              0: 'Practice matters but explains only a fraction of differences.',
+              1: 'Practice matters but explains only a fraction of differences.',
+              3: 'Practice matters but explains only a fraction of differences.',
             },
           },
           {
@@ -1788,9 +1788,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Equal practice can produce different outcomes because innate factors like auditory processing ability and fine motor control also influence performance.',
             distractorExplanations: {
-              0: 'One must have practiced wrong for all 10,000 hours is not correct here; equal practice can produce different outcomes because innate factors like.',
-              1: 'Practice doesn\'t matter at all for music is not correct here; equal practice can produce different outcomes because innate factors like auditory.',
-              3: 'This is not accurate; equal practice can produce different outcomes because innate factors like auditory processing ability and fine motor.',
+              0: 'Equal practice can produce different outcomes because innate factors like auditory processing ability and fine motor control.',
+              1: 'Equal practice can produce different outcomes because innate factors like auditory processing ability and fine motor control.',
+              3: 'This is not accurate; equal practice can produce different outcomes because innate factors like auditory processing ability and fine motor control.',
             },
           },
           {
@@ -1856,9 +1856,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'The CHC model is a hierarchical framework with "g" at the top and broad and narrow abilities organized beneath it.',
             distractorExplanations: {
-              0: 'Gardner\'s multiple intelligences is not correct here; the CHC model is a hierarchical framework with "g" at the top and broad and narrow.',
-              1: 'Sternberg\'s triarchic theory is not correct here; the CHC model is a hierarchical framework with "g" at the top and broad and narrow abilities.',
-              3: 'Thurstone\'s primary mental abilities is not correct here; the CHC model is a hierarchical framework with "g" at the top and broad and narrow.',
+              0: 'The CHC model is a hierarchical framework with "g" at the top and broad and narrow abilities organized beneath it.',
+              1: 'The CHC model is a hierarchical framework with "g" at the top and broad and narrow abilities organized beneath it.',
+              3: 'The CHC model is a hierarchical framework with "g" at the top and broad and narrow abilities organized beneath it.',
             },
           },
           {
@@ -1883,9 +1883,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Gardner\'s theory treats interpersonal intelligence (social skills) as equally valid as logical-mathematical intelligence.',
             distractorExplanations: {
-              0: 'Spearman\'s "g" factor is not correct here; gardner\'s theory treats interpersonal intelligence (social skills) as equally valid as.',
-              1: 'The original IQ formula by Binet is not correct here; gardner\'s theory treats interpersonal intelligence (social skills) as equally valid as.',
-              3: 'The threshold theory is not correct here; gardner\'s theory treats interpersonal intelligence (social skills) as equally valid as.',
+              0: 'Gardner\'s theory treats interpersonal intelligence (social skills) as equally valid as logical-mathematical intelligence.',
+              1: 'Gardner\'s theory treats interpersonal intelligence (social skills) as equally valid as logical-mathematical intelligence.',
+              3: 'Gardner\'s theory treats interpersonal intelligence (social skills) as equally valid as logical-mathematical intelligence.',
             },
           },
           {
@@ -1927,9 +1927,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Dweck found that a growth mindset (believing abilities can improve) leads to greater effort and better achievement over time.',
             distractorExplanations: {
-              0: 'People with fixed mindset perform better in school is not correct here; dweck found that a growth mindset (believing abilities can improve) leads.',
-              2: 'Growth mindset increases IQ scores by 20 points is not correct here; dweck found that a growth mindset (believing abilities can improve) leads to.',
-              3: 'There is a real effect here; dweck found that a growth mindset (believing abilities can improve) leads to greater effort and better achievement.',
+              0: 'Dweck found that a growth mindset (believing abilities can improve) leads to greater effort and better achievement over time.',
+              2: 'Dweck found that a growth mindset (believing abilities can improve) leads to greater effort and better achievement over time.',
+              3: 'There is a real effect here; dweck found that a growth mindset (believing abilities can improve) leads to greater effort and better.',
             },
           },
         ],
@@ -1977,7 +1977,7 @@ export const psySection5Part1: Unit[] = [
             explanation: 'Intellectual disability requires both significantly below-average IQ and significant difficulties in adaptive functioning.',
             distractorExplanations: {
               1: 'This is too absolute; intellectual disability requires both significantly below-average IQ and significant difficulties in adaptive functioning.',
-              2: 'This is not accurate; intellectual disability requires both significantly below-average IQ and significant difficulties in adaptive functioning.',
+              2: 'This is too narrow; intellectual disability requires both significantly below-average IQ and significant difficulties in adaptive functioning.',
               3: 'This is too absolute; intellectual disability requires both significantly below-average IQ and significant difficulties in adaptive functioning.',
             },
           },
@@ -2004,9 +2004,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Framing a test as measuring intelligence can trigger anxiety or stereotype threat, lowering performance compared to a low-stakes framing.',
             distractorExplanations: {
-              0: 'The Flynn effect is not correct here; framing a test as measuring intelligence can trigger anxiety or stereotype threat, lowering performance.',
-              1: 'Savant syndrome is not correct here; framing a test as measuring intelligence can trigger anxiety or stereotype threat, lowering performance.',
-              3: 'The threshold theory of IQ is not correct here; framing a test as measuring intelligence can trigger anxiety or stereotype threat, lowering.',
+              0: 'Framing a test as measuring intelligence can trigger anxiety or stereotype threat, lowering performance compared to a.',
+              1: 'Framing a test as measuring intelligence can trigger anxiety or stereotype threat, lowering performance compared to a.',
+              3: 'Framing a test as measuring intelligence can trigger anxiety or stereotype threat, lowering performance compared to a.',
             },
           },
           {
@@ -2073,9 +2073,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Functional fixedness prevents you from seeing alternative uses for familiar objects, blocking creative solutions.',
             distractorExplanations: {
-              1: 'Being physically unable to move certain objects is not correct here; functional fixedness prevents you from seeing alternative uses for familiar.',
-              2: 'A type of memory failure during problem solving is not correct here; functional fixedness prevents you from seeing alternative uses for familiar.',
-              3: 'The belief that intelligence is fixed and cannot change is not correct here; functional fixedness prevents you from seeing alternative uses for.',
+              1: 'Functional fixedness prevents you from seeing alternative uses for familiar objects, blocking creative solutions.',
+              2: 'Functional fixedness prevents you from seeing alternative uses for familiar objects, blocking creative solutions.',
+              3: 'Functional fixedness prevents you from seeing alternative uses for familiar objects, blocking creative solutions.',
             },
           },
           {
@@ -2111,8 +2111,8 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'This is the overjustification effect. External rewards shift focus from enjoyment of the activity to getting the reward.',
             distractorExplanations: {
-              0: 'Stickers are distracting and hard to use while drawing is not correct here; this is the overjustification effect.',
-              2: 'Only adults are affected by rewards is not correct here; this is the overjustification effect.',
+              0: 'This is the overjustification effect. External rewards shift focus from enjoyment of the activity to getting the reward.',
+              2: 'This is too narrow; this is the overjustification effect. External rewards shift focus from enjoyment of the activity to getting the reward.',
               3: 'This is not accurate; this is the overjustification effect. External rewards shift focus from enjoyment of the activity to getting the reward.',
             },
           },
@@ -2216,8 +2216,8 @@ export const psySection5Part1: Unit[] = [
             explanation: 'Heuristics trade accuracy for speed. They save time and cognitive effort, which matters when decisions must be made quickly.',
             distractorExplanations: {
               0: 'This is too absolute; heuristics trade accuracy for speed. They save time and cognitive effort, which matters when decisions must be made quickly.',
-              1: 'Algorithms don\'t exist for most problems is not correct here; heuristics trade accuracy for speed.',
-              2: 'Heuristics were discovered more recently is not correct here; heuristics trade accuracy for speed.',
+              1: 'Heuristics trade accuracy for speed. They save time and cognitive effort, which matters when decisions must be made quickly.',
+              2: 'Heuristics trade accuracy for speed. They save time and cognitive effort, which matters when decisions must be made quickly.',
             },
           },
           {
@@ -2249,9 +2249,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'The chef is testing solutions one by one until finding what works, which is trial and error.',
             distractorExplanations: {
-              0: 'Algorithm is not correct here; the chef is testing solutions one by one until finding what works, which is trial and error.',
-              1: 'Insight is not correct here; the chef is testing solutions one by one until finding what works, which is trial and error.',
-              3: 'Working backward is not correct here; the chef is testing solutions one by one until finding what works, which is trial and error.',
+              0: 'The chef is testing solutions one by one until finding what works, which is trial and error.',
+              1: 'The chef is testing solutions one by one until finding what works, which is trial and error.',
+              3: 'The chef is testing solutions one by one until finding what works, which is trial and error.',
             },
           },
         ],
@@ -2296,9 +2296,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'The vivid news report makes shark attacks easy to recall, leading the swimmer to overestimate the risk.',
             distractorExplanations: {
-              0: 'The representativeness heuristic is not correct here; the vivid news report makes shark attacks easy to recall, leading the swimmer to.',
-              2: 'The anchoring heuristic is not correct here; the vivid news report makes shark attacks easy to recall, leading the swimmer to overestimate the risk.',
-              3: 'The recognition heuristic is not correct here; the vivid news report makes shark attacks easy to recall, leading the swimmer to overestimate the.',
+              0: 'The vivid news report makes shark attacks easy to recall, leading the swimmer to overestimate the risk.',
+              2: 'The vivid news report makes shark attacks easy to recall, leading the swimmer to overestimate the risk.',
+              3: 'The vivid news report makes shark attacks easy to recall, leading the swimmer to overestimate the risk.',
             },
           },
           {
@@ -2320,9 +2320,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'The original $200 price anchors your perception. Relative to that anchor, $100 feels like a great deal.',
             distractorExplanations: {
-              0: 'It proves the jacket is high quality is not correct here; the original $200 price anchors your perception.',
-              2: 'Customers ignore the original price completely is not correct here; the original $200 price anchors your perception.',
-              3: 'The $200 price is the true value of the jacket is not correct here; the original $200 price anchors your perception.',
+              0: 'The original $200 price anchors your perception. Relative to that anchor, $100 feels like a great deal.',
+              2: 'The original $200 price anchors your perception. Relative to that anchor, $100 feels like a great deal.',
+              3: 'The original $200 price anchors your perception. Relative to that anchor, $100 feels like a great deal.',
             },
           },
           {
@@ -2354,9 +2354,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'The description matches the "accountant prototype," so people judge it as likely despite ignoring base rates.',
             distractorExplanations: {
-              0: 'Availability heuristic is not correct here; the description matches the "accountant prototype," so people judge it as likely despite ignoring.',
-              2: 'Anchoring heuristic is not correct here; the description matches the "accountant prototype," so people judge it as likely despite ignoring base.',
-              3: 'Confirmation bias is not correct here; the description matches the "accountant prototype," so people judge it as likely despite ignoring base rates.',
+              0: 'The description matches the "accountant prototype," so people judge it as likely despite ignoring base rates.',
+              2: 'The description matches the "accountant prototype," so people judge it as likely despite ignoring base rates.',
+              3: 'The description matches the "accountant prototype," so people judge it as likely despite ignoring base rates.',
             },
           },
           {
@@ -2410,9 +2410,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'The researcher accepts supporting evidence readily while dismissing contradictory evidence, a classic pattern of confirmation bias.',
             distractorExplanations: {
-              0: 'Anchoring bias is not correct here; the researcher accepts supporting evidence readily while dismissing contradictory evidence, a classic pattern.',
-              1: 'Hindsight bias is not correct here; the researcher accepts supporting evidence readily while dismissing contradictory evidence, a classic pattern.',
-              3: 'The availability heuristic is not correct here; the researcher accepts supporting evidence readily while dismissing contradictory evidence, a.',
+              0: 'The researcher accepts supporting evidence readily while dismissing contradictory evidence, a classic pattern of confirmation bias.',
+              1: 'The researcher accepts supporting evidence readily while dismissing contradictory evidence, a classic pattern of confirmation bias.',
+              3: 'The researcher accepts supporting evidence readily while dismissing contradictory evidence, a classic pattern of confirmation bias.',
             },
           },
           {
@@ -2442,9 +2442,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'When you believe you "knew it all along," you don\'t learn from surprises and overestimate your predictive ability.',
             distractorExplanations: {
-              0: 'It makes people study too much is not correct here; when you believe you "knew it all along," you don\'t learn from surprises and overestimate.',
-              1: 'It only affects elderly people is not correct here; when you believe you "knew it all along," you don\'t learn from surprises and overestimate.',
-              2: 'It causes people to forget important events is not correct here; when you believe you "knew it all along," you don\'t learn from surprises and.',
+              0: 'When you believe you "knew it all along," you don\'t learn from surprises and overestimate your predictive ability.',
+              1: 'This is too narrow; when you believe you "knew it all along," you don\'t learn from surprises and overestimate your predictive ability.',
+              2: 'When you believe you "knew it all along," you don\'t learn from surprises and overestimate your predictive ability.',
             },
           },
           {
@@ -2483,9 +2483,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'The same information, framed as a gain (95% success) vs. a loss (5% failure), produces different decisions. This is the framing effect.',
             distractorExplanations: {
-              0: 'Confirmation bias is not correct here; the same information, framed as a gain (95% success) vs. a loss (5% failure), produces different decisions.',
-              1: 'Anchoring bias is not correct here; the same information, framed as a gain (95% success) vs. a loss (5% failure), produces different decisions.',
-              3: 'Hindsight bias is not correct here; the same information, framed as a gain (95% success) vs. a loss (5% failure), produces different decisions.',
+              0: 'The same information, framed as a gain (95% success) vs.',
+              1: 'The same information, framed as a gain (95% success) vs.',
+              3: 'The same information, framed as a gain (95% success) vs.',
             },
           },
         ],
@@ -2529,9 +2529,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Mental set is being stuck on a strategy. Functional fixedness is being stuck on an object\'s typical function. Both block creative solutions.',
             distractorExplanations: {
-              1: 'They are exactly the same thing is not correct here; mental set is being stuck on a strategy.',
-              2: 'This is not accurate; mental set is being stuck on a strategy. Functional fixedness is being stuck on an object\'s typical function.',
-              3: 'This is not accurate; mental set is being stuck on a strategy. Functional fixedness is being stuck on an object\'s typical function.',
+              1: 'Mental set is being stuck on a strategy.',
+              2: 'This is not accurate; mental set is being stuck on a strategy.',
+              3: 'This is not accurate; mental set is being stuck on a strategy.',
             },
           },
           {
@@ -2554,9 +2554,9 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'The CEO is letting past spending (sunk costs) influence a future decision. The $2 million is gone regardless. The right question is: "Is more investment likely to pay off?"',
             distractorExplanations: {
-              0: 'Confirmation bias is not correct here; the CEO is letting past spending (sunk costs) influence a future decision.',
-              2: 'The availability heuristic is not correct here; the CEO is letting past spending (sunk costs) influence a future decision.',
-              3: 'Functional fixedness is not correct here; the CEO is letting past spending (sunk costs) influence a future decision.',
+              0: 'The CEO is letting past spending (sunk costs) influence a future decision.',
+              2: 'The CEO is letting past spending (sunk costs) influence a future decision.',
+              3: 'The CEO is letting past spending (sunk costs) influence a future decision.',
             },
           },
           {
@@ -2662,7 +2662,7 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'System 1 runs on autopilot and creates biases. Correcting them requires the effortful engagement of System 2, which we often don\'t bother to activate.',
             distractorExplanations: {
-              0: 'They only affect unintelligent people is not correct here; system 1 runs on autopilot and creates biases.',
+              0: 'This is too narrow; system 1 runs on autopilot and creates biases.',
               1: 'This is not accurate; system 1 runs on autopilot and creates biases.',
               2: 'This is too absolute; system 1 runs on autopilot and creates biases.',
             },
@@ -2705,8 +2705,8 @@ export const psySection5Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'System 1\'s fast pattern matching led to a quick but incorrect diagnosis. System 2 (running standard tests) would have caught the error.',
             distractorExplanations: {
-              0: 'System 2 because the doctor was thinking too carefully is not correct here; system 1\'s fast pattern matching led to a quick but incorrect.',
-              2: 'Neither system because this is purely a knowledge gap is not correct here; system 1\'s fast pattern matching led to a quick but incorrect.',
+              0: 'System 1\'s fast pattern matching led to a quick but incorrect diagnosis.',
+              2: 'System 1\'s fast pattern matching led to a quick but incorrect diagnosis.',
               3: 'This is too absolute; system 1\'s fast pattern matching led to a quick but incorrect diagnosis.',
             },
           },

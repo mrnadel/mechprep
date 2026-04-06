@@ -29,6 +29,9 @@ export const unit8: Unit = {
           question: "The Milky Way is a barred spiral galaxy.",
           correctAnswer: true,
           explanation: "Yes. It has a central bar-shaped structure with spiral arms winding outward from it.",
+          distractorExplanations: {
+            1: 'It has a central bar-shaped structure with spiral arms winding outward from it',
+          },
         },
         {
           id: "sp-u8-L1-Q2",
@@ -42,6 +45,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "Current estimates put the Milky Way at 200 to 400 billion stars. That's a lot of potential solar systems.",
+          distractorExplanations: {
+            0: 'Current estimates put the Milky Way at 200 to 400 billion stars',
+            2: 'Current estimates put the Milky Way at 200 to 400 billion stars',
+            3: 'Current estimates put the Milky Way at 200 to 400 billion stars',
+          },
         },
         {
           id: "sp-u8-L1-T2",
@@ -56,6 +64,9 @@ export const unit8: Unit = {
           question: "Our solar system is located in one of the Milky Way's spiral arms.",
           correctAnswer: true,
           explanation: "We orbit in the Orion Arm, about two-thirds of the way out from the galactic center.",
+          distractorExplanations: {
+            1: 'We orbit in the Orion Arm, about two-thirds of the way out from the galactic center',
+          },
         },
         {
           id: "sp-u8-L1-Q3",
@@ -82,6 +93,9 @@ export const unit8: Unit = {
           question: "Our solar system is located at the very center of the Milky Way.",
           correctAnswer: false,
           explanation: "We're about two-thirds of the way out from the center, in the Orion Arm. The center is dominated by a supermassive black hole.",
+          distractorExplanations: {
+            0: 'We\'re about two-thirds of the way out from the center, in the Orion Arm',
+          },
         },
         {
           id: "sp-u8-L1-Q5b",
@@ -112,6 +126,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "Sagittarius A* is a supermassive black hole with about 4 million solar masses at the galaxy's center.",
+          distractorExplanations: {
+            0: 'Sagittarius A* is a supermassive black hole with about 4 million solar masses at the galaxy\'s center',
+            1: 'Sagittarius A* is a supermassive black hole with about 4 million solar masses at the galaxy\'s center',
+            3: 'Sagittarius A* is a supermassive black hole with about 4 million solar masses at the galaxy\'s center',
+          },
         },
         {
           id: "sp-u8-L1-Q7",
@@ -128,6 +147,9 @@ export const unit8: Unit = {
           question: "The band of light we see across the night sky is our view of the Milky Way's disk from the inside.",
           correctAnswer: true,
           explanation: "Since we're inside the disk, we see the combined light of billions of distant stars as a glowing band across the sky.",
+          distractorExplanations: {
+            1: 'Since we\'re inside the disk, we see the combined light of billions of distant stars as a glowing band across the sky',
+          },
         },
       ],
     },
@@ -152,6 +174,9 @@ export const unit8: Unit = {
           question: "All galaxies look the same.",
           correctAnswer: false,
           explanation: "Galaxies come in very different shapes: spirals with arms, smooth ellipticals, and chaotic irregulars.",
+          distractorExplanations: {
+            0: 'Galaxies come in very different shapes: spirals with arms, smooth ellipticals, and chaotic irregulars',
+          },
         },
         {
           id: "sp-u8-L2-Q2",
@@ -180,6 +205,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "Spiral arms are regions of active star formation, filled with young stars, gas, and dust.",
+          distractorExplanations: {
+            0: 'Spiral arms are regions of active star formation, filled with young stars, gas, and dust',
+            1: 'Spiral arms are regions of active star formation, filled with young stars, gas, and dust',
+            3: 'Spiral arms are regions of active star formation, filled with young stars, gas, and dust',
+          },
         },
         {
           id: "sp-u8-L2-Q4",
@@ -201,6 +231,9 @@ export const unit8: Unit = {
           question: "Elliptical galaxies are smooth, round, and mostly contain old stars.",
           correctAnswer: true,
           explanation: "Elliptical galaxies have used up most of their gas, so they form few new stars. They are dominated by older, redder stars.",
+          distractorExplanations: {
+            1: 'Elliptical galaxies have used up most of their gas, so they form few new stars',
+          },
         },
         {
           id: "sp-u8-L2-Q5",
@@ -217,6 +250,9 @@ export const unit8: Unit = {
           question: "Elliptical galaxies are actively forming many new stars.",
           correctAnswer: false,
           explanation: "Elliptical galaxies have used up most of their gas and dust. They contain mostly old, red stars and form few new ones.",
+          distractorExplanations: {
+            0: 'Elliptical galaxies have used up most of their gas and dust',
+          },
         },
         {
           id: "sp-u8-L2-Q7",
@@ -230,6 +266,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "The Milky Way is a barred spiral galaxy with a central bar structure and prominent spiral arms.",
+          distractorExplanations: {
+            0: 'The Milky Way is a barred spiral galaxy with a central bar structure and prominent spiral arms',
+            1: 'The Milky Way is a barred spiral galaxy with a central bar structure and prominent spiral arms',
+            3: 'The Milky Way is a barred spiral galaxy with a central bar structure and prominent spiral arms',
+          },
         },
         {
           id: "sp-u8-L2-Q8",
@@ -243,6 +284,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: "Gravitational tugs and collisions disrupt a galaxy's structure, leaving it with no clear shape.",
+          distractorExplanations: {
+            0: 'Gravitational tugs and collisions disrupt a galaxy\'s structure, leaving it with no clear shape',
+            1: 'Gravitational tugs and collisions disrupt a galaxy\'s structure, leaving it with no clear shape',
+            2: 'Gravitational tugs and collisions disrupt a galaxy\'s structure, leaving it with no clear shape',
+          },
         },
       ],
     },
@@ -267,6 +313,9 @@ export const unit8: Unit = {
           question: "When two galaxies collide, most of their stars crash directly into each other.",
           correctAnswer: false,
           explanation: "Stars are so far apart that direct collisions are extremely rare. The galaxies pass through each other and gradually merge through gravity.",
+          distractorExplanations: {
+            0: 'Stars are so far apart that direct collisions are extremely rare',
+          },
         },
         {
           id: "sp-u8-L3-Q2",
@@ -280,6 +329,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "The Andromeda Galaxy is approaching us at about 110 km/s and will merge with the Milky Way in about 4.5 billion years.",
+          distractorExplanations: {
+            0: 'The Andromeda Galaxy is approaching us at about 110 km/s and will merge with the Milky Way in about 4.5 billion years',
+            1: 'The Andromeda Galaxy is approaching us at about 110 km/s and will merge with the Milky Way in about 4.5 billion years',
+            3: 'The Andromeda Galaxy is approaching us at about 110 km/s and will merge with the Milky Way in about 4.5 billion years',
+          },
         },
         {
           id: "sp-u8-L3-T2",
@@ -293,6 +347,9 @@ export const unit8: Unit = {
           question: "The Milky Way and Andromeda galaxies will collide in about 4.5 billion years.",
           correctAnswer: true,
           explanation: "Andromeda is approaching at about 110 km/s. The merger will happen in roughly 4.5 billion years.",
+          distractorExplanations: {
+            1: 'Andromeda is approaching at about 110 km/s',
+          },
         },
         {
           id: "sp-u8-L3-Q3",
@@ -323,6 +380,9 @@ export const unit8: Unit = {
           question: "Galaxy collisions can trigger bursts of new star formation.",
           correctAnswer: true,
           explanation: "Gas clouds compress during collisions, creating the perfect conditions for new stars to ignite.",
+          distractorExplanations: {
+            1: 'Gas clouds compress during collisions, creating the perfect conditions for new stars to ignite',
+          },
         },
         {
           id: "sp-u8-L3-Q6",
@@ -336,6 +396,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: "Major mergers scramble the organized structure of spirals, producing a smooth, round elliptical galaxy.",
+          distractorExplanations: {
+            0: 'Major mergers scramble the organized structure of spirals, producing a smooth, round elliptical galaxy',
+            1: 'Major mergers scramble the organized structure of spirals, producing a smooth, round elliptical galaxy',
+            2: 'Major mergers scramble the organized structure of spirals, producing a smooth, round elliptical galaxy',
+          },
         },
         {
           id: "sp-u8-L3-Q7",
@@ -352,6 +417,9 @@ export const unit8: Unit = {
           question: "The Milky Way has never collided with another galaxy.",
           correctAnswer: false,
           explanation: "The Milky Way has absorbed smaller galaxies in the past and is currently consuming several dwarf galaxies.",
+          distractorExplanations: {
+            0: 'The Milky Way has absorbed smaller galaxies in the past and is currently consuming several dwarf galaxies',
+          },
         },
       ],
     },
@@ -383,6 +451,9 @@ export const unit8: Unit = {
           question: "A black hole is a region where gravity is so strong that not even light can escape.",
           correctAnswer: true,
           explanation: "That's the defining feature of a black hole. The escape velocity exceeds the speed of light.",
+          distractorExplanations: {
+            1: 'That\'s the defining feature of a black hole',
+          },
         },
         {
           id: "sp-u8-L4-Q2",
@@ -418,6 +489,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "Nothing, not even light traveling at 300,000 km/s, has enough speed to escape a black hole's gravitational pull.",
+          distractorExplanations: {
+            1: 'Nothing, not even light traveling at 300,000 km/s, has enough speed to escape a black hole\'s gravitational pull',
+            2: 'Nothing, not even light traveling at 300,000 km/s, has enough speed to escape a black hole\'s gravitational pull',
+            3: 'Nothing, not even light traveling at 300,000 km/s, has enough speed to escape a black hole\'s gravitational pull',
+          },
         },
         {
           id: "sp-u8-L4-T3",
@@ -432,6 +508,9 @@ export const unit8: Unit = {
           question: "Black holes actively suck in everything around them like a vacuum cleaner.",
           correctAnswer: false,
           explanation: "Black holes don't suck. Their gravity only traps things that get very close. At a safe distance, objects orbit normally.",
+          distractorExplanations: {
+            0: 'Black holes don\'t suck. Their gravity only traps things that get very close',
+          },
         },
         {
           id: "sp-u8-L4-Q6",
@@ -446,6 +525,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "Only stars roughly 20 to 25+ times the Sun's mass have enough gravity to collapse into a black hole. At 30 solar masses, this star will almost certainly end as a supernova leaving a black hole.",
+          distractorExplanations: {
+            1: 'Only stars roughly 20 to 25+ times the Sun\'s mass have enough gravity to collapse into a black hole',
+            2: 'Only stars roughly 20 to 25+ times the Sun\'s mass have enough gravity to collapse into a black hole',
+            3: 'Only stars roughly 20 to 25+ times the Sun\'s mass have enough gravity to collapse into a black hole',
+          },
         },
         {
           id: "sp-u8-L4-Q7",
@@ -462,6 +546,9 @@ export const unit8: Unit = {
           question: "If the Sun became a black hole with the same mass, Earth would be pulled in immediately.",
           correctAnswer: false,
           explanation: "Same mass means same gravity at the same distance. Earth would continue orbiting normally. Only things very close would be at risk.",
+          distractorExplanations: {
+            0: 'Same mass means same gravity at the same distance',
+          },
         },
       ],
     },
@@ -486,6 +573,9 @@ export const unit8: Unit = {
           question: "The event horizon is the boundary beyond which nothing can escape a black hole.",
           correctAnswer: true,
           explanation: "Correct. It's the point of no return. Cross it and you're trapped forever.",
+          distractorExplanations: {
+            1: 'It\'s the point of no return. Cross it and you\'re trapped forever',
+          },
         },
         {
           id: "sp-u8-L5-Q2",
@@ -500,6 +590,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "Once past the event horizon, nothing can return. The signals red-shifted and faded because the probe's light was being stretched by extreme gravity until it couldn't escape at all.",
+          distractorExplanations: {
+            1: 'Once past the event horizon, nothing can return',
+            2: 'Once past the event horizon, nothing can return',
+            3: 'Once past the event horizon, nothing can return',
+          },
         },
         {
           id: "sp-u8-L5-T2",
@@ -527,6 +622,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "The gravity difference between your near and far side creates tidal forces that stretch you lengthwise.",
+          distractorExplanations: {
+            1: 'The gravity difference between your near and far side creates tidal forces that stretch you lengthwise',
+            2: 'The gravity difference between your near and far side creates tidal forces that stretch you lengthwise',
+            3: 'The gravity difference between your near and far side creates tidal forces that stretch you lengthwise',
+          },
         },
         {
           id: "sp-u8-L5-T3",
@@ -540,6 +640,9 @@ export const unit8: Unit = {
           question: "Time passes more slowly near a black hole due to extreme gravity.",
           correctAnswer: true,
           explanation: "This is gravitational time dilation, predicted by Einstein's general relativity. Stronger gravity means slower time.",
+          distractorExplanations: {
+            1: 'This is gravitational time dilation, predicted by Einstein\'s general relativity',
+          },
         },
         {
           id: "sp-u8-L5-Q6",
@@ -562,6 +665,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "Gravitational time dilation makes them appear to slow down and eventually freeze at the event horizon, their light redshifting to invisibility.",
+          distractorExplanations: {
+            0: 'Gravitational time dilation makes them appear to slow down and eventually freeze at the event horizon, their light redshifting to invisibility',
+            1: 'Gravitational time dilation makes them appear to slow down and eventually freeze at the event horizon, their light redshifting to invisibility',
+            3: 'Gravitational time dilation makes them appear to slow down and eventually freeze at the event horizon, their light redshifting to invisibility',
+          },
         },
         {
           id: "sp-u8-L5-Q8",
@@ -569,6 +677,9 @@ export const unit8: Unit = {
           question: "The event horizon is a physical surface you could stand on.",
           correctAnswer: false,
           explanation: "The event horizon isn't a physical surface. It's an invisible boundary defined by gravity. You'd pass through it without feeling anything unusual.",
+          distractorExplanations: {
+            0: 'The event horizon isn\'t a physical surface',
+          },
         },
       ],
     },
@@ -593,6 +704,9 @@ export const unit8: Unit = {
           question: "Most large galaxies have a supermassive black hole at their center.",
           correctAnswer: true,
           explanation: "Observations show that nearly every large galaxy hosts a supermassive black hole at its core.",
+          distractorExplanations: {
+            1: 'Observations show that nearly every large galaxy hosts a supermassive black hole at its core',
+          },
         },
         {
           id: "sp-u8-L6-Q2",
@@ -606,6 +720,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "Supermassive black holes range from millions to billions of solar masses. The one in galaxy M87 has 6.5 billion solar masses.",
+          distractorExplanations: {
+            1: 'Supermassive black holes range from millions to billions of solar masses',
+            2: 'Supermassive black holes range from millions to billions of solar masses',
+            3: 'Supermassive black holes range from millions to billions of solar masses',
+          },
         },
         {
           id: "sp-u8-L6-T2",
@@ -626,6 +745,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "As material spirals into a supermassive black hole, friction heats it to extreme temperatures, releasing tremendous energy.",
+          distractorExplanations: {
+            0: 'As material spirals into a supermassive black hole, friction heats it to extreme temperatures, releasing tremendous energy',
+            1: 'As material spirals into a supermassive black hole, friction heats it to extreme temperatures, releasing tremendous energy',
+            3: 'As material spirals into a supermassive black hole, friction heats it to extreme temperatures, releasing tremendous energy',
+          },
         },
         {
           id: "sp-u8-L6-Q4",
@@ -653,6 +777,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "The M87 black hole image was released in April 2019. Sagittarius A* was imaged later, in May 2022.",
+          distractorExplanations: {
+            0: 'The M87 black hole image was released in April 2019',
+            1: 'The M87 black hole image was released in April 2019',
+            3: 'The M87 black hole image was released in April 2019',
+          },
         },
         {
           id: "sp-u8-L6-Q6",
@@ -669,6 +798,9 @@ export const unit8: Unit = {
           question: "Quasars are among the brightest objects in the observable universe.",
           correctAnswer: true,
           explanation: "Some quasars outshine their entire host galaxies. They can be seen billions of light-years away.",
+          distractorExplanations: {
+            1: 'Some quasars outshine their entire host galaxies',
+          },
         },
         {
           id: "sp-u8-L6-Q8",
@@ -899,6 +1031,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "Rockets expel gas backward (action), which pushes the rocket forward (reaction). Newton's third law is the fundamental principle behind all rocket propulsion.",
+          distractorExplanations: {
+            0: 'Rockets expel gas backward (action), which pushes the rocket forward (reaction)',
+            1: 'Rockets expel gas backward (action), which pushes the rocket forward (reaction)',
+            3: 'Rockets expel gas backward (action), which pushes the rocket forward (reaction)',
+          },
         },
         {
           id: "sp-u8-rev-Q2",
@@ -906,6 +1043,9 @@ export const unit8: Unit = {
           question: "The habitable zone is the region around a star where liquid water could exist on a planet's surface.",
           correctAnswer: true,
           explanation: "Also called the 'Goldilocks zone,' it's not too hot and not too cold. Liquid water is considered essential for life as we know it.",
+          distractorExplanations: {
+            1: 'Also called the \'Goldilocks zone,\' it\'s not too hot and not too cold',
+          },
         },
         {
           id: "sp-u8-rev-Q3",
@@ -921,6 +1061,9 @@ export const unit8: Unit = {
           question: "The first human-made object to reach space was Sputnik, launched by the Soviet Union in 1957.",
           correctAnswer: true,
           explanation: "Sputnik was a small satellite that orbited Earth and beeped. It launched the Space Age and kicked off the Space Race between the US and USSR.",
+          distractorExplanations: {
+            1: 'Sputnik was a small satellite that orbited Earth and beeped',
+          },
         },
         {
           id: "sp-u8-rev-Q5",
@@ -960,6 +1103,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "The event horizon is the point of no return. Beyond it, the gravitational pull is so strong that nothing, including light, can escape. From outside, you'd see objects slow down and fade away.",
+          distractorExplanations: {
+            0: 'The event horizon is the point of no return',
+            1: 'The event horizon is the point of no return',
+            3: 'The event horizon is the point of no return',
+          },
         },
         {
           id: "sp-u8-rev-Q9",
@@ -973,6 +1121,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "To leave Earth's gravity without continuous thrust, you need to reach about 11.2 km/s (roughly 40,000 km/h). That's the minimum speed to escape into space.",
+          distractorExplanations: {
+            0: 'To leave Earth\'s gravity without continuous thrust, you need to reach about 11.2 km/s (roughly 40,000 km/h)',
+            2: 'To leave Earth\'s gravity without continuous thrust, you need to reach about 11.2 km/s (roughly 40,000 km/h)',
+            3: 'To leave Earth\'s gravity without continuous thrust, you need to reach about 11.2 km/s (roughly 40,000 km/h)',
+          },
         },
         {
           id: "sp-u8-rev-Q10",
@@ -987,6 +1140,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "This is the transit method: when an exoplanet passes between its star and our telescope, it blocks a tiny amount of starlight. Regular, repeating dips are the signature of an orbiting planet.",
+          distractorExplanations: {
+            0: 'This is the transit method: when an exoplanet passes between its star and our telescope, it blocks a tiny amount of starlight',
+            2: 'This is the transit method: when an exoplanet passes between its star and our telescope, it blocks a tiny amount of starlight',
+            3: 'This is the transit method: when an exoplanet passes between its star and our telescope, it blocks a tiny amount of starlight',
+          },
         },
       ],
     },

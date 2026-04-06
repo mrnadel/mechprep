@@ -29,6 +29,9 @@ export const unit5: Unit = {
           question: "Other people can influence your emotions without saying a word.",
           correctAnswer: true,
           explanation: "Body language, facial expressions, and even a crowd's energy all shift how you feel.",
+          distractorExplanations: {
+            1: 'Body language, facial expressions, and even a crowd\'s energy all shift how you feel',
+          },
         },
         {
           id: "psy-u5-L0-Q2",
@@ -42,6 +45,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "Social support triggers calming signals in the brain. Even brief encouragement can reduce cortisol levels.",
+          distractorExplanations: {
+            0: 'Social support triggers calming signals in the brain',
+            1: 'Social support triggers calming signals in the brain',
+            3: 'Social support triggers calming signals in the brain',
+          },
         },
         {
           id: "psy-u5-L0-T2",
@@ -69,6 +77,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "Laughing along with a group is social contagion. Hunger, blinking, and dreaming happen regardless of other people.",
+          distractorExplanations: {
+            0: 'Laughing along with a group is social contagion',
+            1: 'Laughing along with a group is social contagion',
+            2: 'Laughing along with a group is social contagion',
+          },
         },
         {
           id: "psy-u5-L0-Q5",
@@ -92,6 +105,9 @@ export const unit5: Unit = {
           question: "Social influence only happens when someone directly tells you what to do.",
           correctAnswer: false,
           explanation: "Most social influence is subtle and indirect. You adjust your behavior without anyone asking.",
+          distractorExplanations: {
+            0: 'Most social influence is subtle and indirect',
+          },
         },
       ],
     },
@@ -116,6 +132,9 @@ export const unit5: Unit = {
           question: "Conformity means changing your behavior to match a group.",
           correctAnswer: true,
           explanation: "That's the definition. You adjust what you do or say to fit in with others around you.",
+          distractorExplanations: {
+            1: 'That\'s the definition. You adjust what you do or say to fit in with others around you',
+          },
         },
         {
           id: "psy-u5-L1-Q2",
@@ -129,6 +148,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "About 75% of participants went along with a clearly wrong answer at least once, just because the group said it. Asch's study used American male college students in the 1950s. Replications show conformity rates vary across cultures: collectivist societies (like Japan and China) tend to show higher conformity, while more individualist cultures sometimes show less.",
+          distractorExplanations: {
+            0: 'About 75% of participants went along with a clearly wrong answer at least once, just because the group said it',
+            1: 'About 75% of participants went along with a clearly wrong answer at least once, just because the group said it',
+            3: 'About 75% of participants went along with a clearly wrong answer at least once, just because the group said it',
+          },
         },
         {
           id: "psy-u5-L1-T2",
@@ -157,6 +181,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "One ally was enough to break the spell. Conformity dropped by about 80% when someone else dissented.",
+          distractorExplanations: {
+            0: 'One ally was enough to break the spell',
+            1: 'One ally was enough to break the spell',
+            3: 'One ally was enough to break the spell',
+          },
         },
         {
           id: "psy-u5-L1-Q5",
@@ -185,6 +214,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "You assume the crowd knows something you don't. That's informational conformity.",
+          distractorExplanations: {
+            1: 'You assume the crowd knows something you don\'t',
+            2: 'You assume the crowd knows something you don\'t',
+            3: 'You assume the crowd knows something you don\'t',
+          },
         },
         {
           id: "psy-u5-L1-Q7",
@@ -192,6 +226,9 @@ export const unit5: Unit = {
           question: "Conformity is always a bad thing.",
           correctAnswer: false,
           explanation: "Conformity keeps society running. Following traffic laws, social norms, and safety protocols are all beneficial conformity.",
+          distractorExplanations: {
+            0: 'Conformity keeps society running. Following traffic laws, social norms, and safety protocols are all beneficial conformity',
+          },
         },
       ],
     },
@@ -217,6 +254,9 @@ export const unit5: Unit = {
           question: "Obedience means following instructions from an authority figure.",
           correctAnswer: true,
           explanation: "Obedience is specifically about authority. A boss, teacher, doctor, or officer giving orders.",
+          distractorExplanations: {
+            1: 'Obedience is specifically about authority',
+          },
         },
         {
           id: "psy-u5-L2-Q2",
@@ -230,6 +270,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "About 65% of participants delivered the maximum shock when the experimenter told them to continue. Most were visibly distressed but kept going.",
+          distractorExplanations: {
+            1: 'The correct answer is About 65%, not About 10%',
+            2: 'The correct answer is About 65%, not About 90%',
+            3: 'About 65% of participants delivered the maximum shock when the experimenter told them to continue',
+          },
         },
         {
           id: "psy-u5-L2-T2",
@@ -257,6 +302,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "When the authority figure wasn't physically present, obedience dropped to about 21%. Proximity to authority matters.",
+          distractorExplanations: {
+            0: 'When the authority figure wasn\'t physically present, obedience dropped to about 21%',
+            1: 'When the authority figure wasn\'t physically present, obedience dropped to about 21%',
+            2: 'When the authority figure wasn\'t physically present, obedience dropped to about 21%',
+          },
         },
         {
           id: "psy-u5-L2-Q5",
@@ -293,6 +343,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: "The key is evaluating the ethics of the order, not blindly obeying or blindly refusing.",
+          distractorExplanations: {
+            0: 'The key is evaluating the ethics of the order, not blindly obeying or blindly refusing',
+            2: 'The key is evaluating the ethics of the order, not blindly obeying or blindly refusing',
+            3: 'The key is evaluating the ethics of the order, not blindly obeying or blindly refusing',
+          },
         },
         {
           id: "psy-u5-L2-Q8",
@@ -300,6 +355,9 @@ export const unit5: Unit = {
           question: "Milgram's experiment showed that only cruel people obey harmful orders.",
           correctAnswer: false,
           explanation: "The participants were ordinary, psychologically healthy people. The situation, not personality, drove their obedience.",
+          distractorExplanations: {
+            0: 'The participants were ordinary, psychologically healthy people',
+          },
         },
       ],
     },
@@ -325,6 +383,9 @@ export const unit5: Unit = {
           question: "You're more likely to get help from a stranger if they're the only person nearby.",
           correctAnswer: true,
           explanation: "When someone is alone, they can't assume someone else will help. That responsibility falls entirely on them.",
+          distractorExplanations: {
+            1: 'When someone is alone, they can\'t assume someone else will help',
+          },
         },
         {
           id: "psy-u5-L3-Q2",
@@ -338,6 +399,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "When many people are present, each person feels less personally responsible. 'Someone else will handle it.'",
+          distractorExplanations: {
+            0: 'When many people are present, each person feels less personally responsible',
+            1: 'When many people are present, each person feels less personally responsible',
+            3: 'When many people are present, each person feels less personally responsible',
+          },
         },
         {
           id: "psy-u5-L3-T2",
@@ -351,6 +417,9 @@ export const unit5: Unit = {
           question: "A bystander must notice an event, interpret it as an emergency, and take personal responsibility before they'll help.",
           correctAnswer: true,
           explanation: "Those are the 3 steps. If any step fails, the person won't help, even if they're a kind person.",
+          distractorExplanations: {
+            1: 'Those are the 3 steps. If any step fails, the person won\'t help, even if they\'re a kind person',
+          },
         },
         {
           id: "psy-u5-L3-Q3",
@@ -364,6 +433,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "Pluralistic ignorance is when everyone looks to others for cues. Since nobody is reacting, each person assumes it's not an emergency.",
+          distractorExplanations: {
+            0: 'Pluralistic ignorance is when everyone looks to others for cues',
+            1: 'Pluralistic ignorance is when everyone looks to others for cues',
+            3: 'Pluralistic ignorance is when everyone looks to others for cues',
+          },
         },
         {
           id: "psy-u5-L3-Q4",
@@ -400,6 +474,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "Assigning one specific person a task breaks diffusion of responsibility. A general shout lets everyone assume someone else will act.",
+          distractorExplanations: {
+            0: 'Assigning one specific person a task breaks diffusion of responsibility',
+            1: 'Assigning one specific person a task breaks diffusion of responsibility',
+            2: 'Assigning one specific person a task breaks diffusion of responsibility',
+          },
         },
         {
           id: "psy-u5-L3-Q7",
@@ -407,6 +486,9 @@ export const unit5: Unit = {
           question: "The bystander effect means people don't care about others.",
           correctAnswer: false,
           explanation: "It's not about caring. Most bystanders do care. The problem is a psychological process that makes each person assume someone else will act.",
+          distractorExplanations: {
+            0: 'It\'s not about caring. Most bystanders do care',
+          },
         },
         {
           id: "psy-u5-L3-Q8",
@@ -420,6 +502,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "Being the only witness means full responsibility falls on you. That's when helping is most likely.",
+          distractorExplanations: {
+            0: 'Being the only witness means full responsibility falls on you',
+            1: 'Being the only witness means full responsibility falls on you',
+            3: 'Being the only witness means full responsibility falls on you',
+          },
         },
       ],
     },
@@ -458,6 +545,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: "Your brain makes snap judgments in about a tenth of a second. These judgments are fast but not always accurate.",
+          distractorExplanations: {
+            0: 'The correct answer is About 100 milliseconds, not About 5 minutes',
+            2: 'The correct answer is About 100 milliseconds, not About 30 seconds',
+            3: 'Your brain makes snap judgments in about a tenth of a second',
+          },
         },
         {
           id: "psy-u5-L4-Q2",
@@ -465,6 +557,9 @@ export const unit5: Unit = {
           question: "First impressions are usually accurate and reliable.",
           correctAnswer: false,
           explanation: "First impressions are fast, not accurate. They're heavily influenced by appearance, stereotypes, and mood, not actual character.",
+          distractorExplanations: {
+            0: 'First impressions are fast, not accurate',
+          },
         },
         {
           id: "psy-u5-L4-T2",
@@ -484,6 +579,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "The halo effect makes one positive trait (attractiveness) spill over into unrelated judgments (intelligence, competence).",
+          distractorExplanations: {
+            0: 'The halo effect makes one positive trait (attractiveness) spill over into unrelated judgments (intelligence, competence)',
+            1: 'The halo effect makes one positive trait (attractiveness) spill over into unrelated judgments (intelligence, competence)',
+            2: 'The halo effect makes one positive trait (attractiveness) spill over into unrelated judgments (intelligence, competence)',
+          },
         },
         {
           id: "psy-u5-L4-Q4",
@@ -520,6 +620,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: "Direct contact with individuals breaks down group-level assumptions. This is called the contact hypothesis.",
+          distractorExplanations: {
+            0: 'Direct contact with individuals breaks down group-level assumptions',
+            2: 'Direct contact with individuals breaks down group-level assumptions',
+            3: 'Direct contact with individuals breaks down group-level assumptions',
+          },
         },
         {
           id: "psy-u5-L4-Q7",
@@ -527,6 +632,9 @@ export const unit5: Unit = {
           question: "The halo effect only works in positive directions.",
           correctAnswer: false,
           explanation: "There's also a 'horn effect' where one negative trait makes you assume other negative traits. It works both ways.",
+          distractorExplanations: {
+            0: 'There\'s also a \'horn effect\' where one negative trait makes you assume other negative traits',
+          },
         },
         {
           id: "psy-u5-L4-Q8",
@@ -541,6 +649,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "The manager judged Jordan's competence based on appearance, voice, and eye contact in the first meeting. The halo effect made these surface traits spill over into assumptions about leadership ability.",
+          distractorExplanations: {
+            1: 'The manager judged Jordan\'s competence based on appearance, voice, and eye contact in the first meeting',
+            2: 'The manager judged Jordan\'s competence based on appearance, voice, and eye contact in the first meeting',
+            3: 'The manager judged Jordan\'s competence based on appearance, voice, and eye contact in the first meeting',
+          },
         },
       ],
     },
@@ -565,6 +678,9 @@ export const unit5: Unit = {
           question: "Groupthink is when a group makes better decisions because they all agree.",
           correctAnswer: false,
           explanation: "Groupthink actually produces worse decisions. Agreement feels good, but suppressing dissent removes critical thinking.",
+          distractorExplanations: {
+            0: 'Groupthink actually produces worse decisions',
+          },
         },
         {
           id: "psy-u5-L5-Q2",
@@ -578,6 +694,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "Self-censorship is a hallmark of groupthink. People stay quiet rather than challenge the group's direction.",
+          distractorExplanations: {
+            0: 'Self-censorship is a hallmark of groupthink',
+            1: 'Self-censorship is a hallmark of groupthink',
+            2: 'Self-censorship is a hallmark of groupthink',
+          },
         },
         {
           id: "psy-u5-L5-T2",
@@ -606,6 +727,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "Unanimous agreement with unspoken doubts is a textbook example of groupthink.",
+          distractorExplanations: {
+            0: 'Unanimous agreement with unspoken doubts is a textbook example of groupthink',
+            1: 'Unanimous agreement with unspoken doubts is a textbook example of groupthink',
+            2: 'Unanimous agreement with unspoken doubts is a textbook example of groupthink',
+          },
         },
         {
           id: "psy-u5-L5-Q5",
@@ -642,6 +768,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "When your feed only shows one perspective, it creates the illusion that everyone agrees. That's an echo chamber.",
+          distractorExplanations: {
+            0: 'When your feed only shows one perspective, it creates the illusion that everyone agrees',
+            1: 'When your feed only shows one perspective, it creates the illusion that everyone agrees',
+            2: 'When your feed only shows one perspective, it creates the illusion that everyone agrees',
+          },
         },
         {
           id: "psy-u5-L5-Q8",
@@ -649,6 +780,9 @@ export const unit5: Unit = {
           question: "A devil's advocate is someone assigned to challenge the group's thinking on purpose.",
           correctAnswer: true,
           explanation: "The devil's advocate role forces the group to consider opposing arguments, which is one of the best defenses against groupthink.",
+          distractorExplanations: {
+            1: 'The devil\'s advocate role forces the group to consider opposing arguments, which is one of the best defenses against groupthink',
+          },
         },
       ],
     },
@@ -673,6 +807,9 @@ export const unit5: Unit = {
           question: "Persuasion techniques only work on gullible people.",
           correctAnswer: false,
           explanation: "These principles work on everyone because they exploit fundamental human psychology. Awareness is the best defense.",
+          distractorExplanations: {
+            0: 'These principles work on everyone because they exploit fundamental human psychology',
+          },
         },
         {
           id: "psy-u5-L6-Q2",
@@ -701,6 +838,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "They gave you time, coffee, and personal attention (reciprocity), and built a personal connection (liking). Now you feel you owe them.",
+          distractorExplanations: {
+            0: 'They gave you time, coffee, and personal attention (reciprocity), and built a personal connection (liking)',
+            1: 'They gave you time, coffee, and personal attention (reciprocity), and built a personal connection (liking)',
+            3: 'They gave you time, coffee, and personal attention (reciprocity), and built a personal connection (liking)',
+          },
         },
         {
           id: "psy-u5-L6-Q4",
@@ -714,6 +856,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Showing that many others chose this product uses social proof. If thousands did it, it must be good, right?",
+          distractorExplanations: {
+            1: 'Showing that many others chose this product uses social proof',
+            2: 'Showing that many others chose this product uses social proof',
+            3: 'Showing that many others chose this product uses social proof',
+          },
         },
         {
           id: "psy-u5-L6-Q5",
@@ -751,6 +898,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: "Awareness is your best defense. Once you spot the technique, its power drops significantly.",
+          distractorExplanations: {
+            0: 'Awareness is your best defense. Once you spot the technique, its power drops significantly',
+            2: 'Awareness is your best defense. Once you spot the technique, its power drops significantly',
+            3: 'Awareness is your best defense. Once you spot the technique, its power drops significantly',
+          },
         },
         {
           id: "psy-u5-L6-Q8",
@@ -758,6 +910,9 @@ export const unit5: Unit = {
           question: "The liking principle means we're more easily persuaded by people we find attractive or similar to us.",
           correctAnswer: true,
           explanation: "We say yes more easily to people we like. Salespeople build rapport for exactly this reason.",
+          distractorExplanations: {
+            1: 'We say yes more easily to people we like',
+          },
         },
       ],
     },

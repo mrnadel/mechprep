@@ -63,6 +63,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Your credit score is a 3-digit number (300-850) that tells lenders how likely you are to repay what you borrow. It's based on your borrowing history, not your income or savings.",
+          distractorExplanations: {
+            1: 'Your credit score is a 3-digit number (300-850) that tells lenders how likely you are to repay what you borrow',
+            2: 'Your credit score is a 3-digit number (300-850) that tells lenders how likely you are to repay what you borrow',
+            3: 'Your credit score is a 3-digit number (300-850) that tells lenders how likely you are to repay what you borrow',
+          },
         },
         {
           id: "pf-u4-L1-Q2",
@@ -70,6 +75,9 @@ export const unit4: Unit = {
           question: "Only banks care about your credit score.",
           correctAnswer: false,
           explanation: "Landlords, car dealerships, insurance companies, cell phone carriers, and even some employers check your credit. It affects way more than just loans.",
+          distractorExplanations: {
+            0: 'Landlords, car dealerships, insurance companies, cell phone carriers, and even some employers check your credit',
+          },
         },
         {
           id: "pf-u4-L1-Q3",
@@ -112,6 +120,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "With a 580 score, Jamie is high-risk. Lenders charge much higher interest to compensate. On a 25,000 car loan, Jamie could pay 10,000+ more in interest over 5 years than Alex. Your credit score literally costs you money.",
+          distractorExplanations: {
+            1: 'With a 580 score, Jamie is high-risk',
+            2: 'With a 580 score, Jamie is high-risk',
+            3: 'With a 580 score, Jamie is high-risk',
+          },
         },
         {
           id: "pf-u4-L1-Q7",
@@ -140,6 +153,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "A mortgage is the biggest loan most people ever take. The difference between a 3.5% and 6% rate on a 300,000 mortgage is over 100,000 in extra interest over 30 years. That's where your credit score matters most.",
+          distractorExplanations: {
+            1: 'A mortgage is the biggest loan most people ever take',
+            2: 'A mortgage is the biggest loan most people ever take',
+            3: 'A mortgage is the biggest loan most people ever take',
+          },
         },
       ],
     },
@@ -178,6 +196,9 @@ export const unit4: Unit = {
           question: "Payment history is the single biggest factor in your FICO credit score.",
           correctAnswer: true,
           explanation: "Yes! Payment history makes up 35% of your score, more than any other factor. Paying on time is the most important thing you can do for your credit.",
+          distractorExplanations: {
+            1: 'Payment history makes up 35% of your score, more than any other factor',
+          },
         },
         {
           id: "pf-u4-L2-Q1",
@@ -209,6 +230,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "35% + 30% = 65%. These two factors alone determine nearly two-thirds of your score. That's why paying on time and keeping balances low are the two most powerful moves.",
+          distractorExplanations: {
+            1: 'The correct answer is 65%, not 50%',
+            2: 'The correct answer is 65%, not 80%',
+            3: 'The correct answer is 65%, not 35%',
+          },
         },
         {
           id: "pf-u4-L2-Q5",
@@ -225,6 +251,9 @@ export const unit4: Unit = {
           question: "Having a mix of credit types (cards, auto loan, student loan) helps your score.",
           correctAnswer: true,
           explanation: "Credit mix is 10% of your score. Having different types of credit (revolving like credit cards + installment like loans) shows you can handle various types of debt responsibly.",
+          distractorExplanations: {
+            1: 'Credit mix is 10% of your score. Having different types of credit (revolving like credit cards + installment like loans) shows you can handle vario...',
+          },
         },
         {
           id: "pf-u4-L2-Q7",
@@ -247,6 +276,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Opening many new accounts in a short period hurts the 'New Credit' factor (10%). Each application triggers a hard inquiry, and the burst of new accounts makes lenders nervous. It won't destroy Maria's score, but it'll ding it.",
+          distractorExplanations: {
+            1: 'Opening many new accounts in a short period hurts the \'New Credit\' factor (10%)',
+            2: 'Opening many new accounts in a short period hurts the \'New Credit\' factor (10%)',
+            3: 'Opening many new accounts in a short period hurts the \'New Credit\' factor (10%)',
+          },
         },
       ],
     },
@@ -317,6 +351,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "A single 30+ day late payment can cause a 60-110 point drop, especially if you had a high score. The better your score was, the harder you fall. Going from 740 to 640 changes your rate on everything.",
+          distractorExplanations: {
+            1: 'A single 30+ day late payment can cause a 60-110 point drop, especially if you had a high score',
+            2: 'A single 30+ day late payment can cause a 60-110 point drop, especially if you had a high score',
+            3: 'A single 30+ day late payment can cause a 60-110 point drop, especially if you had a high score',
+          },
         },
         {
           id: "pf-u4-L3-Q4",
@@ -324,6 +363,9 @@ export const unit4: Unit = {
           question: "If you pay a bill 15 days late, it gets reported to the credit bureaus.",
           correctAnswer: false,
           explanation: "Good news, payments under 30 days late typically don't get reported to bureaus. You'll probably pay a late fee to your lender, but your credit score stays safe. The 30-day mark is when the real damage starts.",
+          distractorExplanations: {
+            0: 'Good news, payments under 30 days late typically don\'t get reported to bureaus',
+          },
         },
         {
           id: "pf-u4-L3-Q5",
@@ -346,6 +388,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Autopay is foolproof, it pays for you even when you forget. Calendars help but rely on you noticing. Weekly checks are good but miss things. Friends? They forget too. Autopay is the gold standard.",
+          distractorExplanations: {
+            1: 'Autopay is foolproof, it pays for you even when you forget',
+            2: 'Autopay is foolproof, it pays for you even when you forget',
+            3: 'Autopay is foolproof, it pays for you even when you forget',
+          },
         },
         {
           id: "pf-u4-L3-Q7",
@@ -360,6 +407,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Pay NOW. At 3 days late, the bureau doesn't know yet, late payments aren't reported until 30 days. Jake might pay a late fee, but his credit score is safe if he pays right away. Waiting would be a disaster.",
+          distractorExplanations: {
+            1: 'Pay NOW. At 3 days late, the bureau doesn\'t know yet, late payments aren\'t reported until 30 days',
+            2: 'Pay NOW. At 3 days late, the bureau doesn\'t know yet, late payments aren\'t reported until 30 days',
+            3: 'Pay NOW. At 3 days late, the bureau doesn\'t know yet, late payments aren\'t reported until 30 days',
+          },
         },
         {
           id: "pf-u4-L3-Q8",
@@ -399,6 +451,9 @@ export const unit4: Unit = {
           question: "Credit utilization means what percentage of your available credit you are currently using.",
           correctAnswer: true,
           explanation: "Exactly. If you have a 10,000 limit and owe 2,000, you're using 20% of your available credit.",
+          distractorExplanations: {
+            1: 'If you have a 10,000 limit and owe 2,000, you\'re using 20% of your available credit',
+          },
         },
         {
           id: "pf-u4-L4-Q1",
@@ -412,6 +467,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "1,500 \u00F7 5,000 = 0.30 = 30%. That's at the edge, not terrible, but definitely not ideal. Getting that balance down to 500 (10%) would help your score more.",
+          distractorExplanations: {
+            1: 'The correct answer is 30%, not 15%',
+            2: 'The correct answer is 30%, not 50%',
+            3: 'The correct answer is 30%, not 3%',
+          },
         },
         {
           id: "pf-u4-L4-Q2",
@@ -430,6 +490,9 @@ export const unit4: Unit = {
           question: "You should aim for exactly 30% credit utilization for the best score.",
           correctAnswer: false,
           explanation: "This is the biggest credit myth out there. 30% is the max before your score takes a serious hit, it's not a target. Lower is always better. Aim for under 10% if you want top-tier scores.",
+          distractorExplanations: {
+            0: 'This is the biggest credit myth out there',
+          },
         },
         {
           id: "pf-u4-L4-Q4",
@@ -453,6 +516,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "FICO looks at both individual card utilization AND total utilization across all cards. Priya's total is 70%, deep into score-damage territory. She should spread the balance or pay it down.",
+          distractorExplanations: {
+            1: 'FICO looks at both individual card utilization AND total utilization across all cards',
+            2: 'FICO looks at both individual card utilization AND total utilization across all cards',
+            3: 'FICO looks at both individual card utilization AND total utilization across all cards',
+          },
         },
         {
           id: "pf-u4-L4-Q6",
@@ -634,6 +702,9 @@ export const unit4: Unit = {
           question: "If you've never had a credit card or loan, your credit score is 0.",
           correctAnswer: false,
           explanation: "You don't start at 0, you start with NO score at all. The bureaus simply have no file on you. Once you open your first credit account, it takes about 6 months to generate your first score.",
+          distractorExplanations: {
+            0: 'You don\'t start at 0, you start with NO score at all',
+          },
         },
         {
           id: "pf-u4-L5-Q2",
@@ -655,6 +726,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "FICO needs at least 6 months of credit history with at least one account to generate a score. Be patient, the first score is the hardest to get.",
+          distractorExplanations: {
+            1: 'FICO needs at least 6 months of credit history with at least one account to generate a score',
+            2: 'FICO needs at least 6 months of credit history with at least one account to generate a score',
+            3: 'FICO needs at least 6 months of credit history with at least one account to generate a score',
+          },
         },
         {
           id: "pf-u4-L5-Q4",
@@ -668,6 +744,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "A secured credit card is the most accessible option for anyone, no credit history needed, you put down a deposit. Being an authorized user is great too but requires someone else's help. Premium cards will reject you with no history.",
+          distractorExplanations: {
+            1: 'A secured credit card is the most accessible option for anyone, no credit history needed, you put down a deposit',
+            2: 'A secured credit card is the most accessible option for anyone, no credit history needed, you put down a deposit',
+            3: 'A secured credit card is the most accessible option for anyone, no credit history needed, you put down a deposit',
+          },
         },
         {
           id: "pf-u4-L5-Q5",
@@ -691,6 +772,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "18% on a car loan is robbery. Lin should build credit first through a parent's card (instant credit boost), then apply for a loan in 6-12 months at a much better rate. Patience here saves thousands.",
+          distractorExplanations: {
+            1: '18% on a car loan is robbery. Lin should build credit first through a parent\'s card (instant credit boost), then apply for a loan in 6-12 months at...',
+            2: '18% on a car loan is robbery. Lin should build credit first through a parent\'s card (instant credit boost), then apply for a loan in 6-12 months at...',
+            3: '18% on a car loan is robbery. Lin should build credit first through a parent\'s card (instant credit boost), then apply for a loan in 6-12 months at...',
+          },
         },
         {
           id: "pf-u4-L5-Q7",
@@ -745,6 +831,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "With secured cards, your deposit IS your credit limit. Deposit 300, get a 300 limit. Deposit 500, get 500. The deposit is the bank's safety net if you don't pay.",
+          distractorExplanations: {
+            1: 'The correct answer is 300, not 3,000',
+            2: 'With secured cards, your deposit IS your credit limit',
+            3: 'With secured cards, your deposit IS your credit limit',
+          },
         },
         {
           id: "pf-u4-L6-Q2",
@@ -760,6 +851,9 @@ export const unit4: Unit = {
           question: "A secured credit card and a prepaid debit card are the same thing.",
           correctAnswer: false,
           explanation: "These are different. A secured credit card reports to credit bureaus and builds your credit history. A prepaid debit card is just spending your own money, nothing gets reported, no credit gets built. Don't confuse the two.",
+          distractorExplanations: {
+            0: 'These are different. A secured credit card reports to credit bureaus and builds your credit history',
+          },
         },
         {
           id: "pf-u4-L6-Q4",
@@ -791,6 +885,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Accept it! Upgrading keeps your account history intact (good for length of credit history), returns your deposit, and usually gives you a higher limit. This is the graduation day you've been working toward.",
+          distractorExplanations: {
+            1: 'Accept it! Upgrading keeps your account history intact (good for length of credit history), returns your deposit, and usually gives you a higher limit',
+            2: 'Accept it! Upgrading keeps your account history intact (good for length of credit history), returns your deposit, and usually gives you a higher limit',
+            3: 'Accept it! Upgrading keeps your account history intact (good for length of credit history), returns your deposit, and usually gives you a higher limit',
+          },
         },
         {
           id: "pf-u4-L6-Q7",
@@ -812,6 +911,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "A secured card only requires you and your deposit, no one else involved. Authorized user, cosigner, and joint accounts all depend on someone else's willingness and good credit. A secured card is 100% in your control.",
+          distractorExplanations: {
+            1: 'A secured card only requires you and your deposit, no one else involved',
+            2: 'A secured card only requires you and your deposit, no one else involved',
+            3: 'A secured card only requires you and your deposit, no one else involved',
+          },
         },
       ],
     },
@@ -870,6 +974,11 @@ export const unit4: Unit = {
             CA: "Request your free report by mail from Equifax Canada and TransUnion Canada. You can also use free services like Borrowell (Equifax) or Credit Karma (TransUnion) for ongoing access. Avoid sites that push paid subscriptions.",
             IL: "Access your free credit data at sheirutnetuneiashrai.boi.org.il, the Bank of Israel's official Credit Data Service portal. You can check your data anytime at no cost. Avoid unofficial third-party sites.",
           },
+          distractorExplanations: {
+            1: 'AnnualCreditReport.com is the ONLY federally authorized source',
+            2: 'AnnualCreditReport.com is the ONLY federally authorized source',
+            3: 'AnnualCreditReport.com is the ONLY federally authorized source',
+          },
         },
         {
           id: "pf-u4-L7-Q2",
@@ -877,6 +986,9 @@ export const unit4: Unit = {
           question: "Checking your own credit report hurts your credit score.",
           correctAnswer: false,
           explanation: "Never! Checking your own report is a 'soft pull', it has zero impact on your score. You should check it regularly. Hard pulls (when lenders check for a loan application) are what can affect your score.",
+          distractorExplanations: {
+            0: 'Never! Checking your own report is a \'soft pull\', it has zero impact on your score',
+          },
         },
         {
           id: "pf-u4-L7-Q3",
@@ -918,6 +1030,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "An account you never opened is a huge red flag for identity theft. Aisha should immediately freeze her credit at all three bureaus, dispute the fraudulent account, and file a police report. Never pay debt that isn't yours.",
+          distractorExplanations: {
+            1: 'An account you never opened is a huge red flag for identity theft',
+            2: 'An account you never opened is a huge red flag for identity theft',
+            3: 'An account you never opened is a huge red flag for identity theft',
+          },
         },
         {
           id: "pf-u4-L7-Q7",
@@ -1007,6 +1124,9 @@ export const unit4: Unit = {
           question: "Checking your own credit score through an app like CreditKarma hurts your score.",
           correctAnswer: false,
           explanation: "Checking your own score is always a soft pull, zero impact, no matter how often you do it. Check it daily if you want. The bureaus know the difference between you checking and a lender checking.",
+          distractorExplanations: {
+            0: 'Checking your own score is always a soft pull, zero impact, no matter how often you do it',
+          },
         },
         {
           id: "pf-u4-L8-Q4",
@@ -1020,6 +1140,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "FICO's rate-shopping window groups multiple inquiries for the same type of loan (mortgage, auto, student) within 14-45 days as a single inquiry. Shop around, you won't be penalized for comparing rates.",
+          distractorExplanations: {
+            1: 'FICO\'s rate-shopping window groups multiple inquiries for the same type of loan (mortgage, auto, student) within 14-45 days as a single inquiry',
+            2: 'FICO\'s rate-shopping window groups multiple inquiries for the same type of loan (mortgage, auto, student) within 14-45 days as a single inquiry',
+            3: 'FICO\'s rate-shopping window groups multiple inquiries for the same type of loan (mortgage, auto, student) within 14-45 days as a single inquiry',
+          },
         },
         {
           id: "pf-u4-L8-Q5",
@@ -1043,6 +1168,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "The rate-shopping exception only applies to the same loan type (mortgage, auto, student). Credit cards, personal loans, and store cards are each separate hard inquiries. Five in one week is a red flag to lenders.",
+          distractorExplanations: {
+            1: 'The rate-shopping exception only applies to the same loan type (mortgage, auto, student)',
+            2: 'The rate-shopping exception only applies to the same loan type (mortgage, auto, student)',
+            3: 'The rate-shopping exception only applies to the same loan type (mortgage, auto, student)',
+          },
         },
         {
           id: "pf-u4-L8-Q7",
@@ -1120,6 +1250,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Your card issuer reports your balance to bureaus once per billing cycle (monthly). So about 30 days after you pay down, your new lower utilization shows up and your score jumps. This is the fastest score lever you have.",
+          distractorExplanations: {
+            1: 'Your card issuer reports your balance to bureaus once per billing cycle (monthly)',
+            2: 'Your card issuer reports your balance to bureaus once per billing cycle (monthly)',
+            3: 'Your card issuer reports your balance to bureaus once per billing cycle (monthly)',
+          },
         },
         {
           id: "pf-u4-L9-Q3",
@@ -1127,6 +1262,9 @@ export const unit4: Unit = {
           question: "Asking your credit card company for a higher limit can improve your credit score, even if you don't spend more.",
           correctAnswer: true,
           explanation: "If your limit goes from 5,000 to 10,000 but your balance stays at 500, your utilization drops from 10% to 5%. Same spending, better score. Just don't use the extra limit as permission to spend more!",
+          distractorExplanations: {
+            1: 'If your limit goes from 5,000 to 10,000 but your balance stays at 500, your utilization drops from 10% to 5%',
+          },
         },
         {
           id: "pf-u4-L9-Q4",
@@ -1148,6 +1286,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Going from 45% to under 10% utilization can boost your score by 50-100 points within a single billing cycle. That dwarfs any other single action. Utilization is the fastest, most impactful lever when it's currently high.",
+          distractorExplanations: {
+            1: 'Going from 45% to under 10% utilization can boost your score by 50-100 points within a single billing cycle',
+            2: 'Going from 45% to under 10% utilization can boost your score by 50-100 points within a single billing cycle',
+            3: 'Going from 45% to under 10% utilization can boost your score by 50-100 points within a single billing cycle',
+          },
         },
         {
           id: "pf-u4-L9-Q6",
@@ -1170,6 +1313,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Rachel should attack both issues. Paying 4,000 down to 500 (10% utilization) could boost her score 50-80 points. Removing the incorrect late payment could add another 20-50 points. Combined, she could potentially go from 650 to 750+ in 90 days.",
+          distractorExplanations: {
+            1: 'Rachel should attack both issues. Paying 4,000 down to 500 (10% utilization) could boost her score 50-80 points',
+            2: 'Rachel should attack both issues. Paying 4,000 down to 500 (10% utilization) could boost her score 50-80 points',
+            3: 'Rachel should attack both issues. Paying 4,000 down to 500 (10% utilization) could boost her score 50-80 points',
+          },
         },
         {
           id: "pf-u4-L9-Q8",
@@ -1232,6 +1380,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Never close your oldest cards! That 10-year history boosts your average account age (15% of score) and adds to your total credit limit (lowers utilization). Put a small recurring charge on it and autopay. Done.",
+          distractorExplanations: {
+            1: 'Never close your oldest cards! That 10-year history boosts your average account age (15% of score) and adds to your total credit limit (lowers util...',
+            2: 'Never close your oldest cards! That 10-year history boosts your average account age (15% of score) and adds to your total credit limit (lowers util...',
+            3: 'Never close your oldest cards! That 10-year history boosts your average account age (15% of score) and adds to your total credit limit (lowers util...',
+          },
         },
         {
           id: "pf-u4-L10-Q3",
@@ -1239,6 +1392,9 @@ export const unit4: Unit = {
           question: "A credit freeze prevents all new accounts from being opened in your name without your permission.",
           correctAnswer: true,
           explanation: "A credit freeze locks your credit file so no one (including you) can open new accounts until you temporarily lift it. It's the most powerful defense against identity theft. And it's free, you can freeze and unfreeze anytime.",
+          distractorExplanations: {
+            1: 'A credit freeze locks your credit file so no one (including you) can open new accounts until you temporarily lift it',
+          },
         },
         {
           id: "pf-u4-L10-Q4",
@@ -1270,6 +1426,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Overconfidence kills great credit. Without autopay, one forgotten bill tanks his history. Three store cards = three hard pulls. No monitoring means fraud could go undetected for months. An 800 score is earned every month, not locked in forever.",
+          distractorExplanations: {
+            1: 'Overconfidence kills great credit. Without autopay, one forgotten bill tanks his history',
+            2: 'Overconfidence kills great credit. Without autopay, one forgotten bill tanks his history',
+            3: 'Overconfidence kills great credit. Without autopay, one forgotten bill tanks his history',
+          },
         },
         {
           id: "pf-u4-L10-Q7",
@@ -1401,6 +1562,11 @@ export const unit4: Unit = {
             options: ["105 points", "150 points", "205 points", "285 points"],
             correctIndex: 2,
             explanation: "785 - 580 = 205 points. That gap means the difference between the best loan rates and being denied entirely.",
+            distractorExplanations: {
+              0: '785 - 580 = 205 points. That gap means the difference between the best loan rates and being denied entirely',
+              1: '785 - 580 = 205 points. That gap means the difference between the best loan rates and being denied entirely',
+              3: '785 - 580 = 205 points. That gap means the difference between the best loan rates and being denied entirely',
+            },
           },
         },
         {
@@ -1427,6 +1593,9 @@ export const unit4: Unit = {
             question: "Opening multiple credit cards in the same month hurts your score because of multiple hard inquiries.",
             correctAnswer: true,
             explanation: "Each application triggers a hard inquiry, which can drop your score 5-10 points each. Three in one month signals desperation to lenders. Space applications at least 6 months apart.",
+            distractorExplanations: {
+              1: 'Each application triggers a hard inquiry, which can drop your score 5-10 points each',
+            },
           },
         },
         {
@@ -1440,6 +1609,11 @@ export const unit4: Unit = {
             options: ["Open a new premium rewards card", "Pay off the collections account and set up autopay", "Close all credit cards to stop the damage", "Wait 7 years for negative items to fall off"],
             correctIndex: 1,
             explanation: "Priority 1: Stop the bleeding (autopay prevents future late payments). Priority 2: Clear collections (even paid collections look better). Closing cards would hurt utilization, and waiting 7 years wastes prime earning years.",
+            distractorExplanations: {
+              0: 'Priority 1: Stop the bleeding (autopay prevents future late payments)',
+              2: 'Priority 1: Stop the bleeding (autopay prevents future late payments)',
+              3: 'Priority 1: Stop the bleeding (autopay prevents future late payments)',
+            },
           },
         },
         {

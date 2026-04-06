@@ -43,6 +43,9 @@ export const unit5: Unit = {
           question: "A checking account is designed for everyday spending and bill payments.",
           correctAnswer: true,
           explanation: "That's exactly its purpose. Checking accounts are built for frequent transactions: debit card swipes, bill payments, and direct deposits.",
+          distractorExplanations: {
+            1: 'Checking accounts are built for frequent transactions: debit card swipes, bill payments, and direct deposits',
+          },
         },
         {
           id: "pf-u5-L1-Q2",
@@ -94,6 +97,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Cover your bills first (keep $2,400 in checking), auto-transfer your savings goal ($400 to savings), and what's left ($400) is your spending money. This is the pay-yourself-first method in action.",
+          distractorExplanations: {
+            1: 'Cover your bills first (keep $2,400 in checking), auto-transfer your savings goal ($400 to savings), and what\'s left ($400) is your spending money',
+            2: 'Cover your bills first (keep $2,400 in checking), auto-transfer your savings goal ($400 to savings), and what\'s left ($400) is your spending money',
+            3: 'Cover your bills first (keep $2,400 in checking), auto-transfer your savings goal ($400 to savings), and what\'s left ($400) is your spending money',
+          },
         },
         {
           id: "pf-u5-L1-Q7",
@@ -107,6 +115,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "All are good habits, but automating savings transfers on payday is the single biggest impact move. It ensures you save before you spend, the habit that builds wealth over time.",
+          distractorExplanations: {
+            0: 'All are good habits, but automating savings transfers on payday is the single biggest impact move',
+            1: 'All are good habits, but automating savings transfers on payday is the single biggest impact move',
+            3: 'All are good habits, but automating savings transfers on payday is the single biggest impact move',
+          },
         },
         {
           id: "pf-u5-L1-Q8",
@@ -120,6 +133,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "When your emergency fund sits in checking right next to your spending money, your brain treats it all as spendable. Putting it in a separate savings account creates a psychological barrier that protects it.",
+          distractorExplanations: {
+            1: 'When your emergency fund sits in checking right next to your spending money, your brain treats it all as spendable',
+            2: 'When your emergency fund sits in checking right next to your spending money, your brain treats it all as spendable',
+            3: 'When your emergency fund sits in checking right next to your spending money, your brain treats it all as spendable',
+          },
         },
       ],
     },
@@ -177,6 +195,9 @@ export const unit5: Unit = {
           question: "Credit unions are owned by their members, not by shareholders trying to maximize profit.",
           correctAnswer: true,
           explanation: "Banks answer to shareholders (profit first), while credit unions answer to members (you). That's why credit unions typically offer better rates and lower fees.",
+          distractorExplanations: {
+            1: 'Banks answer to shareholders (profit first), while credit unions answer to members (you)',
+          },
         },
         {
           id: "pf-u5-L2-Q4",
@@ -190,6 +211,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Bank A: $10,000 x 0.05% = $5/year. Bank B: $10,000 x 4.50% = $450/year. Difference: $445. Same money, same effort, $445 more, just by choosing the right bank.",
+          distractorExplanations: {
+            1: 'Bank A: $10,000 x 0.05% = $5/year. Bank B: $10,000 x 4.50% = $450/year',
+            2: 'Bank A: $10,000 x 0.05% = $5/year. Bank B: $10,000 x 4.50% = $450/year',
+            3: 'Bank A: $10,000 x 0.05% = $5/year. Bank B: $10,000 x 4.50% = $450/year',
+          },
         },
         {
           id: "pf-u5-L2-Q5",
@@ -221,6 +247,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Maya needs cash deposit access (credit union for checking) AND high interest (online bank for savings). Using two institutions gives her the best of both worlds.",
+          distractorExplanations: {
+            1: 'Maya needs cash deposit access (credit union for checking) AND high interest (online bank for savings)',
+            2: 'Maya needs cash deposit access (credit union for checking) AND high interest (online bank for savings)',
+            3: 'Maya needs cash deposit access (credit union for checking) AND high interest (online bank for savings)',
+          },
         },
         {
           id: "pf-u5-L2-Q8",
@@ -234,6 +265,9 @@ export const unit5: Unit = {
             AU: "The Financial Claims Scheme guarantees deposits up to A$250,000 per person, per ADI (bank, building society, or credit union). Your money is equally safe.",
             CA: "CDIC (Canada Deposit Insurance Corporation) protects deposits up to C$100,000 per category, per institution. Credit unions are covered by provincial deposit insurance.",
             IL: "Israel does not have a formal deposit insurance scheme like the FDIC. However, major banks are closely regulated by the Bank of Israel, and the government has historically backed deposits during crises.",
+          },
+          distractorExplanations: {
+            1: 'FDIC covers banks, NCUA covers credit unions, and both insure up to $250,000 per depositor',
           },
         },
       ],
@@ -281,6 +315,9 @@ export const unit5: Unit = {
           question: "Banks charge fees like overdraft fees, monthly maintenance fees, and ATM fees that can add up to hundreds of dollars per year.",
           correctAnswer: true,
           explanation: "Yes! These fees are one of the biggest ways banks make money from everyday customers. The good news: most of them are avoidable.",
+          distractorExplanations: {
+            1: 'These fees are one of the biggest ways banks make money from everyday customers',
+          },
         },
         {
           id: "pf-u5-L3-Q1",
@@ -319,6 +356,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Your bank charges $3 AND the ATM owner charges $3.50, so that $60 cash cost $66.50 total. Use in-network ATMs or get an account that reimburses ATM fees.",
+          distractorExplanations: {
+            1: 'Your bank charges $3 AND the ATM owner charges $3.50, so that $60 cash cost $66.50 total',
+            2: 'Your bank charges $3 AND the ATM owner charges $3.50, so that $60 cash cost $66.50 total',
+            3: 'Your bank charges $3 AND the ATM owner charges $3.50, so that $60 cash cost $66.50 total',
+          },
         },
         {
           id: "pf-u5-L3-Q4",
@@ -344,6 +386,9 @@ export const unit5: Unit = {
           question: "Overdraft 'protection' is a free service that helps you avoid fees.",
           correctAnswer: false,
           explanation: "Overdraft 'protection' lets the bank cover your purchase, then charges you $35 for it. Opting OUT means the transaction just gets declined, which costs $0.",
+          distractorExplanations: {
+            0: 'Overdraft \'protection\' lets the bank cover your purchase, then charges you $35 for it',
+          },
         },
         {
           id: "pf-u5-L3-Q7",
@@ -523,6 +568,9 @@ export const unit5: Unit = {
           question: "Apple Pay is less secure than using a physical credit card.",
           correctAnswer: false,
           explanation: "It's the opposite: Apple Pay creates a unique token for each transaction, so the merchant never sees your real card number. Physical cards expose your actual number to every store.",
+          distractorExplanations: {
+            0: 'It\'s the opposite: Apple Pay creates a unique token for each transaction, so the merchant never sees your real card number',
+          },
         },
         {
           id: "pf-u5-L4-Q2",
@@ -546,6 +594,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "This is a classic P2P scam: they didn't actually send you anything and want you to send real money based on a fake claim. Never send money to someone you don't know without verifying the payment landed first.",
+          distractorExplanations: {
+            1: 'This is a classic P2P scam: they didn\'t actually send you anything and want you to send real money based on a fake claim',
+            2: 'This is a classic P2P scam: they didn\'t actually send you anything and want you to send real money based on a fake claim',
+            3: 'This is a classic P2P scam: they didn\'t actually send you anything and want you to send real money based on a fake claim',
+          },
         },
         {
           id: "pf-u5-L4-Q4",
@@ -582,6 +635,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "For large purchases from strangers, cash is king: meet in person, inspect the item, and pay on the spot. P2P apps offer zero buyer protection, so once you send, the money's gone.",
+          distractorExplanations: {
+            1: 'For large purchases from strangers, cash is king: meet in person, inspect the item, and pay on the spot',
+            2: 'For large purchases from strangers, cash is king: meet in person, inspect the item, and pay on the spot',
+            3: 'For large purchases from strangers, cash is king: meet in person, inspect the item, and pay on the spot',
+          },
         },
         {
           id: "pf-u5-L4-Q7",
@@ -679,6 +737,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "2FA means even if someone steals your password, they STILL can't get in without the second factor, usually a code sent to your phone or generated by an authenticator app. It stops 99% of unauthorized access.",
+          distractorExplanations: {
+            1: '2FA means even if someone steals your password, they STILL can\'t get in without the second factor, usually a code sent to your phone or generated b...',
+            2: '2FA means even if someone steals your password, they STILL can\'t get in without the second factor, usually a code sent to your phone or generated b...',
+            3: '2FA means even if someone steals your password, they STILL can\'t get in without the second factor, usually a code sent to your phone or generated b...',
+          },
         },
         {
           id: "pf-u5-L5-Q4",
@@ -707,6 +770,9 @@ export const unit5: Unit = {
             CA: "The Canadian Code of Practice for Consumer Debit Card Services protects you. If you report within 30 days and weren't negligent, liability is typically zero. Report as soon as possible.",
             IL: "The Banking (Service to Customer) Law and Bank of Israel regulations protect you. Report unauthorized transactions to your bank immediately. Banks must investigate and typically refund fraudulent charges.",
           },
+          distractorExplanations: {
+            0: 'Federal law (Regulation E) protects you: report within 2 business days and your max liability is $50',
+          },
         },
         {
           id: "pf-u5-L5-Q6",
@@ -721,6 +787,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Always hang up and call back using the official number on your card. Real banks never ask for your PIN over the phone, and scammers can spoof caller ID.",
+          distractorExplanations: {
+            1: 'Always hang up and call back using the official number on your card',
+            2: 'Always hang up and call back using the official number on your card',
+            3: 'Always hang up and call back using the official number on your card',
+          },
         },
         {
           id: "pf-u5-L5-Q7",
@@ -818,6 +889,9 @@ export const unit5: Unit = {
           question: "Social Security and Medicare combined make up the largest portion of federal spending.",
           correctAnswer: true,
           explanation: "Together they account for roughly 49% of federal spending, nearly half of every tax dollar. These programs support retired, disabled, and elderly Americans.",
+          distractorExplanations: {
+            1: 'Together they account for roughly 49% of federal spending, nearly half of every tax dollar',
+          },
         },
         {
           id: "pf-u5-L6-Q5",
@@ -837,6 +911,11 @@ export const unit5: Unit = {
             AU: "Your employer pays 11.5% Superannuation Guarantee on top of your salary into your super fund. You also pay the Medicare Levy of 2% of taxable income to fund public healthcare.",
             CA: "CPP (Canada Pension Plan) contributions are split between you and your employer, each paying 5.95% on pensionable earnings. EI (Employment Insurance) premiums are also deducted, at 1.66% for employees.",
             IL: "Bituach Leumi (National Insurance) contributions are automatically deducted from your salary. Rates vary by income bracket, roughly 3.5-12% for employees. This funds pensions, disability, maternity leave, and unemployment benefits.",
+          },
+          distractorExplanations: {
+            1: 'FICA stands for Federal Insurance Contributions Act: 7.65% of your paycheck (6.2% Social Security + 1.45% Medicare), and your employer matches it',
+            2: 'FICA stands for Federal Insurance Contributions Act: 7.65% of your paycheck (6.2% Social Security + 1.45% Medicare), and your employer matches it',
+            3: 'FICA stands for Federal Insurance Contributions Act: 7.65% of your paycheck (6.2% Social Security + 1.45% Medicare), and your employer matches it',
           },
         },
         {
@@ -860,6 +939,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Most people underestimate how many tax-funded services they use daily: roads, GPS, food safety, weather forecasts, and 911 services. You benefit from taxes every single day.",
+          distractorExplanations: {
+            1: 'Most people underestimate how many tax-funded services they use daily: roads, GPS, food safety, weather forecasts, and 911 services',
+            2: 'Most people underestimate how many tax-funded services they use daily: roads, GPS, food safety, weather forecasts, and 911 services',
+            3: 'Most people underestimate how many tax-funded services they use daily: roads, GPS, food safety, weather forecasts, and 911 services',
+          },
         },
         {
           id: "pf-u5-L6-Q8",
@@ -921,6 +1005,9 @@ export const unit5: Unit = {
           question: "If you get a raise that pushes you into a higher tax bracket, ALL of your income gets taxed at the higher rate.",
           correctAnswer: false,
           explanation: "Only the dollars above the bracket threshold get taxed at the higher rate, not your entire income. A raise always means more take-home pay.",
+          distractorExplanations: {
+            0: 'Only the dollars above the bracket threshold get taxed at the higher rate, not your entire income',
+          },
         },
         {
           id: "pf-u5-L7-Q2",
@@ -934,6 +1021,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "$50,000 - $47,151 = $2,849, the only portion taxed at 22%. The rest was taxed at lower rates, giving you an effective rate of about 13.5%.",
+          distractorExplanations: {
+            1: '$50,000 - $47,151 = $2,849, the only portion taxed at 22%',
+            2: '$50,000 - $47,151 = $2,849, the only portion taxed at 22%',
+            3: '$50,000 - $47,151 = $2,849, the only portion taxed at 22%',
+          },
         },
         {
           id: "pf-u5-L7-Q3",
@@ -967,6 +1059,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Your coworker is wrong: only about $3,850 of the raise hits the 22% bracket, costing roughly $385 in extra tax. They'd still take home about $4,615 more per year.",
+          distractorExplanations: {
+            1: 'Your coworker is wrong: only about $3,850 of the raise hits the 22% bracket, costing roughly $385 in extra tax',
+            2: 'Your coworker is wrong: only about $3,850 of the raise hits the 22% bracket, costing roughly $385 in extra tax',
+            3: 'Your coworker is wrong: only about $3,850 of the raise hits the 22% bracket, costing roughly $385 in extra tax',
+          },
         },
         {
           id: "pf-u5-L7-Q6",
@@ -997,6 +1094,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Your income is taxed in layers: first dollars are taxed lightly, and only your highest dollars face the top rate. Earning more always means more take-home pay.",
+          distractorExplanations: {
+            1: 'Your income is taxed in layers: first dollars are taxed lightly, and only your highest dollars face the top rate',
+            2: 'Your income is taxed in layers: first dollars are taxed lightly, and only your highest dollars face the top rate',
+            3: 'Your income is taxed in layers: first dollars are taxed lightly, and only your highest dollars face the top rate',
+          },
         },
       ],
     },
@@ -1065,6 +1167,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "As a 1099, you pay an extra ~7.65% in self-employment tax and don't get benefits. A $50/hour 1099 rate is roughly equivalent to $38-40/hour W-2. Always adjust when comparing offers.",
+          distractorExplanations: {
+            1: 'As a 1099, you pay an extra ~7.65% in self-employment tax and don\'t get benefits',
+            2: 'As a 1099, you pay an extra ~7.65% in self-employment tax and don\'t get benefits',
+            3: 'As a 1099, you pay an extra ~7.65% in self-employment tax and don\'t get benefits',
+          },
         },
         {
           id: "pf-u5-L8-Q3",
@@ -1072,6 +1179,9 @@ export const unit5: Unit = {
           question: "1099 contractors have the advantage of being able to deduct business expenses like home office, internet, and mileage.",
           correctAnswer: true,
           explanation: "You can deduct home office, internet, phone, equipment, mileage, and other business expenses. These deductions reduce your taxable income, but you need to track them carefully.",
+          distractorExplanations: {
+            1: 'You can deduct home office, internet, phone, equipment, mileage, and other business expenses',
+          },
         },
         {
           id: "pf-u5-L8-Q4",
@@ -1120,6 +1230,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Jordan owes both income tax AND 15.3% self-employment tax on that $12,000 in freelance income. Without quarterly payments, she'll face a surprise bill of $3,000-$4,000 plus underpayment penalties.",
+          distractorExplanations: {
+            1: 'Jordan owes both income tax AND 15.3% self-employment tax on that $12,000 in freelance income',
+            2: 'Jordan owes both income tax AND 15.3% self-employment tax on that $12,000 in freelance income',
+            3: 'Jordan owes both income tax AND 15.3% self-employment tax on that $12,000 in freelance income',
+          },
         },
         {
           id: "pf-u5-L8-Q8",
@@ -1180,6 +1295,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "$52,000 - $14,600 = $37,400. That's what the IRS actually taxes. The standard deduction essentially makes your first $14,600 tax-free.",
+          distractorExplanations: {
+            1: 'The correct answer is $37,400, not $52,000',
+            2: 'The correct answer is $37,400, not $14,600',
+            3: 'The correct answer is $37,400, not $66,600',
+          },
         },
         {
           id: "pf-u5-L9-Q2",
@@ -1187,6 +1307,9 @@ export const unit5: Unit = {
           question: "About 90% of Americans take the standard deduction instead of itemizing.",
           correctAnswer: true,
           explanation: "True. Since the Tax Cuts and Jobs Act of 2017 nearly doubled the standard deduction, itemizing only makes sense for a small percentage of filers with very large mortgage interest, charitable giving, or state/local tax payments.",
+          distractorExplanations: {
+            1: 'True. Since the Tax Cuts and Jobs Act of 2017 nearly doubled the standard deduction, itemizing only makes sense for a small percentage of filers wi...',
+          },
         },
         {
           id: "pf-u5-L9-Q3",
@@ -1219,6 +1342,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "David's itemized deductions ($9,700) are less than the standard deduction ($14,600). He should take the standard deduction and save $4,900 more in tax-free income. Plus, zero receipts to track.",
+          distractorExplanations: {
+            1: 'David\'s itemized deductions ($9,700) are less than the standard deduction ($14,600)',
+            2: 'David\'s itemized deductions ($9,700) are less than the standard deduction ($14,600)',
+            3: 'David\'s itemized deductions ($9,700) are less than the standard deduction ($14,600)',
+          },
         },
         {
           id: "pf-u5-L9-Q6",
@@ -1240,6 +1368,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "The standard deduction ($14,600) far exceeds the $500 itemized deduction. You pick one or the other, and for most people without a mortgage, standard wins.",
+          distractorExplanations: {
+            1: 'The standard deduction ($14,600) far exceeds the $500 itemized deduction',
+            2: 'The standard deduction ($14,600) far exceeds the $500 itemized deduction',
+            3: 'The standard deduction ($14,600) far exceeds the $500 itemized deduction',
+          },
         },
         {
           id: "pf-u5-L9-Q8",
@@ -1296,6 +1429,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "A deduction reduces your taxable income (indirect savings). A credit directly reduces your tax bill (direct savings). A $1,000 credit is always worth more than a $1,000 deduction.",
+          distractorExplanations: {
+            1: 'A deduction reduces your taxable income (indirect savings)',
+            2: 'A deduction reduces your taxable income (indirect savings)',
+            3: 'A deduction reduces your taxable income (indirect savings)',
+          },
         },
         {
           id: "pf-u5-L10-Q2",
@@ -1319,6 +1457,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Lisa's $5,584 in credits wipes out her $2,800 tax bill completely. Since the EITC is 'refundable,' she actually gets money back for the difference.",
+          distractorExplanations: {
+            1: 'Lisa\'s $5,584 in credits wipes out her $2,800 tax bill completely',
+            2: 'Lisa\'s $5,584 in credits wipes out her $2,800 tax bill completely',
+            3: 'Lisa\'s $5,584 in credits wipes out her $2,800 tax bill completely',
+          },
         },
         {
           id: "pf-u5-L10-Q4",
@@ -1326,6 +1469,9 @@ export const unit5: Unit = {
           question: "A 'refundable' tax credit can give you money back even if you owe $0 in taxes.",
           correctAnswer: true,
           explanation: "Nonrefundable credits can only reduce your tax to $0. Refundable credits (like the EITC) go further: if the credit exceeds your tax bill, the IRS sends you the difference as a refund.",
+          distractorExplanations: {
+            1: 'Nonrefundable credits can only reduce your tax to $0',
+          },
         },
         {
           id: "pf-u5-L10-Q5",
@@ -1436,6 +1582,11 @@ export const unit5: Unit = {
             CA: "The personal tax return deadline is April 30 (or June 15 for self-employed, though any tax owing is still due April 30). The Canadian tax year follows the calendar year, January 1 to December 31.",
             IL: "The Israeli tax year follows the calendar year. Annual returns for self-employed are due by April 30 (or later with an extension). Most salaried employees don't need to file. The tax authority (Rashut HaMisim) sends notices if a return is required.",
           },
+          distractorExplanations: {
+            1: 'April 15 is Tax Day (or the next business day if it falls on a weekend/holiday)',
+            2: 'April 15 is Tax Day (or the next business day if it falls on a weekend/holiday)',
+            3: 'April 15 is Tax Day (or the next business day if it falls on a weekend/holiday)',
+          },
         },
         {
           id: "pf-u5-L11-Q3",
@@ -1452,6 +1603,9 @@ export const unit5: Unit = {
           question: "You have to pay a professional to file your taxes.",
           correctAnswer: false,
           explanation: "Most people with a W-2 can file for free using IRS Free File, FreeTaxUSA, or Cash App Taxes. Only pay for help if your taxes are genuinely complex.",
+          distractorExplanations: {
+            0: 'Most people with a W-2 can file for free using IRS Free File, FreeTaxUSA, or Cash App Taxes',
+          },
         },
         {
           id: "pf-u5-L11-Q5",
@@ -1475,6 +1629,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "An extension gives you until October 15 to file, and it's free and automatic. But an extension to file is not an extension to pay: estimate and pay what you owe by April 15.",
+          distractorExplanations: {
+            1: 'An extension gives you until October 15 to file, and it\'s free and automatic',
+            2: 'An extension gives you until October 15 to file, and it\'s free and automatic',
+            3: 'An extension gives you until October 15 to file, and it\'s free and automatic',
+          },
         },
         {
           id: "pf-u5-L11-Q7",
@@ -1550,6 +1709,9 @@ export const unit5: Unit = {
           question: "The failure-to-file penalty is much worse than the failure-to-pay penalty.",
           correctAnswer: true,
           explanation: "Failure-to-file is 5% per month (up to 25%), while failure-to-pay is only 0.5% per month. If you can't afford to pay, file anyway and set up a payment plan.",
+          distractorExplanations: {
+            1: 'Failure-to-file is 5% per month (up to 25%), while failure-to-pay is only 0.5% per month',
+          },
         },
         {
           id: "pf-u5-L12-Q3",
@@ -1563,6 +1725,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "The IRS receives a copy of every 1099 issued and automatically matches it to your return. If you leave it out, you'll get a letter demanding the tax plus interest and a 20% accuracy penalty.",
+          distractorExplanations: {
+            1: 'The IRS receives a copy of every 1099 issued and automatically matches it to your return',
+            2: 'The IRS receives a copy of every 1099 issued and automatically matches it to your return',
+            3: 'The IRS receives a copy of every 1099 issued and automatically matches it to your return',
+          },
         },
         {
           id: "pf-u5-L12-Q4",
@@ -1577,6 +1744,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Head of Household gives Marcus a $21,900 standard deduction (vs $14,600 Single) and wider tax brackets. He's been overpaying roughly $800-$1,000/year, and he can amend past returns to get that money back.",
+          distractorExplanations: {
+            1: 'Head of Household gives Marcus a $21,900 standard deduction (vs $14,600 Single) and wider tax brackets',
+            2: 'Head of Household gives Marcus a $21,900 standard deduction (vs $14,600 Single) and wider tax brackets',
+            3: 'Head of Household gives Marcus a $21,900 standard deduction (vs $14,600 Single) and wider tax brackets',
+          },
         },
         {
           id: "pf-u5-L12-Q5",
@@ -1627,6 +1799,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Filing early gives you time to catch errors, double-checking prevents typos, and reporting all income avoids the biggest audit trigger. This simple combo prevents most common tax problems.",
+          distractorExplanations: {
+            1: 'Filing early gives you time to catch errors, double-checking prevents typos, and reporting all income avoids the biggest audit trigger',
+            2: 'Filing early gives you time to catch errors, double-checking prevents typos, and reporting all income avoids the biggest audit trigger',
+            3: 'Filing early gives you time to catch errors, double-checking prevents typos, and reporting all income avoids the biggest audit trigger',
+          },
         },
       ],
     },
@@ -1652,6 +1829,11 @@ export const unit5: Unit = {
             options: ["They forgot to", "Alex is a freelancer (1099), not an employee (W-2)", "Freelancers don't pay taxes", "Alex opted out of withholding"],
             correctIndex: 1,
             explanation: "As a 1099 independent contractor, Alex is responsible for paying their own taxes. Employers only withhold taxes for W-2 employees.",
+            distractorExplanations: {
+              0: 'As a 1099 independent contractor, Alex is responsible for paying their own taxes',
+              2: 'As a 1099 independent contractor, Alex is responsible for paying their own taxes',
+              3: 'As a 1099 independent contractor, Alex is responsible for paying their own taxes',
+            },
           },
         },
         {
@@ -1678,6 +1860,9 @@ export const unit5: Unit = {
             question: "Self-employed people can deduct half of their self-employment tax from their taxable income.",
             correctAnswer: true,
             explanation: "Yes! This is one of the most important deductions for freelancers. It compensates for the fact that you're paying both the employer and employee portions of FICA.",
+            distractorExplanations: {
+              1: 'This is one of the most important deductions for freelancers',
+            },
           },
         },
         {
@@ -1690,6 +1875,11 @@ export const unit5: Unit = {
             options: ["File taxes earlier", "Make quarterly estimated tax payments", "Switch to a W-2 job", "Earn less than $10,000"],
             correctIndex: 1,
             explanation: "The IRS requires freelancers who expect to owe $1,000+ to make quarterly estimated payments. It's like creating your own withholding system.",
+            distractorExplanations: {
+              0: 'The IRS requires freelancers who expect to owe $1,000+ to make quarterly estimated payments',
+              2: 'The IRS requires freelancers who expect to owe $1,000+ to make quarterly estimated payments',
+              3: 'The IRS requires freelancers who expect to owe $1,000+ to make quarterly estimated payments',
+            },
           },
         },
         {

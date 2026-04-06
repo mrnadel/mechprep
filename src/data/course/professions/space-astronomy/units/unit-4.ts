@@ -29,6 +29,9 @@ export const unit4: Unit = {
           question: "The Sun is a star.",
           correctAnswer: true,
           explanation: "The Sun is an average-sized star. It just looks bigger because it's 93 million miles closer than any other star.",
+          distractorExplanations: {
+            1: 'The Sun is an average-sized star. It just looks bigger because it\'s 93 million miles closer than any other star',
+          },
         },
         {
           id: "sp-u4-L0-Q2",
@@ -42,6 +45,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Current estimates put it at around 200 billion stars. Each one has its own story.",
+          distractorExplanations: {
+            1: 'The correct answer is About 200 billion, not About 1 million',
+            2: 'The correct answer is About 200 billion, not About 500',
+            3: 'The correct answer is About 200 billion, not About 10 billion',
+          },
         },
         {
           id: "sp-u4-L0-T2",
@@ -55,6 +63,9 @@ export const unit4: Unit = {
           question: "All stars eventually die.",
           correctAnswer: true,
           explanation: "Every star runs out of fuel eventually. Some burn out quietly, others explode in spectacular supernovae.",
+          distractorExplanations: {
+            1: 'Every star runs out of fuel eventually',
+          },
         },
         {
           id: "sp-u4-L0-Q4",
@@ -68,6 +79,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "Mass is the single most important property of a star. It controls temperature, brightness, lifespan, and how the star dies.",
+          distractorExplanations: {
+            0: 'Mass is the single most important property of a star',
+            1: 'Mass is the single most important property of a star',
+            3: 'Mass is the single most important property of a star',
+          },
         },
         {
           id: "sp-u4-L0-Q5",
@@ -96,6 +112,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "Stars fuse hydrogen atoms into helium, releasing massive energy. It's not burning. It's nuclear fusion.",
+          distractorExplanations: {
+            0: 'Stars fuse hydrogen atoms into helium, releasing massive energy',
+            2: 'Stars fuse hydrogen atoms into helium, releasing massive energy',
+            3: 'Stars fuse hydrogen atoms into helium, releasing massive energy',
+          },
         },
         {
           id: "sp-u4-L0-Q7",
@@ -103,6 +124,9 @@ export const unit4: Unit = {
           question: "Stars shine because they're on fire, like a campfire.",
           correctAnswer: false,
           explanation: "Fire is a chemical reaction that needs oxygen. Stars use nuclear fusion, which is millions of times more powerful.",
+          distractorExplanations: {
+            0: 'Fire is a chemical reaction that needs oxygen',
+          },
         },
       ],
     },
@@ -133,6 +157,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Stars form inside nebulae, which are massive clouds of hydrogen gas and dust.",
+          distractorExplanations: {
+            1: 'Stars form inside nebulae, which are massive clouds of hydrogen gas and dust',
+            2: 'Stars form inside nebulae, which are massive clouds of hydrogen gas and dust',
+            3: 'Stars form inside nebulae, which are massive clouds of hydrogen gas and dust',
+          },
         },
         {
           id: "sp-u4-L1-Q2",
@@ -140,6 +169,9 @@ export const unit4: Unit = {
           question: "A nebula is a cloud of gas and dust in space.",
           correctAnswer: true,
           explanation: "Nebulae are the raw material for new stars. The Orion Nebula is one of the most famous examples.",
+          distractorExplanations: {
+            1: 'Nebulae are the raw material for new stars',
+          },
         },
         {
           id: "sp-u4-L1-T2",
@@ -160,6 +192,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Gravity is the architect of stars. It pulls gas inward until conditions are extreme enough for fusion.",
+          distractorExplanations: {
+            1: 'Gravity is the architect of stars. It pulls gas inward until conditions are extreme enough for fusion',
+            2: 'Gravity is the architect of stars. It pulls gas inward until conditions are extreme enough for fusion',
+            3: 'Gravity is the architect of stars. It pulls gas inward until conditions are extreme enough for fusion',
+          },
         },
         {
           id: "sp-u4-L1-Q4",
@@ -189,6 +226,9 @@ export const unit4: Unit = {
           question: "Our Sun formed inside a nebula about 4.6 billion years ago.",
           correctAnswer: true,
           explanation: "The Sun was born from a collapsing cloud of gas and dust. The leftovers became the planets, including Earth.",
+          distractorExplanations: {
+            1: 'The Sun was born from a collapsing cloud of gas and dust',
+          },
         },
         {
           id: "sp-u4-L1-Q7",
@@ -211,6 +251,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Fusion creates outward pressure that perfectly balances gravity's inward pull. This balance keeps the star stable for billions of years.",
+          distractorExplanations: {
+            1: 'Fusion creates outward pressure that perfectly balances gravity\'s inward pull',
+            2: 'Fusion creates outward pressure that perfectly balances gravity\'s inward pull',
+            3: 'Fusion creates outward pressure that perfectly balances gravity\'s inward pull',
+          },
         },
       ],
     },
@@ -235,6 +280,9 @@ export const unit4: Unit = {
           question: "A blue star is hotter than a red star.",
           correctAnswer: true,
           explanation: "Blue stars have surface temperatures above 20,000 K. Red stars sit below 3,500 K. Color reveals temperature.",
+          distractorExplanations: {
+            1: 'Blue stars have surface temperatures above 20,000 K',
+          },
         },
         {
           id: "sp-u4-L2-Q2",
@@ -248,6 +296,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "Red stars are the coolest visible stars, with surface temperatures around 2,500 to 3,500 K.",
+          distractorExplanations: {
+            0: 'Red stars are the coolest visible stars, with surface temperatures around 2,500 to 3,500 K',
+            2: 'Red stars are the coolest visible stars, with surface temperatures around 2,500 to 3,500 K',
+            3: 'Red stars are the coolest visible stars, with surface temperatures around 2,500 to 3,500 K',
+          },
         },
         {
           id: "sp-u4-L2-T2",
@@ -262,6 +315,9 @@ export const unit4: Unit = {
           question: "Blue stars are hotter than red stars.",
           correctAnswer: true,
           explanation: "The color scale goes from cool red to hot blue. It is the opposite of everyday color associations.",
+          distractorExplanations: {
+            1: 'The color scale goes from cool red to hot blue',
+          },
         },
         {
           id: "sp-u4-L2-Q3",
@@ -303,6 +359,9 @@ export const unit4: Unit = {
           question: "Hotter stars tend to be more massive and burn through their fuel faster.",
           correctAnswer: true,
           explanation: "Massive blue stars can burn through their hydrogen in just a few million years. Our Sun will last about 10 billion.",
+          distractorExplanations: {
+            1: 'Massive blue stars can burn through their hydrogen in just a few million years',
+          },
         },
         {
           id: "sp-u4-L2-Q7",
@@ -325,6 +384,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "Red dwarfs burn fuel so slowly they can shine for trillions of years. Blue giants burn out in just millions.",
+          distractorExplanations: {
+            0: 'Red dwarfs burn fuel so slowly they can shine for trillions of years',
+            1: 'Red dwarfs burn fuel so slowly they can shine for trillions of years',
+            2: 'Red dwarfs burn fuel so slowly they can shine for trillions of years',
+          },
         },
       ],
     },
@@ -355,6 +419,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "The HR diagram maps temperature (or color) on one axis and luminosity (brightness) on the other.",
+          distractorExplanations: {
+            0: 'The HR diagram maps temperature (or color) on one axis and luminosity (brightness) on the other',
+            1: 'The HR diagram maps temperature (or color) on one axis and luminosity (brightness) on the other',
+            2: 'The HR diagram maps temperature (or color) on one axis and luminosity (brightness) on the other',
+          },
         },
         {
           id: "sp-u4-L3-Q2",
@@ -362,6 +431,9 @@ export const unit4: Unit = {
           question: "Most stars, including our Sun, fall on a band called the main sequence.",
           correctAnswer: true,
           explanation: "About 90% of stars sit on the main sequence, a diagonal band running from hot, bright stars to cool, dim ones.",
+          distractorExplanations: {
+            1: 'About 90% of stars sit on the main sequence, a diagonal band running from hot, bright stars to cool, dim ones',
+          },
         },
         {
           id: "sp-u4-L3-T2",
@@ -382,6 +454,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Our Sun is a middle-of-the-road star: medium temperature, medium brightness, right in the center of the main sequence.",
+          distractorExplanations: {
+            1: 'Our Sun is a middle-of-the-road star: medium temperature, medium brightness, right in the center of the main sequence',
+            2: 'Our Sun is a middle-of-the-road star: medium temperature, medium brightness, right in the center of the main sequence',
+            3: 'Our Sun is a middle-of-the-road star: medium temperature, medium brightness, right in the center of the main sequence',
+          },
         },
         {
           id: "sp-u4-L3-Q4",
@@ -421,6 +498,9 @@ export const unit4: Unit = {
           question: "A star's position on the HR diagram changes as it ages.",
           correctAnswer: true,
           explanation: "Stars move off the main sequence as they exhaust hydrogen. They swell into giants, then collapse into dwarfs or explode.",
+          distractorExplanations: {
+            1: 'Stars move off the main sequence as they exhaust hydrogen',
+          },
         },
         {
           id: "sp-u4-L3-Q8",
@@ -434,6 +514,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "White dwarfs are extremely hot but tiny, so their total light output is low. They sit below and to the left of the main sequence.",
+          distractorExplanations: {
+            0: 'White dwarfs are extremely hot but tiny, so their total light output is low',
+            1: 'White dwarfs are extremely hot but tiny, so their total light output is low',
+            3: 'White dwarfs are extremely hot but tiny, so their total light output is low',
+          },
         },
       ],
     },
@@ -458,6 +543,9 @@ export const unit4: Unit = {
           question: "A star dies when it runs out of hydrogen fuel in its core.",
           correctAnswer: true,
           explanation: "Once the hydrogen fuel is gone, fusion slows and gravity begins to crush the core. The star's fate is sealed.",
+          distractorExplanations: {
+            1: 'Once the hydrogen fuel is gone, fusion slows and gravity begins to crush the core',
+          },
         },
         {
           id: "sp-u4-L4-Q2",
@@ -471,6 +559,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "Mass is everything. Stars under about 8 solar masses die gently. Stars above that threshold explode as supernovae.",
+          distractorExplanations: {
+            0: 'Mass is everything. Stars under about 8 solar masses die gently',
+            1: 'Mass is everything. Stars under about 8 solar masses die gently',
+            2: 'Mass is everything. Stars under about 8 solar masses die gently',
+          },
         },
         {
           id: "sp-u4-L4-T2",
@@ -506,6 +599,9 @@ export const unit4: Unit = {
           question: "The iron in your blood was created inside a dying star.",
           correctAnswer: true,
           explanation: "Iron and all elements heavier than hydrogen and helium were forged in stellar cores and supernovae. You are literally made of stardust.",
+          distractorExplanations: {
+            1: 'Iron and all elements heavier than hydrogen and helium were forged in stellar cores and supernovae',
+          },
         },
         {
           id: "sp-u4-L4-Q6",
@@ -538,6 +634,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "Our Sun isn't massive enough for a supernova. In about 5 billion years, it will swell into a red giant, then shrink into a white dwarf.",
+          distractorExplanations: {
+            0: 'Our Sun isn\'t massive enough for a supernova',
+            1: 'Our Sun isn\'t massive enough for a supernova',
+            3: 'Our Sun isn\'t massive enough for a supernova',
+          },
         },
       ],
     },
@@ -562,6 +663,9 @@ export const unit4: Unit = {
           question: "A neutron star is denser than our Sun.",
           correctAnswer: true,
           explanation: "A neutron star packs more mass than the Sun into a sphere just 20 km wide. It's the densest observable matter in the universe.",
+          distractorExplanations: {
+            1: 'A neutron star packs more mass than the Sun into a sphere just 20 km wide',
+          },
         },
         {
           id: "sp-u4-L5-Q2",
@@ -575,6 +679,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "Neutron stars are about the size of a city, roughly 20 km in diameter. Yet they contain 1 to 2 solar masses.",
+          distractorExplanations: {
+            0: 'The correct answer is About 20 km, not About 2 km',
+            1: 'The correct answer is About 20 km, not About 20,000 km',
+            2: 'The correct answer is About 20 km, not About 200 km',
+          },
         },
         {
           id: "sp-u4-L5-T2",
@@ -589,6 +698,9 @@ export const unit4: Unit = {
           question: "A pulsar is a spinning neutron star that sends out beams of radiation.",
           correctAnswer: true,
           explanation: "Pulsars emit radiation from their poles. As they spin, the beams sweep past Earth like a lighthouse, creating regular pulses.",
+          distractorExplanations: {
+            1: 'Pulsars emit radiation from their poles',
+          },
         },
         {
           id: "sp-u4-L5-Q3",
@@ -603,6 +715,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "Pulsars are rotating neutron stars whose radiation beams sweep past Earth at regular intervals, creating detectable pulses with clockwork precision.",
+          distractorExplanations: {
+            0: 'Pulsars are rotating neutron stars whose radiation beams sweep past Earth at regular intervals, creating detectable pulses with clockwork precision',
+            1: 'Pulsars are rotating neutron stars whose radiation beams sweep past Earth at regular intervals, creating detectable pulses with clockwork precision',
+            3: 'Pulsars are rotating neutron stars whose radiation beams sweep past Earth at regular intervals, creating detectable pulses with clockwork precision',
+          },
         },
         {
           id: "sp-u4-L5-Q4",
@@ -618,6 +735,9 @@ export const unit4: Unit = {
           question: "All neutron stars are pulsars.",
           correctAnswer: false,
           explanation: "Only neutron stars whose radiation beams happen to point toward Earth appear as pulsars. Many neutron stars aren't oriented our way.",
+          distractorExplanations: {
+            0: 'Only neutron stars whose radiation beams happen to point toward Earth appear as pulsars',
+          },
         },
         {
           id: "sp-u4-L5-T3",
@@ -631,6 +751,9 @@ export const unit4: Unit = {
           question: "A collapsing core heavier than about 3 solar masses becomes a black hole instead of a neutron star.",
           correctAnswer: true,
           explanation: "Below about 3 solar masses, the core can stabilize as a neutron star. Above that, gravity overwhelms everything and a black hole forms.",
+          distractorExplanations: {
+            1: 'Below about 3 solar masses, the core can stabilize as a neutron star',
+          },
         },
         {
           id: "sp-u4-L5-Q6",
@@ -653,6 +776,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "Millisecond pulsars can rotate over 700 times per second. The precision of their pulses rivals atomic clocks.",
+          distractorExplanations: {
+            0: 'Millisecond pulsars can rotate over 700 times per second',
+            1: 'Millisecond pulsars can rotate over 700 times per second',
+            3: 'Millisecond pulsars can rotate over 700 times per second',
+          },
         },
         {
           id: "sp-u4-L5-Q8",
@@ -666,6 +794,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Neutron star material is so dense that a single teaspoon would weigh roughly a billion tons on Earth's surface.",
+          distractorExplanations: {
+            1: 'Neutron star material is so dense that a single teaspoon would weigh roughly a billion tons on Earth\'s surface',
+            2: 'Neutron star material is so dense that a single teaspoon would weigh roughly a billion tons on Earth\'s surface',
+            3: 'Neutron star material is so dense that a single teaspoon would weigh roughly a billion tons on Earth\'s surface',
+          },
         },
       ],
     },
@@ -893,6 +1026,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "A light-year is a unit of distance, not time. Light travels about 9.46 trillion kilometers in one year. When you see a star 100 light-years away, you're seeing it as it was 100 years ago.",
+          distractorExplanations: {
+            0: 'A light-year is a unit of distance, not time',
+            2: 'A light-year is a unit of distance, not time',
+            3: 'A light-year is a unit of distance, not time',
+          },
         },
         {
           id: "sp-u4-rev-Q2",
@@ -900,6 +1038,9 @@ export const unit4: Unit = {
           question: "Seasons on Earth are caused by its tilted axis, not by distance from the Sun.",
           correctAnswer: true,
           explanation: "Earth is actually slightly closer to the Sun during the Northern Hemisphere's winter. The 23.5-degree tilt of Earth's axis is what causes seasons.",
+          distractorExplanations: {
+            1: 'Earth is actually slightly closer to the Sun during the Northern Hemisphere\'s winter',
+          },
         },
         {
           id: "sp-u4-rev-Q3",
@@ -915,6 +1056,9 @@ export const unit4: Unit = {
           question: "Jupiter and Saturn are classified as gas giants.",
           correctAnswer: true,
           explanation: "Jupiter and Saturn are the gas giants: massive planets made mostly of hydrogen and helium. Uranus and Neptune are the ice giants, with more water, ammonia, and methane.",
+          distractorExplanations: {
+            1: 'Jupiter and Saturn are the gas giants: massive planets made mostly of hydrogen and helium',
+          },
         },
         {
           id: "sp-u4-rev-Q5",
@@ -954,6 +1098,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Moon's gravitational pull creates two bulges in Earth's oceans. The Sun also contributes. Earth's rotation moves coastlines through these bulges, creating two high tides per day.",
+          distractorExplanations: {
+            0: 'The Moon\'s gravitational pull creates two bulges in Earth\'s oceans',
+            2: 'The Moon\'s gravitational pull creates two bulges in Earth\'s oceans',
+            3: 'The Moon\'s gravitational pull creates two bulges in Earth\'s oceans',
+          },
         },
         {
           id: "sp-u4-rev-Q9",
@@ -967,6 +1116,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "Mass controls everything: a star's temperature, brightness, lifespan, and how it dies. More massive stars burn hotter and die younger, often in supernovae.",
+          distractorExplanations: {
+            0: 'Mass controls everything: a star\'s temperature, brightness, lifespan, and how it dies',
+            1: 'Mass controls everything: a star\'s temperature, brightness, lifespan, and how it dies',
+            3: 'Mass controls everything: a star\'s temperature, brightness, lifespan, and how it dies',
+          },
         },
         {
           id: "sp-u4-rev-Q10",
@@ -981,6 +1135,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "Planets appear as tiny disks rather than point sources, so their light doesn't shimmer as much through the atmosphere. A steady, bright dot is likely a planet like Venus, Jupiter, or Mars.",
+          distractorExplanations: {
+            0: 'Planets appear as tiny disks rather than point sources, so their light doesn\'t shimmer as much through the atmosphere',
+            2: 'Planets appear as tiny disks rather than point sources, so their light doesn\'t shimmer as much through the atmosphere',
+            3: 'Planets appear as tiny disks rather than point sources, so their light doesn\'t shimmer as much through the atmosphere',
+          },
         },
       ],
     },

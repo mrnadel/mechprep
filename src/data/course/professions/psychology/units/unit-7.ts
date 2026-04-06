@@ -29,6 +29,9 @@ export const unit7: Unit = {
           question: "System 1 thinking is fast, automatic, and requires little effort.",
           correctAnswer: true,
           explanation: "System 1 runs on autopilot. It handles things like recognizing faces, reading emotions, and driving a familiar route.",
+          distractorExplanations: {
+            1: 'System 1 runs on autopilot. It handles things like recognizing faces, reading emotions, and driving a familiar route',
+          },
         },
         {
           id: "psy-u7-L1-Q2",
@@ -42,6 +45,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 2,
           explanation: "Mental multiplication requires focused attention and effort. That's System 2 territory.",
+          distractorExplanations: {
+            0: 'Mental multiplication requires focused attention and effort',
+            1: 'Mental multiplication requires focused attention and effort',
+            3: 'Mental multiplication requires focused attention and effort',
+          },
         },
         {
           id: "psy-u7-L1-T2",
@@ -55,6 +63,9 @@ export const unit7: Unit = {
           question: "System 2 is always running in the background, while System 1 only activates when needed.",
           correctAnswer: false,
           explanation: "It's the other way around. System 1 runs constantly and handles routine tasks. System 2 is the lazy one that only kicks in when something requires focused effort.",
+          distractorExplanations: {
+            0: 'System 1 runs constantly and handles routine tasks',
+          },
         },
         {
           id: "psy-u7-L1-Q3",
@@ -85,6 +96,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 3,
           explanation: "Most biases are System 1 shortcuts gone wrong. They're fast and usually helpful, but they sacrifice accuracy for speed.",
+          distractorExplanations: {
+            0: 'Most biases are System 1 shortcuts gone wrong',
+            1: 'Most biases are System 1 shortcuts gone wrong',
+            2: 'Most biases are System 1 shortcuts gone wrong',
+          },
         },
         {
           id: "psy-u7-L1-T3",
@@ -105,6 +121,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 2,
           explanation: "Most people's System 1 says '10 cents' instantly, but that's wrong. If the ball is 10 cents and the bat is $1 more, the bat would be $1.10, totaling $1.20. The ball is 5 cents.",
+          distractorExplanations: {
+            0: 'Most people\'s System 1 says \'10 cents\' instantly, but that\'s wrong',
+            1: 'Most people\'s System 1 says \'10 cents\' instantly, but that\'s wrong',
+            3: 'Most people\'s System 1 says \'10 cents\' instantly, but that\'s wrong',
+          },
         },
         {
           id: "psy-u7-L1-Q7",
@@ -112,6 +133,9 @@ export const unit7: Unit = {
           question: "System 2 is always better than System 1 for making decisions.",
           correctAnswer: false,
           explanation: "System 1 is excellent for routine decisions and situations requiring quick reactions. Using System 2 for everything would be exhausting and slow. Each has its place.",
+          distractorExplanations: {
+            0: 'System 1 is excellent for routine decisions and situations requiring quick reactions',
+          },
         },
         {
           id: "psy-u7-L1-Q8",
@@ -146,6 +170,9 @@ export const unit7: Unit = {
           question: "The pain of losing $50 is psychologically stronger than the pleasure of gaining $50.",
           correctAnswer: true,
           explanation: "Research consistently shows losses feel about 2x as powerful as equivalent gains. This is loss aversion.",
+          distractorExplanations: {
+            1: 'Research consistently shows losses feel about 2x as powerful as equivalent gains',
+          },
         },
         {
           id: "psy-u7-L2-Q2",
@@ -159,6 +186,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 3,
           explanation: "Even though it's mathematically fair, most people refuse because losing $100 hurts more than winning $100 feels good.",
+          distractorExplanations: {
+            0: 'Even though it\'s mathematically fair, most people refuse because losing $100 hurts more than winning $100 feels good',
+            1: 'Even though it\'s mathematically fair, most people refuse because losing $100 hurts more than winning $100 feels good',
+            2: 'Even though it\'s mathematically fair, most people refuse because losing $100 hurts more than winning $100 feels good',
+          },
         },
         {
           id: "psy-u7-L2-T2",
@@ -206,6 +238,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 1,
           explanation: "Loss framing is more powerful because people work harder to avoid losing something than to gain the same amount.",
+          distractorExplanations: {
+            0: 'Loss framing is more powerful because people work harder to avoid losing something than to gain the same amount',
+            2: 'Loss framing is more powerful because people work harder to avoid losing something than to gain the same amount',
+            3: 'Loss framing is more powerful because people work harder to avoid losing something than to gain the same amount',
+          },
         },
         {
           id: "psy-u7-L2-T3",
@@ -225,6 +262,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 1,
           explanation: "You're afraid of 'losing' the time invested (sunk cost) and losing the relationship itself (loss aversion). Neither the time nor the unhappiness will improve by staying.",
+          distractorExplanations: {
+            0: 'You\'re afraid of \'losing\' the time invested (sunk cost) and losing the relationship itself (loss aversion)',
+            2: 'You\'re afraid of \'losing\' the time invested (sunk cost) and losing the relationship itself (loss aversion)',
+            3: 'You\'re afraid of \'losing\' the time invested (sunk cost) and losing the relationship itself (loss aversion)',
+          },
         },
         {
           id: "psy-u7-L2-Q7",
@@ -232,6 +274,9 @@ export const unit7: Unit = {
           question: "Loss aversion means people should never take risks.",
           correctAnswer: false,
           explanation: "Loss aversion is a bias, not a rule. Sometimes the potential gain far outweighs the potential loss. Awareness helps you evaluate risks more objectively.",
+          distractorExplanations: {
+            0: 'Loss aversion is a bias, not a rule',
+          },
         },
         {
           id: "psy-u7-L2-Q8",
@@ -245,6 +290,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 3,
           explanation: "Free trials exploit loss aversion. After using a service, canceling feels like losing something you already 'own.'",
+          distractorExplanations: {
+            0: 'Free trials exploit loss aversion. After using a service, canceling feels like losing something you already \'own.\'',
+            1: 'Free trials exploit loss aversion. After using a service, canceling feels like losing something you already \'own.\'',
+            2: 'Free trials exploit loss aversion. After using a service, canceling feels like losing something you already \'own.\'',
+          },
         },
       ],
     },
@@ -270,6 +320,9 @@ export const unit7: Unit = {
           question: "Having more options always leads to better decisions and more satisfaction.",
           correctAnswer: false,
           explanation: "Beyond a certain point, more options cause decision fatigue, anxiety, and regret about the options you didn't pick.",
+          distractorExplanations: {
+            0: 'Beyond a certain point, more options cause decision fatigue, anxiety, and regret about the options you didn\'t pick',
+          },
         },
         {
           id: "psy-u7-L3-Q2",
@@ -283,6 +336,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 2,
           explanation: "The 24-jam display attracted more browsers, but only 3% bought. The 6-jam display converted 30% of tasters. Too many options paralyzed decision-making.",
+          distractorExplanations: {
+            0: 'The 24-jam display attracted more browsers, but only 3% bought',
+            1: 'The 24-jam display attracted more browsers, but only 3% bought',
+            3: 'The 24-jam display attracted more browsers, but only 3% bought',
+          },
         },
         {
           id: "psy-u7-L3-T2",
@@ -310,6 +368,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 3,
           explanation: "When you choose from many options, you keep wondering if one of the other 29 was better. That's the paradox of choice in action.",
+          distractorExplanations: {
+            0: 'When you choose from many options, you keep wondering if one of the other 29 was better',
+            1: 'When you choose from many options, you keep wondering if one of the other 29 was better',
+            2: 'When you choose from many options, you keep wondering if one of the other 29 was better',
+          },
         },
         {
           id: "psy-u7-L3-Q5",
@@ -339,6 +402,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "The satisficer (picks first good-enough option) tends to be happier. The maximizer (compares everything) second-guesses their choice.",
+          distractorExplanations: {
+            1: 'The satisficer (picks first good-enough option) tends to be happier',
+            2: 'The satisficer (picks first good-enough option) tends to be happier',
+            3: 'The satisficer (picks first good-enough option) tends to be happier',
+          },
         },
         {
           id: "psy-u7-L3-Q7",
@@ -346,6 +414,9 @@ export const unit7: Unit = {
           question: "Satisficers accept 'good enough' and tend to be happier than maximizers who search for 'the best.'",
           correctAnswer: true,
           explanation: "Maximizers may objectively choose slightly better options, but they're less satisfied because they always wonder 'what if.'",
+          distractorExplanations: {
+            1: 'Maximizers may objectively choose slightly better options, but they\'re less satisfied because they always wonder \'what if.\'',
+          },
         },
       ],
     },
@@ -370,6 +441,9 @@ export const unit7: Unit = {
           question: "Heuristics are mental shortcuts that help us make faster decisions.",
           correctAnswer: true,
           explanation: "They're cognitive rules of thumb. Fast and usually good enough, but not always accurate.",
+          distractorExplanations: {
+            1: 'They\'re cognitive rules of thumb. Fast and usually good enough, but not always accurate',
+          },
         },
         {
           id: "psy-u7-L4-Q2",
@@ -383,6 +457,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 1,
           explanation: "Dramatic events like plane crashes are easy to recall, so your brain overestimates how often they happen. Car accidents kill far more people but get less news coverage.",
+          distractorExplanations: {
+            0: 'Dramatic events like plane crashes are easy to recall, so your brain overestimates how often they happen',
+            2: 'Dramatic events like plane crashes are easy to recall, so your brain overestimates how often they happen',
+            3: 'Dramatic events like plane crashes are easy to recall, so your brain overestimates how often they happen',
+          },
         },
         {
           id: "psy-u7-L4-T2",
@@ -410,6 +489,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 2,
           explanation: "The original $30,000 price anchored your perception. Any number below it feels like a bargain, even if $25,000 is the car's actual value.",
+          distractorExplanations: {
+            0: 'The original $30,000 price anchored your perception',
+            1: 'The original $30,000 price anchored your perception',
+            3: 'The original $30,000 price anchored your perception',
+          },
         },
         {
           id: "psy-u7-L4-Q5",
@@ -440,6 +524,9 @@ export const unit7: Unit = {
           question: "The best approach is to eliminate all heuristics from your thinking.",
           correctAnswer: false,
           explanation: "That would be impossible and exhausting. Heuristics are efficient for routine decisions. Just engage System 2 for the important ones.",
+          distractorExplanations: {
+            0: 'That would be impossible and exhausting',
+          },
         },
         {
           id: "psy-u7-L4-Q8",
@@ -453,6 +540,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "This is the famous Linda problem. The representativeness heuristic makes 'feminist bank teller' feel right, but mathematically, the broader category (bank teller) is always more likely.",
+          distractorExplanations: {
+            1: 'This is the famous Linda problem. The representativeness heuristic makes \'feminist bank teller\' feel right, but mathematically, the broader categor...',
+            2: 'This is the famous Linda problem. The representativeness heuristic makes \'feminist bank teller\' feel right, but mathematically, the broader categor...',
+            3: 'This is the famous Linda problem. The representativeness heuristic makes \'feminist bank teller\' feel right, but mathematically, the broader categor...',
+          },
         },
       ],
     },
@@ -478,6 +570,9 @@ export const unit7: Unit = {
           question: "Prospect theory says people evaluate gains and losses relative to a reference point, not their total wealth.",
           correctAnswer: true,
           explanation: "You don't think 'my net worth is $50,100.' You think 'I gained $100.' The reference point is what matters.",
+          distractorExplanations: {
+            1: 'You don\'t think \'my net worth is $50,100.\' You think \'I gained $100.\' The reference point is what matters',
+          },
         },
         {
           id: "psy-u7-L5-Q2",
@@ -491,6 +586,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 2,
           explanation: "For gains, people prefer the sure thing. They're risk-averse: a guaranteed $500 feels better than a 50/50 shot at $1,000.",
+          distractorExplanations: {
+            0: 'For gains, people prefer the sure thing',
+            1: 'For gains, people prefer the sure thing',
+            3: 'For gains, people prefer the sure thing',
+          },
         },
         {
           id: "psy-u7-L5-T2",
@@ -510,6 +610,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "When facing losses, people gamble. They'd rather risk losing $1,000 for a chance at losing nothing than accept a guaranteed $500 loss.",
+          distractorExplanations: {
+            1: 'When facing losses, people gamble. They\'d rather risk losing $1,000 for a chance at losing nothing than accept a guaranteed $500 loss',
+            2: 'When facing losses, people gamble. They\'d rather risk losing $1,000 for a chance at losing nothing than accept a guaranteed $500 loss',
+            3: 'When facing losses, people gamble. They\'d rather risk losing $1,000 for a chance at losing nothing than accept a guaranteed $500 loss',
+          },
         },
         {
           id: "psy-u7-L5-Q4",
@@ -531,6 +636,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 2,
           explanation: "We overweight tiny probabilities. A 0.0001% chance of winning millions feels bigger than it is. A 0.01% chance of a house fire also feels bigger. That's why we buy both.",
+          distractorExplanations: {
+            0: 'We overweight tiny probabilities. A 0.0001% chance of winning millions feels bigger than it is',
+            1: 'We overweight tiny probabilities. A 0.0001% chance of winning millions feels bigger than it is',
+            3: 'We overweight tiny probabilities. A 0.0001% chance of winning millions feels bigger than it is',
+          },
         },
         {
           id: "psy-u7-L5-T3",
@@ -553,6 +663,9 @@ export const unit7: Unit = {
           question: "According to prospect theory, the difference between $0 and $100 feels bigger than the difference between $900 and $1,000.",
           correctAnswer: true,
           explanation: "The value function is steepest near the reference point. The first $100 of gain matters more psychologically than the 10th $100.",
+          distractorExplanations: {
+            1: 'The value function is steepest near the reference point',
+          },
         },
         {
           id: "psy-u7-L5-Q8",
@@ -567,6 +680,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "Prospect theory predicts exactly this: people become risk-seekers when facing losses (David holds hoping to recover) and risk-averse when facing gains (his friend sells to secure the profit). Both would likely be better off doing the opposite.",
+          distractorExplanations: {
+            1: 'Prospect theory predicts exactly this: people become risk-seekers when facing losses (David holds hoping to recover) and risk-averse when facing ga...',
+            2: 'Prospect theory predicts exactly this: people become risk-seekers when facing losses (David holds hoping to recover) and risk-averse when facing ga...',
+            3: 'Prospect theory predicts exactly this: people become risk-seekers when facing losses (David holds hoping to recover) and risk-averse when facing ga...',
+          },
         },
       ],
     },
@@ -591,6 +709,9 @@ export const unit7: Unit = {
           question: "A nudge influences behavior without restricting any choices.",
           correctAnswer: true,
           explanation: "That's the key feature. Nudges guide, they don't force. You can always choose differently.",
+          distractorExplanations: {
+            1: 'That\'s the key feature. Nudges guide, they don\'t force',
+          },
         },
         {
           id: "psy-u7-L6-Q2",
@@ -604,6 +725,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 2,
           explanation: "Changing the default from 'opt in' to 'opt out' dramatically increases enrollment. Most people stick with whatever the default is.",
+          distractorExplanations: {
+            0: 'Changing the default from \'opt in\' to \'opt out\' dramatically increases enrollment',
+            1: 'Changing the default from \'opt in\' to \'opt out\' dramatically increases enrollment',
+            3: 'Changing the default from \'opt in\' to \'opt out\' dramatically increases enrollment',
+          },
         },
         {
           id: "psy-u7-L6-T2",
@@ -632,6 +758,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 2,
           explanation: "The preference doesn't change. The default does. People in both systems feel similarly about donation, but almost nobody changes the default.",
+          distractorExplanations: {
+            0: 'The preference doesn\'t change. The default does',
+            1: 'The preference doesn\'t change. The default does',
+            3: 'The preference doesn\'t change. The default does',
+          },
         },
         {
           id: "psy-u7-L6-Q5",
@@ -668,6 +799,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "The power of nudges can be used for good (retirement saving) or bad (manipulative app design). The intent and transparency matter.",
+          distractorExplanations: {
+            1: 'The power of nudges can be used for good (retirement saving) or bad (manipulative app design)',
+            2: 'The power of nudges can be used for good (retirement saving) or bad (manipulative app design)',
+            3: 'The power of nudges can be used for good (retirement saving) or bad (manipulative app design)',
+          },
         },
         {
           id: "psy-u7-L6-Q8",
@@ -675,6 +811,9 @@ export const unit7: Unit = {
           question: "Richard Thaler and Cass Sunstein popularized the concept of nudges in their book 'Nudge.'",
           correctAnswer: true,
           explanation: "Their 2008 book showed how small design changes in choice architecture can dramatically improve decisions in health, wealth, and happiness.",
+          distractorExplanations: {
+            1: 'Their 2008 book showed how small design changes in choice architecture can dramatically improve decisions in health, wealth, and happiness',
+          },
         },
       ],
     },

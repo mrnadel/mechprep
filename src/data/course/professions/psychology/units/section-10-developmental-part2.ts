@@ -34,6 +34,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Children are born with a fully formed sense of right and wrong.',
             correctAnswer: false,
             explanation: 'Moral reasoning develops over time through stages. Young children rely on consequences, not abstract principles.',
+            distractorExplanations: {
+              0: 'Moral reasoning develops over time through stages. Young children rely on consequences, not abstract principles.',
+            },
           },
           {
             id: 'psy-sec10-u7-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Young children focus on consequences like punishment. Abstract moral principles come later.',
+            distractorExplanations: {
+              1: 'Young children focus on consequences like punishment. Abstract moral principles come later.',
+              2: 'Young children focus on consequences like punishment. Abstract moral principles come later.',
+              3: 'This describes the opposite of what actually happens; young children focus on consequences like punishment. Abstract moral principles come later.',
+            },
           },
           {
             id: 'psy-sec10-u7-L1-T2',
@@ -75,6 +83,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Kohlberg studied the reasoning process. Two people can give opposite answers but show the same level of moral reasoning.',
+            distractorExplanations: {
+              1: 'Kohlberg studied the reasoning process.',
+              2: 'Kohlberg studied the reasoning process.',
+              3: 'Kohlberg studied the reasoning process.',
+            },
           },
           {
             id: 'psy-sec10-u7-L1-T3',
@@ -94,6 +107,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The dilemma has no easy answer. Its value is in revealing how people think about moral conflicts.',
+            distractorExplanations: {
+              0: 'The dilemma has no easy answer.',
+              2: 'The dilemma has no easy answer.',
+              3: 'The dilemma has no easy answer.',
+            },
           },
           {
             id: 'psy-sec10-u7-L1-Q6',
@@ -135,6 +153,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Kohlberg\'s model has 3 levels, each with 2 stages.',
             correctAnswer: true,
             explanation: 'Correct. The 3 levels (pre-conventional, conventional, post-conventional) each contain 2 stages, for 6 stages total.',
+            distractorExplanations: {
+              1: 'Correct. The 3 levels (pre-conventional, conventional, post-conventional) each contain 2 stages, for 6 stages total.',
+            },
           },
           {
             id: 'psy-sec10-u7-L2-Q2',
@@ -166,6 +187,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Acting to gain a reward is classic pre-conventional (Stage 2) reasoning.',
+            distractorExplanations: {
+              1: 'Acting to gain a reward is classic pre-conventional (Stage 2) reasoning.',
+              2: 'Acting to gain a reward is classic pre-conventional (Stage 2) reasoning.',
+              3: 'This describes the opposite of what actually happens; acting to gain a reward is classic pre-conventional (Stage 2) reasoning.',
+            },
           },
           {
             id: 'psy-sec10-u7-L2-Q4',
@@ -194,6 +220,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Most adults use conventional reasoning, focused on social rules and approval. Post-conventional is uncommon.',
+            distractorExplanations: {
+              0: 'Most adults use conventional reasoning, focused on social rules and approval.',
+              2: 'Most adults use conventional reasoning, focused on social rules and approval.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u7-L2-Q6',
@@ -208,6 +239,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Appealing to laws as a social contract for everyone\'s protection is post-conventional (Stage 5) reasoning.',
+            distractorExplanations: {
+              1: 'Appealing to laws as a social contract for everyone\'s protection is post-conventional (Stage 5)',
+              2: 'Appealing to laws as a social contract for everyone\'s protection is post-conventional (Stage 5)',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -233,6 +269,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Gilligan argued that Kohlberg\'s research was biased because it was based mostly on male participants.',
             correctAnswer: true,
             explanation: 'Correct. Kohlberg\'s original studies focused on boys, which Gilligan believed skewed his model toward justice-based reasoning.',
+            distractorExplanations: {
+              1: 'Correct. Kohlberg\'s original studies focused on boys, which Gilligan believed skewed his model toward justice-based reasoning.',
+            },
           },
           {
             id: 'psy-sec10-u7-L3-Q2',
@@ -246,6 +285,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Gilligan\'s ethic of care centers on empathy, relationships, and the responsibility to avoid harm.',
+            distractorExplanations: {
+              1: 'Gilligan\'s ethic of care centers on empathy, relationships, and the responsibility to avoid har',
+              2: 'Gilligan\'s ethic of care centers on empathy, relationships, and the responsibility to avoid har',
+              3: 'Gilligan\'s ethic of care centers on empathy, relationships, and the responsibility to avoid har',
+            },
           },
           {
             id: 'psy-sec10-u7-L3-T2',
@@ -295,6 +339,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Research shows both men and women use justice and care reasoning. The situation influences which framework people use.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u7-L3-Q6',
@@ -309,6 +358,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Considering individual circumstances and harm is characteristic of Gilligan\'s care orientation.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "everyone" overstates the case — the reality is more nuanced.',
+              2: 'Considering individual circumstances and harm is characteristic of Gilligan\'s care orientation.',
+              3: 'This describes the opposite of what actually happens; considering individual circumstances and harm is characteristic of Gilligan\'s care orientation.',
+            },
           },
         ],
       },
@@ -334,6 +388,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Kohlberg\'s moral stages have been shown to apply identically in every culture worldwide.',
             correctAnswer: false,
             explanation: 'Kohlberg\'s stages reflect Western individualist values. Collectivist cultures may prioritize community loyalty, which his model undervalues.',
+            distractorExplanations: {
+              0: 'Kohlberg\'s stages reflect Western individualist values.',
+            },
           },
           {
             id: 'psy-sec10-u7-L4-Q2',
@@ -347,6 +404,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Prioritizing community welfare can be a sophisticated moral stance, but Kohlberg\'s model may not recognize it as post-conventional.',
+            distractorExplanations: {
+              1: 'Prioritizing community welfare can be a sophisticated moral stance, but Kohlberg\'s model may no',
+              2: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              3: 'Prioritizing community welfare can be a sophisticated moral stance, but Kohlberg\'s model may no',
+            },
           },
           {
             id: 'psy-sec10-u7-L4-T2',
@@ -366,6 +428,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'People reason at different stages depending on context, which challenges the idea of a strict, one-way progression.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "everyone" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              3: 'People reason at different stages depending on context, which challenges the idea of a strict, ',
+            },
           },
           {
             id: 'psy-sec10-u7-L4-Q4',
@@ -388,6 +455,9 @@ export const psySection10Part2: Unit[] = [
             question: 'People who reason at higher moral stages always act more ethically.',
             correctAnswer: false,
             explanation: 'Moral reasoning and moral behavior are not perfectly correlated. People can reason well but still act selfishly.',
+            distractorExplanations: {
+              0: 'Moral reasoning and moral behavior are not perfectly correlated. People can reason well but still act selfishly.',
+            },
           },
           {
             id: 'psy-sec10-u7-L4-Q6',
@@ -431,6 +501,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Following group norms and avoiding social disapproval is characteristic of conventional moral reasoning.',
+            distractorExplanations: {
+              1: 'Following group norms and avoiding social disapproval is characteristic of conventional moral r',
+              2: 'Following group norms and avoiding social disapproval is characteristic of conventional moral r',
+              3: 'This describes the opposite of what actually happens; following group norms and avoiding social disapproval is characteristic of conventional moral r',
+            },
           },
           {
             id: 'psy-sec10-u7-L5-Q2',
@@ -444,6 +519,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Sacrificing personal benefit for an ethical principle is characteristic of post-conventional reasoning.',
+            distractorExplanations: {
+              0: 'Sacrificing personal benefit for an ethical principle is characteristic of post-conventional re',
+              1: 'Sacrificing personal benefit for an ethical principle is characteristic of post-conventional re',
+              3: 'Sacrificing personal benefit for an ethical principle is characteristic of post-conventional re',
+            },
           },
           {
             id: 'psy-sec10-u7-L5-T2',
@@ -492,6 +572,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Both theorists agree that moral reasoning develops over time. They differ on the frameworks and pathways involved.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'Both theorists agree that moral reasoning develops over time.',
+            },
           },
           {
             id: 'psy-sec10-u7-L5-T3',
@@ -505,6 +590,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Gilligan believed justice reasoning is always inferior to care reasoning.',
             correctAnswer: false,
             explanation: 'Gilligan argued care is a valid alternative, not that it is superior. Both justice and care contribute to mature moral reasoning.',
+            distractorExplanations: {
+              0: 'Gilligan argued care is a valid alternative, not that it is superior. Both justice and care contribute to mature moral reasoning.',
+            },
           },
         ],
       },
@@ -544,6 +632,9 @@ export const psySection10Part2: Unit[] = [
             question: 'The human brain is fully developed by age 18.',
             correctAnswer: false,
             explanation: 'The brain continues maturing until approximately age 25, especially the prefrontal cortex.',
+            distractorExplanations: {
+              0: 'The brain continues maturing until approximately age 25, especially the prefrontal cortex.',
+            },
           },
           {
             id: 'psy-sec10-u8-L1-Q2',
@@ -571,6 +662,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The limbic system develops before the prefrontal cortex, creating a mismatch between emotional drive and self-regulation.',
+            distractorExplanations: {
+              1: 'The limbic system develops before the prefrontal cortex, creating a mismatch between emotional ',
+              2: 'The limbic system develops before the prefrontal cortex, creating a mismatch between emotional ',
+              3: 'The limbic system develops before the prefrontal cortex, creating a mismatch between emotional ',
+            },
           },
           {
             id: 'psy-sec10-u8-L1-Q4',
@@ -599,6 +695,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Synaptic pruning eliminates weak connections and strengthens strong ones, making the brain more efficient.',
+            distractorExplanations: {
+              1: 'Synaptic pruning eliminates weak connections and strengthens strong ones, making the brain more',
+              2: 'This describes the opposite of what actually happens; synaptic pruning eliminates weak connections and strengthens strong ones, making the brain more',
+              3: 'Synaptic pruning eliminates weak connections and strengthens strong ones, making the brain more',
+            },
           },
           {
             id: 'psy-sec10-u8-L1-Q6',
@@ -613,6 +714,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The reward of social connection (limbic system) can overpower the still-maturing prefrontal cortex\'s impulse control.',
+            distractorExplanations: {
+              1: 'The reward of social connection (limbic system) can overpower the still-maturing prefrontal cor',
+              2: 'The reward of social connection (limbic system) can overpower the still-maturing prefrontal cor',
+              3: 'The reward of social connection (limbic system) can overpower the still-maturing prefrontal cor',
+            },
           },
         ],
       },
@@ -638,6 +744,9 @@ export const psySection10Part2: Unit[] = [
             question: 'According to Erikson, the main developmental task of adolescence is forming a stable identity.',
             correctAnswer: true,
             explanation: 'Erikson\'s "identity vs. role confusion" stage centers on developing a coherent sense of self.',
+            distractorExplanations: {
+              1: 'Erikson\'s "identity vs. role confusion" stage centers on developing a coherent sense of self.',
+            },
           },
           {
             id: 'psy-sec10-u8-L2-Q2',
@@ -651,6 +760,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Unresolved identity leads to role confusion: a weak sense of self, difficulty making commitments, and feeling lost.',
+            distractorExplanations: {
+              1: 'Unresolved identity leads to role confusion: a weak sense of self, difficulty making commitment',
+              2: 'Unresolved identity leads to role confusion: a weak sense of self, difficulty making commitment',
+              3: 'Unresolved identity leads to role confusion: a weak sense of self, difficulty making commitment',
+            },
           },
           {
             id: 'psy-sec10-u8-L2-T2',
@@ -680,6 +794,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Active exploration without commitment is the moratorium status. This is a healthy part of identity formation.',
+            distractorExplanations: {
+              1: 'Active exploration without commitment is the moratorium status.',
+              2: 'This describes the opposite of what actually happens; active exploration without commitment is the moratorium status.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u8-L2-T3',
@@ -699,6 +818,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'In collectivist cultures, identity is often shaped by family and community. This model may undervalue that path.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'Genetic is a different concept that does not explain this particular phenomenon.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u8-L2-Q6',
@@ -739,6 +863,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Teenagers are more sensitive to peer approval than adults, partly due to brain development.',
             correctAnswer: true,
             explanation: 'The adolescent brain\'s reward system responds more strongly to social approval, making peer influence especially powerful.',
+            distractorExplanations: {
+              1: 'The adolescent brain\'s reward system responds more strongly to social approval, making peer influence especially powerful.',
+            },
           },
           {
             id: 'psy-sec10-u8-L3-Q2',
@@ -752,6 +879,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The adolescent brain is wired to be extra-sensitive to social signals, making rejection feel more intense.',
+            distractorExplanations: {
+              1: 'The adolescent brain is wired to be extra-sensitive to social signals, making rejection feel mo',
+              2: 'The adolescent brain is wired to be extra-sensitive to social signals, making rejection feel mo',
+              3: 'The adolescent brain is wired to be extra-sensitive to social signals, making rejection feel mo',
+            },
           },
           {
             id: 'psy-sec10-u8-L3-T2',
@@ -779,6 +911,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The personal fable is the belief that your experiences and feelings are unique and that others cannot truly understand you.',
+            distractorExplanations: {
+              1: 'The personal fable is the belief that your experiences and feelings are unique and that others ',
+              2: 'The personal fable is the belief that your experiences and feelings are unique and that others ',
+              3: 'The personal fable is the belief that your experiences and feelings are unique and that others ',
+            },
           },
           {
             id: 'psy-sec10-u8-L3-T3',
@@ -792,6 +929,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Peer influence during adolescence is always negative and leads to risk-taking.',
             correctAnswer: false,
             explanation: 'Peer influence can be positive or negative. Prosocial peer groups encourage academic achievement, volunteering, and healthy habits.',
+            distractorExplanations: {
+              0: 'Peer influence can be positive or negative. Prosocial peer groups encourage academic achievement, volunteering, and healthy habits.',
+            },
           },
           {
             id: 'psy-sec10-u8-L3-Q6',
@@ -806,6 +946,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The imaginary audience makes teens feel like they are constantly on stage, leading to exaggerated self-consciousness.',
+            distractorExplanations: {
+              1: 'The imaginary audience makes teens feel like they are constantly on stage, leading to exaggerat',
+              2: 'The imaginary audience makes teens feel like they are constantly on stage, leading to exaggerat',
+              3: 'This describes the opposite of what actually happens; the imaginary audience makes teens feel like they are constantly on stage, leading to exaggerat',
+            },
           },
         ],
       },
@@ -830,6 +975,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Dopamine activity is at its highest during adolescence.',
             correctAnswer: true,
             explanation: 'Peak dopamine sensitivity in adolescence makes rewards feel extra intense, which fuels sensation-seeking behavior.',
+            distractorExplanations: {
+              1: 'Peak dopamine sensitivity in adolescence makes rewards feel extra intense, which fuels sensation-seeking behavior.',
+            },
           },
           {
             id: 'psy-sec10-u8-L4-Q2',
@@ -843,6 +991,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Research shows that peer presence increases activation of the brain\'s reward circuitry, amplifying the appeal of risky choices.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+              2: 'Research shows that peer presence increases activation of the brain\'s reward circuitry, amplify',
+              3: 'Research shows that peer presence increases activation of the brain\'s reward circuitry, amplify',
+            },
           },
           {
             id: 'psy-sec10-u8-L4-T2',
@@ -892,6 +1045,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Emerging adulthood requires economic conditions that allow extended education and delayed adult commitments. Not all cultures have this.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u8-L4-Q6',
@@ -906,6 +1064,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Feeling "in-between" while exploring career options is a hallmark of emerging adulthood.',
+            distractorExplanations: {
+              1: 'Feeling "in-between" while exploring career options is a hallmark of emerging adulthood.',
+              2: 'Feeling "in-between" while exploring career options is a hallmark of emerging adulthood.',
+              3: 'Feeling "in-between" while exploring career options is a hallmark of emerging adulthood.',
+            },
           },
         ],
       },
@@ -950,6 +1113,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Peers amplify the reward signal, and the prefrontal cortex cannot yet fully override the impulse. It is a brain-maturation issue, not a character flaw.',
+            distractorExplanations: {
+              1: 'Peers amplify the reward signal, and the prefrontal cortex cannot yet fully override the impuls',
+              2: 'Peers amplify the reward signal, and the prefrontal cortex cannot yet fully override the impuls',
+              3: 'Peers amplify the reward signal, and the prefrontal cortex cannot yet fully override the impuls',
+            },
           },
           {
             id: 'psy-sec10-u8-L5-T2',
@@ -963,6 +1131,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Knowledge of adolescent brain development influenced legal policies about how minors are sentenced.',
             correctAnswer: true,
             explanation: 'The U.S. Supreme Court cited adolescent brain research when banning the death penalty and mandatory life sentences for minors.',
+            distractorExplanations: {
+              1: 'The U.S. Supreme Court cited adolescent brain research when banning the death penalty and mandatory life sentences for minors.',
+            },
           },
           {
             id: 'psy-sec10-u8-L5-Q4',
@@ -986,6 +1157,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Effective parenting acknowledges developmental realities while providing the structure that an immature prefrontal cortex needs.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              2: 'Biological is a different concept that does not explain this particular phenomenon.',
+              3: 'This describes the opposite of what actually happens; effective parenting acknowledges developmental realities while providing the structure that an ',
+            },
           },
           {
             id: 'psy-sec10-u8-L5-T3',
@@ -1005,6 +1181,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Risk-taking, exploration, and social bonding in adolescence serve important functions for gaining independence and forming adult relationships.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              3: 'Risk-taking, exploration, and social bonding in adolescence serve important functions for gaini',
+            },
           },
         ],
       },
@@ -1044,6 +1225,9 @@ export const psySection10Part2: Unit[] = [
             question: 'According to Erikson, psychological development continues throughout adulthood.',
             correctAnswer: true,
             explanation: 'Erikson described 3 adult stages, each with a unique psychosocial challenge to resolve.',
+            distractorExplanations: {
+              1: 'Erikson described 3 adult stages, each with a unique psychosocial challenge to resolve.',
+            },
           },
           {
             id: 'psy-sec10-u9-L1-Q2',
@@ -1072,6 +1256,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Mentoring the next generation is a core expression of generativity.',
+            distractorExplanations: {
+              1: 'Mentoring the next generation is a core expression of generativity.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'Mentoring the next generation is a core expression of generativity.',
+            },
           },
           {
             id: 'psy-sec10-u9-L1-Q4',
@@ -1100,6 +1289,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Reflecting on life with acceptance and peace is the hallmark of integrity in Erikson\'s final stage.',
+            distractorExplanations: {
+              1: 'Reflecting on life with acceptance and peace is the hallmark of integrity in Erikson\'s final st',
+              2: 'Reflecting on life with acceptance and peace is the hallmark of integrity in Erikson\'s final st',
+              3: 'Reflecting on life with acceptance and peace is the hallmark of integrity in Erikson\'s final st',
+            },
           },
           {
             id: 'psy-sec10-u9-L1-Q6',
@@ -1136,6 +1330,9 @@ export const psySection10Part2: Unit[] = [
             question: 'All types of intelligence decline steadily after age 30.',
             correctAnswer: false,
             explanation: 'Crystallized intelligence (knowledge, vocabulary, expertise) continues to grow throughout adulthood. Only fluid intelligence declines.',
+            distractorExplanations: {
+              0: 'Crystallized intelligence (knowledge, vocabulary, expertise) continues to grow throughout adulthood.',
+            },
           },
           {
             id: 'psy-sec10-u9-L2-Q2',
@@ -1171,6 +1368,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Expertise and crystallized intelligence can compensate for declines in processing speed and working memory.',
+            distractorExplanations: {
+              1: 'Expertise and crystallized intelligence can compensate for declines in processing speed and wor',
+              2: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u9-L2-Q4',
@@ -1192,6 +1394,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Dementia is an inevitable part of normal aging.',
             correctAnswer: false,
             explanation: 'Dementia is a disease process, not a guaranteed consequence of aging. Most older adults never develop dementia.',
+            distractorExplanations: {
+              0: 'Dementia is a disease process, not a guaranteed consequence of aging. Most older adults never develop dementia.',
+            },
           },
           {
             id: 'psy-sec10-u9-L2-Q6',
@@ -1206,6 +1411,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Her diagnosis speed comes from pattern recognition built over decades. That is crystallized intelligence in action.',
+            distractorExplanations: {
+              1: 'Her diagnosis speed comes from pattern recognition built over decades.',
+              2: 'Her diagnosis speed comes from pattern recognition built over decades.',
+              3: 'Her diagnosis speed comes from pattern recognition built over decades.',
+            },
           },
         ],
       },
@@ -1230,6 +1440,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Physical aging begins in early adulthood, not just in old age.',
             correctAnswer: true,
             explanation: 'Biological aging starts in the 20s. Changes are small at first but accumulate over decades.',
+            distractorExplanations: {
+              1: 'Biological aging starts in the 20s. Changes are small at first but accumulate over decades.',
+            },
           },
           {
             id: 'psy-sec10-u9-L3-Q2',
@@ -1243,6 +1456,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Presbycusis, the gradual loss of high-frequency hearing, is one of the most common age-related sensory changes.',
+            distractorExplanations: {
+              1: 'Presbycusis, the gradual loss of high-frequency hearing, is one of the most common age-related ',
+              2: 'Presbycusis, the gradual loss of high-frequency hearing, is one of the most common age-related ',
+              3: 'Presbycusis, the gradual loss of high-frequency hearing, is one of the most common age-related ',
+            },
           },
           {
             id: 'psy-sec10-u9-L3-T2',
@@ -1263,6 +1481,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Exercise stimulates neurogenesis in the hippocampus and helps maintain cognitive function. It does not prevent all decline, but it significantly slows it.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'Exercise stimulates neurogenesis in the hippocampus and helps maintain cognitive function.',
+            },
           },
           {
             id: 'psy-sec10-u9-L3-Q4',
@@ -1291,6 +1514,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cultural attitudes toward aging affect psychological well-being. Societies that value elders provide better social support and sense of purpose.',
+            distractorExplanations: {
+              1: 'Research shows a meaningful effect exists here, not the absence of one.',
+              2: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              3: 'Cultural attitudes toward aging affect psychological well-being.',
+            },
           },
           {
             id: 'psy-sec10-u9-L3-Q6',
@@ -1326,6 +1554,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Older adults tend to focus more on positive experiences than younger adults do.',
             correctAnswer: true,
             explanation: 'The positivity effect is well-documented. Older adults pay more attention to and remember positive information.',
+            distractorExplanations: {
+              1: 'The positivity effect is well-documented. Older adults pay more attention to and remember positive information.',
+            },
           },
           {
             id: 'psy-sec10-u9-L4-Q2',
@@ -1339,6 +1570,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Many studies find a U-shaped curve: well-being is higher in youth and old age, with a dip in midlife.',
+            distractorExplanations: {
+              1: 'Many studies find a U-shaped curve: well-being is higher in youth and old age, with a dip in mi',
+              2: 'Many studies find a U-shaped curve: well-being is higher in youth and old age, with a dip in mi',
+              3: 'Many studies find a U-shaped curve: well-being is higher in youth and old age, with a dip in mi',
+            },
           },
           {
             id: 'psy-sec10-u9-L4-T2',
@@ -1367,6 +1603,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Choosing quality over quantity in relationships is exactly what socioemotional selectivity theory predicts for older adults.',
+            distractorExplanations: {
+              1: 'Choosing quality over quantity in relationships is exactly what socioemotional selectivity theo',
+              2: 'Choosing quality over quantity in relationships is exactly what socioemotional selectivity theo',
+              3: 'Choosing quality over quantity in relationships is exactly what socioemotional selectivity theo',
+            },
           },
           {
             id: 'psy-sec10-u9-L4-T3',
@@ -1380,6 +1621,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Social isolation in older adults has been linked to faster cognitive decline.',
             correctAnswer: true,
             explanation: 'Research consistently shows that loneliness and social isolation accelerate cognitive decline and increase health risks in older adults.',
+            distractorExplanations: {
+              1: 'Research consistently shows that loneliness and social isolation accelerate cognitive decline and increase health risks in older a',
+            },
           },
           {
             id: 'psy-sec10-u9-L4-Q6',
@@ -1427,6 +1671,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The model emphasizes physical health, which excludes many people who age well despite chronic conditions.',
+            distractorExplanations: {
+              1: 'The model emphasizes physical health, which excludes many people who age well despite chronic c',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u9-L5-Q2',
@@ -1434,6 +1683,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Successful aging only means being free from all disease.',
             correctAnswer: false,
             explanation: 'Many researchers argue that psychological well-being, purpose, and social connection are equally important to aging well, even in the presence of disease.',
+            distractorExplanations: {
+              0: 'Many researchers argue that psychological well-being, purpose, and social connection are equally important to aging well, even in ',
+            },
           },
           {
             id: 'psy-sec10-u9-L5-T2',
@@ -1453,6 +1705,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Both concepts involve reflecting on one\'s life. A satisfying review produces integrity. An unsatisfying one produces despair.',
+            distractorExplanations: {
+              1: 'Both concepts involve reflecting on one\'s life. A satisfying review produces integrity.',
+              2: 'Both concepts involve reflecting on one\'s life. A satisfying review produces integrity.',
+              3: 'Both concepts involve reflecting on one\'s life. A satisfying review produces integrity.',
+            },
           },
           {
             id: 'psy-sec10-u9-L5-Q4',
@@ -1490,6 +1747,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Mr. Tanaka demonstrates that social engagement and purpose can support well-being even with physical limitations, supporting activity theory.',
+            distractorExplanations: {
+              1: 'Mr. Tanaka demonstrates that social engagement and purpose can support well-being even with phy',
+              2: 'This describes the opposite of what actually happens; mr. Tanaka demonstrates that social engagement and purpose can support well-being even with phy',
+              3: 'Mr. Tanaka demonstrates that social engagement and purpose can support well-being even with phy',
+            },
           },
         ],
       },
@@ -1529,6 +1791,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Most children under age 5 understand that death is permanent and irreversible.',
             correctAnswer: false,
             explanation: 'Young children typically view death as temporary or reversible. Permanence is usually understood by ages 7-9.',
+            distractorExplanations: {
+              0: 'Young children typically view death as temporary or reversible. Permanence is usually understood by ages 7-9.',
+            },
           },
           {
             id: 'psy-sec10-u10-L1-Q2',
@@ -1569,6 +1834,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Before Kubler-Ross, death was a taboo topic in medicine. She pioneered compassionate, open discussion of dying.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              2: 'Before Kubler-Ross, death was a taboo topic in medicine.',
+              3: 'This describes the opposite of what actually happens; before Kubler-Ross, death was a taboo topic in medicine.',
+            },
           },
           {
             id: 'psy-sec10-u10-L1-T3',
@@ -1588,6 +1858,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Death anxiety peaks in middle adulthood and tends to decrease in older adults who have found meaning in their lives.',
+            distractorExplanations: {
+              1: 'Death anxiety peaks in middle adulthood and tends to decrease in older adults who have found me',
+              2: 'Death anxiety peaks in middle adulthood and tends to decrease in older adults who have found me',
+              3: 'Death anxiety peaks in middle adulthood and tends to decrease in older adults who have found me',
+            },
           },
           {
             id: 'psy-sec10-u10-L1-Q6',
@@ -1595,6 +1870,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Older adults who have achieved Erikson\'s integrity stage tend to have lower death anxiety.',
             correctAnswer: true,
             explanation: 'A sense of life satisfaction and meaning (integrity) is associated with less fear of death in older adults.',
+            distractorExplanations: {
+              1: 'A sense of life satisfaction and meaning (integrity) is associated with less fear of death in older adults.',
+            },
           },
         ],
       },
@@ -1620,6 +1898,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Kubler-Ross described her 5 stages as a strict sequence that every dying person follows in order.',
             correctAnswer: false,
             explanation: 'Kubler-Ross emphasized that people may experience these responses in any order, skip some, or revisit them. They are not a fixed sequence.',
+            distractorExplanations: {
+              0: 'Kubler-Ross emphasized that people may experience these responses in any order, skip some, or revisit them.',
+            },
           },
           {
             id: 'psy-sec10-u10-L2-Q2',
@@ -1648,6 +1929,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Bargaining involves trying to make deals or promises in exchange for more time or a different outcome.',
+            distractorExplanations: {
+              1: 'Bargaining involves trying to make deals or promises in exchange for more time or a different o',
+              2: 'Bargaining involves trying to make deals or promises in exchange for more time or a different o',
+              3: 'Bargaining involves trying to make deals or promises in exchange for more time or a different o',
+            },
           },
           {
             id: 'psy-sec10-u10-L2-Q4',
@@ -1662,6 +1948,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Denial serves as a psychological buffer. The patient is not yet ready to process the reality of the diagnosis.',
+            distractorExplanations: {
+              1: 'Denial serves as a psychological buffer.',
+              2: 'Denial serves as a psychological buffer.',
+              3: 'Denial serves as a psychological buffer.',
+            },
           },
           {
             id: 'psy-sec10-u10-L2-T3',
@@ -1675,6 +1966,9 @@ export const psySection10Part2: Unit[] = [
             question: 'In Kubler-Ross\'s model, acceptance means the dying person feels happy about their situation.',
             correctAnswer: false,
             explanation: 'Acceptance is calm acknowledgment, not happiness. It means the person has made peace with reality, which is different from welcoming it.',
+            distractorExplanations: {
+              0: 'Acceptance is calm acknowledgment, not happiness.',
+            },
           },
           {
             id: 'psy-sec10-u10-L2-Q6',
@@ -1714,6 +2008,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Kubler-Ross\'s 5 stages were originally developed to describe the grief of bereaved family members.',
             correctAnswer: false,
             explanation: 'The stages were developed from studying terminally ill patients facing their own death, not people mourning a loved one.',
+            distractorExplanations: {
+              0: 'The stages were developed from studying terminally ill patients facing their own death, not people mourning a loved one.',
+            },
           },
           {
             id: 'psy-sec10-u10-L3-Q2',
@@ -1727,6 +2024,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Research shows grief is nonlinear and highly individual. The stages were for dying patients, not bereaved people.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u10-L3-T2',
@@ -1762,6 +2064,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'There is no timeline for grief. Grieving is individual, and sadness months later is a normal part of loss.',
+            distractorExplanations: {
+              1: 'There is no timeline for grief.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u10-L3-T3',
@@ -1790,6 +2097,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Moving between confronting the loss and rebuilding daily life is exactly what the dual process model describes as healthy grief.',
+            distractorExplanations: {
+              1: 'Moving between confronting the loss and rebuilding daily life is exactly what the dual process ',
+              2: 'This describes the opposite of what actually happens; moving between confronting the loss and rebuilding daily life is exactly what the dual process ',
+              3: 'Moving between confronting the loss and rebuilding daily life is exactly what the dual process ',
+            },
           },
         ],
       },
@@ -1815,6 +2127,9 @@ export const psySection10Part2: Unit[] = [
             question: 'All cultures express grief in similar ways.',
             correctAnswer: false,
             explanation: 'Grief expression varies dramatically across cultures. Open wailing, quiet reflection, celebration of life, and extended mourning periods are all valid cultural approaches.',
+            distractorExplanations: {
+              0: 'Grief expression varies dramatically across cultures.',
+            },
           },
           {
             id: 'psy-sec10-u10-L4-Q2',
@@ -1828,6 +2143,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Western psychology has sometimes treated culturally normal grief expressions as disorders, which can harm rather than help.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'Western psychology has sometimes treated culturally normal grief expressions as disorders, whic',
+            },
           },
           {
             id: 'psy-sec10-u10-L4-T2',
@@ -1856,6 +2176,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Death rituals across all cultures provide psychological benefits by structuring the grief process and mobilizing social support.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'Death rituals across all cultures provide psychological benefits by structuring the grief proce',
+              3: 'Death rituals across all cultures provide psychological benefits by structuring the grief proce',
+            },
           },
           {
             id: 'psy-sec10-u10-L4-T3',
@@ -1869,6 +2194,9 @@ export const psySection10Part2: Unit[] = [
             question: 'According to the continuing bonds model, maintaining a psychological connection to a deceased loved one is unhealthy.',
             correctAnswer: false,
             explanation: 'The continuing bonds model argues the opposite: maintaining a connection through memories and rituals is a healthy, normal part of grieving.',
+            distractorExplanations: {
+              0: 'The continuing bonds model argues the opposite: maintaining a connection through memories and rituals is a healthy, normal part of',
+            },
           },
           {
             id: 'psy-sec10-u10-L4-Q6',
@@ -1883,6 +2211,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Maintaining rituals that honor the deceased is healthy in many cultures. The continuing bonds model supports this as adaptive grief.',
+            distractorExplanations: {
+              1: 'Maintaining rituals that honor the deceased is healthy in many cultures.',
+              2: 'Maintaining rituals that honor the deceased is healthy in many cultures.',
+              3: 'This describes the opposite of what actually happens; maintaining rituals that honor the deceased is healthy in many cultures.',
+            },
           },
         ],
       },
@@ -1908,6 +2241,9 @@ export const psySection10Part2: Unit[] = [
             question: 'According to research, most bereaved people require professional therapy to recover from grief.',
             correctAnswer: false,
             explanation: 'Research shows that most people are naturally resilient after loss. Professional help is important for complicated grief, but most people recover through normal coping and social support.',
+            distractorExplanations: {
+              0: 'Research shows that most people are naturally resilient after loss.',
+            },
           },
           {
             id: 'psy-sec10-u10-L5-Q2',
@@ -1921,6 +2257,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Prolonged grief disorder is diagnosed when grief remains severely debilitating beyond 12 months and interferes with daily life.',
+            distractorExplanations: {
+              1: 'Prolonged grief disorder is diagnosed when grief remains severely debilitating beyond 12 months',
+              2: 'Prolonged grief disorder is diagnosed when grief remains severely debilitating beyond 12 months',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u10-L5-T2',
@@ -1973,6 +2314,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Modern research emphasizes that grief is individual, cultural, nonlinear, and that resilience is the most common outcome.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "everyone" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u10-L5-Q6',
@@ -1987,6 +2333,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Intermittent sadness months after a loss is a normal part of grief. There is no deadline for when grief should end.',
+            distractorExplanations: {
+              1: 'Intermittent sadness months after a loss is a normal part of grief.',
+              2: 'Intermittent sadness months after a loss is a normal part of grief.',
+              3: 'This describes the opposite of what actually happens; intermittent sadness months after a loss is a normal part of grief.',
+            },
           },
         ],
       },
@@ -2031,6 +2382,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The sensorimotor stage is when infants learn through senses and actions, and develop object permanence around 8-12 months.',
+            distractorExplanations: {
+              1: 'The sensorimotor stage is when infants learn through senses and actions, and develop object per',
+              2: 'The sensorimotor stage is when infants learn through senses and actions, and develop object per',
+              3: 'The sensorimotor stage is when infants learn through senses and actions, and develop object per',
+            },
           },
           {
             id: 'psy-sec10-u11-L1-Q2',
@@ -2060,6 +2416,9 @@ export const psySection10Part2: Unit[] = [
             question: 'According to Piaget, children in the preoperational stage can think abstractly and hypothetically.',
             correctAnswer: false,
             explanation: 'Abstract and hypothetical thinking emerges in the formal operational stage (age 12+). Preoperational children think concretely and struggle with conservation.',
+            distractorExplanations: {
+              0: 'Abstract and hypothetical thinking emerges in the formal operational stage (age 12+).',
+            },
           },
           {
             id: 'psy-sec10-u11-L1-Q5',
@@ -2082,6 +2441,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Conservation (understanding that quantity doesn\'t change with shape) develops in the concrete operational stage. Preoperational children are fooled by appearances.',
+            distractorExplanations: {
+              1: 'Conservation (understanding that quantity doesn\'t change with shape) develops in the concrete o',
+              2: 'Conservation (understanding that quantity doesn\'t change with shape) develops in the concrete o',
+              3: 'Conservation (understanding that quantity doesn\'t change with shape) develops in the concrete o',
+            },
           },
           {
             id: 'psy-sec10-u11-L1-Q7',
@@ -2095,6 +2459,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Ainsworth\'s Strange Situation experiment classified infant attachment into secure, avoidant, anxious-ambivalent, and (later) disorganized patterns.',
+            distractorExplanations: {
+              1: 'Ainsworth\'s Strange Situation experiment classified infant attachment into secure, avoidant, an',
+              2: 'Ainsworth\'s Strange Situation experiment classified infant attachment into secure, avoidant, an',
+              3: 'Ainsworth\'s Strange Situation experiment classified infant attachment into secure, avoidant, an',
+            },
           },
         ],
       },
@@ -2134,6 +2503,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The ZPD is the range of tasks a learner can perform with guidance but not yet independently.',
+            distractorExplanations: {
+              1: 'The ZPD is the range of tasks a learner can perform with guidance but not yet independently.',
+              2: 'The ZPD is the range of tasks a learner can perform with guidance but not yet independently.',
+              3: 'The ZPD is the range of tasks a learner can perform with guidance but not yet independently.',
+            },
           },
           {
             id: 'psy-sec10-u11-L2-Q3',
@@ -2164,6 +2538,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Difficulty forming close relationships in young adulthood is the hallmark of Erikson\'s intimacy vs. isolation stage.',
+            distractorExplanations: {
+              1: 'This describes the opposite of what actually happens; difficulty forming close relationships in young adulthood is the hallmark of Erikson\'s intimacy',
+              2: 'Difficulty forming close relationships in young adulthood is the hallmark of Erikson\'s intimacy',
+              3: 'Difficulty forming close relationships in young adulthood is the hallmark of Erikson\'s intimacy',
+            },
           },
           {
             id: 'psy-sec10-u11-L2-Q5',
@@ -2179,6 +2558,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Gilligan argued that Kohlberg\'s moral development model was biased because it was based primarily on male participants.',
             correctAnswer: true,
             explanation: 'Gilligan\'s main critique was that Kohlberg studied boys and men, leading to a model that undervalued care-based moral reasoning.',
+            distractorExplanations: {
+              1: 'Gilligan\'s main critique was that Kohlberg studied boys and men, leading to a model that undervalued care-based moral reasoning.',
+            },
           },
           {
             id: 'psy-sec10-u11-L2-Q7',
@@ -2192,6 +2574,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Most adults reason at the conventional level, focused on social norms and maintaining social order.',
+            distractorExplanations: {
+              1: 'Most adults reason at the conventional level, focused on social norms and maintaining social or',
+              2: 'Most adults reason at the conventional level, focused on social norms and maintaining social or',
+              3: 'This describes the opposite of what actually happens; most adults reason at the conventional level, focused on social norms and maintaining social or',
+            },
           },
         ],
       },
@@ -2222,6 +2609,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The limbic system (emotions, rewards) matures before the prefrontal cortex (impulse control), creating a developmental mismatch.',
+            distractorExplanations: {
+              1: 'The limbic system (emotions, rewards) matures before the prefrontal cortex (impulse control), c',
+              2: 'The limbic system (emotions, rewards) matures before the prefrontal cortex (impulse control), c',
+              3: 'This describes the opposite of what actually happens; the limbic system (emotions, rewards) matures before the prefrontal cortex (impulse control), c',
+            },
           },
           {
             id: 'psy-sec10-u11-L3-Q2',
@@ -2254,6 +2646,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Kubler-Ross\'s 5 stages were designed to describe how all people grieve after losing a loved one.',
             correctAnswer: false,
             explanation: 'The stages were developed from studying dying patients, not bereaved people. Applying them to grief is a widespread misconception.',
+            distractorExplanations: {
+              0: 'The stages were developed from studying dying patients, not bereaved people. Applying them to grief is a widespread misconception.',
+            },
           },
           {
             id: 'psy-sec10-u11-L3-Q5',
@@ -2267,6 +2662,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'As time feels limited, people prioritize quality over quantity in relationships.',
+            distractorExplanations: {
+              1: 'As time feels limited, people prioritize quality over quantity in relationships.',
+              2: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u11-L3-Q6',
@@ -2281,6 +2681,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Oscillating between processing the loss and rebuilding daily life is healthy according to the dual process model.',
+            distractorExplanations: {
+              1: 'Oscillating between processing the loss and rebuilding daily life is healthy according to the d',
+              2: 'Oscillating between processing the loss and rebuilding daily life is healthy according to the d',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u11-L3-Q7',
@@ -2320,6 +2725,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Conservation (understanding quantity stays the same despite shape changes) develops in the concrete operational stage, not the preoperational stage.',
+            distractorExplanations: {
+              1: 'Conservation (understanding quantity stays the same despite shape changes) develops in the conc',
+              2: 'Conservation (understanding quantity stays the same despite shape changes) develops in the conc',
+              3: 'Conservation (understanding quantity stays the same despite shape changes) develops in the conc',
+            },
           },
           {
             id: 'psy-sec10-u11-L4-Q2',
@@ -2333,6 +2743,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Kohlberg developed the moral dilemma method, analyzing the reasoning behind people\'s moral judgments.',
+            distractorExplanations: {
+              1: 'Kohlberg developed the moral dilemma method, analyzing the reasoning behind people\'s moral judg',
+              2: 'Kohlberg developed the moral dilemma method, analyzing the reasoning behind people\'s moral judg',
+              3: 'Kohlberg developed the moral dilemma method, analyzing the reasoning behind people\'s moral judg',
+            },
           },
           {
             id: 'psy-sec10-u11-L4-Q3',
@@ -2372,6 +2787,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The mismatch between the mature limbic system and immature prefrontal cortex, amplified by peer presence, explains this common adolescent behavior.',
+            distractorExplanations: {
+              1: 'The mismatch between the mature limbic system and immature prefrontal cortex, amplified by peer',
+              2: 'The mismatch between the mature limbic system and immature prefrontal cortex, amplified by peer',
+              3: 'This describes the opposite of what actually happens; the mismatch between the mature limbic system and immature prefrontal cortex, amplified by peer',
+            },
           },
           {
             id: 'psy-sec10-u11-L4-Q6',
@@ -2385,6 +2805,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Kubler-Ross studied terminally ill patients. Her stages are not a universal grief template, and grief research does not support a fixed sequence.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              2: 'Kubler-Ross studied terminally ill patients.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u11-L4-Q7',
@@ -2406,6 +2831,9 @@ export const psySection10Part2: Unit[] = [
             question: 'Kohlberg\'s moral stages have been found to apply identically across all cultures.',
             correctAnswer: false,
             explanation: 'Kohlberg\'s stages reflect Western individualist values. Collectivist cultures may prioritize communal responsibility, which his model may underrate.',
+            distractorExplanations: {
+              0: 'Kohlberg\'s stages reflect Western individualist values.',
+            },
           },
           {
             id: 'psy-sec10-u11-L4-Q9',
@@ -2420,6 +2848,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The dual process model predicts exactly this oscillation. Experiencing grief and joy in the same day is normal and healthy.',
+            distractorExplanations: {
+              1: 'The dual process model predicts exactly this oscillation.',
+              2: 'The dual process model predicts exactly this oscillation.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec10-u11-L4-Q10',
@@ -2433,6 +2866,11 @@ export const psySection10Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'No single theory captures all of development. Biology, culture, relationships, and experience all interact across the entire lifespan.',
+            distractorExplanations: {
+              1: 'No single theory captures all of development.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'No single theory captures all of development.',
+            },
           },
         ],
       },

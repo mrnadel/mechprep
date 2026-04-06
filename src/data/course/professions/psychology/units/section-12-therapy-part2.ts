@@ -34,6 +34,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Psychiatric medications work by changing neurotransmitter activity in the brain.',
             correctAnswer: true,
             explanation: 'Most psychiatric medications alter neurotransmitter levels, release, or receptor activity to reduce symptoms.',
+            distractorExplanations: {
+              1: 'Most psychiatric medications alter neurotransmitter levels, release, or receptor activity to reduce symptoms.',
+            },
           },
           {
             id: 'psy-sec12-u8-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Neurotransmitters are chemicals released by one neuron and received by another, enabling communication across synapses.',
+            distractorExplanations: {
+              0: '"Tiny organs inside the brain that store memories" is incorrect; chemical messengers that carry signals between neurons.',
+              1: '"Blood cells that deliver oxygen to the brain" is incorrect; chemical messengers that carry signals between neurons.',
+              3: '"Electrical currents that power brain activity" is incorrect; chemical messengers that carry signals between neurons.',
+            },
           },
           {
             id: 'psy-sec12-u8-L1-T2',
@@ -90,6 +98,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Psychiatric medications work by gradually shifting neurotransmitter activity. The brain needs time to adjust to these changes.',
+            distractorExplanations: {
+              1: '"Patients need time to remember to take them" does not accurately describe the concept asked about.',
+              2: '"The pills dissolve very slowly in the stomach" does not accurately describe the concept asked about.',
+              3: '"Insurance companies require a waiting period" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u8-L1-Q6',
@@ -104,6 +117,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Antidepressants typically require 2 to 6 weeks to reach full effect. Stopping early without consulting a doctor can cause withdrawal symptoms.',
+            distractorExplanations: {
+              0: '"You should double the dose to make it work faster" is incorrect; most antidepressants take 2 to 6 weeks to show full effects.',
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"Three days is long enough to know if it works" is incorrect; most antidepressants take 2 to 6 weeks to show full effects.',
+            },
           },
         ],
       },
@@ -129,6 +147,9 @@ export const psySection12Part2: Unit[] = [
             question: 'SSRIs work by blocking the reabsorption of serotonin in the brain.',
             correctAnswer: true,
             explanation: 'SSRI stands for selective serotonin reuptake inhibitor. They prevent serotonin from being reabsorbed, keeping more of it available.',
+            distractorExplanations: {
+              1: 'SSRI stands for selective serotonin reuptake inhibitor.',
+            },
           },
           {
             id: 'psy-sec12-u8-L2-Q2',
@@ -172,6 +193,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Sertraline (Zoloft) is one of the most commonly prescribed SSRIs. The others are a pain reliever, a mood stabilizer, and a benzodiazepine.',
+            distractorExplanations: {
+              0: '"Ibuprofen (Advil)" is incorrect; sertraline (Zoloft).',
+              1: '"Lithium" is incorrect; sertraline (Zoloft).',
+              2: '"Diazepam (Valium)" is incorrect; sertraline (Zoloft).',
+            },
           },
           {
             id: 'psy-sec12-u8-L2-T3',
@@ -192,6 +218,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'A prescriber can adjust the dose, switch medications, or add strategies to manage side effects. Stopping abruptly can cause withdrawal symptoms.',
+            distractorExplanations: {
+              0: '"Immediately stop taking the medication without telling anyone" does not accurately describe the concept asked about.',
+              1: '"Take double the dose to overcome the side effects" does not accurately describe the concept asked about.',
+              3: '"Assume the medication is not meant for them and give up on treatment" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u8-L2-Q6',
@@ -206,6 +237,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'SSRIs are effective for a range of conditions beyond depression, including OCD, anxiety disorders, and PTSD.',
+            distractorExplanations: {
+              1: 'Depression involves persistent low mood and loss of interest, not the specific pattern described here.',
+              2: '"SSRIs work for OCD but only at extremely high doses" is incorrect; sSRIs treat multiple conditions including OCD, anxiety, and PTSD.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
         ],
       },
@@ -231,6 +267,9 @@ export const psySection12Part2: Unit[] = [
             question: 'SNRIs block the reabsorption of both serotonin and norepinephrine.',
             correctAnswer: true,
             explanation: 'The "SN" in SNRI stands for serotonin-norepinephrine. They inhibit the reuptake of both neurotransmitters.',
+            distractorExplanations: {
+              1: 'The "SN" in SNRI stands for serotonin-norepinephrine. They inhibit the reuptake of both neurotransmitters.',
+            },
           },
           {
             id: 'psy-sec12-u8-L3-Q2',
@@ -244,6 +283,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The main difference is that SNRIs add norepinephrine reuptake inhibition to the serotonin reuptake inhibition that SSRIs provide.',
+            distractorExplanations: {
+              0: '"SSRIs are pills and SNRIs are injections" does not accurately describe the concept asked about.',
+              1: '"SSRIs work immediately and SNRIs take months" does not accurately describe the concept asked about.',
+              2: '"SNRIs target serotonin only; SSRIs target both serotonin and norepinephrine" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u8-L3-T2',
@@ -304,6 +348,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Different medication classes work through different mechanisms. Not responding to one class does not mean others will also fail.',
+            distractorExplanations: {
+              1: '"If SSRIs did not work, no other antidepressant will either" does not accurately describe the concept asked about.',
+              2: '"The psychiatrist should have prescribed an SNRI first" does not accurately describe the concept asked about.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
         ],
       },
@@ -329,6 +378,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Antipsychotic medications primarily work by blocking dopamine receptors.',
             correctAnswer: true,
             explanation: 'Most antipsychotics reduce dopamine activity, which helps control psychotic symptoms like hallucinations and delusions.',
+            distractorExplanations: {
+              1: 'Most antipsychotics reduce dopamine activity, which helps control psychotic symptoms like hallucinations and delusions.',
+            },
           },
           {
             id: 'psy-sec12-u8-L4-Q2',
@@ -342,6 +394,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Antipsychotics are primarily prescribed for schizophrenia, bipolar disorder, and sometimes as add-on treatment for severe depression.',
+            distractorExplanations: {
+              0: '"Broken bones and muscle strains" is incorrect; schizophrenia and bipolar disorder.',
+              1: '"Common colds and flu" is incorrect; schizophrenia and bipolar disorder.',
+              3: '"Diabetes and high cholesterol" is incorrect; schizophrenia and bipolar disorder.',
+            },
           },
           {
             id: 'psy-sec12-u8-L4-T2',
@@ -392,6 +449,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Tardive dyskinesia involves involuntary, repetitive movements (often of the face and tongue) and is most associated with long-term first-generation antipsychotic use.',
+            distractorExplanations: {
+              0: 'Depression involves persistent low mood and loss of interest, not the specific pattern described here.',
+              1: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+              2: '"An allergic reaction to all psychiatric medications" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u8-L4-Q6',
@@ -406,6 +468,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Second-generation antipsychotics generally have a lower risk of tardive dyskinesia and other movement side effects, though they have their own risks.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
         ],
       },
@@ -431,6 +498,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Lithium is primarily used to treat bipolar disorder.',
             correctAnswer: true,
             explanation: 'Lithium is one of the most effective mood stabilizers and has been used for bipolar disorder for decades.',
+            distractorExplanations: {
+              1: 'Lithium is one of the most effective mood stabilizers and has been used for bipolar disorder for decades.',
+            },
           },
           {
             id: 'psy-sec12-u8-L5-Q2',
@@ -444,6 +514,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Lithium has a narrow therapeutic window. Too little is ineffective, and too much can be toxic, so blood levels must be monitored regularly.',
+            distractorExplanations: {
+              1: '"Lithium changes blood type over time" is incorrect; the therapeutic dose is close to the toxic dose.',
+              2: '"Doctors need to check if the person is still depressed" is incorrect; the therapeutic dose is close to the toxic dose.',
+              3: '"Blood tests are required for all psychiatric medications" is incorrect; the therapeutic dose is close to the toxic dose.',
+            },
           },
           {
             id: 'psy-sec12-u8-L5-T2',
@@ -494,6 +569,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Benzodiazepines can lead to physical dependence and tolerance with extended use, making them best suited for short-term or as-needed use.',
+            distractorExplanations: {
+              0: '"They stop working after a few days" is incorrect; they carry a risk of physical dependence with long-term use.',
+              1: '"They are too expensive for long-term prescriptions" is incorrect; they carry a risk of physical dependence with long-term use.',
+              2: '"They cause permanent brain damage after 2 weeks" is incorrect; they carry a risk of physical dependence with long-term use.',
+            },
           },
           {
             id: 'psy-sec12-u8-L5-Q6',
@@ -508,6 +588,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'SSRIs are the first-line long-term treatment for anxiety disorders. A prescriber may use benzodiazepines briefly while waiting for the SSRI to take effect.',
+            distractorExplanations: {
+              0: '"The doctor is ignoring the patient\\\'s wishes" does not accurately describe the concept asked about.',
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+            },
           },
         ],
       },
@@ -533,6 +618,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Psychiatric medications change a person\'s fundamental personality.',
             correctAnswer: false,
             explanation: 'Psychiatric medications target symptoms, not personality. They help people function more like themselves by reducing interfering symptoms.',
+            distractorExplanations: {
+              0: 'Psychiatric medications target symptoms, not personality.',
+            },
           },
           {
             id: 'psy-sec12-u8-L6-Q2',
@@ -546,6 +634,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Research consistently shows that combined treatment (medication plus therapy) produces better outcomes for many conditions than either alone.',
+            distractorExplanations: {
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec12-u8-L6-T2',
@@ -601,6 +694,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Informed consent means the person understands what they are agreeing to, including risks, benefits, and alternatives.',
+            distractorExplanations: {
+              0: '"Signing a form without reading it" does not accurately describe the concept asked about.',
+              1: '"Having a family member make the decision for you" does not accurately describe the concept asked about.',
+              2: '"Agreeing to take whatever the doctor recommends without questions" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u8-L6-Q6',
@@ -615,6 +713,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Abrupt discontinuation of SSRIs can cause withdrawal (dizziness, nausea, irritability) and increases the risk of symptom relapse. A supervised taper is always recommended.',
+            distractorExplanations: {
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"They will immediately become addicted to the medication" is incorrect; stopping abruptly can cause withdrawal symptoms and relapse.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
         ],
       },
@@ -659,6 +762,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Psychodynamic therapy traces symptoms back to unconscious conflicts, often rooted in early relationships and experiences.',
+            distractorExplanations: {
+              0: '"Changing negative thought patterns through structured homework" is incorrect; exploring unconscious patterns and early life experiences.',
+              1: '"Practicing mindfulness and distress tolerance skills" is incorrect; exploring unconscious patterns and early life experiences.',
+              3: '"Setting specific behavioral goals with measurable outcomes" is incorrect; exploring unconscious patterns and early life experiences.',
+            },
           },
           {
             id: 'psy-sec12-u9-L1-Q2',
@@ -690,6 +798,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Humanistic therapy focuses primarily on diagnosing mental disorders.',
             correctAnswer: false,
             explanation: 'Humanistic therapy focuses on personal growth, self-understanding, and reaching one\'s potential, not primarily on diagnosis.',
+            distractorExplanations: {
+              0: 'Humanistic therapy focuses on personal growth, self-understanding, and reaching one\\\'s potential, not primarily on diagnosis.',
+            },
           },
           {
             id: 'psy-sec12-u9-L1-Q5',
@@ -713,6 +824,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Free association, dream analysis, and linking past relationships to current patterns are hallmarks of psychodynamic therapy.',
+            distractorExplanations: {
+              0: '"Cognitive behavioral therapy" is incorrect; psychodynamic therapy.',
+              1: '"Dialectical behavior therapy" is incorrect; psychodynamic therapy.',
+              2: '"Person-centered therapy" is incorrect; psychodynamic therapy.',
+            },
           },
         ],
       },
@@ -743,6 +859,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Group therapy provides peer support, normalization, and the chance to learn from others\' experiences and feedback.',
+            distractorExplanations: {
+              0: '"Having a quieter, more private setting" is incorrect; learning from the experiences of others facing similar challenges.',
+              2: '"Getting more one-on-one attention from the therapist" is incorrect; learning from the experiences of others facing similar challenges.',
+              3: '"Avoiding difficult conversations about personal issues" is incorrect; learning from the experiences of others facing similar challenges.',
+            },
           },
           {
             id: 'psy-sec12-u9-L2-Q2',
@@ -750,6 +871,9 @@ export const psySection12Part2: Unit[] = [
             question: 'In family systems therapy, the "identified patient" is always the person who truly has the problem.',
             correctAnswer: false,
             explanation: 'Family systems theory sees the identified patient as carrying symptoms of a dysfunctional family system. The problem often lies in family patterns, not just one person.',
+            distractorExplanations: {
+              0: 'Family systems theory sees the identified patient as carrying symptoms of a dysfunctional family system.',
+            },
           },
           {
             id: 'psy-sec12-u9-L2-Q3',
@@ -784,6 +908,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Families develop unspoken rules, roles, and boundaries that shape how members relate to each other.',
+            distractorExplanations: {
+              0: '"Classical conditioning" is incorrect; family boundaries and roles.',
+              1: '"Cognitive distortions" is incorrect; family boundaries and roles.',
+              3: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+            },
           },
           {
             id: 'psy-sec12-u9-L2-Q6',
@@ -798,6 +927,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'When family dynamics contribute to a member\'s symptoms, family therapy addresses the underlying patterns rather than focusing only on the identified patient.',
+            distractorExplanations: {
+              0: '"Individual therapy for the teenager only" is incorrect; family therapy to address patterns in the whole family system.',
+              2: '"Medication for the teenager\\\'s behavior" is incorrect; family therapy to address patterns in the whole family system.',
+              3: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+            },
           },
         ],
       },
@@ -837,6 +971,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Benzodiazepines can cause physical dependence and tolerance with extended use, making them best for short-term or situational anxiety relief.',
+            distractorExplanations: {
+              1: '"They stop working permanently after 2 weeks" is incorrect; they carry a risk of physical dependence.',
+              2: '"They are too expensive for long-term prescriptions" is incorrect; they carry a risk of physical dependence.',
+              3: '"They must be taken with food, which is inconvenient" is incorrect; they carry a risk of physical dependence.',
+            },
           },
           {
             id: 'psy-sec12-u9-L3-Q3',
@@ -844,6 +983,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Second-generation antipsychotics are also called atypical antipsychotics.',
             correctAnswer: true,
             explanation: 'Second-generation antipsychotics are called "atypical" because they work through additional mechanisms beyond just blocking dopamine.',
+            distractorExplanations: {
+              1: 'Second-generation antipsychotics are called "atypical" because they work through additional mechanisms beyond just blocking.',
+            },
           },
           {
             id: 'psy-sec12-u9-L3-Q4',
@@ -882,6 +1024,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Lithium has a small range between an effective dose and a toxic dose. Regular blood monitoring ensures levels stay safe and therapeutic.',
+            distractorExplanations: {
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: '"SSRIs are more dangerous than lithium" does not accurately describe the concept asked about.',
+              3: '"The doctor is being overly cautious" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -921,6 +1068,9 @@ export const psySection12Part2: Unit[] = [
             question: 'You only need therapy if you have a diagnosed mental health condition.',
             correctAnswer: false,
             explanation: 'Therapy can help anyone, including people dealing with stress, life changes, grief, relationship problems, or simply wanting to understand themselves better.',
+            distractorExplanations: {
+              0: 'Therapy can help anyone.',
+            },
           },
           {
             id: 'psy-sec12-u10-L1-Q2',
@@ -934,6 +1084,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'When emotional difficulties persistently interfere with daily functioning, that is a strong indicator that professional support could help.',
+            distractorExplanations: {
+              0: '"Feeling sad for one afternoon after a bad day" does not accurately describe the concept asked about.',
+              1: '"Choosing to spend a quiet weekend at home" does not accurately describe the concept asked about.',
+              2: '"Having a single argument with a friend" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u10-L1-T2',
@@ -969,6 +1124,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Two weeks of persistent symptoms (like low mood, anxiety, or sleep changes) that affect daily functioning is a common clinical guideline.',
+            distractorExplanations: {
+              0: '"More than 2 hours of feeling upset" is incorrect; more than 2 weeks of persistent symptoms.',
+              2: 'The diagnostic criteria specify a different duration: 2 weeks.',
+              3: '"Any time you feel sad for any reason" is incorrect; more than 2 weeks of persistent symptoms.',
+            },
           },
           {
             id: 'psy-sec12-u10-L1-T3',
@@ -983,6 +1143,9 @@ export const psySection12Part2: Unit[] = [
             question: 'You should only contact a crisis line if you are certain you need help.',
             correctAnswer: false,
             explanation: 'Crisis lines are for anyone who is struggling. You do not need to meet any threshold. If you are unsure, reaching out is always the right choice.',
+            distractorExplanations: {
+              0: 'Crisis lines are for anyone who is struggling.',
+            },
           },
           {
             id: 'psy-sec12-u10-L1-Q6',
@@ -997,6 +1160,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Weeks of hopelessness, withdrawal, and excess sleep are warning signs. Gently encouraging professional help is the most supportive response.',
+            distractorExplanations: {
+              0: '"Agree that it\\\'s probably nothing and change the subject" does not accurately describe the concept asked about.',
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              3: 'Depression involves persistent low mood and loss of interest, not the specific pattern described here.',
+            },
           },
         ],
       },
@@ -1022,6 +1190,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Psychiatrists can prescribe medication, but most psychologists cannot.',
             correctAnswer: true,
             explanation: 'Psychiatrists are medical doctors with prescribing authority. Most psychologists focus on therapy and psychological testing, though a few jurisdictions allow limited prescribing.',
+            distractorExplanations: {
+              1: 'Psychiatrists are medical doctors with prescribing authority.',
+            },
           },
           {
             id: 'psy-sec12-u10-L2-Q2',
@@ -1058,6 +1229,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'A psychiatrist can evaluate whether medication is appropriate and coordinate with a therapist for combined treatment.',
+            distractorExplanations: {
+              0: '"See a personal trainer who can boost your mood through exercise" does not accurately describe the concept asked about.',
+              1: '"Visit the emergency room for a depression diagnosis" does not accurately describe the concept asked about.',
+              3: '"Wait 6 months to see if it resolves on its own" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u10-L2-Q5',
@@ -1072,6 +1248,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'For therapy without medication, a licensed counselor or psychologist is the best match. They can teach evidence-based coping skills.',
+            distractorExplanations: {
+              0: '"A psychiatrist to get a prescription" does not accurately describe the concept asked about.',
+              2: '"An emergency room doctor" does not accurately describe the concept asked about.',
+              3: '"A life coach with no clinical training" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1097,6 +1278,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Many therapists offer free brief consultations before you commit to working with them.',
             correctAnswer: true,
             explanation: 'Many therapists offer 15-minute phone consultations so you can ask questions and see if they are a good fit before scheduling a full session.',
+            distractorExplanations: {
+              1: 'Many therapists offer 15-minute phone consultations so you can ask questions and see if they are a good fit before.',
+            },
           },
           {
             id: 'psy-sec12-u10-L3-Q2',
@@ -1129,6 +1313,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Decades of research show that the therapeutic alliance (trust, collaboration, feeling understood) predicts outcomes better than any specific technique.',
+            distractorExplanations: {
+              1: '"The therapist\\\'s specific technique or brand of therapy" is incorrect; the quality of the therapeutic relationship.',
+              2: '"The number of degrees the therapist has" is incorrect; the quality of the therapeutic relationship.',
+              3: '"The size and location of the therapist\\\'s office" is incorrect; the quality of the therapeutic relationship.',
+            },
           },
           {
             id: 'psy-sec12-u10-L3-Q4',
@@ -1157,6 +1346,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Open communication is ideal. If the fit still does not feel right after discussing it, switching therapists is a healthy choice.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"Stay with the therapist for at least a year before judging" does not accurately describe the concept asked about.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
           {
             id: 'psy-sec12-u10-L3-Q6',
@@ -1171,6 +1365,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Matching the therapist\'s specialty to your specific concern improves outcomes. CBT is a well-researched treatment for social anxiety.',
+            distractorExplanations: {
+              0: 'Not 3 therapists would be equally effective for social anxiety.',
+              1: '"The EMDR specialist since all anxiety comes from trauma" does not accurately describe the concept asked about.',
+              2: '"The couples counselor since social anxiety is about relationships" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1196,6 +1395,9 @@ export const psySection12Part2: Unit[] = [
             question: 'You need to have a clear diagnosis before attending your first therapy session.',
             correctAnswer: false,
             explanation: 'You do not need a diagnosis to start therapy. The therapist will help you understand your concerns and develop a plan together.',
+            distractorExplanations: {
+              0: 'You do not need a diagnosis to start therapy. The therapist will help you understand your concerns and develop a plan together.',
+            },
           },
           {
             id: 'psy-sec12-u10-L4-Q2',
@@ -1209,6 +1411,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The first session is about gathering information and building rapport. Treatment planning usually begins in subsequent sessions.',
+            distractorExplanations: {
+              1: '"The therapist immediately begins intensive treatment" is incorrect; the therapist asks about your concerns, history, and goals.',
+              2: '"You take a written exam about psychology" is incorrect; the therapist asks about your concerns, history, and goals.',
+              3: '"The therapist tells you exactly what your problem is in the first 5 minutes" is incorrect; the therapist asks about your concerns, history, and goals.',
+            },
           },
           {
             id: 'psy-sec12-u10-L4-T2',
@@ -1259,6 +1466,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A good therapist respects your boundaries. Saying you are not ready is healthy communication, not avoidance.',
+            distractorExplanations: {
+              0: '"Make up a story to avoid the topic" is incorrect; tell the therapist you are not ready to talk about that yet.',
+              2: '"Immediately end therapy" is incorrect; tell the therapist you are not ready to talk about that yet.',
+              3: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+            },
           },
           {
             id: 'psy-sec12-u10-L4-Q6',
@@ -1273,6 +1485,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Feeling overwhelmed in a first session is very common. There is no right or wrong way to begin. The therapist\'s job is to help you feel comfortable over time.',
+            distractorExplanations: {
+              1: '"They should have prepared more before coming" does not accurately describe the concept asked about.',
+              2: '"They are probably not suited for therapy" does not accurately describe the concept asked about.',
+              3: '"They should answer every question perfectly to impress the therapist" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1298,6 +1515,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Stigma is one of the most common reasons people avoid seeking mental health care.',
             correctAnswer: true,
             explanation: 'Research consistently identifies stigma (fear of judgment from others) as a top barrier to mental health treatment.',
+            distractorExplanations: {
+              1: 'Research consistently identifies stigma (fear of judgment from others) as a top barrier to mental health treatment.',
+            },
           },
           {
             id: 'psy-sec12-u10-L5-Q2',
@@ -1311,6 +1531,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Common barriers include stigma, cost, access, and lack of knowledge. Having too many options is rarely cited as a significant barrier.',
+            distractorExplanations: {
+              0: '"Fear of being judged by others" is incorrect; having too many therapists to choose from in your area.',
+              1: '"Cost and lack of insurance coverage" is incorrect; having too many therapists to choose from in your area.',
+              2: '"Not knowing how to find a therapist" is incorrect; having too many therapists to choose from in your area.',
+            },
           },
           {
             id: 'psy-sec12-u10-L5-T2',
@@ -1371,6 +1596,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Practical solutions like telehealth, sliding-scale fees, and community resources can address cost and distance barriers.',
+            distractorExplanations: {
+              0: '"Tell them therapy probably would not help anyway" does not accurately describe the concept asked about.',
+              2: '"Offer to be their therapist since you took a psychology course" does not accurately describe the concept asked about.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
         ],
       },
@@ -1410,6 +1640,9 @@ export const psySection12Part2: Unit[] = [
             question: 'A therapy is evidence-based if it has been tested in controlled studies and shown to be effective.',
             correctAnswer: true,
             explanation: 'Evidence-based therapies have undergone rigorous research, typically randomized controlled trials, showing they work better than control conditions.',
+            distractorExplanations: {
+              1: 'Evidence-based therapies have undergone rigorous research.',
+            },
           },
           {
             id: 'psy-sec12-u11-L1-Q2',
@@ -1423,6 +1656,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Random assignment ensures that differences in outcomes are likely due to the treatment, not preexisting differences between groups.',
+            distractorExplanations: {
+              0: '"It uses the most expensive equipment available" does not accurately describe the concept asked about.',
+              1: 'The scope is broader than the best therapists are allowed to participate alone.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec12-u11-L1-T2',
@@ -1470,6 +1708,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Effect size quantifies the magnitude of improvement, helping compare the practical impact of different therapies.',
+            distractorExplanations: {
+              1: '"How many people participated in the study" is incorrect; how much improvement the therapy produces compared to a control.',
+              2: '"How expensive the therapy is" is incorrect; how much improvement the therapy produces compared to a control.',
+              3: '"How long each therapy session lasts" is incorrect; how much improvement the therapy produces compared to a control.',
+            },
           },
           {
             id: 'psy-sec12-u11-L1-Q6',
@@ -1484,6 +1727,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'A meta-analysis of 20 RCTs provides the strongest evidence. More studies and higher-quality designs give more reliable conclusions.',
+            distractorExplanations: {
+              0: '"Therapy A, because case studies are the most detailed" does not accurately describe the concept asked about.',
+              1: '"Therapy B, because 3 trials is enough" does not accurately describe the concept asked about.',
+              3: 'Not 3 have equally strong evidence.',
+            },
           },
         ],
       },
@@ -1509,6 +1757,9 @@ export const psySection12Part2: Unit[] = [
             question: 'CBT is the most extensively researched form of psychotherapy.',
             correctAnswer: true,
             explanation: 'CBT has been studied in thousands of clinical trials across dozens of conditions, making it the most evidence-supported therapy.',
+            distractorExplanations: {
+              1: 'CBT has been studied in thousands of clinical trials across dozens of conditions, making it the most evidence-supported therapy.',
+            },
           },
           {
             id: 'psy-sec12-u11-L2-Q2',
@@ -1553,6 +1804,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'ERP is the gold standard for OCD treatment. It involves controlled exposure to feared triggers while preventing the usual compulsive response.',
+            distractorExplanations: {
+              1: '"Talking about childhood memories for several years" does not accurately describe the concept asked about.',
+              2: '"Taking increasingly higher doses of medication" does not accurately describe the concept asked about.',
+              3: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+            },
           },
           {
             id: 'psy-sec12-u11-L2-T3',
@@ -1582,6 +1838,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'ERP is the most evidence-based therapy for OCD, with decades of research showing its effectiveness.',
+            distractorExplanations: {
+              0: 'Classical psychoanalysis is rarely the first-line treatment for this condition.',
+              2: '"Group therapy, because OCD is best treated in a social setting" does not accurately describe the concept asked about.',
+              3: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+            },
           },
         ],
       },
@@ -1607,6 +1868,9 @@ export const psySection12Part2: Unit[] = [
             question: 'The therapeutic alliance is one of the strongest predictors of therapy outcomes.',
             correctAnswer: true,
             explanation: 'Across all types of therapy, the quality of the therapist-client relationship consistently predicts how much the client improves.',
+            distractorExplanations: {
+              1: 'Across all types of therapy, the quality of the therapist-client relationship consistently predicts how much the client improves.',
+            },
           },
           {
             id: 'psy-sec12-u11-L3-Q2',
@@ -1620,6 +1884,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Common factors include the therapeutic relationship, client hope and expectations, and therapist empathy. Office decor is not a meaningful factor.',
+            distractorExplanations: {
+              0: '"The therapeutic alliance (trust and collaboration)" is incorrect; the color of the therapist\\\'s office walls.',
+              1: '"The client\\\'s expectation that therapy will help" is incorrect; the color of the therapist\\\'s office walls.',
+              3: '"The therapist\\\'s genuine empathy" is incorrect; the color of the therapist\\\'s office walls.',
+            },
           },
           {
             id: 'psy-sec12-u11-L3-T2',
@@ -1670,6 +1939,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Positive expectations increase motivation and engagement. A client who believes change is possible puts more effort into the therapeutic process.',
+            distractorExplanations: {
+              0: '"Expectations create a magical healing energy" is incorrect; hope increases engagement, effort, and openness to change.',
+              1: '"It tricks the brain into curing itself" is incorrect; hope increases engagement, effort, and openness to change.',
+              2: '"It does not actually contribute to outcomes" is incorrect; hope increases engagement, effort, and openness to change.',
+            },
           },
           {
             id: 'psy-sec12-u11-L3-Q6',
@@ -1684,6 +1958,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'When different therapies produce similar outcomes, common factors (relationship quality, empathy, hope) are the most likely explanation.',
+            distractorExplanations: {
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: 'Psychodynamic approaches focus on unconscious conflicts and are not the recommended treatment here.',
+              3: '"Neither therapy is working; the clients are improving on their own" is incorrect; common factors like the therapeutic alliance and therapist empathy.',
+            },
           },
         ],
       },
@@ -1709,6 +1988,9 @@ export const psySection12Part2: Unit[] = [
             question: 'A therapy backed only by personal testimonials has the same evidence as one supported by randomized controlled trials.',
             correctAnswer: false,
             explanation: 'Testimonials are not scientific evidence. Personal stories can be compelling but are affected by placebo effects, confirmation bias, and natural recovery.',
+            distractorExplanations: {
+              0: 'Testimonials are not scientific evidence.',
+            },
           },
           {
             id: 'psy-sec12-u11-L4-Q2',
@@ -1744,6 +2026,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Some people recover on their own, which is why research uses control groups to isolate the therapy\'s actual effect from natural improvement.',
+            distractorExplanations: {
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              3: '"It only applies to physical health, not mental health" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u11-L4-Q4',
@@ -1786,6 +2073,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Cure-all claims, reliance on testimonials, no published research, and avoidance of scientific testing are major red flags for pseudoscientific therapies.',
+            distractorExplanations: {
+              0: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              1: '"It is probably legitimate since the creator clearly believes in it" does not accurately describe the concept asked about.',
+              2: '"It must work because it treats so many conditions" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1811,6 +2103,9 @@ export const psySection12Part2: Unit[] = [
             question: 'For moderate to severe depression, combined treatment (medication plus therapy) often outperforms either alone.',
             correctAnswer: true,
             explanation: 'Multiple large studies show that combining antidepressants with CBT produces better outcomes for moderate-to-severe depression than either treatment by itself.',
+            distractorExplanations: {
+              1: 'Multiple large studies show that combining antidepressants with CBT produces better outcomes for moderate-to-severe.',
+            },
           },
           {
             id: 'psy-sec12-u11-L5-Q2',
@@ -1824,6 +2119,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Medication can ease severe symptoms (like crippling anxiety or deep depression) enough for a person to actively participate in and benefit from therapy.',
+            distractorExplanations: {
+              1: '"It replaces the need for therapy entirely" does not accurately describe the concept asked about.',
+              2: '"It makes the therapist\\\'s words more believable" does not accurately describe the concept asked about.',
+              3: '"It eliminates all symptoms before therapy begins" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u11-L5-T2',
@@ -1884,6 +2184,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'When therapy alone is not sufficient, adding medication is a well-supported next step. The low energy and poor concentration may be limiting therapy engagement.',
+            distractorExplanations: {
+              0: '"Discontinue therapy since it clearly is not working" does not accurately describe the concept asked about.',
+              1: '"Switch to an unproven alternative therapy" does not accurately describe the concept asked about.',
+              3: '"Tell the person they are not trying hard enough" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1923,6 +2228,9 @@ export const psySection12Part2: Unit[] = [
             question: 'People from all cultures experience and express psychological distress in the same way.',
             correctAnswer: false,
             explanation: 'Cultural background shapes how distress is experienced, expressed, and interpreted. Assuming one universal experience leads to misunderstanding.',
+            distractorExplanations: {
+              0: 'Cultural background shapes how distress is experienced, expressed, and interpreted.',
+            },
           },
           {
             id: 'psy-sec12-u12-L1-Q2',
@@ -1936,6 +2244,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Somatization (expressing psychological distress through physical symptoms) is more common in some cultures. This is a valid way of communicating suffering, not a lesser one.',
+            distractorExplanations: {
+              1: '"Posting on social media" is incorrect; physical symptoms like headaches and stomach pain.',
+              2: '"Wearing specific colors of clothing" is incorrect; physical symptoms like headaches and stomach pain.',
+              3: '"Speaking in a particular tone of voice" is incorrect; physical symptoms like headaches and stomach pain.',
+            },
           },
           {
             id: 'psy-sec12-u12-L1-T2',
@@ -1986,6 +2299,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Cultural humility emphasizes lifelong learning and openness, whereas competence can imply a level of mastery that may be unrealistic.',
+            distractorExplanations: {
+              0: '"Humility means not knowing anything about other cultures" does not accurately describe the concept asked about.',
+              1: '"Competence is for beginners and humility is for experts" does not accurately describe the concept asked about.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
           {
             id: 'psy-sec12-u12-L1-Q6',
@@ -2000,6 +2318,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Expressing distress through physical symptoms is common in many cultures. A culturally competent therapist meets the client where they are.',
+            distractorExplanations: {
+              0: '"Insist the client use emotional vocabulary instead" does not accurately describe the concept asked about.',
+              1: '"Refer the client to a different therapist" does not accurately describe the concept asked about.',
+              3: '"Diagnose the client with a somatic symptom disorder" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2025,6 +2348,9 @@ export const psySection12Part2: Unit[] = [
             question: 'All populations have equal access to quality mental health care.',
             correctAnswer: false,
             explanation: 'Significant disparities exist. Marginalized communities face additional barriers including cost, stigma, language, provider shortages, and historical mistrust.',
+            distractorExplanations: {
+              0: 'Significant disparities exist.',
+            },
           },
           {
             id: 'psy-sec12-u12-L2-Q2',
@@ -2038,6 +2364,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'A lack of culturally matched providers is a significant barrier. People are more likely to seek and stay in treatment when they feel understood.',
+            distractorExplanations: {
+              0: '"Too many therapists available in their area" does not accurately describe the concept asked about.',
+              1: '"Having too much insurance coverage" does not accurately describe the concept asked about.',
+              2: '"Being too familiar with the mental health system" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u12-L2-T2',
@@ -2088,6 +2419,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'When cultural bias affects assessment, some groups receive incorrect diagnoses. This leads to inappropriate treatment and worse outcomes.',
+            distractorExplanations: {
+              1: 'Not diagnoses are equally accurate across all populations.',
+              2: 'The scope is broader than one group of people ever gets misdiagnosed alone.',
+              3: '"Misdiagnosis only happens to people without insurance" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u12-L2-Q6',
@@ -2102,6 +2438,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'When need is equal but utilization is lower, systemic barriers are the most likely explanation. Addressing these barriers is a public health priority.',
+            distractorExplanations: {
+              0: '"That group has naturally better mental health and needs less care" does not accurately describe the concept asked about.',
+              1: '"They are all using alternative medicine instead" does not accurately describe the concept asked about.',
+              3: '"The study must have errors in its data" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2127,6 +2468,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Culturally adapting an evidence-based therapy reduces its effectiveness.',
             correctAnswer: false,
             explanation: 'Research shows the opposite. Cultural adaptations typically improve engagement, retention, and outcomes compared to using unmodified treatments with diverse populations.',
+            distractorExplanations: {
+              0: 'Research shows the opposite.',
+            },
           },
           {
             id: 'psy-sec12-u12-L3-Q2',
@@ -2140,6 +2484,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cultural adaptation means making therapy relatable and relevant while keeping the core evidence-based techniques intact.',
+            distractorExplanations: {
+              1: '"Removing all evidence-based techniques" does not accurately describe the concept asked about.',
+              2: '"Refusing to discuss cultural differences" does not accurately describe the concept asked about.',
+              3: '"Translating the manual without changing any content" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u12-L3-T2',
@@ -2190,6 +2539,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Effective cultural adaptation goes beyond language. It addresses different ways of understanding emotions, relationships, and the self.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              1: '"Translation removes the scientific evidence behind the therapy" does not accurately describe the concept asked about.',
+              2: '"Clients prefer to read therapy materials in English" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u12-L3-Q6',
@@ -2204,6 +2558,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'If spiritual practices are meaningful to the client and support their coping, integrating them is culturally competent and client-centered.',
+            distractorExplanations: {
+              0: '"Tell the client that therapy and religion should be kept separate" does not accurately describe the concept asked about.',
+              2: '"Refer the client to a religious leader instead of continuing therapy" does not accurately describe the concept asked about.',
+              3: '"Ignore the client\\\'s request and focus only on cognitive techniques" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2229,6 +2588,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Intersectionality means that multiple identities interact to create unique experiences.',
             correctAnswer: true,
             explanation: 'Intersectionality recognizes that identities do not exist in isolation. Their interaction creates experiences that cannot be understood by examining each identity separately.',
+            distractorExplanations: {
+              1: 'Intersectionality recognizes that identities do not exist in isolation.',
+            },
           },
           {
             id: 'psy-sec12-u12-L4-Q2',
@@ -2242,6 +2604,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Legal scholar Kimberle Crenshaw introduced the term "intersectionality" in 1989 to describe how race and gender interact to shape discrimination.',
+            distractorExplanations: {
+              0: 'Freud\'s psychoanalytic approach is not the framework being described here.',
+              1: 'Rogers\' humanistic approach emphasizes unconditional positive regard, not the concept described here.',
+              3: 'Bandura\'s social learning theory focuses on observational learning, not the concept described here.',
+            },
           },
           {
             id: 'psy-sec12-u12-L4-T2',
@@ -2292,6 +2659,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Implicit biases can unconsciously influence clinical decisions. Self-awareness is the first step toward reducing their impact.',
+            distractorExplanations: {
+              0: '"Therapists are required to be bias-free before they can practice" does not accurately describe the concept asked about.',
+              1: 'The scope is broader than therapists from majority groups have biases alone.',
+              2: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec12-u12-L4-Q6',
@@ -2306,6 +2678,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Culturally responsive therapy acknowledges that systemic discrimination is a real source of distress and integrates this understanding into treatment.',
+            distractorExplanations: {
+              0: '"Focus only on internal thought patterns and avoid discussing discrimination" does not accurately describe the concept asked about.',
+              2: '"Tell the client their anxiety has nothing to do with being transgender" does not accurately describe the concept asked about.',
+              3: '"Suggest the client try to blend in more to avoid discrimination" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2331,6 +2708,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Increasing diversity among mental health professionals can help reduce disparities in care.',
             correctAnswer: true,
             explanation: 'Greater representation builds trust, improves cultural understanding, and makes clients more likely to seek care.',
+            distractorExplanations: {
+              1: 'Greater representation builds trust, improves cultural understanding, and makes clients more likely to seek care.',
+            },
           },
           {
             id: 'psy-sec12-u12-L5-Q2',
@@ -2344,6 +2724,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Cultural matching is not required, but shared understanding improves trust and engagement, which are key to therapy success.',
+            distractorExplanations: {
+              0: 'The scope is broader than therapists of the same background can help a client alone.',
+              2: '"Diverse therapists are automatically better clinicians" does not accurately describe the concept asked about.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec12-u12-L5-T2',
@@ -2401,6 +2786,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A multi-pronged approach (access via telehealth, local capacity through community workers, and stigma reduction through education) addresses multiple barriers simultaneously.',
+            distractorExplanations: {
+              0: '"Wait for therapists to move to the area on their own" does not accurately describe the concept asked about.',
+              2: '"Tell residents to manage their own mental health" does not accurately describe the concept asked about.',
+              3: '"Build a large hospital and wait for people to come" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2445,6 +2835,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Deinstitutionalization shifted care from large psychiatric hospitals to community settings, though many communities were underprepared for this transition.',
+            distractorExplanations: {
+              0: 'Not therapists were required to use CBT.',
+              2: '"Mental health conditions were reclassified as physical illnesses" is incorrect; people moved from large institutions to community-based treatment.',
+              3: '"Therapy was banned in favor of medication only" is incorrect; people moved from large institutions to community-based treatment.',
+            },
           },
           {
             id: 'psy-sec12-u13-L1-Q2',
@@ -2485,6 +2880,9 @@ export const psySection12Part2: Unit[] = [
             question: 'DBT was originally developed specifically for borderline personality disorder.',
             correctAnswer: true,
             explanation: 'Marsha Linehan developed DBT in the 1980s for people with borderline personality disorder. It has since been adapted for other conditions.',
+            distractorExplanations: {
+              1: 'Marsha Linehan developed DBT in the 1980s for people with borderline personality disorder.',
+            },
           },
           {
             id: 'psy-sec12-u13-L1-Q6',
@@ -2499,6 +2897,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Examining evidence and generating balanced thoughts is the core cognitive restructuring technique of CBT.',
+            distractorExplanations: {
+              0: '"DBT distress tolerance" is incorrect; cBT, specifically cognitive restructuring.',
+              1: 'Psychodynamic approaches focus on unconscious conflicts and are not the recommended treatment here.',
+              3: '"Humanistic self-actualization" is incorrect; cBT, specifically cognitive restructuring.',
+            },
           },
           {
             id: 'psy-sec12-u13-L1-Q7',
@@ -2512,6 +2915,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'DBT\'s 4 modules are mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness.',
+            distractorExplanations: {
+              0: '"Free association, dream analysis, transference, resistance" does not accurately describe the concept asked about.',
+              1: '"Empathy, congruence, positive regard, active listening" does not accurately describe the concept asked about.',
+              2: '"Exposure, response prevention, cognitive restructuring, relapse prevention" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2545,6 +2953,9 @@ export const psySection12Part2: Unit[] = [
             question: 'SNRIs affect both serotonin and norepinephrine, while SSRIs affect serotonin only.',
             correctAnswer: true,
             explanation: 'The key difference is that SNRIs add norepinephrine reuptake inhibition. This can be helpful when SSRIs alone are not sufficient.',
+            distractorExplanations: {
+              1: 'The key difference is that SNRIs add norepinephrine reuptake inhibition. This can be helpful when SSRIs alone are not sufficient.',
+            },
           },
           {
             id: 'psy-sec12-u13-L2-Q3',
@@ -2558,6 +2969,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Tardive dyskinesia involves involuntary, repetitive movements and is most associated with first-generation antipsychotics.',
+            distractorExplanations: {
+              0: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+              2: '"A side effect of all SSRIs" is incorrect; involuntary movements caused by long-term antipsychotic use.',
+              3: 'Psychodynamic approaches focus on unconscious conflicts and are not the recommended treatment here.',
+            },
           },
           {
             id: 'psy-sec12-u13-L2-Q4',
@@ -2601,6 +3017,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'SSRIs take weeks to reach full effect, so benzodiazepines bridge the gap. Once the SSRI is effective, tapering the benzodiazepine reduces dependence risk.',
+            distractorExplanations: {
+              0: '"The psychiatrist wants to save money on prescriptions" does not accurately describe the concept asked about.',
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: 'Panic disorder involves recurrent unexpected panic attacks, not the pattern described here.',
+            },
           },
           {
             id: 'psy-sec12-u13-L2-Q7',
@@ -2639,6 +3060,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The therapeutic alliance (trust, collaboration, mutual respect) consistently predicts outcomes more strongly than any specific technique.',
+            distractorExplanations: {
+              0: '"The specific technique the therapist uses" is incorrect; the quality of the therapeutic alliance.',
+              1: '"The therapist\\\'s number of publications" is incorrect; the quality of the therapeutic alliance.',
+              2: '"The length of each therapy session" is incorrect; the quality of the therapeutic alliance.',
+            },
           },
           {
             id: 'psy-sec12-u13-L3-Q2',
@@ -2655,6 +3081,9 @@ export const psySection12Part2: Unit[] = [
             question: 'A meta-analysis provides stronger evidence than a single randomized controlled trial.',
             correctAnswer: true,
             explanation: 'Meta-analyses combine data from multiple studies, providing a broader and more reliable picture of a therapy\'s effectiveness.',
+            distractorExplanations: {
+              1: 'Meta-analyses combine data from multiple studies, providing a broader and more reliable picture of a therapy\\\'s effectiveness.',
+            },
           },
           {
             id: 'psy-sec12-u13-L3-Q4',
@@ -2693,6 +3122,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Cultural competence means adapting your approach to the client\'s values. In collectivist cultures, family involvement is often beneficial, not problematic.',
+            distractorExplanations: {
+              0: '"Tell the client that therapy is an individual process" does not accurately describe the concept asked about.',
+              1: '"Refuse to see the client until they agree to come alone" does not accurately describe the concept asked about.',
+              2: '"Assume the family is interfering with the client\\\'s progress" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u13-L3-Q7',
@@ -2706,6 +3140,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Evidence-based practice integrates the best available research, the clinician\'s expertise, and the client\'s values and preferences.',
+            distractorExplanations: {
+              0: '"Cost, convenience, and speed of treatment" is incorrect; research evidence, clinical expertise, and patient preferences.',
+              2: '"Medication, therapy, and hospitalization" is incorrect; research evidence, clinical expertise, and patient preferences.',
+              3: '"Diagnosis, treatment, and discharge" is incorrect; research evidence, clinical expertise, and patient preferences.',
+            },
           },
         ],
       },
@@ -2737,6 +3176,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'For moderate-to-severe depression not responding to therapy alone, adding medication is a well-supported step. The symptoms (low energy, poor concentration) may be limiting therapy engagement.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"Switch to an unproven alternative therapy" does not accurately describe the concept asked about.',
+              3: '"Tell the person they are not trying hard enough in therapy" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u13-L4-Q2',
@@ -2759,6 +3203,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Cure-all claims, no published research, and reliance on testimonials are classic red flags for pseudoscientific therapies.',
+            distractorExplanations: {
+              0: '"It must be a breakthrough that science has not caught up with yet" is incorrect; multiple red flags suggest this therapy lacks scientific support.',
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: '"If many people believe it works, it probably does" is incorrect; multiple red flags suggest this therapy lacks scientific support.',
+            },
           },
           {
             id: 'psy-sec12-u13-L4-Q4',
@@ -2803,6 +3252,11 @@ export const psySection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'A culturally competent approach meets the client where they are: validating their expression of distress, respecting collectivist values, and orienting them to therapy in a welcoming way.',
+            distractorExplanations: {
+              0: '"Insist they express emotions in words instead of physical terms" does not accurately describe the concept asked about.',
+              1: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              3: '"Immediately diagnose a somatic symptom disorder" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u13-L4-Q7',
@@ -2810,6 +3264,9 @@ export const psySection12Part2: Unit[] = [
             question: 'Evidence-based practice considers only research findings when making treatment decisions.',
             correctAnswer: false,
             explanation: 'Evidence-based practice integrates 3 pillars: research evidence, clinical expertise, and patient values and preferences. All 3 are essential.',
+            distractorExplanations: {
+              0: 'Evidence-based practice integrates 3 pillars: research evidence, clinical expertise, and patient values and preferences.',
+            },
           },
           {
             id: 'psy-sec12-u13-L4-Q8',

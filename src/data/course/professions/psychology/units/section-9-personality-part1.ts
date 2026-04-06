@@ -34,6 +34,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Personality refers to the consistent pattern of thoughts, feelings, and behaviors unique to an individual.',
             correctAnswer: true,
             explanation: 'Personality captures what stays stable about a person across different situations and over time.',
+            distractorExplanations: {
+              1: 'Personality captures what stays stable about a person across different situations and over time.',
+            },
           },
           {
             id: 'psy-sec9-u1-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Personality is defined by consistent patterns, not temporary moods or single traits like intelligence.',
+            distractorExplanations: {
+              0: 'Personality is defined by consistent patterns, not temporary moods or single traits like intell',
+              2: 'Personality is defined by consistent patterns, not temporary moods or single traits like intell',
+              3: 'Personality is defined by consistent patterns, not temporary moods or single traits like intell',
+            },
           },
           {
             id: 'psy-sec9-u1-L1-T2',
@@ -60,6 +68,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Mood and personality are the same thing.',
             correctAnswer: false,
             explanation: 'Mood is temporary and situational. Personality is the stable, lasting pattern underneath.',
+            distractorExplanations: {
+              0: 'Mood is temporary and situational. Personality is the stable, lasting pattern underneath.',
+            },
           },
           {
             id: 'psy-sec9-u1-L1-Q4',
@@ -103,6 +114,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'An inborn, consistent emotional style visible from early childhood fits the definition of temperament.',
+            distractorExplanations: {
+              0: 'An inborn, consistent emotional style visible from early childhood fits the definition of tempe',
+              1: 'An inborn, consistent emotional style visible from early childhood fits the definition of tempe',
+              3: 'An inborn, consistent emotional style visible from early childhood fits the definition of tempe',
+            },
           },
         ],
       },
@@ -128,6 +144,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Personality is determined entirely by genetics.',
             correctAnswer: false,
             explanation: 'Genetics play a role, but environment, culture, and experiences also shape personality.',
+            distractorExplanations: {
+              0: 'Genetics play a role, but environment, culture, and experiences also shape personality.',
+            },
           },
           {
             id: 'psy-sec9-u1-L2-Q2',
@@ -141,6 +160,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Identical twins share many traits but aren\'t perfectly matched, showing both genetics and environment play a role.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              1: 'Identical twins share many traits but aren\'t perfectly matched, showing both genetics and envir',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u1-L2-T2',
@@ -160,6 +184,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Studies consistently find that personality traits are about 40 to 60 percent heritable.',
+            distractorExplanations: {
+              0: 'Studies consistently find that personality traits are about 40 to 60 percent heritable.',
+              2: 'Studies consistently find that personality traits are about 40 to 60 percent heritable.',
+              3: 'Studies consistently find that personality traits are about 40 to 60 percent heritable.',
+            },
           },
           {
             id: 'psy-sec9-u1-L2-Q4',
@@ -204,6 +233,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Since identical twins share 100 percent of their genes, the difference comes from non-shared environment: different friends, teachers, and unique experiences.',
+            distractorExplanations: {
+              0: 'Genetic is a different concept that does not explain this particular phenomenon.',
+              1: 'Since identical twins share 100 percent of their genes, the difference comes from non-shared en',
+              3: 'This describes the opposite of what actually happens; since identical twins share 100 percent of their genes, the difference comes from non-shared en',
+            },
           },
         ],
       },
@@ -228,6 +262,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Personality is completely fixed by age 30 and never changes after that.',
             correctAnswer: false,
             explanation: 'Personality becomes more stable around age 30, but it can still shift gradually with life experiences.',
+            distractorExplanations: {
+              0: 'Personality becomes more stable around age 30, but it can still shift gradually with life experiences.',
+            },
           },
           {
             id: 'psy-sec9-u1-L3-Q2',
@@ -241,6 +278,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'People tend to become more agreeable and cooperative as they get older. This is one of the most consistent findings in personality research.',
+            distractorExplanations: {
+              0: 'This describes the opposite of what actually happens; people tend to become more agreeable and cooperative as they get older.',
+              2: 'People tend to become more agreeable and cooperative as they get older.',
+              3: 'People tend to become more agreeable and cooperative as they get older.',
+            },
           },
           {
             id: 'psy-sec9-u1-L3-T2',
@@ -255,6 +297,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Major life events like starting a career can gradually shift personality traits.',
             correctAnswer: true,
             explanation: 'Life transitions often bring gradual personality changes, especially in responsibility and emotional stability.',
+            distractorExplanations: {
+              1: 'Life transitions often bring gradual personality changes, especially in responsibility and emotional stability.',
+            },
           },
           {
             id: 'psy-sec9-u1-L3-Q4',
@@ -268,6 +313,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The research consensus is that personality is relatively stable but not rigid. Gradual change is normal.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+              1: 'The research consensus is that personality is relatively stable but not rigid.',
+              3: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u1-L3-Q5',
@@ -328,6 +378,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Psychologists rely only on intuition to assess personality.',
             correctAnswer: false,
             explanation: 'Psychologists use structured tools like questionnaires, projective tests, and observations to measure personality.',
+            distractorExplanations: {
+              0: 'Psychologists use structured tools like questionnaires, projective tests, and observations to measure personality.',
+            },
           },
           {
             id: 'psy-sec9-u1-L4-Q2',
@@ -341,6 +394,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Self-report questionnaires are the most widely used personality assessment tool.',
+            distractorExplanations: {
+              0: 'Self-report questionnaires are the most widely used personality assessment tool.',
+              2: 'Brain scan is a different concept that does not explain this particular phenomenon.',
+              3: 'Self-report questionnaires are the most widely used personality assessment tool.',
+            },
           },
           {
             id: 'psy-sec9-u1-L4-T2',
@@ -383,6 +441,9 @@ export const psySection9Part1: Unit[] = [
             question: 'A personality test can be reliable without being valid.',
             correctAnswer: true,
             explanation: 'A test can give consistent results (reliable) but still measure the wrong thing (not valid).',
+            distractorExplanations: {
+              1: 'A test can give consistent results (reliable) but still measure the wrong thing (not valid).',
+            },
           },
           {
             id: 'psy-sec9-u1-L4-Q6',
@@ -397,6 +458,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'If scores change each time with no real change in the person, the test lacks reliability.',
+            distractorExplanations: {
+              0: 'If scores change each time with no real change in the person, the test lacks reliability.',
+              2: 'If scores change each time with no real change in the person, the test lacks reliability.',
+              3: 'If scores change each time with no real change in the person, the test lacks reliability.',
+            },
           },
         ],
       },
@@ -536,6 +602,9 @@ export const psySection9Part1: Unit[] = [
             question: 'According to Freud, the id operates on the pleasure principle.',
             correctAnswer: true,
             explanation: 'The id seeks immediate gratification without considering consequences or morality.',
+            distractorExplanations: {
+              1: 'The id seeks immediate gratification without considering consequences or morality.',
+            },
           },
           {
             id: 'psy-sec9-u2-L1-Q2',
@@ -577,6 +646,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'According to Freud, conflict between the id and superego that the ego can\'t resolve creates anxiety.',
+            distractorExplanations: {
+              0: 'According to Freud, conflict between the id and superego that the ego can\'t resolve creates anx',
+              2: 'According to Freud, conflict between the id and superego that the ego can\'t resolve creates anx',
+              3: 'According to Freud, conflict between the id and superego that the ego can\'t resolve creates anx',
+            },
           },
           {
             id: 'psy-sec9-u2-L1-T3',
@@ -598,6 +672,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The impulsive "eat it all" is the id. The moral judgment is the superego. The practical compromise is the ego.',
+            distractorExplanations: {
+              1: 'The impulsive "eat it all" is the id. The moral judgment is the superego.',
+              2: 'The impulsive "eat it all" is the id. The moral judgment is the superego.',
+              3: 'The impulsive "eat it all" is the id. The moral judgment is the superego.',
+            },
           },
           {
             id: 'psy-sec9-u2-L1-Q6',
@@ -611,6 +690,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Freud believed most mental processes are unconscious. The id is entirely below awareness.',
+            distractorExplanations: {
+              0: 'Freud believed most mental processes are unconscious. The id is entirely below awareness.',
+              1: 'Freud believed most mental processes are unconscious. The id is entirely below awareness.',
+              3: 'Freud believed most mental processes are unconscious. The id is entirely below awareness.',
+            },
           },
         ],
       },
@@ -635,6 +719,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Defense mechanisms are always conscious and deliberate.',
             correctAnswer: false,
             explanation: 'Defense mechanisms operate unconsciously. People usually don\'t realize they\'re using them.',
+            distractorExplanations: {
+              0: 'Defense mechanisms operate unconsciously. People usually don\'t realize they\'re using them.',
+            },
           },
           {
             id: 'psy-sec9-u2-L2-Q2',
@@ -648,6 +735,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Defense mechanisms protect the ego by distorting or denying reality to reduce anxiety.',
+            distractorExplanations: {
+              0: 'Defense mechanisms protect the ego by distorting or denying reality to reduce anxiety.',
+              2: 'Defense mechanisms protect the ego by distorting or denying reality to reduce anxiety.',
+              3: 'Defense mechanisms protect the ego by distorting or denying reality to reduce anxiety.',
+            },
           },
           {
             id: 'psy-sec9-u2-L2-T2',
@@ -682,6 +774,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Creating a logical-sounding excuse to avoid the pain of rejection is rationalization.',
+            distractorExplanations: {
+              0: 'Creating a logical-sounding excuse to avoid the pain of rejection is rationalization.',
+              1: 'Creating a logical-sounding excuse to avoid the pain of rejection is rationalization.',
+              3: 'Creating a logical-sounding excuse to avoid the pain of rejection is rationalization.',
+            },
           },
           {
             id: 'psy-sec9-u2-L2-T3',
@@ -737,6 +834,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Freud believed personality is largely formed by age 5.',
             correctAnswer: true,
             explanation: 'Freud placed enormous importance on early childhood experiences in shaping personality.',
+            distractorExplanations: {
+              1: 'Freud placed enormous importance on early childhood experiences in shaping personality.',
+            },
           },
           {
             id: 'psy-sec9-u2-L3-Q2',
@@ -772,6 +872,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Oral fixation involves behaviors focused on the mouth, like smoking, overeating, or nail biting.',
+            distractorExplanations: {
+              0: 'Oral fixation involves behaviors focused on the mouth, like smoking, overeating, or nail biting.',
+              2: 'Oral fixation involves behaviors focused on the mouth, like smoking, overeating, or nail biting.',
+              3: 'Oral fixation involves behaviors focused on the mouth, like smoking, overeating, or nail biting.',
+            },
           },
           {
             id: 'psy-sec9-u2-L3-T3',
@@ -792,6 +897,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The main critique is that psychosexual stages aren\'t falsifiable. They can\'t be scientifically tested.',
+            distractorExplanations: {
+              0: 'The main critique is that psychosexual stages aren\'t falsifiable.',
+              2: 'The main critique is that psychosexual stages aren\'t falsifiable.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u2-L3-Q6',
@@ -806,6 +916,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Freud linked excessive orderliness and control to anal fixation, where toilet training conflicts were unresolved.',
+            distractorExplanations: {
+              0: 'Freud linked excessive orderliness and control to anal fixation, where toilet training conflict',
+              2: 'Freud linked excessive orderliness and control to anal fixation, where toilet training conflict',
+              3: 'Freud linked excessive orderliness and control to anal fixation, where toilet training conflict',
+            },
           },
         ],
       },
@@ -830,6 +945,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Neo-Freudians completely rejected the idea of an unconscious mind.',
             correctAnswer: false,
             explanation: 'Neo-Freudians kept the concept of the unconscious but shifted focus away from sexual drives.',
+            distractorExplanations: {
+              0: 'Neo-Freudians kept the concept of the unconscious but shifted focus away from sexual drives.',
+            },
           },
           {
             id: 'psy-sec9-u2-L4-Q2',
@@ -843,6 +961,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Adler believed the drive to overcome feelings of inferiority was the main motivator of personality.',
+            distractorExplanations: {
+              0: 'Adler believed the drive to overcome feelings of inferiority was the main motivator of personal',
+              2: 'Adler believed the drive to overcome feelings of inferiority was the main motivator of personal',
+              3: 'Classical conditioning is a different concept that does not explain this particular phenomenon.',
+            },
           },
           {
             id: 'psy-sec9-u2-L4-T2',
@@ -891,6 +1014,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Horney pushed back against Freud\'s biological determinism, emphasizing culture and society.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'Horney pushed back against Freud\'s biological determinism, emphasizing culture and society.',
+            },
           },
           {
             id: 'psy-sec9-u2-L4-Q6',
@@ -1050,6 +1178,9 @@ export const psySection9Part1: Unit[] = [
             question: 'The Big Five model identifies 5 broad personality dimensions.',
             correctAnswer: true,
             explanation: 'OCEAN stands for Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.',
+            distractorExplanations: {
+              1: 'OCEAN stands for Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.',
+            },
           },
           {
             id: 'psy-sec9-u3-L1-Q2',
@@ -1071,6 +1202,9 @@ export const psySection9Part1: Unit[] = [
             question: 'In the Big Five model, you are either high or low on each trait with no middle ground.',
             correctAnswer: false,
             explanation: 'Each trait is a continuous spectrum. Most people score somewhere in the middle.',
+            distractorExplanations: {
+              0: 'Each trait is a continuous spectrum. Most people score somewhere in the middle.',
+            },
           },
           {
             id: 'psy-sec9-u3-L1-Q4',
@@ -1084,6 +1218,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The Big Five has been validated across cultures, languages, and decades of research.',
+            distractorExplanations: {
+              0: 'The Big Five has been validated across cultures, languages, and decades of research.',
+              2: 'The Big Five has been validated across cultures, languages, and decades of research.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u3-L1-T3',
@@ -1104,6 +1243,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The lexical hypothesis led researchers to analyze dictionary words and discover they clustered into 5 broad dimensions.',
+            distractorExplanations: {
+              0: 'Brain scan is a different concept that does not explain this particular phenomenon.',
+              2: 'The lexical hypothesis led researchers to analyze dictionary words and discover they clustered ',
+              3: 'The lexical hypothesis led researchers to analyze dictionary words and discover they clustered ',
+            },
           },
           {
             id: 'psy-sec9-u3-L1-Q6',
@@ -1136,6 +1280,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Someone high in openness tends to enjoy new ideas and creative activities.',
             correctAnswer: true,
             explanation: 'Openness involves curiosity, imagination, and a willingness to explore new experiences.',
+            distractorExplanations: {
+              1: 'Openness involves curiosity, imagination, and a willingness to explore new experiences.',
+            },
           },
           {
             id: 'psy-sec9-u3-L2-Q2',
@@ -1149,6 +1296,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Preferring routine and disliking novelty is characteristic of low openness.',
+            distractorExplanations: {
+              0: 'Preferring routine and disliking novelty is characteristic of low openness.',
+              1: 'Preferring routine and disliking novelty is characteristic of low openness.',
+              3: 'This describes the opposite of what actually happens; preferring routine and disliking novelty is characteristic of low openness.',
+            },
           },
           {
             id: 'psy-sec9-u3-L2-T2',
@@ -1163,6 +1315,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Conscientiousness is the best Big Five predictor of job performance.',
             correctAnswer: true,
             explanation: 'Research consistently shows conscientious people perform better at work across many different jobs.',
+            distractorExplanations: {
+              1: 'Research consistently shows conscientious people perform better at work across many different jobs.',
+            },
           },
           {
             id: 'psy-sec9-u3-L2-Q4',
@@ -1201,6 +1356,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Extreme organization, planning, and reliability are hallmarks of high conscientiousness.',
+            distractorExplanations: {
+              0: 'Extreme organization, planning, and reliability are hallmarks of high conscientiousness.',
+              1: 'Extreme organization, planning, and reliability are hallmarks of high conscientiousness.',
+              3: 'Extreme organization, planning, and reliability are hallmarks of high conscientiousness.',
+            },
           },
         ],
       },
@@ -1225,6 +1385,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Introverts dislike people and have no social skills.',
             correctAnswer: false,
             explanation: 'Introversion isn\'t about disliking people. It\'s about preferring less stimulation and needing alone time to recharge.',
+            distractorExplanations: {
+              0: 'Introversion isn\'t about disliking people. It\'s about preferring less stimulation and needing alone time to recharge.',
+            },
           },
           {
             id: 'psy-sec9-u3-L3-Q2',
@@ -1238,6 +1401,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The core difference is about social energy. Extraverts are energized by interaction, introverts by solitude.',
+            distractorExplanations: {
+              0: 'The core difference is about social energy.',
+              1: 'The core difference is about social energy.',
+              3: 'The core difference is about social energy.',
+            },
           },
           {
             id: 'psy-sec9-u3-L3-T2',
@@ -1251,6 +1419,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Someone low in agreeableness is necessarily a bad person.',
             correctAnswer: false,
             explanation: 'Low agreeableness means someone is more competitive and skeptical. This can be valuable in roles requiring tough decisions.',
+            distractorExplanations: {
+              0: 'Low agreeableness means someone is more competitive and skeptical. This can be valuable in roles requiring tough decisions.',
+            },
           },
           {
             id: 'psy-sec9-u3-L3-Q4',
@@ -1287,6 +1458,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Being skeptical and competitive can be useful in negotiations where trust needs to be verified.',
+            distractorExplanations: {
+              0: 'Being skeptical and competitive can be useful in negotiations where trust needs to be verified.',
+              2: 'Being skeptical and competitive can be useful in negotiations where trust needs to be verified.',
+              3: 'Being skeptical and competitive can be useful in negotiations where trust needs to be verified.',
+            },
           },
           {
             id: 'psy-sec9-u3-L3-Q6',
@@ -1301,6 +1477,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Thriving socially indicates high extraversion. Being warm and helpful indicates high agreeableness.',
+            distractorExplanations: {
+              1: 'Thriving socially indicates high extraversion.',
+              2: 'Thriving socially indicates high extraversion.',
+              3: 'Thriving socially indicates high extraversion.',
+            },
           },
         ],
       },
@@ -1325,6 +1506,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Neuroticism means a person has a mental disorder.',
             correctAnswer: false,
             explanation: 'Neuroticism is a normal personality trait, not a disorder. Everyone falls somewhere on the spectrum.',
+            distractorExplanations: {
+              0: 'Neuroticism is a normal personality trait, not a disorder. Everyone falls somewhere on the spectrum.',
+            },
           },
           {
             id: 'psy-sec9-u3-L4-Q2',
@@ -1338,6 +1522,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'High neuroticism means stronger emotional reactions to stressors, including worry and anxiety.',
+            distractorExplanations: {
+              0: 'High neuroticism means stronger emotional reactions to stressors, including worry and anxiety.',
+              2: 'This describes the opposite of what actually happens; high neuroticism means stronger emotional reactions to stressors, including worry and anxiety.',
+              3: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u3-L4-T2',
@@ -1352,6 +1541,9 @@ export const psySection9Part1: Unit[] = [
             question: 'High neuroticism can sometimes be beneficial, such as increasing alertness to threats.',
             correctAnswer: true,
             explanation: 'While often seen negatively, high neuroticism can enhance vigilance and empathy.',
+            distractorExplanations: {
+              1: 'While often seen negatively, high neuroticism can enhance vigilance and empathy.',
+            },
           },
           {
             id: 'psy-sec9-u3-L4-Q4',
@@ -1394,6 +1586,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Worrying a lot is high neuroticism. Channeling that worry into organized preparation is high conscientiousness.',
+            distractorExplanations: {
+              1: 'Worrying a lot is high neuroticism.',
+              2: 'Worrying a lot is high neuroticism.',
+              3: 'Worrying a lot is high neuroticism.',
+            },
           },
         ],
       },
@@ -1532,6 +1729,9 @@ export const psySection9Part1: Unit[] = [
             question: 'The psychodynamic approach focuses on unconscious forces, while the trait approach focuses on measurable dimensions.',
             correctAnswer: true,
             explanation: 'Freud emphasized hidden motives, while the Big Five model measures observable patterns.',
+            distractorExplanations: {
+              1: 'Freud emphasized hidden motives, while the Big Five model measures observable patterns.',
+            },
           },
           {
             id: 'psy-sec9-u4-L1-Q2',
@@ -1581,6 +1781,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The Big Five has the strongest empirical support across cultures and decades of research.',
+            distractorExplanations: {
+              0: 'The Big Five has the strongest empirical support across cultures and decades of research.',
+              2: 'The Big Five has the strongest empirical support across cultures and decades of research.',
+              3: 'The Big Five has the strongest empirical support across cultures and decades of research.',
+            },
           },
           {
             id: 'psy-sec9-u4-L1-Q5',
@@ -1602,6 +1807,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Traits describe behavior patterns, while psychodynamic theory offers insight into underlying motives. Together they provide a fuller picture.',
+            distractorExplanations: {
+              0: 'This describes the opposite of what actually happens; traits describe behavior patterns, while psychodynamic theory offers insight into underlying mo',
+              2: 'Traits describe behavior patterns, while psychodynamic theory offers insight into underlying mo',
+              3: 'Traits describe behavior patterns, while psychodynamic theory offers insight into underlying mo',
+            },
           },
           {
             id: 'psy-sec9-u4-L1-T3',
@@ -1622,6 +1832,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Standardized self-report questionnaires that measure personality dimensions are a trait approach tool.',
+            distractorExplanations: {
+              0: 'Standardized self-report questionnaires that measure personality dimensions are a trait approac',
+              2: 'Standardized self-report questionnaires that measure personality dimensions are a trait approac',
+              3: 'Standardized self-report questionnaires that measure personality dimensions are a trait approac',
+            },
           },
         ],
       },
@@ -1653,6 +1868,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Freud would interpret extreme generosity after neglect as reaction formation: doing the opposite of what you experienced.',
+            distractorExplanations: {
+              0: 'Freud would interpret extreme generosity after neglect as reaction formation: doing the opposit',
+              2: 'Freud would interpret extreme generosity after neglect as reaction formation: doing the opposit',
+              3: 'Freud would interpret extreme generosity after neglect as reaction formation: doing the opposit',
+            },
           },
           {
             id: 'psy-sec9-u4-L2-Q2',
@@ -1667,6 +1887,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A trait psychologist would describe Sam as high in extraversion (social energy) and possibly high in openness (creativity).',
+            distractorExplanations: {
+              0: 'A trait psychologist would describe Sam as high in extraversion (social energy) and possibly hi',
+              2: 'A trait psychologist would describe Sam as high in extraversion (social energy) and possibly hi',
+              3: 'A trait psychologist would describe Sam as high in extraversion (social energy) and possibly hi',
+            },
           },
           {
             id: 'psy-sec9-u4-L2-T2',
@@ -1687,6 +1912,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Each theory has strengths in different areas. Using multiple perspectives gives a more complete picture.',
+            distractorExplanations: {
+              0: 'This describes the opposite of what actually happens; each theory has strengths in different areas.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'Each theory has strengths in different areas.',
+            },
           },
           {
             id: 'psy-sec9-u4-L2-Q4',
@@ -1717,6 +1947,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Adler focused on feelings of inferiority and the drive to overcome them. This explanation fits his theory directly.',
+            distractorExplanations: {
+              0: 'Adler focused on feelings of inferiority and the drive to overcome them.',
+              2: 'Adler focused on feelings of inferiority and the drive to overcome them.',
+              3: 'Adler focused on feelings of inferiority and the drive to overcome them.',
+            },
           },
           {
             id: 'psy-sec9-u4-L2-Q6',
@@ -1874,6 +2109,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Rogers believed the gap between the real self and ideal self causes psychological distress.',
             correctAnswer: true,
             explanation: 'When your self-concept doesn\'t match your ideal, Rogers said this creates anxiety and unhappiness.',
+            distractorExplanations: {
+              1: 'When your self-concept doesn\'t match your ideal, Rogers said this creates anxiety and unhappiness.',
+            },
           },
           {
             id: 'psy-sec9-u5-L1-Q2',
@@ -1901,6 +2139,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Unconditional positive regard means valuing someone as a person regardless of their specific behaviors.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'Unconditional positive regard means valuing someone as a person regardless of their specific be',
+              3: 'Unconditional positive regard means valuing someone as a person regardless of their specific be',
+            },
           },
           {
             id: 'psy-sec9-u5-L1-Q4',
@@ -1915,6 +2158,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This response separates the person\'s worth from their performance. The child is valued while still addressing the issue.',
+            distractorExplanations: {
+              0: 'This response separates the person\'s worth from their performance.',
+              2: 'This describes the opposite of what actually happens; this response separates the person\'s worth from their performance.',
+              3: 'This describes the opposite of what actually happens; this response separates the person\'s worth from their performance.',
+            },
           },
           {
             id: 'psy-sec9-u5-L1-T3',
@@ -1935,6 +2183,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Conditions of worth cause people to suppress their true selves to meet others\' expectations.',
+            distractorExplanations: {
+              0: 'Conditions of worth cause people to suppress their true selves to meet others\' expectations.',
+              2: 'Conditions of worth cause people to suppress their true selves to meet others\' expectations.',
+              3: 'Conditions of worth cause people to suppress their true selves to meet others\' expectations.',
+            },
           },
           {
             id: 'psy-sec9-u5-L1-Q6',
@@ -1973,6 +2226,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Maslow believed you must satisfy lower needs before focusing on higher ones.',
             correctAnswer: true,
             explanation: 'Maslow\'s hierarchy suggests basic needs like food and safety must be met before pursuing growth needs.',
+            distractorExplanations: {
+              1: 'Maslow\'s hierarchy suggests basic needs like food and safety must be met before pursuing growth needs.',
+            },
           },
           {
             id: 'psy-sec9-u5-L2-Q2',
@@ -2017,6 +2273,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'When basic needs are satisfied, people naturally turn toward growth, creativity, and reaching their potential.',
+            distractorExplanations: {
+              0: 'When basic needs are satisfied, people naturally turn toward growth, creativity, and reaching t',
+              2: 'When basic needs are satisfied, people naturally turn toward growth, creativity, and reaching t',
+              3: 'When basic needs are satisfied, people naturally turn toward growth, creativity, and reaching t',
+            },
           },
           {
             id: 'psy-sec9-u5-L2-T3',
@@ -2030,6 +2291,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Modern research fully supports Maslow\'s strict hierarchy where needs must be met in exact order.',
             correctAnswer: false,
             explanation: 'People can and do pursue higher needs before lower ones are fully satisfied. The hierarchy is flexible.',
+            distractorExplanations: {
+              0: 'People can and do pursue higher needs before lower ones are fully satisfied. The hierarchy is flexible.',
+            },
           },
           {
             id: 'psy-sec9-u5-L2-Q6',
@@ -2044,6 +2308,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Pursuing creative expression and pushing personal boundaries reflects self-actualization.',
+            distractorExplanations: {
+              0: 'Pursuing creative expression and pushing personal boundaries reflects self-actualization.',
+              1: 'Pursuing creative expression and pushing personal boundaries reflects self-actualization.',
+              2: 'Pursuing creative expression and pushing personal boundaries reflects self-actualization.',
+            },
           },
         ],
       },
@@ -2068,6 +2337,9 @@ export const psySection9Part1: Unit[] = [
             question: 'Self-actualization means becoming rich and famous.',
             correctAnswer: false,
             explanation: 'Self-actualization is about reaching your personal potential, not about wealth or fame.',
+            distractorExplanations: {
+              0: 'Self-actualization is about reaching your personal potential, not about wealth or fame.',
+            },
           },
           {
             id: 'psy-sec9-u5-L3-Q2',
@@ -2081,6 +2353,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Self-actualized people accept themselves and others with their flaws. They don\'t need constant approval.',
+            distractorExplanations: {
+              0: 'Self-actualized people accept themselves and others with their flaws.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "everyone" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u5-L3-T2',
@@ -2123,6 +2400,9 @@ export const psySection9Part1: Unit[] = [
             question: 'According to Maslow, self-actualization is an ongoing process rather than a final destination.',
             correctAnswer: true,
             explanation: 'Self-actualization is a continual journey of growth, not a finish line you cross.',
+            distractorExplanations: {
+              1: 'Self-actualization is a continual journey of growth, not a finish line you cross.',
+            },
           },
           {
             id: 'psy-sec9-u5-L3-Q6',
@@ -2137,6 +2417,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Working for meaning and fulfillment rather than external rewards is characteristic of self-actualization.',
+            distractorExplanations: {
+              0: 'Working for meaning and fulfillment rather than external rewards is characteristic of self-actu',
+              1: 'Working for meaning and fulfillment rather than external rewards is characteristic of self-actu',
+              3: 'Working for meaning and fulfillment rather than external rewards is characteristic of self-actu',
+            },
           },
         ],
       },
@@ -2161,6 +2446,9 @@ export const psySection9Part1: Unit[] = [
             question: 'A fully functioning person, according to Rogers, trusts their own feelings and instincts.',
             correctAnswer: true,
             explanation: 'Rogers believed the fully functioning person is guided by their inner experience rather than external expectations.',
+            distractorExplanations: {
+              1: 'Rogers believed the fully functioning person is guided by their inner experience rather than external expectations.',
+            },
           },
           {
             id: 'psy-sec9-u5-L4-Q2',
@@ -2174,6 +2462,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Rogers believed unconditional positive regard allows people to develop authentically without hiding parts of themselves.',
+            distractorExplanations: {
+              0: 'Rogers believed unconditional positive regard allows people to develop authentically without hi',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'Rogers believed unconditional positive regard allows people to develop authentically without hi',
+            },
           },
           {
             id: 'psy-sec9-u5-L4-T2',
@@ -2224,6 +2517,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Concepts like self-actualization and the fully functioning person are inspiring but difficult to measure scientifically.',
+            distractorExplanations: {
+              0: 'Concepts like self-actualization and the fully functioning person are inspiring but difficult t',
+              2: 'Concepts like self-actualization and the fully functioning person are inspiring but difficult t',
+              3: 'Concepts like self-actualization and the fully functioning person are inspiring but difficult t',
+            },
           },
           {
             id: 'psy-sec9-u5-L4-Q6',
@@ -2238,6 +2536,11 @@ export const psySection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Trusting the client\'s inner resources and providing supportive conditions is a hallmark of humanistic therapy.',
+            distractorExplanations: {
+              0: 'Trusting the client\'s inner resources and providing supportive conditions is a hallmark of huma',
+              1: 'Trusting the client\'s inner resources and providing supportive conditions is a hallmark of huma',
+              3: 'Trusting the client\'s inner resources and providing supportive conditions is a hallmark of huma',
+            },
           },
         ],
       },

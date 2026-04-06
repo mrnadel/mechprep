@@ -40,6 +40,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "We photograph a black hole by capturing the light it emits.",
             correctAnswer: false,
             explanation: "Black holes emit no light. We image the glowing gas around them, which reveals a dark shadow where the black hole sits.",
+            distractorExplanations: {
+              0: 'Black holes emit no light.',
+            },
           },
           {
             id: "sp-sec7-u6-L1-Q2",
@@ -53,6 +56,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Gas spiraling toward the black hole heats to billions of degrees and glows brightly, creating the visible ring around the shadow.",
+            distractorExplanations: {
+              1: 'This is incorrect; gas spiraling toward the black hole heats to billions of degrees and glows brightly, creating the visible ring around the shadow.',
+              2: 'Reflected starlight from nearby stars is incorrect; gas spiraling toward the black hole heats to billions of degrees and glows brightly, creating the.',
+              3: 'The singularity glowing at the center is incorrect; gas spiraling toward the black hole heats to billions of degrees and glows brightly, creating the.',
+            },
           },
           {
             id: "sp-sec7-u6-L1-T2",
@@ -72,6 +80,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The black hole's apparent size on the sky is incredibly small. You'd need a telescope the size of Earth to resolve it with one dish.",
+            distractorExplanations: {
+              0: 'Black holes are too bright for one dish is incorrect; the black hole\'s apparent size on the sky is incredibly small.',
+              1: 'This is incorrect; the black hole\'s apparent size on the sky is incredibly small.',
+              2: 'Radio waves can\'t reach Earth\'s surface is incorrect; the black hole\'s apparent size on the sky is incredibly small.',
+            },
           },
           {
             id: "sp-sec7-u6-L1-Q4",
@@ -100,6 +113,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Radio waves at 1.3 mm wavelength can pass through the dust and gas surrounding black holes, giving us a clear view.",
+            distractorExplanations: {
+              1: 'Radio waves are cheaper to detect is incorrect; radio waves at 1.3 mm wavelength can pass through the dust and gas surrounding black holes, giving us a.',
+              2: 'Black holes only emit radio waves is incorrect; radio waves at 1.3 mm wavelength can pass through the dust and gas surrounding black holes, giving us a.',
+              3: 'Visible light moves too slowly is incorrect; radio waves at 1.3 mm wavelength can pass through the dust and gas surrounding black holes, giving us a clear view.',
+            },
           },
           {
             id: "sp-sec7-u6-L1-Q6",
@@ -142,6 +160,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "VLBI achieves the resolution of a single dish as wide as the distance between its stations.",
             correctAnswer: true,
             explanation: "By combining signals from telescopes spread across Earth, VLBI creates a virtual telescope with an effective diameter equal to the baseline between stations.",
+            distractorExplanations: {
+              1: 'By combining signals from telescopes spread across Earth, VLBI creates a virtual telescope with an effective.',
+            },
           },
           {
             id: "sp-sec7-u6-L2-T2",
@@ -187,6 +208,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "VLBI requires extremely precise timing to combine data from stations thousands of kilometers apart. Atomic clocks provide that precision.",
+            distractorExplanations: {
+              0: 'To measure the age of the black hole is incorrect; vLBI requires extremely precise timing to combine data from stations thousands of kilometers apart.',
+              1: 'This is incorrect; vLBI requires extremely precise timing to combine data from stations thousands of kilometers apart.',
+              2: 'To calculate the black hole\'s mass is incorrect; vLBI requires extremely precise timing to combine data from stations thousands of kilometers apart.',
+            },
           },
           {
             id: "sp-sec7-u6-L2-Q6",
@@ -200,6 +226,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Hydrogen maser clocks provide the extreme short-term stability needed for VLBI. They are accurate to about one trillionth of a second.",
+            distractorExplanations: {
+              0: 'Cesium beam clock is incorrect; hydrogen maser clocks provide the extreme short-term stability needed for VLBI.',
+              1: 'Rubidium oscillator is incorrect; hydrogen maser clocks provide the extreme short-term stability needed for VLBI.',
+              3: 'Quartz crystal clock is incorrect; hydrogen maser clocks provide the extreme short-term stability needed for VLBI.',
+            },
           },
         ],
       },
@@ -223,6 +254,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "The first black hole image showed the Milky Way's central black hole.",
             correctAnswer: false,
             explanation: "The first image showed M87*, the supermassive black hole in galaxy Messier 87. An image of our own galaxy's black hole (Sagittarius A*) came later in 2022.",
+            distractorExplanations: {
+              0: 'The first image showed M87*, the supermassive black hole in galaxy Messier 87.',
+            },
           },
           {
             id: "sp-sec7-u6-L3-Q2",
@@ -236,6 +270,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "M87 is about 55 million light-years from Earth. Despite that distance, M87* is so massive that the EHT could resolve its shadow.",
+            distractorExplanations: {
+              0: '26,000 light-years is incorrect; m87 is about 55 million light-years from Earth.',
+              1: '2.5 million light-years is incorrect; m87 is about 55 million light-years from Earth.',
+              2: '13 billion light-years is incorrect; m87 is about 55 million light-years from Earth.',
+            },
           },
           {
             id: "sp-sec7-u6-L3-T2",
@@ -265,6 +304,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Relativistic beaming makes gas moving toward the observer appear brighter. The material orbiting M87* moves at nearly the speed of light.",
+            distractorExplanations: {
+              1: 'That side is closer to Earth is incorrect; relativistic beaming makes gas moving toward the observer appear brighter.',
+              2: 'Gas on that side is hotter is incorrect; relativistic beaming makes gas moving toward the observer appear brighter.',
+              3: 'The telescope had better focus on one side is incorrect; relativistic beaming makes gas moving toward the observer appear brighter.',
+            },
           },
           {
             id: "sp-sec7-u6-L3-Q5",
@@ -307,6 +351,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "Sagittarius A* was harder to image than M87* because it changes faster.",
             correctAnswer: true,
             explanation: "Gas orbits Sgr A* in minutes while M87* takes weeks. This rapid change blurred images during the hours-long observations.",
+            distractorExplanations: {
+              1: 'Gas orbits Sgr A* in minutes while M87* takes weeks.',
+            },
           },
           {
             id: "sp-sec7-u6-L4-Q2",
@@ -320,6 +367,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Sgr A* sits at the center of our Milky Way, about 26,000 light-years from Earth.",
+            distractorExplanations: {
+              0: 'About 4 light-years is incorrect; sgr A* sits at the center of our Milky Way, about 26,000 light-years from Earth.',
+              1: 'About 55 million light-years is incorrect; sgr A* sits at the center of our Milky Way, about 26,000 light-years from Earth.',
+              3: 'About 2.5 million light-years is incorrect; sgr A* sits at the center of our Milky Way, about 26,000 light-years from Earth.',
+            },
           },
           {
             id: "sp-sec7-u6-L4-T2",
@@ -365,6 +417,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The shadow diameter and ring structure matched Einstein's predictions precisely, providing a powerful test of general relativity in extreme gravity.",
+            distractorExplanations: {
+              0: 'It breaks down near black holes is incorrect; the shadow diameter and ring structure matched Einstein\'s predictions precisely, providing a powerful test of.',
+              1: 'This is incorrect; the shadow diameter and ring structure matched Einstein\'s predictions precisely, providing a powerful test of.',
+              2: 'Black holes don\'t actually exist is incorrect; the shadow diameter and ring structure matched Einstein\'s predictions precisely, providing a powerful test of.',
+            },
           },
           {
             id: "sp-sec7-u6-L4-Q6",
@@ -379,6 +436,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "General relativity predicts a specific shadow size based on mass. The observed shadow matched the prediction for M87*'s known mass, confirming Einstein's theory.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; general relativity predicts a specific shadow size based on mass.',
+              2: 'The image shows a perfectly circular ring is incorrect; general relativity predicts a specific shadow size based on mass.',
+              3: 'This claim is incorrect; general relativity predicts a specific shadow size based on mass.',
+            },
           },
         ],
       },
@@ -402,6 +464,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "The current EHT can produce real-time video of a black hole.",
             correctAnswer: false,
             explanation: "Current EHT observations produce still images from data collected over several nights. Real-time movies require future upgrades with more stations.",
+            distractorExplanations: {
+              0: 'Current EHT observations produce still images from data collected over several nights.',
+            },
           },
           {
             id: "sp-sec7-u6-L5-Q2",
@@ -415,6 +480,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "More stations fill in gaps in the virtual dish, and higher frequencies provide finer detail. Both are needed for time-resolved imaging.",
+            distractorExplanations: {
+              0: 'Fewer but larger telescopes is incorrect; more stations fill in gaps in the virtual dish, and higher frequencies provide finer detail.',
+              1: 'Switching from radio to visible light is incorrect; more stations fill in gaps in the virtual dish, and higher frequencies provide finer detail.',
+              3: 'This is incorrect; more stations fill in gaps in the virtual dish, and higher frequencies provide finer detail.',
+            },
           },
           {
             id: "sp-sec7-u6-L5-T2",
@@ -435,6 +505,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Resolution in VLBI depends on baseline length. A satellite in orbit creates a baseline larger than Earth's diameter, boosting resolution.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; resolution in VLBI depends on baseline length.',
+              1: 'This claim is incorrect; resolution in VLBI depends on baseline length.',
+              2: 'It would observe in gamma rays instead is incorrect; resolution in VLBI depends on baseline length.',
+            },
           },
           {
             id: "sp-sec7-u6-L5-Q4",
@@ -462,6 +537,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "M87* launches a powerful jet of particles at nearly the speed of light. Imaging how the jet connects to the black hole is a major goal.",
+            distractorExplanations: {
+              1: 'Its surface temperature is incorrect; m87* launches a powerful jet of particles at nearly the speed of light.',
+              2: 'Its nuclear fusion core is incorrect; m87* launches a powerful jet of particles at nearly the speed of light.',
+              3: 'Its magnetic poles is incorrect; m87* launches a powerful jet of particles at nearly the speed of light.',
+            },
           },
           {
             id: "sp-sec7-u6-L5-Q6",
@@ -511,6 +591,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "Gravitational waves travel at the speed of light.",
             correctAnswer: true,
             explanation: "Einstein predicted that gravitational waves propagate at the speed of light, and observations have confirmed this.",
+            distractorExplanations: {
+              1: 'Einstein predicted that gravitational waves propagate at the speed of light, and observations have confirmed this.',
+            },
           },
           {
             id: "sp-sec7-u7-L1-Q2",
@@ -538,6 +621,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Einstein derived gravitational waves from his general relativity field equations in 1916, though direct detection took another century.",
+            distractorExplanations: {
+              0: '1879 is incorrect; einstein derived gravitational waves from his general relativity field equations in 1916, though direct detection.',
+              2: '1905 is incorrect; einstein derived gravitational waves from his general relativity field equations in 1916, though direct detection.',
+              3: '1955 is incorrect; einstein derived gravitational waves from his general relativity field equations in 1916, though direct detection.',
+            },
           },
           {
             id: "sp-sec7-u7-L1-Q4",
@@ -551,6 +639,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Accelerating massive objects generate gravitational waves. The more massive and the faster the acceleration, the stronger the waves.",
+            distractorExplanations: {
+              0: 'This is incorrect; accelerating massive objects generate gravitational waves.',
+              1: 'Only black holes is incorrect; accelerating massive objects generate gravitational waves.',
+              2: 'Only neutron stars is incorrect; accelerating massive objects generate gravitational waves.',
+            },
           },
           {
             id: "sp-sec7-u7-L1-T3",
@@ -570,6 +663,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Gravitational waves produce a characteristic stretch-and-squeeze pattern perpendicular to each other, oscillating as the wave passes.",
+            distractorExplanations: {
+              0: 'Heats it uniformly is incorrect; gravitational waves produce a characteristic stretch-and-squeeze pattern perpendicular to each other, oscillating.',
+              1: 'Pushes all matter in one direction is incorrect; gravitational waves produce a characteristic stretch-and-squeeze pattern perpendicular to each other,.',
+              3: 'Creates a permanent distortion is incorrect; gravitational waves produce a characteristic stretch-and-squeeze pattern perpendicular to each other, oscillating.',
+            },
           },
           {
             id: "sp-sec7-u7-L1-Q6",
@@ -602,6 +700,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "Each of LIGO's arms is 4 kilometers long.",
             correctAnswer: true,
             explanation: "LIGO has two perpendicular arms, each 4 km long. The longer the arm, the larger the measurable displacement from a gravitational wave.",
+            distractorExplanations: {
+              1: 'LIGO has two perpendicular arms, each 4 km long.',
+            },
           },
           {
             id: "sp-sec7-u7-L2-Q2",
@@ -629,6 +730,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "LIGO detects displacements of about 10^-19 meters, roughly 1/10,000th of a proton's diameter. It's the most sensitive measurement instrument ever built.",
+            distractorExplanations: {
+              0: 'About 1 millimeter is incorrect; lIGO detects displacements of about 10^-19 meters, roughly 1/10,000th of a proton\'s diameter.',
+              2: 'About 1 micrometer (width of a bacterium) is incorrect; lIGO detects displacements of about 10^-19 meters, roughly 1/10,000th of a proton\'s diameter.',
+              3: 'About 1 nanometer (width of a molecule) is incorrect; lIGO detects displacements of about 10^-19 meters, roughly 1/10,000th of a proton\'s diameter.',
+            },
           },
           {
             id: "sp-sec7-u7-L2-Q4",
@@ -656,6 +762,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A gravitational wave would hit both detectors with a slight time delay. Local disturbances affect only one site, so having two confirms real signals.",
+            distractorExplanations: {
+              0: 'To double the signal strength is incorrect; a gravitational wave would hit both detectors with a slight time delay.',
+              1: 'To create a longer virtual arm is incorrect; a gravitational wave would hit both detectors with a slight time delay.',
+              2: 'To observe different parts of the sky is incorrect; a gravitational wave would hit both detectors with a slight time delay.',
+            },
           },
           {
             id: "sp-sec7-u7-L2-Q6",
@@ -691,6 +802,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "GW150914 was produced by two merging black holes.",
             correctAnswer: true,
             explanation: "The signal matched the prediction for two black holes spiraling together and merging into one. The masses were about 36 and 29 solar masses.",
+            distractorExplanations: {
+              1: 'The signal matched the prediction for two black holes spiraling together and merging into one.',
+            },
           },
           {
             id: "sp-sec7-u7-L3-Q2",
@@ -704,6 +818,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "GW stands for Gravitational Wave, and 150914 is the detection date: September 14, 2015.",
+            distractorExplanations: {
+              0: 'The telescope number and beam frequency is incorrect; gW stands for Gravitational Wave, and 150914 is the detection date: September 14, 2015.',
+              1: 'The distance to the source in light-years is incorrect; gW stands for Gravitational Wave, and 150914 is the detection date: September 14, 2015.',
+              3: 'The combined mass of the merging objects is incorrect; gW stands for Gravitational Wave, and 150914 is the detection date: September 14, 2015.',
+            },
           },
           {
             id: "sp-sec7-u7-L3-T2",
@@ -723,6 +842,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "As the black holes lose energy to gravitational waves, they spiral closer and orbit faster. Faster orbits produce higher-frequency waves, creating the chirp.",
+            distractorExplanations: {
+              0: 'LIGO amplifies the signal over time is incorrect; as the black holes lose energy to gravitational waves, they spiral closer and orbit faster.',
+              1: 'This is incorrect; as the black holes lose energy to gravitational waves, they spiral closer and orbit faster.',
+              2: 'This is incorrect; as the black holes lose energy to gravitational waves, they spiral closer and orbit faster.',
+            },
           },
           {
             id: "sp-sec7-u7-L3-Q4",
@@ -761,6 +885,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The detection was in September 2015, announced in February 2016, and the Nobel Prize in Physics was awarded in October 2017.",
+            distractorExplanations: {
+              0: '2015 is incorrect; the detection was in September 2015, announced in February 2016, and the Nobel Prize in Physics was awarded in October 2017.',
+              2: '2016 is incorrect; the detection was in September 2015, announced in February 2016, and the Nobel Prize in Physics was awarded in October 2017.',
+              3: '2019 is incorrect; the detection was in September 2015, announced in February 2016, and the Nobel Prize in Physics was awarded in October 2017.',
+            },
           },
         ],
       },
@@ -784,6 +913,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "Virgo's arms are the same length as LIGO's.",
             correctAnswer: false,
             explanation: "Virgo has 3 km arms while LIGO has 4 km arms. Despite being shorter, Virgo adds crucial sky localization capability to the network.",
+            distractorExplanations: {
+              0: 'Virgo has 3 km arms while LIGO has 4 km arms.',
+            },
           },
           {
             id: "sp-sec7-u7-L4-Q2",
@@ -797,6 +929,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With three detectors, the time difference between signal arrivals narrows down the source location on the sky from a wide band to a small patch.",
+            distractorExplanations: {
+              1: 'It triples the sensitivity is incorrect; with three detectors, the time difference between signal arrivals narrows down the source location on the sky from.',
+              2: 'This is incorrect; with three detectors, the time difference between signal arrivals narrows down the source location on the sky from.',
+              3: 'It creates a longer total arm length is incorrect; with three detectors, the time difference between signal arrivals narrows down the source location on.',
+            },
           },
           {
             id: "sp-sec7-u7-L4-T2",
@@ -825,6 +962,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "KAGRA is built underground in the Kamioka mine and uses cryogenic cooling to reduce thermal noise in its mirrors.",
+            distractorExplanations: {
+              0: 'It has the longest arms (10 km) is incorrect; kAGRA is built underground in the Kamioka mine and uses cryogenic cooling to reduce thermal noise in its mirrors.',
+              1: 'It uses sound waves instead of lasers is incorrect; kAGRA is built underground in the Kamioka mine and uses cryogenic cooling to reduce thermal noise in.',
+              3: 'It orbits Earth in space is incorrect; kAGRA is built underground in the Kamioka mine and uses cryogenic cooling to reduce thermal noise in its mirrors.',
+            },
           },
           {
             id: "sp-sec7-u7-L4-T3",
@@ -874,6 +1016,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "Multi-messenger astronomy uses only gravitational waves.",
             correctAnswer: false,
             explanation: "It combines gravitational waves with electromagnetic signals (light at various wavelengths) or neutrinos from the same event.",
+            distractorExplanations: {
+              0: 'It combines gravitational waves with electromagnetic signals (light at various wavelengths) or neutrinos from the same event.',
+            },
           },
           {
             id: "sp-sec7-u7-L5-Q2",
@@ -902,6 +1047,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "GW170817 was the first event observed in both gravitational waves and electromagnetic radiation. Over 70 observatories studied it across the spectrum.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; gW170817 was the first event observed in both gravitational waves and electromagnetic radiation.',
+              1: 'It proved black holes don\'t exist is incorrect; gW170817 was the first event observed in both gravitational waves and electromagnetic radiation.',
+              2: 'It was detected by a single telescope is incorrect; gW170817 was the first event observed in both gravitational waves and electromagnetic radiation.',
+            },
           },
           {
             id: "sp-sec7-u7-L5-Q4",
@@ -915,6 +1065,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "GW170817 was produced by two neutron stars merging. This was the first time gravitational waves from a neutron star merger were detected.",
+            distractorExplanations: {
+              1: 'A black hole and a neutron star is incorrect; gW170817 was produced by two neutron stars merging.',
+              2: 'Two black holes is incorrect; gW170817 was produced by two neutron stars merging.',
+              3: 'A star and a white dwarf is incorrect; gW170817 was produced by two neutron stars merging.',
+            },
           },
           {
             id: "sp-sec7-u7-L5-T3",
@@ -935,6 +1090,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The kilonova spectrum confirmed that rapid neutron capture (r-process) in neutron star mergers creates elements heavier than iron, including gold and platinum.",
+            distractorExplanations: {
+              0: 'This is incorrect; the kilonova spectrum confirmed that rapid neutron capture (r-process) in neutron star mergers creates elements.',
+              2: 'This is incorrect; the kilonova spectrum confirmed that rapid neutron capture (r-process) in neutron star mergers creates elements.',
+              3: 'Heavy elements cannot form in space is incorrect; the kilonova spectrum confirmed that rapid neutron capture (r-process) in neutron star mergers creates.',
+            },
           },
           {
             id: "sp-sec7-u7-L5-Q6",
@@ -983,6 +1143,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Binary black hole mergers dominate the catalog because they produce the strongest gravitational wave signals detectable by current instruments.",
+            distractorExplanations: {
+              0: 'Neutron star mergers is incorrect; binary black hole mergers dominate the catalog because they produce the strongest gravitational wave signals.',
+              1: 'Supernova explosions is incorrect; binary black hole mergers dominate the catalog because they produce the strongest gravitational wave signals.',
+              3: 'Black hole-neutron star mergers is incorrect; binary black hole mergers dominate the catalog because they produce the strongest gravitational wave signals.',
+            },
           },
           {
             id: "sp-sec7-u7-L6-T2",
@@ -996,6 +1161,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "All black holes detected by LIGO had masses predicted by existing theory.",
             correctAnswer: false,
             explanation: "LIGO detected black holes in the 'pair-instability mass gap' (50 to 120 solar masses) where standard supernova models predicted none should exist.",
+            distractorExplanations: {
+              0: 'LIGO detected black holes in the \'pair-instability mass gap\' (50 to 120 solar masses) where standard supernova.',
+            },
           },
           {
             id: "sp-sec7-u7-L6-Q4",
@@ -1024,6 +1192,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Every gravitational wave signal matches general relativity's predictions. The theory continues to hold up under the most extreme conditions we can test.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; every gravitational wave signal matches general relativity\'s predictions.',
+              2: 'It only works for neutron star mergers is incorrect; every gravitational wave signal matches general relativity\'s predictions.',
+              3: 'This claim is incorrect; every gravitational wave signal matches general relativity\'s predictions.',
+            },
           },
           {
             id: "sp-sec7-u7-L6-Q6",
@@ -1072,6 +1245,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "A neutron star is typically about 20 km in diameter.",
             correctAnswer: true,
             explanation: "Despite containing more mass than our Sun, neutron stars are only about 20 km across, roughly the size of a small city.",
+            distractorExplanations: {
+              1: 'Despite containing more mass than our Sun, neutron stars are only about 20 km across, roughly the size of a small city.',
+            },
           },
           {
             id: "sp-sec7-u8-L1-Q2",
@@ -1110,6 +1286,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Neutron star density is about 10^17 kg/m^3. A teaspoon of this material weighs roughly a billion tons on Earth.",
+            distractorExplanations: {
+              0: 'About 1 kilogram is incorrect; neutron star density is about 10^17 kg/m^3.',
+              2: 'About 1 million tons is incorrect; neutron star density is about 10^17 kg/m^3.',
+              3: 'About 1 trillion tons is incorrect; neutron star density is about 10^17 kg/m^3.',
+            },
           },
           {
             id: "sp-sec7-u8-L1-T3",
@@ -1138,6 +1319,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "If the remnant core exceeds about 2 to 2.5 solar masses, neutron degeneracy pressure can't support it and it collapses into a black hole.",
+            distractorExplanations: {
+              0: 'The star\'s temperature at death is incorrect; if the remnant core exceeds about 2 to 2.5 solar masses, neutron degeneracy pressure can\'t support it and it.',
+              1: 'The star\'s distance from other stars is incorrect; if the remnant core exceeds about 2 to 2.5 solar masses, neutron degeneracy pressure can\'t support it and it.',
+              2: 'The star\'s chemical composition only is incorrect; if the remnant core exceeds about 2 to 2.5 solar masses, neutron degeneracy pressure can\'t support it and it.',
+            },
           },
         ],
       },
@@ -1161,6 +1347,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "A pulsar is a special type of neutron star that we detect because its beam sweeps across Earth.",
             correctAnswer: true,
             explanation: "All pulsars are neutron stars, but we only detect them as pulsars if their beam happens to point toward Earth during rotation.",
+            distractorExplanations: {
+              1: 'All pulsars are neutron stars, but we only detect them as pulsars if their beam happens to point toward Earth during rotation.',
+            },
           },
           {
             id: "sp-sec7-u8-L2-Q2",
@@ -1174,6 +1363,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The pulsar emits a steady beam, but because it spins, the beam sweeps past our line of sight like a lighthouse, creating a pulse.",
+            distractorExplanations: {
+              0: 'They expand and contract rhythmically is incorrect; the pulsar emits a steady beam, but because it spins, the beam sweeps past our line of sight like a.',
+              1: 'They turn their light on and off is incorrect; the pulsar emits a steady beam, but because it spins, the beam sweeps past our line of sight like a.',
+              3: 'This is incorrect; the pulsar emits a steady beam, but because it spins, the beam sweeps past our line of sight like a lighthouse, creating a pulse.',
+            },
           },
           {
             id: "sp-sec7-u8-L2-T2",
@@ -1201,6 +1395,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The pulses were so precisely timed that astronomers briefly joked they might be signals from extraterrestrial intelligence: Little Green Men.",
+            distractorExplanations: {
+              0: 'LGM stood for \'Large Galactic Mass\' is incorrect; the pulses were so precisely timed that astronomers briefly joked they might be signals from extraterrestrial.',
+              1: 'This claim is incorrect; the pulses were so precisely timed that astronomers briefly joked they might be signals from extraterrestrial.',
+              2: 'This claim is incorrect; the pulses were so precisely timed that astronomers briefly joked they might be signals from extraterrestrial.',
+            },
           },
           {
             id: "sp-sec7-u8-L2-T3",
@@ -1221,6 +1420,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Millisecond pulsars keep time so precisely that tiny deviations can reveal gravitational waves, planet orbits, or tests of relativity.",
+            distractorExplanations: {
+              1: 'This is incorrect; millisecond pulsars keep time so precisely that tiny deviations can reveal gravitational waves, planet orbits, or.',
+              2: 'They can be easily visited by spacecraft is incorrect; millisecond pulsars keep time so precisely that tiny deviations can reveal gravitational waves,.',
+              3: 'This claim is incorrect; millisecond pulsars keep time so precisely that tiny deviations can reveal gravitational waves, planet orbits, or.',
+            },
           },
           {
             id: "sp-sec7-u8-L2-Q6",
@@ -1235,6 +1439,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Extremely regular radio pulses from a point source are the hallmark of a pulsar: a spinning neutron star whose beam sweeps past us each rotation.",
+            distractorExplanations: {
+              0: 'This is incorrect; extremely regular radio pulses from a point source are the hallmark of a pulsar: a spinning neutron star whose beam.',
+              2: 'A binary star system eclipsing each other is incorrect; extremely regular radio pulses from a point source are the hallmark of a pulsar: a spinning neutron.',
+              3: 'A distant quasar flickering randomly is incorrect; extremely regular radio pulses from a point source are the hallmark of a pulsar: a spinning neutron star.',
+            },
           },
         ],
       },
@@ -1258,6 +1467,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "Millisecond pulsars spin slowly because they are very old.",
             correctAnswer: false,
             explanation: "Despite being old, millisecond pulsars spin incredibly fast. They were spun up by accreting matter from a companion star, which transferred angular momentum.",
+            distractorExplanations: {
+              0: 'Despite being old, millisecond pulsars spin incredibly fast.',
+            },
           },
           {
             id: "sp-sec7-u8-L3-Q2",
@@ -1271,6 +1483,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Matter falling from a companion star carries angular momentum that spins up the neutron star over millions of years, creating a millisecond pulsar.",
+            distractorExplanations: {
+              1: 'They were born spinning that fast is incorrect; matter falling from a companion star carries angular momentum that spins up the neutron star over millions of.',
+              2: 'This is incorrect; matter falling from a companion star carries angular momentum that spins up the neutron star over millions of.',
+              3: 'Dark energy accelerates their spin is incorrect; matter falling from a companion star carries angular momentum that spins up the neutron star over millions of.',
+            },
           },
           {
             id: "sp-sec7-u8-L3-T2",
@@ -1315,6 +1532,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Pulsar timing arrays detect gravitational waves with periods of years to decades, from sources like supermassive black hole pairs that ground detectors can't sense.",
+            distractorExplanations: {
+              0: 'New pulsars hidden behind dust clouds is incorrect; pulsar timing arrays detect gravitational waves with periods of years to decades, from sources like.',
+              1: 'The temperature of neutron stars is incorrect; pulsar timing arrays detect gravitational waves with periods of years to decades, from sources like supermassive.',
+              3: 'Magnetic field reversals in pulsars is incorrect; pulsar timing arrays detect gravitational waves with periods of years to decades, from sources like.',
+            },
           },
           {
             id: "sp-sec7-u8-L3-Q6",
@@ -1347,6 +1569,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "A magnetar's magnetic field is about a quadrillion times stronger than Earth's.",
             correctAnswer: true,
             explanation: "Earth's field is about 0.5 gauss. A magnetar reaches up to 10^15 gauss, roughly a quadrillion (10^15) times stronger.",
+            distractorExplanations: {
+              1: 'Earth\'s field is about 0.5 gauss.',
+            },
           },
           {
             id: "sp-sec7-u8-L4-Q2",
@@ -1360,6 +1585,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "At 1,000 km, a magnetar's field is strong enough to warp atomic orbitals and break molecular bonds, making normal matter unstable.",
+            distractorExplanations: {
+              1: 'This is incorrect; at 1,000 km, a magnetar\'s field is strong enough to warp atomic orbitals and break molecular bonds, making normal.',
+              2: 'Erase every credit card within a mile is incorrect; at 1,000 km, a magnetar\'s field is strong enough to warp atomic orbitals and break molecular bonds,.',
+              3: 'Nothing noticeable is incorrect; at 1,000 km, a magnetar\'s field is strong enough to warp atomic orbitals and break molecular bonds, making normal.',
+            },
           },
           {
             id: "sp-sec7-u8-L4-T2",
@@ -1379,6 +1609,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The intense magnetic field stresses the neutron star's rigid crust until it cracks. This releases enormous energy as gamma rays and X-rays.",
+            distractorExplanations: {
+              0: 'A nearby supernova blast wave is incorrect; the intense magnetic field stresses the neutron star\'s rigid crust until it cracks.',
+              1: 'Collision with an asteroid is incorrect; the intense magnetic field stresses the neutron star\'s rigid crust until it cracks.',
+              2: 'Running out of nuclear fuel is incorrect; the intense magnetic field stresses the neutron star\'s rigid crust until it cracks.',
+            },
           },
           {
             id: "sp-sec7-u8-L4-Q4",
@@ -1407,6 +1642,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The short duration, enormous intensity, and origin at a known neutron star all point to a magnetar giant flare triggered by a starquake.",
+            distractorExplanations: {
+              0: 'A regular supernova explosion is incorrect; the short duration, enormous intensity, and origin at a known neutron star all point to a magnetar giant flare.',
+              2: 'A gamma-ray burst from a distant galaxy is incorrect; the short duration, enormous intensity, and origin at a known neutron star all point to a magnetar.',
+              3: 'An asteroid impact on the neutron star is incorrect; the short duration, enormous intensity, and origin at a known neutron star all point to a magnetar.',
+            },
           },
           {
             id: "sp-sec7-u8-L4-Q6",
@@ -1439,6 +1679,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "Scientists can create neutron star density conditions in Earth-based laboratories.",
             correctAnswer: false,
             explanation: "Even the most powerful particle accelerators produce matter far less dense than a neutron star interior. These objects are our only window into ultra-dense matter.",
+            distractorExplanations: {
+              0: 'Even the most powerful particle accelerators produce matter far less dense than a neutron star interior.',
+            },
           },
           {
             id: "sp-sec7-u8-L5-Q2",
@@ -1452,6 +1695,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Neutron stars compress matter to densities we cannot achieve in any experiment. This makes them natural laboratories for nuclear and particle physics.",
+            distractorExplanations: {
+              0: 'They contain rare chemical elements is incorrect; neutron stars compress matter to densities we cannot achieve in any experiment.',
+              1: 'They are made of antimatter is incorrect; neutron stars compress matter to densities we cannot achieve in any experiment.',
+              3: 'They contain dark matter at their cores is incorrect; neutron stars compress matter to densities we cannot achieve in any experiment.',
+            },
           },
           {
             id: "sp-sec7-u8-L5-T2",
@@ -1480,6 +1728,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At extreme densities, neutrons may break apart into free quarks, forming exotic matter like quark-gluon plasma or hyperons. This remains an active area of research.",
+            distractorExplanations: {
+              0: 'A miniature black hole is incorrect; at extreme densities, neutrons may break apart into free quarks, forming exotic matter like quark-gluon plasma or hyperons.',
+              2: 'Iron and nickel like Earth\'s core is incorrect; at extreme densities, neutrons may break apart into free quarks, forming exotic matter like quark-gluon.',
+              3: 'Empty vacuum is incorrect; at extreme densities, neutrons may break apart into free quarks, forming exotic matter like quark-gluon plasma or hyperons.',
+            },
           },
           {
             id: "sp-sec7-u8-L5-T3",
@@ -1543,6 +1796,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "Wormholes have been directly observed by telescopes.",
             correctAnswer: false,
             explanation: "No wormhole has ever been observed. They are predictions of general relativity's mathematics, but their physical existence remains unconfirmed.",
+            distractorExplanations: {
+              0: 'No wormhole has ever been observed.',
+            },
           },
           {
             id: "sp-sec7-u9-L1-Q2",
@@ -1556,6 +1812,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Wormholes, also called Einstein-Rosen bridges, are solutions to Einstein's equations that describe a tunnel linking two separate regions of spacetime.",
+            distractorExplanations: {
+              0: 'A type of black hole that spins backward is incorrect; wormholes, also called Einstein-Rosen bridges, are solutions to Einstein\'s equations that describe a.',
+              1: 'A region where gravity is zero is incorrect; wormholes, also called Einstein-Rosen bridges, are solutions to Einstein\'s equations that describe a tunnel.',
+              3: 'This is incorrect; wormholes, also called Einstein-Rosen bridges, are solutions to Einstein\'s equations that describe a tunnel linking.',
+            },
           },
           {
             id: "sp-sec7-u9-L1-T2",
@@ -1583,6 +1844,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Einstein and Rosen showed the bridge mathematically but concluded it would collapse too quickly for anything to pass through.",
+            distractorExplanations: {
+              1: 'It proved time travel is possible is incorrect; einstein and Rosen showed the bridge mathematically but concluded it would collapse too quickly for.',
+              2: 'This claim is incorrect; einstein and Rosen showed the bridge mathematically but concluded it would collapse too quickly for anything to pass through.',
+              3: 'It would form naturally in empty space is incorrect; einstein and Rosen showed the bridge mathematically but concluded it would collapse too quickly for.',
+            },
           },
           {
             id: "sp-sec7-u9-L1-T3",
@@ -1602,6 +1868,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Kip Thorne's analysis showed that only matter with negative energy density could prevent a wormhole from collapsing. Such 'exotic matter' has never been found in large quantities.",
+            distractorExplanations: {
+              0: 'This is incorrect; kip Thorne\'s analysis showed that only matter with negative energy density could prevent a wormhole from collapsing.',
+              1: 'A powerful magnetic field is incorrect; kip Thorne\'s analysis showed that only matter with negative energy density could prevent a wormhole from collapsing.',
+              2: 'A rapidly spinning black hole at each end is incorrect; kip Thorne\'s analysis showed that only matter with negative energy density could prevent a wormhole.',
+            },
           },
           {
             id: "sp-sec7-u9-L1-Q6",
@@ -1634,6 +1905,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "A white hole allows matter to enter but not leave.",
             correctAnswer: false,
             explanation: "It's the opposite. A white hole allows matter and light to leave but nothing can enter. It's the time-reversal of a black hole's one-way boundary.",
+            distractorExplanations: {
+              0: 'It\'s the opposite.',
+            },
           },
           {
             id: "sp-sec7-u9-L2-Q2",
@@ -1662,6 +1936,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "White holes would spontaneously decrease entropy by expelling organized matter, violating the second law of thermodynamics.",
+            distractorExplanations: {
+              0: 'Einstein\'s equations don\'t allow them is incorrect; white holes would spontaneously decrease entropy by expelling organized matter, violating the second.',
+              1: 'They were disproven by the EHT is incorrect; white holes would spontaneously decrease entropy by expelling organized matter, violating the second law of.',
+              3: 'They require faster-than-light travel is incorrect; white holes would spontaneously decrease entropy by expelling organized matter, violating the second.',
+            },
           },
           {
             id: "sp-sec7-u9-L2-Q4",
@@ -1689,6 +1968,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The Big Bang shares a key property with white holes: a singularity from which everything emerges and nothing can return. The comparison is speculative but intriguing.",
+            distractorExplanations: {
+              0: 'A supernova explosion is incorrect; the Big Bang shares a key property with white holes: a singularity from which everything emerges and nothing can return.',
+              1: 'A gamma-ray burst is incorrect; the Big Bang shares a key property with white holes: a singularity from which everything emerges and nothing can return.',
+              2: 'A magnetar flare is incorrect; the Big Bang shares a key property with white holes: a singularity from which everything emerges and nothing can return.',
+            },
           },
           {
             id: "sp-sec7-u9-L2-Q6",
@@ -1721,6 +2005,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "General relativity completely forbids time travel.",
             correctAnswer: false,
             explanation: "Several solutions to Einstein's equations contain closed timelike curves that loop back in time. The math allows it, though physical realizability is another question.",
+            distractorExplanations: {
+              0: 'Several solutions to Einstein\'s equations contain closed timelike curves that loop back in time.',
+            },
           },
           {
             id: "sp-sec7-u9-L3-Q2",
@@ -1748,6 +2035,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Godel showed that a rotating universe with specific properties allows closed timelike curves, proving time travel is at least mathematically consistent with general relativity.",
+            distractorExplanations: {
+              1: 'Our universe is rotating is incorrect; godel showed that a rotating universe with specific properties allows closed timelike curves, proving time travel.',
+              2: 'This is incorrect; godel showed that a rotating universe with specific properties allows closed timelike curves, proving time travel.',
+              3: 'This is incorrect; godel showed that a rotating universe with specific properties allows closed timelike curves, proving time travel.',
+            },
           },
           {
             id: "sp-sec7-u9-L3-Q4",
@@ -1761,6 +2053,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Godel's universe is a special model with uniform rotation. Our actual universe doesn't have this property, so his specific CTCs don't apply to reality.",
+            distractorExplanations: {
+              0: 'His equations had mathematical errors is incorrect; godel\'s universe is a special model with uniform rotation.',
+              2: 'Einstein rejected the solution entirely is incorrect; godel\'s universe is a special model with uniform rotation.',
+              3: 'This is incorrect; godel\'s universe is a special model with uniform rotation.',
+            },
           },
           {
             id: "sp-sec7-u9-L3-T3",
@@ -1780,6 +2077,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Hawking conjectured that nature has built-in safeguards preventing time travel. Quantum effects would likely destroy any spacetime region forming a time machine.",
+            distractorExplanations: {
+              0: 'This is incorrect; hawking conjectured that nature has built-in safeguards preventing time travel.',
+              1: 'This is incorrect; hawking conjectured that nature has built-in safeguards preventing time travel.',
+              3: 'This is incorrect; hawking conjectured that nature has built-in safeguards preventing time travel.',
+            },
           },
           {
             id: "sp-sec7-u9-L3-Q6",
@@ -1811,6 +2113,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "The cosmic censorship conjecture states that all singularities are hidden behind event horizons.",
             correctAnswer: true,
             explanation: "Penrose proposed that nature always wraps singularities in event horizons. A 'naked' singularity visible to the outside universe would break our ability to predict physics.",
+            distractorExplanations: {
+              1: 'Penrose proposed that nature always wraps singularities in event horizons.',
+            },
           },
           {
             id: "sp-sec7-u9-L4-Q2",
@@ -1838,6 +2143,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Physics breaks down at singularities. An event horizon contains the damage. Without one, the breakdown affects the observable universe, destroying predictability.",
+            distractorExplanations: {
+              0: 'It would be too bright to observe safely is incorrect; physics breaks down at singularities.',
+              1: 'This claim is incorrect; physics breaks down at singularities.',
+              2: 'It would emit too much dark matter is incorrect; physics breaks down at singularities.',
+            },
           },
           {
             id: "sp-sec7-u9-L4-Q4",
@@ -1851,6 +2161,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "If a black hole could be spun up past a critical limit (the Kerr bound), its event horizon would theoretically disappear, exposing the singularity. Most physicists believe nature prevents this.",
+            distractorExplanations: {
+              1: 'Two white holes colliding is incorrect; if a black hole could be spun up past a critical limit (the Kerr bound), its event horizon would theoretically.',
+              2: 'A neutron star cooling below absolute zero is incorrect; if a black hole could be spun up past a critical limit (the Kerr bound), its event horizon would.',
+              3: 'This is incorrect; if a black hole could be spun up past a critical limit (the Kerr bound), its event horizon would theoretically.',
+            },
           },
           {
             id: "sp-sec7-u9-L4-T3",
@@ -1871,6 +2186,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Higher-dimensional violations don't necessarily apply to our 4D universe. Whether cosmic censorship holds in our reality remains one of the biggest open questions in theoretical physics.",
+            distractorExplanations: {
+              0: 'This is incorrect; higher-dimensional violations don\'t necessarily apply to our 4D universe.',
+              2: 'This claim is incorrect; higher-dimensional violations don\'t necessarily apply to our 4D universe.',
+              3: 'Our universe must have 5 dimensions is incorrect; higher-dimensional violations don\'t necessarily apply to our 4D universe.',
+            },
           },
           {
             id: "sp-sec7-u9-L4-Q6",
@@ -1903,6 +2223,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "General relativity and quantum mechanics work perfectly together at a singularity.",
             correctAnswer: false,
             explanation: "They give contradictory predictions at singularities. A theory of quantum gravity is needed to resolve the conflict, but none has been confirmed yet.",
+            distractorExplanations: {
+              0: 'They give contradictory predictions at singularities.',
+            },
           },
           {
             id: "sp-sec7-u9-L5-Q2",
@@ -1916,6 +2239,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Singularities involve both extreme gravity (relativity) and infinitely small scales (quantum). The two theories produce incompatible predictions at these points.",
+            distractorExplanations: {
+              1: 'Inside regular stars is incorrect; singularities involve both extreme gravity (relativity) and infinitely small scales (quantum).',
+              2: 'In empty space far from any matter is incorrect; singularities involve both extreme gravity (relativity) and infinitely small scales (quantum).',
+              3: 'On the surface of planets is incorrect; singularities involve both extreme gravity (relativity) and infinitely small scales (quantum).',
+            },
           },
           {
             id: "sp-sec7-u9-L5-T2",
@@ -1943,6 +2271,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Quantum mechanics demands information conservation. But if Hawking radiation carries no information about what fell in, the information appears lost when the black hole vanishes.",
+            distractorExplanations: {
+              0: 'This is incorrect; quantum mechanics demands information conservation.',
+              1: 'This is incorrect; quantum mechanics demands information conservation.',
+              3: 'Black holes don\'t actually evaporate is incorrect; quantum mechanics demands information conservation.',
+            },
           },
           {
             id: "sp-sec7-u9-L5-T3",
@@ -2011,6 +2344,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The Tolman-Oppenheimer-Volkoff limit is about 2 to 3 solar masses. Above this, neutron degeneracy pressure fails and the core collapses into a black hole.",
+            distractorExplanations: {
+              0: 'About 1.4 solar masses is incorrect; the Tolman-Oppenheimer-Volkoff limit is about 2 to 3 solar masses.',
+              1: 'About 10 solar masses is incorrect; the Tolman-Oppenheimer-Volkoff limit is about 2 to 3 solar masses.',
+              2: 'About 100 solar masses is incorrect; the Tolman-Oppenheimer-Volkoff limit is about 2 to 3 solar masses.',
+            },
           },
           {
             id: "sp-sec7-u10-L1-Q2",
@@ -2048,6 +2386,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Sgr A*'s gas orbits in minutes, causing the image to change during observations. M87*'s gas takes weeks to orbit, giving a more stable target.",
+            distractorExplanations: {
+              1: 'M87* is brighter in visible light is incorrect; sgr A*\'s gas orbits in minutes, causing the image to change during observations.',
+              2: 'M87* has a stronger magnetic field is incorrect; sgr A*\'s gas orbits in minutes, causing the image to change during observations.',
+              3: 'Sgr A* is blocked by dark matter is incorrect; sgr A*\'s gas orbits in minutes, causing the image to change during observations.',
+            },
           },
           {
             id: "sp-sec7-u10-L1-Q5",
@@ -2063,6 +2406,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "Hawking radiation means black holes slowly lose mass and can eventually evaporate.",
             correctAnswer: true,
             explanation: "Hawking radiation is thermal radiation emitted near the event horizon due to quantum effects. Over immense timescales, it causes black holes to shrink and ultimately evaporate.",
+            distractorExplanations: {
+              1: 'Hawking radiation is thermal radiation emitted near the event horizon due to quantum effects.',
+            },
           },
           {
             id: "sp-sec7-u10-L1-Q7",
@@ -2077,6 +2423,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Stars orbiting an invisible massive object at very high speeds, just like those orbiting Sgr A*, provide direct evidence of a supermassive black hole.",
+            distractorExplanations: {
+              0: 'This is incorrect; stars orbiting an invisible massive object at very high speeds, just like those orbiting Sgr A*, provide direct.',
+              2: 'This is incorrect; stars orbiting an invisible massive object at very high speeds, just like those orbiting Sgr A*, provide direct.',
+              3: 'This is incorrect; stars orbiting an invisible massive object at very high speeds, just like those orbiting Sgr A*, provide direct.',
+            },
           },
         ],
       },
@@ -2114,6 +2465,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "GW170817 was the first event observed in both gravitational waves and electromagnetic radiation. It confirmed that neutron star mergers create heavy elements like gold.",
+            distractorExplanations: {
+              0: 'That gravitational waves don\'t exist is incorrect; gW170817 was the first event observed in both gravitational waves and electromagnetic radiation.',
+              1: 'This is incorrect; gW170817 was the first event observed in both gravitational waves and electromagnetic radiation.',
+              3: 'This is incorrect; gW170817 was the first event observed in both gravitational waves and electromagnetic radiation.',
+            },
           },
           {
             id: "sp-sec7-u10-L2-Q3",
@@ -2138,6 +2494,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "A gravitational wave chirp increases in frequency because the orbiting objects spiral closer and move faster.",
             correctAnswer: true,
             explanation: "As two objects spiral inward, they orbit faster, emitting higher-frequency gravitational waves. This rising pitch is the characteristic chirp signal.",
+            distractorExplanations: {
+              1: 'As two objects spiral inward, they orbit faster, emitting higher-frequency gravitational waves.',
+            },
           },
           {
             id: "sp-sec7-u10-L2-Q6",
@@ -2151,6 +2510,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Spectral analysis of the GW170817 kilonova confirmed the creation of heavy r-process elements including gold, platinum, and uranium.",
+            distractorExplanations: {
+              0: 'Iron is incorrect; spectral analysis of the GW170817 kilonova confirmed the creation of heavy r-process elements including gold,.',
+              1: 'Carbon is incorrect; spectral analysis of the GW170817 kilonova confirmed the creation of heavy r-process elements including gold,.',
+              3: 'Helium is incorrect; spectral analysis of the GW170817 kilonova confirmed the creation of heavy r-process elements including gold,.',
+            },
           },
           {
             id: "sp-sec7-u10-L2-Q7",
@@ -2200,6 +2564,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At densities of about 10^17 kg/m^3, a teaspoon of neutron star material weighs roughly a billion tons.",
+            distractorExplanations: {
+              0: 'About 1 ton is incorrect; at densities of about 10^17 kg/m^3, a teaspoon of neutron star material weighs roughly a billion tons.',
+              2: 'About 1 million tons is incorrect; at densities of about 10^17 kg/m^3, a teaspoon of neutron star material weighs roughly a billion tons.',
+              3: 'About 1 trillion tons is incorrect; at densities of about 10^17 kg/m^3, a teaspoon of neutron star material weighs roughly a billion tons.',
+            },
           },
           {
             id: "sp-sec7-u10-L3-Q3",
@@ -2224,6 +2593,9 @@ export const spaceSection7Part2: Unit[] = [
             question: "The information paradox asks whether information is truly destroyed when a black hole evaporates.",
             correctAnswer: true,
             explanation: "Quantum mechanics forbids information loss, but Hawking radiation seems to carry no information about what fell in. Resolving this paradox likely requires quantum gravity.",
+            distractorExplanations: {
+              1: 'Quantum mechanics forbids information loss, but Hawking radiation seems to carry no information about what fell in.',
+            },
           },
           {
             id: "sp-sec7-u10-L3-Q6",
@@ -2237,6 +2609,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Kip Thorne showed that exotic matter with negative energy density is required to hold a wormhole open. No such material has been found in sufficient quantities.",
+            distractorExplanations: {
+              0: 'A very fast spaceship is incorrect; kip Thorne showed that exotic matter with negative energy density is required to hold a wormhole open.',
+              1: 'A nearby supernova explosion is incorrect; kip Thorne showed that exotic matter with negative energy density is required to hold a wormhole open.',
+              2: 'Two supermassive black holes colliding is incorrect; kip Thorne showed that exotic matter with negative energy density is required to hold a wormhole open.',
+            },
           },
           {
             id: "sp-sec7-u10-L3-Q7",
@@ -2251,6 +2628,11 @@ export const spaceSection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A millisecond-period radio pulse with atomic-clock precision is the signature of a millisecond pulsar: a recycled neutron star spinning hundreds of times per second.",
+            distractorExplanations: {
+              0: 'A quasar varying in brightness is incorrect; a millisecond-period radio pulse with atomic-clock precision is the signature of a millisecond pulsar: a recycled.',
+              2: 'A magnetar in a flaring state is incorrect; a millisecond-period radio pulse with atomic-clock precision is the signature of a millisecond pulsar: a recycled.',
+              3: 'A white dwarf pulsating is incorrect; a millisecond-period radio pulse with atomic-clock precision is the signature of a millisecond pulsar: a recycled.',
+            },
           },
         ],
       },
@@ -2269,6 +2651,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["White dwarf", "Red giant", "Black hole", "Neutron star"],
             correctIndex: 2,
             explanation: "When the remnant exceeds about 2 to 3 solar masses, neutron pressure fails and a black hole forms.",
+            distractorExplanations: {
+              0: 'White dwarf is incorrect; when the remnant exceeds about 2 to 3 solar masses, neutron pressure fails and a black hole forms.',
+              1: 'Red giant is incorrect; when the remnant exceeds about 2 to 3 solar masses, neutron pressure fails and a black hole forms.',
+              3: 'Neutron star is incorrect; when the remnant exceeds about 2 to 3 solar masses, neutron pressure fails and a black hole forms.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ2",
@@ -2277,6 +2664,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["Singularity", "Event horizon", "Photon sphere", "Accretion disk"],
             correctIndex: 1,
             explanation: "The event horizon is the boundary beyond which nothing, not even light, can escape.",
+            distractorExplanations: {
+              0: 'Singularity is incorrect; the event horizon is the boundary beyond which nothing, not even light, can escape.',
+              2: 'Photon sphere is incorrect; the event horizon is the boundary beyond which nothing, not even light, can escape.',
+              3: 'Accretion disk is incorrect; the event horizon is the boundary beyond which nothing, not even light, can escape.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ3",
@@ -2285,6 +2677,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["Grow larger", "Spin faster", "Become brighter", "Slowly evaporate"],
             correctIndex: 3,
             explanation: "Hawking radiation slowly removes energy from a black hole, causing it to shrink over immense timescales.",
+            distractorExplanations: {
+              0: 'Grow larger is incorrect; hawking radiation slowly removes energy from a black hole, causing it to shrink over immense timescales.',
+              1: 'Spin faster is incorrect; hawking radiation slowly removes energy from a black hole, causing it to shrink over immense timescales.',
+              2: 'Become brighter is incorrect; hawking radiation slowly removes energy from a black hole, causing it to shrink over immense timescales.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ4",
@@ -2293,6 +2690,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["M87*", "Sgr A*", "Cygnus X-1", "V404 Cygni"],
             correctIndex: 0,
             explanation: "M87* was imaged in 2019. Sagittarius A* followed in 2022.",
+            distractorExplanations: {
+              1: 'Sgr A* is incorrect; m87* was imaged in 2019.',
+              2: 'Cygnus X-1 is incorrect; m87* was imaged in 2019.',
+              3: 'V404 Cygni is incorrect; m87* was imaged in 2019.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ5",
@@ -2301,6 +2703,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["Adaptive optics", "Space mirrors", "VLBI", "Radar"],
             correctIndex: 2,
             explanation: "Very Long Baseline Interferometry links radio dishes worldwide into one Earth-sized virtual telescope.",
+            distractorExplanations: {
+              0: 'Adaptive optics is incorrect; very Long Baseline Interferometry links radio dishes worldwide into one Earth-sized virtual telescope.',
+              1: 'Space mirrors is incorrect; very Long Baseline Interferometry links radio dishes worldwide into one Earth-sized virtual telescope.',
+              3: 'Radar is incorrect; very Long Baseline Interferometry links radio dishes worldwide into one Earth-sized virtual telescope.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ6",
@@ -2309,6 +2716,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["1997", "2005", "2020", "2015"],
             correctIndex: 3,
             explanation: "LIGO made its first detection (GW150914) on September 14, 2015.",
+            distractorExplanations: {
+              0: '1997 is incorrect; lIGO made its first detection (GW150914) on September 14, 2015.',
+              1: '2005 is incorrect; lIGO made its first detection (GW150914) on September 14, 2015.',
+              2: '2020 is incorrect; lIGO made its first detection (GW150914) on September 14, 2015.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ7",
@@ -2317,6 +2729,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["40 km long", "4 km long", "400 m long", "4 m long"],
             correctIndex: 1,
             explanation: "Each of LIGO's two perpendicular arms is 4 kilometers long.",
+            distractorExplanations: {
+              0: '40 km long is incorrect; each of LIGO\'s two perpendicular arms is 4 kilometers long.',
+              2: '400 m long is incorrect; each of LIGO\'s two perpendicular arms is 4 kilometers long.',
+              3: '4 m long is incorrect; each of LIGO\'s two perpendicular arms is 4 kilometers long.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ8",
@@ -2325,6 +2742,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["Black holes", "White dwarfs", "Red giants", "Neutron stars"],
             correctIndex: 3,
             explanation: "GW170817 was the first detected neutron star merger, also observed as a kilonova.",
+            distractorExplanations: {
+              0: 'Black holes is incorrect; gW170817 was the first detected neutron star merger, also observed as a kilonova.',
+              1: 'White dwarfs is incorrect; gW170817 was the first detected neutron star merger, also observed as a kilonova.',
+              2: 'Red giants is incorrect; gW170817 was the first detected neutron star merger, also observed as a kilonova.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ9",
@@ -2333,6 +2755,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["Gold", "Hydrogen", "Helium", "Carbon"],
             correctIndex: 0,
             explanation: "The r-process in neutron star mergers creates elements heavier than iron, including gold and platinum.",
+            distractorExplanations: {
+              1: 'Hydrogen is incorrect; the r-process in neutron star mergers creates elements heavier than iron, including gold and platinum.',
+              2: 'Helium is incorrect; the r-process in neutron star mergers creates elements heavier than iron, including gold and platinum.',
+              3: 'Carbon is incorrect; the r-process in neutron star mergers creates elements heavier than iron, including gold and platinum.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ10",
@@ -2341,6 +2768,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["Black hole", "White dwarf", "Neutron star", "Brown dwarf"],
             correctIndex: 2,
             explanation: "Pulsars are rotating neutron stars that emit beams of radiation from their magnetic poles.",
+            distractorExplanations: {
+              0: 'Black hole is incorrect; pulsars are rotating neutron stars that emit beams of radiation from their magnetic poles.',
+              1: 'White dwarf is incorrect; pulsars are rotating neutron stars that emit beams of radiation from their magnetic poles.',
+              3: 'Brown dwarf is incorrect; pulsars are rotating neutron stars that emit beams of radiation from their magnetic poles.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ11",
@@ -2349,6 +2781,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["71 Hz", "716 Hz", "7,160 Hz", "7.16 Hz"],
             correctIndex: 1,
             explanation: "PSR J1748-2446ad rotates 716 times per second.",
+            distractorExplanations: {
+              0: '71 Hz is incorrect; pSR J1748-2446ad rotates 716 times per second.',
+              2: '7,160 Hz is incorrect; pSR J1748-2446ad rotates 716 times per second.',
+              3: '7.16 Hz is incorrect; pSR J1748-2446ad rotates 716 times per second.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ12",
@@ -2357,6 +2794,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["A million", "A thousand", "A billion", "A quadrillion"],
             correctIndex: 3,
             explanation: "Magnetar fields reach about 10^15 gauss, a quadrillion times Earth's 0.5 gauss field.",
+            distractorExplanations: {
+              0: 'A million is incorrect; magnetar fields reach about 10^15 gauss, a quadrillion times Earth\'s 0.5 gauss field.',
+              1: 'A thousand is incorrect; magnetar fields reach about 10^15 gauss, a quadrillion times Earth\'s 0.5 gauss field.',
+              2: 'A billion is incorrect; magnetar fields reach about 10^15 gauss, a quadrillion times Earth\'s 0.5 gauss field.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ13",
@@ -2365,6 +2807,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["Einstein-Rosen bridge", "Hawking tunnel", "Penrose corridor", "Thorne passage"],
             correctIndex: 0,
             explanation: "Einstein and Rosen first described the mathematical bridge connecting two spacetime regions in 1935.",
+            distractorExplanations: {
+              1: 'Hawking tunnel is incorrect; einstein and Rosen first described the mathematical bridge connecting two spacetime regions in 1935.',
+              2: 'Penrose corridor is incorrect; einstein and Rosen first described the mathematical bridge connecting two spacetime regions in 1935.',
+              3: 'Thorne passage is incorrect; einstein and Rosen first described the mathematical bridge connecting two spacetime regions in 1935.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ14",
@@ -2373,6 +2820,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["Dark matter", "Magnetic fields", "Event horizons", "Accretion disks"],
             correctIndex: 2,
             explanation: "Penrose's cosmic censorship conjecture proposes that every singularity is hidden behind an event horizon.",
+            distractorExplanations: {
+              0: 'Dark matter is incorrect; penrose\'s cosmic censorship conjecture proposes that every singularity is hidden behind an event horizon.',
+              1: 'Magnetic fields is incorrect; penrose\'s cosmic censorship conjecture proposes that every singularity is hidden behind an event horizon.',
+              3: 'Accretion disks is incorrect; penrose\'s cosmic censorship conjecture proposes that every singularity is hidden behind an event horizon.',
+            },
           },
           {
             id: "sp-sec7-u10-L4-SQ15",
@@ -2381,6 +2833,11 @@ export const spaceSection7Part2: Unit[] = [
             options: ["Gravity and magnetism", "Quantum mechanics and Hawking radiation", "Dark matter and dark energy", "Fusion and fission"],
             correctIndex: 1,
             explanation: "Quantum mechanics says information can't be destroyed, but Hawking radiation seems to erase information about what fell into the black hole.",
+            distractorExplanations: {
+              0: 'Gravity and magnetism is incorrect; quantum mechanics says information can\'t be destroyed, but Hawking radiation seems to erase information about what.',
+              2: 'Dark matter and dark energy is incorrect; quantum mechanics says information can\'t be destroyed, but Hawking radiation seems to erase information about what.',
+              3: 'Fusion and fission is incorrect; quantum mechanics says information can\'t be destroyed, but Hawking radiation seems to erase information about what.',
+            },
           },
         ],
       },

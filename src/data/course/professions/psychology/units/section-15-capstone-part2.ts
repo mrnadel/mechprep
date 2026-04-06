@@ -34,6 +34,9 @@ export const psySection15Part2: Unit[] = [
             question: 'The BITE model stands for Behavior, Information, Thought, and Emotional control.',
             correctAnswer: true,
             explanation: 'BITE was developed by Steven Hassan to identify cult-like control patterns across different groups.',
+            distractorExplanations: {
+              1: 'BITE was developed by Steven Hassan to identify cult-like control patterns across different groups.',
+            },
           },
           {
             id: 'psy-sec15-u6-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Restricting access to outside information is information control. It prevents members from encountering contradicting facts.',
+            distractorExplanations: {
+              0: '"Behavior control" is incorrect; information control.',
+              2: '"Thought control" is incorrect; information control.',
+              3: '"Emotional control" is incorrect; information control.',
+            },
           },
           {
             id: 'psy-sec15-u6-L1-T2',
@@ -115,6 +123,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Transitions create needs for connection and meaning. Cults offer instant community and clear purpose, which feels like the answer.',
+            distractorExplanations: {
+              0: '"They are less intelligent during stressful times" does not accurately describe the concept asked about.',
+              1: '"They have more free time to attend meetings" does not accurately describe the concept asked about.',
+              3: '"They have more money to donate to the group" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -140,6 +153,9 @@ export const psySection15Part2: Unit[] = [
             question: 'Radicalization typically happens through a gradual process of escalating exposure and commitment.',
             correctAnswer: true,
             explanation: 'Each step feels minor, but the cumulative effect is a dramatic shift in beliefs and behavior.',
+            distractorExplanations: {
+              1: 'Each step feels minor, but the cumulative effect is a dramatic shift in beliefs and behavior.',
+            },
           },
           {
             id: 'psy-sec15-u6-L2-Q2',
@@ -173,6 +189,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Algorithms optimize for engagement. Extreme content triggers stronger emotional reactions, which means more clicks and shares.',
+            distractorExplanations: {
+              0: '"They deliberately promote terrorism" does not accurately describe the concept asked about.',
+              2: '"They only show content from trusted news sources" does not accurately describe the concept asked about.',
+              3: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+            },
           },
           {
             id: 'psy-sec15-u6-L2-Q4',
@@ -217,6 +238,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This follows the classic pipeline: mild content to extreme content to community to identity change.',
+            distractorExplanations: {
+              0: '"Classical conditioning through repeated media exposure" does not accurately describe the concept asked about.',
+              2: '"Observational learning from a single role model" does not accurately describe the concept asked about.',
+              3: '"Biological predisposition toward extremism" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -241,6 +267,9 @@ export const psySection15Part2: Unit[] = [
             question: 'Love bombing provides unconditional warmth that continues indefinitely in cult environments.',
             correctAnswer: false,
             explanation: 'Love bombing is conditional. The warmth disappears if the member questions the group or tries to leave. It is a manipulation tactic, not genuine care.',
+            distractorExplanations: {
+              0: 'Love bombing is conditional.',
+            },
           },
           {
             id: 'psy-sec15-u6-L3-Q2',
@@ -254,6 +283,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Love bombing targets Maslow\'s belonging needs. Lonely or transitioning people find instant community irresistible.',
+            distractorExplanations: {
+              0: '"It provides accurate information about the group" does not accurately describe the concept asked about.',
+              2: '"It gives the recruit financial benefits" does not accurately describe the concept asked about.',
+              3: '"It allows the recruit to maintain outside friendships" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u6-L3-T2',
@@ -324,6 +358,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Instant warmth followed by isolation from outside relationships is the classic love bombing to isolation pipeline.',
+            distractorExplanations: {
+              0: '"The group meets too frequently" is incorrect; isolation from existing support networks combined with love bombing.',
+              2: '"The group has too many members" is incorrect; isolation from existing support networks combined with love bombing.',
+              3: '"The group does not use social media" is incorrect; isolation from existing support networks combined with love bombing.',
+            },
           },
         ],
       },
@@ -349,6 +388,9 @@ export const psySection15Part2: Unit[] = [
             question: 'Aggressively confronting someone with extreme views is the most effective way to deradicalize them.',
             correctAnswer: false,
             explanation: 'Aggressive confrontation triggers defensiveness and often pushes people deeper into the group. Empathy and patient questioning are more effective.',
+            distractorExplanations: {
+              0: 'Aggressive confrontation triggers defensiveness and often pushes people deeper into the group.',
+            },
           },
           {
             id: 'psy-sec15-u6-L4-Q2',
@@ -362,6 +404,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Maintaining connection gives them an exit path. Genuine questions plant seeds of doubt more effectively than arguments.',
+            distractorExplanations: {
+              0: '"Cut them off completely so they learn their lesson" is incorrect; maintain the relationship and ask genuine questions without judgment.',
+              1: '"Argue aggressively and prove they are wrong with facts" is incorrect; maintain the relationship and ask genuine questions without judgment.',
+              3: '"Report them to authorities immediately" is incorrect; maintain the relationship and ask genuine questions without judgment.',
+            },
           },
           {
             id: 'psy-sec15-u6-L4-T2',
@@ -425,6 +472,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Leaving means losing community, identity, and meaning all at once. This triple loss makes departure psychologically devastating.',
+            distractorExplanations: {
+              0: '"The group provides financial support that is hard to replace" does not accurately describe the concept asked about.',
+              2: '"The group has legal contracts binding members" does not accurately describe the concept asked about.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
         ],
       },
@@ -568,6 +620,9 @@ export const psySection15Part2: Unit[] = [
             question: 'Critical thinking is an innate trait that some people have and others do not.',
             correctAnswer: false,
             explanation: 'Critical thinking is a learnable skill set. Anyone can improve through practice and deliberate effort.',
+            distractorExplanations: {
+              0: 'Critical thinking is a learnable skill set. Anyone can improve through practice and deliberate effort.',
+            },
           },
           {
             id: 'psy-sec15-u7-L1-Q2',
@@ -581,6 +636,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Critical thinking involves open-minded evaluation, not blind acceptance or rejection.',
+            distractorExplanations: {
+              0: '"Rejecting any claim that contradicts your beliefs" does not accurately describe the concept asked about.',
+              1: '"Accepting claims from authorities without question" does not accurately describe the concept asked about.',
+              3: '"Trusting your gut feeling over data" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u7-L1-T2',
@@ -644,6 +704,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Intellectual humility is honest self-awareness about what you know and do not know. It strengthens, not weakens, your thinking.',
+            distractorExplanations: {
+              0: '"Pretending you know less than you do" is incorrect; being honestly aware of the limits of your knowledge.',
+              2: '"Agreeing with everyone to avoid conflict" is incorrect; being honestly aware of the limits of your knowledge.',
+              3: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+            },
           },
         ],
       },
@@ -669,6 +734,9 @@ export const psySection15Part2: Unit[] = [
             question: 'Emotional regulation is the ability to manage your emotional responses so they do not control your decisions.',
             correctAnswer: true,
             explanation: 'Emotional regulation does not mean suppressing emotions. It means recognizing them and choosing how to respond rather than reacting automatically.',
+            distractorExplanations: {
+              1: 'Emotional regulation does not mean suppressing emotions.',
+            },
           },
           {
             id: 'psy-sec15-u7-L2-Q2',
@@ -682,6 +750,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Naming the emotion engages your prefrontal cortex and creates space between feeling and action.',
+            distractorExplanations: {
+              0: '"Act on the emotion immediately before it fades" is incorrect; pause, name the emotion, and ask if it is being exploited.',
+              1: '"Suppress the emotion and pretend it is not there" is incorrect; pause, name the emotion, and ask if it is being exploited.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
           {
             id: 'psy-sec15-u7-L2-T2',
@@ -751,6 +824,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Pausing, naming the emotion, and verifying before acting is textbook emotional regulation applied to media literacy.',
+            distractorExplanations: {
+              0: '"Share it immediately and write an angry caption" is incorrect; stop, take a breath, label your anger, check the source, then decide.',
+              2: '"Argue with everyone in the comments section" is incorrect; stop, take a breath, label your anger, check the source, then decide.',
+              3: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+            },
           },
         ],
       },
@@ -775,6 +853,9 @@ export const psySection15Part2: Unit[] = [
             question: 'A viral social media post is just as reliable as a peer-reviewed research study.',
             correctAnswer: false,
             explanation: 'Peer-reviewed studies undergo expert scrutiny. Social media posts have no quality control. Virality reflects emotional appeal, not accuracy.',
+            distractorExplanations: {
+              0: 'Peer-reviewed studies undergo expert scrutiny.',
+            },
           },
           {
             id: 'psy-sec15-u7-L3-Q2',
@@ -858,6 +939,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Confirmation bias lowers your guard for information that confirms your beliefs. Equal scrutiny is essential.',
+            distractorExplanations: {
+              0: '"Because you should distrust all sources equally" does not accurately describe the concept asked about.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Because it impresses other people" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -882,6 +968,9 @@ export const psySection15Part2: Unit[] = [
             question: 'Inoculation theory says that exposure to weakened forms of persuasion builds resistance to stronger persuasion attempts.',
             correctAnswer: true,
             explanation: 'Like a vaccine for the mind, weak exposure builds psychological antibodies against future manipulation.',
+            distractorExplanations: {
+              1: 'Like a vaccine for the mind, weak exposure builds psychological antibodies against future manipulation.',
+            },
           },
           {
             id: 'psy-sec15-u7-L4-Q2',
@@ -895,6 +984,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Learning about tactics is a form of psychological inoculation. You build defenses by studying how manipulation works.',
+            distractorExplanations: {
+              0: '"It makes you cynical and distrustful of everyone" does not accurately describe the concept asked about.',
+              2: '"It eliminates all emotional responses" does not accurately describe the concept asked about.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec15-u7-L4-T2',
@@ -964,6 +1058,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Inoculation theory shows that teaching people to recognize tactics (prebunking) is the most effective long-term defense.',
+            distractorExplanations: {
+              0: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              2: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              3: '"Program D: have teachers fact-check every post students see" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1103,6 +1202,9 @@ export const psySection15Part2: Unit[] = [
             question: 'Individualist cultures prioritize personal goals, while collectivist cultures prioritize group harmony.',
             correctAnswer: true,
             explanation: 'This is the most studied cultural dimension. It affects everything from parenting to business decisions.',
+            distractorExplanations: {
+              1: 'This is the most studied cultural dimension. It affects everything from parenting to business decisions.',
+            },
           },
           {
             id: 'psy-sec15-u8-L1-Q2',
@@ -1116,6 +1218,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'High power distance cultures accept unequal power distribution as normal. Low power distance cultures expect more equality.',
+            distractorExplanations: {
+              0: '"Challenge authority figures openly" is incorrect; accept hierarchical differences without question.',
+              2: '"Treat everyone as equals regardless of status" is incorrect; accept hierarchical differences without question.',
+              3: '"Elect leaders through democratic processes" is incorrect; accept hierarchical differences without question.',
+            },
           },
           {
             id: 'psy-sec15-u8-L1-T2',
@@ -1185,6 +1292,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Individualist cultures celebrate standing out. Collectivist cultures may see it as disrupting group harmony.',
+            distractorExplanations: {
+              0: '"Power distance: one culture has stronger hierarchies" is incorrect; individualism vs collectivism: personal achievement vs group harmony.',
+              2: '"Uncertainty avoidance: one culture prefers clearer rules" is incorrect; individualism vs collectivism: personal achievement vs group harmony.',
+              3: '"Long-term orientation: one culture values future rewards more" is incorrect; individualism vs collectivism: personal achievement vs group harmony.',
+            },
           },
         ],
       },
@@ -1209,6 +1321,9 @@ export const psySection15Part2: Unit[] = [
             question: 'WEIRD samples (Western, Educated, Industrialized, Rich, Democratic) represent the majority of the world\'s population.',
             correctAnswer: false,
             explanation: 'WEIRD populations are about 12% of the world. Generalizing from this minority to all humans is a major limitation.',
+            distractorExplanations: {
+              0: 'WEIRD populations are about 12% of the world. Generalizing from this minority to all humans is a major limitation.',
+            },
           },
           {
             id: 'psy-sec15-u8-L2-Q2',
@@ -1222,6 +1337,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'If most research only tests WEIRD samples, we cannot assume the findings are universal human truths.',
+            distractorExplanations: {
+              0: '"WEIRD participants are more intelligent than others" does not accurately describe the concept asked about.',
+              2: '"WEIRD countries have fewer universities" does not accurately describe the concept asked about.',
+              3: '"Non-WEIRD cultures do not experience psychological phenomena" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u8-L2-T2',
@@ -1272,6 +1392,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Cross-cultural replication with diverse samples is the most direct solution to the WEIRD problem.',
+            distractorExplanations: {
+              0: '"Using a larger sample of American university students" does not accurately describe the concept asked about.',
+              2: '"Publishing the results in more journals" does not accurately describe the concept asked about.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
           {
             id: 'psy-sec15-u8-L2-Q6',
@@ -1279,6 +1404,9 @@ export const psySection15Part2: Unit[] = [
             question: 'The fundamental attribution error is equally strong in all cultures worldwide.',
             correctAnswer: false,
             explanation: 'Collectivist cultures tend to consider situational factors more than individualist cultures, showing weaker fundamental attribution error.',
+            distractorExplanations: {
+              0: 'Collectivist cultures tend to consider situational factors more than individualist cultures.',
+            },
           },
         ],
       },
@@ -1303,6 +1431,9 @@ export const psySection15Part2: Unit[] = [
             question: 'The basic emotions identified by Paul Ekman are recognized across all cultures studied.',
             correctAnswer: true,
             explanation: 'Facial expressions for basic emotions are universal, though display rules (when to show emotions) vary by culture.',
+            distractorExplanations: {
+              1: 'Facial expressions for basic emotions are universal, though display rules (when to show emotions) vary by culture.',
+            },
           },
           {
             id: 'psy-sec15-u8-L3-Q2',
@@ -1316,6 +1447,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Attachment is a universal human need. But the expression and specific attachment styles can vary across cultures.',
+            distractorExplanations: {
+              0: '"The strength of the fundamental attribution error" is incorrect; the infant-caregiver attachment bond.',
+              2: '"The specific age children leave home" is incorrect; the infant-caregiver attachment bond.',
+              3: '"Attitudes toward personal achievement" is incorrect; the infant-caregiver attachment bond.',
+            },
           },
           {
             id: 'psy-sec15-u8-L3-T2',
@@ -1384,6 +1520,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Culture-bound syndromes reflect how cultural context shapes the expression and experience of psychological distress.',
+            distractorExplanations: {
+              0: '"Mental health conditions that occur in every culture" does not accurately describe the concept asked about.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Disorders that only affect people who travel between cultures" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1408,6 +1549,9 @@ export const psySection15Part2: Unit[] = [
             question: 'In high-context cultures, much of the meaning is communicated through context and nonverbal cues rather than explicit words.',
             correctAnswer: true,
             explanation: 'High-context communication relies on shared understanding, tone, and social context. Low-context communication relies on explicit verbal statements.',
+            distractorExplanations: {
+              1: 'High-context communication relies on shared understanding, tone, and social context.',
+            },
           },
           {
             id: 'psy-sec15-u8-L4-Q2',
@@ -1421,6 +1565,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'In high-context cultures, indirect refusals are common. "Difficult" often means "no" without causing the other person to lose face.',
+            distractorExplanations: {
+              0: '"I need more time to think about it" is incorrect; no, but I am being polite about it.',
+              2: '"Yes, but it will take extra effort" is incorrect; no, but I am being polite about it.',
+              3: '"I do not understand the proposal" is incorrect; no, but I am being polite about it.',
+            },
           },
           {
             id: 'psy-sec15-u8-L4-T2',
@@ -1491,6 +1640,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'In high-context cultures, public agreement may be about maintaining harmony. Private, direct clarification respects both cultural styles.',
+            distractorExplanations: {
+              0: '"Assume they are unreliable and assign tasks to others" does not accurately describe the concept asked about.',
+              2: '"Send an angry email demanding follow-through" does not accurately describe the concept asked about.',
+              3: '"Report them to management for not doing their work" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1634,6 +1788,9 @@ export const psySection15Part2: Unit[] = [
             question: 'The Stanford prison experiment showed that ordinary people can become abusive when placed in positions of power.',
             correctAnswer: true,
             explanation: 'The study demonstrated the power of situational factors over individual personality traits.',
+            distractorExplanations: {
+              1: 'The study demonstrated the power of situational factors over individual personality traits.',
+            },
           },
           {
             id: 'psy-sec15-u9-L1-Q2',
@@ -1647,6 +1804,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Later analysis revealed that Zimbardo actively encouraged guard aggression, undermining the claim that the situation alone caused the behavior.',
+            distractorExplanations: {
+              0: '"It used too many participants" does not accurately describe the concept asked about.',
+              2: '"The participants were too old" does not accurately describe the concept asked about.',
+              3: '"The study lasted too long" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u9-L1-T2',
@@ -1696,6 +1858,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A control group, unbiased researcher role, and no coaching would address the biggest methodological flaws.',
+            distractorExplanations: {
+              0: '"Use older participants instead of college students" does not accurately describe the concept asked about.',
+              2: '"Make the simulation last longer" does not accurately describe the concept asked about.',
+              3: '"Pay participants more money" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u9-L1-Q6',
@@ -1703,6 +1870,9 @@ export const psySection15Part2: Unit[] = [
             question: 'The Stanford prison experiment can be easily replicated today because it meets modern ethical standards.',
             correctAnswer: false,
             explanation: 'The study would not pass modern IRB review due to the psychological harm suffered by participants.',
+            distractorExplanations: {
+              0: 'The study would not pass modern IRB review due to the psychological harm suffered by participants.',
+            },
           },
         ],
       },
@@ -1727,6 +1897,9 @@ export const psySection15Part2: Unit[] = [
             question: 'In Milgram\'s original study, about 65% of participants delivered the maximum shock level when instructed by the authority figure.',
             correctAnswer: true,
             explanation: 'The high compliance rate shocked the research community and the public. Most predicted only 1-3% would fully obey.',
+            distractorExplanations: {
+              1: 'The high compliance rate shocked the research community and the public. Most predicted only 1-3% would fully obey.',
+            },
           },
           {
             id: 'psy-sec15-u9-L2-Q2',
@@ -1740,6 +1913,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The prestigious university setting boosted the authority\'s perceived legitimacy. In a less impressive setting, obedience dropped to about 48%.',
+            distractorExplanations: {
+              1: '"Obedience increased because participants were more relaxed" does not accurately describe the concept asked about.',
+              2: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+              3: '"Participants refused to participate at all" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u9-L2-T2',
@@ -1809,6 +1987,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This mirrors Milgram\'s findings: legitimate authority drives compliance, but seeing someone else resist provides the social support needed to disobey.',
+            distractorExplanations: {
+              0: '"The employee has an inherently obedient personality" does not accurately describe the concept asked about.',
+              2: '"The employee was trying to get promoted" does not accurately describe the concept asked about.',
+              3: '"The coworker had more experience" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1833,6 +2016,9 @@ export const psySection15Part2: Unit[] = [
             question: 'The original marshmallow test claimed that children\'s ability to delay gratification predicted better life outcomes.',
             correctAnswer: true,
             explanation: 'The original study linked waiting for the second marshmallow with higher SAT scores, better health, and greater success.',
+            distractorExplanations: {
+              1: 'The original study linked waiting for the second marshmallow with higher SAT scores, better health, and greater success.',
+            },
           },
           {
             id: 'psy-sec15-u9-L3-Q2',
@@ -1846,6 +2032,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A 2018 replication found that socioeconomic factors explained most of the effect. Children from wealthier families had more reason to trust that the reward would come.',
+            distractorExplanations: {
+              0: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: '"The child\\\'s intelligence" is incorrect; the child\\\'s family socioeconomic background.',
+              3: '"The child\\\'s birth order" is incorrect; the child\\\'s family socioeconomic background.',
+            },
           },
           {
             id: 'psy-sec15-u9-L3-T2',
@@ -1895,6 +2086,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The marshmallow test is a powerful example of why replication with diverse samples is essential.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"Child psychology is not a valid field" does not accurately describe the concept asked about.',
+              3: '"Self-control does not exist" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u9-L3-Q6',
@@ -1909,6 +2105,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Trust in the environment, shaped by life experience and socioeconomic stability, is the key factor, not innate willpower.',
+            distractorExplanations: {
+              0: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              1: '"The low-income child is less intelligent" does not accurately describe the concept asked about.',
+              3: '"The low-income child does not like marshmallows as much" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1933,6 +2134,9 @@ export const psySection15Part2: Unit[] = [
             question: 'In the Rosenhan experiment, none of the pseudo-patients were identified as mentally healthy by hospital staff.',
             correctAnswer: true,
             explanation: 'All 8 pseudo-patients were admitted and diagnosed with psychiatric disorders. Staff interpreted their normal behavior as symptoms.',
+            distractorExplanations: {
+              1: 'All 8 pseudo-patients were admitted and diagnosed with psychiatric disorders. Staff interpreted their normal behavior as symptoms.',
+            },
           },
           {
             id: 'psy-sec15-u9-L4-Q2',
@@ -1946,6 +2150,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Confirmation bias in action: once labeled, every behavior was interpreted as evidence of the diagnosis.',
+            distractorExplanations: {
+              0: '"A sign of intelligence" is incorrect; a symptom of their psychiatric condition.',
+              1: '"A normal healthy behavior" is incorrect; a symptom of their psychiatric condition.',
+              3: '"Evidence they were researchers" is incorrect; a symptom of their psychiatric condition.',
+            },
           },
           {
             id: 'psy-sec15-u9-L4-T2',
@@ -2015,6 +2224,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The study pushed psychiatry to make diagnoses more specific, reliable, and evidence-based through the DSM-III revision.',
+            distractorExplanations: {
+              0: '"The invention of new psychiatric medications" does not accurately describe the concept asked about.',
+              2: '"The closure of all psychiatric hospitals" does not accurately describe the concept asked about.',
+              3: '"The elimination of all psychiatric diagnoses" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2159,6 +2373,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Information control limits what members can read, watch, or hear. It prevents exposure to contradicting evidence.',
+            distractorExplanations: {
+              0: '"Behavior control" is incorrect; information control.',
+              2: '"Thought control" is incorrect; information control.',
+              3: '"Emotional control" is incorrect; information control.',
+            },
           },
           {
             id: 'psy-sec15-u10-L1-Q2',
@@ -2236,6 +2455,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Instant warmth followed by isolation from outsiders is a red flag. Gentle concern maintains your connection while raising awareness.',
+            distractorExplanations: {
+              0: '"Sounds like a great supportive community" does not accurately describe the concept asked about.',
+              2: '"Tell them to leave immediately and cut off contact with the group" does not accurately describe the concept asked about.',
+              3: '"Ignore the situation because it is not your business" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2267,6 +2491,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Three factors: viral outrage drives sharing, the study is weak (small sample), and comments reflect hindsight bias.',
+            distractorExplanations: {
+              0: '"Availability heuristic and anchoring bias" does not accurately describe the concept asked about.',
+              2: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              3: '"Groupthink and deindividuation" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u10-L2-Q2',
@@ -2281,6 +2510,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Neither person is wrong. Their cultural communication styles differ. Understanding this prevents conflict.',
+            distractorExplanations: {
+              0: '"The manager is being intentionally rude" does not accurately describe the concept asked about.',
+              1: '"The team member is oversensitive" does not accurately describe the concept asked about.',
+              3: '"The work was genuinely poor quality" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u10-L2-T2',
@@ -2301,6 +2535,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Three manipulation tactics at once: the high anchor makes $89 seem like a deal, social proof suggests popularity, and the timer creates urgency.',
+            distractorExplanations: {
+              0: 'The scope is broader than social proof is being used alone.',
+              1: 'The scope is broader than anchoring bias is being used alone.',
+              3: '"This is honest transparent pricing" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u10-L2-Q4',
@@ -2349,6 +2588,9 @@ export const psySection15Part2: Unit[] = [
             question: 'The best psychological defense combines critical thinking, emotional regulation, media literacy, and awareness of manipulation tactics.',
             correctAnswer: true,
             explanation: 'No single defense is enough. Combining multiple tools creates a robust psychological defense system.',
+            distractorExplanations: {
+              1: 'No single defense is enough. Combining multiple tools creates a robust psychological defense system.',
+            },
           },
         ],
       },
@@ -2498,6 +2740,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Confirmation bias protects existing beliefs from contradicting evidence. Conformity pressure makes new members adopt those beliefs.',
+            distractorExplanations: {
+              0: '"Classical conditioning and observational learning" does not accurately describe the concept asked about.',
+              2: '"Operant conditioning and self-efficacy" does not accurately describe the concept asked about.',
+              3: 'Maslow\'s hierarchy of needs is not the framework being described here.',
+            },
           },
           {
             id: 'psy-sec15-u11-L1-Q2',
@@ -2511,6 +2758,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'When we attribute behavior to personality rather than situation, and then generalize that attribution to an entire group, we create and reinforce stereotypes.',
+            distractorExplanations: {
+              0: '"They are completely unrelated concepts" does not accurately describe the concept asked about.',
+              2: '"Stereotyping causes the attribution error to disappear" does not accurately describe the concept asked about.',
+              3: '"Attribution error only applies to strangers, not group members" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u11-L1-T2',
@@ -2580,6 +2832,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Three forces combine: anchoring sets the price expectation, social proof validates the decision, and confirmation bias filters out warning signs.',
+            distractorExplanations: {
+              0: '"Classical conditioning, operant conditioning, and habituation" is incorrect; anchoring bias, social proof, and confirmation bias working together.',
+              2: 'Maslow\'s hierarchy of needs is not the framework being described here.',
+              3: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+            },
           },
         ],
       },
@@ -2610,6 +2867,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'High neuroticism means stronger negative emotional reactions, which increases vulnerability to anxiety and mood disorders.',
+            distractorExplanations: {
+              0: 'The scope is broader than physical health problems alone.',
+              2: '"Enhanced creativity only" is incorrect; anxiety and depression.',
+              3: '"Better social relationships" is incorrect; anxiety and depression.',
+            },
           },
           {
             id: 'psy-sec15-u11-L2-Q2',
@@ -2624,6 +2886,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This case connects four course sections: developmental attachment, personality self-concept, clinical social anxiety, and therapeutic intervention.',
+            distractorExplanations: {
+              0: 'The scope is broader than attachment theory is relevant alone.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: 'The scope is broader than cognitive behavioral therapy is relevant alone.',
+            },
           },
           {
             id: 'psy-sec15-u11-L2-T2',
@@ -2724,6 +2991,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Two problems: correlation is not causation (maybe depressed teens use more social media), and American teens may not represent all teens (WEIRD).',
+            distractorExplanations: {
+              0: '"The sample size is too large" does not accurately describe the concept asked about.',
+              2: '"The study was peer-reviewed so it must be correct" does not accurately describe the concept asked about.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec15-u11-L3-Q2',
@@ -2737,6 +3009,11 @@ export const psySection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Extraordinary claims need strong evidence: controlled conditions, blinding, adequate samples, and replication.',
+            distractorExplanations: {
+              0: '"One person\\\'s testimonial saying it worked" does not accurately describe the concept asked about.',
+              2: '"The therapist\\\'s personal conviction that it works" does not accurately describe the concept asked about.',
+              3: '"A blog post explaining the theory behind it" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u11-L3-T2',
@@ -2799,6 +3076,9 @@ export const psySection15Part2: Unit[] = [
             question: 'The replication crisis ultimately weakened psychology by destroying trust in all findings.',
             correctAnswer: false,
             explanation: 'The replication crisis strengthened psychology by improving methods, increasing transparency, and demanding better evidence.',
+            distractorExplanations: {
+              0: 'The replication crisis strengthened psychology by improving methods, increasing transparency, and demanding better evidence.',
+            },
           },
         ],
       },

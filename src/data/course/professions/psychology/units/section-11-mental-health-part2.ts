@@ -34,6 +34,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Bipolar disorder involves alternating episodes of mania and depression.',
             correctAnswer: true,
             explanation: 'Bipolar disorder is defined by mood episodes that swing between manic highs and depressive lows.',
+            distractorExplanations: {
+              1: 'Bipolar disorder is defined by mood episodes that swing between manic highs and depressive lows.',
+            },
           },
           {
             id: 'psy-sec11-u9-L1-Q2',
@@ -69,6 +72,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The amygdala, the brain\'s fear center, becomes hyperactive in PTSD, causing exaggerated threat responses.',
+            distractorExplanations: {
+              0: 'The hippocampus is involved in memory formation and spatial navigation, not the process described here.',
+              1: 'The cerebellum coordinates voluntary movement and balance, not the process described here.',
+              3: 'The occipital lobe processes visual information, not the process described here.',
+            },
           },
           {
             id: 'psy-sec11-u9-L1-Q4',
@@ -82,6 +90,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Bipolar I features full manic episodes. Bipolar II features hypomanic episodes, which are less intense.',
+            distractorExplanations: {
+              1: 'Depression involves persistent low mood and loss of interest, not the specific pattern described here.',
+              2: '"Bipolar I is more common in children" is incorrect; bipolar I requires full manic episodes, bipolar II involves hypomania.',
+              3: '"Bipolar II is a more severe form of the disorder" is incorrect; bipolar I requires full manic episodes, bipolar II involves hypomania.',
+            },
           },
           {
             id: 'psy-sec11-u9-L1-Q5',
@@ -104,6 +117,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The pattern of manic symptoms (reduced sleep, grandiose plans, pressured speech) followed by depression is characteristic of bipolar disorder.',
+            distractorExplanations: {
+              1: 'PTSD develops after trauma and involves flashbacks, avoidance, and hyperarousal, not the pattern described here.',
+              2: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+              3: 'Major depressive disorder involves episodic depressive symptoms, not the specific pattern described here.',
+            },
           },
         ],
       },
@@ -129,6 +147,9 @@ export const psySection11Part2: Unit[] = [
             question: 'A person with OCD typically recognizes that their obsessive thoughts are irrational.',
             correctAnswer: true,
             explanation: 'Most people with OCD have insight into their condition. They know the thoughts are irrational but cannot stop them.',
+            distractorExplanations: {
+              1: 'Most people with OCD have insight into their condition. They know the thoughts are irrational but cannot stop them.',
+            },
           },
           {
             id: 'psy-sec11-u9-L2-Q2',
@@ -173,6 +194,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The OCD cycle works like this: obsessions create anxiety, and compulsions temporarily relieve that anxiety, reinforcing the cycle.',
+            distractorExplanations: {
+              1: '"Obsessions are caused by performing too many compulsions" is incorrect; compulsions are performed to reduce the anxiety caused by obsessions.',
+              2: '"They are unrelated symptoms that happen to co-occur" is incorrect; compulsions are performed to reduce the anxiety caused by obsessions.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec11-u9-L2-Q5',
@@ -186,6 +212,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The dopamine hypothesis suggests that excess dopamine activity in certain brain pathways contributes to psychotic symptoms.',
+            distractorExplanations: {
+              0: 'Serotonin primarily regulates mood, sleep, and appetite, not the mechanism asked about here.',
+              2: 'GABA is the brain\'s main inhibitory neurotransmitter, not the mechanism asked about here.',
+              3: 'Acetylcholine is involved in memory and muscle activation, not the mechanism asked about here.',
+            },
           },
           {
             id: 'psy-sec11-u9-L2-Q6',
@@ -200,6 +231,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Repetitive checking driven by anxiety, with the person recognizing the behavior is excessive, is a hallmark of OCD.',
+            distractorExplanations: {
+              1: 'Schizophrenia involves psychotic symptoms like hallucinations and delusions, which is not the pattern described here.',
+              2: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+              3: 'Bipolar disorder involves alternating mood episodes of mania and depression, not the pattern described here.',
+            },
           },
         ],
       },
@@ -225,6 +261,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Depressed mood can occur in bipolar disorder, PTSD, and major depression.',
             correctAnswer: true,
             explanation: 'Depressed mood is a feature of many disorders. The broader symptom pattern helps distinguish them.',
+            distractorExplanations: {
+              1: 'Depressed mood is a feature of many disorders. The broader symptom pattern helps distinguish them.',
+            },
           },
           {
             id: 'psy-sec11-u9-L3-Q2',
@@ -238,6 +277,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The presence of manic or hypomanic episodes is what separates bipolar disorder from major depressive disorder.',
+            distractorExplanations: {
+              0: '"Bipolar depression is less severe" does not accurately describe the concept asked about.',
+              1: '"Major depression includes hallucinations" does not accurately describe the concept asked about.',
+              3: '"Major depression lasts longer than bipolar depression" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec11-u9-L3-T2',
@@ -266,6 +310,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Hallucinations point toward a psychotic disorder like schizophrenia. Flashbacks tied to a traumatic event point toward PTSD. Both share depressive features.',
+            distractorExplanations: {
+              0: 'Major depressive disorder involves episodic depressive symptoms, not the specific pattern described here.',
+              2: '"Both have PTSD with different symptoms" does not accurately describe the concept asked about.',
+              3: 'Bipolar disorder involves alternating mood episodes of mania and depression, not the pattern described here.',
+            },
           },
           {
             id: 'psy-sec11-u9-L3-Q5',
@@ -288,6 +337,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Symptoms like depressed mood, sleep problems, and withdrawal appear across many disorders. The full picture is needed for accurate diagnosis.',
+            distractorExplanations: {
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"Clinicians are only allowed to diagnose one disorder per person" does not accurately describe the concept asked about.',
+              3: '"Symptoms do not vary between different disorders" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -327,6 +381,9 @@ export const psySection11Part2: Unit[] = [
             question: 'A personality disorder is diagnosed when personality traits are rigid and cause significant distress or impairment.',
             correctAnswer: true,
             explanation: 'The key criteria are rigidity, pervasiveness, and significant distress or functional impairment.',
+            distractorExplanations: {
+              1: 'The key criteria are rigidity, pervasiveness, and significant distress or functional impairment.',
+            },
           },
           {
             id: 'psy-sec11-u10-L1-Q2',
@@ -340,6 +397,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A personality disorder requires rigid, pervasive patterns that lead to significant distress or problems in functioning.',
+            distractorExplanations: {
+              1: '"Having any trait that others find unusual" is incorrect; being inflexible and causing lasting distress or impairment.',
+              2: '"Experiencing personality changes after age 50" is incorrect; being inflexible and causing lasting distress or impairment.',
+              3: '"Scoring differently from the average on a personality test" is incorrect; being inflexible and causing lasting distress or impairment.',
+            },
           },
           {
             id: 'psy-sec11-u10-L1-T2',
@@ -383,6 +445,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Personality disorders typically emerge in adolescence or early adulthood as personality patterns solidify.',
+            distractorExplanations: {
+              1: 'The scope is broader than after age 40 alone.',
+              2: '"During early childhood (before age 5)" is incorrect; adolescence or early adulthood.',
+              3: '"After a single traumatic event" is incorrect; adolescence or early adulthood.',
+            },
           },
           {
             id: 'psy-sec11-u10-L1-Q6',
@@ -397,6 +464,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The pattern is inflexible, emerged early, has persisted for years, and causes significant impairment. These meet the general criteria for a personality disorder.',
+            distractorExplanations: {
+              1: '"No, everyone is suspicious sometimes" is incorrect; yes, the pattern is rigid, long-standing, and causes distress.',
+              2: '"No, personality disorders only start after age 30" is incorrect; yes, the pattern is rigid, long-standing, and causes distress.',
+              3: 'Depression involves persistent low mood and loss of interest, not the specific pattern described here.',
+            },
           },
         ],
       },
@@ -422,6 +494,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Cluster A personality disorders involve dramatic and attention-seeking behavior.',
             correctAnswer: false,
             explanation: 'Cluster A involves odd or eccentric patterns. Dramatic and attention-seeking behavior belongs to Cluster B.',
+            distractorExplanations: {
+              0: 'Cluster A involves odd or eccentric patterns. Dramatic and attention-seeking behavior belongs to Cluster B.',
+            },
           },
           {
             id: 'psy-sec11-u10-L2-Q2',
@@ -435,6 +510,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Paranoid personality disorder is characterized by a deep, enduring distrust and suspicion of others\' motives.',
+            distractorExplanations: {
+              1: '"Schizoid personality disorder" is incorrect; paranoid personality disorder.',
+              2: '"Schizotypal personality disorder" is incorrect; paranoid personality disorder.',
+              3: 'Avoidant PD involves pervasive social inhibition and inadequacy feelings, not the pattern described here.',
+            },
           },
           {
             id: 'psy-sec11-u10-L2-T2',
@@ -470,6 +550,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Paranoid personality disorder involves suspicion without psychotic features. Schizophrenia may include paranoid delusions and hallucinations.',
+            distractorExplanations: {
+              1: 'These are distinct concepts with different characteristics, causes, or applications.',
+              2: '"Paranoid personality disorder involves hearing voices" does not accurately describe the concept asked about.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec11-u10-L2-Q5',
@@ -492,6 +577,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Schizoid personality disorder involves emotional detachment, preference for solitude, and limited emotional range, without odd beliefs.',
+            distractorExplanations: {
+              1: '"Schizotypal personality disorder" is incorrect; schizoid personality disorder.',
+              2: '"Paranoid personality disorder" is incorrect; schizoid personality disorder.',
+              3: 'Major depressive disorder involves episodic depressive symptoms, not the specific pattern described here.',
+            },
           },
         ],
       },
@@ -517,6 +607,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Cluster B personality disorders are characterized by dramatic, emotional, or erratic behavior.',
             correctAnswer: true,
             explanation: 'Cluster B is defined by dramatic, impulsive, or erratic behavioral patterns that often affect relationships.',
+            distractorExplanations: {
+              1: 'Cluster B is defined by dramatic, impulsive, or erratic behavioral patterns that often affect relationships.',
+            },
           },
           {
             id: 'psy-sec11-u10-L3-Q2',
@@ -530,6 +623,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Antisocial personality disorder is characterized by a pattern of violating others\' rights, deceit, and lack of remorse.',
+            distractorExplanations: {
+              0: 'Narcissistic PD involves grandiosity and need for admiration, not the pattern described here.',
+              1: 'Borderline PD involves emotional instability and abandonment fears, not the pattern described here.',
+              3: 'Histrionic PD involves excessive emotionality and attention-seeking, not the pattern described here.',
+            },
           },
           {
             id: 'psy-sec11-u10-L3-T2',
@@ -573,6 +671,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'With proper treatment, such as DBT for BPD, many people with personality disorders experience meaningful improvement.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: 'The scope is broader than medication can treat personality disorders alone.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec11-u10-L3-Q6',
@@ -587,6 +690,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Idealization followed by devaluation, emptiness, and impulsivity are characteristic features of borderline personality disorder.',
+            distractorExplanations: {
+              1: 'Narcissistic PD involves grandiosity and need for admiration, not the pattern described here.',
+              2: 'Antisocial PD involves disregard for others and lack of remorse, not the pattern described here.',
+              3: 'Histrionic PD involves excessive emotionality and attention-seeking, not the pattern described here.',
+            },
           },
         ],
       },
@@ -612,6 +720,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Obsessive-compulsive personality disorder (OCPD) is the same as OCD.',
             correctAnswer: false,
             explanation: 'OCPD is a personality disorder involving rigidity and perfectionism. OCD involves intrusive thoughts and compulsive rituals. They are distinct conditions.',
+            distractorExplanations: {
+              0: 'OCPD is a personality disorder involving rigidity and perfectionism.',
+            },
           },
           {
             id: 'psy-sec11-u10-L4-Q2',
@@ -625,6 +736,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Avoidant PD involves a deep, enduring pattern of social avoidance woven into the personality. Social anxiety can be more situational.',
+            distractorExplanations: {
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"People with avoidant PD do not experience anxiety" does not accurately describe the concept asked about.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
           {
             id: 'psy-sec11-u10-L4-T2',
@@ -668,6 +784,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'People with OCD usually recognize their obsessions as unwanted. People with OCPD often believe their perfectionism is reasonable and necessary.',
+            distractorExplanations: {
+              1: '"OCPD involves hallucinations while OCD does not" does not accurately describe the concept asked about.',
+              2: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+              3: '"OCPD causes more distress than OCD in all cases" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec11-u10-L4-Q6',
@@ -682,6 +803,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Excessive reliance on others for decision-making and an urgent need for close support are hallmarks of dependent personality disorder.',
+            distractorExplanations: {
+              1: 'Avoidant PD involves pervasive social inhibition and inadequacy feelings, not the pattern described here.',
+              2: '"Obsessive-compulsive personality disorder" is incorrect; dependent personality disorder.',
+              3: 'Borderline PD involves emotional instability and abandonment fears, not the pattern described here.',
+            },
           },
         ],
       },
@@ -925,6 +1051,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Eating disorders have the highest mortality rate of any category of mental illness.',
             correctAnswer: true,
             explanation: 'Eating disorders, particularly anorexia nervosa, carry the highest mortality rate of any mental health condition due to medical complications and suicide risk.',
+            distractorExplanations: {
+              1: 'Eating disorders, particularly anorexia nervosa, carry the highest mortality rate of any mental health condition due to.',
+            },
           },
           {
             id: 'psy-sec11-u11-L1-Q2',
@@ -938,6 +1067,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Eating disorders affect a diverse population. The stereotype that they only affect young women leads to underdiagnosis in other groups.',
+            distractorExplanations: {
+              1: '"They only affect teenage girls" is incorrect; they affect people of all genders, ages, and backgrounds.',
+              2: '"They are a lifestyle choice rather than a medical condition" is incorrect; they affect people of all genders, ages, and backgrounds.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec11-u11-L1-T2',
@@ -981,6 +1115,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Eating disorders are complex. Genetics, brain chemistry, personality, trauma, and cultural pressures all play a role.',
+            distractorExplanations: {
+              1: '"Purely a response to media pressure" does not accurately describe the concept asked about.',
+              2: '"Entirely genetic with no environmental influence" does not accurately describe the concept asked about.',
+              3: 'Not triggered by a single traumatic event.',
+            },
           },
           {
             id: 'psy-sec11-u11-L1-Q6',
@@ -995,6 +1134,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Eating disorders are serious, biologically influenced conditions. Framing them as willpower failures increases stigma and prevents people from seeking help.',
+            distractorExplanations: {
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: '"Say that eating disorders only happen to people with low self-esteem" does not accurately describe the concept asked about.',
+              3: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+            },
           },
         ],
       },
@@ -1019,6 +1163,9 @@ export const psySection11Part2: Unit[] = [
             question: 'People with anorexia nervosa may perceive themselves as overweight even when they are significantly underweight.',
             correctAnswer: true,
             explanation: 'Body image distortion is a hallmark of anorexia. The person genuinely perceives their body differently from reality.',
+            distractorExplanations: {
+              1: 'Body image distortion is a hallmark of anorexia. The person genuinely perceives their body differently from reality.',
+            },
           },
           {
             id: 'psy-sec11-u11-L2-Q2',
@@ -1032,6 +1179,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Severe malnutrition from anorexia can cause heart arrhythmias, kidney failure, bone loss, and death. It is a medical emergency.',
+            distractorExplanations: {
+              1: '"It only affects emotional wellbeing, not physical health" is incorrect; severe restriction can cause heart failure, organ damage, and death.',
+              2: '"The primary risk is social isolation" is incorrect; severe restriction can cause heart failure, organ damage, and death.',
+              3: '"It causes temporary discomfort but no lasting harm" is incorrect; severe restriction can cause heart failure, organ damage, and death.',
+            },
           },
           {
             id: 'psy-sec11-u11-L2-T2',
@@ -1067,6 +1219,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Poor insight (not recognizing the severity of the illness) is a major barrier to treatment. Many people with anorexia resist treatment because they do not see themselves as unwell.',
+            distractorExplanations: {
+              1: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: '"It only responds to medication, not therapy" does not accurately describe the concept asked about.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec11-u11-L2-Q5',
@@ -1089,6 +1246,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Low BMI, amenorrhea (loss of menstruation), bradycardia (slow heart rate), and denial of illness severity are red flags for anorexia nervosa.',
+            distractorExplanations: {
+              1: '"Recommend a more intense exercise program" is incorrect; screen for anorexia nervosa and assess medical complications.',
+              2: '"Accept their self-report that they feel fine" is incorrect; screen for anorexia nervosa and assess medical complications.',
+              3: 'The scope is broader than treat the fainting episode and discharge them alone.',
+            },
           },
         ],
       },
@@ -1114,6 +1276,9 @@ export const psySection11Part2: Unit[] = [
             question: 'People with bulimia nervosa are always underweight.',
             correctAnswer: false,
             explanation: 'Most people with bulimia maintain a near-normal weight, which is one reason the disorder often goes undetected.',
+            distractorExplanations: {
+              0: 'Most people with bulimia maintain a near-normal weight, which is one reason the disorder often goes undetected.',
+            },
           },
           {
             id: 'psy-sec11-u11-L3-Q2',
@@ -1162,6 +1327,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Repeated purging causes serious medical complications including damaged tooth enamel, dangerous electrolyte imbalances, and esophageal tears.',
+            distractorExplanations: {
+              1: 'The scope is broader than minor stomach discomfort alone.',
+              2: '"Improved metabolism and weight management" is incorrect; tooth enamel erosion, electrolyte imbalance, and esophageal damage.',
+              3: '"Stronger teeth due to stomach acid exposure" is incorrect; tooth enamel erosion, electrolyte imbalance, and esophageal damage.',
+            },
           },
           {
             id: 'psy-sec11-u11-L3-Q5',
@@ -1184,6 +1354,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Recurrent binge eating with loss of control, shame, and no compensatory behavior is the defining pattern of binge eating disorder.',
+            distractorExplanations: {
+              1: 'Bulimia nervosa involves binge-purge cycles, not the pattern described here.',
+              2: 'Anorexia nervosa involves severe food restriction and weight loss, not the pattern described here.',
+              3: '"Normal overeating" is incorrect; binge eating disorder.',
+            },
           },
         ],
       },
@@ -1209,6 +1384,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Eating disorder treatment is most effective with a multidisciplinary team approach.',
             correctAnswer: true,
             explanation: 'Treatment works best when therapists, dietitians, and medical doctors collaborate to address the condition from multiple angles.',
+            distractorExplanations: {
+              1: 'Treatment works best when therapists, dietitians, and medical doctors collaborate to address the condition from multiple angles.',
+            },
           },
           {
             id: 'psy-sec11-u11-L4-Q2',
@@ -1222,6 +1400,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'CBT is the gold standard treatment for bulimia nervosa. It helps people identify and change the thoughts driving binge-purge cycles.',
+            distractorExplanations: {
+              1: 'Classical psychoanalysis is rarely the first-line treatment for this condition.',
+              2: 'Hypnotherapy lacks strong evidence for treating this specific condition.',
+              3: 'Medication alone is typically less effective than an integrated approach combining it with psychotherapy.',
+            },
           },
           {
             id: 'psy-sec11-u11-L4-T2',
@@ -1249,6 +1432,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Without addressing the psychological root causes, the person remains at high risk of relapse even if their weight normalizes.',
+            distractorExplanations: {
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"Recovery only requires medication" does not accurately describe the concept asked about.',
+              3: '"Physical symptoms are unrelated to the eating disorder" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec11-u11-L4-Q5',
@@ -1276,6 +1464,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'For an adolescent with supportive parents, family-based treatment is the first-line recommendation with the strongest evidence base.',
+            distractorExplanations: {
+              1: '"Individual therapy only, keeping parents out of treatment" is incorrect; family-based treatment with parental involvement in meals.',
+              2: 'Medication alone is typically less effective than an integrated approach combining it with psychotherapy.',
+              3: '"Wait and see if the problem resolves on its own" is incorrect; family-based treatment with parental involvement in meals.',
+            },
           },
         ],
       },
@@ -1419,6 +1612,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Addiction is now understood as a brain disorder involving changes to reward circuitry.',
             correctAnswer: true,
             explanation: 'Modern neuroscience shows that addiction involves real structural and functional changes in the brain, particularly in the reward and decision-making systems.',
+            distractorExplanations: {
+              1: 'Modern neuroscience shows that addiction involves real structural and functional changes in the brain.',
+            },
           },
           {
             id: 'psy-sec11-u12-L1-Q2',
@@ -1432,6 +1628,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Dopamine is the primary neurotransmitter in the brain\'s reward pathway. Addictive substances cause massive dopamine surges.',
+            distractorExplanations: {
+              0: 'Serotonin primarily regulates mood, sleep, and appetite, not the mechanism asked about here.',
+              2: 'GABA is the brain\'s main inhibitory neurotransmitter, not the mechanism asked about here.',
+              3: 'Acetylcholine is involved in memory and muscle activation, not the mechanism asked about here.',
+            },
           },
           {
             id: 'psy-sec11-u12-L1-T2',
@@ -1475,6 +1676,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Research shows genetics account for roughly 40-60% of addiction risk. The rest comes from environmental and psychological factors.',
+            distractorExplanations: {
+              0: '5-10% greatly underestimates the genetic contribution, which research places at 40-60%.',
+              2: '90-100% overstates genetic influence; environmental and psychological factors account for roughly half of addiction risk.',
+              3: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+            },
           },
           {
             id: 'psy-sec11-u12-L1-Q6',
@@ -1489,6 +1695,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Even siblings differ in genetic vulnerability and personal experiences. Addiction risk is individual, not a simple family pattern.',
+            distractorExplanations: {
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: '"The social drinker was exposed to less alcohol" does not accurately describe the concept asked about.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
         ],
       },
@@ -1514,6 +1725,9 @@ export const psySection11Part2: Unit[] = [
             question: 'The DSM-5 classifies substance use disorders on a mild-to-severe spectrum.',
             correctAnswer: true,
             explanation: 'The DSM-5 uses a single diagnosis with severity levels (mild, moderate, severe) based on how many criteria are met.',
+            distractorExplanations: {
+              1: 'The DSM-5 uses a single diagnosis with severity levels (mild, moderate, severe) based on how many criteria are met.',
+            },
           },
           {
             id: 'psy-sec11-u12-L2-Q2',
@@ -1527,6 +1741,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Severity is determined by the number of criteria met: 2-3 is mild, 4-5 is moderate, 6 or more is severe.',
+            distractorExplanations: {
+              1: '"By measuring blood alcohol levels" is incorrect; by counting how many of 11 diagnostic criteria are met.',
+              2: '"By asking the person to rate their own severity" is incorrect; by counting how many of 11 diagnostic criteria are met.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec11-u12-L2-T2',
@@ -1562,6 +1781,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The defining feature is continued compulsive use despite harmful consequences to health, relationships, or functioning.',
+            distractorExplanations: {
+              1: '"Physical withdrawal symptoms only" is incorrect; compulsive use despite negative consequences.',
+              2: '"Use of illegal substances only" is incorrect; compulsive use despite negative consequences.',
+              3: '"Daily use of large quantities" is incorrect; compulsive use despite negative consequences.',
+            },
           },
           {
             id: 'psy-sec11-u12-L2-Q5',
@@ -1584,6 +1808,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Meeting 6 or more of the 11 criteria qualifies as severe. This person meets 7 criteria with clear functional impairment.',
+            distractorExplanations: {
+              1: '"Mild alcohol use disorder" is incorrect; severe alcohol use disorder.',
+              2: '"Alcohol abuse but not dependence" is incorrect; severe alcohol use disorder.',
+              3: '"Normal social drinking" is incorrect; severe alcohol use disorder.',
+            },
           },
         ],
       },
@@ -1608,6 +1837,9 @@ export const psySection11Part2: Unit[] = [
             question: 'The opioid crisis was partly caused by pharmaceutical companies marketing painkillers as non-addictive.',
             correctAnswer: true,
             explanation: 'Companies like Purdue Pharma marketed OxyContin as having low addiction potential, which research later proved false.',
+            distractorExplanations: {
+              1: 'Companies like Purdue Pharma marketed OxyContin as having low addiction potential, which research later proved false.',
+            },
           },
           {
             id: 'psy-sec11-u12-L3-Q2',
@@ -1641,6 +1873,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Gambling disorder is the only officially recognized behavioral addiction in the DSM-5. Internet gaming disorder is listed for further study.',
+            distractorExplanations: {
+              1: '"Social media addiction" is incorrect; gambling disorder.',
+              2: '"Shopping addiction" is incorrect; gambling disorder.',
+              3: '"Internet gaming disorder" is incorrect; gambling disorder.',
+            },
           },
           {
             id: 'psy-sec11-u12-L3-Q4',
@@ -1654,6 +1891,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Both behavioral and substance addictions involve the same dopamine reward circuitry, leading to similar patterns of compulsive behavior.',
+            distractorExplanations: {
+              1: '"Both involve ingesting a chemical substance" is incorrect; both activate the brain\\\'s dopamine-driven reward pathways.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"They do not share any similar features" is incorrect; both activate the brain\\\'s dopamine-driven reward pathways.',
+            },
           },
           {
             id: 'psy-sec11-u12-L3-Q5',
@@ -1676,6 +1918,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Environmental cues (like seeing a casino) can trigger intense cravings through learned associations, even after months of abstinence.',
+            distractorExplanations: {
+              1: '"Normal curiosity about a hobby" is incorrect; cue-triggered craving from conditioned associations.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Physical withdrawal from gambling chemicals" is incorrect; cue-triggered craving from conditioned associations.',
+            },
           },
         ],
       },
@@ -1701,6 +1948,9 @@ export const psySection11Part2: Unit[] = [
             question: 'A single treatment approach works for all people with substance use disorders.',
             correctAnswer: false,
             explanation: 'Effective treatment is individualized. It may combine medication, therapy, peer support, and addressing co-occurring mental health conditions.',
+            distractorExplanations: {
+              0: 'Effective treatment is individualized.',
+            },
           },
           {
             id: 'psy-sec11-u12-L4-Q2',
@@ -1714,6 +1964,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'MAT combines FDA-approved medications with counseling and behavioral therapies. It is evidence-based and reduces relapse risk.',
+            distractorExplanations: {
+              1: 'Medication alone is typically less effective than an integrated approach combining it with psychotherapy.',
+              2: 'Aversion therapy pairs unwanted behavior with unpleasant stimuli and is not the approach described here.',
+              3: '"Replacing one addictive substance with another" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec11-u12-L4-T2',
@@ -1733,6 +1988,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The 40-60% relapse rate is comparable to chronic conditions like diabetes and hypertension. Relapse is a challenge, not a failure.',
+            distractorExplanations: {
+              1: 'Less than 5% vastly underestimates the relapse rate, which is 40-60%, comparable to other chronic diseases.',
+              2: 'Close to 100% vastly overestimates the rate; many people achieve sustained recovery with proper treatment.',
+              3: '10-15% underestimates the relapse rate; the actual figure of 40-60% reflects addiction as a chronic condition.',
+            },
           },
           {
             id: 'psy-sec11-u12-L4-Q4',
@@ -1771,6 +2031,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Relapse does not mean failure. Like diabetes management, addiction treatment may need ongoing adjustment. Continued support is essential.',
+            distractorExplanations: {
+              1: '"Agree that the person should stop treatment" does not accurately describe the concept asked about.',
+              2: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              3: '"Tell the family member that relapse means the person does not want to recover" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2014,6 +2279,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Neurodevelopmental disorders are caused by bad parenting.',
             correctAnswer: false,
             explanation: 'Neurodevelopmental disorders have biological origins involving brain development. Parenting does not cause them.',
+            distractorExplanations: {
+              0: 'Neurodevelopmental disorders have biological origins involving brain development. Parenting does not cause them.',
+            },
           },
           {
             id: 'psy-sec11-u13-L1-Q2',
@@ -2027,6 +2295,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'By definition, neurodevelopmental disorders manifest during the developmental period, typically before school age.',
+            distractorExplanations: {
+              1: 'The scope is broader than during the teenage years alone.',
+              2: '"In middle adulthood after prolonged stress" is incorrect; in early childhood, before a child starts school.',
+              3: '"After retirement" is incorrect; in early childhood, before a child starts school.',
+            },
           },
           {
             id: 'psy-sec11-u13-L1-T2',
@@ -2054,6 +2327,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'ADHD is classified as a neurodevelopmental disorder because it involves atypical brain development from early childhood.',
+            distractorExplanations: {
+              1: 'Major depressive disorder involves episodic depressive symptoms, not the specific pattern described here.',
+              2: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+              3: 'Bipolar disorder involves alternating mood episodes of mania and depression, not the pattern described here.',
+            },
           },
           {
             id: 'psy-sec11-u13-L1-T3',
@@ -2075,6 +2353,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Neurodevelopmental disorders are biological, not caused by parenting. The focus should shift to understanding the condition and accessing support.',
+            distractorExplanations: {
+              1: '"Agree that something they did must have caused it" does not accurately describe the concept asked about.',
+              2: '"Tell them the diagnosis is probably wrong" does not accurately describe the concept asked about.',
+              3: 'This falsely attributes the condition to personal choice, ignoring its biological and psychological basis.',
+            },
           },
         ],
       },
@@ -2100,6 +2383,9 @@ export const psySection11Part2: Unit[] = [
             question: 'ADHD is caused by laziness or lack of effort.',
             correctAnswer: false,
             explanation: 'ADHD involves differences in brain structure and function, particularly in areas controlling executive function. It is not a motivation problem.',
+            distractorExplanations: {
+              0: 'ADHD involves differences in brain structure and function, particularly in areas controlling executive function.',
+            },
           },
           {
             id: 'psy-sec11-u13-L2-Q2',
@@ -2113,6 +2399,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'ADHD primarily affects executive functions: the brain\'s ability to plan, prioritize, sustain attention, and control impulses.',
+            distractorExplanations: {
+              1: '"The visual processing system" is incorrect; the executive function system (planning, focus, self-control).',
+              2: '"The auditory processing system" is incorrect; the executive function system (planning, focus, self-control).',
+              3: '"The motor coordination system" is incorrect; the executive function system (planning, focus, self-control).',
+            },
           },
           {
             id: 'psy-sec11-u13-L2-T2',
@@ -2156,6 +2447,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Stimulant medications (like methylphenidate) increase dopamine and norepinephrine in the prefrontal cortex, improving executive function.',
+            distractorExplanations: {
+              1: '"Medication cures ADHD permanently" does not accurately describe the concept asked about.',
+              2: 'The scope is broader than children with ADHD benefit from medication alone.',
+              3: '"Stimulants make ADHD symptoms worse in all cases" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec11-u13-L2-Q6',
@@ -2170,6 +2466,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Daydreaming, losing things, and incomplete tasks without hyperactivity fit the predominantly inattentive presentation, which is often overlooked.',
+            distractorExplanations: {
+              1: '"Predominantly hyperactive-impulsive presentation" is incorrect; predominantly inattentive presentation.',
+              2: '"This does not sound like ADHD because the child is quiet" is incorrect; predominantly inattentive presentation.',
+              3: '"Combined presentation" is incorrect; predominantly inattentive presentation.',
+            },
           },
         ],
       },
@@ -2195,6 +2496,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Autism spectrum disorder always involves the same level of support needs.',
             correctAnswer: false,
             explanation: 'ASD is a spectrum. Some people need significant support, while others live independently. Support needs vary widely.',
+            distractorExplanations: {
+              0: 'ASD is a spectrum. Some people need significant support, while others live independently. Support needs vary widely.',
+            },
           },
           {
             id: 'psy-sec11-u13-L3-Q2',
@@ -2208,6 +2512,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'ASD is defined by two core domains: differences in social communication and interaction, plus restricted or repetitive patterns of behavior.',
+            distractorExplanations: {
+              1: '"Inattention and hyperactivity" is incorrect; social communication differences and restricted/repetitive behaviors.',
+              2: '"Mood instability and impulsivity" is incorrect; social communication differences and restricted/repetitive behaviors.',
+              3: '"Hallucinations and delusions" is incorrect; social communication differences and restricted/repetitive behaviors.',
+            },
           },
           {
             id: 'psy-sec11-u13-L3-T2',
@@ -2258,6 +2567,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Research shows many autistic people experience strong empathy. Difficulties in expressing or reading emotions are not the same as lacking empathy.',
+            distractorExplanations: {
+              1: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Empathy is unrelated to autism spectrum disorder" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec11-u13-L3-Q6',
@@ -2272,6 +2586,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Preferring solitude and managing sensory input are common strategies for people on the autism spectrum. Their strengths in focused tasks can be major workplace assets.',
+            distractorExplanations: {
+              1: '"They are being intentionally rude by avoiding colleagues" does not accurately describe the concept asked about.',
+              2: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              3: '"They are not suited for a workplace environment" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2297,6 +2616,9 @@ export const psySection11Part2: Unit[] = [
             question: 'ADHD and autism only involve deficits, with no associated strengths.',
             correctAnswer: false,
             explanation: 'Both conditions involve a different cognitive profile with genuine strengths alongside challenges. Focusing only on deficits gives an incomplete picture.',
+            distractorExplanations: {
+              0: 'Both conditions involve a different cognitive profile with genuine strengths alongside challenges.',
+            },
           },
           {
             id: 'psy-sec11-u13-L4-Q2',
@@ -2325,6 +2647,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Breaking tasks into manageable pieces with clear structure supports the executive function challenges in ADHD.',
+            distractorExplanations: {
+              1: '"Giving them the most complex projects with no guidance" is incorrect; breaking large projects into smaller tasks with clear deadlines.',
+              2: '"Removing all structure and letting them work freely" is incorrect; breaking large projects into smaller tasks with clear deadlines.',
+              3: '"Requiring them to sit still for 8 hours without breaks" is incorrect; breaking large projects into smaller tasks with clear deadlines.',
+            },
           },
           {
             id: 'psy-sec11-u13-L4-Q4',
@@ -2346,6 +2673,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Women and girls often develop compensatory strategies (masking) and may present with less visible symptoms, leading to underdiagnosis.',
+            distractorExplanations: {
+              1: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Diagnostic criteria are gender-neutral and catch everyone equally" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec11-u13-L4-Q6',
@@ -2360,6 +2692,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Leveraging strengths while accommodating challenges leads to better outcomes than punishment. Simple accommodations can resolve the issue.',
+            distractorExplanations: {
+              1: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              2: '"Tell them their ADHD is not an excuse" does not accurately describe the concept asked about.',
+              3: '"Remove all creative projects until they fix their admin work" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2503,6 +2840,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Stigma is one of the biggest barriers to seeking mental health treatment.',
             correctAnswer: true,
             explanation: 'Fear of being labeled, judged, or discriminated against prevents many people from seeking the help they need.',
+            distractorExplanations: {
+              1: 'Fear of being labeled, judged, or discriminated against prevents many people from seeking the help they need.',
+            },
           },
           {
             id: 'psy-sec11-u14-L1-Q2',
@@ -2516,6 +2856,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Stigma operates at three levels: stereotypes (negative beliefs), prejudice (negative attitudes), and discrimination (negative behaviors).',
+            distractorExplanations: {
+              1: '"Diagnosis, treatment, and recovery" is incorrect; stereotypes, prejudice, and discrimination.',
+              2: 'Depression involves persistent low mood and loss of interest, not the specific pattern described here.',
+              3: '"Media, education, and policy" is incorrect; stereotypes, prejudice, and discrimination.',
+            },
           },
           {
             id: 'psy-sec11-u14-L1-T2',
@@ -2576,6 +2921,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Gently correcting misconceptions with facts is one of the most effective ways to reduce stigma in everyday interactions.',
+            distractorExplanations: {
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: '"Tell them anxiety is not a real condition" does not accurately describe the concept asked about.',
+              3: '"Ignore the comment to avoid conflict" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2600,6 +2950,9 @@ export const psySection11Part2: Unit[] = [
             question: 'People with mental health conditions are more likely to be violent than the general population.',
             correctAnswer: false,
             explanation: 'Research consistently shows that people with mental health conditions are far more likely to be victims of violence than perpetrators.',
+            distractorExplanations: {
+              0: 'Research consistently shows that people with mental health conditions are far more likely to be victims of violence than.',
+            },
           },
           {
             id: 'psy-sec11-u14-L2-Q2',
@@ -2613,6 +2966,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Studies show news coverage disproportionately associates mental illness with violent crime, which distorts public perception.',
+            distractorExplanations: {
+              1: '"They provide accurate, balanced information" is incorrect; they disproportionately link mental illness to violence.',
+              2: '"They focus on recovery stories and treatment successes" is incorrect; they disproportionately link mental illness to violence.',
+              3: '"They rarely mention mental health at all" is incorrect; they disproportionately link mental illness to violence.',
+            },
           },
           {
             id: 'psy-sec11-u14-L2-T2',
@@ -2633,6 +2991,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cultural beliefs about mental health affect how people experience symptoms, whether they seek help, and what kind of help they find acceptable.',
+            distractorExplanations: {
+              1: '"Mental health conditions only exist in Western cultures" does not accurately describe the concept asked about.',
+              2: '"Cultural context is irrelevant to mental health" does not accurately describe the concept asked about.',
+              3: 'Not cultures view mental illness the same way.',
+            },
           },
           {
             id: 'psy-sec11-u14-L2-Q4',
@@ -2671,6 +3034,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Research shows that contact (even media contact) with humanized, realistic portrayals is one of the most effective ways to reduce stigma.',
+            distractorExplanations: {
+              1: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: 'Schizophrenia involves psychotic symptoms like hallucinations and delusions, which is not the pattern described here.',
+              3: '"It would discourage people from seeking treatment" is incorrect; it could reduce stigma by showing a complex, realistic portrayal.',
+            },
           },
         ],
       },
@@ -2696,6 +3064,9 @@ export const psySection11Part2: Unit[] = [
             question: 'Education alone is the most effective way to reduce mental health stigma.',
             correctAnswer: false,
             explanation: 'While education helps, research shows personal contact with people who have mental health conditions is more effective at reducing stigma.',
+            distractorExplanations: {
+              0: 'While education helps.',
+            },
           },
           {
             id: 'psy-sec11-u14-L3-Q2',
@@ -2709,6 +3080,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Interpersonal contact breaks down stereotypes and builds empathy. This is supported by decades of research.',
+            distractorExplanations: {
+              1: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              2: '"Hiding mental health conditions from the public" is incorrect; personal contact with people who have mental health conditions.',
+              3: '"Avoiding all discussion of mental illness" is incorrect; personal contact with people who have mental health conditions.',
+            },
           },
           {
             id: 'psy-sec11-u14-L3-T2',
@@ -2749,6 +3125,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Mental health first aid trains everyday people to recognize warning signs and guide someone toward professional help, similar to physical first aid.',
+            distractorExplanations: {
+              1: '"It qualifies people to diagnose mental disorders" does not accurately describe the concept asked about.',
+              2: '"It replaces the need for professional treatment" does not accurately describe the concept asked about.',
+              3: '"It is only useful for healthcare workers" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec11-u14-L3-Q6',
@@ -2763,6 +3144,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Personal contact (hearing someone\'s real story) is consistently shown to be more effective at reducing stigma than education-only approaches.',
+            distractorExplanations: {
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"Neither approach would work with students" does not accurately describe the concept asked about.',
+              3: '"Both would increase stigma by drawing attention to mental illness" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -3006,6 +3392,9 @@ export const psySection11Part2: Unit[] = [
             question: 'The DSM-5 is the standard classification system for mental disorders used in clinical practice and research.',
             correctAnswer: true,
             explanation: 'The DSM-5 (Diagnostic and Statistical Manual of Mental Disorders) provides standardized criteria for diagnosing mental health conditions.',
+            distractorExplanations: {
+              1: 'The DSM-5 (Diagnostic and Statistical Manual of Mental Disorders) provides standardized criteria for diagnosing mental.',
+            },
           },
           {
             id: 'psy-sec11-u15-L1-Q2',
@@ -3034,6 +3423,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Comorbidity is the co-occurrence of multiple conditions in the same person, which is common in mental health.',
+            distractorExplanations: {
+              1: '"Having a disorder that is fatal" is incorrect; meeting criteria for two or more disorders at the same time.',
+              2: '"Recovering from one disorder and developing another" is incorrect; meeting criteria for two or more disorders at the same time.',
+              3: '"Being resistant to treatment" is incorrect; meeting criteria for two or more disorders at the same time.',
+            },
           },
           {
             id: 'psy-sec11-u15-L1-Q4',
@@ -3072,6 +3466,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'DSM diagnosis requires assessing the full symptom pattern, how long symptoms have lasted, and how they affect functioning.',
+            distractorExplanations: {
+              1: '"Diagnose based on a single symptom" does not accurately describe the concept asked about.',
+              2: '"Use a blood test to determine the diagnosis" does not accurately describe the concept asked about.',
+              3: '"Ask the person what diagnosis they think they have" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -3102,6 +3501,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Dopamine plays a role in the reward pathway (addiction) and in mood regulation (depression). Disruption in dopamine signaling is common to both.',
+            distractorExplanations: {
+              1: '"Melatonin" is incorrect; dopamine.',
+              2: '"Insulin" is incorrect; dopamine.',
+              3: 'Cortisol is a stress hormone released by the adrenal glands, not the mechanism asked about here.',
+            },
           },
           {
             id: 'psy-sec11-u15-L2-Q2',
@@ -3146,6 +3550,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Both PTSD (intrusive trauma memories) and OCD (intrusive obsessive thoughts) involve unwanted thoughts that cause significant distress, though the content differs.',
+            distractorExplanations: {
+              1: '"Both are personality disorders" is incorrect; both involve intrusive, unwanted thoughts that cause distress.',
+              2: '"Both primarily involve hallucinations" is incorrect; both involve intrusive, unwanted thoughts that cause distress.',
+              3: '"Both are neurodevelopmental conditions" is incorrect; both involve intrusive, unwanted thoughts that cause distress.',
+            },
           },
           {
             id: 'psy-sec11-u15-L2-Q5',
@@ -3168,6 +3577,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Trauma can trigger multiple comorbid conditions simultaneously. The avoidance, flashbacks, substance use, and eating changes all connect back to the traumatic event.',
+            distractorExplanations: {
+              1: 'The scope is broader than an eating disorder alone.',
+              2: 'The scope is broader than a substance use disorder alone.',
+              3: '"A personality disorder" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -3198,6 +3612,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The "weakness" myth is the most pervasive form of stigma. It applies to depression, addiction, ADHD, eating disorders, and virtually every other condition.',
+            distractorExplanations: {
+              1: '"That every condition requires hospitalization" is incorrect; that the condition reflects personal weakness or moral failure.',
+              2: '"That all mental health conditions are genetic" is incorrect; that the condition reflects personal weakness or moral failure.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec11-u15-L3-Q2',
@@ -3234,6 +3653,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Gendered stigma prevents men from seeking help. Depression is a medical condition, not a reflection of masculinity or weakness.',
+            distractorExplanations: {
+              1: '"Agree that men should be tougher" does not accurately describe the concept asked about.',
+              2: '"Ignore the comment" does not accurately describe the concept asked about.',
+              3: '"Say depression is only for women" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec11-u15-L3-Q4',
@@ -3265,6 +3689,11 @@ export const psySection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Comprehensive support includes policy changes (mental health days), education (manager training), and cultural change (leadership modeling openness).',
+            distractorExplanations: {
+              1: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              2: '"Ignore mental health because it is a private matter" does not accurately describe the concept asked about.',
+              3: 'The scope is broader than provide a gym membership as a wellness benefit alone.',
+            },
           },
         ],
       },

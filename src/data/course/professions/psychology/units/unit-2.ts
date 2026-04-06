@@ -30,6 +30,9 @@ export const unit2: Unit = {
           question: "Cognitive biases are mental shortcuts that sometimes lead to errors in thinking.",
           correctAnswer: true,
           explanation: "That's exactly what they are. They're not signs of low intelligence. Every human brain has them.",
+          distractorExplanations: {
+            1: 'That\'s exactly what they are. They\'re not signs of low intelligence',
+          },
         },
         {
           id: "psy-u2-L1-Q2",
@@ -43,6 +46,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 3,
           explanation: "Heuristics save your brain energy. Processing everything carefully would be exhausting and slow. Shortcuts are a feature, not a bug.",
+          distractorExplanations: {
+            0: 'Heuristics save your brain energy. Processing everything carefully would be exhausting and slow',
+            1: 'Heuristics save your brain energy. Processing everything carefully would be exhausting and slow',
+            2: 'Heuristics save your brain energy. Processing everything carefully would be exhausting and slow',
+          },
         },
         {
           id: "psy-u2-L1-T2",
@@ -86,6 +94,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "Awareness is the first defense. You can't fix a bias you don't know about.",
+          distractorExplanations: {
+            0: 'Awareness is the first defense. You can\'t fix a bias you don\'t know about',
+            2: 'Awareness is the first defense. You can\'t fix a bias you don\'t know about',
+            3: 'Awareness is the first defense. You can\'t fix a bias you don\'t know about',
+          },
         },
         {
           id: "psy-u2-L1-Q6",
@@ -93,6 +106,9 @@ export const unit2: Unit = {
           question: "Smart people are immune to cognitive biases.",
           correctAnswer: false,
           explanation: "Intelligence doesn't protect you from biases. In some cases, smart people are better at rationalizing their biased decisions.",
+          distractorExplanations: {
+            0: 'Intelligence doesn\'t protect you from biases',
+          },
         },
         {
           id: "psy-u2-L1-Q7",
@@ -115,6 +131,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "Kahneman's research proved that human decision-making is systematically flawed in predictable ways. His book 'Thinking, Fast and Slow' is a classic. Much of Kahneman and Tversky's original research used American and Israeli university students, though many findings have since been replicated internationally.",
+          distractorExplanations: {
+            0: 'Kahneman\'s research proved that human decision-making is systematically flawed in predictable ways',
+            1: 'Kahneman\'s research proved that human decision-making is systematically flawed in predictable ways',
+            3: 'Kahneman\'s research proved that human decision-making is systematically flawed in predictable ways',
+          },
         },
       ],
     },
@@ -140,6 +161,9 @@ export const unit2: Unit = {
           question: "Confirmation bias means you tend to notice information that supports your existing beliefs.",
           correctAnswer: true,
           explanation: "Your brain is wired to seek out agreement. Information that confirms your view feels satisfying; contradicting info feels uncomfortable.",
+          distractorExplanations: {
+            1: 'Your brain is wired to seek out agreement',
+          },
         },
         {
           id: "psy-u2-L2-Q2",
@@ -153,6 +177,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "Confirmation bias makes you seek out and remember the positive reviews while dismissing or forgetting the negative ones.",
+          distractorExplanations: {
+            0: 'Confirmation bias makes you seek out and remember the positive reviews while dismissing or forgetting the negative ones',
+            1: 'Confirmation bias makes you seek out and remember the positive reviews while dismissing or forgetting the negative ones',
+            3: 'Confirmation bias makes you seek out and remember the positive reviews while dismissing or forgetting the negative ones',
+          },
         },
         {
           id: "psy-u2-L2-T2",
@@ -196,6 +225,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 3,
           explanation: "The same event was interpreted differently based on existing allegiance. People genuinely saw what they wanted to see.",
+          distractorExplanations: {
+            0: 'The same event was interpreted differently based on existing allegiance',
+            1: 'The same event was interpreted differently based on existing allegiance',
+            2: 'The same event was interpreted differently based on existing allegiance',
+          },
         },
         {
           id: "psy-u2-L2-Q6",
@@ -203,6 +237,9 @@ export const unit2: Unit = {
           question: "Asking 'What evidence would change my mind?' is a good way to fight confirmation bias.",
           correctAnswer: true,
           explanation: "If you can't name any evidence that would change your mind, you're not reasoning. You're defending a position.",
+          distractorExplanations: {
+            1: 'If you can\'t name any evidence that would change your mind, you\'re not reasoning',
+          },
         },
         {
           id: "psy-u2-L2-Q7",
@@ -216,6 +253,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "Algorithms show you more of what you engage with, creating a 'filter bubble' that reinforces your existing views.",
+          distractorExplanations: {
+            0: 'Algorithms show you more of what you engage with, creating a \'filter bubble\' that reinforces your existing views',
+            2: 'Algorithms show you more of what you engage with, creating a \'filter bubble\' that reinforces your existing views',
+            3: 'Algorithms show you more of what you engage with, creating a \'filter bubble\' that reinforces your existing views',
+          },
         },
         {
           id: "psy-u2-L2-Q8",
@@ -249,6 +291,9 @@ export const unit2: Unit = {
           question: "The first number you see in a negotiation can influence your final decision, even if it's unreasonable.",
           correctAnswer: true,
           explanation: "That's anchoring. An absurdly high opening offer still pulls your counteroffer upward compared to a reasonable starting point.",
+          distractorExplanations: {
+            1: 'That\'s anchoring. An absurdly high opening offer still pulls your counteroffer upward compared to a reasonable starting point',
+          },
         },
         {
           id: "psy-u2-L3-Q2",
@@ -262,6 +307,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "The 300 anchor makes 90 feel like a steal. Without that anchor, you'd judge 90 on its own merits.",
+          distractorExplanations: {
+            0: 'The 300 anchor makes 90 feel like a steal',
+            1: 'The 300 anchor makes 90 feel like a steal',
+            3: 'The 300 anchor makes 90 feel like a steal',
+          },
         },
         {
           id: "psy-u2-L3-T2",
@@ -282,6 +332,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 3,
           explanation: "They're all identical, but studies show people feel much more comfortable with '95% survival rate.' That's framing bias in action.",
+          distractorExplanations: {
+            0: 'They\'re all identical, but studies show people feel much more comfortable with \'95% survival rate.\' That\'s framing bias in action',
+            1: 'They\'re all identical, but studies show people feel much more comfortable with \'95% survival rate.\' That\'s framing bias in action',
+            2: 'They\'re all identical, but studies show people feel much more comfortable with \'95% survival rate.\' That\'s framing bias in action',
+          },
         },
         {
           id: "psy-u2-L3-Q4",
@@ -312,6 +367,9 @@ export const unit2: Unit = {
           question: "Even experts like judges and doctors are affected by anchoring bias.",
           correctAnswer: true,
           explanation: "Studies show that judges give different sentences based on random anchoring numbers, and doctors are influenced by irrelevant prior diagnoses.",
+          distractorExplanations: {
+            1: 'Studies show that judges give different sentences based on random anchoring numbers, and doctors are influenced by irrelevant prior diagnoses',
+          },
         },
         {
           id: "psy-u2-L3-Q7",
@@ -325,6 +383,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 3,
           explanation: "Even a completely random number influenced their estimates. The wheel number anchored their thinking despite being totally irrelevant.",
+          distractorExplanations: {
+            0: 'Even a completely random number influenced their estimates',
+            1: 'Even a completely random number influenced their estimates',
+            2: 'Even a completely random number influenced their estimates',
+          },
         },
         {
           id: "psy-u2-L3-Q8",
@@ -357,6 +420,9 @@ export const unit2: Unit = {
           question: "People tend to overestimate the risk of events that are vivid and dramatic.",
           correctAnswer: true,
           explanation: "Plane crashes, shark attacks, and lightning strikes get huge attention but are statistically very rare.",
+          distractorExplanations: {
+            1: 'Plane crashes, shark attacks, and lightning strikes get huge attention but are statistically very rare',
+          },
         },
         {
           id: "psy-u2-L4-Q2",
@@ -370,6 +436,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "The news made break-ins easy to imagine, so your brain overestimates the risk. Your neighborhood may be just as safe as before.",
+          distractorExplanations: {
+            0: 'The news made break-ins easy to imagine, so your brain overestimates the risk',
+            2: 'The news made break-ins easy to imagine, so your brain overestimates the risk',
+            3: 'The news made break-ins easy to imagine, so your brain overestimates the risk',
+          },
         },
         {
           id: "psy-u2-L4-T2",
@@ -390,6 +461,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Heart disease kills millions annually. Shark attacks kill about 5 people per year globally. But sharks make better headlines.",
+          distractorExplanations: {
+            1: 'Heart disease kills millions annually',
+            2: 'Heart disease kills millions annually',
+            3: 'Heart disease kills millions annually',
+          },
         },
         {
           id: "psy-u2-L4-Q4",
@@ -420,6 +496,9 @@ export const unit2: Unit = {
           question: "After a high-profile plane crash, airline bookings typically drop, even though flying remains statistically safer than driving.",
           correctAnswer: true,
           explanation: "The vivid crash makes flying feel dangerous. People switch to driving, which is statistically far riskier per kilometer traveled.",
+          distractorExplanations: {
+            1: 'The vivid crash makes flying feel dangerous',
+          },
         },
         {
           id: "psy-u2-L4-Q7",
@@ -433,6 +512,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Recent exposure to sick people makes illness feel widespread. Without data, it's just the availability heuristic talking.",
+          distractorExplanations: {
+            1: 'Recent exposure to sick people makes illness feel widespread',
+            2: 'Recent exposure to sick people makes illness feel widespread',
+            3: 'Recent exposure to sick people makes illness feel widespread',
+          },
         },
         {
           id: "psy-u2-L4-Q8",
@@ -466,6 +550,9 @@ export const unit2: Unit = {
           question: "People with very little knowledge in a subject tend to overestimate how much they know.",
           correctAnswer: true,
           explanation: "That's the Dunning-Kruger effect. When you don't know much, you also don't know what you're missing.",
+          distractorExplanations: {
+            1: 'That\'s the Dunning-Kruger effect. When you don\'t know much, you also don\'t know what you\'re missing',
+          },
         },
         {
           id: "psy-u2-L5-Q2",
@@ -479,6 +566,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "Classic Dunning-Kruger: a little knowledge creates a big spike in confidence because you can't yet see how much you don't know.",
+          distractorExplanations: {
+            0: 'Classic Dunning-Kruger: a little knowledge creates a big spike in confidence because you can\'t yet see how much you don\'t know',
+            1: 'Classic Dunning-Kruger: a little knowledge creates a big spike in confidence because you can\'t yet see how much you don\'t know',
+            3: 'Classic Dunning-Kruger: a little knowledge creates a big spike in confidence because you can\'t yet see how much you don\'t know',
+          },
         },
         {
           id: "psy-u2-L5-T2",
@@ -522,6 +614,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 3,
           explanation: "Those who scored the lowest estimated themselves to be above average. They lacked the skill to recognize their lack of skill.",
+          distractorExplanations: {
+            0: 'Those who scored the lowest estimated themselves to be above average',
+            1: 'Those who scored the lowest estimated themselves to be above average',
+            2: 'Those who scored the lowest estimated themselves to be above average',
+          },
         },
         {
           id: "psy-u2-L5-Q6",
@@ -529,6 +626,9 @@ export const unit2: Unit = {
           question: "Impostor syndrome only affects people who aren't actually qualified.",
           correctAnswer: false,
           explanation: "Impostor syndrome specifically affects people who are qualified but don't feel like it. It's especially common among high achievers.",
+          distractorExplanations: {
+            0: 'Impostor syndrome specifically affects people who are qualified but don\'t feel like it',
+          },
         },
         {
           id: "psy-u2-L5-Q7",
@@ -543,6 +643,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Marcus shows classic Dunning-Kruger. A small amount of knowledge created a huge spike in confidence. He has not yet encountered the complexity that would reveal how much he still needs to learn.",
+          distractorExplanations: {
+            1: 'Marcus shows classic Dunning-Kruger',
+            2: 'Marcus shows classic Dunning-Kruger',
+            3: 'Marcus shows classic Dunning-Kruger',
+          },
         },
         {
           id: "psy-u2-L5-Q8",
@@ -556,6 +661,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "Acknowledging the pattern and looking at objective evidence of your skills is the most effective strategy.",
+          distractorExplanations: {
+            0: 'Acknowledging the pattern and looking at objective evidence of your skills is the most effective strategy',
+            1: 'Acknowledging the pattern and looking at objective evidence of your skills is the most effective strategy',
+            3: 'Acknowledging the pattern and looking at objective evidence of your skills is the most effective strategy',
+          },
         },
       ],
     },
@@ -580,6 +690,9 @@ export const unit2: Unit = {
           question: "It makes sense to finish a terrible movie just because you already paid for the ticket.",
           correctAnswer: false,
           explanation: "The ticket money is gone whether you stay or leave. The only question is: will the next hour be better spent watching or doing something else?",
+          distractorExplanations: {
+            0: 'The ticket money is gone whether you stay or leave',
+          },
         },
         {
           id: "psy-u2-L6-Q2",
@@ -593,6 +706,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "The sunk cost fallacy makes you think 'I've already waited this long...' The rational choice is to walk, since those 45 minutes are gone regardless.",
+          distractorExplanations: {
+            0: 'The sunk cost fallacy makes you think \'I\'ve already waited this long...\' The rational choice is to walk, since those 45 minutes are gone regardless',
+            2: 'The sunk cost fallacy makes you think \'I\'ve already waited this long...\' The rational choice is to walk, since those 45 minutes are gone regardless',
+            3: 'The sunk cost fallacy makes you think \'I\'ve already waited this long...\' The rational choice is to walk, since those 45 minutes are gone regardless',
+          },
         },
         {
           id: "psy-u2-L6-T2",
@@ -636,6 +754,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "Imagine you had no prior investment. Would you start this project, relationship, or commitment today? If not, it's time to reconsider.",
+          distractorExplanations: {
+            0: 'Imagine you had no prior investment',
+            1: 'Imagine you had no prior investment',
+            3: 'Imagine you had no prior investment',
+          },
         },
         {
           id: "psy-u2-L6-Q6",
@@ -643,6 +766,9 @@ export const unit2: Unit = {
           question: "Professional poker players are trained to ignore sunk costs and focus only on the current hand.",
           correctAnswer: true,
           explanation: "Good poker players know that chips already in the pot are gone. Each decision is based on the current odds, not past bets.",
+          distractorExplanations: {
+            1: 'Good poker players know that chips already in the pot are gone',
+          },
         },
         {
           id: "psy-u2-L6-Q7",
@@ -656,6 +782,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 3,
           explanation: "The 5 million is gone regardless. Continuing to pour money into a failing project just to justify past spending is the sunk cost fallacy.",
+          distractorExplanations: {
+            0: 'The 5 million is gone regardless. Continuing to pour money into a failing project just to justify past spending is the sunk cost fallacy',
+            1: 'The 5 million is gone regardless. Continuing to pour money into a failing project just to justify past spending is the sunk cost fallacy',
+            2: 'The 5 million is gone regardless. Continuing to pour money into a failing project just to justify past spending is the sunk cost fallacy',
+          },
         },
         {
           id: "psy-u2-L6-Q8",

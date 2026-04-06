@@ -32,6 +32,9 @@ export const spaceSection12: Unit[] = [
             question: "Poor planning is the most common reason stargazing sessions fail.",
             correctAnswer: true,
             explanation: "Even the best telescope can't help if clouds roll in or the Moon washes out your target. Planning ahead prevents wasted trips.",
+            distractorExplanations: {
+              1: 'This statement is correct because even the best telescope can\'t help if clouds roll in or the Moon washes out your target. Planning ahead prevents wasted trips.',
+            },
           },
           {
             id: "sp-sec12-u1-L1-Q2",
@@ -45,6 +48,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Clear skies are the number one requirement. No amount of gear helps if it's cloudy.",
+            distractorExplanations: {
+              0: 'The price of new eyepieces is incorrect; clear skies are the number one requirement. No amount of gear helps if it\'s cloudy.',
+              2: 'How many friends can come along is incorrect; clear skies are the number one requirement. No amount of gear helps if it\'s cloudy.',
+              3: 'Whether your telescope needs cleaning is incorrect; clear skies are the number one requirement. No amount of gear helps if it\'s cloudy.',
+            },
           },
           {
             id: "sp-sec12-u1-L1-T2",
@@ -73,6 +81,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Clear skies let you see, darkness preserves faint objects, and a target plan keeps you productive.",
+            distractorExplanations: {
+              0: 'Expensive telescope, warm clothes, snacks is incorrect; clear skies let you see, darkness preserves faint objects, and a target plan keeps you productive.',
+              2: 'Full Moon, city park, binoculars is incorrect; clear skies let you see, darkness preserves faint objects, and a target plan keeps you productive.',
+              3: 'Star chart, compass, flashlight is incorrect; clear skies let you see, darkness preserves faint objects, and a target plan keeps you productive.',
+            },
           },
           {
             id: "sp-sec12-u1-L1-T3",
@@ -122,6 +135,9 @@ export const spaceSection12: Unit[] = [
             question: "A full Moon is the best time to observe faint galaxies.",
             correctAnswer: false,
             explanation: "A full Moon floods the sky with light, making faint objects nearly invisible. New Moon periods are best for deep sky targets.",
+            distractorExplanations: {
+              0: 'A full Moon floods the sky with light, making faint objects nearly invisible. New Moon periods are best for deep sky targets.',
+            },
           },
           {
             id: "sp-sec12-u1-L2-Q2",
@@ -135,6 +151,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "During new Moon, the sky is darkest because the Moon is not visible. This makes faint objects easier to spot.",
+            distractorExplanations: {
+              0: 'Full Moon is incorrect; during new Moon, the sky is darkest because the Moon is not visible. This makes faint objects easier to spot.',
+              1: 'First quarter is incorrect; during new Moon, the sky is darkest because the Moon is not visible. This makes faint objects easier to spot.',
+              3: 'Waxing gibbous is incorrect; during new Moon, the sky is darkest because the Moon is not visible. This makes faint objects easier to spot.',
+            },
           },
           {
             id: "sp-sec12-u1-L2-T2",
@@ -164,6 +185,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Steady air (good seeing) is perfect for planets. The haze hurts deep sky, and the Moon rising at midnight will wash out faint objects anyway.",
+            distractorExplanations: {
+              1: 'Wait until after midnight for deep sky is incorrect; steady air (good seeing) is perfect for planets. The haze hurts deep sky, and the Moon rising at midnight will wash out faint objects anyway.',
+              2: 'Cancel the session entirely is incorrect; steady air (good seeing) is perfect for planets. The haze hurts deep sky, and the Moon rising at midnight will wash out faint objects anyway.',
+              3: 'Only observe the Moon itself is incorrect; steady air (good seeing) is perfect for planets. The haze hurts deep sky, and the Moon rising at midnight will wash out faint objects anyway.',
+            },
           },
           {
             id: "sp-sec12-u1-L2-T3",
@@ -194,6 +220,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Bortle 9 is the worst rating. It describes bright inner city skies where heavy light pollution hides all but the brightest stars and planets.",
+            distractorExplanations: {
+              0: 'Pristine dark sky with visible zodiacal light is incorrect; bortle 9 is the worst rating. It describes bright inner city skies where heavy light pollution hides all but the brightest stars and planets.',
+              1: 'Suburban sky with some faint stars is incorrect; bortle 9 is the worst rating. It describes bright inner city skies where heavy light pollution hides all but the brightest stars and planets.',
+              3: 'Rural sky with a clear Milky Way is incorrect; bortle 9 is the worst rating. It describes bright inner city skies where heavy light pollution hides all but the brightest stars and planets.',
+            },
           },
         ],
       },
@@ -217,6 +248,9 @@ export const spaceSection12: Unit[] = [
             question: "The same deep sky objects are visible year-round from any location.",
             correctAnswer: false,
             explanation: "Earth's orbit means different parts of the sky face us at different seasons. Many objects are only well-placed for a few months each year.",
+            distractorExplanations: {
+              0: 'Earth\'s orbit means different parts of the sky face us at different seasons. Many objects are only well-placed for a few months each year.',
+            },
           },
           {
             id: "sp-sec12-u1-L3-Q2",
@@ -230,6 +264,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The galactic center in Sagittarius is highest in summer (June to September) for Northern Hemisphere observers.",
+            distractorExplanations: {
+              0: 'December through February is incorrect; the galactic center in Sagittarius is highest in summer (June to September) for Northern Hemisphere observers.',
+              1: 'March through April is incorrect; the galactic center in Sagittarius is highest in summer (June to September) for Northern Hemisphere observers.',
+              3: 'October through November is incorrect; the galactic center in Sagittarius is highest in summer (June to September) for Northern Hemisphere observers.',
+            },
           },
           {
             id: "sp-sec12-u1-L3-T2",
@@ -258,6 +297,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Orion Nebula (M42) is bright enough for small telescopes even in moderate light pollution. Faint targets need bigger scopes and darker skies.",
+            distractorExplanations: {
+              0: 'A faint galaxy 50 million light-years away is incorrect; the Orion Nebula (M42) is bright enough for small telescopes even in moderate light pollution. Faint targets need bigger scopes and darker skies.',
+              2: 'The cosmic microwave background is incorrect; the Orion Nebula (M42) is bright enough for small telescopes even in moderate light pollution. Faint targets need bigger scopes and darker skies.',
+              3: 'A dim planetary nebula requiring 12-inch aperture is incorrect; the Orion Nebula (M42) is bright enough for small telescopes even in moderate light pollution. Faint targets need bigger scopes and darker skies.',
+            },
           },
           {
             id: "sp-sec12-u1-L3-T3",
@@ -306,6 +350,9 @@ export const spaceSection12: Unit[] = [
             question: "Objects near the horizon appear sharper than objects overhead.",
             correctAnswer: false,
             explanation: "Light from low objects passes through more atmosphere, causing blurring and dimming. Objects near zenith (overhead) look sharpest.",
+            distractorExplanations: {
+              0: 'Light from low objects passes through more atmosphere, causing blurring and dimming. Objects near zenith (overhead) look sharpest.',
+            },
           },
           {
             id: "sp-sec12-u1-L4-Q2",
@@ -343,6 +390,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Galaxy A transits first and will start descending soon. Observe it now while it's at its best, then move to later targets.",
+            distractorExplanations: {
+              0: 'Star cluster C, because it\'s the faintest is incorrect; galaxy A transits first and will start descending soon. Observe it now while it\'s at its best, then move to later targets.',
+              2: 'Nebula B, because nebulae are most interesting is incorrect; galaxy A transits first and will start descending soon. Observe it now while it\'s at its best, then move to later targets.',
+              3: 'Observe them in alphabetical order is incorrect; galaxy A transits first and will start descending soon. Observe it now while it\'s at its best, then move to later targets.',
+            },
           },
           {
             id: "sp-sec12-u1-L4-T3",
@@ -373,6 +425,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Red light affects your night vision much less than white light. It lets you read charts without resetting your dark adaptation.",
+            distractorExplanations: {
+              0: 'Red light makes stars easier to see is incorrect; red light affects your night vision much less than white light. It lets you read charts without resetting your dark adaptation.',
+              2: 'Red light is brighter than white light is incorrect; red light affects your night vision much less than white light. It lets you read charts without resetting your dark adaptation.',
+              3: 'Red light keeps mosquitoes away is incorrect; red light affects your night vision much less than white light. It lets you read charts without resetting your dark adaptation.',
+            },
           },
         ],
       },
@@ -396,6 +453,9 @@ export const spaceSection12: Unit[] = [
             question: "Dew forming on telescope optics can ruin an observing session.",
             correctAnswer: true,
             explanation: "Dew makes lenses and mirrors foggy, blocking your view. A dew heater strip or dew shield prevents this common problem.",
+            distractorExplanations: {
+              1: 'This statement is correct because dew makes lenses and mirrors foggy, blocking your view. A dew heater strip or dew shield prevents this common problem.',
+            },
           },
           {
             id: "sp-sec12-u1-L5-Q2",
@@ -429,6 +489,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without physical activity to generate body heat, you feel the cold much more. Wind chill in open fields makes it worse.",
+            distractorExplanations: {
+              0: 'Telescopes generate cold air is incorrect; without physical activity to generate body heat, you feel the cold much more. Wind chill in open fields makes it worse.',
+              2: 'Stars emit cold radiation is incorrect; without physical activity to generate body heat, you feel the cold much more. Wind chill in open fields makes it worse.',
+              3: 'Dark skies are always colder than cities is incorrect; without physical activity to generate body heat, you feel the cold much more. Wind chill in open fields makes it worse.',
+            },
           },
           {
             id: "sp-sec12-u1-L5-Q4",
@@ -466,6 +531,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Foggy eyepieces mean you need dew prevention. Shivering means you underdressed. Both are the most commonly forgotten items.",
+            distractorExplanations: {
+              0: 'A solar filter and sunscreen is incorrect; foggy eyepieces mean you need dew prevention. Shivering means you underdressed. Both are the most commonly forgotten items.',
+              2: 'A larger telescope is incorrect; foggy eyepieces mean you need dew prevention. Shivering means you underdressed. Both are the most commonly forgotten items.',
+              3: 'A white flashlight for better visibility is incorrect; foggy eyepieces mean you need dew prevention. Shivering means you underdressed. Both are the most commonly forgotten items.',
+            },
           },
         ],
       },
@@ -502,6 +572,9 @@ export const spaceSection12: Unit[] = [
             question: "A shaky mount is the most frustrating problem for beginners.",
             correctAnswer: true,
             explanation: "Vibrations from a poor mount make objects bounce in the eyepiece. Every touch sends the image wobbling for seconds.",
+            distractorExplanations: {
+              1: 'This statement is correct because vibrations from a poor mount make objects bounce in the eyepiece. Every touch sends the image wobbling for seconds.',
+            },
           },
           {
             id: "sp-sec12-u2-L1-Q2",
@@ -515,6 +588,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Firm ground or concrete minimizes vibrations. Soft surfaces let the tripod sink, and decks transmit footstep vibrations.",
+            distractorExplanations: {
+              0: 'Soft grass or mud is incorrect; firm ground or concrete minimizes vibrations. Soft surfaces let the tripod sink, and decks transmit footstep vibrations.',
+              1: 'A wooden deck is incorrect; firm ground or concrete minimizes vibrations. Soft surfaces let the tripod sink, and decks transmit footstep vibrations.',
+              3: 'Sand or gravel is incorrect; firm ground or concrete minimizes vibrations. Soft surfaces let the tripod sink, and decks transmit footstep vibrations.',
+            },
           },
           {
             id: "sp-sec12-u2-L1-T2",
@@ -565,6 +643,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An unbalanced load forces motors to work harder, causing uneven movement and poor tracking accuracy.",
+            distractorExplanations: {
+              0: 'Nothing, it balances itself automatically is incorrect; an unbalanced load forces motors to work harder, causing uneven movement and poor tracking accuracy.',
+              2: 'The telescope magnifies more is incorrect; an unbalanced load forces motors to work harder, causing uneven movement and poor tracking accuracy.',
+              3: 'The eyepiece fogs up faster is incorrect; an unbalanced load forces motors to work harder, causing uneven movement and poor tracking accuracy.',
+            },
           },
         ],
       },
@@ -588,6 +671,9 @@ export const spaceSection12: Unit[] = [
             question: "Polar alignment is only needed for astrophotography, not visual observing.",
             correctAnswer: false,
             explanation: "While visual observers can get by with rough alignment, proper polar alignment makes tracking smoother and GoTo pointing more accurate for everyone.",
+            distractorExplanations: {
+              0: 'While visual observers can get by with rough alignment, proper polar alignment makes tracking smoother and GoTo pointing more accurate for everyone.',
+            },
           },
           {
             id: "sp-sec12-u2-L2-Q2",
@@ -601,6 +687,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Polaris (the North Star) sits very close to the north celestial pole, making it the alignment target for Northern Hemisphere observers.",
+            distractorExplanations: {
+              0: 'Sirius is incorrect; polaris (the North Star) sits very close to the north celestial pole, making it the alignment target for Northern Hemisphere observers.',
+              1: 'Betelgeuse is incorrect; polaris (the North Star) sits very close to the north celestial pole, making it the alignment target for Northern Hemisphere observers.',
+              3: 'Vega is incorrect; polaris (the North Star) sits very close to the north celestial pole, making it the alignment target for Northern Hemisphere observers.',
+            },
           },
           {
             id: "sp-sec12-u2-L2-T2",
@@ -629,6 +720,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Poor polar alignment means the mount's tracking doesn't match Earth's rotation exactly. Stars drift, creating trails in photos.",
+            distractorExplanations: {
+              0: 'Stars appear brighter is incorrect; poor polar alignment means the mount\'s tracking doesn\'t match Earth\'s rotation exactly. Stars drift, creating trails in photos.',
+              2: 'The telescope loses magnification is incorrect; poor polar alignment means the mount\'s tracking doesn\'t match Earth\'s rotation exactly. Stars drift, creating trails in photos.',
+              3: 'The mount becomes heavier is incorrect; poor polar alignment means the mount\'s tracking doesn\'t match Earth\'s rotation exactly. Stars drift, creating trails in photos.',
+            },
           },
           {
             id: "sp-sec12-u2-L2-T3",
@@ -657,6 +753,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Star trails after 30 seconds with tracking on means your polar alignment is off. Precise alignment will fix the drift.",
+            distractorExplanations: {
+              0: 'Use a shorter focal length lens instead is incorrect; star trails after 30 seconds with tracking on means your polar alignment is off. Precise alignment will fix the drift.',
+              2: 'Increase ISO to reduce exposure time needed is incorrect; star trails after 30 seconds with tracking on means your polar alignment is off. Precise alignment will fix the drift.',
+              3: 'Remove the tracking motor entirely is incorrect; star trails after 30 seconds with tracking on means your polar alignment is off. Precise alignment will fix the drift.',
+            },
           },
         ],
       },
@@ -680,6 +781,9 @@ export const spaceSection12: Unit[] = [
             question: "You can easily point a telescope at a specific star without any kind of finder.",
             correctAnswer: false,
             explanation: "The main telescope's field of view is so narrow that finding objects without a finder is extremely difficult, especially at high magnification.",
+            distractorExplanations: {
+              0: 'The main telescope\'s field of view is so narrow that finding objects without a finder is extremely difficult, especially at high magnification.',
+            },
           },
           {
             id: "sp-sec12-u2-L3-Q2",
@@ -716,6 +820,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Star alignment calibrates the GoTo computer. By centering known stars, the mount learns its exact orientation and can then point to any object in its database.",
+            distractorExplanations: {
+              0: 'Polishing the mirror to improve star images is incorrect; star alignment calibrates the GoTo computer. By centering known stars, the mount learns its exact orientation and can then point to any object in its database.',
+              2: 'Adjusting the focuser until stars are sharp is incorrect; star alignment calibrates the GoTo computer. By centering known stars, the mount learns its exact orientation and can then point to any object in its database.',
+              3: 'Measuring the brightness of alignment stars is incorrect; star alignment calibrates the GoTo computer. By centering known stars, the mount learns its exact orientation and can then point to any object in its database.',
+            },
           },
           {
             id: "sp-sec12-u2-L3-T3",
@@ -735,6 +844,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Each alignment star adds another reference point. More points mean the mount can correct for more sources of error in its pointing.",
+            distractorExplanations: {
+              0: 'It uses brighter stars is incorrect; each alignment star adds another reference point. More points mean the mount can correct for more sources of error in its pointing.',
+              2: 'It moves the telescope faster is incorrect; each alignment star adds another reference point. More points mean the mount can correct for more sources of error in its pointing.',
+              3: 'Three is a lucky number in astronomy is incorrect; each alignment star adds another reference point. More points mean the mount can correct for more sources of error in its pointing.',
+            },
           },
           {
             id: "sp-sec12-u2-L3-Q6",
@@ -766,6 +880,9 @@ export const spaceSection12: Unit[] = [
             question: "You should focus your telescope on a faint, distant nebula for best results.",
             correctAnswer: false,
             explanation: "Always focus on a bright star. Stars should appear as tiny pinpoints when perfectly focused. Nebulae are too diffuse to judge focus accurately.",
+            distractorExplanations: {
+              0: 'Always focus on a bright star. Stars should appear as tiny pinpoints when perfectly focused. Nebulae are too diffuse to judge focus accurately.',
+            },
           },
           {
             id: "sp-sec12-u2-L4-Q2",
@@ -779,6 +896,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A star at perfect focus appears as the smallest possible point of light. Any defocus makes it larger and fuzzier.",
+            distractorExplanations: {
+              0: 'A large, fuzzy disk is incorrect; a star at perfect focus appears as the smallest possible point of light. Any defocus makes it larger and fuzzier.',
+              2: 'A colorful ring pattern is incorrect; a star at perfect focus appears as the smallest possible point of light. Any defocus makes it larger and fuzzier.',
+              3: 'A blinking dot is incorrect; a star at perfect focus appears as the smallest possible point of light. Any defocus makes it larger and fuzzier.',
+            },
           },
           {
             id: "sp-sec12-u2-L4-T2",
@@ -798,6 +920,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The mask's pattern creates three diffraction spikes. When the middle spike is centered between the other two, focus is perfect.",
+            distractorExplanations: {
+              0: 'It blocks all light except from your target is incorrect; the mask\'s pattern creates three diffraction spikes. When the middle spike is centered between the other two, focus is perfect.',
+              2: 'It magnifies the image by 2x is incorrect; the mask\'s pattern creates three diffraction spikes. When the middle spike is centered between the other two, focus is perfect.',
+              3: 'It removes chromatic aberration is incorrect; the mask\'s pattern creates three diffraction spikes. When the middle spike is centered between the other two, focus is perfect.',
+            },
           },
           {
             id: "sp-sec12-u2-L4-Q4",
@@ -835,6 +962,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "One-sided smearing and comet-shaped stars are classic signs of miscollimation. The mirrors need to be realigned.",
+            distractorExplanations: {
+              0: 'The eyepiece is dirty is incorrect; one-sided smearing and comet-shaped stars are classic signs of miscollimation. The mirrors need to be realigned.',
+              2: 'Jupiter is too close to Earth tonight is incorrect; one-sided smearing and comet-shaped stars are classic signs of miscollimation. The mirrors need to be realigned.',
+              3: 'Your mount is tracking too fast is incorrect; one-sided smearing and comet-shaped stars are classic signs of miscollimation. The mirrors need to be realigned.',
+            },
           },
         ],
       },
@@ -858,6 +990,9 @@ export const spaceSection12: Unit[] = [
             question: "A telescope can produce sharp images immediately after being brought from a warm house into cold air.",
             correctAnswer: false,
             explanation: "Temperature differences create air currents inside the tube that distort images. The telescope needs time to reach the same temperature as the outside air.",
+            distractorExplanations: {
+              0: 'Temperature differences create air currents inside the tube that distort images. The telescope needs time to reach the same temperature as the outside air.',
+            },
           },
           {
             id: "sp-sec12-u2-L5-Q2",
@@ -897,6 +1032,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Boiling, shimmering images with a collimated scope usually mean heat currents inside the tube. Let it cool down more.",
+            distractorExplanations: {
+              0: 'The eyepiece is broken is incorrect; boiling, shimmering images with a collimated scope usually mean heat currents inside the tube. Let it cool down more.',
+              1: 'Jupiter is too far away tonight is incorrect; boiling, shimmering images with a collimated scope usually mean heat currents inside the tube. Let it cool down more.',
+              3: 'You need a larger finder scope is incorrect; boiling, shimmering images with a collimated scope usually mean heat currents inside the tube. Let it cool down more.',
+            },
           },
           {
             id: "sp-sec12-u2-L5-T3",
@@ -926,6 +1066,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Rough polar alignment is the most likely cause of systematic GoTo errors. Improving it will dramatically improve pointing accuracy.",
+            distractorExplanations: {
+              0: 'Replace the batteries in the hand controller is incorrect; rough polar alignment is the most likely cause of systematic GoTo errors. Improving it will dramatically improve pointing accuracy.',
+              2: 'Switch to a higher magnification eyepiece is incorrect; rough polar alignment is the most likely cause of systematic GoTo errors. Improving it will dramatically improve pointing accuracy.',
+              3: 'Recollimate the telescope is incorrect; rough polar alignment is the most likely cause of systematic GoTo errors. Improving it will dramatically improve pointing accuracy.',
+            },
           },
         ],
       },
@@ -963,6 +1108,9 @@ export const spaceSection12: Unit[] = [
             question: "Star hopping requires a computerized mount.",
             correctAnswer: false,
             explanation: "Star hopping is a manual technique that works with any telescope or mount. All you need is a star chart and patience.",
+            distractorExplanations: {
+              0: 'Star hopping is a manual technique that works with any telescope or mount. All you need is a star chart and patience.',
+            },
           },
           {
             id: "sp-sec12-u3-L1-Q2",
@@ -976,6 +1124,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Star hopping just needs a recognizable starting point and a chart showing the path to your target. No electronics required.",
+            distractorExplanations: {
+              0: 'A GPS receiver and computer is incorrect; star hopping just needs a recognizable starting point and a chart showing the path to your target. No electronics required.',
+              2: 'A motorized tracking mount is incorrect; star hopping just needs a recognizable starting point and a chart showing the path to your target. No electronics required.',
+              3: 'An autoguider camera is incorrect; star hopping just needs a recognizable starting point and a chart showing the path to your target. No electronics required.',
+            },
           },
           {
             id: "sp-sec12-u3-L1-T2",
@@ -1028,6 +1181,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A wider field of view shows more stars at once, making it much easier to recognize patterns and confirm your position.",
+            distractorExplanations: {
+              0: 'It makes stars brighter is incorrect; a wider field of view shows more stars at once, making it much easier to recognize patterns and confirm your position.',
+              2: 'It eliminates atmospheric distortion is incorrect; a wider field of view shows more stars at once, making it much easier to recognize patterns and confirm your position.',
+              3: 'It works without focusing is incorrect; a wider field of view shows more stars at once, making it much easier to recognize patterns and confirm your position.',
+            },
           },
         ],
       },
@@ -1066,6 +1224,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cassiopeia's W shape points toward Andromeda, and the Great Square of Pegasus provides nearby stepping-stone stars.",
+            distractorExplanations: {
+              0: 'Orion is incorrect; cassiopeia\'s W shape points toward Andromeda, and the Great Square of Pegasus provides nearby stepping-stone stars.',
+              2: 'The Southern Cross is incorrect; cassiopeia\'s W shape points toward Andromeda, and the Great Square of Pegasus provides nearby stepping-stone stars.',
+              3: 'Ursa Minor is incorrect; cassiopeia\'s W shape points toward Andromeda, and the Great Square of Pegasus provides nearby stepping-stone stars.',
+            },
           },
           {
             id: "sp-sec12-u3-L2-T2",
@@ -1079,6 +1242,9 @@ export const spaceSection12: Unit[] = [
             question: "The Orion Nebula (M42) is located in Orion's sword, hanging below his belt.",
             correctAnswer: true,
             explanation: "M42 is the fuzzy middle star in Orion's sword. It's visible to the naked eye and stunning through any telescope.",
+            distractorExplanations: {
+              1: 'This statement is correct because m42 is the fuzzy middle star in Orion\'s sword. It\'s visible to the naked eye and stunning through any telescope.',
+            },
           },
           {
             id: "sp-sec12-u3-L2-Q4",
@@ -1107,6 +1273,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The finder scope shows fainter stars than your eyes can see. Use it to identify Lyra's pattern, then M57 sits between the two bottom stars of the parallelogram.",
+            distractorExplanations: {
+              0: 'Give up and try a brighter target you can find more easily is incorrect; the finder scope shows fainter stars than your eyes can see. Use it to identify Lyra\'s pattern, then M57 sits between the two bottom stars of the parallelogram.',
+              2: 'Point randomly near Vega and hope to stumble on it is incorrect; the finder scope shows fainter stars than your eyes can see. Use it to identify Lyra\'s pattern, then M57 sits between the two bottom stars of the parallelogram.',
+              3: 'Switch to maximum magnification to see more stars is incorrect; the finder scope shows fainter stars than your eyes can see. Use it to identify Lyra\'s pattern, then M57 sits between the two bottom stars of the parallelogram.',
+            },
           },
           {
             id: "sp-sec12-u3-L2-Q6",
@@ -1138,6 +1309,9 @@ export const spaceSection12: Unit[] = [
             question: "A GoTo mount can find objects without any initial setup or alignment.",
             correctAnswer: false,
             explanation: "GoTo mounts require an initial star alignment procedure. Without it, the computer doesn't know how the mount is oriented relative to the sky.",
+            distractorExplanations: {
+              0: 'GoTo mounts require an initial star alignment procedure. Without it, the computer doesn\'t know how the mount is oriented relative to the sky.',
+            },
           },
           {
             id: "sp-sec12-u3-L3-Q2",
@@ -1151,6 +1325,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Modern GoTo databases contain 40,000 or more objects including stars, deep sky objects, planets, and even comets and asteroids.",
+            distractorExplanations: {
+              0: 'Only the 10 brightest stars is incorrect; modern GoTo databases contain 40,000 or more objects including stars, deep sky objects, planets, and even comets and asteroids.',
+              2: 'Only objects visible tonight is incorrect; modern GoTo databases contain 40,000 or more objects including stars, deep sky objects, planets, and even comets and asteroids.',
+              3: 'Only Messier objects is incorrect; modern GoTo databases contain 40,000 or more objects including stars, deep sky objects, planets, and even comets and asteroids.',
+            },
           },
           {
             id: "sp-sec12-u3-L3-T2",
@@ -1179,6 +1358,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Pointing errors almost always trace back to poor alignment, wrong time, or incorrect GPS coordinates. Fix those and accuracy improves dramatically.",
+            distractorExplanations: {
+              0: 'The database is too large is incorrect; pointing errors almost always trace back to poor alignment, wrong time, or incorrect GPS coordinates. Fix those and accuracy improves dramatically.',
+              2: 'The eyepiece is too powerful is incorrect; pointing errors almost always trace back to poor alignment, wrong time, or incorrect GPS coordinates. Fix those and accuracy improves dramatically.',
+              3: 'The telescope tube is too long is incorrect; pointing errors almost always trace back to poor alignment, wrong time, or incorrect GPS coordinates. Fix those and accuracy improves dramatically.',
+            },
           },
           {
             id: "sp-sec12-u3-L3-T3",
@@ -1208,6 +1392,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A sudden, consistent offset means the telescope moved relative to the mount's model. A bump or slipped clutch breaks the alignment. Re-align on a known star to fix it.",
+            distractorExplanations: {
+              0: 'The mount\'s database became corrupted is incorrect; a sudden, consistent offset means the telescope moved relative to the mount\'s model. A bump or slipped clutch breaks the alignment. Re-align on a known star to fix it.',
+              2: 'A planet moved into the way is incorrect; a sudden, consistent offset means the telescope moved relative to the mount\'s model. A bump or slipped clutch breaks the alignment. Re-align on a known star to fix it.',
+              3: 'Your eyepiece stopped working is incorrect; a sudden, consistent offset means the telescope moved relative to the mount\'s model. A bump or slipped clutch breaks the alignment. Re-align on a known star to fix it.',
+            },
           },
         ],
       },
@@ -1231,6 +1420,9 @@ export const spaceSection12: Unit[] = [
             question: "Setting circles use the same coordinate system as star charts: right ascension and declination.",
             correctAnswer: true,
             explanation: "Right ascension (RA) and declination (Dec) are the celestial equivalents of longitude and latitude. Setting circles are marked in these coordinates.",
+            distractorExplanations: {
+              1: 'This statement is correct because right ascension (RA) and declination (Dec) are the celestial equivalents of longitude and latitude. Setting circles are marked in these coordinates.',
+            },
           },
           {
             id: "sp-sec12-u3-L4-Q2",
@@ -1259,6 +1451,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "GoTo moves automatically with motors. Push-to gives you directions but you physically move the telescope yourself. Push-to is simpler and cheaper.",
+            distractorExplanations: {
+              0: 'GoTo is manual, push-to is motorized is incorrect; goTo moves automatically with motors. Push-to gives you directions but you physically move the telescope yourself. Push-to is simpler and cheaper.',
+              2: 'Push-to is more expensive than GoTo is incorrect; goTo moves automatically with motors. Push-to gives you directions but you physically move the telescope yourself. Push-to is simpler and cheaper.',
+              3: 'Push-to only works with refractors is incorrect; goTo moves automatically with motors. Push-to gives you directions but you physically move the telescope yourself. Push-to is simpler and cheaper.',
+            },
           },
           {
             id: "sp-sec12-u3-L4-Q4",
@@ -1286,6 +1483,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Plate solving takes an image of the sky, identifies the star pattern, and reports exactly where the telescope is pointing. It's extremely accurate.",
+            distractorExplanations: {
+              0: 'Cleaning a glass photographic plate is incorrect; plate solving takes an image of the sky, identifies the star pattern, and reports exactly where the telescope is pointing. It\'s extremely accurate.',
+              2: 'Calculating the weight limit of a mount is incorrect; plate solving takes an image of the sky, identifies the star pattern, and reports exactly where the telescope is pointing. It\'s extremely accurate.',
+              3: 'Measuring the thickness of a mirror is incorrect; plate solving takes an image of the sky, identifies the star pattern, and reports exactly where the telescope is pointing. It\'s extremely accurate.',
+            },
           },
           {
             id: "sp-sec12-u3-L4-Q6",
@@ -1318,6 +1520,9 @@ export const spaceSection12: Unit[] = [
             question: "Experienced observers often combine GoTo technology with star hopping skills.",
             correctAnswer: true,
             explanation: "GoTo for speed, star hopping for confirmation and backup. Using both makes you a more versatile and effective observer.",
+            distractorExplanations: {
+              1: 'This statement is correct because goTo for speed, star hopping for confirmation and backup. Using both makes you a more versatile and effective observer.',
+            },
           },
           {
             id: "sp-sec12-u3-L5-Q2",
@@ -1332,6 +1537,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "GoTo can be slightly off. Star hopping to verify the location often reveals the object nearby. M13 is bright and should always be visible in a telescope.",
+            distractorExplanations: {
+              0: 'Assume M13 is not visible tonight is incorrect; goTo can be slightly off. Star hopping to verify the location often reveals the object nearby. M13 is bright and should always be visible in a telescope.',
+              2: 'Increase magnification to 500x is incorrect; goTo can be slightly off. Star hopping to verify the location often reveals the object nearby. M13 is bright and should always be visible in a telescope.',
+              3: 'Switch to a smaller telescope is incorrect; goTo can be slightly off. Star hopping to verify the location often reveals the object nearby. M13 is bright and should always be visible in a telescope.',
+            },
           },
           {
             id: "sp-sec12-u3-L5-T2",
@@ -1351,6 +1561,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "In late March, all 110 Messier objects pass above the horizon during a single night. The new Moon keeps skies dark.",
+            distractorExplanations: {
+              0: 'Mid-December during the longest nights is incorrect; in late March, all 110 Messier objects pass above the horizon during a single night. The new Moon keeps skies dark.',
+              2: 'Mid-June during warm weather is incorrect; in late March, all 110 Messier objects pass above the horizon during a single night. The new Moon keeps skies dark.',
+              3: 'Early September for autumn objects is incorrect; in late March, all 110 Messier objects pass above the horizon during a single night. The new Moon keeps skies dark.',
+            },
           },
           {
             id: "sp-sec12-u3-L5-Q4",
@@ -1429,6 +1644,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Bortle 1 is the darkest possible sky, with visible zodiacal band, gegenschein, and a brilliant Milky Way. Bortle 9 is the brightest inner city sky.",
+            distractorExplanations: {
+              1: 'Bortle 5 is incorrect; bortle 1 is the darkest possible sky, with visible zodiacal band, gegenschein, and a brilliant Milky Way. Bortle 9 is the brightest inner city sky.',
+              2: 'Bortle 7 is incorrect; bortle 1 is the darkest possible sky, with visible zodiacal band, gegenschein, and a brilliant Milky Way. Bortle 9 is the brightest inner city sky.',
+              3: 'Bortle 9 is incorrect; bortle 1 is the darkest possible sky, with visible zodiacal band, gegenschein, and a brilliant Milky Way. Bortle 9 is the brightest inner city sky.',
+            },
           },
           {
             id: "sp-sec12-u4-L1-Q2",
@@ -1452,6 +1672,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Good seeing is perfect for planets. The Moon rising at 10 PM washes out faint targets. Observe planets early, then switch to bright objects the Moon can't hide.",
+            distractorExplanations: {
+              0: 'Faint galaxies after midnight is incorrect; good seeing is perfect for planets. The Moon rising at 10 PM washes out faint targets. Observe planets early, then switch to bright objects the Moon can\'t hide.',
+              2: 'The Milky Way core at 2 AM is incorrect; good seeing is perfect for planets. The Moon rising at 10 PM washes out faint targets. Observe planets early, then switch to bright objects the Moon can\'t hide.',
+              3: 'Cancel the session entirely is incorrect; good seeing is perfect for planets. The Moon rising at 10 PM washes out faint targets. Observe planets early, then switch to bright objects the Moon can\'t hide.',
+            },
           },
           {
             id: "sp-sec12-u4-L1-Q4",
@@ -1459,6 +1684,9 @@ export const spaceSection12: Unit[] = [
             question: "Astronomical twilight ends when the Sun is 12 degrees below the horizon.",
             correctAnswer: false,
             explanation: "Astronomical twilight ends at 18 degrees below the horizon. At 12 degrees, it's nautical twilight, and the sky is not yet fully dark.",
+            distractorExplanations: {
+              0: 'Astronomical twilight ends at 18 degrees below the horizon. At 12 degrees, it\'s nautical twilight, and the sky is not yet fully dark.',
+            },
           },
           {
             id: "sp-sec12-u4-L1-Q5",
@@ -1480,6 +1708,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Charles Messier cataloged 110 of the brightest deep sky objects, making it the most popular observing list for amateurs.",
+            distractorExplanations: {
+              0: '42 objects is incorrect; charles Messier cataloged 110 of the brightest deep sky objects, making it the most popular observing list for amateurs.',
+              1: '88 objects is incorrect; charles Messier cataloged 110 of the brightest deep sky objects, making it the most popular observing list for amateurs.',
+              3: '200 objects is incorrect; charles Messier cataloged 110 of the brightest deep sky objects, making it the most popular observing list for amateurs.',
+            },
           },
           {
             id: "sp-sec12-u4-L1-Q7",
@@ -1526,6 +1759,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The equatorial mount's polar axis matches Earth's rotation, so one motor can track any object. Alt-az needs two motors and still causes field rotation.",
+            distractorExplanations: {
+              0: 'It\'s lighter and more portable is incorrect; the equatorial mount\'s polar axis matches Earth\'s rotation, so one motor can track any object. Alt-az needs two motors and still causes field rotation.',
+              2: 'It doesn\'t need any alignment is incorrect; the equatorial mount\'s polar axis matches Earth\'s rotation, so one motor can track any object. Alt-az needs two motors and still causes field rotation.',
+              3: 'It provides higher magnification is incorrect; the equatorial mount\'s polar axis matches Earth\'s rotation, so one motor can track any object. Alt-az needs two motors and still causes field rotation.',
+            },
           },
           {
             id: "sp-sec12-u4-L2-Q3",
@@ -1548,6 +1786,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Comet-shaped stars with consistent tails are the classic symptom of miscollimation. The primary and secondary mirrors need realignment.",
+            distractorExplanations: {
+              0: 'Dirty eyepiece is incorrect; comet-shaped stars with consistent tails are the classic symptom of miscollimation. The primary and secondary mirrors need realignment.',
+              1: 'Bad seeing conditions is incorrect; comet-shaped stars with consistent tails are the classic symptom of miscollimation. The primary and secondary mirrors need realignment.',
+              3: 'Mount vibrations is incorrect; comet-shaped stars with consistent tails are the classic symptom of miscollimation. The primary and secondary mirrors need realignment.',
+            },
           },
           {
             id: "sp-sec12-u4-L2-Q5",
@@ -1555,6 +1798,9 @@ export const spaceSection12: Unit[] = [
             question: "A telescope should be set up outdoors 30 to 60 minutes before observing to reach thermal equilibrium.",
             correctAnswer: true,
             explanation: "Temperature differences between the telescope and outside air create tube currents that blur images. Cooling down eliminates them.",
+            distractorExplanations: {
+              1: 'This statement is correct because temperature differences between the telescope and outside air create tube currents that blur images. Cooling down eliminates them.',
+            },
           },
           {
             id: "sp-sec12-u4-L2-Q6",
@@ -1604,6 +1850,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Star hopping starts from a bright, easily identifiable star. From there, you hop through fainter stars to reach your target.",
+            distractorExplanations: {
+              0: 'Maximize magnification to see faint stars is incorrect; star hopping starts from a bright, easily identifiable star. From there, you hop through fainter stars to reach your target.',
+              2: 'Turn off all tracking motors is incorrect; star hopping starts from a bright, easily identifiable star. From there, you hop through fainter stars to reach your target.',
+              3: 'Remove your finder scope is incorrect; star hopping starts from a bright, easily identifiable star. From there, you hop through fainter stars to reach your target.',
+            },
           },
           {
             id: "sp-sec12-u4-L3-Q2",
@@ -1611,6 +1862,9 @@ export const spaceSection12: Unit[] = [
             question: "A GoTo mount can accurately find objects without performing a star alignment procedure first.",
             correctAnswer: false,
             explanation: "GoTo mounts must be aligned on known stars before they can accurately point to other objects. The alignment teaches the computer its orientation.",
+            distractorExplanations: {
+              0: 'GoTo mounts must be aligned on known stars before they can accurately point to other objects. The alignment teaches the computer its orientation.',
+            },
           },
           {
             id: "sp-sec12-u4-L3-Q3",
@@ -1642,6 +1896,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If GoTo works for everything else, the issue is probably a small local pointing error. Star hopping to M57 from nearby Vega is quick and reliable.",
+            distractorExplanations: {
+              0: 'Skip M57 and move on to other targets is incorrect; if GoTo works for everything else, the issue is probably a small local pointing error. Star hopping to M57 from nearby Vega is quick and reliable.',
+              2: 'Restart the entire alignment from scratch for one object is incorrect; if GoTo works for everything else, the issue is probably a small local pointing error. Star hopping to M57 from nearby Vega is quick and reliable.',
+              3: 'Assume M57 is not visible tonight is incorrect; if GoTo works for everything else, the issue is probably a small local pointing error. Star hopping to M57 from nearby Vega is quick and reliable.',
+            },
           },
           {
             id: "sp-sec12-u4-L3-Q6",
@@ -1664,6 +1923,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "In late March near new Moon, all 110 Messier objects are accessible during a single night. No other time of year makes this possible.",
+            distractorExplanations: {
+              0: 'July is incorrect; in late March near new Moon, all 110 Messier objects are accessible during a single night. No other time of year makes this possible.',
+              1: 'October is incorrect; in late March near new Moon, all 110 Messier objects are accessible during a single night. No other time of year makes this possible.',
+              3: 'December is incorrect; in late March near new Moon, all 110 Messier objects are accessible during a single night. No other time of year makes this possible.',
+            },
           },
         ],
       },
@@ -1701,6 +1965,9 @@ export const spaceSection12: Unit[] = [
             question: "Smartphones are completely useless for astrophotography.",
             correctAnswer: false,
             explanation: "Modern smartphones can capture the Moon through a telescope, star trails, constellation photos, and even bright nebulae with night mode stacking.",
+            distractorExplanations: {
+              0: 'Modern smartphones can capture the Moon through a telescope, star trails, constellation photos, and even bright nebulae with night mode stacking.',
+            },
           },
           {
             id: "sp-sec12-u5-L1-Q2",
@@ -1714,6 +1981,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Afocal photography means pointing a camera (including a phone) into the telescope eyepiece. The camera photographs the magnified image the eyepiece produces.",
+            distractorExplanations: {
+              0: 'Removing the telescope\'s lens entirely is incorrect; afocal photography means pointing a camera (including a phone) into the telescope eyepiece. The camera photographs the magnified image the eyepiece produces.',
+              2: 'Using a telescope without an eyepiece is incorrect; afocal photography means pointing a camera (including a phone) into the telescope eyepiece. The camera photographs the magnified image the eyepiece produces.',
+              3: 'Focusing the camera at infinity without a telescope is incorrect; afocal photography means pointing a camera (including a phone) into the telescope eyepiece. The camera photographs the magnified image the eyepiece produces.',
+            },
           },
           {
             id: "sp-sec12-u5-L1-T2",
@@ -1733,6 +2005,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Keeping the phone perfectly centered and stable over the eyepiece is the biggest challenge. An adapter solves this mechanically.",
+            distractorExplanations: {
+              0: 'It increases your phone\'s resolution is incorrect; keeping the phone perfectly centered and stable over the eyepiece is the biggest challenge. An adapter solves this mechanically.',
+              2: 'It adds a filter to block light pollution is incorrect; keeping the phone perfectly centered and stable over the eyepiece is the biggest challenge. An adapter solves this mechanically.',
+              3: 'It charges your phone while photographing is incorrect; keeping the phone perfectly centered and stable over the eyepiece is the biggest challenge. An adapter solves this mechanically.',
+            },
           },
           {
             id: "sp-sec12-u5-L1-Q4",
@@ -1769,6 +2046,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Moon is very bright. Low ISO and short exposure prevent overexposure. Tapping to focus on the lunar surface ensures sharpness. Digital zoom just crops and reduces quality.",
+            distractorExplanations: {
+              0: 'Maximum zoom on the phone is incorrect; the Moon is very bright. Low ISO and short exposure prevent overexposure. Tapping to focus on the lunar surface ensures sharpness. Digital zoom just crops and reduces quality.',
+              2: 'Flash enabled for extra light is incorrect; the Moon is very bright. Low ISO and short exposure prevent overexposure. Tapping to focus on the lunar surface ensures sharpness. Digital zoom just crops and reduces quality.',
+              3: 'Maximum brightness with HDR off is incorrect; the Moon is very bright. Low ISO and short exposure prevent overexposure. Tapping to focus on the lunar surface ensures sharpness. Digital zoom just crops and reduces quality.',
+            },
           },
         ],
       },
@@ -1792,6 +2074,9 @@ export const spaceSection12: Unit[] = [
             question: "Shooting in RAW format preserves more data for processing than JPEG.",
             correctAnswer: true,
             explanation: "RAW files contain all the sensor data without compression. This gives you much more flexibility when processing faint astro images later.",
+            distractorExplanations: {
+              1: 'This statement is correct because rAW files contain all the sensor data without compression. This gives you much more flexibility when processing faint astro images later.',
+            },
           },
           {
             id: "sp-sec12-u5-L2-Q2",
@@ -1805,6 +2090,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Auto modes get confused by dark skies. Manual mode lets you set ISO, aperture, and shutter speed independently for optimal results.",
+            distractorExplanations: {
+              0: 'Full Auto mode is incorrect; auto modes get confused by dark skies. Manual mode lets you set ISO, aperture, and shutter speed independently for optimal results.',
+              2: 'Portrait mode is incorrect; auto modes get confused by dark skies. Manual mode lets you set ISO, aperture, and shutter speed independently for optimal results.',
+              3: 'Sports mode for fast action is incorrect; auto modes get confused by dark skies. Manual mode lets you set ISO, aperture, and shutter speed independently for optimal results.',
+            },
           },
           {
             id: "sp-sec12-u5-L2-T2",
@@ -1882,6 +2172,9 @@ export const spaceSection12: Unit[] = [
             question: "On a fixed tripod, longer focal lengths allow longer exposures before stars trail.",
             correctAnswer: false,
             explanation: "It's the opposite. Longer focal lengths magnify the sky more, making star motion visible sooner. Shorter focal lengths are more forgiving.",
+            distractorExplanations: {
+              0: 'It\'s the opposite. Longer focal lengths magnify the sky more, making star motion visible sooner. Shorter focal lengths are more forgiving.',
+            },
           },
           {
             id: "sp-sec12-u5-L3-Q2",
@@ -1895,6 +2188,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Earth rotates 360 degrees in 24 hours. During a long exposure, this rotation causes stars to trace arcs across the sensor.",
+            distractorExplanations: {
+              0: 'The camera vibrating on the tripod is incorrect; earth rotates 360 degrees in 24 hours. During a long exposure, this rotation causes stars to trace arcs across the sensor.',
+              2: 'Wind blowing the camera lens is incorrect; earth rotates 360 degrees in 24 hours. During a long exposure, this rotation causes stars to trace arcs across the sensor.',
+              3: 'Stars moving through space at high speed is incorrect; earth rotates 360 degrees in 24 hours. During a long exposure, this rotation causes stars to trace arcs across the sensor.',
+            },
           },
           {
             id: "sp-sec12-u5-L3-T2",
@@ -1925,6 +2223,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "500 / 200 = 2.5 seconds. Telephoto lenses magnify star motion, requiring very short exposures on a fixed tripod.",
+            distractorExplanations: {
+              0: 'About 25 seconds is incorrect; 500 / 200 = 2.5 seconds. Telephoto lenses magnify star motion, requiring very short exposures on a fixed tripod.',
+              1: 'About 10 seconds is incorrect; 500 / 200 = 2.5 seconds. Telephoto lenses magnify star motion, requiring very short exposures on a fixed tripod.',
+              3: 'About 50 seconds is incorrect; 500 / 200 = 2.5 seconds. Telephoto lenses magnify star motion, requiring very short exposures on a fixed tripod.',
+            },
           },
           {
             id: "sp-sec12-u5-L3-T3",
@@ -1953,6 +2256,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A star tracker eliminates the focal length constraint entirely. You can expose for 1 to 4 minutes, gathering far more light than any ISO increase could match.",
+            distractorExplanations: {
+              0: 'Use a wider lens instead and crop later is incorrect; a star tracker eliminates the focal length constraint entirely. You can expose for 1 to 4 minutes, gathering far more light than any ISO increase could match.',
+              2: 'Increase ISO to 51,200 to compensate is incorrect; a star tracker eliminates the focal length constraint entirely. You can expose for 1 to 4 minutes, gathering far more light than any ISO increase could match.',
+              3: 'Stack hundreds of 3-second exposures by hand is incorrect; a star tracker eliminates the focal length constraint entirely. You can expose for 1 to 4 minutes, gathering far more light than any ISO increase could match.',
+            },
           },
         ],
       },
@@ -1976,6 +2284,9 @@ export const spaceSection12: Unit[] = [
             question: "The Milky Way core is best photographed from March through November from the Northern Hemisphere.",
             correctAnswer: true,
             explanation: "The galactic center is above the horizon during these months, with the best viewing in the summer months of June through August.",
+            distractorExplanations: {
+              1: 'This statement is correct because the galactic center is above the horizon during these months, with the best viewing in the summer months of June through August.',
+            },
           },
           {
             id: "sp-sec12-u5-L4-Q2",
@@ -1989,6 +2300,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The center of our galaxy lies in the direction of Sagittarius. This region shows the densest, brightest part of the Milky Way.",
+            distractorExplanations: {
+              0: 'Orion is incorrect; the center of our galaxy lies in the direction of Sagittarius. This region shows the densest, brightest part of the Milky Way.',
+              2: 'Ursa Major is incorrect; the center of our galaxy lies in the direction of Sagittarius. This region shows the densest, brightest part of the Milky Way.',
+              3: 'Cassiopeia is incorrect; the center of our galaxy lies in the direction of Sagittarius. This region shows the densest, brightest part of the Milky Way.',
+            },
           },
           {
             id: "sp-sec12-u5-L4-T2",
@@ -2030,6 +2346,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A compelling foreground transforms a sky photo into a landscape. It gives viewers a sense of place and human connection.",
+            distractorExplanations: {
+              0: 'To block light pollution from below is incorrect; a compelling foreground transforms a sky photo into a landscape. It gives viewers a sense of place and human connection.',
+              2: 'To help the camera autofocus is incorrect; a compelling foreground transforms a sky photo into a landscape. It gives viewers a sense of place and human connection.',
+              3: 'To increase the Milky Way\'s brightness is incorrect; a compelling foreground transforms a sky photo into a landscape. It gives viewers a sense of place and human connection.',
+            },
           },
           {
             id: "sp-sec12-u5-L4-Q6",
@@ -2044,6 +2365,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Star streaks mean the exposure is slightly too long. The 500 rule is a guideline, not exact. Try 15 to 20 seconds. Modern high-resolution sensors often need the '300 rule' instead.",
+            distractorExplanations: {
+              0: 'Reduce ISO to 100 is incorrect; star streaks mean the exposure is slightly too long. The 500 rule is a guideline, not exact. Try 15 to 20 seconds. Modern high-resolution sensors often need the \'300 rule\' instead.',
+              2: 'Use a narrower aperture like f/8 is incorrect; star streaks mean the exposure is slightly too long. The 500 rule is a guideline, not exact. Try 15 to 20 seconds. Modern high-resolution sensors often need the \'300 rule\' instead.',
+              3: 'Switch to a 200mm lens is incorrect; star streaks mean the exposure is slightly too long. The 500 rule is a guideline, not exact. Try 15 to 20 seconds. Modern high-resolution sensors often need the \'300 rule\' instead.',
+            },
           },
         ],
       },
@@ -2067,6 +2393,9 @@ export const spaceSection12: Unit[] = [
             question: "Planetary photography uses long exposures of several minutes, just like deep sky photography.",
             correctAnswer: false,
             explanation: "Planets are bright and small. Photographers use short exposures (video frames) and stack the sharpest ones. Long exposures would overexpose planets badly.",
+            distractorExplanations: {
+              0: 'Planets are bright and small. Photographers use short exposures (video frames) and stack the sharpest ones. Long exposures would overexpose planets badly.',
+            },
           },
           {
             id: "sp-sec12-u5-L5-Q2",
@@ -2094,6 +2423,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Atmospheric turbulence causes constant shimmering. Recording thousands of frames lets you pick the rare sharp ones and stack them for a detailed final image.",
+            distractorExplanations: {
+              0: 'Video cameras are cheaper than photo cameras is incorrect; atmospheric turbulence causes constant shimmering. Recording thousands of frames lets you pick the rare sharp ones and stack them for a detailed final image.',
+              2: 'Video adds color that photos miss is incorrect; atmospheric turbulence causes constant shimmering. Recording thousands of frames lets you pick the rare sharp ones and stack them for a detailed final image.',
+              3: 'Single photos always blur planets is incorrect; atmospheric turbulence causes constant shimmering. Recording thousands of frames lets you pick the rare sharp ones and stack them for a detailed final image.',
+            },
           },
           {
             id: "sp-sec12-u5-L5-Q4",
@@ -2121,6 +2455,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Long shadows along the terminator reveal craters, mountains, and valleys in dramatic relief. A full Moon looks flat because the Sun lights it head-on.",
+            distractorExplanations: {
+              0: 'The fully lit center during full Moon is incorrect; long shadows along the terminator reveal craters, mountains, and valleys in dramatic relief. A full Moon looks flat because the Sun lights it head-on.',
+              2: 'The dark side that faces away from Earth is incorrect; long shadows along the terminator reveal craters, mountains, and valleys in dramatic relief. A full Moon looks flat because the Sun lights it head-on.',
+              3: 'The edges of the Moon\'s disk is incorrect; long shadows along the terminator reveal craters, mountains, and valleys in dramatic relief. A full Moon looks flat because the Sun lights it head-on.',
+            },
           },
           {
             id: "sp-sec12-u5-L5-Q6",
@@ -2167,6 +2506,9 @@ export const spaceSection12: Unit[] = [
             question: "A camera sensor can collect light over time, unlike your eyes which see in real-time.",
             correctAnswer: true,
             explanation: "Your eyes constantly refresh, but a camera sensor accumulates photons for as long as the shutter is open. This is why cameras can photograph objects too faint for your eyes.",
+            distractorExplanations: {
+              1: 'This statement is correct because your eyes constantly refresh, but a camera sensor accumulates photons for as long as the shutter is open. This is why cameras can photograph objects too faint for your eyes.',
+            },
           },
           {
             id: "sp-sec12-u6-L1-Q2",
@@ -2180,6 +2522,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "4 minutes = 240 seconds. Each second collects the same amount, so 240 seconds collects 240 times more photons than 1 second.",
+            distractorExplanations: {
+              0: '4 times more is incorrect; 4 minutes = 240 seconds. Each second collects the same amount, so 240 seconds collects 240 times more photons than 1 second.',
+              1: '60 times more is incorrect; 4 minutes = 240 seconds. Each second collects the same amount, so 240 seconds collects 240 times more photons than 1 second.',
+              3: '1,000 times more is incorrect; 4 minutes = 240 seconds. Each second collects the same amount, so 240 seconds collects 240 times more photons than 1 second.',
+            },
           },
           {
             id: "sp-sec12-u6-L1-T2",
@@ -2207,6 +2554,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Signal doubles when you double exposure time, but noise only grows by the square root of 2 (about 1.4x). This means SNR improves with longer exposures.",
+            distractorExplanations: {
+              0: 'The sensor heats up and works better is incorrect; signal doubles when you double exposure time, but noise only grows by the square root of 2 (about 1.4x). This means SNR improves with longer exposures.',
+              2: 'The lens focuses better during longer exposures is incorrect; signal doubles when you double exposure time, but noise only grows by the square root of 2 (about 1.4x). This means SNR improves with longer exposures.',
+              3: 'The atmosphere steadies over time is incorrect; signal doubles when you double exposure time, but noise only grows by the square root of 2 (about 1.4x). This means SNR improves with longer exposures.',
+            },
           },
           {
             id: "sp-sec12-u6-L1-T3",
@@ -2227,6 +2579,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "No amount of ISO increase can replace integration time. A tracking mount is the solution for multi-minute deep sky exposures.",
+            distractorExplanations: {
+              0: 'Just take the 2-minute exposure and accept the trails is incorrect; no amount of ISO increase can replace integration time. A tracking mount is the solution for multi-minute deep sky exposures.',
+              2: 'Increase ISO to 25,600 to shorten the exposure to 1 second is incorrect; no amount of ISO increase can replace integration time. A tracking mount is the solution for multi-minute deep sky exposures.',
+              3: 'Use a wider lens to reduce trailing is incorrect; no amount of ISO increase can replace integration time. A tracking mount is the solution for multi-minute deep sky exposures.',
+            },
           },
           {
             id: "sp-sec12-u6-L1-Q6",
@@ -2261,6 +2618,9 @@ export const spaceSection12: Unit[] = [
             question: "Stacking 60 two-minute exposures gives roughly the same signal-to-noise ratio as one continuous 120-minute exposure.",
             correctAnswer: true,
             explanation: "Total integration time is what matters. 60 x 2 minutes = 120 minutes total. The SNR result is nearly identical, but stacking is far safer.",
+            distractorExplanations: {
+              1: 'This statement is correct because total integration time is what matters. 60 x 2 minutes = 120 minutes total. The SNR result is nearly identical, but stacking is far safer.',
+            },
           },
           {
             id: "sp-sec12-u6-L2-Q2",
@@ -2274,6 +2634,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Stacking provides safety. A satellite, plane, or tracking error only ruins one frame. Delete it and stack the rest.",
+            distractorExplanations: {
+              0: 'Short exposures are sharper because of less atmospheric blur is incorrect; stacking provides safety. A satellite, plane, or tracking error only ruins one frame. Delete it and stack the rest.',
+              2: 'Short exposures use less battery power total is incorrect; stacking provides safety. A satellite, plane, or tracking error only ruins one frame. Delete it and stack the rest.',
+              3: 'Stacking automatically removes light pollution is incorrect; stacking provides safety. A satellite, plane, or tracking error only ruins one frame. Delete it and stack the rest.',
+            },
           },
           {
             id: "sp-sec12-u6-L2-T2",
@@ -2301,6 +2666,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Noise is random: bright in one frame, dark in the next. Averaging cancels it out. Signal is consistent in every frame and survives averaging.",
+            distractorExplanations: {
+              0: 'Noise disappears after being photographed multiple times is incorrect; noise is random: bright in one frame, dark in the next. Averaging cancels it out. Signal is consistent in every frame and survives averaging.',
+              2: 'The camera sensor gets colder with each frame is incorrect; noise is random: bright in one frame, dark in the next. Averaging cancels it out. Signal is consistent in every frame and survives averaging.',
+              3: 'Stacking software applies a blur filter is incorrect; noise is random: bright in one frame, dark in the next. Averaging cancels it out. Signal is consistent in every frame and survives averaging.',
+            },
           },
           {
             id: "sp-sec12-u6-L2-T3",
@@ -2350,6 +2720,9 @@ export const spaceSection12: Unit[] = [
             question: "Calibration frames correct imperfections in your camera sensor.",
             correctAnswer: true,
             explanation: "Dark frames remove hot pixels and thermal noise. Flat frames remove dust shadows and vignetting. Bias frames remove readout noise patterns.",
+            distractorExplanations: {
+              1: 'This statement is correct because dark frames remove hot pixels and thermal noise. Flat frames remove dust shadows and vignetting. Bias frames remove readout noise patterns.',
+            },
           },
           {
             id: "sp-sec12-u6-L3-Q2",
@@ -2363,6 +2736,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dark frames capture thermal noise and hot pixels only (no light). By matching exposure length and temperature, they reveal sensor noise that can be subtracted from your real images.",
+            distractorExplanations: {
+              0: 'A photo taken through a dark filter is incorrect; dark frames capture thermal noise and hot pixels only (no light). By matching exposure length and temperature, they reveal sensor noise that can be subtracted from your real images.',
+              2: 'A photo of the darkest part of the sky is incorrect; dark frames capture thermal noise and hot pixels only (no light). By matching exposure length and temperature, they reveal sensor noise that can be subtracted from your real images.',
+              3: 'A heavily underexposed image of your target is incorrect; dark frames capture thermal noise and hot pixels only (no light). By matching exposure length and temperature, they reveal sensor noise that can be subtracted from your real images.',
+            },
           },
           {
             id: "sp-sec12-u6-L3-T2",
@@ -2417,6 +2795,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Circular shadows are dust donuts on the sensor. Center-to-edge gradient is vignetting. Both are corrected by flat frames.",
+            distractorExplanations: {
+              0: 'You forgot dark frames, so hot pixels are showing is incorrect; circular shadows are dust donuts on the sensor. Center-to-edge gradient is vignetting. Both are corrected by flat frames.',
+              2: 'You forgot bias frames, so read noise is visible is incorrect; circular shadows are dust donuts on the sensor. Center-to-edge gradient is vignetting. Both are corrected by flat frames.',
+              3: 'Your polar alignment was off is incorrect; circular shadows are dust donuts on the sensor. Center-to-edge gradient is vignetting. Both are corrected by flat frames.',
+            },
           },
         ],
       },
@@ -2440,6 +2823,9 @@ export const spaceSection12: Unit[] = [
             question: "A stacked astrophoto usually looks amazing straight out of the stacking software.",
             correctAnswer: false,
             explanation: "Raw stacked images are dark and low-contrast. Post-processing (stretching, color balancing, noise reduction) is essential to reveal the beauty hidden in the data.",
+            distractorExplanations: {
+              0: 'Raw stacked images are dark and low-contrast. Post-processing (stretching, color balancing, noise reduction) is essential to reveal the beauty hidden in the data.',
+            },
           },
           {
             id: "sp-sec12-u6-L4-Q2",
@@ -2475,6 +2861,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Raw astro data has a very narrow brightness range. Stretching expands it across the full brightness scale so your eyes can see the faint details.",
+            distractorExplanations: {
+              0: 'It makes the image physically larger is incorrect; raw astro data has a very narrow brightness range. Stretching expands it across the full brightness scale so your eyes can see the faint details.',
+              2: 'It removes all noise from the image is incorrect; raw astro data has a very narrow brightness range. Stretching expands it across the full brightness scale so your eyes can see the faint details.',
+              3: 'It corrects the star shapes is incorrect; raw astro data has a very narrow brightness range. Stretching expands it across the full brightness scale so your eyes can see the faint details.',
+            },
           },
           {
             id: "sp-sec12-u6-L4-T3",
@@ -2503,6 +2894,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Beginners often push the stretch too hard, making the background noisy and colors garish. Restraint produces more natural-looking results.",
+            distractorExplanations: {
+              0: 'Not processing at all is incorrect; beginners often push the stretch too hard, making the background noisy and colors garish. Restraint produces more natural-looking results.',
+              2: 'Using too much noise reduction is incorrect; beginners often push the stretch too hard, making the background noisy and colors garish. Restraint produces more natural-looking results.',
+              3: 'Saving in RAW format is incorrect; beginners often push the stretch too hard, making the background noisy and colors garish. Restraint produces more natural-looking results.',
+            },
           },
         ],
       },
@@ -2526,6 +2922,9 @@ export const spaceSection12: Unit[] = [
             question: "Autoguiding corrects tracking errors in real time by watching a guide star.",
             correctAnswer: true,
             explanation: "The guide camera photographs a star several times per second. If the star drifts, the software tells the mount to correct. This keeps tracking extremely precise.",
+            distractorExplanations: {
+              1: 'This statement is correct because the guide camera photographs a star several times per second. If the star drifts, the software tells the mount to correct. This keeps tracking extremely precise.',
+            },
           },
           {
             id: "sp-sec12-u6-L5-Q2",
@@ -2539,6 +2938,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A guide scope is a small refractor (typically 50mm to 60mm) piggybacked on the main telescope. It provides a separate view for the guide camera.",
+            distractorExplanations: {
+              0: 'The main telescope you image through is incorrect; a guide scope is a small refractor (typically 50mm to 60mm) piggybacked on the main telescope. It provides a separate view for the guide camera.',
+              2: 'A finder scope used for star hopping is incorrect; a guide scope is a small refractor (typically 50mm to 60mm) piggybacked on the main telescope. It provides a separate view for the guide camera.',
+              3: 'A handheld monocular for finding objects is incorrect; a guide scope is a small refractor (typically 50mm to 60mm) piggybacked on the main telescope. It provides a separate view for the guide camera.',
+            },
           },
           {
             id: "sp-sec12-u6-L5-T2",
@@ -2592,6 +2996,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "High RMS error with guiding running usually means the mount is fighting large corrections. Better polar alignment and balance reduce the workload so guiding can make smaller, more precise corrections.",
+            distractorExplanations: {
+              0: 'The guide star is too bright, switch to a dimmer one is incorrect; high RMS error with guiding running usually means the mount is fighting large corrections. Better polar alignment and balance reduce the workload so guiding can make smaller, more precise corrections.',
+              2: 'Turn off autoguiding and rely on the mount alone is incorrect; high RMS error with guiding running usually means the mount is fighting large corrections. Better polar alignment and balance reduce the workload so guiding can make smaller, more precise corrections.',
+              3: 'Use a shorter focal length guide scope is incorrect; high RMS error with guiding running usually means the mount is fighting large corrections. Better polar alignment and balance reduce the workload so guiding can make smaller, more precise corrections.',
+            },
           },
         ],
       },
@@ -2628,6 +3037,9 @@ export const spaceSection12: Unit[] = [
             question: "Astronomical filters work by blocking unwanted wavelengths while passing desired ones.",
             correctAnswer: true,
             explanation: "Filters are wavelength-selective. They let through light you want to see and block light that would reduce contrast, like light pollution.",
+            distractorExplanations: {
+              1: 'This statement is correct because filters are wavelength-selective. They let through light you want to see and block light that would reduce contrast, like light pollution.',
+            },
           },
           {
             id: "sp-sec12-u7-L1-Q2",
@@ -2641,6 +3053,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Light pollution filters block the specific wavelengths emitted by sodium and mercury streetlights, darkening the sky background while passing starlight.",
+            distractorExplanations: {
+              0: 'It makes the telescope magnify more is incorrect; light pollution filters block the specific wavelengths emitted by sodium and mercury streetlights, darkening the sky background while passing starlight.',
+              2: 'It adds color to black-and-white images is incorrect; light pollution filters block the specific wavelengths emitted by sodium and mercury streetlights, darkening the sky background while passing starlight.',
+              3: 'It protects the lens from scratches is incorrect; light pollution filters block the specific wavelengths emitted by sodium and mercury streetlights, darkening the sky background while passing starlight.',
+            },
           },
           {
             id: "sp-sec12-u7-L1-T2",
@@ -2683,6 +3100,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Standard eyepiece filters screw into threads at the barrel end of 1.25-inch or 2-inch eyepieces.",
+            distractorExplanations: {
+              0: 'Over the front of the telescope is incorrect; standard eyepiece filters screw into threads at the barrel end of 1.25-inch or 2-inch eyepieces.',
+              2: 'On top of the finder scope is incorrect; standard eyepiece filters screw into threads at the barrel end of 1.25-inch or 2-inch eyepieces.',
+              3: 'Between the mount and tripod is incorrect; standard eyepiece filters screw into threads at the barrel end of 1.25-inch or 2-inch eyepieces.',
+            },
           },
           {
             id: "sp-sec12-u7-L1-Q6",
@@ -2697,6 +3119,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A UHC or light pollution filter blocks the suburban skyglow while passing the nebula's emission lines, dramatically improving contrast.",
+            distractorExplanations: {
+              0: 'A solar filter for safe viewing is incorrect; a UHC or light pollution filter blocks the suburban skyglow while passing the nebula\'s emission lines, dramatically improving contrast.',
+              2: 'A neutral density filter to dim the nebula is incorrect; a UHC or light pollution filter blocks the suburban skyglow while passing the nebula\'s emission lines, dramatically improving contrast.',
+              3: 'A color correction filter for your refractor is incorrect; a UHC or light pollution filter blocks the suburban skyglow while passing the nebula\'s emission lines, dramatically improving contrast.',
+            },
           },
         ],
       },
@@ -2720,6 +3147,9 @@ export const spaceSection12: Unit[] = [
             question: "A narrowband filter passes a very wide range of wavelengths.",
             correctAnswer: false,
             explanation: "Narrowband means narrow. These filters pass only 3 to 12 nanometers of the spectrum, rejecting everything else, including most light pollution.",
+            distractorExplanations: {
+              0: 'Narrowband means narrow. These filters pass only 3 to 12 nanometers of the spectrum, rejecting everything else, including most light pollution.',
+            },
           },
           {
             id: "sp-sec12-u7-L2-Q2",
@@ -2733,6 +3163,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Hydrogen-alpha emission occurs at 656.3 nm, a deep red wavelength. It's the most common emission line in nebulae.",
+            distractorExplanations: {
+              0: '380 nm (ultraviolet) is incorrect; hydrogen-alpha emission occurs at 656.3 nm, a deep red wavelength. It\'s the most common emission line in nebulae.',
+              1: '500 nm (green-blue) is incorrect; hydrogen-alpha emission occurs at 656.3 nm, a deep red wavelength. It\'s the most common emission line in nebulae.',
+              3: '850 nm (infrared) is incorrect; hydrogen-alpha emission occurs at 656.3 nm, a deep red wavelength. It\'s the most common emission line in nebulae.',
+            },
           },
           {
             id: "sp-sec12-u7-L2-T2",
@@ -2779,6 +3214,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Streetlights emit at wavelengths that don't overlap with nebula emission lines. The filter blocks the pollution and passes the signal.",
+            distractorExplanations: {
+              0: 'City lights boost the nebula\'s brightness is incorrect; streetlights emit at wavelengths that don\'t overlap with nebula emission lines. The filter blocks the pollution and passes the signal.',
+              2: 'Cities have steadier air than rural areas is incorrect; streetlights emit at wavelengths that don\'t overlap with nebula emission lines. The filter blocks the pollution and passes the signal.',
+              3: 'Narrowband cameras are more sensitive is incorrect; streetlights emit at wavelengths that don\'t overlap with nebula emission lines. The filter blocks the pollution and passes the signal.',
+            },
           },
           {
             id: "sp-sec12-u7-L2-Q6",
@@ -2810,6 +3250,9 @@ export const spaceSection12: Unit[] = [
             question: "A single narrowband filter produces a full-color image.",
             correctAnswer: false,
             explanation: "Each filter captures only one wavelength, producing a grayscale image. Color requires combining data from multiple filters into RGB channels.",
+            distractorExplanations: {
+              0: 'Each filter captures only one wavelength, producing a grayscale image. Color requires combining data from multiple filters into RGB channels.',
+            },
           },
           {
             id: "sp-sec12-u7-L3-Q2",
@@ -2823,6 +3266,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Hubble Palette (SHO) assigns sulfur to red, hydrogen-alpha to green, and oxygen to blue. It was made famous by Hubble Space Telescope images.",
+            distractorExplanations: {
+              0: 'A paint set used at NASA is incorrect; the Hubble Palette (SHO) assigns sulfur to red, hydrogen-alpha to green, and oxygen to blue. It was made famous by Hubble Space Telescope images.',
+              2: 'Using only the three primary colors of light is incorrect; the Hubble Palette (SHO) assigns sulfur to red, hydrogen-alpha to green, and oxygen to blue. It was made famous by Hubble Space Telescope images.',
+              3: 'A type of telescope color correction is incorrect; the Hubble Palette (SHO) assigns sulfur to red, hydrogen-alpha to green, and oxygen to blue. It was made famous by Hubble Space Telescope images.',
+            },
           },
           {
             id: "sp-sec12-u7-L3-T2",
@@ -2865,6 +3313,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Ha and S-II both emit in deep red. In true color they look similar. SHO maps them to different channels so you can see the distinct distributions of each element.",
+            distractorExplanations: {
+              0: 'It shows the nebula as your eyes would see it is incorrect; ha and S-II both emit in deep red. In true color they look similar. SHO maps them to different channels so you can see the distinct distributions of each element.',
+              2: 'It requires fewer exposures is incorrect; ha and S-II both emit in deep red. In true color they look similar. SHO maps them to different channels so you can see the distinct distributions of each element.',
+              3: 'It produces brighter images is incorrect; ha and S-II both emit in deep red. In true color they look similar. SHO maps them to different channels so you can see the distinct distributions of each element.',
+            },
           },
           {
             id: "sp-sec12-u7-L3-Q6",
@@ -2879,6 +3332,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "HOO is the perfect two-filter palette. It produces stunning images and is a great starting point before investing in a third filter.",
+            distractorExplanations: {
+              0: 'Wait until you buy an S-II filter for the full Hubble Pal... is incorrect; hOO is the perfect two-filter palette. It produces stunning images and is a great starting point before investing in a third filter.',
+              2: 'Use Ha only and colorize it artificially is incorrect; hOO is the perfect two-filter palette. It produces stunning images and is a great starting point before investing in a third filter.',
+              3: 'Use O-III only and pretend it\'s true color is incorrect; hOO is the perfect two-filter palette. It produces stunning images and is a great starting point before investing in a third filter.',
+            },
           },
         ],
       },
@@ -2902,6 +3360,9 @@ export const spaceSection12: Unit[] = [
             question: "You can safely observe the Sun through a telescope without any filter if you squint.",
             correctAnswer: false,
             explanation: "Absolutely not. Even a brief unfiltered glimpse of the Sun through a telescope can cause instant, permanent eye damage. Always use a certified solar filter.",
+            distractorExplanations: {
+              0: 'Absolutely not. Even a brief unfiltered glimpse of the Sun through a telescope can cause instant, permanent eye damage. Always use a certified solar filter.',
+            },
           },
           {
             id: "sp-sec12-u7-L4-Q2",
@@ -2915,6 +3376,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Solar filters must cover the front aperture so concentrated sunlight never enters the telescope. An eyepiece filter can crack from the heat, causing instant damage.",
+            distractorExplanations: {
+              0: 'At the eyepiece end is incorrect; solar filters must cover the front aperture so concentrated sunlight never enters the telescope. An eyepiece filter can crack from the heat, causing instant damage.',
+              2: 'Inside the telescope tube is incorrect; solar filters must cover the front aperture so concentrated sunlight never enters the telescope. An eyepiece filter can crack from the heat, causing instant damage.',
+              3: 'Between the mount and tripod is incorrect; solar filters must cover the front aperture so concentrated sunlight never enters the telescope. An eyepiece filter can crack from the heat, causing instant damage.',
+            },
           },
           {
             id: "sp-sec12-u7-L4-T2",
@@ -2958,6 +3424,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mars reflects strongly in red light. A red (#25 or #23A) filter increases contrast between dark surface features and bright desert regions.",
+            distractorExplanations: {
+              0: 'Blue filter is incorrect; mars reflects strongly in red light. A red (#25 or #23A) filter increases contrast between dark surface features and bright desert regions.',
+              2: 'Green filter is incorrect; mars reflects strongly in red light. A red (#25 or #23A) filter increases contrast between dark surface features and bright desert regions.',
+              3: 'Violet filter is incorrect; mars reflects strongly in red light. A red (#25 or #23A) filter increases contrast between dark surface features and bright desert regions.',
+            },
           },
           {
             id: "sp-sec12-u7-L4-Q6",
@@ -2989,6 +3460,9 @@ export const spaceSection12: Unit[] = [
             question: "A UHC filter is one of the most versatile first filters for visual observers.",
             correctAnswer: true,
             explanation: "UHC (Ultra High Contrast) filters pass both H-beta and O-III emission lines, improving views of most emission and planetary nebulae from suburban sites.",
+            distractorExplanations: {
+              1: 'This statement is correct because uHC (Ultra High Contrast) filters pass both H-beta and O-III emission lines, improving views of most emission and planetary nebulae from suburban sites.',
+            },
           },
           {
             id: "sp-sec12-u7-L5-Q2",
@@ -3002,6 +3476,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Ha captures the strongest emission from the most nebulae. It's the single most useful narrowband filter and the foundation of any collection.",
+            distractorExplanations: {
+              0: 'S-II (sulfur) because it\'s the rarest is incorrect; ha captures the strongest emission from the most nebulae. It\'s the single most useful narrowband filter and the foundation of any collection.',
+              2: 'H-beta because it\'s the cheapest is incorrect; ha captures the strongest emission from the most nebulae. It\'s the single most useful narrowband filter and the foundation of any collection.',
+              3: 'Calcium-K for solar imaging is incorrect; ha captures the strongest emission from the most nebulae. It\'s the single most useful narrowband filter and the foundation of any collection.',
+            },
           },
           {
             id: "sp-sec12-u7-L5-T2",
@@ -3030,6 +3509,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An Ha filter is the best first investment for suburban astrophotography. It blocks most light pollution and captures the strongest emission from nebulae.",
+            distractorExplanations: {
+              0: 'A premium S-II filter for rare sulfur detail is incorrect; an Ha filter is the best first investment for suburban astrophotography. It blocks most light pollution and captures the strongest emission from nebulae.',
+              2: 'A violet filter for enhancing Venus is incorrect; an Ha filter is the best first investment for suburban astrophotography. It blocks most light pollution and captures the strongest emission from nebulae.',
+              3: 'A neutral density Moon filter is incorrect; an Ha filter is the best first investment for suburban astrophotography. It blocks most light pollution and captures the strongest emission from nebulae.',
+            },
           },
           {
             id: "sp-sec12-u7-L5-T3",
@@ -3101,6 +3585,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "500 / 25 = 20 seconds. Beyond this, stars will show visible trailing on a fixed tripod.",
+            distractorExplanations: {
+              0: '5 seconds is incorrect; 500 / 25 = 20 seconds. Beyond this, stars will show visible trailing on a fixed tripod.',
+              1: '10 seconds is incorrect; 500 / 25 = 20 seconds. Beyond this, stars will show visible trailing on a fixed tripod.',
+              3: '50 seconds is incorrect; 500 / 25 = 20 seconds. Beyond this, stars will show visible trailing on a fixed tripod.',
+            },
           },
           {
             id: "sp-sec12-u8-L1-Q2",
@@ -3125,6 +3614,9 @@ export const spaceSection12: Unit[] = [
             question: "A star tracker allows you to take longer exposures by compensating for Earth's rotation.",
             correctAnswer: true,
             explanation: "Star trackers rotate the camera at the sidereal rate, canceling Earth's rotation and keeping stars as pinpoints during multi-minute exposures.",
+            distractorExplanations: {
+              1: 'This statement is correct because star trackers rotate the camera at the sidereal rate, canceling Earth\'s rotation and keeping stars as pinpoints during multi-minute exposures.',
+            },
           },
           {
             id: "sp-sec12-u8-L1-Q5",
@@ -3139,6 +3631,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Saturn is a bright planetary target. Lucky imaging (high-speed video with frame selection and stacking) gives the sharpest results.",
+            distractorExplanations: {
+              0: 'A single 5-minute tracked exposure is incorrect; saturn is a bright planetary target. Lucky imaging (high-speed video with frame selection and stacking) gives the sharpest results.',
+              2: 'A wide-angle Milky Way style shot including Saturn is incorrect; saturn is a bright planetary target. Lucky imaging (high-speed video with frame selection and stacking) gives the sharpest results.',
+              3: 'A stack of 50 two-minute deep sky exposures is incorrect; saturn is a bright planetary target. Lucky imaging (high-speed video with frame selection and stacking) gives the sharpest results.',
+            },
           },
           {
             id: "sp-sec12-u8-L1-Q6",
@@ -3186,6 +3683,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Stacking provides resilience. Satellites, tracking errors, or wind can ruin individual frames, but the rest survive. One long exposure is all-or-nothing.",
+            distractorExplanations: {
+              0: 'Short exposures are always sharper is incorrect; stacking provides resilience. Satellites, tracking errors, or wind can ruin individual frames, but the rest survive. One long exposure is all-or-nothing.',
+              2: 'Stacking reduces the total capture time needed is incorrect; stacking provides resilience. Satellites, tracking errors, or wind can ruin individual frames, but the rest survive. One long exposure is all-or-nothing.',
+              3: 'Long exposures damage the camera sensor is incorrect; stacking provides resilience. Satellites, tracking errors, or wind can ruin individual frames, but the rest survive. One long exposure is all-or-nothing.',
+            },
           },
           {
             id: "sp-sec12-u8-L2-Q3",
@@ -3201,6 +3703,9 @@ export const spaceSection12: Unit[] = [
             question: "A raw stacked astrophoto typically looks bright and colorful straight from the stacking software.",
             correctAnswer: false,
             explanation: "Raw stacked images look dark and flat. Post-processing (especially histogram stretching) is essential to reveal the hidden data.",
+            distractorExplanations: {
+              0: 'Raw stacked images look dark and flat. Post-processing (especially histogram stretching) is essential to reveal the hidden data.',
+            },
           },
           {
             id: "sp-sec12-u8-L2-Q5",
@@ -3223,6 +3728,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dust rings and edge-to-center brightness gradients (vignetting) are corrected by flat frames. Without them, these optical artifacts remain visible.",
+            distractorExplanations: {
+              0: 'Dark frames, causing hot pixel contamination is incorrect; dust rings and edge-to-center brightness gradients (vignetting) are corrected by flat frames. Without them, these optical artifacts remain visible.',
+              2: 'Bias frames, causing banding patterns is incorrect; dust rings and edge-to-center brightness gradients (vignetting) are corrected by flat frames. Without them, these optical artifacts remain visible.',
+              3: 'More light frames, causing insufficient signal is incorrect; dust rings and edge-to-center brightness gradients (vignetting) are corrected by flat frames. Without them, these optical artifacts remain visible.',
+            },
           },
         ],
       },
@@ -3252,6 +3762,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "SHO: Sulfur to Red, Hydrogen-alpha to Green, Oxygen to Blue. Ha in green is what gives Hubble images their distinctive look.",
+            distractorExplanations: {
+              0: 'S-II (sulfur) is incorrect; sHO: Sulfur to Red, Hydrogen-alpha to Green, Oxygen to Blue. Ha in green is what gives Hubble images their distinctive look.',
+              2: 'O-III (oxygen) is incorrect; sHO: Sulfur to Red, Hydrogen-alpha to Green, Oxygen to Blue. Ha in green is what gives Hubble images their distinctive look.',
+              3: 'H-beta (hydrogen-beta) is incorrect; sHO: Sulfur to Red, Hydrogen-alpha to Green, Oxygen to Blue. Ha in green is what gives Hubble images their distinctive look.',
+            },
           },
           {
             id: "sp-sec12-u8-L3-Q2",
@@ -3259,6 +3774,9 @@ export const spaceSection12: Unit[] = [
             question: "Narrowband imaging can produce good results from heavily light-polluted cities.",
             correctAnswer: true,
             explanation: "Narrowband filters block most artificial light while passing nebula emission. This makes them the best tool for urban astrophotographers.",
+            distractorExplanations: {
+              1: 'This statement is correct because narrowband filters block most artificial light while passing nebula emission. This makes them the best tool for urban astrophotographers.',
+            },
           },
           {
             id: "sp-sec12-u8-L3-Q3",
@@ -3299,6 +3817,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "HOO uses exactly the two filters you have. Ha maps to red, O-III maps to both green and blue, producing a beautiful blue-and-orange color image.",
+            distractorExplanations: {
+              0: 'SHO Hubble Palette (requires S-II you don\'t have) is incorrect; hOO uses exactly the two filters you have. Ha maps to red, O-III maps to both green and blue, producing a beautiful blue-and-orange color image.',
+              2: 'True color RGB (requires color camera without narrowband) is incorrect; hOO uses exactly the two filters you have. Ha maps to red, O-III maps to both green and blue, producing a beautiful blue-and-orange color image.',
+              3: 'Wait until you can afford all three filters is incorrect; hOO uses exactly the two filters you have. Ha maps to red, O-III maps to both green and blue, producing a beautiful blue-and-orange color image.',
+            },
           },
         ],
       },
@@ -3336,6 +3859,9 @@ export const spaceSection12: Unit[] = [
             question: "Amateur astronomers can contribute real, scientifically useful data to professional research.",
             correctAnswer: true,
             explanation: "Amateurs have discovered comets, asteroids, supernovae, and variable star patterns. Their data is published in professional journals.",
+            distractorExplanations: {
+              1: 'This statement is correct because amateurs have discovered comets, asteroids, supernovae, and variable star patterns. Their data is published in professional journals.',
+            },
           },
           {
             id: "sp-sec12-u9-L1-Q2",
@@ -3349,6 +3875,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Professional telescopes are powerful but few. Thousands of amateur telescopes around the world can monitor far more sky simultaneously.",
+            distractorExplanations: {
+              0: 'Professional telescopes produce no useful data is incorrect; professional telescopes are powerful but few. Thousands of amateur telescopes around the world can monitor far more sky simultaneously.',
+              2: 'Amateurs have better equipment is incorrect; professional telescopes are powerful but few. Thousands of amateur telescopes around the world can monitor far more sky simultaneously.',
+              3: 'Citizen scientists work for free, saving money is incorrect; professional telescopes are powerful but few. Thousands of amateur telescopes around the world can monitor far more sky simultaneously.',
+            },
           },
           {
             id: "sp-sec12-u9-L1-T2",
@@ -3391,6 +3922,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Amateur comet hunters have a long tradition. Comets are often named after their discoverers, like Comet Hale-Bopp or Comet NEOWISE (discovered by a spacecraft, but many are amateur finds).",
+            distractorExplanations: {
+              0: 'Black holes is incorrect; amateur comet hunters have a long tradition. Comets are often named after their discoverers, like Comet Hale-Bopp or Comet NEOWISE (discovered by a spacecraft, but many are amateur finds).',
+              2: 'Quasars is incorrect; amateur comet hunters have a long tradition. Comets are often named after their discoverers, like Comet Hale-Bopp or Comet NEOWISE (discovered by a spacecraft, but many are amateur finds).',
+              3: 'Dark matter halos is incorrect; amateur comet hunters have a long tradition. Comets are often named after their discoverers, like Comet Hale-Bopp or Comet NEOWISE (discovered by a spacecraft, but many are amateur finds).',
+            },
           },
           {
             id: "sp-sec12-u9-L1-Q6",
@@ -3405,6 +3941,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Galaxy Zoo needs only a computer and internet. You classify galaxy shapes from real telescope images, contributing to research on galaxy evolution.",
+            distractorExplanations: {
+              0: 'Variable star monitoring with the AAVSO is incorrect; galaxy Zoo needs only a computer and internet. You classify galaxy shapes from real telescope images, contributing to research on galaxy evolution.',
+              2: 'Asteroid astrometry with a CCD camera is incorrect; galaxy Zoo needs only a computer and internet. You classify galaxy shapes from real telescope images, contributing to research on galaxy evolution.',
+              3: 'Supernova patrol with a 12-inch telescope is incorrect; galaxy Zoo needs only a computer and internet. You classify galaxy shapes from real telescope images, contributing to research on galaxy evolution.',
+            },
           },
         ],
       },
@@ -3428,6 +3969,9 @@ export const spaceSection12: Unit[] = [
             question: "All stars shine with perfectly constant brightness.",
             correctAnswer: false,
             explanation: "Thousands of stars vary in brightness. Some change on regular cycles, others randomly. Monitoring them is one of the most valuable amateur contributions.",
+            distractorExplanations: {
+              0: 'Thousands of stars vary in brightness. Some change on regular cycles, others randomly. Monitoring them is one of the most valuable amateur contributions.',
+            },
           },
           {
             id: "sp-sec12-u9-L2-Q2",
@@ -3456,6 +4000,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The AAVSO coordinates the world's largest variable star observing program, with observers submitting data from around the globe.",
+            distractorExplanations: {
+              0: 'American Association of Visual Star Operators is incorrect; the AAVSO coordinates the world\'s largest variable star observing program, with observers submitting data from around the globe.',
+              2: 'Astronomical Alliance of Volunteer Scientists Online is incorrect; the AAVSO coordinates the world\'s largest variable star observing program, with observers submitting data from around the globe.',
+              3: 'Amateur Astronomers for Variable Star Operations is incorrect; the AAVSO coordinates the world\'s largest variable star observing program, with observers submitting data from around the globe.',
+            },
           },
           {
             id: "sp-sec12-u9-L2-Q4",
@@ -3483,6 +4032,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Visual estimation using AAVSO comparison star charts is free, requires only binoculars or a small telescope, and produces scientifically valuable data.",
+            distractorExplanations: {
+              0: 'Buy a professional spectrophotometer is incorrect; visual estimation using AAVSO comparison star charts is free, requires only binoculars or a small telescope, and produces scientifically valuable data.',
+              2: 'Photograph every star in the sky and measure them all is incorrect; visual estimation using AAVSO comparison star charts is free, requires only binoculars or a small telescope, and produces scientifically valuable data.',
+              3: 'Wait for a variable star to explode as a supernova is incorrect; visual estimation using AAVSO comparison star charts is free, requires only binoculars or a small telescope, and produces scientifically valuable data.',
+            },
           },
           {
             id: "sp-sec12-u9-L2-Q6",
@@ -3517,6 +4071,9 @@ export const spaceSection12: Unit[] = [
             question: "Amateur astronomers can help track asteroids that might pass close to Earth.",
             correctAnswer: true,
             explanation: "Amateur astrometry (precise position measurements) helps professionals refine asteroid orbits and assess impact risks.",
+            distractorExplanations: {
+              1: 'This statement is correct because amateur astrometry (precise position measurements) helps professionals refine asteroid orbits and assess impact risks.',
+            },
           },
           {
             id: "sp-sec12-u9-L3-Q2",
@@ -3530,6 +4087,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "During an occultation, an asteroid blocks a background star's light for a few seconds. Timing this precisely reveals the asteroid's shape and size.",
+            distractorExplanations: {
+              0: 'When an asteroid crashes into a planet is incorrect; during an occultation, an asteroid blocks a background star\'s light for a few seconds. Timing this precisely reveals the asteroid\'s shape and size.',
+              2: 'When an asteroid reflects sunlight toward Earth is incorrect; during an occultation, an asteroid blocks a background star\'s light for a few seconds. Timing this precisely reveals the asteroid\'s shape and size.',
+              3: 'When an asteroid enters Earth\'s atmosphere is incorrect; during an occultation, an asteroid blocks a background star\'s light for a few seconds. Timing this precisely reveals the asteroid\'s shape and size.',
+            },
           },
           {
             id: "sp-sec12-u9-L3-T2",
@@ -3571,6 +4133,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "New comets approaching the Sun first become visible near the dawn or dusk horizon. Professional surveys often miss these low-altitude regions.",
+            distractorExplanations: {
+              0: 'Directly overhead at midnight is incorrect; new comets approaching the Sun first become visible near the dawn or dusk horizon. Professional surveys often miss these low-altitude regions.',
+              2: 'The north celestial pole is incorrect; new comets approaching the Sun first become visible near the dawn or dusk horizon. Professional surveys often miss these low-altitude regions.',
+              3: 'Deep in the southern sky is incorrect; new comets approaching the Sun first become visible near the dawn or dusk horizon. Professional surveys often miss these low-altitude regions.',
+            },
           },
           {
             id: "sp-sec12-u9-L3-Q6",
@@ -3585,6 +4152,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Recording the exact disappearance and reappearance times provides scientific data. When combined with other observers, it maps the asteroid's shape.",
+            distractorExplanations: {
+              0: 'Just watch visually and enjoy the show is incorrect; recording the exact disappearance and reappearance times provides scientific data. When combined with other observers, it maps the asteroid\'s shape.',
+              2: 'Photograph the asteroid directly is incorrect; recording the exact disappearance and reappearance times provides scientific data. When combined with other observers, it maps the asteroid\'s shape.',
+              3: 'Point your telescope at a different part of the sky is incorrect; recording the exact disappearance and reappearance times provides scientific data. When combined with other observers, it maps the asteroid\'s shape.',
+            },
           },
         ],
       },
@@ -3608,6 +4180,9 @@ export const spaceSection12: Unit[] = [
             question: "Computers have completely replaced human classifiers in all astronomy projects.",
             correctAnswer: false,
             explanation: "Human pattern recognition still outperforms AI for many classification tasks, especially for unusual or rare objects that algorithms weren't trained on.",
+            distractorExplanations: {
+              0: 'Human pattern recognition still outperforms AI for many classification tasks, especially for unusual or rare objects that algorithms weren\'t trained on.',
+            },
           },
           {
             id: "sp-sec12-u9-L4-Q2",
@@ -3636,6 +4211,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dutch schoolteacher Hanny van Arkel found this strange green blob while classifying galaxies. It turned out to be a gas cloud illuminated by a now-dormant quasar.",
+            distractorExplanations: {
+              0: 'A new type of galaxy is incorrect; dutch schoolteacher Hanny van Arkel found this strange green blob while classifying galaxies. It turned out to be a gas cloud illuminated by a now-dormant quasar.',
+              2: 'A new asteroid heading toward Earth is incorrect; dutch schoolteacher Hanny van Arkel found this strange green blob while classifying galaxies. It turned out to be a gas cloud illuminated by a now-dormant quasar.',
+              3: 'A hidden star cluster is incorrect; dutch schoolteacher Hanny van Arkel found this strange green blob while classifying galaxies. It turned out to be a gas cloud illuminated by a now-dormant quasar.',
+            },
           },
           {
             id: "sp-sec12-u9-L4-Q4",
@@ -3671,6 +4251,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Every classification helps, even if you only do a few. Each image gets classified by multiple people, so even brief sessions contribute to the consensus.",
+            distractorExplanations: {
+              0: 'At least 8 hours per week is incorrect; every classification helps, even if you only do a few. Each image gets classified by multiple people, so even brief sessions contribute to the consensus.',
+              2: 'A full weekend every month is incorrect; every classification helps, even if you only do a few. Each image gets classified by multiple people, so even brief sessions contribute to the consensus.',
+              3: 'Only during solar eclipses is incorrect; every classification helps, even if you only do a few. Each image gets classified by multiple people, so even brief sessions contribute to the consensus.',
+            },
           },
         ],
       },
@@ -3694,6 +4279,9 @@ export const spaceSection12: Unit[] = [
             question: "Precise timestamps are critical for scientifically useful observations.",
             correctAnswer: true,
             explanation: "Many phenomena (occultations, transits, flares) require timing accuracy of 1 second or better. GPS-synced time is ideal.",
+            distractorExplanations: {
+              1: 'This statement is correct because many phenomena (occultations, transits, flares) require timing accuracy of 1 second or better. GPS-synced time is ideal.',
+            },
           },
           {
             id: "sp-sec12-u9-L5-Q2",
@@ -3707,6 +4295,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "UTC is the universal standard. Using local time would make it impossible to compare observations from different time zones.",
+            distractorExplanations: {
+              0: 'Local time in their time zone is incorrect; uTC is the universal standard. Using local time would make it impossible to compare observations from different time zones.',
+              2: 'Solar time based on the Sun\'s position is incorrect; uTC is the universal standard. Using local time would make it impossible to compare observations from different time zones.',
+              3: 'Sidereal time based on star positions is incorrect; uTC is the universal standard. Using local time would make it impossible to compare observations from different time zones.',
+            },
           },
           {
             id: "sp-sec12-u9-L5-T2",
@@ -3765,6 +4358,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Submit each observation promptly through the official AAVSO system. Include your time (UTC), magnitude estimate, comparison stars used, and uncertainty. Every data point counts.",
+            distractorExplanations: {
+              0: 'Post it on social media and forget about it is incorrect; submit each observation promptly through the official AAVSO system. Include your time (UTC), magnitude estimate, comparison stars used, and uncertainty. Every data point counts.',
+              2: 'Email it to a random university professor is incorrect; submit each observation promptly through the official AAVSO system. Include your time (UTC), magnitude estimate, comparison stars used, and uncertainty. Every data point counts.',
+              3: 'Wait until you have 100 observations before submitting any is incorrect; submit each observation promptly through the official AAVSO system. Include your time (UTC), magnitude estimate, comparison stars used, and uncertainty. Every data point counts.',
+            },
           },
         ],
       },
@@ -3802,6 +4400,9 @@ export const spaceSection12: Unit[] = [
             question: "A home observatory's biggest advantage is eliminating setup and teardown time.",
             correctAnswer: true,
             explanation: "When your telescope stays permanently mounted and aligned, you can observe on any clear night with just minutes of preparation. This dramatically increases your actual observing time.",
+            distractorExplanations: {
+              1: 'This statement is correct because when your telescope stays permanently mounted and aligned, you can observe on any clear night with just minutes of preparation. This dramatically increases your actual observing time.',
+            },
           },
           {
             id: "sp-sec12-u10-L1-Q2",
@@ -3836,6 +4437,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Regular observing from a fixed location with heavy equipment is the perfect scenario for a home observatory. The time savings compound quickly.",
+            distractorExplanations: {
+              0: 'No, they don\'t observe often enough is incorrect; regular observing from a fixed location with heavy equipment is the perfect scenario for a home observatory. The time savings compound quickly.',
+              2: 'No, suburban backyards are never suitable is incorrect; regular observing from a fixed location with heavy equipment is the perfect scenario for a home observatory. The time savings compound quickly.',
+              3: 'Only if they buy a bigger telescope first is incorrect; regular observing from a fixed location with heavy equipment is the perfect scenario for a home observatory. The time savings compound quickly.',
+            },
           },
           {
             id: "sp-sec12-u10-L1-Q4",
@@ -3849,6 +4455,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your observatory is fixed. If you have light pollution, a home observatory doesn't fix it. You're committed to that site's sky quality.",
+            distractorExplanations: {
+              0: 'It makes your telescope heavier is incorrect; your observatory is fixed. If you have light pollution, a home observatory doesn\'t fix it. You\'re committed to that site\'s sky quality.',
+              2: 'It prevents you from using filters is incorrect; your observatory is fixed. If you have light pollution, a home observatory doesn\'t fix it. You\'re committed to that site\'s sky quality.',
+              3: 'It requires a professional astronomer to operate is incorrect; your observatory is fixed. If you have light pollution, a home observatory doesn\'t fix it. You\'re committed to that site\'s sky quality.',
+            },
           },
           {
             id: "sp-sec12-u10-L1-T3",
@@ -3894,6 +4505,9 @@ export const spaceSection12: Unit[] = [
             question: "Heat from nearby pavement and buildings can blur telescope images.",
             correctAnswer: true,
             explanation: "Warm surfaces create rising air currents that distort images. This is why observing over rooftops or next to heated buildings produces shimmering, blurry views.",
+            distractorExplanations: {
+              1: 'This statement is correct because warm surfaces create rising air currents that distort images. This is why observing over rooftops or next to heated buildings produces shimmering, blurry views.',
+            },
           },
           {
             id: "sp-sec12-u10-L2-Q2",
@@ -3922,6 +4536,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Vibration isolation is the whole point. If the pier contacts the floor, every footstep shakes the telescope image.",
+            distractorExplanations: {
+              0: 'To make the pier easier to paint is incorrect; vibration isolation is the whole point. If the pier contacts the floor, every footstep shakes the telescope image.',
+              2: 'To allow the pier to rotate with the dome is incorrect; vibration isolation is the whole point. If the pier contacts the floor, every footstep shakes the telescope image.',
+              3: 'To save building materials is incorrect; vibration isolation is the whole point. If the pier contacts the floor, every footstep shakes the telescope image.',
+            },
           },
           {
             id: "sp-sec12-u10-L2-Q4",
@@ -3978,6 +4597,9 @@ export const spaceSection12: Unit[] = [
             question: "A roll-off roof observatory provides access to the entire visible sky when open.",
             correctAnswer: true,
             explanation: "When the roof is fully retracted, you have an unobstructed view from horizon to horizon. Domes show only a portion of sky through the slit.",
+            distractorExplanations: {
+              1: 'This statement is correct because when the roof is fully retracted, you have an unobstructed view from horizon to horizon. Domes show only a portion of sky through the slit.',
+            },
           },
           {
             id: "sp-sec12-u10-L3-Q2",
@@ -3991,6 +4613,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "8x10 to 10x12 feet provides enough room for the telescope, pier, observing chair, and space to walk around the equipment.",
+            distractorExplanations: {
+              0: '4x4 feet, barely fitting the telescope is incorrect; 8x10 to 10x12 feet provides enough room for the telescope, pier, observing chair, and space to walk around the equipment.',
+              2: '30x30 feet, like a professional observatory is incorrect; 8x10 to 10x12 feet provides enough room for the telescope, pier, observing chair, and space to walk around the equipment.',
+              3: '2x2 meters, just for the pier is incorrect; 8x10 to 10x12 feet provides enough room for the telescope, pier, observing chair, and space to walk around the equipment.',
+            },
           },
           {
             id: "sp-sec12-u10-L3-T2",
@@ -4019,6 +4646,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Tall walls block low-altitude targets. Walls of 3 to 4 feet let the telescope access objects just 10 to 15 degrees above the horizon.",
+            distractorExplanations: {
+              0: 'To save on building materials is incorrect; tall walls block low-altitude targets. Walls of 3 to 4 feet let the telescope access objects just 10 to 15 degrees above the horizon.',
+              2: 'Low walls look better is incorrect; tall walls block low-altitude targets. Walls of 3 to 4 feet let the telescope access objects just 10 to 15 degrees above the horizon.',
+              3: 'To make the roof lighter is incorrect; tall walls block low-altitude targets. Walls of 3 to 4 feet let the telescope access objects just 10 to 15 degrees above the horizon.',
+            },
           },
           {
             id: "sp-sec12-u10-L3-T3",
@@ -4039,6 +4671,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Remote operation requires a motorized roof you can control from your computer. You can't push a roof open from inside the house.",
+            distractorExplanations: {
+              0: 'A manual push-open roof is fine for remote operation is incorrect; remote operation requires a motorized roof you can control from your computer. You can\'t push a roof open from inside the house.',
+              2: 'Just leave the roof open permanently is incorrect; remote operation requires a motorized roof you can control from your computer. You can\'t push a roof open from inside the house.',
+              3: 'Use a portable tent instead is incorrect; remote operation requires a motorized roof you can control from your computer. You can\'t push a roof open from inside the house.',
+            },
           },
           {
             id: "sp-sec12-u10-L3-Q6",
@@ -4073,6 +4710,9 @@ export const spaceSection12: Unit[] = [
             question: "You can run a complete astrophotography session from inside your house with the right equipment.",
             correctAnswer: true,
             explanation: "Computer-controlled mounts, cameras, focusers, and roofs allow full remote operation. You can even image from another city using internet remote access.",
+            distractorExplanations: {
+              1: 'This statement is correct because computer-controlled mounts, cameras, focusers, and roofs allow full remote operation. You can even image from another city using internet remote access.',
+            },
           },
           {
             id: "sp-sec12-u10-L4-Q2",
@@ -4086,6 +4726,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "NINA (Nighttime Imaging 'N' Astronomy) and SGP (Sequence Generator Pro) automate the entire process: slew, focus, capture, guide, and park when done.",
+            distractorExplanations: {
+              0: 'A web browser is incorrect; nINA (Nighttime Imaging \'N\' Astronomy) and SGP (Sequence Generator Pro) automate the entire process: slew, focus, capture, guide, and park when done.',
+              2: 'A social media app is incorrect; nINA (Nighttime Imaging \'N\' Astronomy) and SGP (Sequence Generator Pro) automate the entire process: slew, focus, capture, guide, and park when done.',
+              3: 'The camera\'s built-in firmware is incorrect; nINA (Nighttime Imaging \'N\' Astronomy) and SGP (Sequence Generator Pro) automate the entire process: slew, focus, capture, guide, and park when done.',
+            },
           },
           {
             id: "sp-sec12-u10-L4-T2",
@@ -4128,6 +4773,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Services like iTelescope place professional telescopes at dark sky sites. You book time, specify your targets, and download the resulting images.",
+            distractorExplanations: {
+              0: 'A store that sells robots is incorrect; services like iTelescope place professional telescopes at dark sky sites. You book time, specify your targets, and download the resulting images.',
+              2: 'An app that controls your home telescope is incorrect; services like iTelescope place professional telescopes at dark sky sites. You book time, specify your targets, and download the resulting images.',
+              3: 'A game where you build a virtual observatory is incorrect; services like iTelescope place professional telescopes at dark sky sites. You book time, specify your targets, and download the resulting images.',
+            },
           },
           {
             id: "sp-sec12-u10-L4-Q6",
@@ -4142,6 +4792,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without weather safety, an unattended session risks rain entering the open observatory and destroying all your equipment. This is the most critical safety component.",
+            distractorExplanations: {
+              0: 'A second imaging camera for a wider field is incorrect; without weather safety, an unattended session risks rain entering the open observatory and destroying all your equipment. This is the most critical safety component.',
+              2: 'A better computer for faster processing is incorrect; without weather safety, an unattended session risks rain entering the open observatory and destroying all your equipment. This is the most critical safety component.',
+              3: 'A dehumidifier inside the observatory is incorrect; without weather safety, an unattended session risks rain entering the open observatory and destroying all your equipment. This is the most critical safety component.',
+            },
           },
         ],
       },
@@ -4165,6 +4820,9 @@ export const spaceSection12: Unit[] = [
             question: "A home observatory requires no maintenance once built.",
             correctAnswer: false,
             explanation: "Regular maintenance is essential. Roof rails can misalign, weatherstripping wears out, spiders build webs on optics, and electronics need checking.",
+            distractorExplanations: {
+              0: 'Regular maintenance is essential. Roof rails can misalign, weatherstripping wears out, spiders build webs on optics, and electronics need checking.',
+            },
           },
           {
             id: "sp-sec12-u10-L5-Q2",
@@ -4207,6 +4865,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Humidity corrodes metal contacts and can cause short circuits. Keeping the interior dry is the most important environmental control.",
+            distractorExplanations: {
+              0: 'Sunlight bleaching the cables is incorrect; humidity corrodes metal contacts and can cause short circuits. Keeping the interior dry is the most important environmental control.',
+              2: 'Wind physically breaking the circuits is incorrect; humidity corrodes metal contacts and can cause short circuits. Keeping the interior dry is the most important environmental control.',
+              3: 'Cosmic rays damaging memory chips is incorrect; humidity corrodes metal contacts and can cause short circuits. Keeping the interior dry is the most important environmental control.',
+            },
           },
           {
             id: "sp-sec12-u10-L5-T3",
@@ -4281,6 +4944,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Clear skies and favorable Moon conditions are prerequisites. Without them, no amount of equipment helps.",
+            distractorExplanations: {
+              0: 'Buying a new eyepiece is incorrect; clear skies and favorable Moon conditions are prerequisites. Without them, no amount of equipment helps.',
+              2: 'Polishing the mirror is incorrect; clear skies and favorable Moon conditions are prerequisites. Without them, no amount of equipment helps.',
+              3: 'Inviting friends is incorrect; clear skies and favorable Moon conditions are prerequisites. Without them, no amount of equipment helps.',
+            },
           },
           {
             id: "sp-sec12-u11-L1-Q3",
@@ -4296,6 +4964,9 @@ export const spaceSection12: Unit[] = [
             question: "The Messier catalog contains 110 deep sky objects and is the most popular target list for amateur astronomers.",
             correctAnswer: true,
             explanation: "Messier's 110 objects range from galaxies to nebulae to star clusters. Completing the Messier list is a rite of passage for amateur astronomers.",
+            distractorExplanations: {
+              1: 'This statement is correct because messier\'s 110 objects range from galaxies to nebulae to star clusters. Completing the Messier list is a rite of passage for amateur astronomers.',
+            },
           },
           {
             id: "sp-sec12-u11-L1-Q5",
@@ -4310,6 +4981,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Good seeing is perfect for planets. The bright Moon washes out faint objects, so stick to bright targets that can handle the skyglow.",
+            distractorExplanations: {
+              0: 'Photograph faint galaxies, ignoring the Moon is incorrect; good seeing is perfect for planets. The bright Moon washes out faint objects, so stick to bright targets that can handle the skyglow.',
+              2: 'Wait for a moonless night for any observing is incorrect; good seeing is perfect for planets. The bright Moon washes out faint objects, so stick to bright targets that can handle the skyglow.',
+              3: 'Only use binoculars tonight is incorrect; good seeing is perfect for planets. The bright Moon washes out faint objects, so stick to bright targets that can handle the skyglow.',
+            },
           },
           {
             id: "sp-sec12-u11-L1-Q6",
@@ -4358,6 +5034,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "500 / 100 = 5 seconds. Longer focal lengths require shorter exposures to avoid star trails on untracked mounts.",
+            distractorExplanations: {
+              0: '50 seconds is incorrect; 500 / 100 = 5 seconds. Longer focal lengths require shorter exposures to avoid star trails on untracked mounts.',
+              1: '10 seconds is incorrect; 500 / 100 = 5 seconds. Longer focal lengths require shorter exposures to avoid star trails on untracked mounts.',
+              3: '500 seconds is incorrect; 500 / 100 = 5 seconds. Longer focal lengths require shorter exposures to avoid star trails on untracked mounts.',
+            },
           },
           {
             id: "sp-sec12-u11-L2-Q2",
@@ -4391,6 +5072,9 @@ export const spaceSection12: Unit[] = [
             question: "Narrowband imaging can produce excellent results from Bortle 8 city skies.",
             correctAnswer: true,
             explanation: "Narrowband filters block most artificial light while passing nebula emission lines. This makes them ideal for urban astrophotographers.",
+            distractorExplanations: {
+              1: 'This statement is correct because narrowband filters block most artificial light while passing nebula emission lines. This makes them ideal for urban astrophotographers.',
+            },
           },
           {
             id: "sp-sec12-u11-L2-Q6",
@@ -4405,6 +5089,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dust rings and center-to-edge vignetting are exactly what flat frames correct. Without them, these optical artifacts persist in the final image.",
+            distractorExplanations: {
+              0: 'Not enough light frames were captured is incorrect; dust rings and center-to-edge vignetting are exactly what flat frames correct. Without them, these optical artifacts persist in the final image.',
+              2: 'The polar alignment was poor is incorrect; dust rings and center-to-edge vignetting are exactly what flat frames correct. Without them, these optical artifacts persist in the final image.',
+              3: 'The ISO was too high is incorrect; dust rings and center-to-edge vignetting are exactly what flat frames correct. Without them, these optical artifacts persist in the final image.',
+            },
           },
           {
             id: "sp-sec12-u11-L2-Q7",
@@ -4418,6 +5107,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "PHD2 is the de facto standard for autoguiding. It's free, open source, and compatible with virtually all guide cameras and mounts.",
+            distractorExplanations: {
+              0: 'Stellarium is incorrect; pHD2 is the de facto standard for autoguiding. It\'s free, open source, and compatible with virtually all guide cameras and mounts.',
+              2: 'DeepSkyStacker is incorrect; pHD2 is the de facto standard for autoguiding. It\'s free, open source, and compatible with virtually all guide cameras and mounts.',
+              3: 'GIMP is incorrect; pHD2 is the de facto standard for autoguiding. It\'s free, open source, and compatible with virtually all guide cameras and mounts.',
+            },
           },
         ],
       },
@@ -4450,6 +5144,9 @@ export const spaceSection12: Unit[] = [
             question: "A telescope pier should be physically connected to the observatory floor for maximum stability.",
             correctAnswer: false,
             explanation: "The pier must be physically isolated from the floor. If they're connected, footsteps and building vibrations transfer directly to the telescope.",
+            distractorExplanations: {
+              0: 'The pier must be physically isolated from the floor. If they\'re connected, footsteps and building vibrations transfer directly to the telescope.',
+            },
           },
           {
             id: "sp-sec12-u11-L3-Q3",
@@ -4463,6 +5160,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Roll-off roof observatories are the most popular because they're simpler to build than domes, give full sky access, and can be constructed from modified shed plans.",
+            distractorExplanations: {
+              0: 'A rotating dome is incorrect; roll-off roof observatories are the most popular because they\'re simpler to build than domes, give full sky access, and can be constructed from modified shed plans.',
+              2: 'An open-air platform is incorrect; roll-off roof observatories are the most popular because they\'re simpler to build than domes, give full sky access, and can be constructed from modified shed plans.',
+              3: 'A converted satellite dish is incorrect; roll-off roof observatories are the most popular because they\'re simpler to build than domes, give full sky access, and can be constructed from modified shed plans.',
+            },
           },
           {
             id: "sp-sec12-u11-L3-Q4",
@@ -4494,6 +5196,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Unattended operation without weather safety is a disaster waiting to happen. Rain entering an open observatory will destroy thousands of dollars in equipment.",
+            distractorExplanations: {
+              0: 'A second telescope for visual observing is incorrect; unattended operation without weather safety is a disaster waiting to happen. Rain entering an open observatory will destroy thousands of dollars in equipment.',
+              2: 'A webcam pointed at the sky for time-lapses is incorrect; unattended operation without weather safety is a disaster waiting to happen. Rain entering an open observatory will destroy thousands of dollars in equipment.',
+              3: 'An outdoor speaker system is incorrect; unattended operation without weather safety is a disaster waiting to happen. Rain entering an open observatory will destroy thousands of dollars in equipment.',
+            },
           },
           {
             id: "sp-sec12-u11-L3-Q7",
@@ -4507,6 +5214,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Humidity causes corrosion on circuit boards and can create short circuits. Dehumidifiers and desiccants are essential for long-term equipment health.",
+            distractorExplanations: {
+              0: 'Direct sunlight is incorrect; humidity causes corrosion on circuit boards and can create short circuits. Dehumidifiers and desiccants are essential for long-term equipment health.',
+              2: 'Cosmic radiation is incorrect; humidity causes corrosion on circuit boards and can create short circuits. Dehumidifiers and desiccants are essential for long-term equipment health.',
+              3: 'Magnetic fields from the pier is incorrect; humidity causes corrosion on circuit boards and can create short circuits. Dehumidifiers and desiccants are essential for long-term equipment health.',
+            },
           },
         ],
       },
@@ -4536,6 +5248,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Bortle 4 or darker reveals the Milky Way as a bright band with visible structure. Bortle 5 and higher lose most of the detail.",
+            distractorExplanations: {
+              0: 'Bortle 7 is incorrect; bortle 4 or darker reveals the Milky Way as a bright band with visible structure. Bortle 5 and higher lose most of the detail.',
+              2: 'Bortle 9 is incorrect; bortle 4 or darker reveals the Milky Way as a bright band with visible structure. Bortle 5 and higher lose most of the detail.',
+              3: 'Bortle 6 is incorrect; bortle 4 or darker reveals the Milky Way as a bright band with visible structure. Bortle 5 and higher lose most of the detail.',
+            },
           },
           {
             id: "sp-sec12-u11-L4-Q2",
@@ -4595,6 +5312,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Narrowband imaging is the solution for urban astrophotographers. An Ha filter blocks most city light while passing nebula emission, producing dramatic results even from Bortle 8 skies.",
+            distractorExplanations: {
+              0: 'Give up astrophotography from the city is incorrect; narrowband imaging is the solution for urban astrophotographers. An Ha filter blocks most city light while passing nebula emission, producing dramatic results even from Bortle 8 skies.',
+              2: 'Only photograph during solar eclipses is incorrect; narrowband imaging is the solution for urban astrophotographers. An Ha filter blocks most city light while passing nebula emission, producing dramatic results even from Bortle 8 skies.',
+              3: 'Use shorter exposures to avoid light pollution buildup is incorrect; narrowband imaging is the solution for urban astrophotographers. An Ha filter blocks most city light while passing nebula emission, producing dramatic results even from Bortle 8 skies.',
+            },
           },
           {
             id: "sp-sec12-u11-L4-Q8",
@@ -4602,6 +5324,9 @@ export const spaceSection12: Unit[] = [
             question: "Amateur astronomers have discovered comets, found exoplanets in data, and contributed to professional research papers.",
             correctAnswer: true,
             explanation: "Citizen science is real science. Amateurs discover comets, monitor variable stars, time occultations, and classify galaxies. Their contributions appear in peer-reviewed journals.",
+            distractorExplanations: {
+              1: 'This statement is correct because citizen science is real science. Amateurs discover comets, monitor variable stars, time occultations, and classify galaxies. Their contributions appear in peer-reviewed journals.',
+            },
           },
           {
             id: "sp-sec12-u11-L4-Q9",
@@ -4615,6 +5340,11 @@ export const spaceSection12: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Weather safety is non-negotiable for unattended operation. Rain entering an open observatory is catastrophic for equipment. Everything else is secondary.",
+            distractorExplanations: {
+              0: 'A security camera is incorrect; weather safety is non-negotiable for unattended operation. Rain entering an open observatory is catastrophic for equipment. Everything else is secondary.',
+              2: 'A backup power supply is incorrect; weather safety is non-negotiable for unattended operation. Rain entering an open observatory is catastrophic for equipment. Everything else is secondary.',
+              3: 'An internet connection for remote monitoring is incorrect; weather safety is non-negotiable for unattended operation. Rain entering an open observatory is catastrophic for equipment. Everything else is secondary.',
+            },
           },
         ],
       },

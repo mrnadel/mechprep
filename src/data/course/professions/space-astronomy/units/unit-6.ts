@@ -29,6 +29,9 @@ export const unit6: Unit = {
           question: "Humans first reached space in the 1960s.",
           correctAnswer: false,
           explanation: "Yuri Gagarin reached space on April 12, 1961, but the first satellite (Sputnik) launched in 1957. Human spaceflight began in the early 1960s.",
+          distractorExplanations: {
+            0: 'Yuri Gagarin reached space on April 12, 1961, but the first satellite (Sputnik) launched in 1957',
+          },
         },
         {
           id: "sp-u6-L0-Q2",
@@ -42,6 +45,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "Sputnik 1 launched on October 4, 1957. It was a small metal sphere that beeped from orbit, and it changed the world.",
+          distractorExplanations: {
+            0: 'Sputnik 1 launched on October 4, 1957',
+            2: 'Sputnik 1 launched on October 4, 1957',
+            3: 'Sputnik 1 launched on October 4, 1957',
+          },
         },
         {
           id: "sp-u6-L0-T2",
@@ -61,6 +69,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "Sputnik launched in 1957. Apollo 11 landed on the Moon in 1969. Just 12 years from first satellite to Moon landing.",
+          distractorExplanations: {
+            0: 'Sputnik launched in 1957. Apollo 11 landed on the Moon in 1969',
+            2: 'Sputnik launched in 1957. Apollo 11 landed on the Moon in 1969',
+            3: 'Sputnik launched in 1957. Apollo 11 landed on the Moon in 1969',
+          },
         },
         {
           id: "sp-u6-L0-Q4",
@@ -82,6 +95,9 @@ export const unit6: Unit = {
           question: "Space exploration ended after the Apollo Moon missions.",
           correctAnswer: false,
           explanation: "Far from it. Since Apollo, we've built the ISS, landed rovers on Mars, flown past Pluto, and launched the James Webb Space Telescope.",
+          distractorExplanations: {
+            0: 'Since Apollo, we\'ve built the ISS, landed rovers on Mars, flown past Pluto, and launched the James Webb Space Telescope',
+          },
         },
         {
           id: "sp-u6-L0-Q6",
@@ -95,6 +111,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "Project Starfire is fictional. Voyager 1, Curiosity, and Apollo 11 are all real and groundbreaking missions.",
+          distractorExplanations: {
+            0: 'Project Starfire is fictional. Voyager 1, Curiosity, and Apollo 11 are all real and groundbreaking missions',
+            1: 'Project Starfire is fictional. Voyager 1, Curiosity, and Apollo 11 are all real and groundbreaking missions',
+            3: 'Project Starfire is fictional. Voyager 1, Curiosity, and Apollo 11 are all real and groundbreaking missions',
+          },
         },
       ],
     },
@@ -119,6 +140,9 @@ export const unit6: Unit = {
           question: "The Space Race was a competition between the USA and the Soviet Union.",
           correctAnswer: true,
           explanation: "The Space Race was driven by Cold War rivalry. Both superpowers raced to achieve space firsts.",
+          distractorExplanations: {
+            1: 'The Space Race was driven by Cold War rivalry',
+          },
         },
         {
           id: "sp-u6-L1-Q2",
@@ -140,6 +164,9 @@ export const unit6: Unit = {
           question: "The Soviet Union achieved the first satellite and first human in space before the USA.",
           correctAnswer: true,
           explanation: "Sputnik (1957) and Gagarin (1961) were both Soviet achievements. The USA caught up with the Moon landing in 1969.",
+          distractorExplanations: {
+            1: 'Sputnik (1957) and Gagarin (1961) were both Soviet achievements',
+          },
         },
         {
           id: "sp-u6-L1-Q3",
@@ -162,6 +189,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "Soviet cosmonaut Valentina Tereshkova orbited Earth 48 times in 1963. It took 20 more years before an American woman (Sally Ride) reached space.",
+          distractorExplanations: {
+            0: 'Soviet cosmonaut Valentina Tereshkova orbited Earth 48 times in 1963',
+            1: 'Soviet cosmonaut Valentina Tereshkova orbited Earth 48 times in 1963',
+            3: 'Soviet cosmonaut Valentina Tereshkova orbited Earth 48 times in 1963',
+          },
         },
         {
           id: "sp-u6-L1-Q5",
@@ -184,6 +216,9 @@ export const unit6: Unit = {
           question: "The Apollo 11 Moon landing in 1969 is considered the moment the US won the Space Race.",
           correctAnswer: true,
           explanation: "Landing humans on the Moon was the ultimate goal. When Apollo 11 succeeded, the US claimed the biggest prize of the competition.",
+          distractorExplanations: {
+            1: 'Landing humans on the Moon was the ultimate goal',
+          },
         },
         {
           id: "sp-u6-L1-Q6",
@@ -200,6 +235,9 @@ export const unit6: Unit = {
           question: "The Space Race was entirely motivated by scientific curiosity.",
           correctAnswer: false,
           explanation: "The Space Race was primarily driven by Cold War military rivalry and national prestige. The science was incredible, but the motivation was competition.",
+          distractorExplanations: {
+            0: 'The Space Race was primarily driven by Cold War military rivalry and national prestige',
+          },
         },
         {
           id: "sp-u6-L1-Q8",
@@ -213,6 +251,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "Landing humans on the Moon was the ultimate goal. When Apollo 11 succeeded, the race was effectively won.",
+          distractorExplanations: {
+            0: 'Landing humans on the Moon was the ultimate goal',
+            1: 'Landing humans on the Moon was the ultimate goal',
+            3: 'Landing humans on the Moon was the ultimate goal',
+          },
         },
       ],
     },
@@ -243,6 +286,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "12 astronauts walked on the Moon across 6 Apollo missions (11, 12, 14, 15, 16, and 17). All were American men.",
+          distractorExplanations: {
+            0: 'The correct answer is 12, not 6',
+            1: 'The correct answer is 12, not 2',
+            3: 'The correct answer is 12, not 24',
+          },
         },
         {
           id: "sp-u6-L2-Q2",
@@ -250,6 +298,9 @@ export const unit6: Unit = {
           question: "Neil Armstrong was the first person to walk on the Moon.",
           correctAnswer: true,
           explanation: "Neil Armstrong stepped onto the Moon's surface on July 20, 1969, followed by Buzz Aldrin. Michael Collins orbited above in the command module.",
+          distractorExplanations: {
+            1: 'Neil Armstrong stepped onto the Moon\'s surface on July 20, 1969, followed by Buzz Aldrin',
+          },
         },
         {
           id: "sp-u6-L2-T2",
@@ -263,6 +314,9 @@ export const unit6: Unit = {
           question: "Apollo missions used the Saturn V rocket to reach the Moon.",
           correctAnswer: true,
           explanation: "The Saturn V was the most powerful rocket ever flown. It was the only rocket capable of sending astronauts all the way to the Moon.",
+          distractorExplanations: {
+            1: 'The Saturn V was the most powerful rocket ever flown',
+          },
         },
         {
           id: "sp-u6-L2-Q3",
@@ -301,6 +355,9 @@ export const unit6: Unit = {
           question: "The last human Moon landing was in 1972.",
           correctAnswer: true,
           explanation: "Apollo 17 in December 1972 was the last crewed Moon mission. No human has returned to the lunar surface since.",
+          distractorExplanations: {
+            1: 'Apollo 17 in December 1972 was the last crewed Moon mission',
+          },
         },
         {
           id: "sp-u6-L2-Q7",
@@ -323,6 +380,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "Armstrong's famous words were broadcast to 600 million people watching on Earth. 'Houston, we have a problem' was from Apollo 13.",
+          distractorExplanations: {
+            0: 'Armstrong\'s famous words were broadcast to 600 million people watching on Earth',
+            1: 'Armstrong\'s famous words were broadcast to 600 million people watching on Earth',
+            3: 'Armstrong\'s famous words were broadcast to 600 million people watching on Earth',
+          },
         },
       ],
     },
@@ -347,6 +409,9 @@ export const unit6: Unit = {
           question: "The ISS has been continuously occupied for over 20 years.",
           correctAnswer: true,
           explanation: "Humans have lived aboard the ISS without interruption since November 2, 2000. It's the longest continuous human presence in space.",
+          distractorExplanations: {
+            1: 'Humans have lived aboard the ISS without interruption since November 2, 2000',
+          },
         },
         {
           id: "sp-u6-L3-Q2",
@@ -360,6 +425,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: "15 nations contributed to building the ISS, including the US, Russia, Japan, Canada, and several European countries. It's humanity's biggest cooperative space project.",
+          distractorExplanations: {
+            1: '15 nations contributed to building the ISS, including the US, Russia, Japan, Canada, and several European countries',
+            2: '15 nations contributed to building the ISS, including the US, Russia, Japan, Canada, and several European countries',
+            3: '15 nations contributed to building the ISS, including the US, Russia, Japan, Canada, and several European countries',
+          },
         },
         {
           id: "sp-u6-L3-T2",
@@ -374,6 +444,9 @@ export const unit6: Unit = {
           question: "ISS astronauts must exercise every day to prevent muscle and bone loss.",
           correctAnswer: true,
           explanation: "In microgravity, muscles and bones weaken rapidly. ISS crew members exercise about 2 hours daily to stay healthy.",
+          distractorExplanations: {
+            1: 'In microgravity, muscles and bones weaken rapidly',
+          },
         },
         {
           id: "sp-u6-L3-Q3",
@@ -415,6 +488,9 @@ export const unit6: Unit = {
           question: "The ISS is used as a laboratory for scientific experiments in microgravity.",
           correctAnswer: true,
           explanation: "The ISS hosts experiments in biology, physics, and materials science that are only possible in microgravity.",
+          distractorExplanations: {
+            1: 'The ISS hosts experiments in biology, physics, and materials science that are only possible in microgravity',
+          },
         },
         {
           id: "sp-u6-L3-Q6",
@@ -431,6 +507,9 @@ export const unit6: Unit = {
           question: "The ISS cost over 100 billion dollars to build.",
           correctAnswer: true,
           explanation: "The ISS is the most expensive single object ever built, costing over 150 billion dollars. It's a testament to international cooperation in space.",
+          distractorExplanations: {
+            1: 'The ISS is the most expensive single object ever built, costing over 150 billion dollars',
+          },
         },
         {
           id: "sp-u6-L3-Q8",
@@ -444,6 +523,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "The ISS is primarily a research laboratory. Microgravity allows experiments impossible on Earth, from growing protein crystals to studying flame behavior.",
+          distractorExplanations: {
+            0: 'The ISS is primarily a research laboratory',
+            2: 'The ISS is primarily a research laboratory',
+            3: 'The ISS is primarily a research laboratory',
+          },
         },
       ],
     },
@@ -474,6 +558,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: "Curiosity landed in Gale Crater in August 2012 and is still operating. It's the size of a small car and powered by nuclear energy.",
+          distractorExplanations: {
+            1: 'Curiosity landed in Gale Crater in August 2012 and is still operating',
+            2: 'Curiosity landed in Gale Crater in August 2012 and is still operating',
+            3: 'Curiosity landed in Gale Crater in August 2012 and is still operating',
+          },
         },
         {
           id: "sp-u6-L4-Q2",
@@ -488,6 +577,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: "Signals take 4 to 24 minutes to travel between Earth and Mars. Rovers receive batches of commands, execute them autonomously, then send results back.",
+          distractorExplanations: {
+            1: 'Signals take 4 to 24 minutes to travel between Earth and Mars',
+            2: 'Signals take 4 to 24 minutes to travel between Earth and Mars',
+            3: 'Signals take 4 to 24 minutes to travel between Earth and Mars',
+          },
         },
         {
           id: "sp-u6-L4-T2",
@@ -507,6 +601,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "With 1% atmosphere, the blades had to spin at 2,400 RPM (5 times faster than a helicopter on Earth) to generate enough lift.",
+          distractorExplanations: {
+            0: 'With 1% atmosphere, the blades had to spin at 2,400 RPM (5 times faster than a helicopter on Earth) to generate enough lift',
+            1: 'With 1% atmosphere, the blades had to spin at 2,400 RPM (5 times faster than a helicopter on Earth) to generate enough lift',
+            3: 'With 1% atmosphere, the blades had to spin at 2,400 RPM (5 times faster than a helicopter on Earth) to generate enough lift',
+          },
         },
         {
           id: "sp-u6-L4-Q4",
@@ -537,6 +636,9 @@ export const unit6: Unit = {
           question: "Mars once had liquid water flowing on its surface.",
           correctAnswer: true,
           explanation: "Multiple rovers and orbiters have confirmed that Mars had rivers, lakes, and possibly an ocean billions of years ago. The water is now mostly ice or gone.",
+          distractorExplanations: {
+            1: 'Multiple rovers and orbiters have confirmed that Mars had rivers, lakes, and possibly an ocean billions of years ago',
+          },
         },
         {
           id: "sp-u6-L4-Q7",
@@ -560,6 +662,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: "Curiosity uses a radioisotope thermoelectric generator (RTG) powered by plutonium-238. Unlike solar panels, it works day and night, even during dust storms that can last weeks.",
+          distractorExplanations: {
+            1: 'Curiosity uses a radioisotope thermoelectric generator (RTG) powered by plutonium-238',
+            2: 'Curiosity uses a radioisotope thermoelectric generator (RTG) powered by plutonium-238',
+            3: 'Curiosity uses a radioisotope thermoelectric generator (RTG) powered by plutonium-238',
+          },
         },
       ],
     },
@@ -584,6 +691,9 @@ export const unit6: Unit = {
           question: "Voyager 1 is the farthest human-made object from Earth.",
           correctAnswer: true,
           explanation: "Voyager 1 is over 24 billion km from Earth and still moving. It entered interstellar space in 2012, the first human object to do so.",
+          distractorExplanations: {
+            1: 'Voyager 1 is over 24 billion km from Earth and still moving',
+          },
         },
         {
           id: "sp-u6-L5-Q2",
@@ -597,6 +707,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "Both Voyager probes launched in 1977. They've been traveling and transmitting data for over 48 years.",
+          distractorExplanations: {
+            0: 'The correct answer is 1977, not 1969',
+            2: 'The correct answer is 1977, not 1990',
+            3: 'The correct answer is 1977, not 2001',
+          },
         },
         {
           id: "sp-u6-L5-T2",
@@ -616,6 +731,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Golden Record contains music (from Beethoven to Chuck Berry), greetings, nature sounds, and 115 images. It's meant for any civilization that might find it.",
+          distractorExplanations: {
+            0: 'The Golden Record contains music (from Beethoven to Chuck Berry), greetings, nature sounds, and 115 images',
+            2: 'The Golden Record contains music (from Beethoven to Chuck Berry), greetings, nature sounds, and 115 images',
+            3: 'The Golden Record contains music (from Beethoven to Chuck Berry), greetings, nature sounds, and 115 images',
+          },
         },
         {
           id: "sp-u6-L5-Q4",
@@ -631,6 +751,9 @@ export const unit6: Unit = {
           question: "Voyager 1 has entered interstellar space.",
           correctAnswer: true,
           explanation: "In August 2012, Voyager 1 crossed the heliopause (the boundary of the Sun's influence) and entered interstellar space. It's now in the space between stars.",
+          distractorExplanations: {
+            1: 'In August 2012, Voyager 1 crossed the heliopause (the boundary of the Sun\'s influence) and entered interstellar space',
+          },
         },
         {
           id: "sp-u6-L5-T3",
@@ -669,6 +792,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "In 1990, Voyager 1 turned its camera back toward Earth from 6 billion km away. Earth appeared as a tiny pale blue dot in a sunbeam. Carl Sagan made it famous.",
+          distractorExplanations: {
+            0: 'In 1990, Voyager 1 turned its camera back toward Earth from 6 billion km away',
+            1: 'In 1990, Voyager 1 turned its camera back toward Earth from 6 billion km away',
+            3: 'In 1990, Voyager 1 turned its camera back toward Earth from 6 billion km away',
+          },
         },
       ],
     },
@@ -693,6 +821,9 @@ export const unit6: Unit = {
           question: "Space telescopes produce clearer images because they orbit above Earth's atmosphere.",
           correctAnswer: true,
           explanation: "Earth's atmosphere distorts light (that's why stars twinkle). Above the atmosphere, telescopes see without any blurring.",
+          distractorExplanations: {
+            1: 'Earth\'s atmosphere distorts light (that\'s why stars twinkle)',
+          },
         },
         {
           id: "sp-u6-L6-Q2",
@@ -706,6 +837,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: "Hubble launched on April 24, 1990. After a mirror fix in 1993, it became one of the most important scientific instruments ever built.",
+          distractorExplanations: {
+            0: 'The correct answer is 1990, not 2021',
+            1: 'The correct answer is 1990, not 1977',
+            2: 'The correct answer is 1990, not 2001',
+          },
         },
         {
           id: "sp-u6-L6-T2",
@@ -733,6 +869,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "JWST observes infrared light, which lets it see through dust clouds, detect the oldest galaxies, and study exoplanet atmospheres. Hubble primarily sees visible light.",
+          distractorExplanations: {
+            0: 'JWST observes infrared light, which lets it see through dust clouds, detect the oldest galaxies, and study exoplanet atmospheres',
+            2: 'JWST observes infrared light, which lets it see through dust clouds, detect the oldest galaxies, and study exoplanet atmospheres',
+            3: 'JWST observes infrared light, which lets it see through dust clouds, detect the oldest galaxies, and study exoplanet atmospheres',
+          },
         },
         {
           id: "sp-u6-L6-T3",
@@ -755,6 +896,9 @@ export const unit6: Unit = {
           question: "JWST orbits Earth like Hubble does.",
           correctAnswer: false,
           explanation: "Hubble orbits Earth at 547 km. JWST orbits the Sun at a point called L2, about 1.5 million km from Earth. This keeps it cold and away from Earth's heat.",
+          distractorExplanations: {
+            0: 'Hubble orbits Earth at 547 km. JWST orbits the Sun at a point called L2, about 1.5 million km from Earth',
+          },
         },
         {
           id: "sp-u6-L6-Q7",
@@ -777,6 +921,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "Light travels at a finite speed. When JWST sees a galaxy 13 billion light-years away, it's seeing light that left 13 billion years ago. It's a window into the past.",
+          distractorExplanations: {
+            0: 'Light travels at a finite speed. When JWST sees a galaxy 13 billion light-years away, it\'s seeing light that left 13 billion years ago',
+            2: 'Light travels at a finite speed. When JWST sees a galaxy 13 billion light-years away, it\'s seeing light that left 13 billion years ago',
+            3: 'Light travels at a finite speed. When JWST sees a galaxy 13 billion light-years away, it\'s seeing light that left 13 billion years ago',
+          },
         },
       ],
     },
@@ -823,6 +972,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "Rosetta orbited Comet 67P and deployed the Philae lander onto its surface in 2014. Landing on a comet was an incredible engineering feat.",
+          distractorExplanations: {
+            0: 'Rosetta orbited Comet 67P and deployed the Philae lander onto its surface in 2014',
+            2: 'Rosetta orbited Comet 67P and deployed the Philae lander onto its surface in 2014',
+            3: 'Rosetta orbited Comet 67P and deployed the Philae lander onto its surface in 2014',
+          },
         },
         {
           id: "sp-u6-L6b-T3",
@@ -836,6 +990,9 @@ export const unit6: Unit = {
           question: "China's Chang'e 4 was the first mission to land on the far side of the Moon.",
           correctAnswer: true,
           explanation: "In January 2019, Chang'e 4 landed on the Moon's far side, the hemisphere that always faces away from Earth. No mission had ever landed there before.",
+          distractorExplanations: {
+            1: 'In January 2019, Chang\'e 4 landed on the Moon\'s far side, the hemisphere that always faces away from Earth',
+          },
         },
         {
           id: "sp-u6-L6b-Q4",
@@ -849,6 +1006,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "ISRO's Mangalyaan (Mars Orbiter Mission) reached Mars orbit in 2014 on its first try, with a budget of about $74 million, less than the cost of making the movie Gravity.",
+          distractorExplanations: {
+            0: 'ISRO\'s Mangalyaan (Mars Orbiter Mission) reached Mars orbit in 2014 on its first try, with a budget of about $74 million, less than the cost of mak...',
+            2: 'ISRO\'s Mangalyaan (Mars Orbiter Mission) reached Mars orbit in 2014 on its first try, with a budget of about $74 million, less than the cost of mak...',
+            3: 'ISRO\'s Mangalyaan (Mars Orbiter Mission) reached Mars orbit in 2014 on its first try, with a budget of about $74 million, less than the cost of mak...',
+          },
         },
         {
           id: "sp-u6-L6b-Q5",
@@ -888,6 +1050,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "Tiangong is China's independently built space station, operational since 2022. It hosts Chinese astronauts (taikonauts) for months-long stays. The ISS continues separately.",
+          distractorExplanations: {
+            0: 'Tiangong is China\'s independently built space station, operational since 2022',
+            2: 'Tiangong is China\'s independently built space station, operational since 2022',
+            3: 'Tiangong is China\'s independently built space station, operational since 2022',
+          },
         },
       ],
     },

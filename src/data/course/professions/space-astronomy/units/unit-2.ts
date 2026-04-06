@@ -29,6 +29,9 @@ export const unit2: Unit = {
           question: "The Sun makes up over 99% of the solar system's total mass.",
           correctAnswer: true,
           explanation: "The Sun is so massive that all 8 planets combined are less than 0.2% of the solar system's mass.",
+          distractorExplanations: {
+            1: 'The Sun is so massive that all 8 planets combined are less than 0.2% of the solar system\'s mass',
+          },
         },
         {
           id: "sp-u2-L1-Q2",
@@ -42,6 +45,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Sun fuses hydrogen into helium in its core at about 27 million degrees Fahrenheit. It's not burning; it's a nuclear reaction.",
+          distractorExplanations: {
+            0: 'The Sun fuses hydrogen into helium in its core at about 27 million degrees Fahrenheit',
+            2: 'The Sun fuses hydrogen into helium in its core at about 27 million degrees Fahrenheit',
+            3: 'The Sun fuses hydrogen into helium in its core at about 27 million degrees Fahrenheit',
+          },
         },
         {
           id: "sp-u2-L1-myth1",
@@ -62,6 +70,9 @@ export const unit2: Unit = {
           question: "The Sun is much larger than Earth.",
           correctAnswer: true,
           explanation: "The Sun is about 109 times wider than Earth. You could fit over a million Earths inside it.",
+          distractorExplanations: {
+            1: 'The Sun is about 109 times wider than Earth',
+          },
         },
         {
           id: "sp-u2-L1-Q3",
@@ -104,6 +115,9 @@ export const unit2: Unit = {
           question: "Solar flares can affect technology on Earth.",
           correctAnswer: true,
           explanation: "Strong solar flares can disrupt GPS, radio communications, and even knock out power grids.",
+          distractorExplanations: {
+            1: 'Strong solar flares can disrupt GPS, radio communications, and even knock out power grids',
+          },
         },
         {
           id: "sp-u2-L1-Q7",
@@ -117,6 +131,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Sun is roughly halfway through its life. It has about 5 billion more years of hydrogen fuel left.",
+          distractorExplanations: {
+            0: 'The Sun is roughly halfway through its life',
+            2: 'The Sun is roughly halfway through its life',
+            3: 'The Sun is roughly halfway through its life',
+          },
         },
         {
           id: "sp-u2-L1-Q8",
@@ -158,6 +177,9 @@ export const unit2: Unit = {
           question: "Venus is the hottest planet in our solar system, even hotter than Mercury.",
           correctAnswer: true,
           explanation: "Venus has a thick atmosphere of carbon dioxide that traps heat. Its surface reaches about 900 degrees Fahrenheit, hotter than Mercury despite being farther from the Sun.",
+          distractorExplanations: {
+            1: 'Venus has a thick atmosphere of carbon dioxide that traps heat',
+          },
         },
         {
           id: "sp-u2-L2-T2",
@@ -195,6 +217,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "Venus's dense carbon dioxide atmosphere creates an extreme greenhouse effect, trapping heat far more effectively than Mercury's nearly nonexistent atmosphere.",
+          distractorExplanations: {
+            0: 'Venus\'s dense carbon dioxide atmosphere creates an extreme greenhouse effect, trapping heat far more effectively than Mercury\'s nearly nonexistent ...',
+            1: 'Venus\'s dense carbon dioxide atmosphere creates an extreme greenhouse effect, trapping heat far more effectively than Mercury\'s nearly nonexistent ...',
+            3: 'Venus\'s dense carbon dioxide atmosphere creates an extreme greenhouse effect, trapping heat far more effectively than Mercury\'s nearly nonexistent ...',
+          },
         },
         {
           id: "sp-u2-L2-T3",
@@ -217,6 +244,9 @@ export const unit2: Unit = {
           question: "Mercury has no atmosphere at all.",
           correctAnswer: false,
           explanation: "Mercury has an extremely thin atmosphere called an exosphere. It's too thin to trap heat, which is why its dark side drops to -290 degrees Fahrenheit.",
+          distractorExplanations: {
+            0: 'Mercury has an extremely thin atmosphere called an exosphere',
+          },
         },
         {
           id: "sp-u2-L2-Q8",
@@ -230,6 +260,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "All rocky planets have solid surfaces you could theoretically stand on. Mercury and Venus have no moons, and their atmospheres vary wildly.",
+          distractorExplanations: {
+            0: 'All rocky planets have solid surfaces you could theoretically stand on',
+            2: 'All rocky planets have solid surfaces you could theoretically stand on',
+            3: 'All rocky planets have solid surfaces you could theoretically stand on',
+          },
         },
       ],
     },
@@ -254,6 +289,9 @@ export const unit2: Unit = {
           question: "Jupiter is the largest planet in our solar system.",
           correctAnswer: true,
           explanation: "Jupiter is so large that about 1,300 Earths could fit inside it. It's truly the king of planets.",
+          distractorExplanations: {
+            1: 'Jupiter is so large that about 1,300 Earths could fit inside it',
+          },
         },
         {
           id: "sp-u2-L3-Q2",
@@ -267,6 +305,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 3,
           explanation: "Gas giants are made mostly of hydrogen and helium, the same elements that make up stars. They just don't have enough mass to ignite fusion.",
+          distractorExplanations: {
+            0: 'Gas giants are made mostly of hydrogen and helium, the same elements that make up stars',
+            1: 'Gas giants are made mostly of hydrogen and helium, the same elements that make up stars',
+            2: 'Gas giants are made mostly of hydrogen and helium, the same elements that make up stars',
+          },
         },
         {
           id: "sp-u2-L3-T2",
@@ -286,6 +329,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Great Red Spot is so large that Earth could fit inside it. It's the biggest storm in the solar system.",
+          distractorExplanations: {
+            0: 'The Great Red Spot is so large that Earth could fit inside it',
+            2: 'The Great Red Spot is so large that Earth could fit inside it',
+            3: 'The Great Red Spot is so large that Earth could fit inside it',
+          },
         },
         {
           id: "sp-u2-L3-Q4",
@@ -301,6 +349,9 @@ export const unit2: Unit = {
           question: "You could stand on Jupiter's surface.",
           correctAnswer: false,
           explanation: "Jupiter has no solid surface. If you fell into it, you'd sink through layers of gas that get denser and hotter with depth.",
+          distractorExplanations: {
+            0: 'Jupiter has no solid surface. If you fell into it, you\'d sink through layers of gas that get denser and hotter with depth',
+          },
         },
         {
           id: "sp-u2-L3-T3",
@@ -357,6 +408,9 @@ export const unit2: Unit = {
           question: "Uranus and Neptune are called ice giants because they're made mostly of ices and slushy materials.",
           correctAnswer: true,
           explanation: "Unlike gas giants (mostly hydrogen/helium), ice giants contain large amounts of water, ammonia, and methane in icy or slushy form.",
+          distractorExplanations: {
+            1: 'Unlike gas giants (mostly hydrogen/helium), ice giants contain large amounts of water, ammonia, and methane in icy or slushy form',
+          },
         },
         {
           id: "sp-u2-L4-Q2",
@@ -370,6 +424,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "Methane gas absorbs red wavelengths of sunlight and reflects blue and green, giving both planets their distinctive color.",
+          distractorExplanations: {
+            0: 'Methane gas absorbs red wavelengths of sunlight and reflects blue and green, giving both planets their distinctive color',
+            2: 'Methane gas absorbs red wavelengths of sunlight and reflects blue and green, giving both planets their distinctive color',
+            3: 'Methane gas absorbs red wavelengths of sunlight and reflects blue and green, giving both planets their distinctive color',
+          },
         },
         {
           id: "sp-u2-L4-T2",
@@ -397,6 +456,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "Neptune's winds exceed 1,200 mph, the fastest of any planet. That's over 1.5 times the speed of sound.",
+          distractorExplanations: {
+            0: 'Neptune\'s winds exceed 1,200 mph, the fastest of any planet',
+            2: 'Neptune\'s winds exceed 1,200 mph, the fastest of any planet',
+            3: 'Neptune\'s winds exceed 1,200 mph, the fastest of any planet',
+          },
         },
         {
           id: "sp-u2-L4-Q5",
@@ -419,6 +483,9 @@ export const unit2: Unit = {
           question: "Multiple spacecraft have orbited Uranus to study it up close.",
           correctAnswer: false,
           explanation: "Only Voyager 2 has visited Uranus, and it was a quick flyby in 1986. No spacecraft has ever orbited it.",
+          distractorExplanations: {
+            0: 'Only Voyager 2 has visited Uranus, and it was a quick flyby in 1986',
+          },
         },
         {
           id: "sp-u2-L4-Q7",
@@ -432,6 +499,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 1,
           explanation: "Ice giants have proportionally more ices (water, ammonia, methane) compared to gas giants, which are dominated by hydrogen and helium.",
+          distractorExplanations: {
+            0: 'Ice giants have proportionally more ices (water, ammonia, methane) compared to gas giants, which are dominated by hydrogen and helium',
+            2: 'Ice giants have proportionally more ices (water, ammonia, methane) compared to gas giants, which are dominated by hydrogen and helium',
+            3: 'Ice giants have proportionally more ices (water, ammonia, methane) compared to gas giants, which are dominated by hydrogen and helium',
+          },
         },
         {
           id: "sp-u2-L4-Q8",
@@ -465,6 +537,9 @@ export const unit2: Unit = {
           question: "Pluto was reclassified as a dwarf planet in 2006.",
           correctAnswer: true,
           explanation: "The International Astronomical Union changed Pluto's status in 2006 because it hasn't cleared its orbital neighborhood of other debris.",
+          distractorExplanations: {
+            1: 'The International Astronomical Union changed Pluto\'s status in 2006 because it hasn\'t cleared its orbital neighborhood of other debris',
+          },
         },
         {
           id: "sp-u2-L5-Q2",
@@ -478,6 +553,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "A planet must orbit the Sun, be round from its own gravity, and have cleared its orbital path. Dwarf planets meet the first two but not the third.",
+          distractorExplanations: {
+            0: 'A planet must orbit the Sun, be round from its own gravity, and have cleared its orbital path',
+            1: 'A planet must orbit the Sun, be round from its own gravity, and have cleared its orbital path',
+            3: 'A planet must orbit the Sun, be round from its own gravity, and have cleared its orbital path',
+          },
         },
         {
           id: "sp-u2-L5-T2",
@@ -499,6 +579,9 @@ export const unit2: Unit = {
           question: "The asteroid belt is so densely packed that spacecraft can barely navigate through it.",
           correctAnswer: false,
           explanation: "Movies exaggerate this. Asteroids in the belt are millions of miles apart on average. Every spacecraft sent through has passed without issue.",
+          distractorExplanations: {
+            0: 'Movies exaggerate this. Asteroids in the belt are millions of miles apart on average',
+          },
         },
         {
           id: "sp-u2-L5-Q5",
@@ -512,6 +595,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "Eris is a dwarf planet beyond Neptune. Titan and Ganymede are moons (of Saturn and Jupiter). Phobos is a moon of Mars.",
+          distractorExplanations: {
+            0: 'Eris is a dwarf planet beyond Neptune',
+            1: 'Eris is a dwarf planet beyond Neptune',
+            3: 'Eris is a dwarf planet beyond Neptune',
+          },
         },
         {
           id: "sp-u2-L5-T3",
@@ -540,6 +628,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 3,
           explanation: "Ceres is the largest object in the asteroid belt and is classified as a dwarf planet. It's about 590 miles across.",
+          distractorExplanations: {
+            0: 'Ceres is the largest object in the asteroid belt and is classified as a dwarf planet',
+            1: 'Ceres is the largest object in the asteroid belt and is classified as a dwarf planet',
+            2: 'Ceres is the largest object in the asteroid belt and is classified as a dwarf planet',
+          },
         },
         {
           id: "sp-u2-L5-Q8",
@@ -580,6 +673,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "Saturn leads with over 140 confirmed moons. Larger planets have stronger gravity, which helps them capture and retain more moons.",
+          distractorExplanations: {
+            0: 'Saturn leads with over 140 confirmed moons',
+            1: 'Saturn leads with over 140 confirmed moons',
+            3: 'Saturn leads with over 140 confirmed moons',
+          },
         },
         {
           id: "sp-u2-L6-Q2",
@@ -587,6 +685,9 @@ export const unit2: Unit = {
           question: "Some moons in our solar system are larger than the planet Mercury.",
           correctAnswer: true,
           explanation: "Ganymede (Jupiter's largest moon) and Titan (Saturn's largest moon) are both bigger than Mercury.",
+          distractorExplanations: {
+            1: 'Ganymede (Jupiter\'s largest moon) and Titan (Saturn\'s largest moon) are both bigger than Mercury',
+          },
         },
         {
           id: "sp-u2-L6-T2",
@@ -607,6 +708,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "Liquid water is a key ingredient for life as we know it. Europa's subsurface ocean is kept liquid by tidal heating from Jupiter's gravity.",
+          distractorExplanations: {
+            0: 'Liquid water is a key ingredient for life as we know it',
+            1: 'Liquid water is a key ingredient for life as we know it',
+            3: 'Liquid water is a key ingredient for life as we know it',
+          },
         },
         {
           id: "sp-u2-L6-Q4",
@@ -646,6 +752,9 @@ export const unit2: Unit = {
           question: "Mars has 2 very small moons called Phobos and Deimos.",
           correctAnswer: true,
           explanation: "Phobos and Deimos are tiny, irregularly shaped moons. Phobos is only about 14 miles across.",
+          distractorExplanations: {
+            1: 'Phobos and Deimos are tiny, irregularly shaped moons',
+          },
         },
         {
           id: "sp-u2-L6-Q8",
@@ -659,6 +768,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 2,
           explanation: "Jupiter's powerful gravity constantly squeezes and stretches Europa, generating enough heat to keep its ocean liquid beneath the ice.",
+          distractorExplanations: {
+            0: 'Jupiter\'s powerful gravity constantly squeezes and stretches Europa, generating enough heat to keep its ocean liquid beneath the ice',
+            1: 'Jupiter\'s powerful gravity constantly squeezes and stretches Europa, generating enough heat to keep its ocean liquid beneath the ice',
+            3: 'Jupiter\'s powerful gravity constantly squeezes and stretches Europa, generating enough heat to keep its ocean liquid beneath the ice',
+          },
         },
       ],
     },

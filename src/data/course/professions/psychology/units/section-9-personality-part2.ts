@@ -34,6 +34,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Self-efficacy is your belief in your ability to succeed at a specific task.',
             correctAnswer: true,
             explanation: 'Bandura defined self-efficacy as confidence in your capacity to handle particular challenges.',
+            distractorExplanations: {
+              1: 'Bandura defined self-efficacy as confidence in your capacity to handle particular challenges.',
+            },
           },
           {
             id: 'psy-sec9-u6-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'High self-efficacy leads to greater effort and persistence because you believe success is possible.',
+            distractorExplanations: {
+              0: 'High self-efficacy leads to greater effort and persistence because you believe success is possi',
+              2: 'High self-efficacy leads to greater effort and persistence because you believe success is possi',
+              3: 'High self-efficacy leads to greater effort and persistence because you believe success is possi',
+            },
           },
           {
             id: 'psy-sec9-u6-L1-T2',
@@ -112,6 +120,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Mastery experiences (starting small and succeeding) are the strongest way to build self-efficacy.',
+            distractorExplanations: {
+              0: 'Mastery experiences (starting small and succeeding) are the strongest way to build self-efficac',
+              2: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              3: 'Mastery experiences (starting small and succeeding) are the strongest way to build self-efficac',
+            },
           },
         ],
       },
@@ -136,6 +149,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Someone with an internal locus of control believes their own actions determine their outcomes.',
             correctAnswer: true,
             explanation: 'Internal locus of control means you see yourself as the driver of your success or failure.',
+            distractorExplanations: {
+              1: 'Internal locus of control means you see yourself as the driver of your success or failure.',
+            },
           },
           {
             id: 'psy-sec9-u6-L2-Q2',
@@ -149,6 +165,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Blaming external factors like the teacher reflects an external locus of control.',
+            distractorExplanations: {
+              0: 'Blaming external factors like the teacher reflects an external locus of control.',
+              2: 'Blaming external factors like the teacher reflects an external locus of control.',
+              3: 'Blaming external factors like the teacher reflects an external locus of control.',
+            },
           },
           {
             id: 'psy-sec9-u6-L2-T2',
@@ -163,6 +184,9 @@ export const psySection9Part2: Unit[] = [
             question: 'People with an internal locus of control tend to cope better with stress.',
             correctAnswer: true,
             explanation: 'Believing you can influence outcomes leads to more proactive coping strategies.',
+            distractorExplanations: {
+              1: 'Believing you can influence outcomes leads to more proactive coping strategies.',
+            },
           },
           {
             id: 'psy-sec9-u6-L2-Q4',
@@ -198,6 +222,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'If you believe everything is your fault, you may feel excessive guilt about uncontrollable events.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+              2: 'If you believe everything is your fault, you may feel excessive guilt about uncontrollable even',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u6-L2-Q6',
@@ -212,6 +241,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'They acknowledge external factors (economy) while still taking personal action. This balanced view is the healthiest.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "purely" overstates the case — the reality is more nuanced.',
+              1: 'This is too absolute; the word "purely" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -236,6 +270,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Learned helplessness occurs when someone stops trying because they believe nothing they do matters.',
             correctAnswer: true,
             explanation: 'After repeated experiences of uncontrollability, people learn to feel helpless and give up.',
+            distractorExplanations: {
+              1: 'After repeated experiences of uncontrollability, people learn to feel helpless and give up.',
+            },
           },
           {
             id: 'psy-sec9-u6-L3-Q2',
@@ -249,6 +286,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Seligman\'s experiments showed that experiencing uncontrollable events leads to passivity and helplessness.',
+            distractorExplanations: {
+              0: 'Seligman\'s experiments showed that experiencing uncontrollable events leads to passivity and he',
+              1: 'Seligman\'s experiments showed that experiencing uncontrollable events leads to passivity and he',
+              3: 'Seligman\'s experiments showed that experiencing uncontrollable events leads to passivity and he',
+            },
           },
           {
             id: 'psy-sec9-u6-L3-T2',
@@ -263,6 +305,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Seligman proposed that learned helplessness can serve as a model for understanding depression.',
             correctAnswer: true,
             explanation: 'The passivity and hopelessness of learned helplessness closely resemble key features of depression.',
+            distractorExplanations: {
+              1: 'The passivity and hopelessness of learned helplessness closely resemble key features of depression.',
+            },
           },
           {
             id: 'psy-sec9-u6-L3-Q4',
@@ -307,6 +352,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The student has learned to feel helpless about math after repeated failure. They\'ve stopped trying even when help is available.',
+            distractorExplanations: {
+              0: 'The student has learned to feel helpless about math after repeated failure.',
+              1: 'The student has learned to feel helpless about math after repeated failure.',
+              3: 'The student has learned to feel helpless about math after repeated failure.',
+            },
           },
         ],
       },
@@ -331,6 +381,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Reciprocal determinism says person, behavior, and environment all influence each other.',
             correctAnswer: true,
             explanation: 'The three factors form a loop: each one shapes and is shaped by the other two.',
+            distractorExplanations: {
+              1: 'The three factors form a loop: each one shapes and is shaped by the other two.',
+            },
           },
           {
             id: 'psy-sec9-u6-L4-Q2',
@@ -365,6 +418,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Behaviorism sees the environment as one-directional. Reciprocal determinism says people also choose and change their environments.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'Behaviorism sees the environment as one-directional.',
+            },
           },
           {
             id: 'psy-sec9-u6-L4-Q4',
@@ -386,6 +444,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Reciprocal determinism bridges the gap between trait theories and behaviorism.',
             correctAnswer: true,
             explanation: 'It combines internal factors (traits, cognition) with external factors (environment, behavior) into one interacting system.',
+            distractorExplanations: {
+              1: 'It combines internal factors (traits, cognition) with external factors (environment, behavior) into one interacting system.',
+            },
           },
           {
             id: 'psy-sec9-u6-L4-Q6',
@@ -400,6 +461,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Person (confidence) leads to behavior (joining the team), which changes the environment (feedback), which reinforces the person (more confidence). All three interact.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              1: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'Person (confidence) leads to behavior (joining the team), which changes the environment (feedba',
+            },
           },
         ],
       },
@@ -543,6 +609,9 @@ export const psySection9Part2: Unit[] = [
             question: 'The NEO-PI-R is a self-report inventory that measures the Big Five personality traits.',
             correctAnswer: true,
             explanation: 'The NEO-PI-R was designed specifically to assess the 5 dimensions of the Big Five model.',
+            distractorExplanations: {
+              1: 'The NEO-PI-R was designed specifically to assess the 5 dimensions of the Big Five model.',
+            },
           },
           {
             id: 'psy-sec9-u7-L1-Q2',
@@ -556,6 +625,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Self-reports are efficient, standardized, and produce objective, numerical scores that can be compared across people.',
+            distractorExplanations: {
+              0: 'Self-reports are efficient, standardized, and produce objective, numerical scores that can be c',
+              2: 'This is too absolute; the word "impossible" overstates the case — the reality is more nuanced.',
+              3: 'Self-reports are efficient, standardized, and produce objective, numerical scores that can be c',
+            },
           },
           {
             id: 'psy-sec9-u7-L1-T2',
@@ -583,6 +657,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Validity scales include items designed to detect careless, inconsistent, or deliberately misleading responses.',
+            distractorExplanations: {
+              0: 'Validity scales include items designed to detect careless, inconsistent, or deliberately mislea',
+              2: 'Validity scales include items designed to detect careless, inconsistent, or deliberately mislea',
+              3: 'This is too absolute; the word "impossible" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u7-L1-T3',
@@ -618,6 +697,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Claiming to have never lied is a classic sign of social desirability bias. The validity scales would flag this.',
+            distractorExplanations: {
+              0: 'Claiming to have never lied is a classic sign of social desirability bias.',
+              2: 'Claiming to have never lied is a classic sign of social desirability bias.',
+              3: 'This describes the opposite of what actually happens; claiming to have never lied is a classic sign of social desirability bias.',
+            },
           },
         ],
       },
@@ -642,6 +726,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Projective tests assume people reveal unconscious feelings through their interpretations of ambiguous images.',
             correctAnswer: true,
             explanation: 'The theory is that ambiguous stimuli draw out hidden thoughts and emotions the person may not be aware of.',
+            distractorExplanations: {
+              1: 'The theory is that ambiguous stimuli draw out hidden thoughts and emotions the person may not be aware of.',
+            },
           },
           {
             id: 'psy-sec9-u7-L2-Q2',
@@ -669,6 +756,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The TAT presents scenes and asks for narratives. The stories reveal themes related to the person\'s inner world.',
+            distractorExplanations: {
+              0: 'The TAT presents scenes and asks for narratives.',
+              1: 'The TAT presents scenes and asks for narratives.',
+              3: 'The TAT presents scenes and asks for narratives.',
+            },
           },
           {
             id: 'psy-sec9-u7-L2-Q4',
@@ -705,6 +797,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Different interpreters often disagree on scoring, and the tests don\'t consistently measure what they claim to measure.',
+            distractorExplanations: {
+              0: 'Different interpreters often disagree on scoring, and the tests don\'t consistently measure what',
+              2: 'Different interpreters often disagree on scoring, and the tests don\'t consistently measure what',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u7-L2-Q6',
@@ -719,6 +816,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'When two experts reach different conclusions from the same data, the test has a reliability problem.',
+            distractorExplanations: {
+              1: 'When two experts reach different conclusions from the same data, the test has a reliability pro',
+              2: 'When two experts reach different conclusions from the same data, the test has a reliability pro',
+              3: 'When two experts reach different conclusions from the same data, the test has a reliability pro',
+            },
           },
         ],
       },
@@ -743,6 +845,9 @@ export const psySection9Part2: Unit[] = [
             question: 'A test can be valid without being reliable.',
             correctAnswer: false,
             explanation: 'If results aren\'t consistent (unreliable), the test can\'t be accurately measuring anything (not valid).',
+            distractorExplanations: {
+              0: 'If results aren\'t consistent (unreliable), the test can\'t be accurately measuring anything (not valid).',
+            },
           },
           {
             id: 'psy-sec9-u7-L3-Q2',
@@ -756,6 +861,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'It gives consistent results (reliable) but the results are consistently wrong (not valid).',
+            distractorExplanations: {
+              0: 'It gives consistent results (reliable) but the results are consistently wrong (not valid).',
+              2: 'It gives consistent results (reliable) but the results are consistently wrong (not valid).',
+              3: 'It gives consistent results (reliable) but the results are consistently wrong (not valid).',
+            },
           },
           {
             id: 'psy-sec9-u7-L3-T2',
@@ -804,6 +914,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The test scores align with real-world behaviors expected of extraverts, supporting that it measures the construct it claims.',
+            distractorExplanations: {
+              0: 'The test scores align with real-world behaviors expected of extraverts, supporting that it meas',
+              1: 'The test scores align with real-world behaviors expected of extraverts, supporting that it meas',
+              3: 'The test scores align with real-world behaviors expected of extraverts, supporting that it meas',
+            },
           },
           {
             id: 'psy-sec9-u7-L3-Q6',
@@ -818,6 +933,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Checking whether a test predicts future outcomes tests its predictive validity.',
+            distractorExplanations: {
+              0: 'Checking whether a test predicts future outcomes tests its predictive validity.',
+              1: 'Checking whether a test predicts future outcomes tests its predictive validity.',
+              3: 'Checking whether a test predicts future outcomes tests its predictive validity.',
+            },
           },
         ],
       },
@@ -842,6 +962,9 @@ export const psySection9Part2: Unit[] = [
             question: 'The MBTI categorizes people into 16 personality types.',
             correctAnswer: true,
             explanation: 'Four dimensions with two poles each creates 16 possible combinations, like INTJ or ESFP.',
+            distractorExplanations: {
+              1: 'Four dimensions with two poles each creates 16 possible combinations, like INTJ or ESFP.',
+            },
           },
           {
             id: 'psy-sec9-u7-L4-Q2',
@@ -855,6 +978,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The MBTI uses 4 dimensions. The 16 types come from combining the two poles of each dimension.',
+            distractorExplanations: {
+              0: 'The MBTI uses 4 dimensions. The 16 types come from combining the two poles of each dimension.',
+              2: 'The MBTI uses 4 dimensions. The 16 types come from combining the two poles of each dimension.',
+              3: 'The MBTI uses 4 dimensions. The 16 types come from combining the two poles of each dimension.',
+            },
           },
           {
             id: 'psy-sec9-u7-L4-T2',
@@ -869,6 +997,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Up to 50 percent of people get a different MBTI type when they retake the test.',
             correctAnswer: true,
             explanation: 'This poor test-retest reliability is one of the strongest scientific criticisms of the MBTI.',
+            distractorExplanations: {
+              1: 'This poor test-retest reliability is one of the strongest scientific criticisms of the MBTI.',
+            },
           },
           {
             id: 'psy-sec9-u7-L4-Q4',
@@ -913,6 +1044,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Using a test with poor reliability for important decisions like promotions is not scientifically justified.',
+            distractorExplanations: {
+              0: 'Using a test with poor reliability for important decisions like promotions is not scientificall',
+              2: 'Using a test with poor reliability for important decisions like promotions is not scientificall',
+              3: 'Using a test with poor reliability for important decisions like promotions is not scientificall',
+            },
           },
         ],
       },
@@ -1052,6 +1188,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Individualistic cultures place high value on personal achievement and independence.',
             correctAnswer: true,
             explanation: 'In individualistic cultures, standing out and personal goals are celebrated.',
+            distractorExplanations: {
+              1: 'In individualistic cultures, standing out and personal goals are celebrated.',
+            },
           },
           {
             id: 'psy-sec9-u8-L1-Q2',
@@ -1087,6 +1226,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Collectivistic cultures value group harmony and prioritizing others over self.',
+            distractorExplanations: {
+              0: 'Collectivistic cultures value group harmony and prioritizing others over self.',
+              2: 'Collectivistic cultures value group harmony and prioritizing others over self.',
+              3: 'Collectivistic cultures value group harmony and prioritizing others over self.',
+            },
           },
           {
             id: 'psy-sec9-u8-L1-Q4',
@@ -1101,6 +1245,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'In collectivistic cultures, modesty and not drawing attention to individual success is valued.',
+            distractorExplanations: {
+              0: 'In collectivistic cultures, modesty and not drawing attention to individual success is valued.',
+              2: 'In collectivistic cultures, modesty and not drawing attention to individual success is valued.',
+              3: 'In collectivistic cultures, modesty and not drawing attention to individual success is valued.',
+            },
           },
           {
             id: 'psy-sec9-u8-L1-T3',
@@ -1115,6 +1264,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Most cultures are purely individualistic or purely collectivistic with no overlap.',
             correctAnswer: false,
             explanation: 'Most cultures contain elements of both individualism and collectivism. It\'s a spectrum, not an either/or.',
+            distractorExplanations: {
+              0: 'Most cultures contain elements of both individualism and collectivism. It\'s a spectrum, not an either/or.',
+            },
           },
           {
             id: 'psy-sec9-u8-L1-Q6',
@@ -1128,6 +1280,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Culture doesn\'t determine personality, but it shapes which traits are encouraged, rewarded, and expressed.',
+            distractorExplanations: {
+              0: 'Culture doesn\'t determine personality, but it shapes which traits are encouraged, rewarded, and',
+              2: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -1152,6 +1309,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Cross-cultural personality differences describe average group patterns, not rules for individuals.',
             correctAnswer: true,
             explanation: 'There is huge variation within any culture. Group averages don\'t predict individual personalities.',
+            distractorExplanations: {
+              1: 'There is huge variation within any culture. Group averages don\'t predict individual personalities.',
+            },
           },
           {
             id: 'psy-sec9-u8-L2-Q2',
@@ -1165,6 +1325,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Cross-cultural differences describe averages. Many individuals within any culture don\'t match the pattern.',
+            distractorExplanations: {
+              0: 'Cross-cultural differences describe averages.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'Cross-cultural differences describe averages.',
+            },
           },
           {
             id: 'psy-sec9-u8-L2-T2',
@@ -1215,6 +1380,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Cultural bias in test design, translation issues, and different social norms can all affect results.',
+            distractorExplanations: {
+              0: 'This describes the opposite of what actually happens; cultural bias in test design, translation issues, and different social norms can all affect res',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'Cultural bias in test design, translation issues, and different social norms can all affect res',
+            },
           },
           {
             id: 'psy-sec9-u8-L2-Q6',
@@ -1229,6 +1399,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Not volunteering answers can reflect cultural values of modesty and group harmony, not a lack of knowledge.',
+            distractorExplanations: {
+              0: 'Not volunteering answers can reflect cultural values of modesty and group harmony, not a lack o',
+              1: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              3: 'This describes the opposite of what actually happens; not volunteering answers can reflect cultural values of modesty and group harmony, not a lack o',
+            },
           },
         ],
       },
@@ -1253,6 +1428,9 @@ export const psySection9Part2: Unit[] = [
             question: 'The Big Five personality structure has been found across many different cultures and languages.',
             correctAnswer: true,
             explanation: 'Cross-cultural research supports the universality of the 5 broad trait dimensions.',
+            distractorExplanations: {
+              1: 'Cross-cultural research supports the universality of the 5 broad trait dimensions.',
+            },
           },
           {
             id: 'psy-sec9-u8-L3-Q2',
@@ -1266,6 +1444,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Universal means the structure exists everywhere, not that everyone has identical scores or expressions.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "everyone" overstates the case — the reality is more nuanced.',
+              2: 'Universal means the structure exists everywhere, not that everyone has identical scores or expr',
+              3: 'Research shows a meaningful effect exists here, not the absence of one.',
+            },
           },
           {
             id: 'psy-sec9-u8-L3-T2',
@@ -1279,6 +1462,9 @@ export const psySection9Part2: Unit[] = [
             question: 'All personality concepts from every culture can be perfectly explained by the Big Five model.',
             correctAnswer: false,
             explanation: 'Some culture-specific personality concepts don\'t fit neatly into the Big Five framework.',
+            distractorExplanations: {
+              0: 'Some culture-specific personality concepts don\'t fit neatly into the Big Five framework.',
+            },
           },
           {
             id: 'psy-sec9-u8-L3-Q4',
@@ -1313,6 +1499,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The consensus is that basic trait dimensions are universal, but culture profoundly shapes how they show up.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+              1: 'Research shows a meaningful effect exists here, not the absence of one.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u8-L3-Q6',
@@ -1327,6 +1518,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Good cross-cultural research adapts methods to fit the culture rather than forcing a single framework.',
+            distractorExplanations: {
+              0: 'Good cross-cultural research adapts methods to fit the culture rather than forcing a single fra',
+              1: 'This describes the opposite of what actually happens; good cross-cultural research adapts methods to fit the culture rather than forcing a single fra',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -1470,6 +1666,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Having a strong personality trait automatically means you have a personality disorder.',
             correctAnswer: false,
             explanation: 'A disorder requires the pattern to be extreme, rigid, and causing significant distress or impairment.',
+            distractorExplanations: {
+              0: 'A disorder requires the pattern to be extreme, rigid, and causing significant distress or impairment.',
+            },
           },
           {
             id: 'psy-sec9-u9-L1-Q2',
@@ -1483,6 +1682,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The key difference is rigidity, extremity, and functional impairment, not the presence of a unique trait.',
+            distractorExplanations: {
+              0: 'This describes the opposite of what actually happens; the key difference is rigidity, extremity, and functional impairment, not the presence of a uni',
+              2: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u9-L1-T2',
@@ -1496,6 +1700,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Personality disorders typically develop suddenly in middle age.',
             correctAnswer: false,
             explanation: 'Personality disorders are long-standing patterns that usually emerge in adolescence or early adulthood.',
+            distractorExplanations: {
+              0: 'Personality disorders are long-standing patterns that usually emerge in adolescence or early adulthood.',
+            },
           },
           {
             id: 'psy-sec9-u9-L1-Q4',
@@ -1524,6 +1731,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'When a pattern feels like "just who I am" rather than a problem, the motivation to change is low.',
+            distractorExplanations: {
+              0: 'This describes the opposite of what actually happens; when a pattern feels like "just who I am" rather than a problem, the motivation to change is lo',
+              2: 'This describes the opposite of what actually happens; when a pattern feels like "just who I am" rather than a problem, the motivation to change is lo',
+              3: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec9-u9-L1-Q6',
@@ -1538,6 +1750,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Without significant distress or impairment in functioning, even a strong trait isn\'t a disorder.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              2: 'Without significant distress or impairment in functioning, even a strong trait isn\'t a disorder.',
+              3: 'Without significant distress or impairment in functioning, even a strong trait isn\'t a disorder.',
+            },
           },
         ],
       },
@@ -1562,6 +1779,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Cluster A personality disorders are characterized by odd or eccentric behavior.',
             correctAnswer: true,
             explanation: 'Cluster A includes paranoid, schizoid, and schizotypal personality disorders, all marked by unusual or eccentric patterns.',
+            distractorExplanations: {
+              1: 'Cluster A includes paranoid, schizoid, and schizotypal personality disorders, all marked by unusual or eccentric patterns.',
+            },
           },
           {
             id: 'psy-sec9-u9-L2-Q2',
@@ -1611,6 +1831,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'OCPD is in Cluster C (anxious/fearful). It\'s different from OCD, which is an anxiety-related disorder.',
+            distractorExplanations: {
+              0: 'OCPD is in Cluster C (anxious/fearful).',
+              1: 'OCPD is in Cluster C (anxious/fearful).',
+              3: 'This describes the opposite of what actually happens; oCPD is in Cluster C (anxious/fearful).',
+            },
           },
           {
             id: 'psy-sec9-u9-L2-T3',
@@ -1639,6 +1864,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The combination of desire for connection and fear of rejection fits avoidant personality disorder in Cluster C.',
+            distractorExplanations: {
+              0: 'The combination of desire for connection and fear of rejection fits avoidant personality disord',
+              1: 'The combination of desire for connection and fear of rejection fits avoidant personality disord',
+              3: 'The combination of desire for connection and fear of rejection fits avoidant personality disord',
+            },
           },
         ],
       },
@@ -1663,6 +1893,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Fear of abandonment is a key feature of borderline personality disorder.',
             correctAnswer: true,
             explanation: 'Intense fear of being abandoned drives much of the emotional instability and relationship difficulties in BPD.',
+            distractorExplanations: {
+              1: 'Intense fear of being abandoned drives much of the emotional instability and relationship difficulties in BPD.',
+            },
           },
           {
             id: 'psy-sec9-u9-L3-Q2',
@@ -1676,6 +1909,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Rapid cycling between idealizing and devaluing relationships is a hallmark of BPD.',
+            distractorExplanations: {
+              0: 'Rapid cycling between idealizing and devaluing relationships is a hallmark of BPD.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'This describes the opposite of what actually happens; rapid cycling between idealizing and devaluing relationships is a hallmark of BPD.',
+            },
           },
           {
             id: 'psy-sec9-u9-L3-T2',
@@ -1726,6 +1964,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'BPD involves an unstable, shifting identity. NPD involves a grandiose exterior hiding fragile self-worth.',
+            distractorExplanations: {
+              0: 'BPD involves an unstable, shifting identity.',
+              2: 'BPD involves an unstable, shifting identity.',
+              3: 'BPD involves an unstable, shifting identity.',
+            },
           },
           {
             id: 'psy-sec9-u9-L3-Q6',
@@ -1740,6 +1983,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Needing admiration, reacting with rage to criticism, and grandiose self-description are hallmarks of NPD.',
+            distractorExplanations: {
+              0: 'Needing admiration, reacting with rage to criticism, and grandiose self-description are hallmar',
+              1: 'Needing admiration, reacting with rage to criticism, and grandiose self-description are hallmar',
+              3: 'Needing admiration, reacting with rage to criticism, and grandiose self-description are hallmar',
+            },
           },
         ],
       },
@@ -1764,6 +2012,9 @@ export const psySection9Part2: Unit[] = [
             question: 'Antisocial personality disorder involves a persistent disregard for the rights of others.',
             correctAnswer: true,
             explanation: 'The core feature of ASPD is repeatedly violating others\' rights without guilt or remorse.',
+            distractorExplanations: {
+              1: 'The core feature of ASPD is repeatedly violating others\' rights without guilt or remorse.',
+            },
           },
           {
             id: 'psy-sec9-u9-L4-Q2',
@@ -1777,6 +2028,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'ASPD requires being at least 18 years old, with a history of conduct problems before age 15.',
+            distractorExplanations: {
+              0: 'ASPD requires being at least 18 years old, with a history of conduct problems before age 15.',
+              2: 'ASPD requires being at least 18 years old, with a history of conduct problems before age 15.',
+              3: 'ASPD requires being at least 18 years old, with a history of conduct problems before age 15.',
+            },
           },
           {
             id: 'psy-sec9-u9-L4-T2',
@@ -1791,6 +2047,9 @@ export const psySection9Part2: Unit[] = [
             question: 'All people with antisocial personality disorder are psychopaths.',
             correctAnswer: false,
             explanation: 'Psychopathy is a subset of ASPD. ASPD focuses on behavioral patterns, while psychopathy adds emotional coldness and manipulation.',
+            distractorExplanations: {
+              0: 'Psychopathy is a subset of ASPD. ASPD focuses on behavioral patterns, while psychopathy adds emotional coldness and manipulation.',
+            },
           },
           {
             id: 'psy-sec9-u9-L4-Q4',
@@ -1833,6 +2092,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'They\'re over 18, show persistent rule-violation and deceit since before age 15, and lack remorse. This fits ASPD criteria.',
+            distractorExplanations: {
+              0: 'They\'re over 18, show persistent rule-violation and deceit since before age 15, and lack remors',
+              2: 'This describes the opposite of what actually happens; they\'re over 18, show persistent rule-violation and deceit since before age 15, and lack remors',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -2013,6 +2277,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The NEO-PI-R is based on the Big Five model and has strong reliability and validity across cultures.',
+            distractorExplanations: {
+              0: 'The NEO-PI-R is based on the Big Five model and has strong reliability and validity across cult',
+              1: 'The NEO-PI-R is based on the Big Five model and has strong reliability and validity across cult',
+              2: 'The NEO-PI-R is based on the Big Five model and has strong reliability and validity across cult',
+            },
           },
           {
             id: 'psy-sec9-u10-L1-Q4',
@@ -2040,6 +2309,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Disorders are defined by patterns that are extreme, rigid, and cause significant distress or impairment.',
+            distractorExplanations: {
+              0: 'Disorders are defined by patterns that are extreme, rigid, and cause significant distress or im',
+              2: 'Disorders are defined by patterns that are extreme, rigid, and cause significant distress or im',
+              3: 'Genetic is a different concept that does not explain this particular phenomenon.',
+            },
           },
           {
             id: 'psy-sec9-u10-L1-Q6',
@@ -2054,6 +2328,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Examining how beliefs, behavior, and environment interact is the core of Bandura\'s reciprocal determinism.',
+            distractorExplanations: {
+              0: 'Examining how beliefs, behavior, and environment interact is the core of Bandura\'s reciprocal d',
+              1: 'Examining how beliefs, behavior, and environment interact is the core of Bandura\'s reciprocal d',
+              3: 'Examining how beliefs, behavior, and environment interact is the core of Bandura\'s reciprocal d',
+            },
           },
         ],
       },
@@ -2085,6 +2364,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Repeated discouragement prevented mastery experiences, leading to low self-efficacy for challenging tasks.',
+            distractorExplanations: {
+              0: 'Repeated discouragement prevented mastery experiences, leading to low self-efficacy for challen',
+              2: 'Repeated discouragement prevented mastery experiences, leading to low self-efficacy for challen',
+              3: 'Repeated discouragement prevented mastery experiences, leading to low self-efficacy for challen',
+            },
           },
           {
             id: 'psy-sec9-u10-L2-Q2',
@@ -2099,6 +2383,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Unconditional positive regard, real/ideal self, and trusting the client\'s growth potential are Rogers\' humanistic approach.',
+            distractorExplanations: {
+              0: 'Unconditional positive regard, real/ideal self, and trusting the client\'s growth potential are ',
+              1: 'Unconditional positive regard, real/ideal self, and trusting the client\'s growth potential are ',
+              3: 'Unconditional positive regard, real/ideal self, and trusting the client\'s growth potential are ',
+            },
           },
           {
             id: 'psy-sec9-u10-L2-T2',
@@ -2120,6 +2409,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Intense, unstable relationships, chronic emptiness, and fear of abandonment are features of borderline PD in Cluster B.',
+            distractorExplanations: {
+              0: 'Intense, unstable relationships, chronic emptiness, and fear of abandonment are features of bor',
+              2: 'Intense, unstable relationships, chronic emptiness, and fear of abandonment are features of bor',
+              3: 'This describes the opposite of what actually happens; intense, unstable relationships, chronic emptiness, and fear of abandonment are features of bor',
+            },
           },
           {
             id: 'psy-sec9-u10-L2-Q4',
@@ -2133,6 +2427,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Finding the same structure across many cultures supports the universality of the Big Five dimensions.',
+            distractorExplanations: {
+              0: 'Research shows a meaningful effect exists here, not the absence of one.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'Finding the same structure across many cultures supports the universality of the Big Five dimen',
+            },
           },
           {
             id: 'psy-sec9-u10-L2-Q5',
@@ -2161,6 +2460,11 @@ export const psySection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Trait approach would measure the behavior. Psychodynamic approach would explore unconscious motivations behind it.',
+            distractorExplanations: {
+              0: 'Trait approach would measure the behavior.',
+              2: 'Trait approach would measure the behavior.',
+              3: 'Trait approach would measure the behavior.',
+            },
           },
         ],
       },

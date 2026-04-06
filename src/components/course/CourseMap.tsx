@@ -15,6 +15,8 @@ import { OutOfHeartsModal } from '@/components/ui/OutOfHeartsModal';
 import { LessonNode } from './LessonNode';
 import { UnitHeroHeader, HERO_COMPACT_HEIGHT } from './UnitHeroHeader';
 import { useIsDark } from '@/store/useThemeStore';
+import { useMasteryStore } from '@/store/useMasteryStore';
+import { getDecayedQuestions } from '@/lib/review-engine';
 
 type JumpModalType =
   | { kind: 'within-unit'; unitIndex: number; lessonIndex: number }
@@ -259,6 +261,20 @@ export function CourseMap() {
   const isGuest = status !== 'authenticated';
   const { isProUser } = useSubscription();
   const hasHearts = useHeartsStore((s) => s.hasHearts);
+  const masteryEvents = useMasteryStore((s) => s.events);
+
+  // Build set of lesson IDs that need spaced review
+  const reviewLessonIds = useMemo(() => {
+    const decayed = getDecayedQuestions(masteryEvents, courseData);
+    const ids = new Set<string>();
+    for (const c of decayed) {
+      const unit = courseData[c.unitIndex];
+      const lesson = unit?.lessons?.[c.lessonIndex];
+      if (lesson) ids.add(lesson.id);
+    }
+    return ids;
+  }, [masteryEvents, courseData]);
+
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const [showOutOfHearts, setShowOutOfHearts] = useState(false);
   const [jumpModal, setJumpModal] = useState<JumpModalType | null>(null);
@@ -739,6 +755,7 @@ export function CourseMap() {
                         state={state}
                         stars={lessonProgress?.stars}
                         golden={lessonProgress?.golden}
+                        needsReview={reviewLessonIds.has(lesson.id)}
                         index={lessonIndex}
                         onClick={() => handleLessonClick(unitIndex, lessonIndex, state, lessonProgress)}
                         theme={theme}

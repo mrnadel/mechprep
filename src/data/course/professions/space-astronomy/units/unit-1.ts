@@ -31,6 +31,9 @@ export const unit1: Unit = {
           question: "Earth is moving through space right now.",
           correctAnswer: true,
           explanation: "Yes! Earth orbits the Sun at about 67,000 mph. You're a space traveler and always have been.",
+          distractorExplanations: {
+            1: 'Earth orbits the Sun at about 67,000 mph',
+          },
         },
         {
           id: "sp-u1-L1-Q2",
@@ -44,6 +47,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Sun is a star, just like the ones you see at night. It's just much, much closer to us.",
+          distractorExplanations: {
+            0: 'The Sun is a star, just like the ones you see at night',
+            2: 'The Sun is a star, just like the ones you see at night',
+            3: 'The Sun is a star, just like the ones you see at night',
+          },
           diagram: spaceDiagrams['sp-u1-L1-Q2'],
         },
         {
@@ -87,6 +95,9 @@ export const unit1: Unit = {
           question: "The Milky Way contains about 200 billion stars.",
           correctAnswer: true,
           explanation: "About 200 billion stars, and many of them have their own planets. The numbers in space are staggering.",
+          distractorExplanations: {
+            1: 'About 200 billion stars, and many of them have their own planets',
+          },
         },
         {
           id: "sp-u1-L1-Q6",
@@ -119,6 +130,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "Stars are huge, but they're so far away that their light appears as a single point to our eyes.",
+          distractorExplanations: {
+            1: 'Stars are huge, but they\'re so far away that their light appears as a single point to our eyes',
+            2: 'Stars are huge, but they\'re so far away that their light appears as a single point to our eyes',
+            3: 'Stars are huge, but they\'re so far away that their light appears as a single point to our eyes',
+          },
           diagram: spaceDiagrams['sp-u1-L1-Q8'],
         },
       ],
@@ -152,6 +168,9 @@ export const unit1: Unit = {
           question: "Stars appear to twinkle, but planets usually don't.",
           correctAnswer: true,
           explanation: "Stars twinkle because they're point sources of light disturbed by the atmosphere. Planets are close enough to appear as tiny discs, so their light is steadier.",
+          distractorExplanations: {
+            1: 'Stars twinkle because they\'re point sources of light disturbed by the atmosphere',
+          },
         },
         {
           id: "sp-u1-L2-Q2",
@@ -166,6 +185,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 2,
           explanation: "Satellites look like a dot of light gliding smoothly across the sky in a straight line, usually taking a few minutes to cross. Stars and planets stay fixed, and shooting stars flash and vanish in a second.",
+          distractorExplanations: {
+            0: 'Satellites look like a dot of light gliding smoothly across the sky in a straight line, usually taking a few minutes to cross',
+            1: 'Satellites look like a dot of light gliding smoothly across the sky in a straight line, usually taking a few minutes to cross',
+            3: 'Satellites look like a dot of light gliding smoothly across the sky in a straight line, usually taking a few minutes to cross',
+          },
         },
         {
           id: "sp-u1-L2-T2",
@@ -181,6 +205,9 @@ export const unit1: Unit = {
           question: "Planets produce their own light, just like stars do.",
           correctAnswer: false,
           explanation: "Planets don't generate light. They only reflect sunlight, which is why they shine without twinkling.",
+          distractorExplanations: {
+            0: 'Planets don\'t generate light. They only reflect sunlight, which is why they shine without twinkling',
+          },
         },
         {
           id: "sp-u1-L2-Q3b",
@@ -211,6 +238,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 1,
           explanation: "Venus, Mars, Jupiter, and Saturn are all bright enough to see without a telescope. Mercury is too, but it's trickier to spot near the horizon.",
+          distractorExplanations: {
+            0: 'Venus, Mars, Jupiter, and Saturn are all bright enough to see without a telescope',
+            2: 'Venus, Mars, Jupiter, and Saturn are all bright enough to see without a telescope',
+            3: 'Venus, Mars, Jupiter, and Saturn are all bright enough to see without a telescope',
+          },
         },
         {
           id: "sp-u1-L2-T3",
@@ -225,6 +257,9 @@ export const unit1: Unit = {
           question: "The ISS looks like a fast-moving dot that crosses the sky in a few minutes.",
           correctAnswer: true,
           explanation: "The ISS orbits every 90 minutes, so it appears as a bright, steady dot gliding across the sky in about 4 to 5 minutes.",
+          distractorExplanations: {
+            1: 'The ISS orbits every 90 minutes, so it appears as a bright, steady dot gliding across the sky in about 4 to 5 minutes',
+          },
         },
         {
           id: "sp-u1-L2-Q6b",
@@ -241,6 +276,9 @@ export const unit1: Unit = {
           question: "Shooting stars are actually burning rocks entering Earth's atmosphere.",
           correctAnswer: true,
           explanation: "They're tiny pieces of space debris (meteoroids) that burn up from friction with the atmosphere, creating a bright streak.",
+          distractorExplanations: {
+            1: 'They\'re tiny pieces of space debris (meteoroids) that burn up from friction with the atmosphere, creating a bright streak',
+          },
           diagram: spaceDiagrams['sp-u1-L2-Q7'],
         },
         {
@@ -256,6 +294,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "Venus is the third brightest object in our sky (after the Sun and Moon). It often appears near the horizon right after sunset or before sunrise, shining with a bright, steady light.",
+          distractorExplanations: {
+            1: 'Venus is the third brightest object in our sky (after the Sun and Moon)',
+            2: 'Venus is the third brightest object in our sky (after the Sun and Moon)',
+            3: 'Venus is the third brightest object in our sky (after the Sun and Moon)',
+          },
         },
       ],
     },
@@ -287,6 +330,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 3,
           explanation: "The International Astronomical Union recognizes 88 constellations. They divide the entire sky into sections, like a map.",
+          distractorExplanations: {
+            0: 'The correct answer is 88, not 200',
+            1: 'The correct answer is 88, not 12',
+            2: 'The correct answer is 88, not 50',
+          },
         },
         {
           id: "sp-u1-L3-Q2",
@@ -294,6 +342,9 @@ export const unit1: Unit = {
           question: "The stars in a constellation are actually close to each other in space.",
           correctAnswer: false,
           explanation: "Not at all. Stars in a constellation can be hundreds of light-years apart. They just appear to form a pattern from our viewpoint on Earth.",
+          distractorExplanations: {
+            0: 'Stars in a constellation can be hundreds of light-years apart',
+          },
         },
         {
           id: "sp-u1-L3-T2",
@@ -315,6 +366,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 3,
           explanation: "Polaris, the North Star, sits almost directly above Earth's North Pole. It barely moves in the sky, making it a perfect compass.",
+          distractorExplanations: {
+            0: 'Polaris, the North Star, sits almost directly above Earth\'s North Pole',
+            1: 'Polaris, the North Star, sits almost directly above Earth\'s North Pole',
+            2: 'Polaris, the North Star, sits almost directly above Earth\'s North Pole',
+          },
         },
         {
           id: "sp-u1-L3-Q4",
@@ -354,6 +410,9 @@ export const unit1: Unit = {
           question: "You can see all 88 constellations from any single location on Earth.",
           correctAnswer: false,
           explanation: "Your location matters. People in the Northern Hemisphere can't see southern constellations like the Southern Cross, and vice versa. Observers in the Southern Hemisphere also have a stunning view of the Magellanic Clouds, two small companion galaxies to the Milky Way, visible only from below the equator.",
+          distractorExplanations: {
+            0: 'Your location matters. People in the Northern Hemisphere can\'t see southern constellations like the Southern Cross, and vice versa',
+          },
         },
         {
           id: "sp-u1-L3-Q8",
@@ -367,6 +426,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 3,
           explanation: "Orion's Belt is one of the easiest patterns to spot: 3 bright stars in a straight line across the hunter's waist.",
+          distractorExplanations: {
+            0: 'The correct answer is 3, not 2',
+            1: 'The correct answer is 3, not 5',
+            2: 'The correct answer is 3, not 7',
+          },
           diagram: spaceDiagrams['sp-u1-L3-Q8'],
         },
         {
@@ -388,6 +452,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Large and Small Magellanic Clouds are dwarf galaxies orbiting our Milky Way. They look like fuzzy patches of light and are only visible from south of the equator.",
+          distractorExplanations: {
+            0: 'The Large and Small Magellanic Clouds are dwarf galaxies orbiting our Milky Way',
+            2: 'The Large and Small Magellanic Clouds are dwarf galaxies orbiting our Milky Way',
+            3: 'The Large and Small Magellanic Clouds are dwarf galaxies orbiting our Milky Way',
+          },
         },
         {
           id: "sp-u1-L3-T5",
@@ -444,6 +513,9 @@ export const unit1: Unit = {
           question: "Light from the Sun takes about 8 minutes to reach Earth.",
           correctAnswer: true,
           explanation: "The Sun is about 93 million miles away. Light covers that distance in roughly 8 minutes and 20 seconds.",
+          distractorExplanations: {
+            1: 'The Sun is about 93 million miles away',
+          },
         },
         {
           id: "sp-u1-L4-Q2",
@@ -457,6 +529,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "A light-year is a distance: about 5.88 trillion miles. It's how far light travels in one year.",
+          distractorExplanations: {
+            1: 'A light-year is a distance: about 5.88 trillion miles',
+            2: 'A light-year is a distance: about 5.88 trillion miles',
+            3: 'A light-year is a distance: about 5.88 trillion miles',
+          },
         },
         {
           id: "sp-u1-L4-T2",
@@ -485,6 +562,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "When you look at Proxima Centauri, you see it as it was 4.24 years ago. That's how long its light took to travel here.",
+          distractorExplanations: {
+            1: 'When you look at Proxima Centauri, you see it as it was 4.24 years ago',
+            2: 'When you look at Proxima Centauri, you see it as it was 4.24 years ago',
+            3: 'When you look at Proxima Centauri, you see it as it was 4.24 years ago',
+          },
         },
         {
           id: "sp-u1-L4-Q5",
@@ -509,6 +591,9 @@ export const unit1: Unit = {
           question: "If a star is 500 light-years away, we see it as it was 500 years ago.",
           correctAnswer: true,
           explanation: "The light left that star 500 years ago. We're literally seeing the past when we look at distant objects.",
+          distractorExplanations: {
+            1: 'The light left that star 500 years ago',
+          },
           diagram: spaceDiagrams['sp-u1-L4-Q6'],
         },
         {
@@ -545,6 +630,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 3,
           explanation: "Even at the fastest speed possible, crossing our galaxy would take 100,000 years. Space is mind-bogglingly vast.",
+          distractorExplanations: {
+            0: 'Even at the fastest speed possible, crossing our galaxy would take 100,000 years',
+            1: 'Even at the fastest speed possible, crossing our galaxy would take 100,000 years',
+            2: 'Even at the fastest speed possible, crossing our galaxy would take 100,000 years',
+          },
         },
       ],
     },
@@ -579,6 +669,9 @@ export const unit1: Unit = {
           question: "City lights make it harder to see stars.",
           correctAnswer: true,
           explanation: "Light pollution washes out faint stars. From a city, you might see 200 stars. From a dark site, over 2,500.",
+          distractorExplanations: {
+            1: 'Light pollution washes out faint stars',
+          },
           diagram: spaceDiagrams['sp-u1-L5-Q2'],
         },
         {
@@ -617,6 +710,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 2,
           explanation: "Apps like Stellarium or Sky Map use your phone's sensors to label stars and planets when you point at the sky.",
+          distractorExplanations: {
+            0: 'Apps like Stellarium or Sky Map use your phone\'s sensors to label stars and planets when you point at the sky',
+            1: 'Apps like Stellarium or Sky Map use your phone\'s sensors to label stars and planets when you point at the sky',
+            3: 'Apps like Stellarium or Sky Map use your phone\'s sensors to label stars and planets when you point at the sky',
+          },
         },
         {
           id: "sp-u1-L5-T3",
@@ -638,6 +736,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 1,
           explanation: "A full Moon lights up the sky and hides faint stars. During a new Moon, the sky is darkest, so more stars are visible.",
+          distractorExplanations: {
+            0: 'A full Moon lights up the sky and hides faint stars',
+            2: 'A full Moon lights up the sky and hides faint stars',
+            3: 'A full Moon lights up the sky and hides faint stars',
+          },
         },
         {
           id: "sp-u1-L5-Q7",
@@ -654,6 +757,9 @@ export const unit1: Unit = {
           question: "You need a telescope to enjoy stargazing.",
           correctAnswer: false,
           explanation: "Absolutely not. Thousands of stars, 5 planets, meteor showers, the Milky Way, and satellites are all visible with just your eyes.",
+          distractorExplanations: {
+            0: 'Not. Thousands of stars, 5 planets, meteor showers, the Milky Way, and satellites are all visible with just your eyes',
+          },
         },
       ],
     },

@@ -29,6 +29,9 @@ export const unit5: Unit = {
           question: "Rockets are the only way humans have reached space.",
           correctAnswer: true,
           explanation: "Every human, satellite, and space probe has reached space using rocket propulsion. No other technology has managed it yet.",
+          distractorExplanations: {
+            1: 'Every human, satellite, and space probe has reached space using rocket propulsion',
+          },
         },
         {
           id: "sp-u5-L0-Q2",
@@ -42,6 +45,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: "Gravity holds everything on Earth. To reach space, you need enough speed and thrust to break free of its pull.",
+          distractorExplanations: {
+            0: 'Gravity holds everything on Earth. To reach space, you need enough speed and thrust to break free of its pull',
+            2: 'Gravity holds everything on Earth. To reach space, you need enough speed and thrust to break free of its pull',
+            3: 'Gravity holds everything on Earth. To reach space, you need enough speed and thrust to break free of its pull',
+          },
         },
         {
           id: "sp-u5-L0-T2",
@@ -61,6 +69,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "The Karman line at 100 km is the internationally agreed boundary of space. Commercial airplanes fly at about 10 km.",
+          distractorExplanations: {
+            1: 'The Karman line at 100 km is the internationally agreed boundary of space',
+            2: 'The Karman line at 100 km is the internationally agreed boundary of space',
+            3: 'The Karman line at 100 km is the internationally agreed boundary of space',
+          },
         },
         {
           id: "sp-u5-L0-Q4",
@@ -83,6 +96,9 @@ export const unit5: Unit = {
           question: "Reaching orbit requires going sideways very fast, not just going straight up.",
           correctAnswer: true,
           explanation: "Going straight up and stopping means you fall back down. Orbit means moving sideways so fast that you keep falling around the Earth, never hitting it.",
+          distractorExplanations: {
+            1: 'Going straight up and stopping means you fall back down',
+          },
         },
         {
           id: "sp-u5-L0-Q6",
@@ -96,6 +112,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "Orbital velocity is roughly 28,000 km/h (7.8 km/s). That's fast enough to cross the United States in about 10 minutes.",
+          distractorExplanations: {
+            0: 'The correct answer is About 28,000 km/h, not About 100,000 km/h',
+            1: 'The correct answer is About 28,000 km/h, not About 500 km/h',
+            2: 'The correct answer is About 28,000 km/h, not About 2,800 km/h',
+          },
         },
       ],
     },
@@ -120,6 +141,9 @@ export const unit5: Unit = {
           question: "A rocket moves forward by pushing gas backward.",
           correctAnswer: true,
           explanation: "The rocket expels hot gas at high speed in one direction. The reaction force pushes the rocket the other way.",
+          distractorExplanations: {
+            1: 'The rocket expels hot gas at high speed in one direction',
+          },
         },
         {
           id: "sp-u5-L1-Q2",
@@ -142,6 +166,9 @@ export const unit5: Unit = {
           question: "Rockets need air to push against in order to fly.",
           correctAnswer: false,
           explanation: "Rockets push against their own exhaust, not the surrounding air. That's why they work in the vacuum of space.",
+          distractorExplanations: {
+            0: 'Rockets push against their own exhaust, not the surrounding air',
+          },
         },
         {
           id: "sp-u5-L1-Q4",
@@ -178,6 +205,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "If thrust is less than weight, the rocket sits on the pad. The moment thrust exceeds weight, liftoff happens.",
+          distractorExplanations: {
+            1: 'If thrust is less than weight, the rocket sits on the pad',
+            2: 'If thrust is less than weight, the rocket sits on the pad',
+            3: 'If thrust is less than weight, the rocket sits on the pad',
+          },
         },
         {
           id: "sp-u5-L1-Q7",
@@ -194,6 +226,9 @@ export const unit5: Unit = {
           question: "The Saturn V rocket that launched Apollo missions produced about 34 million newtons of thrust at liftoff.",
           correctAnswer: true,
           explanation: "The Saturn V remains the most powerful rocket ever flown. Its 5 first-stage engines produced 34.5 million newtons of thrust.",
+          distractorExplanations: {
+            1: 'The Saturn V remains the most powerful rocket ever flown',
+          },
         },
       ],
     },
@@ -218,6 +253,9 @@ export const unit5: Unit = {
           question: "Escape velocity is the minimum speed needed to leave a planet's gravity without further thrust.",
           correctAnswer: true,
           explanation: "That is exactly what escape velocity means. For Earth, it is 11.2 km/s.",
+          distractorExplanations: {
+            1: 'That is exactly what escape velocity means',
+          },
         },
         {
           id: "sp-u5-L2-Q1",
@@ -236,6 +274,9 @@ export const unit5: Unit = {
           question: "Escape velocity means you need to reach that speed instantly to leave Earth.",
           correctAnswer: false,
           explanation: "You don't need to hit escape velocity all at once. Rockets accelerate gradually, continuously thrusting to overcome gravity.",
+          distractorExplanations: {
+            0: 'You don\'t need to hit escape velocity all at once',
+          },
         },
         {
           id: "sp-u5-L2-T2",
@@ -249,6 +290,9 @@ export const unit5: Unit = {
           question: "A more massive planet has a higher escape velocity.",
           correctAnswer: true,
           explanation: "More mass means a stronger gravitational grip, so you need more speed to escape.",
+          distractorExplanations: {
+            1: 'More mass means a stronger gravitational grip, so you need more speed to escape',
+          },
         },
         {
           id: "sp-u5-L2-Q3",
@@ -271,6 +315,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Moon's mass is about 1/80th of Earth's. Less mass means weaker gravity and a lower escape velocity.",
+          distractorExplanations: {
+            0: 'The Moon\'s mass is about 1/80th of Earth\'s',
+            2: 'The Moon\'s mass is about 1/80th of Earth\'s',
+            3: 'The Moon\'s mass is about 1/80th of Earth\'s',
+          },
         },
         {
           id: "sp-u5-L2-Q5",
@@ -292,6 +341,9 @@ export const unit5: Unit = {
           question: "Escape velocity is faster than orbital velocity.",
           correctAnswer: true,
           explanation: "Orbital velocity for Earth is about 7.8 km/s. Escape velocity is 11.2 km/s. You need more speed to leave entirely than to stay in orbit.",
+          distractorExplanations: {
+            1: 'Orbital velocity for Earth is about 7.8 km/s',
+          },
         },
         {
           id: "sp-u5-L2-Q6",
@@ -308,6 +360,9 @@ export const unit5: Unit = {
           question: "A black hole's escape velocity is greater than the speed of light.",
           correctAnswer: true,
           explanation: "That's exactly what makes a black hole a black hole. Its escape velocity exceeds light speed, so nothing can get out.",
+          distractorExplanations: {
+            1: 'That\'s exactly what makes a black hole a black hole',
+          },
         },
         {
           id: "sp-u5-L2-Q8",
@@ -321,6 +376,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "8 km/s is above orbital velocity (7.8 km/s) but below escape velocity (11.2 km/s). It would orbit Earth.",
+          distractorExplanations: {
+            0: '8 km/s is above orbital velocity (7.8 km/s) but below escape velocity (11.2 km/s)',
+            1: '8 km/s is above orbital velocity (7.8 km/s) but below escape velocity (11.2 km/s)',
+            2: '8 km/s is above orbital velocity (7.8 km/s) but below escape velocity (11.2 km/s)',
+          },
         },
       ],
     },
@@ -359,6 +419,9 @@ export const unit5: Unit = {
           question: "Satellites in orbit are constantly falling toward Earth.",
           correctAnswer: true,
           explanation: "Gravity is always pulling them down. But they move sideways so fast that the Earth's curvature drops away at the same rate. They fall around it.",
+          distractorExplanations: {
+            1: 'Gravity is always pulling them down',
+          },
         },
         {
           id: "sp-u5-L3-Q2",
@@ -373,6 +436,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Gravity at ISS altitude is about 90% of surface gravity. Astronauts float because they're in continuous free fall alongside the station, not because gravity is absent.",
+          distractorExplanations: {
+            1: 'Gravity at ISS altitude is about 90% of surface gravity',
+            2: 'Gravity at ISS altitude is about 90% of surface gravity',
+            3: 'Gravity at ISS altitude is about 90% of surface gravity',
+          },
         },
         {
           id: "sp-u5-L3-T2",
@@ -387,6 +455,9 @@ export const unit5: Unit = {
           question: "There is no gravity on the International Space Station.",
           correctAnswer: false,
           explanation: "Gravity at ISS altitude is about 90% of surface gravity. Astronauts feel weightless because they're in free fall, not because gravity is absent.",
+          distractorExplanations: {
+            0: 'Gravity at ISS altitude is about 90% of surface gravity',
+          },
         },
         {
           id: "sp-u5-L3-Q4",
@@ -400,6 +471,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "At 400 km, gravity is still about 90% of surface strength. Weightlessness comes from free fall, not absence of gravity.",
+          distractorExplanations: {
+            0: 'The correct answer is About 90% as strong, not About 10% as strong',
+            1: 'The correct answer is About 90% as strong, not About 50% as strong',
+            2: 'At 400 km, gravity is still about 90% of surface strength',
+          },
         },
         {
           id: "sp-u5-L3-T3",
@@ -456,6 +532,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "Slowing a satellite reduces its orbital energy, so it drops to a lower altitude. Slow it enough and it re-enters the atmosphere.",
+          distractorExplanations: {
+            0: 'Slowing a satellite reduces its orbital energy, so it drops to a lower altitude',
+            1: 'Slowing a satellite reduces its orbital energy, so it drops to a lower altitude',
+            2: 'Slowing a satellite reduces its orbital energy, so it drops to a lower altitude',
+          },
         },
       ],
     },
@@ -486,6 +567,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: "LEO extends from about 160 km (the lowest sustainable orbit) to about 2,000 km. The ISS orbits at 400 km within this range.",
+          distractorExplanations: {
+            0: 'LEO extends from about 160 km (the lowest sustainable orbit) to about 2,000 km',
+            1: 'LEO extends from about 160 km (the lowest sustainable orbit) to about 2,000 km',
+            2: 'LEO extends from about 160 km (the lowest sustainable orbit) to about 2,000 km',
+          },
         },
         {
           id: "sp-u5-L4-Q2",
@@ -493,6 +579,9 @@ export const unit5: Unit = {
           question: "A geostationary satellite appears to hover over the same spot on Earth.",
           correctAnswer: true,
           explanation: "At 35,786 km, a geostationary satellite orbits at exactly the same rate Earth rotates. It stays over one spot, perfect for TV and weather satellites.",
+          distractorExplanations: {
+            1: 'At 35,786 km, a geostationary satellite orbits at exactly the same rate Earth rotates',
+          },
         },
         {
           id: "sp-u5-L4-T2",
@@ -536,6 +625,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: "As Earth rotates beneath the satellite's polar path, every point on the surface is eventually covered. Perfect for mapping and weather monitoring.",
+          distractorExplanations: {
+            0: 'As Earth rotates beneath the satellite\'s polar path, every point on the surface is eventually covered',
+            2: 'As Earth rotates beneath the satellite\'s polar path, every point on the surface is eventually covered',
+            3: 'As Earth rotates beneath the satellite\'s polar path, every point on the surface is eventually covered',
+          },
         },
         {
           id: "sp-u5-L4-Q6",
@@ -552,6 +646,9 @@ export const unit5: Unit = {
           question: "GPS satellites orbit at the same altitude as the ISS.",
           correctAnswer: false,
           explanation: "GPS satellites orbit at about 20,200 km, while the ISS is at about 400 km. GPS satellites are 50 times higher.",
+          distractorExplanations: {
+            0: 'GPS satellites orbit at about 20,200 km, while the ISS is at about 400 km',
+          },
         },
         {
           id: "sp-u5-L4-Q8",
@@ -593,6 +690,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "Nearly all of a rocket's weight is fuel. The actual payload (satellite, crew capsule) is typically just 2-4% of the total weight.",
+          distractorExplanations: {
+            0: 'The correct answer is About 85-90%, not About 25%',
+            1: 'The correct answer is About 85-90%, not About 50%',
+            3: 'The correct answer is About 85-90%, not About 10%',
+          },
         },
         {
           id: "sp-u5-L5-Q2",
@@ -600,6 +702,9 @@ export const unit5: Unit = {
           question: "Rockets carry both fuel and oxidizer because there's no oxygen in space.",
           correctAnswer: true,
           explanation: "Combustion needs oxygen. Since space is a vacuum, rockets must carry their own oxidizer along with fuel.",
+          distractorExplanations: {
+            1: 'Combustion needs oxygen. Since space is a vacuum, rockets must carry their own oxidizer along with fuel',
+          },
         },
         {
           id: "sp-u5-L5-T2",
@@ -613,6 +718,9 @@ export const unit5: Unit = {
           question: "Rockets drop empty fuel tanks mid-flight to reduce weight.",
           correctAnswer: true,
           explanation: "That is exactly what staging does. Once a tank is empty, it becomes dead weight. Dropping it makes the remaining rocket more efficient.",
+          distractorExplanations: {
+            1: 'That is exactly what staging does. Once a tank is empty, it becomes dead weight',
+          },
         },
         {
           id: "sp-u5-L5-Q3",
@@ -651,6 +759,9 @@ export const unit5: Unit = {
           question: "Solid rocket boosters can be turned off after ignition.",
           correctAnswer: false,
           explanation: "Once ignited, solid rockets burn until the fuel is gone. Liquid engines can be throttled or shut down, which is one reason they're preferred for precision maneuvers.",
+          distractorExplanations: {
+            0: 'Once ignited, solid rockets burn until the fuel is gone',
+          },
         },
         {
           id: "sp-u5-L5-Q7",
@@ -673,6 +784,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "This is the tyranny of the rocket equation. Every kilogram of fuel added requires additional fuel to lift it. The math makes single-stage-to-orbit extremely difficult.",
+          distractorExplanations: {
+            0: 'This is the tyranny of the rocket equation',
+            1: 'This is the tyranny of the rocket equation',
+            3: 'This is the tyranny of the rocket equation',
+          },
         },
       ],
     },
@@ -697,6 +813,9 @@ export const unit5: Unit = {
           question: "Before SpaceX's Falcon 9, orbital rocket stages were always discarded after one use.",
           correctAnswer: true,
           explanation: "Every first stage splashed into the ocean or burned up. SpaceX changed this by landing and reusing boosters, cutting costs dramatically.",
+          distractorExplanations: {
+            1: 'Every first stage splashed into the ocean or burned up',
+          },
         },
         {
           id: "sp-u5-L6-Q2",
@@ -710,6 +829,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "The Falcon 9 booster flips around, reignites engines for a deceleration burn, deploys landing legs, and lands vertically on a drone ship or landing pad.",
+          distractorExplanations: {
+            1: 'The Falcon 9 booster flips around, reignites engines for a deceleration burn, deploys landing legs, and lands vertically on a drone ship or landing...',
+            2: 'The Falcon 9 booster flips around, reignites engines for a deceleration burn, deploys landing legs, and lands vertically on a drone ship or landing...',
+            3: 'The Falcon 9 booster flips around, reignites engines for a deceleration burn, deploys landing legs, and lands vertically on a drone ship or landing...',
+          },
         },
         {
           id: "sp-u5-L6-T2",
@@ -729,6 +853,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: "SpaceX has reflown individual boosters over 20 times, proving that reusability is reliable and cost-effective.",
+          distractorExplanations: {
+            0: 'SpaceX has reflown individual boosters over 20 times, proving that reusability is reliable and cost-effective',
+            1: 'SpaceX has reflown individual boosters over 20 times, proving that reusability is reliable and cost-effective',
+            3: 'SpaceX has reflown individual boosters over 20 times, proving that reusability is reliable and cost-effective',
+          },
         },
         {
           id: "sp-u5-L6-Q4",
@@ -759,6 +888,9 @@ export const unit5: Unit = {
           question: "The Space Shuttle was the first reusable spacecraft.",
           correctAnswer: true,
           explanation: "The Space Shuttle orbiter was designed to be reused (it flew up to 39 times). However, its external tank was expendable, and refurbishment was extremely expensive.",
+          distractorExplanations: {
+            1: 'The Space Shuttle orbiter was designed to be reused (it flew up to 39 times)',
+          },
         },
         {
           id: "sp-u5-L6-Q7",
@@ -782,6 +914,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "Reusability's main benefit is cost. When you don't throw away a 60+ million dollar booster every flight, space access gets much cheaper.",
+          distractorExplanations: {
+            1: 'Reusability\'s main benefit is cost',
+            2: 'Reusability\'s main benefit is cost',
+            3: 'Reusability\'s main benefit is cost',
+          },
         },
       ],
     },

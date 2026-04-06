@@ -29,6 +29,9 @@ export const unit8: Unit = {
           question: "The same cognitive biases from decision making also affect how you spend money.",
           correctAnswer: true,
           explanation: "Every bias you learned about, like anchoring, loss aversion, and framing, directly shapes your financial behavior.",
+          distractorExplanations: {
+            1: 'Every bias you learned about, like anchoring, loss aversion, and framing, directly shapes your financial behavior',
+          },
         },
         {
           id: "psy-u8-L0-Q2",
@@ -42,6 +45,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: "Classical economics assumes people are rational actors. Behavioral economics proves they're not.",
+          distractorExplanations: {
+            0: 'Classical economics assumes people are rational actors',
+            1: 'Classical economics assumes people are rational actors',
+            2: 'Classical economics assumes people are rational actors',
+          },
         },
         {
           id: "psy-u8-L0-T2",
@@ -70,6 +78,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "Behavioral economics specifically studies the gap between how people should decide and how they actually decide.",
+          distractorExplanations: {
+            0: 'Behavioral economics specifically studies the gap between how people should decide and how they actually decide',
+            2: 'Behavioral economics specifically studies the gap between how people should decide and how they actually decide',
+            3: 'Behavioral economics specifically studies the gap between how people should decide and how they actually decide',
+          },
         },
         {
           id: "psy-u8-L0-Q5",
@@ -86,6 +99,9 @@ export const unit8: Unit = {
           question: "Behavioral economics says people are always irrational.",
           correctAnswer: false,
           explanation: "It says people are predictably irrational. The mistakes follow patterns, which means they can be anticipated and corrected.",
+          distractorExplanations: {
+            0: 'It says people are predictably irrational',
+          },
         },
         {
           id: "psy-u8-L0-T3",
@@ -105,6 +121,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "Predictable patterns mean you can learn to catch yourself. That's the whole point of this unit.",
+          distractorExplanations: {
+            1: 'Predictable patterns mean you can learn to catch yourself',
+            2: 'Predictable patterns mean you can learn to catch yourself',
+            3: 'Predictable patterns mean you can learn to catch yourself',
+          },
         },
       ],
     },
@@ -129,6 +150,9 @@ export const unit8: Unit = {
           question: "In real life, people always choose the option that gives them the most value for the lowest cost.",
           correctAnswer: false,
           explanation: "People routinely overpay, impulse buy, and choose convenience over value. Rationality is the exception, not the rule.",
+          distractorExplanations: {
+            0: 'People routinely overpay, impulse buy, and choose convenience over value',
+          },
         },
         {
           id: "psy-u8-L1-Q2",
@@ -142,6 +166,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "Most people buy the large even if they don't need it. The 'deal' overrides actual need. That's irrational but predictable.",
+          distractorExplanations: {
+            0: 'Most people buy the large even if they don\'t need it',
+            2: 'Most people buy the large even if they don\'t need it',
+            3: 'Most people buy the large even if they don\'t need it',
+          },
         },
         {
           id: "psy-u8-L1-T2",
@@ -170,6 +199,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: "Kahneman won the 2002 Nobel in Economics for showing how psychological biases affect financial decisions.",
+          distractorExplanations: {
+            0: 'Kahneman won the 2002 Nobel in Economics for showing how psychological biases affect financial decisions',
+            1: 'Kahneman won the 2002 Nobel in Economics for showing how psychological biases affect financial decisions',
+            2: 'Kahneman won the 2002 Nobel in Economics for showing how psychological biases affect financial decisions',
+          },
         },
         {
           id: "psy-u8-L1-Q5",
@@ -192,6 +226,9 @@ export const unit8: Unit = {
           question: "Knowing about irrational behavior automatically prevents you from falling for it.",
           correctAnswer: false,
           explanation: "Knowledge helps, but biases still affect you. The key is building systems and habits that protect you from your own shortcuts.",
+          distractorExplanations: {
+            0: 'Knowledge helps, but biases still affect you',
+          },
         },
         {
           id: "psy-u8-L1-Q7",
@@ -205,6 +242,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "A rational agent only buys what they need. Buying extra 'because it's a deal' means spending more, not saving.",
+          distractorExplanations: {
+            0: 'A rational agent only buys what they need',
+            2: 'A rational agent only buys what they need',
+            3: 'A rational agent only buys what they need',
+          },
         },
       ],
     },
@@ -230,6 +272,9 @@ export const unit8: Unit = {
           question: "Money from a tax refund is worth the same as money from your salary.",
           correctAnswer: true,
           explanation: "A dollar is a dollar. But most people treat refund money as 'bonus cash' and spend it more freely.",
+          distractorExplanations: {
+            1: 'A dollar is a dollar. But most people treat refund money as \'bonus cash\' and spend it more freely',
+          },
         },
         {
           id: "psy-u8-L2-Q2",
@@ -243,6 +288,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "Found money goes into a mental 'free money' account. People splurge with it because it doesn't feel earned.",
+          distractorExplanations: {
+            0: 'Found money goes into a mental \'free money\' account',
+            1: 'Found money goes into a mental \'free money\' account',
+            3: 'Found money goes into a mental \'free money\' account',
+          },
         },
         {
           id: "psy-u8-L2-T2",
@@ -280,6 +330,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: "The $200 is a sunk cost. Going while sick doesn't recover it. Mental accounting makes you feel you must 'use' what you paid for.",
+          distractorExplanations: {
+            0: 'The $200 is a sunk cost. Going while sick doesn\'t recover it',
+            1: 'The $200 is a sunk cost. Going while sick doesn\'t recover it',
+            2: 'The $200 is a sunk cost. Going while sick doesn\'t recover it',
+          },
         },
         {
           id: "psy-u8-L2-T3",
@@ -293,6 +348,9 @@ export const unit8: Unit = {
           question: "People are more likely to gamble with money they won than money they earned.",
           correctAnswer: true,
           explanation: "Winnings go into a 'house money' mental account. People take bigger risks with it because losing doesn't feel as painful.",
+          distractorExplanations: {
+            1: 'Winnings go into a \'house money\' mental account',
+          },
         },
         {
           id: "psy-u8-L2-Q7",
@@ -315,6 +373,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: "The paycheck test strips away the mental label. If you wouldn't buy it with salary money, the label is tricking you.",
+          distractorExplanations: {
+            0: 'The paycheck test strips away the mental label',
+            1: 'The paycheck test strips away the mental label',
+            2: 'The paycheck test strips away the mental label',
+          },
         },
       ],
     },
@@ -340,6 +403,9 @@ export const unit8: Unit = {
           question: "People tend to demand more money to sell something than they'd pay to buy the exact same item.",
           correctAnswer: true,
           explanation: "In classic experiments, people asked about 2x more to sell a coffee mug than others would pay to buy it. Ownership inflates perceived value.",
+          distractorExplanations: {
+            1: 'In classic experiments, people asked about 2x more to sell a coffee mug than others would pay to buy it',
+          },
         },
         {
           id: "psy-u8-L3-Q2",
@@ -353,6 +419,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "Even though it was free, owning it makes it feel valuable. Most people want $7 to $10 for a mug they wouldn't have paid $3 for.",
+          distractorExplanations: {
+            0: 'Even though it was free, owning it makes it feel valuable',
+            1: 'Even though it was free, owning it makes it feel valuable',
+            3: 'Even though it was free, owning it makes it feel valuable',
+          },
         },
         {
           id: "psy-u8-L3-T2",
@@ -389,6 +460,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: "After 30 days of 'owning' the service, canceling triggers loss aversion. The free trial makes you an owner first.",
+          distractorExplanations: {
+            0: 'After 30 days of \'owning\' the service, canceling triggers loss aversion',
+            1: 'After 30 days of \'owning\' the service, canceling triggers loss aversion',
+            2: 'After 30 days of \'owning\' the service, canceling triggers loss aversion',
+          },
         },
         {
           id: "psy-u8-L3-T3",
@@ -403,6 +479,9 @@ export const unit8: Unit = {
           question: "The endowment effect disappears when people are aware of it.",
           correctAnswer: false,
           explanation: "Knowing about it helps, but the emotional pull of ownership is strong. You still feel the loss even when you understand the bias.",
+          distractorExplanations: {
+            0: 'Knowing about it helps, but the emotional pull of ownership is strong',
+          },
         },
         {
           id: "psy-u8-L3-Q7",
@@ -416,6 +495,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "The 'non-owner test' strips away the ownership premium. It helps you price things realistically.",
+          distractorExplanations: {
+            1: 'The \'non-owner test\' strips away the ownership premium',
+            2: 'The \'non-owner test\' strips away the ownership premium',
+            3: 'The \'non-owner test\' strips away the ownership premium',
+          },
         },
       ],
     },
@@ -440,6 +524,9 @@ export const unit8: Unit = {
           question: "$9.99 feels significantly cheaper than $10 even though the difference is just 1 cent.",
           correctAnswer: true,
           explanation: "Your brain reads left to right. $9.99 registers as 'nine dollars' while $10 registers as 'ten dollars.' That 1 cent changes your mental category.",
+          distractorExplanations: {
+            1: 'Your brain reads left to right. $9.99 registers as \'nine dollars\' while $10 registers as \'ten dollars.\' That 1 cent changes your mental category',
+          },
         },
         {
           id: "psy-u8-L4-Q2",
@@ -453,6 +540,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "The medium is the 'decoy.' At $6.50, it makes the $7 large look like a steal. Without the medium, more people would buy the small.",
+          distractorExplanations: {
+            1: 'The medium is the \'decoy.\' At $6.50, it makes the $7 large look like a steal',
+            2: 'The medium is the \'decoy.\' At $6.50, it makes the $7 large look like a steal',
+            3: 'The medium is the \'decoy.\' At $6.50, it makes the $7 large look like a steal',
+          },
         },
         {
           id: "psy-u8-L4-T2",
@@ -473,6 +565,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "Nobody would pick Print only when Print + Online is the same price. The Print-only option exists to make the combo look irresistible.",
+          distractorExplanations: {
+            0: 'Nobody would pick Print only when Print + Online is the same price',
+            1: 'Nobody would pick Print only when Print + Online is the same price',
+            3: 'Nobody would pick Print only when Print + Online is the same price',
+          },
         },
         {
           id: "psy-u8-L4-Q4",
@@ -503,6 +600,9 @@ export const unit8: Unit = {
           question: "A product marked 'Was $200, Now $99' is always a genuine 50% discount.",
           correctAnswer: false,
           explanation: "The 'original price' is often inflated specifically to make the sale price look better. This is anchoring in action.",
+          distractorExplanations: {
+            0: 'The \'original price\' is often inflated specifically to make the sale price look better',
+          },
         },
         {
           id: "psy-u8-L4-Q6b",
@@ -535,6 +635,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: "Setting your own anchor before seeing the store's price prevents their anchor from shaping your perception.",
+          distractorExplanations: {
+            0: 'Setting your own anchor before seeing the store\'s price prevents their anchor from shaping your perception',
+            1: 'Setting your own anchor before seeing the store\'s price prevents their anchor from shaping your perception',
+            2: 'Setting your own anchor before seeing the store\'s price prevents their anchor from shaping your perception',
+          },
         },
       ],
     },
@@ -559,6 +664,9 @@ export const unit8: Unit = {
           question: "Most people would choose $50 right now over $100 in one year.",
           correctAnswer: true,
           explanation: "Studies confirm this consistently. The present is vivid and certain. The future feels abstract and uncertain.",
+          distractorExplanations: {
+            1: 'Studies confirm this consistently. The present is vivid and certain',
+          },
         },
         {
           id: "psy-u8-L5-Q2",
@@ -572,6 +680,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: "Choosing immediate pleasure (cake) over a larger future benefit (health) is classic hyperbolic discounting.",
+          distractorExplanations: {
+            0: 'Choosing immediate pleasure (cake) over a larger future benefit (health) is classic hyperbolic discounting',
+            1: 'Choosing immediate pleasure (cake) over a larger future benefit (health) is classic hyperbolic discounting',
+            2: 'Choosing immediate pleasure (cake) over a larger future benefit (health) is classic hyperbolic discounting',
+          },
         },
         {
           id: "psy-u8-L5-T2",
@@ -619,6 +732,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "A comfortable retirement in 30 years feels abstract. A new phone today feels real. Hyperbolic discounting makes the present win.",
+          distractorExplanations: {
+            0: 'A comfortable retirement in 30 years feels abstract',
+            2: 'A comfortable retirement in 30 years feels abstract',
+            3: 'A comfortable retirement in 30 years feels abstract',
+          },
         },
         {
           id: "psy-u8-L5-T3",
@@ -641,6 +759,9 @@ export const unit8: Unit = {
           question: "People who understand hyperbolic discounting are immune to it.",
           correctAnswer: false,
           explanation: "Understanding helps, but the pull of 'now' is biological. That's why commitment devices work better than willpower alone.",
+          distractorExplanations: {
+            0: 'Understanding helps, but the pull of \'now\' is biological',
+          },
         },
         {
           id: "psy-u8-L5-Q8",
@@ -654,6 +775,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "Automation removes the moment of temptation. You decided once, wisely, and the system handles the rest.",
+          distractorExplanations: {
+            0: 'Automation removes the moment of temptation',
+            2: 'Automation removes the moment of temptation',
+            3: 'Automation removes the moment of temptation',
+          },
         },
       ],
     },
@@ -678,6 +804,9 @@ export const unit8: Unit = {
           question: "'Only 3 left in stock!' makes people more likely to buy, even if they weren't planning to.",
           correctAnswer: true,
           explanation: "Scarcity triggers urgency. Your brain shifts from 'Do I want this?' to 'I might lose this!' and that fear drives action.",
+          distractorExplanations: {
+            1: 'Scarcity triggers urgency. Your brain shifts from \'Do I want this?\' to \'I might lose this!\' and that fear drives action',
+          },
         },
         {
           id: "psy-u8-L6-Q2",
@@ -691,6 +820,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: "The label creates perceived scarcity. Whether the item is actually rare doesn't matter. The feeling of exclusivity drives purchases.",
+          distractorExplanations: {
+            0: 'The label creates perceived scarcity',
+            1: 'The label creates perceived scarcity',
+            3: 'The label creates perceived scarcity',
+          },
         },
         {
           id: "psy-u8-L6-T2",
@@ -728,6 +862,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "Booking sites are famous for artificial scarcity. '1 room left at this price' often means there are rooms at slightly different prices, or the count resets.",
+          distractorExplanations: {
+            1: 'Booking sites are famous for artificial scarcity',
+            2: 'Booking sites are famous for artificial scarcity',
+            3: 'Booking sites are famous for artificial scarcity',
+          },
         },
         {
           id: "psy-u8-L6-T3",
@@ -741,6 +880,9 @@ export const unit8: Unit = {
           question: "If a sale says 'Ends tonight!' it will definitely never come back.",
           correctAnswer: false,
           explanation: "Most 'ending' sales return regularly. Companies cycle through 'limited time' offers precisely because the urgency drives purchases.",
+          distractorExplanations: {
+            0: 'Most \'ending\' sales return regularly',
+          },
         },
         {
           id: "psy-u8-L6-Q7",
@@ -755,6 +897,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "Three tactics are stacking: the $200 'original price' anchors your perception (the jacket may never have sold for $200), the countdown timer creates artificial urgency, and the viewer count uses social proof to add pressure. The best defense: wait 24 hours and check the price at other stores.",
+          distractorExplanations: {
+            1: 'Three tactics are stacking: the $200 \'original price\' anchors your perception (the jacket may never have sold for $200), the countdown timer create...',
+            2: 'Three tactics are stacking: the $200 \'original price\' anchors your perception (the jacket may never have sold for $200), the countdown timer create...',
+            3: 'Three tactics are stacking: the $200 \'original price\' anchors your perception (the jacket may never have sold for $200), the countdown timer create...',
+          },
         },
         {
           id: "psy-u8-L6-Q8",
@@ -768,6 +915,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: "The 24-hour rule breaks the urgency spell. Real needs survive the wait. FOMO-driven impulses almost never do.",
+          distractorExplanations: {
+            1: 'The 24-hour rule breaks the urgency spell',
+            2: 'The 24-hour rule breaks the urgency spell',
+            3: 'The 24-hour rule breaks the urgency spell',
+          },
         },
       ],
     },
@@ -964,6 +1116,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "Asch showed that even when the answer is obvious, many people will conform to a group's wrong answer to avoid standing out.",
+          distractorExplanations: {
+            0: 'Asch showed that even when the answer is obvious, many people will conform to a group\'s wrong answer to avoid standing out',
+            2: 'Asch showed that even when the answer is obvious, many people will conform to a group\'s wrong answer to avoid standing out',
+            3: 'Asch showed that even when the answer is obvious, many people will conform to a group\'s wrong answer to avoid standing out',
+          },
         },
         {
           id: "psy-u8-rev-Q2",
@@ -971,6 +1128,9 @@ export const unit8: Unit = {
           question: "The Big Five personality traits (OCEAN) are: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.",
           correctAnswer: true,
           explanation: "OCEAN is the most scientifically validated model of personality. Unlike Myers-Briggs, it has strong research support and measures traits on a spectrum.",
+          distractorExplanations: {
+            1: 'OCEAN is the most scientifically validated model of personality',
+          },
         },
         {
           id: "psy-u8-rev-Q3",
@@ -986,6 +1146,9 @@ export const unit8: Unit = {
           question: "The endowment effect means people value items they own more than identical items they don't own.",
           correctAnswer: true,
           explanation: "Once you own something, your brain assigns it extra value. That's why sellers tend to overprice their stuff and why free trials are so effective at converting customers.",
+          distractorExplanations: {
+            1: 'Once you own something, your brain assigns it extra value',
+          },
         },
         {
           id: "psy-u8-rev-Q5",
@@ -1025,6 +1188,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "MBTI forces binary labels (introvert OR extrovert), but traits exist on a spectrum. Many people get different MBTI results when they retake it. The Big Five has much stronger test-retest reliability.",
+          distractorExplanations: {
+            0: 'MBTI forces binary labels (introvert OR extrovert), but traits exist on a spectrum',
+            2: 'MBTI forces binary labels (introvert OR extrovert), but traits exist on a spectrum',
+            3: 'MBTI forces binary labels (introvert OR extrovert), but traits exist on a spectrum',
+          },
         },
         {
           id: "psy-u8-rev-Q9",
@@ -1038,6 +1206,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Deluxe option at $16 is a decoy: it makes the $15 Premium look like a great deal by comparison. Without the decoy, more people would pick Basic.",
+          distractorExplanations: {
+            0: 'The Deluxe option at $16 is a decoy: it makes the $15 Premium look like a great deal by comparison',
+            2: 'The Deluxe option at $16 is a decoy: it makes the $15 Premium look like a great deal by comparison',
+            3: 'The Deluxe option at $16 is a decoy: it makes the $15 Premium look like a great deal by comparison',
+          },
         },
         {
           id: "psy-u8-rev-Q10",
@@ -1052,6 +1225,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: "The bystander effect: with many witnesses, each individual feels less personal responsibility to act. Everyone assumes 'someone else will handle it.'",
+          distractorExplanations: {
+            0: 'The bystander effect: with many witnesses, each individual feels less personal responsibility to act',
+            2: 'The bystander effect: with many witnesses, each individual feels less personal responsibility to act',
+            3: 'The bystander effect: with many witnesses, each individual feels less personal responsibility to act',
+          },
         },
       ],
     },

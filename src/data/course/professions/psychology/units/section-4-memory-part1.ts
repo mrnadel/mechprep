@@ -51,9 +51,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Encoding converts incoming information into a neural code your brain can store.',
             distractorExplanations: {
-              1: 'Old memories are permanently deleted is not correct here; encoding converts incoming information into a neural code your brain can store.',
-              2: 'The brain stops processing new input is not correct here; encoding converts incoming information into a neural code your brain can store.',
-              3: 'Memories are sent to other people is not correct here; encoding converts incoming information into a neural code your brain can store.',
+              1: 'Encoding converts incoming information into a neural code your brain can store.',
+              2: 'Encoding converts incoming information into a neural code your brain can store.',
+              3: 'Encoding converts incoming information into a neural code your brain can store.',
             },
           },
           {
@@ -103,9 +103,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Maya didn\'t pay attention to the shirt, so it was never encoded in the first place.',
             distractorExplanations: {
-              1: 'The memory was deleted from her brain after 5 seconds is not correct here; maya didn\'t pay attention to the shirt, so it was never encoded in the.',
-              2: 'She has a rare memory disorder is not correct here; maya didn\'t pay attention to the shirt, so it was never encoded in the first place.',
-              3: 'The market was too loud for her to see clearly is not correct here; maya didn\'t pay attention to the shirt, so it was never encoded in the first.',
+              1: 'Maya didn\'t pay attention to the shirt, so it was never encoded in the first place.',
+              2: 'Maya didn\'t pay attention to the shirt, so it was never encoded in the first place.',
+              3: 'Maya didn\'t pay attention to the shirt, so it was never encoded in the first place.',
             },
           },
           {
@@ -121,9 +121,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Encoding is like typing notes: you\'re converting experience into a format that can be saved.',
             distractorExplanations: {
-              0: 'Erasing a whiteboard is not correct here; encoding is like typing notes: you\'re converting experience into a format that can be saved.',
-              2: 'Deleting a file from a computer is not correct here; encoding is like typing notes: you\'re converting experience into a format that can be saved.',
-              3: 'Turning off a camera is not correct here; encoding is like typing notes: you\'re converting experience into a format that can be saved.',
+              0: 'Encoding is like typing notes: you\'re converting experience into a format that can be saved.',
+              2: 'Encoding is like typing notes: you\'re converting experience into a format that can be saved.',
+              3: 'Encoding is like typing notes: you\'re converting experience into a format that can be saved.',
             },
           },
         ],
@@ -167,9 +167,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Divided attention means less information gets fully encoded, so memory suffers.',
             distractorExplanations: {
-              0: 'TV screens emit memory-blocking radiation is not correct here; divided attention means less information gets fully encoded, so memory suffers.',
-              2: 'Reading and watching use the same eye muscles is not correct here; divided attention means less information gets fully encoded, so memory suffers.',
-              3: 'TV shows erase nearby memories is not correct here; divided attention means less information gets fully encoded, so memory suffers.',
+              0: 'Divided attention means less information gets fully encoded, so memory suffers.',
+              2: 'Divided attention means less information gets fully encoded, so memory suffers.',
+              3: 'Divided attention means less information gets fully encoded, so memory suffers.',
             },
           },
           {
@@ -207,8 +207,8 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Selective attention means focusing your mental resources on specific information while filtering out the rest.',
             distractorExplanations: {
-              0: 'Choosing to forget certain memories is not correct here; selective attention means focusing your mental resources on specific information while.',
-              2: 'Paying equal attention to everything at once is not correct here; selective attention means focusing your mental resources on specific.',
+              0: 'Selective attention means focusing your mental resources on specific information while filtering out the rest.',
+              2: 'Selective attention means focusing your mental resources on specific information while filtering out the rest.',
               3: 'This is too narrow; selective attention means focusing your mental resources on specific information while filtering out the rest.',
             },
           },
@@ -240,9 +240,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Leo wasn\'t paying attention, so the lecture content was never properly encoded.',
             distractorExplanations: {
-              0: 'His brain is full and can\'t store more memories is not correct here; leo wasn\'t paying attention, so the lecture content was never properly encoded.',
-              1: 'The lecture was too difficult for his brain is not correct here; leo wasn\'t paying attention, so the lecture content was never properly encoded.',
-              3: 'Boring content is automatically deleted by the brain is not correct here; leo wasn\'t paying attention, so the lecture content was never properly.',
+              0: 'Leo wasn\'t paying attention, so the lecture content was never properly encoded.',
+              1: 'Leo wasn\'t paying attention, so the lecture content was never properly encoded.',
+              3: 'Leo wasn\'t paying attention, so the lecture content was never properly encoded.',
             },
           },
         ],
@@ -286,9 +286,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Noticing the visual appearance of text is shallow processing. It focuses on surface features, not meaning.',
             distractorExplanations: {
-              0: 'Connecting a new word to your personal experience is not correct here; noticing the visual appearance of text is shallow processing.',
-              2: 'Explaining a concept in your own words is not correct here; noticing the visual appearance of text is shallow processing.',
-              3: 'Creating a mental image of a new vocabulary term is not correct here; noticing the visual appearance of text is shallow processing.',
+              0: 'Noticing the visual appearance of text is shallow processing. It focuses on surface features, not meaning.',
+              2: 'Noticing the visual appearance of text is shallow processing. It focuses on surface features, not meaning.',
+              3: 'Noticing the visual appearance of text is shallow processing. It focuses on surface features, not meaning.',
             },
           },
           {
@@ -319,9 +319,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Rereading without engaging with meaning is shallow processing. It focuses on the surface of the text.',
             distractorExplanations: {
-              0: 'Deep semantic processing is not correct here; rereading without engaging with meaning is shallow processing. It focuses on the surface of the text.',
-              1: 'Phonemic processing is not correct here; rereading without engaging with meaning is shallow processing. It focuses on the surface of the text.',
-              3: 'Elaborative processing is not correct here; rereading without engaging with meaning is shallow processing. It focuses on the surface of the text.',
+              0: 'Rereading without engaging with meaning is shallow processing. It focuses on the surface of the text.',
+              1: 'Rereading without engaging with meaning is shallow processing. It focuses on the surface of the text.',
+              3: 'Rereading without engaging with meaning is shallow processing. It focuses on the surface of the text.',
             },
           },
           {
@@ -360,9 +360,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Summarizing requires semantic processing, which creates stronger memories than repeated shallow reading.',
             distractorExplanations: {
-              0: 'Student A, because repetition is the best strategy is not correct here; summarizing requires semantic processing, which creates stronger memories.',
-              1: 'They will remember the same amount is not correct here; summarizing requires semantic processing, which creates stronger memories than repeated.',
-              3: 'Neither will remember anything without flashcards is not correct here; summarizing requires semantic processing, which creates stronger memories.',
+              0: 'Summarizing requires semantic processing, which creates stronger memories than repeated shallow reading.',
+              1: 'Summarizing requires semantic processing, which creates stronger memories than repeated shallow reading.',
+              3: 'Summarizing requires semantic processing, which creates stronger memories than repeated shallow reading.',
             },
           },
         ],
@@ -405,9 +405,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Elaborative rehearsal builds connections between new information and what you already know.',
             distractorExplanations: {
-              0: 'It uses more repetition is not correct here; elaborative rehearsal builds connections between new information and what you already know.',
+              0: 'Elaborative rehearsal builds connections between new information and what you already know.',
               2: 'This is too narrow; elaborative rehearsal builds connections between new information and what you already know.',
-              3: 'It requires writing things down is not correct here; elaborative rehearsal builds connections between new information and what you already know.',
+              3: 'Elaborative rehearsal builds connections between new information and what you already know.',
             },
           },
           {
@@ -460,9 +460,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'The self-reference effect means you encode and remember information more effectively when it connects to you personally.',
             distractorExplanations: {
-              0: 'Talking about yourself too much is not correct here; the self-reference effect means you encode and remember information more effectively when it.',
-              2: 'Forgetting information about other people is not correct here; the self-reference effect means you encode and remember information more.',
-              3: 'Only learning from personal experience is not correct here; the self-reference effect means you encode and remember information more effectively.',
+              0: 'The self-reference effect means you encode and remember information more effectively when it connects to you personally.',
+              2: 'The self-reference effect means you encode and remember information more effectively when it connects to you personally.',
+              3: 'This is too narrow; the self-reference effect means you encode and remember information more effectively when it connects to you personally.',
             },
           },
           {
@@ -479,8 +479,8 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Writing sentences about your life connects new words to personal meaning. That\'s elaborative rehearsal with self-reference.',
             distractorExplanations: {
-              0: 'The student repeating words 10 times is not correct here; writing sentences about your life connects new words to personal meaning.',
-              1: 'The student writing the words in different colors is not correct here; writing sentences about your life connects new words to personal meaning.',
+              0: 'Writing sentences about your life connects new words to personal meaning. That\'s elaborative rehearsal with self-reference.',
+              1: 'Writing sentences about your life connects new words to personal meaning. That\'s elaborative rehearsal with self-reference.',
               3: 'This is too absolute; writing sentences about your life connects new words to personal meaning. That\'s elaborative rehearsal with self-reference.',
             },
           },
@@ -639,9 +639,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Sensory memory briefly captures raw input so your brain can decide what to pay attention to.',
             distractorExplanations: {
-              0: 'To store important memories permanently is not correct here; sensory memory briefly captures raw input so your brain can decide what to pay.',
-              2: 'To filter out emotional memories is not correct here; sensory memory briefly captures raw input so your brain can decide what to pay attention to.',
-              3: 'To rehearse information for an exam is not correct here; sensory memory briefly captures raw input so your brain can decide what to pay attention.',
+              0: 'Sensory memory briefly captures raw input so your brain can decide what to pay attention to.',
+              2: 'Sensory memory briefly captures raw input so your brain can decide what to pay attention to.',
+              3: 'Sensory memory briefly captures raw input so your brain can decide what to pay attention to.',
             },
           },
           {
@@ -672,9 +672,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Echoic memory holds auditory information for a few seconds, allowing the person to "replay" what was just said.',
             distractorExplanations: {
-              0: 'They read your lips is not correct here; echoic memory holds auditory information for a few seconds, allowing the person to "replay" what was.',
-              1: 'They used iconic memory to replay what they saw is not correct here; echoic memory holds auditory information for a few seconds, allowing the.',
-              3: 'They guessed the answer randomly is not correct here; echoic memory holds auditory information for a few seconds, allowing the person to "replay".',
+              0: 'Echoic memory holds auditory information for a few seconds, allowing the person to "replay" what was just said.',
+              1: 'Echoic memory holds auditory information for a few seconds, allowing the person to "replay" what was just said.',
+              3: 'Echoic memory holds auditory information for a few seconds, allowing the person to "replay" what was just said.',
             },
           },
           {
@@ -743,9 +743,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'George Miller published his famous paper on "the magical number seven" in 1956.',
             distractorExplanations: {
-              0: 'Sigmund Freud is not correct here; george Miller published his famous paper on "the magical number seven" in 1956.',
-              1: 'Ivan Pavlov is not correct here; george Miller published his famous paper on "the magical number seven" in 1956.',
-              3: 'B.F. Skinner is not correct here; george Miller published his famous paper on "the magical number seven" in 1956.',
+              0: 'George Miller published his famous paper on "the magical number seven" in 1956.',
+              1: 'George Miller published his famous paper on "the magical number seven" in 1956.',
+              3: 'George Miller published his famous paper on "the magical number seven" in 1956.',
             },
           },
           {
@@ -777,9 +777,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Without rehearsal, short-term memory fades in about 20 to 30 seconds. The interruption stopped her from maintaining it.',
             distractorExplanations: {
-              0: 'Her long-term memory is damaged is not correct here; without rehearsal, short-term memory fades in about 20 to 30 seconds.',
-              1: 'The number was too long for any human to remember is not correct here; without rehearsal, short-term memory fades in about 20 to 30 seconds.',
-              3: 'She has a phobia of phone calls is not correct here; without rehearsal, short-term memory fades in about 20 to 30 seconds.',
+              0: 'Without rehearsal, short-term memory fades in about 20 to 30 seconds. The interruption stopped her from maintaining it.',
+              1: 'Without rehearsal, short-term memory fades in about 20 to 30 seconds. The interruption stopped her from maintaining it.',
+              3: 'Without rehearsal, short-term memory fades in about 20 to 30 seconds. The interruption stopped her from maintaining it.',
             },
           },
           {
@@ -801,9 +801,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Maintenance rehearsal keeps info active in short-term memory but doesn\'t reliably create long-term memories.',
             distractorExplanations: {
-              0: 'To create permanent long-term memories is not correct here; maintenance rehearsal keeps info active in short-term memory but doesn\'t reliably.',
-              2: 'To erase unwanted memories is not correct here; maintenance rehearsal keeps info active in short-term memory but doesn\'t reliably create.',
-              3: 'To increase short-term memory capacity is not correct here; maintenance rehearsal keeps info active in short-term memory but doesn\'t reliably.',
+              0: 'Maintenance rehearsal keeps info active in short-term memory but doesn\'t reliably create long-term memories.',
+              2: 'Maintenance rehearsal keeps info active in short-term memory but doesn\'t reliably create long-term memories.',
+              3: 'Maintenance rehearsal keeps info active in short-term memory but doesn\'t reliably create long-term memories.',
             },
           },
           {
@@ -862,9 +862,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Breaking 10 digits into 3 groups is chunking. Each group becomes 1 unit in short-term memory.',
             distractorExplanations: {
-              0: 'Repeating a number over and over is not correct here; breaking 10 digits into 3 groups is chunking. Each group becomes 1 unit in short-term memory.',
-              2: 'Writing a number on a piece of paper is not correct here; breaking 10 digits into 3 groups is chunking.',
-              3: 'Forgetting a number after 30 seconds is not correct here; breaking 10 digits into 3 groups is chunking.',
+              0: 'Breaking 10 digits into 3 groups is chunking. Each group becomes 1 unit in short-term memory.',
+              2: 'Breaking 10 digits into 3 groups is chunking. Each group becomes 1 unit in short-term memory.',
+              3: 'Breaking 10 digits into 3 groups is chunking. Each group becomes 1 unit in short-term memory.',
             },
           },
           {
@@ -888,9 +888,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Chess experts recognize familiar patterns and chunk them into meaningful groups, which lets them remember more within the 7-item limit.',
             distractorExplanations: {
-              0: 'The master has a bigger short-term memory capacity is not correct here; chess experts recognize familiar patterns and chunk them into meaningful.',
-              2: 'The beginner wasn\'t paying attention is not correct here; chess experts recognize familiar patterns and chunk them into meaningful groups, which.',
-              3: 'The master has perfect photographic memory is not correct here; chess experts recognize familiar patterns and chunk them into meaningful groups,.',
+              0: 'Chess experts recognize familiar patterns and chunk them into meaningful groups, which lets them remember more within the.',
+              2: 'Chess experts recognize familiar patterns and chunk them into meaningful groups, which lets them remember more within the.',
+              3: 'Chess experts recognize familiar patterns and chunk them into meaningful groups, which lets them remember more within the.',
             },
           },
           {
@@ -929,9 +929,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Breaking 16 digits into 4 groups uses chunking, making the number easier to hold in short-term memory.',
             distractorExplanations: {
-              0: 'Banks chose random formatting is not correct here; breaking 16 digits into 4 groups uses chunking, making the number easier to hold in short-term.',
-              1: 'Computers can\'t process long numbers is not correct here; breaking 16 digits into 4 groups uses chunking, making the number easier to hold in.',
-              3: '16-digit numbers are too short to split further is not correct here; breaking 16 digits into 4 groups uses chunking, making the number easier to.',
+              0: 'Breaking 16 digits into 4 groups uses chunking, making the number easier to hold in short-term memory.',
+              1: 'Breaking 16 digits into 4 groups uses chunking, making the number easier to hold in short-term memory.',
+              3: 'Breaking 16 digits into 4 groups uses chunking, making the number easier to hold in short-term memory.',
             },
           },
         ],
@@ -974,9 +974,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Working memory\'s key feature is active manipulation. You can reason, calculate, and plan with it.',
             distractorExplanations: {
-              0: 'It forgets information faster is not correct here; working memory\'s key feature is active manipulation. You can reason, calculate, and plan with it.',
-              1: 'It stores memories permanently is not correct here; working memory\'s key feature is active manipulation.',
-              3: 'It holds more than 7 items is not correct here; working memory\'s key feature is active manipulation. You can reason, calculate, and plan with it.',
+              0: 'Working memory\'s key feature is active manipulation. You can reason, calculate, and plan with it.',
+              1: 'Working memory\'s key feature is active manipulation. You can reason, calculate, and plan with it.',
+              3: 'Working memory\'s key feature is active manipulation. You can reason, calculate, and plan with it.',
             },
           },
           {
@@ -1008,9 +1008,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Mentally visualizing spatial arrangements is the job of the visuospatial sketchpad.',
             distractorExplanations: {
-              0: 'The phonological loop is not correct here; mentally visualizing spatial arrangements is the job of the visuospatial sketchpad.',
-              1: 'This is too narrow; mentally visualizing spatial arrangements is the job of the visuospatial sketchpad.',
-              3: 'This is too narrow; mentally visualizing spatial arrangements is the job of the visuospatial sketchpad.',
+              0: 'Mentally visualizing spatial arrangements is the job of the visuospatial sketchpad.',
+              1: 'Mentally visualizing spatial arrangements is the job of the visuospatial sketchpad.',
+              3: 'Mentally visualizing spatial arrangements is the job of the visuospatial sketchpad.',
             },
           },
           {
@@ -1041,9 +1041,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 3,
             explanation: 'The phonological loop handles verbal and sound-based information, including inner speech and number rehearsal.',
             distractorExplanations: {
-              0: 'The visuospatial sketchpad is not correct here; the phonological loop handles verbal and sound-based information, including inner speech and.',
-              1: 'The episodic buffer is not correct here; the phonological loop handles verbal and sound-based information, including inner speech and number.',
-              2: 'The central executive is not correct here; the phonological loop handles verbal and sound-based information, including inner speech and number.',
+              0: 'The phonological loop handles verbal and sound-based information, including inner speech and number rehearsal.',
+              1: 'The phonological loop handles verbal and sound-based information, including inner speech and number rehearsal.',
+              2: 'The phonological loop handles verbal and sound-based information, including inner speech and number rehearsal.',
             },
           },
         ],
@@ -1205,9 +1205,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Riding a bike is a skill you demonstrate through action, not conscious recall. That\'s implicit memory.',
             distractorExplanations: {
-              0: 'Remembering your birthday is not correct here; riding a bike is a skill you demonstrate through action, not conscious recall.',
-              1: 'Knowing that Paris is the capital of France is not correct here; riding a bike is a skill you demonstrate through action, not conscious recall.',
-              3: 'Recalling what you ate for dinner last night is not correct here; riding a bike is a skill you demonstrate through action, not conscious recall.',
+              0: 'Riding a bike is a skill you demonstrate through action, not conscious recall. That\'s implicit memory.',
+              1: 'Riding a bike is a skill you demonstrate through action, not conscious recall. That\'s implicit memory.',
+              3: 'Riding a bike is a skill you demonstrate through action, not conscious recall. That\'s implicit memory.',
             },
           },
           {
@@ -1260,9 +1260,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'This is a classic finding. Implicit memory (skill learning) can function even when explicit memory is severely impaired.',
             distractorExplanations: {
-              0: 'Their memory is completely destroyed is not correct here; this is a classic finding.',
-              2: 'They\'re faking the amnesia is not correct here; this is a classic finding.',
-              3: 'They secretly remember the doctor is not correct here; this is a classic finding.',
+              0: 'This is a classic finding. Implicit memory (skill learning) can function even when explicit memory is severely impaired.',
+              2: 'This is a classic finding. Implicit memory (skill learning) can function even when explicit memory is severely impaired.',
+              3: 'This is a classic finding. Implicit memory (skill learning) can function even when explicit memory is severely impaired.',
             },
           },
           {
@@ -1314,9 +1314,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Episodic memory records your personal experiences, much like a diary with times, places, and emotions.',
             distractorExplanations: {
-              0: 'A dictionary of word definitions is not correct here; episodic memory records your personal experiences, much like a diary with times, places,.',
-              2: 'A list of world capitals is not correct here; episodic memory records your personal experiences, much like a diary with times, places, and emotions.',
-              3: 'The ability to ride a bicycle is not correct here; episodic memory records your personal experiences, much like a diary with times, places, and.',
+              0: 'Episodic memory records your personal experiences, much like a diary with times, places, and emotions.',
+              2: 'Episodic memory records your personal experiences, much like a diary with times, places, and emotions.',
+              3: 'Episodic memory records your personal experiences, much like a diary with times, places, and emotions.',
             },
           },
           {
@@ -1340,8 +1340,8 @@ export const psySection4Part1: Unit[] = [
             explanation: 'Facts often start as episodic memories but become semantic over time, losing their connection to the original learning event.',
             distractorExplanations: {
               0: 'This is too absolute; facts often start as episodic memories but become semantic over time, losing their connection to the original learning event.',
-              1: 'It was too boring to encode is not correct here; facts often start as episodic memories but become semantic over time, losing their connection to.',
-              3: 'Your brain deleted the memory to save space is not correct here; facts often start as episodic memories but become semantic over time, losing.',
+              1: 'Facts often start as episodic memories but become semantic over time, losing their connection to the original learning event.',
+              3: 'Facts often start as episodic memories but become semantic over time, losing their connection to the original learning event.',
             },
           },
           {
@@ -1388,9 +1388,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Knowing a fact without remembering how or when you learned it is characteristic of semantic memory.',
             distractorExplanations: {
-              0: 'Episodic memory, because it\'s a specific event is not correct here; knowing a fact without remembering how or when you learned it is.',
-              1: 'Implicit memory, because she does it automatically is not correct here; knowing a fact without remembering how or when you learned it is.',
-              3: 'Sensory memory, because she saw it somewhere is not correct here; knowing a fact without remembering how or when you learned it is characteristic.',
+              0: 'Knowing a fact without remembering how or when you learned it is characteristic of semantic memory.',
+              1: 'Knowing a fact without remembering how or when you learned it is characteristic of semantic memory.',
+              3: 'Knowing a fact without remembering how or when you learned it is characteristic of semantic memory.',
             },
           },
         ],
@@ -1433,9 +1433,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'The cerebellum and basal ganglia are key for learning and executing motor skills and habits.',
             distractorExplanations: {
-              0: 'The hippocampus is not correct here; the cerebellum and basal ganglia are key for learning and executing motor skills and habits.',
-              2: 'The prefrontal cortex is not correct here; the cerebellum and basal ganglia are key for learning and executing motor skills and habits.',
-              3: 'The occipital lobe is not correct here; the cerebellum and basal ganglia are key for learning and executing motor skills and habits.',
+              0: 'The cerebellum and basal ganglia are key for learning and executing motor skills and habits.',
+              2: 'The cerebellum and basal ganglia are key for learning and executing motor skills and habits.',
+              3: 'The cerebellum and basal ganglia are key for learning and executing motor skills and habits.',
             },
           },
           {
@@ -1485,8 +1485,8 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Overthinking an automatic skill can disrupt procedural memory. This is called "choking under pressure."',
             distractorExplanations: {
-              0: 'She forgot how to shoot because of amnesia is not correct here; overthinking an automatic skill can disrupt procedural memory.',
-              2: 'Her short-term memory was overloaded by the crowd noise is not correct here; overthinking an automatic skill can disrupt procedural memory.',
+              0: 'Overthinking an automatic skill can disrupt procedural memory. This is called "choking under pressure.".',
+              2: 'Overthinking an automatic skill can disrupt procedural memory. This is called "choking under pressure.".',
               3: 'This is too absolute; overthinking an automatic skill can disrupt procedural memory. This is called "choking under pressure.".',
             },
           },
@@ -1546,9 +1546,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Seeing "yellow" primed the concept of banana, making it easier to recognize.',
             distractorExplanations: {
-              0: 'Chunking is not correct here; seeing "yellow" primed the concept of banana, making it easier to recognize.',
-              1: 'Maintenance rehearsal is not correct here; seeing "yellow" primed the concept of banana, making it easier to recognize.',
-              3: 'Sensory memory is not correct here; seeing "yellow" primed the concept of banana, making it easier to recognize.',
+              0: 'Seeing "yellow" primed the concept of banana, making it easier to recognize.',
+              1: 'Seeing "yellow" primed the concept of banana, making it easier to recognize.',
+              3: 'Seeing "yellow" primed the concept of banana, making it easier to recognize.',
             },
           },
           {
@@ -1580,9 +1580,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Priming operates below conscious awareness. You don\'t decide to be primed. It happens automatically.',
             distractorExplanations: {
-              0: 'Because you choose when to use it is not correct here; priming operates below conscious awareness. You don\'t decide to be primed.',
-              1: 'Because it requires conscious effort to activate is not correct here; priming operates below conscious awareness. You don\'t decide to be primed.',
-              3: 'Because it only works for motor skills is not correct here; priming operates below conscious awareness. You don\'t decide to be primed.',
+              0: 'Priming operates below conscious awareness. You don\'t decide to be primed. It happens automatically.',
+              1: 'Priming operates below conscious awareness. You don\'t decide to be primed. It happens automatically.',
+              3: 'This is too narrow; priming operates below conscious awareness. You don\'t decide to be primed. It happens automatically.',
             },
           },
           {
@@ -1605,8 +1605,8 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Visual food cues prime hunger and food-related behavior, even when you\'re not physically hungry.',
             distractorExplanations: {
-              0: 'Her body genuinely needed more food is not correct here; visual food cues prime hunger and food-related behavior, even when you\'re not physically.',
-              2: 'She has a medical condition affecting hunger is not correct here; visual food cues prime hunger and food-related behavior, even when you\'re not.',
+              0: 'Visual food cues prime hunger and food-related behavior, even when you\'re not physically hungry.',
+              2: 'Visual food cues prime hunger and food-related behavior, even when you\'re not physically hungry.',
               3: 'This is too absolute; visual food cues prime hunger and food-related behavior, even when you\'re not physically hungry.',
             },
           },
@@ -1762,9 +1762,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Memory follows a sequence: encode (get info in), store (keep it), retrieve (get it out).',
             distractorExplanations: {
-              0: 'Retrieval, storage, encoding is not correct here; memory follows a sequence: encode (get info in), store (keep it), retrieve (get it out).',
-              1: 'Storage, encoding, retrieval is not correct here; memory follows a sequence: encode (get info in), store (keep it), retrieve (get it out).',
-              3: 'Encoding, retrieval, storage is not correct here; memory follows a sequence: encode (get info in), store (keep it), retrieve (get it out).',
+              0: 'Memory follows a sequence: encode (get info in), store (keep it), retrieve (get it out).',
+              1: 'Memory follows a sequence: encode (get info in), store (keep it), retrieve (get it out).',
+              3: 'Memory follows a sequence: encode (get info in), store (keep it), retrieve (get it out).',
             },
           },
           {
@@ -1811,9 +1811,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Explaining in your own words requires semantic processing, which is the deepest level.',
             distractorExplanations: {
-              0: 'Rereading the chapter 3 times is not correct here; explaining in your own words requires semantic processing, which is the deepest level.',
-              1: 'Highlighting key terms in yellow is not correct here; explaining in your own words requires semantic processing, which is the deepest level.',
-              3: 'Copying notes word for word is not correct here; explaining in your own words requires semantic processing, which is the deepest level.',
+              0: 'Explaining in your own words requires semantic processing, which is the deepest level.',
+              1: 'Explaining in your own words requires semantic processing, which is the deepest level.',
+              3: 'Explaining in your own words requires semantic processing, which is the deepest level.',
             },
           },
           {
@@ -1848,9 +1848,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'Reading "salt" primed the associated word "pepper," making it more likely to come to mind.',
             distractorExplanations: {
-              0: 'Chunking is not correct here; reading "salt" primed the associated word "pepper," making it more likely to come to mind.',
-              1: 'The self-reference effect is not correct here; reading "salt" primed the associated word "pepper," making it more likely to come to mind.',
-              3: 'Maintenance rehearsal is not correct here; reading "salt" primed the associated word "pepper," making it more likely to come to mind.',
+              0: 'Reading "salt" primed the associated word "pepper," making it more likely to come to mind.',
+              1: 'Reading "salt" primed the associated word "pepper," making it more likely to come to mind.',
+              3: 'Reading "salt" primed the associated word "pepper," making it more likely to come to mind.',
             },
           },
         ],
@@ -1884,9 +1884,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Repeating names once is maintenance rehearsal. Without elaborative rehearsal (connecting names to something meaningful), they fade.',
             distractorExplanations: {
-              1: 'His long-term memory is full is not correct here; repeating names once is maintenance rehearsal.',
+              1: 'Repeating names once is maintenance rehearsal. Without elaborative rehearsal (connecting names to something meaningful), they fade.',
               2: 'This is too absolute; repeating names once is maintenance rehearsal.',
-              3: 'He has a memory disorder is not correct here; repeating names once is maintenance rehearsal.',
+              3: 'Repeating names once is maintenance rehearsal. Without elaborative rehearsal (connecting names to something meaningful), they fade.',
             },
           },
           {
@@ -1902,9 +1902,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Playing automatically is procedural memory. Not knowing the theory means the semantic knowledge wasn\'t encoded.',
             distractorExplanations: {
-              0: 'Only semantic memory is not correct here; playing automatically is procedural memory.',
-              2: 'Only episodic memory is not correct here; playing automatically is procedural memory.',
-              3: 'Only working memory is not correct here; playing automatically is procedural memory.',
+              0: 'Playing automatically is procedural memory. Not knowing the theory means the semantic knowledge wasn\'t encoded.',
+              2: 'Playing automatically is procedural memory. Not knowing the theory means the semantic knowledge wasn\'t encoded.',
+              3: 'Playing automatically is procedural memory. Not knowing the theory means the semantic knowledge wasn\'t encoded.',
             },
           },
           {
@@ -1928,9 +1928,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 0,
             explanation: 'Familiarity from rereading is an illusion of learning. Deep processing through summarizing creates actual memories.',
             distractorExplanations: {
-              1: 'Read the chapter more slowly is not correct here; familiarity from rereading is an illusion of learning.',
-              2: 'Use a brighter highlighter color is not correct here; familiarity from rereading is an illusion of learning.',
-              3: 'Study later at night when the brain is more active is not correct here; familiarity from rereading is an illusion of learning.',
+              1: 'Familiarity from rereading is an illusion of learning. Deep processing through summarizing creates actual memories.',
+              2: 'Familiarity from rereading is an illusion of learning. Deep processing through summarizing creates actual memories.',
+              3: 'Familiarity from rereading is an illusion of learning. Deep processing through summarizing creates actual memories.',
             },
           },
           {
@@ -1962,8 +1962,8 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Removing your phone eliminates a distraction, allowing focused attention and stronger encoding.',
             distractorExplanations: {
-              0: 'Phones emit signals that block memory formation is not correct here; removing your phone eliminates a distraction, allowing focused attention and.',
-              2: 'Studying near electronics causes headaches is not correct here; removing your phone eliminates a distraction, allowing focused attention and.',
+              0: 'Removing your phone eliminates a distraction, allowing focused attention and stronger encoding.',
+              2: 'Removing your phone eliminates a distraction, allowing focused attention and stronger encoding.',
               3: 'This is not accurate; removing your phone eliminates a distraction, allowing focused attention and stronger encoding.',
             },
           },
@@ -2134,9 +2134,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Like an unused trail becoming overgrown, memory traces weaken when they aren\'t accessed.',
             distractorExplanations: {
-              0: 'A book that someone steals from a library is not correct here; like an unused trail becoming overgrown, memory traces weaken when they aren\'t.',
-              2: 'A computer file that gets corrupted by a virus is not correct here; like an unused trail becoming overgrown, memory traces weaken when they.',
-              3: 'A song that gets louder each time you hear it is not correct here; like an unused trail becoming overgrown, memory traces weaken when they aren\'t.',
+              0: 'Like an unused trail becoming overgrown, memory traces weaken when they aren\'t accessed.',
+              2: 'Like an unused trail becoming overgrown, memory traces weaken when they aren\'t accessed.',
+              3: 'Like an unused trail becoming overgrown, memory traces weaken when they aren\'t accessed.',
             },
           },
           {
@@ -2158,9 +2158,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'The forgetting curve shows the steepest drop in memory happens soon after learning.',
             distractorExplanations: {
-              0: 'After a full night of sleep is not correct here; the forgetting curve shows the steepest drop in memory happens soon after learning.',
-              1: 'About a week after learning is not correct here; the forgetting curve shows the steepest drop in memory happens soon after learning.',
-              3: 'Several months after learning is not correct here; the forgetting curve shows the steepest drop in memory happens soon after learning.',
+              0: 'The forgetting curve shows the steepest drop in memory happens soon after learning.',
+              1: 'The forgetting curve shows the steepest drop in memory happens soon after learning.',
+              3: 'The forgetting curve shows the steepest drop in memory happens soon after learning.',
             },
           },
           {
@@ -2204,9 +2204,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Li encoded the material but didn\'t rehearse it. Decay theory predicts that unrehearsed memories fade over time.',
             distractorExplanations: {
-              0: 'The material was too difficult for her brain is not correct here; li encoded the material but didn\'t rehearse it.',
+              0: 'Li encoded the material but didn\'t rehearse it. Decay theory predicts that unrehearsed memories fade over time.',
               2: 'This is too absolute; li encoded the material but didn\'t rehearse it. Decay theory predicts that unrehearsed memories fade over time.',
-              3: 'Someone else interfered with her memories is not correct here; li encoded the material but didn\'t rehearse it.',
+              3: 'Li encoded the material but didn\'t rehearse it. Decay theory predicts that unrehearsed memories fade over time.',
             },
           },
         ],
@@ -2249,9 +2249,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Similar passwords create interference because they compete with each other when you try to recall one.',
             distractorExplanations: {
-              0: 'Passwords are stored in a different brain region is not correct here; similar passwords create interference because they compete with each other.',
-              2: 'Passwords decay faster than other memories is not correct here; similar passwords create interference because they compete with each other when.',
-              3: 'The brain can only store one password at a time is not correct here; similar passwords create interference because they compete with each other.',
+              0: 'Similar passwords create interference because they compete with each other when you try to recall one.',
+              2: 'Similar passwords create interference because they compete with each other when you try to recall one.',
+              3: 'This is too narrow; similar passwords create interference because they compete with each other when you try to recall one.',
             },
           },
           {
@@ -2304,9 +2304,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Spanish and Portuguese are very similar languages, so they would create the most interference with each other.',
             distractorExplanations: {
-              0: 'Learning piano and learning to cook is not correct here; spanish and Portuguese are very similar languages, so they would create the most.',
-              2: 'Learning math and learning to swim is not correct here; spanish and Portuguese are very similar languages, so they would create the most.',
-              3: 'Learning history and learning to paint is not correct here; spanish and Portuguese are very similar languages, so they would create the most.',
+              0: 'Spanish and Portuguese are very similar languages, so they would create the most interference with each other.',
+              2: 'Spanish and Portuguese are very similar languages, so they would create the most interference with each other.',
+              3: 'Spanish and Portuguese are very similar languages, so they would create the most interference with each other.',
             },
           },
           {
@@ -2323,8 +2323,8 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'The new combination is blocking retrieval of the old one. That\'s retroactive interference: new blocks old.',
             distractorExplanations: {
-              0: 'Proactive interference: old combo blocks new is not correct here; the new combination is blocking retrieval of the old one.',
-              2: 'Decay: the old combo faded over time is not correct here; the new combination is blocking retrieval of the old one.',
+              0: 'The new combination is blocking retrieval of the old one. That\'s retroactive interference: new blocks old.',
+              2: 'The new combination is blocking retrieval of the old one. That\'s retroactive interference: new blocks old.',
               3: 'This is too absolute; the new combination is blocking retrieval of the old one. That\'s retroactive interference: new blocks old.',
             },
           },
@@ -2368,9 +2368,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'Retrieval cues are stimuli (sights, sounds, smells, contexts) that help you access stored memories.',
             distractorExplanations: {
-              0: 'A signal that erases memories is not correct here; retrieval cues are stimuli (sights, sounds, smells, contexts) that help you access stored.',
-              2: 'A type of brain scan that finds lost memories is not correct here; retrieval cues are stimuli (sights, sounds, smells, contexts) that help you.',
-              3: 'A special diet that improves memory is not correct here; retrieval cues are stimuli (sights, sounds, smells, contexts) that help you access.',
+              0: 'Retrieval cues are stimuli (sights, sounds, smells, contexts) that help you access stored memories.',
+              2: 'Retrieval cues are stimuli (sights, sounds, smells, contexts) that help you access stored memories.',
+              3: 'Retrieval cues are stimuli (sights, sounds, smells, contexts) that help you access stored memories.',
             },
           },
           {
@@ -2394,9 +2394,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'The library environment was linked to the studied material. Being in that context triggered retrieval.',
             distractorExplanations: {
-              0: 'Decay: the memories faded during the exam is not correct here; the library environment was linked to the studied material.',
-              2: 'Proactive interference from earlier exams is not correct here; the library environment was linked to the studied material.',
-              3: 'Her working memory capacity was too low is not correct here; the library environment was linked to the studied material.',
+              0: 'The library environment was linked to the studied material. Being in that context triggered retrieval.',
+              2: 'The library environment was linked to the studied material. Being in that context triggered retrieval.',
+              3: 'The library environment was linked to the studied material. Being in that context triggered retrieval.',
             },
           },
           {
@@ -2412,9 +2412,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'State-dependent memory ties recall to your internal state (mood, energy level) at the time of encoding.',
             distractorExplanations: {
-              0: 'Room where you learned it is not correct here; state-dependent memory ties recall to your internal state (mood, energy level) at the time of.',
-              2: 'Time of day is not correct here; state-dependent memory ties recall to your internal state (mood, energy level) at the time of encoding.',
-              3: 'Outfit you wore while studying is not correct here; state-dependent memory ties recall to your internal state (mood, energy level) at the time of.',
+              0: 'State-dependent memory ties recall to your internal state (mood, energy level) at the time of encoding.',
+              2: 'State-dependent memory ties recall to your internal state (mood, energy level) at the time of encoding.',
+              3: 'State-dependent memory ties recall to your internal state (mood, energy level) at the time of encoding.',
             },
           },
           {
@@ -2480,9 +2480,9 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 1,
             explanation: 'The memory is stored (you know you know it), but you can\'t fully retrieve it right now. That\'s retrieval failure.',
             distractorExplanations: {
-              0: 'An encoding failure is not correct here; the memory is stored (you know you know it), but you can\'t fully retrieve it right now.',
-              2: 'A storage failure is not correct here; the memory is stored (you know you know it), but you can\'t fully retrieve it right now.',
-              3: 'A sensory memory problem is not correct here; the memory is stored (you know you know it), but you can\'t fully retrieve it right now.',
+              0: 'The memory is stored (you know you know it), but you can\'t fully retrieve it right now. That\'s retrieval failure.',
+              2: 'The memory is stored (you know you know it), but you can\'t fully retrieve it right now. That\'s retrieval failure.',
+              3: 'The memory is stored (you know you know it), but you can\'t fully retrieve it right now. That\'s retrieval failure.',
             },
           },
           {
@@ -2505,7 +2505,7 @@ export const psySection4Part1: Unit[] = [
             correctIndex: 2,
             explanation: 'The memories are intact but harder to access. Retrieval speed slows with age, requiring more cues.',
             distractorExplanations: {
-              0: 'Their memories are completely erased with age is not correct here; the memories are intact but harder to access.',
+              0: 'The memories are intact but harder to access. Retrieval speed slows with age, requiring more cues.',
               1: 'This is too absolute; the memories are intact but harder to access. Retrieval speed slows with age, requiring more cues.',
               3: 'This is too narrow; the memories are intact but harder to access. Retrieval speed slows with age, requiring more cues.',
             },
@@ -2555,8 +2555,8 @@ export const psySection4Part1: Unit[] = [
             explanation: 'You have partial information (first letter, face) but can\'t complete retrieval. That\'s a classic tip-of-the-tongue state.',
             distractorExplanations: {
               0: 'This is too absolute; you have partial information (first letter, face) but can\'t complete retrieval. That\'s a classic tip-of-the-tongue state.',
-              1: 'Decay: the memory has faded completely is not correct here; you have partial information (first letter, face) but can\'t complete retrieval.',
-              3: 'Retroactive interference from a newer film is not correct here; you have partial information (first letter, face) but can\'t complete retrieval.',
+              1: 'You have partial information (first letter, face) but can\'t complete retrieval. That\'s a classic tip-of-the-tongue state.',
+              3: 'You have partial information (first letter, face) but can\'t complete retrieval. That\'s a classic tip-of-the-tongue state.',
             },
           },
         ],

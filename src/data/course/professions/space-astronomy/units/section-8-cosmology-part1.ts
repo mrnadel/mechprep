@@ -40,6 +40,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "The Big Bang was an explosion that happened at a specific point in space.",
             correctAnswer: false,
             explanation: "The Big Bang wasn't an explosion in space. It was the expansion of space itself. There's no center point where it happened.",
+            distractorExplanations: {
+              0: 'The Big Bang wasn\'t an explosion in space.',
+            },
           },
           {
             id: "sp-sec8-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The universe is approximately 13.8 billion years old. Earth is much younger at 4.5 billion years.",
+            distractorExplanations: {
+              1: 'About 4.5 billion years is incorrect; the universe is approximately 13.8 billion years old.',
+              2: 'About 100 billion years is incorrect; the universe is approximately 13.8 billion years old.',
+              3: 'About 1 trillion years is incorrect; the universe is approximately 13.8 billion years old.',
+            },
           },
           {
             id: "sp-sec8-u1-L1-T2",
@@ -72,6 +80,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The balloon analogy works because every point on the surface moves away from every other point. There's no single center of expansion.",
+            distractorExplanations: {
+              0: 'A bomb going off in empty space is incorrect; the balloon analogy works because every point on the surface moves away from every other point.',
+              1: 'A star being born in a nebula is incorrect; the balloon analogy works because every point on the surface moves away from every other point.',
+              3: 'A black hole exploding outward is incorrect; the balloon analogy works because every point on the surface moves away from every other point.',
+            },
           },
           {
             id: "sp-sec8-u1-L1-Q4",
@@ -93,6 +106,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Scientists can clearly describe what happened before the Big Bang.",
             correctAnswer: false,
             explanation: "Time began with the Big Bang. Our physics can't describe conditions 'before' it because time didn't exist yet.",
+            distractorExplanations: {
+              0: 'Time began with the Big Bang.',
+            },
           },
           {
             id: "sp-sec8-u1-L1-Q6",
@@ -134,6 +150,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Black holes support other theories but aren't direct evidence for the Big Bang. The three pillars are expansion, the CMB, and element abundances.",
+            distractorExplanations: {
+              0: 'The cosmic microwave background is incorrect; black holes support other theories but aren\'t direct evidence for the Big Bang.',
+              1: 'The expansion of the universe is incorrect; black holes support other theories but aren\'t direct evidence for the Big Bang.',
+              3: 'The abundance of light elements is incorrect; black holes support other theories but aren\'t direct evidence for the Big Bang.',
+            },
           },
           {
             id: "sp-sec8-u1-L2-T2",
@@ -147,6 +168,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "The fact that distant galaxies are moving away supports the Big Bang theory.",
             correctAnswer: true,
             explanation: "If everything is moving apart now, it must have been closer together in the past. Running the expansion backward leads to the Big Bang.",
+            distractorExplanations: {
+              1: 'If everything is moving apart now, it must have been closer together in the past.',
+            },
           },
           {
             id: "sp-sec8-u1-L2-Q3",
@@ -160,6 +184,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Big Bang nucleosynthesis produced roughly 75% hydrogen and 25% helium by mass. Heavier elements were made later in stars.",
+            distractorExplanations: {
+              0: 'Iron and carbon is incorrect; big Bang nucleosynthesis produced roughly 75% hydrogen and 25% helium by mass.',
+              1: 'Gold and silver is incorrect; big Bang nucleosynthesis produced roughly 75% hydrogen and 25% helium by mass.',
+              3: 'Oxygen and nitrogen is incorrect; big Bang nucleosynthesis produced roughly 75% hydrogen and 25% helium by mass.',
+            },
           },
           {
             id: "sp-sec8-u1-L2-Q4",
@@ -216,6 +245,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The CMB was released when the universe cooled enough for atoms to form. Before that, light was trapped by the hot plasma.",
+            distractorExplanations: {
+              0: 'At the moment of the Big Bang is incorrect; the CMB was released when the universe cooled enough for atoms to form.',
+              2: 'About 1 billion years after the Big Bang is incorrect; the CMB was released when the universe cooled enough for atoms to form.',
+              3: 'About 4.5 billion years ago is incorrect; the CMB was released when the universe cooled enough for atoms to form.',
+            },
           },
           {
             id: "sp-sec8-u1-L3-T2",
@@ -237,6 +271,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "The CMB has a temperature of about 2.7 Kelvin (-270.45 degrees Celsius).",
             correctAnswer: true,
             explanation: "The CMB has cooled from thousands of degrees to just 2.7 K due to the expansion of the universe over 13.8 billion years.",
+            distractorExplanations: {
+              1: 'The CMB has cooled from thousands of degrees to just 2.7 K due to the expansion of the universe over 13.8 billion years.',
+            },
           },
           {
             id: "sp-sec8-u1-L3-Q4",
@@ -250,6 +287,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "In the hot early universe, free electrons scattered photons like fog scatters headlights. When atoms formed, photons could finally travel freely.",
+            distractorExplanations: {
+              0: 'Dark matter blocked all light is incorrect; in the hot early universe, free electrons scattered photons like fog scatters headlights.',
+              1: 'There were no stars to produce light is incorrect; in the hot early universe, free electrons scattered photons like fog scatters headlights.',
+              3: 'The universe was too cold for light is incorrect; in the hot early universe, free electrons scattered photons like fog scatters headlights.',
+            },
           },
           {
             id: "sp-sec8-u1-L3-T3",
@@ -305,6 +347,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The universe was so hot in the first second that matter existed as individual quarks and electrons in a blazing plasma.",
+            distractorExplanations: {
+              0: 'Stars and galaxies formed is incorrect; the universe was so hot in the first second that matter existed as individual quarks and electrons in a blazing plasma.',
+              2: 'Atoms formed and light was released is incorrect; the universe was so hot in the first second that matter existed as individual quarks and electrons in a.',
+              3: 'The first planets appeared is incorrect; the universe was so hot in the first second that matter existed as individual quarks and electrons in a blazing plasma.',
+            },
           },
           {
             id: "sp-sec8-u1-L4-T2",
@@ -326,6 +373,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Big Bang nucleosynthesis happened in the first few minutes of the universe.",
             correctAnswer: true,
             explanation: "Nucleosynthesis (the fusing of protons and neutrons into nuclei) occurred between about 10 seconds and 20 minutes after the Big Bang.",
+            distractorExplanations: {
+              1: 'Nucleosynthesis (the fusing of protons and neutrons into nuclei) occurred between about 10 seconds and 20 minutes.',
+            },
           },
           {
             id: "sp-sec8-u1-L4-Q4",
@@ -353,6 +403,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "As the universe expanded, it cooled below the temperature needed for nuclear fusion. The window for creating new nuclei closed.",
+            distractorExplanations: {
+              0: 'All the hydrogen was used up is incorrect; as the universe expanded, it cooled below the temperature needed for nuclear fusion.',
+              2: 'Dark energy pushed particles apart is incorrect; as the universe expanded, it cooled below the temperature needed for nuclear fusion.',
+              3: 'Electrons absorbed all the neutrons is incorrect; as the universe expanded, it cooled below the temperature needed for nuclear fusion.',
+            },
           },
           {
             id: "sp-sec8-u1-L4-Q6",
@@ -366,6 +421,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Carbon requires the triple-alpha process inside stars. The Big Bang only produced hydrogen, helium, and traces of lithium.",
+            distractorExplanations: {
+              0: 'Helium is incorrect; carbon requires the triple-alpha process inside stars.',
+              1: 'Hydrogen is incorrect; carbon requires the triple-alpha process inside stars.',
+              3: 'Lithium is incorrect; carbon requires the triple-alpha process inside stars.',
+            },
           },
         ],
       },
@@ -522,6 +582,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Before Hubble, most scientists believed the universe was static and unchanging.",
             correctAnswer: true,
             explanation: "Even Einstein initially assumed a static universe. He added a 'cosmological constant' to his equations to prevent the universe from expanding. He later called it his biggest blunder.",
+            distractorExplanations: {
+              1: 'Even Einstein initially assumed a static universe.',
+            },
           },
           {
             id: "sp-sec8-u2-L1-Q2",
@@ -535,6 +598,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hubble found a direct relationship: the farther a galaxy is, the faster it recedes. This velocity-distance relationship proves universal expansion.",
+            distractorExplanations: {
+              0: 'They\'re all moving toward us is incorrect; hubble found a direct relationship: the farther a galaxy is, the faster it recedes.',
+              2: 'This is incorrect; hubble found a direct relationship: the farther a galaxy is, the faster it recedes.',
+              3: 'They\'re all the same distance from Earth is incorrect; hubble found a direct relationship: the farther a galaxy is, the faster it recedes.',
+            },
           },
           {
             id: "sp-sec8-u2-L1-T2",
@@ -556,6 +624,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Einstein originally thought the universe was expanding before Hubble's discovery.",
             correctAnswer: false,
             explanation: "Einstein assumed a static universe and modified his equations to prevent expansion. After Hubble's discovery, he accepted the expanding universe model.",
+            distractorExplanations: {
+              0: 'Einstein assumed a static universe and modified his equations to prevent expansion.',
+            },
           },
           {
             id: "sp-sec8-u2-L1-T3",
@@ -575,6 +646,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hubble published his velocity-distance relation in 1929, showing that the universe is expanding.",
+            distractorExplanations: {
+              0: '1905 is incorrect; hubble published his velocity-distance relation in 1929, showing that the universe is expanding.',
+              2: '1965 is incorrect; hubble published his velocity-distance relation in 1929, showing that the universe is expanding.',
+              3: '1998 is incorrect; hubble published his velocity-distance relation in 1929, showing that the universe is expanding.',
+            },
           },
           {
             id: "sp-sec8-u2-L1-Q6",
@@ -588,6 +664,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Galaxies stay relatively still in their local region of space. It's space itself that's expanding, carrying galaxies apart.",
+            distractorExplanations: {
+              0: 'They\'re too heavy to move is incorrect; galaxies stay relatively still in their local region of space.',
+              1: 'Gravity holds them in place is incorrect; galaxies stay relatively still in their local region of space.',
+              3: 'Dark energy keeps them stationary is incorrect; galaxies stay relatively still in their local region of space.',
+            },
           },
         ],
       },
@@ -618,6 +699,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "As space expands, the wavelength of photons traveling through it stretches. Longer wavelength means redder light.",
+            distractorExplanations: {
+              0: 'Galaxies heat up as they age is incorrect; as space expands, the wavelength of photons traveling through it stretches.',
+              1: 'Light loses energy as it travels is incorrect; as space expands, the wavelength of photons traveling through it stretches.',
+              3: 'Dust between galaxies absorbs blue light is incorrect; as space expands, the wavelength of photons traveling through it stretches.',
+            },
           },
           {
             id: "sp-sec8-u2-L2-T2",
@@ -631,6 +717,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "A galaxy with a higher redshift is farther away than one with a lower redshift.",
             correctAnswer: true,
             explanation: "Higher redshift means the light traveled through more expanding space, which means a greater distance.",
+            distractorExplanations: {
+              1: 'Higher redshift means the light traveled through more expanding space, which means a greater distance.',
+            },
           },
           {
             id: "sp-sec8-u2-L2-Q3",
@@ -652,6 +741,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "High redshift means great distance. Since light takes time to travel, we see distant galaxies as they were billions of years ago.",
+            distractorExplanations: {
+              0: 'It\'s very hot and young is incorrect; high redshift means great distance.',
+              2: 'It\'s moving toward us is incorrect; high redshift means great distance.',
+              3: 'It\'s very close but very dim is incorrect; high redshift means great distance.',
+            },
           },
           {
             id: "sp-sec8-u2-L2-T3",
@@ -674,6 +768,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Every galaxy in the universe shows redshift.",
             correctAnswer: false,
             explanation: "Some nearby galaxies like Andromeda show blueshift because their local motion toward us exceeds the expansion of space at that distance.",
+            distractorExplanations: {
+              0: 'Some nearby galaxies like Andromeda show blueshift because their local motion toward us exceeds the expansion of.',
+            },
           },
         ],
       },
@@ -703,6 +800,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hubble's Law is a simple linear relationship: v = H0 x d. Double the distance, double the recession speed.",
+            distractorExplanations: {
+              0: 'Its speed stays the same is incorrect; hubble\'s Law is a simple linear relationship: v = H0 x d.',
+              2: 'Its speed halves is incorrect; hubble\'s Law is a simple linear relationship: v = H0 x d.',
+              3: 'Its speed quadruples is incorrect; hubble\'s Law is a simple linear relationship: v = H0 x d.',
+            },
           },
           {
             id: "sp-sec8-u2-L3-T2",
@@ -742,6 +844,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "v = H0 x d = 70 x 100 = 7,000 km/s. The math is simple multiplication.",
+            distractorExplanations: {
+              0: '70 km/s is incorrect; v = H0 x d = 70 x 100 = 7,000 km/s.',
+              1: '700 km/s is incorrect; v = H0 x d = 70 x 100 = 7,000 km/s.',
+              3: '70,000 km/s is incorrect; v = H0 x d = 70 x 100 = 7,000 km/s.',
+            },
           },
           {
             id: "sp-sec8-u2-L3-T3",
@@ -755,6 +862,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "All measurements of the Hubble constant agree perfectly.",
             correctAnswer: false,
             explanation: "Different methods give slightly different values (67 vs 73 km/s/Mpc). This 'Hubble tension' is one of the biggest unsolved problems in cosmology.",
+            distractorExplanations: {
+              0: 'Different methods give slightly different values (67 vs 73 km/s/Mpc).',
+            },
           },
           {
             id: "sp-sec8-u2-L3-Q6",
@@ -788,6 +898,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Before 1998, most scientists expected the expansion of the universe to be slowing down.",
             correctAnswer: true,
             explanation: "Gravity should pull matter together, slowing expansion. The discovery that expansion is accelerating shocked the physics community.",
+            distractorExplanations: {
+              1: 'Gravity should pull matter together, slowing expansion.',
+            },
           },
           {
             id: "sp-sec8-u2-L4-Q2",
@@ -801,6 +914,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Type Ia supernovae all reach about the same peak brightness, making them excellent 'standard candles' for measuring distances to faraway galaxies.",
+            distractorExplanations: {
+              0: 'Cepheid variable stars is incorrect; type Ia supernovae all reach about the same peak brightness, making them excellent \'standard candles\' for measuring.',
+              2: 'Quasars is incorrect; type Ia supernovae all reach about the same peak brightness, making them excellent \'standard candles\' for measuring.',
+              3: 'Neutron stars is incorrect; type Ia supernovae all reach about the same peak brightness, making them excellent \'standard candles\' for measuring.',
+            },
           },
           {
             id: "sp-sec8-u2-L4-T2",
@@ -820,6 +938,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "All the matter in the universe exerts gravitational attraction, which should slow expansion. Acceleration means some unknown force is pushing outward.",
+            distractorExplanations: {
+              0: 'This is incorrect; all the matter in the universe exerts gravitational attraction, which should slow expansion.',
+              2: 'The universe was thought to be shrinking is incorrect; all the matter in the universe exerts gravitational attraction, which should slow expansion.',
+              3: 'Supernovae were expected to be brighter is incorrect; all the matter in the universe exerts gravitational attraction, which should slow expansion.',
+            },
           },
           {
             id: "sp-sec8-u2-L4-Q4",
@@ -995,6 +1118,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Stars at the edges of galaxies orbit slower than expected based on visible matter.",
             correctAnswer: false,
             explanation: "The opposite is true. Stars at galaxy edges orbit faster than expected. Without extra invisible mass, they should fly out of the galaxy.",
+            distractorExplanations: {
+              0: 'The opposite is true.',
+            },
           },
           {
             id: "sp-sec8-u3-L1-Q2",
@@ -1008,6 +1134,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Based on visible matter, outer stars should orbit slowly. Instead they orbit fast, suggesting a large amount of unseen mass.",
+            distractorExplanations: {
+              0: 'Galaxies don\'t rotate at all is incorrect; based on visible matter, outer stars should orbit slowly.',
+              2: 'Galaxy centers spin too slowly is incorrect; based on visible matter, outer stars should orbit slowly.',
+              3: 'This claim is incorrect; based on visible matter, outer stars should orbit slowly.',
+            },
           },
           {
             id: "sp-sec8-u3-L1-T2",
@@ -1035,6 +1166,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Flat rotation curves mean mass extends far beyond the visible galaxy. A massive invisible halo of dark matter surrounds each galaxy.",
+            distractorExplanations: {
+              0: 'All the mass is at the center is incorrect; flat rotation curves mean mass extends far beyond the visible galaxy.',
+              1: 'Mass decreases sharply at the edges is incorrect; flat rotation curves mean mass extends far beyond the visible galaxy.',
+              3: 'Galaxies have no mass at their edges is incorrect; flat rotation curves mean mass extends far beyond the visible galaxy.',
+            },
           },
           {
             id: "sp-sec8-u3-L1-T3",
@@ -1059,6 +1195,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Galaxy rotation curves should be flat if dark matter halos exist.",
             correctAnswer: true,
             explanation: "A dark matter halo extending far beyond the visible galaxy provides extra gravity at all distances. This keeps orbital speeds high even at the edges, producing a flat curve.",
+            distractorExplanations: {
+              1: 'A dark matter halo extending far beyond the visible galaxy provides extra gravity at all distances.',
+            },
           },
         ],
       },
@@ -1089,6 +1228,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gravitational lensing bends light based on total mass. Galaxy clusters bend light far more than their visible matter should, revealing massive amounts of dark matter.",
+            distractorExplanations: {
+              0: 'They contain only visible matter is incorrect; gravitational lensing bends light based on total mass.',
+              2: 'They have no gravity at all is incorrect; gravitational lensing bends light based on total mass.',
+              3: 'They\'re made entirely of dark energy is incorrect; gravitational lensing bends light based on total mass.',
+            },
           },
           {
             id: "sp-sec8-u3-L2-T2",
@@ -1102,6 +1246,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "The Bullet Cluster is considered one of the strongest pieces of evidence for dark matter.",
             correctAnswer: true,
             explanation: "In the Bullet Cluster, the dark matter (detected by lensing) separated from the normal matter (visible as hot gas). This directly shows dark matter exists as a separate substance.",
+            distractorExplanations: {
+              1: 'In the Bullet Cluster, the dark matter (detected by lensing) separated from the normal matter (visible as hot gas).',
+            },
           },
           {
             id: "sp-sec8-u3-L2-Q3",
@@ -1124,6 +1271,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dark matter doesn't interact with normal matter except through gravity. It passed right through the collision while the normal gas slowed and heated up.",
+            distractorExplanations: {
+              0: 'It was destroyed by the impact is incorrect; dark matter doesn\'t interact with normal matter except through gravity.',
+              1: 'This claim is incorrect; dark matter doesn\'t interact with normal matter except through gravity.',
+              3: 'It turned into dark energy is incorrect; dark matter doesn\'t interact with normal matter except through gravity.',
+            },
           },
           {
             id: "sp-sec8-u3-L2-T3",
@@ -1173,6 +1325,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Dark matter interacts with light and electromagnetic radiation.",
             correctAnswer: false,
             explanation: "Dark matter doesn't interact with electromagnetic force. It produces no light, absorbs no light, and reflects no light. Only gravity reveals its presence.",
+            distractorExplanations: {
+              0: 'Dark matter doesn\'t interact with electromagnetic force.',
+            },
           },
           {
             id: "sp-sec8-u3-L3-Q2",
@@ -1186,6 +1341,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dark matter is 'dark' because it doesn't emit, absorb, or reflect electromagnetic radiation. It's completely invisible to all types of telescopes.",
+            distractorExplanations: {
+              0: 'It\'s the same color as space is incorrect; dark matter is \'dark\' because it doesn\'t emit, absorb, or reflect electromagnetic radiation.',
+              1: 'It absorbs all light like a black hole is incorrect; dark matter is \'dark\' because it doesn\'t emit, absorb, or reflect electromagnetic radiation.',
+              3: 'It only exists in dark regions of space is incorrect; dark matter is \'dark\' because it doesn\'t emit, absorb, or reflect electromagnetic radiation.',
+            },
           },
           {
             id: "sp-sec8-u3-L3-T2",
@@ -1215,6 +1375,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "As far as we can tell, dark matter only interacts through gravity. This is why it's so difficult to detect directly.",
+            distractorExplanations: {
+              0: 'Electromagnetism and gravity is incorrect; as far as we can tell, dark matter only interacts through gravity.',
+              1: 'The strong nuclear force is incorrect; as far as we can tell, dark matter only interacts through gravity.',
+              3: 'All four fundamental forces is incorrect; as far as we can tell, dark matter only interacts through gravity.',
+            },
           },
           {
             id: "sp-sec8-u3-L3-T3",
@@ -1228,6 +1393,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Dark matter particles constantly pass through Earth and through our bodies.",
             correctAnswer: true,
             explanation: "Since dark matter doesn't interact electromagnetically, it passes through normal matter like it isn't there. Earth, your body, and everything else are transparent to dark matter.",
+            distractorExplanations: {
+              1: 'Since dark matter doesn\'t interact electromagnetically, it passes through normal matter like it isn\'t there.',
+            },
           },
           {
             id: "sp-sec8-u3-L3-Q6",
@@ -1273,6 +1441,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "WIMP detectors go deep underground (like mines) to shield them from cosmic rays and other particles that would create false signals.",
+            distractorExplanations: {
+              0: 'On mountaintops to be closer to space is incorrect; wIMP detectors go deep underground (like mines) to shield them from cosmic rays and other particles.',
+              1: 'In orbit around Earth is incorrect; wIMP detectors go deep underground (like mines) to shield them from cosmic rays and other particles that would.',
+              3: 'At the North and South Poles is incorrect; wIMP detectors go deep underground (like mines) to shield them from cosmic rays and other particles that would.',
+            },
           },
           {
             id: "sp-sec8-u3-L4-T2",
@@ -1296,6 +1469,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Scientists have directly detected a dark matter particle in the lab.",
             correctAnswer: false,
             explanation: "Despite decades of searching, no dark matter particle has been directly detected. The search continues with ever more sensitive experiments.",
+            distractorExplanations: {
+              0: 'Despite decades of searching, no dark matter particle has been directly detected.',
+            },
           },
           {
             id: "sp-sec8-u3-L4-Q5",
@@ -1309,6 +1485,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Axion detectors use powerful magnets to convert axions into detectable photons. The ADMX experiment at the University of Washington leads this search.",
+            distractorExplanations: {
+              0: 'This is incorrect; axion detectors use powerful magnets to convert axions into detectable photons.',
+              1: 'By colliding protons at high speed is incorrect; axion detectors use powerful magnets to convert axions into detectable photons.',
+              3: 'By measuring their heat signature is incorrect; axion detectors use powerful magnets to convert axions into detectable photons.',
+            },
           },
           {
             id: "sp-sec8-u3-L4-T3",
@@ -1485,6 +1666,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Big Bang was the expansion of space itself, not an explosion in pre-existing space. Everything started from an incredibly hot, dense state.",
+            distractorExplanations: {
+              0: 'This is incorrect; the Big Bang was the expansion of space itself, not an explosion in pre-existing space.',
+              2: 'A collision between two galaxies is incorrect; the Big Bang was the expansion of space itself, not an explosion in pre-existing space.',
+              3: 'The birth of the first star is incorrect; the Big Bang was the expansion of space itself, not an explosion in pre-existing space.',
+            },
           },
           {
             id: "sp-sec8-u4-L1-Q2",
@@ -1532,6 +1718,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Dark matter makes up about 68% of the universe.",
             correctAnswer: false,
             explanation: "Dark matter is about 27%. Dark energy is about 68%. Normal matter is only about 5%. Don't confuse dark matter and dark energy.",
+            distractorExplanations: {
+              0: 'Dark matter is about 27%.',
+            },
           },
           {
             id: "sp-sec8-u4-L1-Q7",
@@ -1546,6 +1735,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Galaxies have peculiar velocities (their own motion through space) in addition to the cosmic expansion. This can make their observed redshift higher or lower than expected.",
+            distractorExplanations: {
+              1: 'This is incorrect; galaxies have peculiar velocities (their own motion through space) in addition to the cosmic expansion.',
+              2: 'This is incorrect; galaxies have peculiar velocities (their own motion through space) in addition to the cosmic expansion.',
+              3: 'This is incorrect; galaxies have peculiar velocities (their own motion through space) in addition to the cosmic expansion.',
+            },
           },
         ],
       },
@@ -1576,6 +1770,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A flat rotation curve with few visible outer stars means extra invisible mass extends beyond the visible galaxy. This is the classic signature of a dark matter halo.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; a flat rotation curve with few visible outer stars means extra invisible mass extends beyond the visible galaxy.',
+              2: 'This claim is incorrect; a flat rotation curve with few visible outer stars means extra invisible mass extends beyond the visible galaxy.',
+              3: 'This claim is incorrect; a flat rotation curve with few visible outer stars means extra invisible mass extends beyond the visible galaxy.',
+            },
           },
           {
             id: "sp-sec8-u4-L2-Q2",
@@ -1590,6 +1789,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Hubble tension is a well-known problem. Both methods are well-tested. The disagreement might point to new physics beyond our current models.",
+            distractorExplanations: {
+              0: 'One team must have made an error is incorrect; the Hubble tension is a well-known problem.',
+              1: 'The universe isn\'t actually expanding is incorrect; the Hubble tension is a well-known problem.',
+              3: 'The CMB measurement is always wrong is incorrect; the Hubble tension is a well-known problem.',
+            },
           },
           {
             id: "sp-sec8-u4-L2-Q3",
@@ -1603,6 +1807,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "v = H0 x d = 70 x 200 = 14,000 km/s. The observed and predicted values match perfectly, confirming Hubble's Law.",
+            distractorExplanations: {
+              0: '7,000 km/s is incorrect; v = H0 x d = 70 x 200 = 14,000 km/s.',
+              2: '21,000 km/s is incorrect; v = H0 x d = 70 x 200 = 14,000 km/s.',
+              3: '28,000 km/s is incorrect; v = H0 x d = 70 x 200 = 14,000 km/s.',
+            },
           },
           {
             id: "sp-sec8-u4-L2-Q4",
@@ -1617,6 +1826,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This is exactly what the Bullet Cluster shows. The mass (dark matter) passed through the collision while the gas got stuck. They separated, proving dark matter is a real substance.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; this is exactly what the Bullet Cluster shows.',
+              2: 'This claim is incorrect; this is exactly what the Bullet Cluster shows.',
+              3: 'It proves the Big Bang theory is wrong is incorrect; this is exactly what the Bullet Cluster shows.',
+            },
           },
           {
             id: "sp-sec8-u4-L2-Q5",
@@ -1633,6 +1847,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "If dark matter only interacts through gravity, it would pass through a collision without slowing down.",
             correctAnswer: true,
             explanation: "Normal gas particles collide and slow down because of electromagnetic interactions. Dark matter only feels gravity, so it sails through collisions without friction.",
+            distractorExplanations: {
+              1: 'Normal gas particles collide and slow down because of electromagnetic interactions.',
+            },
           },
           {
             id: "sp-sec8-u4-L2-Q7",
@@ -1646,6 +1863,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The tiny CMB fluctuations (1 in 100,000) represent slightly denser regions. Over billions of years, gravity amplified these seeds into galaxies and galaxy clusters.",
+            distractorExplanations: {
+              0: 'This is incorrect; the tiny CMB fluctuations (1 in 100,000) represent slightly denser regions.',
+              2: 'The CMB directly created the first stars is incorrect; the tiny CMB fluctuations (1 in 100,000) represent slightly denser regions.',
+              3: 'This is incorrect; the tiny CMB fluctuations (1 in 100,000) represent slightly denser regions.',
+            },
           },
         ],
       },
@@ -1794,6 +2016,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dark energy is the name for whatever is causing the expansion of the universe to speed up. It acts as a repulsive force on cosmic scales.",
+            distractorExplanations: {
+              0: 'Holds galaxies together like glue is incorrect; dark energy is the name for whatever is causing the expansion of the universe to speed up.',
+              1: 'Creates new matter in empty space is incorrect; dark energy is the name for whatever is causing the expansion of the universe to speed up.',
+              3: 'Absorbs light from distant stars is incorrect; dark energy is the name for whatever is causing the expansion of the universe to speed up.',
+            },
           },
           {
             id: "sp-sec8-u5-L1-T2",
@@ -1807,6 +2034,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Dark energy might be an inherent property of space itself.",
             correctAnswer: true,
             explanation: "One leading theory is that empty space has its own energy (vacuum energy). As the universe expands and creates more space, more dark energy appears.",
+            distractorExplanations: {
+              1: 'One leading theory is that empty space has its own energy (vacuum energy).',
+            },
           },
           {
             id: "sp-sec8-u5-L1-Q3",
@@ -1828,6 +2058,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Distant supernovae appeared dimmer (farther) than expected, meaning the universe's expansion had been accelerating. This revealed the effect of dark energy.",
+            distractorExplanations: {
+              0: 'By studying rotation curves of galaxies is incorrect; distant supernovae appeared dimmer (farther) than expected, meaning the universe\'s expansion had been.',
+              2: 'By measuring the CMB directly is incorrect; distant supernovae appeared dimmer (farther) than expected, meaning the universe\'s expansion had been accelerating.',
+              3: 'This is incorrect; distant supernovae appeared dimmer (farther) than expected, meaning the universe\'s expansion had been accelerating.',
+            },
           },
           {
             id: "sp-sec8-u5-L1-T3",
@@ -1841,6 +2076,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Dark energy's effect weakens as the universe gets bigger.",
             correctAnswer: false,
             explanation: "Dark energy grows stronger as the universe expands. More space means more vacuum energy, which drives even faster expansion. It's a self-reinforcing cycle.",
+            distractorExplanations: {
+              0: 'Dark energy grows stronger as the universe expands.',
+            },
           },
           {
             id: "sp-sec8-u5-L1-Q6",
@@ -1854,6 +2092,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dark energy acts as a repulsive force on cosmic scales. While gravity pulls things together, dark energy pushes the universe apart at an accelerating rate.",
+            distractorExplanations: {
+              0: 'An attractive force like gravity is incorrect; dark energy acts as a repulsive force on cosmic scales.',
+              2: 'A rotational force that spins galaxies is incorrect; dark energy acts as a repulsive force on cosmic scales.',
+              3: 'A neutral force with no effect is incorrect; dark energy acts as a repulsive force on cosmic scales.',
+            },
           },
         ],
       },
@@ -1884,6 +2127,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Einstein believed in a static, eternal universe. His equations predicted expansion, so he added a constant to balance gravity and keep things still.",
+            distractorExplanations: {
+              0: 'To explain dark matter is incorrect; einstein believed in a static, eternal universe.',
+              1: 'To predict the Big Bang is incorrect; einstein believed in a static, eternal universe.',
+              3: 'To describe black holes is incorrect; einstein believed in a static, eternal universe.',
+            },
           },
           {
             id: "sp-sec8-u5-L2-T2",
@@ -1905,6 +2153,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Einstein was right about the cosmological constant for the wrong reasons.",
             correctAnswer: true,
             explanation: "Einstein added it to keep the universe static (wrong reason). But a form of it actually exists as dark energy driving accelerated expansion (right concept).",
+            distractorExplanations: {
+              1: 'Einstein added it to keep the universe static (wrong reason).',
+            },
           },
           {
             id: "sp-sec8-u5-L2-Q4",
@@ -1918,6 +2169,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Quantum field theory predicts vacuum energy that's about 10^120 times larger than observed. This is called the worst prediction in physics.",
+            distractorExplanations: {
+              0: 'There\'s no energy in empty space is incorrect; quantum field theory predicts vacuum energy that\'s about 10^120 times larger than observed.',
+              2: 'Vacuum energy is negative is incorrect; quantum field theory predicts vacuum energy that\'s about 10^120 times larger than observed.',
+              3: 'This is incorrect; quantum field theory predicts vacuum energy that\'s about 10^120 times larger than observed.',
+            },
           },
           {
             id: "sp-sec8-u5-L2-T3",
@@ -1945,6 +2201,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lambda is the Greek letter used for the cosmological constant, which represents dark energy in the standard cosmological model.",
+            distractorExplanations: {
+              0: 'The Hubble constant is incorrect; lambda is the Greek letter used for the cosmological constant, which represents dark energy in the standard cosmological.',
+              2: 'The speed of light is incorrect; lambda is the Greek letter used for the cosmological constant, which represents dark energy in the standard cosmological model.',
+              3: 'The age of the universe is incorrect; lambda is the Greek letter used for the cosmological constant, which represents dark energy in the standard.',
+            },
           },
         ],
       },
@@ -1983,6 +2244,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dark matter provides gravitational attraction, helping form galaxies. Dark energy provides a repulsive effect, accelerating the expansion of space.",
+            distractorExplanations: {
+              0: 'This is incorrect; dark matter provides gravitational attraction, helping form galaxies.',
+              2: 'This is incorrect; dark matter provides gravitational attraction, helping form galaxies.',
+              3: 'This is incorrect; dark matter provides gravitational attraction, helping form galaxies.',
+            },
           },
           {
             id: "sp-sec8-u5-L3-T2",
@@ -2006,6 +2272,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "Dark matter and dark energy are two forms of the same substance.",
             correctAnswer: false,
             explanation: "They're completely different. Dark matter is a substance that creates gravitational attraction. Dark energy is a property of space that drives expansion. They're not related.",
+            distractorExplanations: {
+              0: 'They\'re completely different.',
+            },
           },
           {
             id: "sp-sec8-u5-L3-Q5",
@@ -2019,6 +2288,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dark matter clumps around galaxies and forms halos. Dark energy is spread uniformly throughout all of space and doesn't concentrate anywhere.",
+            distractorExplanations: {
+              0: 'This is incorrect; dark matter clumps around galaxies and forms halos.',
+              1: 'Both clump together equally is incorrect; dark matter clumps around galaxies and forms halos.',
+              3: 'Neither one clumps at all is incorrect; dark matter clumps around galaxies and forms halos.',
+            },
           },
           {
             id: "sp-sec8-u5-L3-T3",
@@ -2062,6 +2336,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "In the Big Freeze (also called heat death), the universe expands forever. Stars burn out, matter spreads thin, and the universe becomes cold and empty.",
+            distractorExplanations: {
+              0: 'The universe collapses back to a point is incorrect; in the Big Freeze (also called heat death), the universe expands forever.',
+              2: 'A sudden ice age covers all planets is incorrect; in the Big Freeze (also called heat death), the universe expands forever.',
+              3: 'Dark matter freezes into solid chunks is incorrect; in the Big Freeze (also called heat death), the universe expands forever.',
+            },
           },
           {
             id: "sp-sec8-u5-L4-T2",
@@ -2076,6 +2355,9 @@ export const spaceSection8Part1: Unit[] = [
             question: "The Big Rip could only happen if dark energy gets stronger over time.",
             correctAnswer: true,
             explanation: "If dark energy stays constant, the universe expands forever but structures survive locally. Only if dark energy grows stronger would it tear apart galaxies, stars, and atoms.",
+            distractorExplanations: {
+              1: 'If dark energy stays constant, the universe expands forever but structures survive locally.',
+            },
           },
           {
             id: "sp-sec8-u5-L4-Q3",
@@ -2098,6 +2380,11 @@ export const spaceSection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Current measurements suggest dark energy is constant (cosmological constant), which leads to the Big Freeze. The universe will expand forever and slowly grow cold.",
+            distractorExplanations: {
+              0: 'The Big Crunch (universe collapses) is incorrect; current measurements suggest dark energy is constant (cosmological constant), which leads to the Big Freeze.',
+              2: 'The Big Rip (everything torn apart) is incorrect; current measurements suggest dark energy is constant (cosmological constant), which leads to the Big Freeze.',
+              3: 'The Big Bounce (universe restarts) is incorrect; current measurements suggest dark energy is constant (cosmological constant), which leads to the Big Freeze.',
+            },
           },
           {
             id: "sp-sec8-u5-L4-T3",

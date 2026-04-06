@@ -39,6 +39,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "An index fund lets you invest in hundreds of companies with a single purchase.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'That\'s the beauty of index funds, making this statement true.' },
             explanation: "That's the beauty of index funds. One purchase gives you instant diversification across many companies.",
           },
           {
@@ -52,6 +53,11 @@ export const finSection8Part2: Unit[] = [
               "A type of bond fund",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; An index is a benchmark that measures the performance of a specific group of ...',
+              2: 'This is not the best answer; An index is a benchmark that measures the performance of a specific group of ...',
+              3: 'A type of bond fund is not correct in this context; An index is a benchmark that measures the performance of a specific group of ...',
+            },
             explanation: "An index is a benchmark that measures the performance of a specific group of stocks, like the 500 largest US companies.",
           },
           {
@@ -95,6 +101,11 @@ export const finSection8Part2: Unit[] = [
               "Because they only invest in bonds",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'Because you can\'t sell them is not correct in this context; index funds follow a preset formula.',
+              3: 'This is not the best answer; index funds follow a preset formula.',
+            },
             explanation: "Index funds follow a preset formula. No manager is actively choosing which stocks to buy and sell.",
           },
           {
@@ -102,6 +113,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "You need to be an expert stock picker to invest in an index fund.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'The whole point of index funds is that you don\'t need to pick stocks.' },
             explanation: "The whole point of index funds is that you don't need to pick stocks. The fund does it automatically by tracking the index.",
           },
         ],
@@ -127,6 +139,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Most actively managed funds outperform index funds over long periods.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'The data shows the opposite.' },
             explanation: "The data shows the opposite. Over 15+ years, more than 90% of active funds underperform their benchmark index.",
           },
           {
@@ -140,6 +153,11 @@ export const finSection8Part2: Unit[] = [
               "Active managers are only allowed to trade once per year",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'They\'re not smart enough is not correct in this context; Active funds charge 1% or more in annual fees.',
+              2: 'This is not the best answer; Active funds charge 1% or more in annual fees.',
+              3: 'This is not the best answer; Active funds charge 1% or more in annual fees.',
+            },
             explanation: "Active funds charge 1% or more in annual fees, and most managers fail to make picks good enough to overcome those costs.",
           },
           {
@@ -153,6 +171,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "A 1% annual fee sounds small but can cost you hundreds of thousands of dollars over decades.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Fees compound against you just like returns compound for you, making this statement true.' },
             explanation: "Fees compound against you just like returns compound for you. Even 1% per year adds up dramatically over 20 to 30 years.",
           },
           {
@@ -181,6 +200,11 @@ export const finSection8Part2: Unit[] = [
               "Only invest if the fund guarantees returns.",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; always compare long-term performance after fees.',
+              2: 'This is not the best answer; always compare long-term performance after fees.',
+              3: 'This is not the best answer; always compare long-term performance after fees.',
+            },
             explanation: "Always compare long-term performance after fees. Most active funds don't beat a low-cost index fund over 15+ years.",
           },
           {
@@ -194,6 +218,11 @@ export const finSection8Part2: Unit[] = [
               "Because past performance data is always fake",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; a fund that outperformed last decade is statistically unlikely to do it again.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "A fund that outperformed last decade is statistically unlikely to do it again. Beating the market consistently is extremely rare.",
           },
         ],
@@ -219,6 +248,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "The S&P 500 tracks the 500 largest publicly traded companies in the US.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The S&P 500 is the most widely followed stock market index, representing about 80% of the total US stock market value.' },
             explanation: "The S&P 500 is the most widely followed stock market index, representing about 80% of the total US stock market value.",
           },
           {
@@ -232,6 +262,11 @@ export const finSection8Part2: Unit[] = [
               "About 25% per year",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'About 2% per year is not correct in this context; the S&P 500 has averaged about 10% per year (before inflation) over its history.',
+              1: 'About 5% per year is not correct in this context; the S&P 500 has averaged about 10% per year (before inflation) over its history.',
+              3: 'About 25% per year is not correct in this context; the S&P 500 has averaged about 10% per year (before inflation) over its history.',
+            },
             explanation: "The S&P 500 has averaged about 10% per year (before inflation) over its history. That's about 7% after inflation.",
           },
           {
@@ -269,6 +304,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "An S&P 500 index fund and a total market index fund perform very differently over long periods.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Because the S&P 500 represents about 80% of the total market, both types of funds perform very similarly over time.' },
             explanation: "Because the S&P 500 represents about 80% of the total market, both types of funds perform very similarly over time. Either is a great choice.",
           },
           {
@@ -282,6 +318,11 @@ export const finSection8Part2: Unit[] = [
               "Total market funds only hold bonds",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'S&P 500 funds are too risky is not correct in this context; total market funds add exposure to smaller companies with growth potential.',
+              3: 'This is not the best answer; total market funds add exposure to smaller companies with growth potential.',
+            },
             explanation: "Total market funds add exposure to smaller companies with growth potential. Both options are excellent for long-term investors.",
           },
         ],
@@ -307,6 +348,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "The expense ratio is the annual fee a fund charges to manage your money.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'It\'s expressed as a percentage and deducted automatically from the fund\'s returns, making this statement true.' },
             explanation: "It's expressed as a percentage and deducted automatically from the fund's returns. Lower is almost always better.",
           },
           {
@@ -320,6 +362,11 @@ export const finSection8Part2: Unit[] = [
               "$50",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $25.',
+              2: 'This does not match the correct calculation; the right answer is $25.',
+              3: 'This does not match the correct calculation; the right answer is $25.',
+            },
             explanation: "$50,000 times 0.0005 equals $25 per year. Low-cost index funds charge remarkably little.",
           },
           {
@@ -362,6 +409,11 @@ export const finSection8Part2: Unit[] = [
               "Fund B, because higher fees mean better quality",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'The reasoning that higher fees mean better quality does not accurately reflect the financial principle at work.',
+            },
             explanation: "Fund A costs 30 times less and has actually performed better. This is the typical pattern with index vs. active funds.",
           },
           {
@@ -380,6 +432,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Higher expense ratios usually lead to better fund performance.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Research consistently shows the opposite.' },
             explanation: "Research consistently shows the opposite. Higher fees are one of the strongest predictors of worse long-term performance.",
           },
         ],
@@ -531,6 +584,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "A mutual fund pools money from many investors to buy a basket of investments.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'That\'s exactly what mutual funds do, making this statement true.' },
             explanation: "That's exactly what mutual funds do. Your money is combined with others to buy a diversified portfolio.",
           },
           {
@@ -544,6 +598,11 @@ export const finSection8Part2: Unit[] = [
               "Only when you decide to sell",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Mutual funds calculate their net asset value (NAV) once per day after the mar...',
+              2: 'Once per week on Monday is not correct in this context; Mutual funds calculate their net asset value (NAV) once per day after the mar...',
+              3: 'Only when you decide to sell is not correct in this context; Mutual funds calculate their net asset value (NAV) once per day after the mar...',
+            },
             explanation: "Mutual funds calculate their net asset value (NAV) once per day after the market closes. All trades happen at that price.",
           },
           {
@@ -571,6 +630,11 @@ export const finSection8Part2: Unit[] = [
               "It's guaranteed by the government",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              1: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; no-load means no sales commission.',
+            },
             explanation: "No-load means no sales commission. The fund still has an expense ratio, but you avoid the extra buying/selling fee.",
           },
           {
@@ -594,6 +658,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "You can buy or sell mutual fund shares at any time during the trading day.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Mutual fund orders are processed once daily at market close.' },
             explanation: "Mutual fund orders are processed once daily at market close. You can place an order anytime, but it executes at the end-of-day price.",
           },
         ],
@@ -619,6 +684,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "ETFs can be bought and sold at any time during market hours, just like stocks.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Unlike mutual funds that price once daily, ETFs trade all day on an exchange with prices changing constantly.' },
             explanation: "Unlike mutual funds that price once daily, ETFs trade all day on an exchange with prices changing constantly.",
           },
           {
@@ -632,6 +698,11 @@ export const finSection8Part2: Unit[] = [
               "Extra Tax-Free",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Electronic Transfer of Funds is not correct in this context; eTF stands for Exchange-Traded Fund.',
+              2: 'Estimated Total Fee is not correct in this context; eTF stands for Exchange-Traded Fund.',
+              3: 'Extra Tax-Free is not correct in this context; eTF stands for Exchange-Traded Fund.',
+            },
             explanation: "ETF stands for Exchange-Traded Fund. It's a fund that trades on a stock exchange.",
           },
           {
@@ -667,6 +738,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Most ETFs require a minimum investment of $5,000 or more.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'ETFs have no minimum beyond the price of 1 share.' },
             explanation: "ETFs have no minimum beyond the price of 1 share. Some brokerages even allow fractional shares, so you can start with $1.",
           },
           {
@@ -680,6 +752,11 @@ export const finSection8Part2: Unit[] = [
               "Mutual funds always have higher returns",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'ETFs are riskier investments is not correct in this context; the underlying investments can be identical.',
+              2: 'ETFs don\'t hold real stocks is not correct in this context; the underlying investments can be identical.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "The underlying investments can be identical. The key difference is that ETFs trade on an exchange like stocks, while mutual funds price once daily.",
           },
         ],
@@ -705,6 +782,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "For long-term index investing, ETFs and mutual funds produce very similar results.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'If both track the same index, the returns will be nearly identical, making this statement true.' },
             explanation: "If both track the same index, the returns will be nearly identical. The differences are in how you buy, sell, and pay fees.",
           },
           {
@@ -740,6 +818,11 @@ export const finSection8Part2: Unit[] = [
               "Neither, because funds don't create taxes",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that they\'re older does not accurately reflect the financial principle at work.',
+              2: 'This is not the best answer; ETFs create fewer taxable events due to their in-kind creation/redemption pro...',
+              3: 'The reasoning that funds don\'t create taxes does not accurately reflect the financial principle at work.',
+            },
             explanation: "ETFs create fewer taxable events due to their in-kind creation/redemption process. This can save you money in taxable accounts.",
           },
           {
@@ -768,6 +851,11 @@ export const finSection8Part2: Unit[] = [
               "Neither. Wait until they have $10,000 to invest all at once.",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; for automatic monthly investments, mutual funds are often easier to set up.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "For automatic monthly investments, mutual funds are often easier to set up. Many allow automatic deposits and purchases on a schedule.",
           },
           {
@@ -786,6 +874,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "You must choose either ETFs or mutual funds. You can't use both.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Many investors use both.' },
             explanation: "Many investors use both. You might have mutual funds in your 401(k) and ETFs in your personal brokerage account.",
           },
         ],
@@ -854,6 +943,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Risk tolerance is how comfortable you are with your investments losing value temporarily.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'It\'s both emotional (can you stay calm?) and financial (can you afford the loss?), making this statement true.' },
             explanation: "It's both emotional (can you stay calm?) and financial (can you afford the loss?). Both matter.",
           },
           {
@@ -867,6 +957,11 @@ export const finSection8Part2: Unit[] = [
               "Someone with only 1 month of emergency savings",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; Young, employed, and debt-free means they have decades to recover from any lo...',
+              2: 'This is not the best answer; Young, employed, and debt-free means they have decades to recover from any lo...',
+              3: 'This is not the best answer; Young, employed, and debt-free means they have decades to recover from any lo...',
+            },
             explanation: "Young, employed, and debt-free means they have decades to recover from any losses and no immediate need for the money.",
           },
           {
@@ -910,6 +1005,11 @@ export const finSection8Part2: Unit[] = [
               "It eliminates the possibility of losing money",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Matching your portfolio to your risk tolerance means you\'re more likely to st...',
+              2: 'This is not the best answer; Matching your portfolio to your risk tolerance means you\'re more likely to st...',
+              3: 'This is not the best answer; Matching your portfolio to your risk tolerance means you\'re more likely to st...',
+            },
             explanation: "Matching your portfolio to your risk tolerance means you're more likely to stick with your plan during market downturns.",
           },
           {
@@ -917,6 +1017,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "The biggest investing risk is often selling during a panic, not the market drop itself.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Markets have always recovered from drops over time, making this statement true.' },
             explanation: "Markets have always recovered from drops over time. But if you sell at the bottom, you lock in losses and miss the recovery.",
           },
         ],
@@ -942,6 +1043,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "A longer time horizon allows you to take more investment risk.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'More time means more opportunity to recover from downturns, making this statement true.' },
             explanation: "More time means more opportunity to recover from downturns. Historically, stocks have always recovered given enough time.",
           },
           {
@@ -955,6 +1057,11 @@ export const finSection8Part2: Unit[] = [
               "Put it all in one stock you think will go up",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; with only 18 months, you can\'t afford a stock market drop.',
+              2: 'This is not the best answer; with only 18 months, you can\'t afford a stock market drop.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "With only 18 months, you can't afford a stock market drop. Keep the money safe and liquid.",
           },
           {
@@ -989,6 +1096,11 @@ export const finSection8Part2: Unit[] = [
               "Keep everything in cash until she turns 50",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'This is not the best answer; each goal has a different time horizon.',
+              3: 'This is not the best answer; each goal has a different time horizon.',
+            },
             explanation: "Each goal has a different time horizon. Short-term money stays safe. The 35-year retirement horizon can handle stock volatility.",
           },
           {
@@ -996,6 +1108,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Someone investing for retirement in 35 years should avoid stocks because they're too risky.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'With 35 years, stocks are actually the smart choice.' },
             explanation: "With 35 years, stocks are actually the smart choice. They have the highest long-term returns, and there's plenty of time to ride out any crashes.",
           },
           {
@@ -1034,6 +1147,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Diversification means spreading your investments across many different assets to reduce risk.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'By owning many investments, you reduce the impact of any single one performing badly.' },
             explanation: "By owning many investments, you reduce the impact of any single one performing badly.",
           },
           {
@@ -1047,6 +1161,11 @@ export const finSection8Part2: Unit[] = [
               "Cash in 3 different bank accounts",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: '100% in one company\'s stock is not correct in this context; Owning 500 companies across many industries gives you the broadest diversific...',
+              1: 'This is not the best answer; Owning 500 companies across many industries gives you the broadest diversific...',
+              3: 'This is not the best answer; Owning 500 companies across many industries gives you the broadest diversific...',
+            },
             explanation: "Owning 500 companies across many industries gives you the broadest diversification. Two stocks or three bank accounts aren't truly diversified.",
           },
           {
@@ -1091,6 +1210,11 @@ export const finSection8Part2: Unit[] = [
               "They should double their investment since they're confident.",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; this is dangerous concentration risk.',
+              2: 'This is not the best answer; this is dangerous concentration risk.',
+              3: 'This is not the best answer; this is dangerous concentration risk.',
+            },
             explanation: "This is dangerous concentration risk. If the company fails, they lose both income and savings. Diversification protects against this.",
           },
           {
@@ -1098,6 +1222,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Owning 10 different tech stocks is good diversification.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Ten stocks in the same industry move together.' },
             explanation: "Ten stocks in the same industry move together. True diversification requires different industries, asset classes, and geographic regions.",
           },
         ],
@@ -1123,6 +1248,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Asset allocation means deciding what percentage of your money goes into different investment types.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'It\'s the most important investment decision you\'ll make, making this statement true.' },
             explanation: "It's the most important investment decision you'll make. The split between stocks and bonds drives your long-term results.",
           },
           {
@@ -1136,6 +1262,11 @@ export const finSection8Part2: Unit[] = [
               "110%",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is 85%.',
+              1: 'This does not match the correct calculation; the right answer is 85%.',
+              3: 'This does not match the correct calculation; the right answer is 85%.',
+            },
             explanation: "110 minus 25 equals 85. So roughly 85% in stocks and 15% in bonds and cash. Young investors can afford more risk.",
           },
           {
@@ -1190,6 +1321,11 @@ export const finSection8Part2: Unit[] = [
               "50% cash and 50% gold",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; With 30 years to retirement and moderate risk tolerance.',
+              1: '100% bonds for maximum safety is not correct in this context; With 30 years to retirement and moderate risk tolerance.',
+              3: '50% cash and 50% gold is not correct in this context; With 30 years to retirement and moderate risk tolerance.',
+            },
             explanation: "With 30 years to retirement and moderate risk tolerance, a roughly 75/25 stock-to-bond split balances growth with some stability.",
           },
           {
@@ -1349,6 +1485,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "You need a brokerage account to buy stocks and other investments.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Brokerages provide the platform and access to stock exchanges where investments are traded.' },
             explanation: "Brokerages provide the platform and access to stock exchanges where investments are traded.",
           },
           {
@@ -1362,6 +1499,11 @@ export const finSection8Part2: Unit[] = [
               "To lend you money for daily expenses",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; brokerages are intermediaries that connect you to the markets.',
+              2: 'This is not the best answer; brokerages are intermediaries that connect you to the markets.',
+              3: 'This is not the best answer; brokerages are intermediaries that connect you to the markets.',
+            },
             explanation: "Brokerages are intermediaries that connect you to the markets. They handle the mechanics of buying and selling.",
           },
           {
@@ -1399,6 +1541,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Most modern brokerages charge $20 or more per stock trade.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Most major brokerages eliminated trading commissions.' },
             explanation: "Most major brokerages eliminated trading commissions. You can buy and sell stocks and ETFs for free at most platforms.",
           },
           {
@@ -1412,6 +1555,11 @@ export const finSection8Part2: Unit[] = [
               "Brokerages set stock prices. Exchanges collect fees.",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'They\'re the same thing is not correct in this context; you interact with your brokerage.',
+              2: 'This is not the best answer; you interact with your brokerage.',
+              3: 'This is not the best answer; you interact with your brokerage.',
+            },
             explanation: "You interact with your brokerage. Your brokerage sends your orders to the exchange where they're matched with other orders.",
           },
         ],
@@ -1437,6 +1585,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Retirement accounts offer tax advantages that regular brokerage accounts don't.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Retirement accounts like 401(k)s and IRAs give tax benefits in exchange for keeping your money invested until retirement age.' },
             explanation: "Retirement accounts like 401(k)s and IRAs give tax benefits in exchange for keeping your money invested until retirement age.",
           },
           {
@@ -1450,6 +1599,11 @@ export const finSection8Part2: Unit[] = [
               "Employer matching contributions",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; Taxable accounts don\'t give you tax breaks.',
+              1: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; Taxable accounts don\'t give you tax breaks.',
+            },
             explanation: "Taxable accounts don't give you tax breaks, but you can access your money anytime without penalties.",
           },
           {
@@ -1484,6 +1638,11 @@ export const finSection8Part2: Unit[] = [
               "Invest in cryptocurrency instead of using the retirement plan",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; a 100% employer match doubles your money instantly.',
+              2: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+              3: 'This is not the best answer; a 100% employer match doubles your money instantly.',
+            },
             explanation: "A 100% employer match doubles your money instantly. No other investment offers that guaranteed return. Get the full match first.",
           },
           {
@@ -1491,6 +1650,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "You should skip your employer's retirement match and invest on your own instead.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Never leave free money on the table.' },
             explanation: "Never leave free money on the table. Always contribute enough to get the full employer match before investing elsewhere.",
           },
           {
@@ -1529,6 +1689,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "A ticker symbol is a short code used to identify a specific stock or fund.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Ticker symbols are abbreviations like AAPL for Apple or VOO for Vanguard\'s S&P 500 ETF, making this statement true.' },
             explanation: "Ticker symbols are abbreviations like AAPL for Apple or VOO for Vanguard's S&P 500 ETF. They make searching for investments fast.",
           },
           {
@@ -1542,6 +1703,11 @@ export const finSection8Part2: Unit[] = [
               "A personal relationship with a stockbroker",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'A finance degree is not correct in this context; you need money in your account to buy investments.',
+              1: 'At least $10,000 is not correct in this context; you need money in your account to buy investments.',
+              3: 'This is not the best answer; you need money in your account to buy investments.',
+            },
             explanation: "You need money in your account to buy investments. Many brokerages let you start with any amount, even $1.",
           },
           {
@@ -1597,6 +1763,11 @@ export const finSection8Part2: Unit[] = [
               "Waiting until you can afford at least 100 shares",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; dollar-cost averaging means investing consistently, like $200 every month.',
+              2: 'This is not the best answer; dollar-cost averaging means investing consistently, like $200 every month.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "Dollar-cost averaging means investing consistently, like $200 every month. You buy more shares when prices are low and fewer when prices are high.",
           },
         ],
@@ -1622,6 +1793,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Trying to time the market by buying at the bottom and selling at the top is a reliable strategy.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Even professionals can\'t consistently time the market.' },
             explanation: "Even professionals can't consistently time the market. Research shows that time in the market beats timing the market.",
           },
           {
@@ -1635,6 +1807,11 @@ export const finSection8Part2: Unit[] = [
               "They should only invest in bonds instead",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; waiting for the \'perfect\' time means missing gains.',
+            },
             explanation: "Waiting for the 'perfect' time means missing gains. Even investing at the worst possible time has outperformed staying in cash over long periods.",
           },
           {
@@ -1671,6 +1848,11 @@ export const finSection8Part2: Unit[] = [
               "Move everything to cryptocurrency for faster recovery",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; market drops of 8% or more happen regularly.',
+              2: 'This is not the best answer; market drops of 8% or more happen regularly.',
+              3: 'This is not the best answer; market drops of 8% or more happen regularly.',
+            },
             explanation: "Market drops of 8% or more happen regularly. Long-term investors ride them out. Selling locks in the loss and you'd need to time the re-entry perfectly.",
           },
           {
@@ -1678,6 +1860,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Checking your investments daily helps you make better decisions.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Frequent checking leads to emotional reactions and overtrading.' },
             explanation: "Frequent checking leads to emotional reactions and overtrading. Monthly or quarterly check-ins are sufficient for long-term investors.",
           },
           {
@@ -1760,6 +1943,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "Cash is the safest long-term investment because it never loses face value.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Cash loses purchasing power to inflation every year.' },
             explanation: "Cash loses purchasing power to inflation every year. Over decades, it's one of the worst places to keep long-term savings.",
           },
           {
@@ -1773,6 +1957,11 @@ export const finSection8Part2: Unit[] = [
               "Lower tax rates",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Access to better stocks is not correct in this context; time is the most powerful variable in investing.',
+              1: 'Higher salary is not correct in this context; time is the most powerful variable in investing.',
+              3: 'Lower tax rates is not correct in this context; time is the most powerful variable in investing.',
+            },
             explanation: "Time is the most powerful variable in investing. Starting early gives compound interest decades to multiply your money.",
           },
           {
@@ -1831,6 +2020,11 @@ export const finSection8Part2: Unit[] = [
               "Put everything in a savings account and revisit the idea in 10 years",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+              2: 'This is not the best answer; starting imperfectly is better than waiting for perfection.',
+              3: 'This is not the best answer; starting imperfectly is better than waiting for perfection.',
+            },
             explanation: "Starting imperfectly is better than waiting for perfection. A low-cost index fund is the ideal starting point. Every day of delay is lost compounding time.",
           },
         ],
@@ -1862,6 +2056,11 @@ export const finSection8Part2: Unit[] = [
               "Wait for the market to drop before investing.",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; at 0.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "At 0.5% with 3% inflation, they're losing about 2.5% per year. Over 20 years, a diversified investment portfolio has historically grown significantly.",
           },
           {
@@ -1875,6 +2074,11 @@ export const finSection8Part2: Unit[] = [
               "About $100",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is About $50,000.',
+              1: 'This does not match the correct calculation; the right answer is About $50,000.',
+              3: 'This does not match the correct calculation; the right answer is About $50,000.',
+            },
             explanation: "The fee difference compounds dramatically. Over 20 years, the 1.45% annual fee difference on $100,000 costs roughly $50,000 or more in lost growth.",
           },
           {
@@ -1901,6 +2105,7 @@ export const finSection8Part2: Unit[] = [
             type: "true-false",
             question: "It's better to start investing imperfectly now than to wait years for the perfect strategy.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Every year you delay, you lose compound growth, making this statement true.' },
             explanation: "Every year you delay, you lose compound growth. A simple index fund today beats a complex strategy that starts 5 years from now.",
           },
           {
@@ -1915,6 +2120,11 @@ export const finSection8Part2: Unit[] = [
               "Tell her to invest even more in stocks while prices are low.",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'This is not the best answer; at retirement age, 90% stocks is too aggressive.',
+              3: 'This is not the best answer; at retirement age, 90% stocks is too aggressive.',
+            },
             explanation: "At retirement age, 90% stocks is too aggressive. A gradual shift toward bonds protects against exactly this situation without locking in all the losses at once.",
           },
           {
@@ -1928,6 +2138,11 @@ export const finSection8Part2: Unit[] = [
               "Reading financial news every day",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; starting early harnesses the exponential power of compounding.',
+              2: 'This is not the best answer; starting early harnesses the exponential power of compounding.',
+              3: 'This is not the best answer; starting early harnesses the exponential power of compounding.',
+            },
             explanation: "Starting early harnesses the exponential power of compounding. No amount of stock picking or market timing can match decades of compound growth.",
           },
         ],

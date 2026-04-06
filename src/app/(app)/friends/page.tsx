@@ -11,6 +11,9 @@ import { EmptyState } from '@/components/ui/EmptyState';
 import InviteShare from '@/components/friends/InviteShare';
 import FriendCard from '@/components/friends/FriendCard';
 import FriendRequestCard from '@/components/friends/FriendRequestCard';
+import { FriendQuestCard, type FriendQuestData } from '@/components/friends/FriendQuestCard';
+import { ActivityFeed } from '@/components/friends/ActivityFeed';
+import { useStore } from '@/store/useStore';
 import useSWR from 'swr';
 
 const fetcher = (url: string) =>
@@ -21,6 +24,7 @@ const fetcher = (url: string) =>
 
 export default function FriendsPage() {
   const [tab, setTab] = useState<'friends' | 'requests'>('friends');
+  const userStreak = useStore((s) => s.progress.currentStreak);
 
   const {
     data: friendsData,
@@ -36,6 +40,11 @@ export default function FriendsPage() {
     mutate: mutateRequests,
   } = useSWR('/api/friends/requests', fetcher);
 
+  const {
+    data: questsData,
+    mutate: mutateQuests,
+  } = useSWR<{ quests: FriendQuestData[] }>('/api/friends/quests', fetcher);
+
   const friends = friendsData?.friends ?? [];
   const incoming = requestsData?.incoming ?? [];
   const outgoing = requestsData?.outgoing ?? [];
@@ -43,7 +52,10 @@ export default function FriendsPage() {
   const handleAction = useCallback(() => {
     mutateFriends();
     mutateRequests();
-  }, [mutateFriends, mutateRequests]);
+    mutateQuests();
+  }, [mutateFriends, mutateRequests, mutateQuests]);
+
+  const friendQuests = questsData?.quests ?? [];
 
   const tabs = [
     { id: 'friends' as const, label: friends.length > 0 ? `Friends (${friends.length})` : 'Friends' },
@@ -87,10 +99,28 @@ export default function FriendsPage() {
                   borderColor="#C7D2FE"
                 />
               ) : (
-                <div className="flex flex-col gap-2">
-                  {friends.map((f: any, i: number) => (
-                    <FriendCard key={f.id} {...f} index={i} />
-                  ))}
+                <div className="space-y-5">
+                  {/* Friend Quests */}
+                  {friendQuests.length > 0 && (
+                    <div className="space-y-2">
+                      <h3 className="text-xs font-bold text-surface-500 uppercase tracking-wider px-1">
+                        Weekly Quests
+                      </h3>
+                      {friendQuests.map((q, i) => (
+                        <FriendQuestCard key={q.id} quest={q} index={i} />
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Activity Feed */}
+                  <ActivityFeed />
+
+                  {/* Friend List */}
+                  <div className="flex flex-col gap-2">
+                    {friends.map((f: any, i: number) => (
+                      <FriendCard key={f.id} {...f} index={i} userStreak={userStreak} />
+                    ))}
+                  </div>
                 </div>
               )}
             </motion.div>

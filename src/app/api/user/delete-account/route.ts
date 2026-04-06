@@ -3,6 +3,7 @@ import { eq } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { users } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
+import { cleanupBeforeDeletion } from '@/lib/account-cleanup';
 
 export async function DELETE(request: NextRequest) {
   const userId = await getAuthUserId();
@@ -24,6 +25,10 @@ export async function DELETE(request: NextRequest) {
       { status: 400 }
     );
   }
+
+  // Cancel Paddle subscription, archive payment history, delete Mixpanel
+  // profile — all best-effort so failures don't block deletion.
+  await cleanupBeforeDeletion(userId);
 
   // Delete user row. All related tables have onDelete: 'cascade',
   // so progress, subscriptions, sessions, friendships, etc. are wiped automatically.

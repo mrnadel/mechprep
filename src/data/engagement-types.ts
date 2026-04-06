@@ -43,6 +43,8 @@ export interface QuestDefinition {
     gems: number;
   };
   filter?: Record<string, unknown>;
+  /** Short tooltip shown on tap — only set when the title alone isn't clear enough */
+  tooltip?: string;
 }
 
 export interface Quest {
@@ -62,6 +64,7 @@ export interface Quest {
   filter?: Record<string, unknown>;
   completed: boolean;
   claimed: boolean;
+  tooltip?: string;
 }
 
 // --------------- Gems ---------------

@@ -34,6 +34,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Unstructured interviews are strong predictors of job performance.',
             correctAnswer: false,
             explanation: 'Unstructured interviews have low predictive validity. Structured formats with consistent questions are far more reliable.',
+            distractorExplanations: {
+              0: 'Unstructured interviews have low predictive validity. Structured formats with consistent questions are far more reliable.',
+            },
           },
           {
             id: 'psy-sec13-u7-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Structured interviews standardize questions and scoring, reducing bias and improving prediction.',
+            distractorExplanations: {
+              1: '"The interviewer uses casual conversation to build rapport" is incorrect; every candidate answers the same questions scored on a rubric.',
+              2: '"Questions are improvised based on the resume" is incorrect; every candidate answers the same questions scored on a rubric.',
+              3: '"The interview is shorter and less stressful" is incorrect; every candidate answers the same questions scored on a rubric.',
+            },
           },
           {
             id: 'psy-sec13-u7-L1-T2',
@@ -97,6 +105,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Work sample tests directly assess the skills needed for the job, making them the best predictor.',
+            distractorExplanations: {
+              0: '"Checking how many years of experience a candidate has" is incorrect; having the candidate perform actual job tasks.',
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              3: '"Letting the team vote on who they liked most" is incorrect; having the candidate perform actual job tasks.',
+            },
           },
           {
             id: 'psy-sec13-u7-L1-Q6',
@@ -111,6 +124,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Unstructured interviews feel informative but predict poorly, leading to high confidence paired with bad outcomes.',
+            distractorExplanations: {
+              0: '"The candidates lied during interviews" is incorrect; unstructured interviews create false confidence despite poor validity.',
+              1: '"The company offered too little pay" is incorrect; unstructured interviews create false confidence despite poor validity.',
+              2: '"The job description was posted on the wrong platform" is incorrect; unstructured interviews create false confidence despite poor validity.',
+            },
           },
         ],
       },
@@ -136,6 +154,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Recency bias causes managers to overweight recent performance in annual reviews.',
             correctAnswer: true,
             explanation: 'Recency bias is the tendency to base evaluations on the most recent events rather than the full review period.',
+            distractorExplanations: {
+              1: 'Recency bias is the tendency to base evaluations on the most recent events rather than the full review period.',
+            },
           },
           {
             id: 'psy-sec13-u7-L2-Q2',
@@ -169,6 +190,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: '360-degree feedback reduces the impact of any single rater\'s bias by combining perspectives.',
+            distractorExplanations: {
+              0: '"It eliminates the need for any supervisor input" is incorrect; it averages ratings across multiple perspectives to reduce bias.',
+              1: '"It guarantees employees will agree with their scores" is incorrect; it averages ratings across multiple perspectives to reduce bias.',
+              2: '"It replaces the need for structured interviews" is incorrect; it averages ratings across multiple perspectives to reduce bias.',
+            },
           },
           {
             id: 'psy-sec13-u7-L2-Q4',
@@ -182,6 +208,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Research shows 360-degree feedback is most useful for development. Using it for pay decisions can cause defensiveness.',
+            distractorExplanations: {
+              0: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              1: '"Setting salaries and bonuses" is incorrect; employee development and self-awareness.',
+              3: '"Ranking employees against each other" is incorrect; employee development and self-awareness.',
+            },
           },
           {
             id: 'psy-sec13-u7-L2-T3',
@@ -211,6 +242,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Rating everyone near the middle (central tendency) to avoid conflict (leniency motivation) collapses real performance differences.',
+            distractorExplanations: {
+              0: '"Recency bias" is incorrect; central tendency combined with leniency motivation.',
+              1: '"Halo effect" is incorrect; central tendency combined with leniency motivation.',
+              3: '"Similarity bias" is incorrect; central tendency combined with leniency motivation.',
+            },
           },
         ],
       },
@@ -236,6 +272,9 @@ export const psySection13Part2: Unit[] = [
             question: 'The brain processes critical feedback similarly to a physical threat.',
             correctAnswer: true,
             explanation: 'Neuroimaging shows that social rejection and critical feedback activate pain-related brain regions.',
+            distractorExplanations: {
+              1: 'Neuroimaging shows that social rejection and critical feedback activate pain-related brain regions.',
+            },
           },
           {
             id: 'psy-sec13-u7-L3-Q2',
@@ -249,6 +288,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Defensiveness is a neurological response to perceived threat, not a character flaw.',
+            distractorExplanations: {
+              1: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: '"They have not been trained in active listening" is incorrect; the brain treats social threats similarly to physical ones.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec13-u7-L3-T2',
@@ -302,6 +346,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Praising specific improvement and effort reinforces the belief that skills develop with practice.',
+            distractorExplanations: {
+              0: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              1: '"You are naturally talented at presentations." does not accurately describe the concept asked about.',
+              2: '"You did fine, do not worry about it." does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec13-u7-L3-Q6',
@@ -316,6 +365,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'This response specifies the situation (this week\'s standups), behavior (arriving 15-20 min late), and impact (delayed team, shortened time).',
+            distractorExplanations: {
+              0: '"You are disrespectful to the team." does not accurately describe the concept asked about.',
+              1: '"You need to fix your time management." does not accurately describe the concept asked about.',
+              3: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+            },
           },
         ],
       },
@@ -340,6 +394,9 @@ export const psySection13Part2: Unit[] = [
             question: 'A satisfied employee is always an engaged employee.',
             correctAnswer: false,
             explanation: 'Satisfaction and engagement are related but distinct. Someone can be content with their job conditions yet feel uninvested in the work itself.',
+            distractorExplanations: {
+              0: 'Satisfaction and engagement are related but distinct.',
+            },
           },
           {
             id: 'psy-sec13-u7-L4-Q2',
@@ -353,6 +410,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Being deeply invested in the work (engaged) while unhappy with conditions (dissatisfied) shows how the two constructs differ.',
+            distractorExplanations: {
+              0: '"Happy with salary, benefits, and commute but bored by the tasks" is incorrect; loves the work, finds it meaningful, but dislikes the low pay.',
+              1: '"Neutral about both the work and the pay" is incorrect; loves the work, finds it meaningful, but dislikes the low pay.',
+              2: '"Plans to leave and has stopped caring about outcomes" is incorrect; loves the work, finds it meaningful, but dislikes the low pay.',
+            },
           },
           {
             id: 'psy-sec13-u7-L4-T2',
@@ -418,6 +480,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Herzberg predicted exactly this: improving hygiene factors eliminates complaints but does not generate motivation.',
+            distractorExplanations: {
+              1: '"Employees are ungrateful and entitled" does not accurately describe the concept asked about.',
+              2: '"The raise was too small to matter" does not accurately describe the concept asked about.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
         ],
       },
@@ -443,6 +510,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Procedural justice focuses on whether the outcome itself is fair.',
             correctAnswer: false,
             explanation: 'Procedural justice focuses on the fairness of the decision-making process, not the outcome. Distributive justice addresses outcome fairness.',
+            distractorExplanations: {
+              0: 'Procedural justice focuses on the fairness of the decision-making process, not the outcome.',
+            },
           },
           {
             id: 'psy-sec13-u7-L5-Q2',
@@ -476,6 +546,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The psychological contract is implicit. It captures beliefs about what each side owes the other beyond formal agreements.',
+            distractorExplanations: {
+              0: '"A legally binding employment agreement" is incorrect; unwritten mutual expectations between employee and organization.',
+              1: '"A formal document outlining job duties" is incorrect; unwritten mutual expectations between employee and organization.',
+              3: '"A contract signed by a psychologist" is incorrect; unwritten mutual expectations between employee and organization.',
+            },
           },
           {
             id: 'psy-sec13-u7-L5-Q4',
@@ -489,6 +564,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Psychological contract violations cause real damage to trust and engagement, even though the contract is unwritten.',
+            distractorExplanations: {
+              0: '"They negotiate a new legal contract" is incorrect; trust drops, engagement declines, and turnover intention increases.',
+              2: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+              3: '"They feel relieved because expectations are now clearer" is incorrect; trust drops, engagement declines, and turnover intention increases.',
+            },
           },
           {
             id: 'psy-sec13-u7-L5-T3',
@@ -517,6 +597,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The lack of formal criteria, no performance review, and no notification are all procedural justice failures.',
+            distractorExplanations: {
+              0: '"Distributive justice only" is incorrect; procedural justice: the process was opaque and arbitrary.',
+              2: '"Interactional justice only" is incorrect; procedural justice: the process was opaque and arbitrary.',
+              3: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+            },
           },
         ],
       },
@@ -556,6 +641,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Good interface design tries to minimize the cognitive load on users.',
             correctAnswer: true,
             explanation: 'Reducing cognitive load lets users focus on their task instead of figuring out the interface.',
+            distractorExplanations: {
+              1: 'Reducing cognitive load lets users focus on their task instead of figuring out the interface.',
+            },
           },
           {
             id: 'psy-sec13-u8-L1-Q2',
@@ -569,6 +657,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Working memory can hold about 4 items. Fewer choices mean less mental effort and faster decisions.',
+            distractorExplanations: {
+              0: '"Users dislike having any control over their experience" is incorrect; fewer choices reduce cognitive load on limited working memory.',
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec13-u8-L1-T2',
@@ -596,6 +689,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Progressive disclosure reveals complexity gradually, keeping initial decisions simple.',
+            distractorExplanations: {
+              0: '"Show all features on a single screen for transparency" is incorrect; use progressive disclosure to show only relevant options.',
+              1: '"Remove all user choices and automate everything" is incorrect; use progressive disclosure to show only relevant options.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
           {
             id: 'psy-sec13-u8-L1-T3',
@@ -615,6 +713,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Current cognitive science estimates working memory at about 4 chunks, not the often-cited 7.',
+            distractorExplanations: {
+              0: '"It holds exactly 7 items as Miller originally claimed" is incorrect; it holds about 4 chunks of information.',
+              1: '"It is unlimited if information is well organized" is incorrect; it holds about 4 chunks of information.',
+              2: 'This figure is inaccurate; the research-supported estimate is approximately 4%.',
+            },
           },
           {
             id: 'psy-sec13-u8-L1-Q6',
@@ -629,6 +732,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Breaking 15 fields into 3 steps of 5 reduces the cognitive load at each decision point.',
+            distractorExplanations: {
+              0: '"The anchoring effect made prices seem lower" is incorrect; progressive disclosure reduced cognitive load at each step.',
+              2: '"Users were tricked by a dark pattern" is incorrect; progressive disclosure reduced cognitive load at each step.',
+              3: '"The availability heuristic made the site feel faster" is incorrect; progressive disclosure reduced cognitive load at each step.',
+            },
           },
         ],
       },
@@ -654,6 +762,9 @@ export const psySection13Part2: Unit[] = [
             question: 'The Gestalt principle of proximity says that elements close together are perceived as related.',
             correctAnswer: true,
             explanation: 'Proximity is one of the strongest grouping cues. Placing related items close together signals they belong to the same category.',
+            distractorExplanations: {
+              1: 'Proximity is one of the strongest grouping cues. Placing related items close together signals they belong to the same category.',
+            },
           },
           {
             id: 'psy-sec13-u8-L2-Q2',
@@ -687,6 +798,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Dimming the background strengthens figure-ground separation, making the modal the clear focus of attention.',
+            distractorExplanations: {
+              1: '"To save battery by displaying fewer pixels" is incorrect; to exploit figure-ground perception and focus attention.',
+              2: '"Because background content is no longer relevant to the user" is incorrect; to exploit figure-ground perception and focus attention.',
+              3: '"To hide any errors on the main page" is incorrect; to exploit figure-ground perception and focus attention.',
+            },
           },
           {
             id: 'psy-sec13-u8-L2-Q4',
@@ -722,6 +838,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'A moving or pulsing element among still ones breaks common fate, drawing attention through contrast.',
+            distractorExplanations: {
+              0: '"Proximity: it is close to the icon" is incorrect; common fate: it is the only element moving.',
+              1: '"Similarity: it matches other badges" is incorrect; common fate: it is the only element moving.',
+              2: '"Closure: the brain fills in the rest of the count" is incorrect; common fate: it is the only element moving.',
+            },
           },
           {
             id: 'psy-sec13-u8-L2-Q6',
@@ -736,6 +857,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Proximity is doing the heavy lifting here. The gap between groups signals that they are separate categories.',
+            distractorExplanations: {
+              0: 'These are distinct concepts with different characteristics, causes, or applications.',
+              2: '"Continuity: the eye follows from top to bottom" is incorrect; proximity: spacing creates perceived groups.',
+              3: '"Closure: the brain adds invisible boxes around fields" is incorrect; proximity: spacing creates perceived groups.',
+            },
           },
         ],
       },
@@ -761,6 +887,9 @@ export const psySection13Part2: Unit[] = [
             question: 'A dark pattern is any design that influences user behavior.',
             correctAnswer: false,
             explanation: 'All design influences behavior. A dark pattern specifically manipulates users against their own interests for the company\'s benefit.',
+            distractorExplanations: {
+              0: 'All design influences behavior.',
+            },
           },
           {
             id: 'psy-sec13-u8-L3-Q2',
@@ -810,6 +939,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Confirmshaming makes users feel foolish or loss-averse for choosing the "wrong" option, exploiting identity threat.',
+            distractorExplanations: {
+              0: '"Anchoring bias" is incorrect; social identity threat and loss aversion.',
+              1: '"The availability heuristic" is incorrect; social identity threat and loss aversion.',
+              3: '"The serial position effect" is incorrect; social identity threat and loss aversion.',
+            },
           },
           {
             id: 'psy-sec13-u8-L3-T3',
@@ -829,6 +963,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Dark patterns may boost short-term metrics but erode trust and increasingly attract legal consequences.',
+            distractorExplanations: {
+              0: '"There is no risk because users rarely notice" is incorrect; damaged trust, increased complaints, and regulatory penalties.',
+              1: '"Users will copy the technique for their own businesses" is incorrect; damaged trust, increased complaints, and regulatory penalties.',
+              2: '"It only affects companies with fewer than 100 employees" is incorrect; damaged trust, increased complaints, and regulatory penalties.',
+            },
           },
           {
             id: 'psy-sec13-u8-L3-Q6',
@@ -843,6 +982,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The roach motel pattern makes it easy to get in but deliberately difficult to get out.',
+            distractorExplanations: {
+              1: '"Confirmshaming" is incorrect; roach motel.',
+              2: '"Misdirection" is incorrect; roach motel.',
+              3: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+            },
           },
         ],
       },
@@ -867,6 +1011,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Changing a default option has little effect on what people choose.',
             correctAnswer: false,
             explanation: 'The default effect is one of the strongest behavioral phenomena. Most people accept whatever the default is.',
+            distractorExplanations: {
+              0: 'The default effect is one of the strongest behavioral phenomena. Most people accept whatever the default is.',
+            },
           },
           {
             id: 'psy-sec13-u8-L4-Q2',
@@ -880,6 +1027,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Changing a default requires active choice. Status quo bias and effort avoidance keep most people on the preset path.',
+            distractorExplanations: {
+              1: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Regulators require companies to use the best default" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec13-u8-L4-T2',
@@ -899,6 +1051,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The decoy exists not to be chosen, but to shift preference toward the option the seller wants you to pick.',
+            distractorExplanations: {
+              0: '"To give customers more genuine choices" is incorrect; to make a target option look more attractive by comparison.',
+              1: '"To lower the average price of all options" is incorrect; to make a target option look more attractive by comparison.',
+              3: '"To test whether customers read all the options" is incorrect; to make a target option look more attractive by comparison.',
+            },
           },
           {
             id: 'psy-sec13-u8-L4-Q4',
@@ -940,6 +1097,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Pro at $14 with only 20 features is a decoy. It makes Premium at $15 with 50 features seem like an obvious bargain.',
+            distractorExplanations: {
+              0: '"The anchoring effect from the basic price" is incorrect; the decoy effect: Pro makes Premium look like great value.',
+              2: '"The endowment effect: customers feel they own Premium" is incorrect; the decoy effect: Pro makes Premium look like great value.',
+              3: '"Social proof: customers assume others chose Premium" is incorrect; the decoy effect: Pro makes Premium look like great value.',
+            },
           },
         ],
       },
@@ -965,6 +1127,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Accessibility features only benefit people with permanent disabilities.',
             correctAnswer: false,
             explanation: 'The curb cut effect shows that accessible design benefits far more people than the target group.',
+            distractorExplanations: {
+              0: 'The curb cut effect shows that accessible design benefits far more people than the target group.',
+            },
           },
           {
             id: 'psy-sec13-u8-L5-Q2',
@@ -978,6 +1143,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The curb cut effect describes how designs for specific needs often create universal benefits.',
+            distractorExplanations: {
+              0: '"Removing all curbs from sidewalks for aesthetic reasons" is incorrect; accessibility features created for one group benefit many others.',
+              1: '"Cutting costs by simplifying design for disabled users" is incorrect; accessibility features created for one group benefit many others.',
+              3: '"A construction technique for building ramps" is incorrect; accessibility features created for one group benefit many others.',
+            },
           },
           {
             id: 'psy-sec13-u8-L5-T2',
@@ -997,6 +1167,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Color vision deficiency affects roughly 8% of men. Always pair color with another indicator.',
+            distractorExplanations: {
+              0: '"Red is too aggressive and scares users" is incorrect; some users have color vision deficiency and may not see it.',
+              1: '"Red uses more screen energy than other colors" is incorrect; some users have color vision deficiency and may not see it.',
+              2: '"Most users prefer blue error messages" is incorrect; some users have color vision deficiency and may not see it.',
+            },
           },
           {
             id: 'psy-sec13-u8-L5-Q4',
@@ -1047,6 +1222,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Color must never be the sole differentiator. Distinct shapes, labels, or text must supplement color signals.',
+            distractorExplanations: {
+              0: '"The font size is too small" does not accurately describe the concept asked about.',
+              2: '"The app needs more animation to draw attention" does not accurately describe the concept asked about.',
+              3: '"The contrast ratio between text and background is too low" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1086,6 +1266,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Mental imagery of a movement activates the same brain regions as actually performing it.',
             correctAnswer: true,
             explanation: 'Neuroimaging confirms that motor imagery and motor execution share overlapping neural circuits.',
+            distractorExplanations: {
+              1: 'Neuroimaging confirms that motor imagery and motor execution share overlapping neural circuits.',
+            },
           },
           {
             id: 'psy-sec13-u9-L1-Q2',
@@ -1099,6 +1282,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Mental rehearsal reinforces the neural connections involved in motor execution, complementing physical practice.',
+            distractorExplanations: {
+              0: '"It relaxes the muscles so they perform better when needed" is incorrect; it strengthens neural pathways for the imagined movements.',
+              1: '"It replaces the need for physical practice entirely" is incorrect; it strengthens neural pathways for the imagined movements.',
+              2: '"It tricks competitors into thinking you have practiced more" is incorrect; it strengthens neural pathways for the imagined movements.',
+            },
           },
           {
             id: 'psy-sec13-u9-L1-T2',
@@ -1134,6 +1322,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Internal imagery engages the body\'s sensory-motor system more directly, making it better for motor skill refinement.',
+            distractorExplanations: {
+              1: '"External imagery, because you can see your whole body" is incorrect; internal imagery, because it activates kinesthetic sensation.',
+              2: '"Neither type has any proven benefit" is incorrect; internal imagery, because it activates kinesthetic sensation.',
+              3: '"Both are equally effective for all tasks" is incorrect; internal imagery, because it activates kinesthetic sensation.',
+            },
           },
           {
             id: 'psy-sec13-u9-L1-T3',
@@ -1162,6 +1355,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'PETTLEP says imagery should match real conditions: physical position, environment, timing, and emotional intensity.',
+            distractorExplanations: {
+              0: '"Spend more time on the couch for deeper relaxation" does not accurately describe the concept asked about.',
+              1: '"Switch to external imagery instead of internal" does not accurately describe the concept asked about.',
+              3: '"Stop visualization and focus only on physical practice" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1187,6 +1385,9 @@ export const psySection13Part2: Unit[] = [
             question: 'According to the Yerkes-Dodson law, higher arousal always leads to better performance.',
             correctAnswer: false,
             explanation: 'The relationship is an inverted U. Beyond the optimal point, more arousal hurts performance.',
+            distractorExplanations: {
+              0: 'The relationship is an inverted U. Beyond the optimal point, more arousal hurts performance.',
+            },
           },
           {
             id: 'psy-sec13-u9-L2-Q2',
@@ -1200,6 +1401,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Complex tasks requiring fine motor control or deep thinking perform best at moderate to low arousal levels.',
+            distractorExplanations: {
+              0: '"Very high arousal for maximum energy" is incorrect; moderate to low arousal for clear thinking.',
+              1: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+              2: '"Arousal level does not matter for mental tasks" is incorrect; moderate to low arousal for clear thinking.',
+            },
           },
           {
             id: 'psy-sec13-u9-L2-T2',
@@ -1219,6 +1425,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Flow requires a balance between challenge and skill. Too easy is boring, too hard is anxious.',
+            distractorExplanations: {
+              1: '"Very low challenge with very high skill" is incorrect; challenge level that closely matches skill level.',
+              2: '"Challenge level that exceeds skill level by a large margin" is incorrect; challenge level that closely matches skill level.',
+              3: '"Complete absence of any external pressure" is incorrect; challenge level that closely matches skill level.',
+            },
           },
           {
             id: 'psy-sec13-u9-L2-Q4',
@@ -1268,6 +1479,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Player B\'s cognitive anxiety (negative thoughts, fear of failure) is more harmful to complex skill performance than Player A\'s physical symptoms.',
+            distractorExplanations: {
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: '"Player B did not warm up properly" does not accurately describe the concept asked about.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
         ],
       },
@@ -1293,6 +1509,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Choking under pressure occurs because athletes lack sufficient skill.',
             correctAnswer: false,
             explanation: 'Choking specifically happens to skilled performers. The problem is not lack of skill but disrupted automatic processing.',
+            distractorExplanations: {
+              0: 'Choking specifically happens to skilled performers. The problem is not lack of skill but disrupted automatic processing.',
+            },
           },
           {
             id: 'psy-sec13-u9-L3-Q2',
@@ -1306,6 +1525,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Pressure causes athletes to monitor their movements consciously, breaking the fluid execution that comes from automaticity.',
+            distractorExplanations: {
+              0: '"Physical fatigue from overtraining" is incorrect; conscious attention to normally automatic movements.',
+              1: '"Lack of practice in high-pressure situations" is incorrect; conscious attention to normally automatic movements.',
+              2: '"Dehydration affecting brain function" is incorrect; conscious attention to normally automatic movements.',
+            },
           },
           {
             id: 'psy-sec13-u9-L3-T2',
@@ -1341,6 +1565,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'External focus of attention prevents the self-monitoring that disrupts automatic execution.',
+            distractorExplanations: {
+              1: '"Think carefully about each movement before executing it" is incorrect; focus on an external cue (like the target) rather than body mechanics.',
+              2: '"Increase practice volume the day before competition" is incorrect; focus on an external cue (like the target) rather than body mechanics.',
+              3: '"Watch video of yourself performing the skill" is incorrect; focus on an external cue (like the target) rather than body mechanics.',
+            },
           },
           {
             id: 'psy-sec13-u9-L3-T3',
@@ -1369,6 +1598,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Consciously monitoring grip, backswing, and hip rotation disrupted the automatic motor program she normally relies on.',
+            distractorExplanations: {
+              1: '"She was distracted by thoughts about winning the trophy" does not accurately describe the concept asked about.',
+              2: '"She was physically exhausted from 3 days of golf" does not accurately describe the concept asked about.',
+              3: '"The wind conditions changed between rounds" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1393,6 +1627,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Outcome goals like "win the championship" are the most effective for performance.',
             correctAnswer: false,
             explanation: 'Process goals are most effective because they focus on controllable actions. Outcome goals depend on factors outside the athlete\'s control.',
+            distractorExplanations: {
+              0: 'Process goals are most effective because they focus on controllable actions.',
+            },
           },
           {
             id: 'psy-sec13-u9-L4-Q2',
@@ -1437,6 +1674,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Complex skills benefit from instructional self-talk that provides specific technique cues.',
+            distractorExplanations: {
+              0: '"Motivational: "I am the best gymnast here" is incorrect; instructional: "Point toes, tight core, lock arms.',
+              1: '"Outcome-focused: "I need to win this competition" is incorrect; instructional: "Point toes, tight core, lock arms.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec13-u9-L4-T3',
@@ -1457,6 +1699,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Proximal goals create a feedback loop: set goal, check progress, adjust, repeat. This maintains engagement.',
+            distractorExplanations: {
+              0: '"Long-term goals are impossible to achieve" is incorrect; short-term goals provide regular feedback and sustain motivation.',
+              1: '"Athletes can only think about one week at a time" is incorrect; short-term goals provide regular feedback and sustain motivation.',
+              2: '"Coaches prefer not to discuss the future with athletes" is incorrect; short-term goals provide regular feedback and sustain motivation.',
+            },
           },
           {
             id: 'psy-sec13-u9-L4-Q6',
@@ -1471,6 +1718,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Shifting from an uncontrollable outcome goal to a controllable process goal reduces anxiety and restores focus.',
+            distractorExplanations: {
+              0: '"Switch to a more ambitious outcome goal: "I need to finish in 2:55" does not accurately describe the concept asked about.',
+              1: '"Stop all self-talk and focus on the crowd" does not accurately describe the concept asked about.',
+              3: '"Think about what happens if she fails" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1495,6 +1747,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Social loafing is more likely when individual effort is difficult to identify.',
             correctAnswer: true,
             explanation: 'When people believe their individual contribution cannot be measured, they tend to exert less effort.',
+            distractorExplanations: {
+              1: 'When people believe their individual contribution cannot be measured, they tend to exert less effort.',
+            },
           },
           {
             id: 'psy-sec13-u9-L5-Q2',
@@ -1508,6 +1763,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Making individual contributions identifiable and valued is the most effective way to reduce social loafing.',
+            distractorExplanations: {
+              0: '"Increasing team size so everyone feels less pressure" is incorrect; tracking individual performance metrics alongside team goals.',
+              1: '"Removing all individual statistics to focus on team unity" is incorrect; tracking individual performance metrics alongside team goals.',
+              3: '"Letting the best players carry the workload" is incorrect; tracking individual performance metrics alongside team goals.',
+            },
           },
           {
             id: 'psy-sec13-u9-L5-T2',
@@ -1543,6 +1803,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Task cohesion has a stronger relationship with performance. Teams need to execute together, not just enjoy each other\'s company.',
+            distractorExplanations: {
+              0: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              1: '"Both predict performance equally" is incorrect; task cohesion, because coordinated execution wins games.',
+              2: '"Neither predicts performance in team sports" is incorrect; task cohesion, because coordinated execution wins games.',
+            },
           },
           {
             id: 'psy-sec13-u9-L5-T3',
@@ -1571,6 +1836,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The team\'s belief in their ability to succeed (collective efficacy) was damaged by losing a key player, affecting everyone\'s performance.',
+            distractorExplanations: {
+              1: '"Social loafing increased without the star player watching" is incorrect; the team\\\'s collective efficacy dropped after losing their key player.',
+              2: '"The remaining players are physically less talented" is incorrect; the team\\\'s collective efficacy dropped after losing their key player.',
+              3: '"The coach changed the team\\\'s strategy incorrectly" is incorrect; the team\\\'s collective efficacy dropped after losing their key player.',
+            },
           },
         ],
       },
@@ -1610,6 +1880,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Most people who need to change a health behavior are already in the action stage.',
             correctAnswer: false,
             explanation: 'Most people are in precontemplation or contemplation. Effective interventions must meet people where they are.',
+            distractorExplanations: {
+              0: 'Most people are in precontemplation or contemplation. Effective interventions must meet people where they are.',
+            },
           },
           {
             id: 'psy-sec13-u10-L1-Q2',
@@ -1643,6 +1916,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The TTM normalizes relapse as part of learning. Each cycle through the stages builds experience for eventual success.',
+            distractorExplanations: {
+              0: '"As a sign that the person should give up" is incorrect; as a normal part of the change process.',
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              3: '"As evidence that the model does not work" is incorrect; as a normal part of the change process.',
+            },
           },
           {
             id: 'psy-sec13-u10-L1-Q4',
@@ -1685,6 +1963,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'She is aware of the need and researching, but has not made a specific plan or commitment. This is contemplation.',
+            distractorExplanations: {
+              1: '"Precontemplation: she has not thought about exercise" is incorrect; contemplation: she is thinking and researching but has not committed.',
+              2: '"Preparation: she has a specific plan and start date" is incorrect; contemplation: she is thinking and researching but has not committed.',
+              3: '"Action: she has already started exercising regularly" is incorrect; contemplation: she is thinking and researching but has not committed.',
+            },
           },
         ],
       },
@@ -1709,6 +1992,9 @@ export const psySection13Part2: Unit[] = [
             question: 'According to the health belief model, people act on health risks when they believe they are personally susceptible.',
             correctAnswer: true,
             explanation: 'Perceived susceptibility is one of the key drivers. If people think "that will not happen to me," they are unlikely to act.',
+            distractorExplanations: {
+              1: 'Perceived susceptibility is one of the key drivers. If people think "that will not happen to me," they are unlikely to act.',
+            },
           },
           {
             id: 'psy-sec13-u10-L2-Q2',
@@ -1758,6 +2044,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Low perceived susceptibility means the person does not feel at risk, removing a key motivator for action.',
+            distractorExplanations: {
+              1: '"Someone who believes the flu could be serious for them" is incorrect; someone who believes they are not susceptible to the flu.',
+              2: '"Someone who thinks the vaccine is effective and easy to get" is incorrect; someone who believes they are not susceptible to the flu.',
+              3: '"Someone whose doctor recommended the vaccine last week" is incorrect; someone who believes they are not susceptible to the flu.',
+            },
           },
           {
             id: 'psy-sec13-u10-L2-T3',
@@ -1787,6 +2078,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'He believes in the risk, severity, and treatment. The remaining barrier is likely practical (cost, side effects) or confidence-related.',
+            distractorExplanations: {
+              1: '"Low perceived susceptibility" does not accurately describe the concept asked about.',
+              2: '"Low perceived severity" does not accurately describe the concept asked about.',
+              3: '"Low perceived benefits of medication" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1812,6 +2108,9 @@ export const psySection13Part2: Unit[] = [
             question: 'The habit loop consists of a cue, a routine, and a reward.',
             correctAnswer: true,
             explanation: 'These three components form the basic structure of every habit, from brushing teeth to checking your phone.',
+            distractorExplanations: {
+              1: 'These three components form the basic structure of every habit, from brushing teeth to checking your phone.',
+            },
           },
           {
             id: 'psy-sec13-u10-L3-Q2',
@@ -1844,6 +2143,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Implementation intentions link a specific situation (after lunch) to a specific action (walk 15 minutes).',
+            distractorExplanations: {
+              0: '"I want to exercise more this year" is incorrect; when I finish lunch, I will walk for 15 minutes.',
+              1: '"Exercise is important for my health" is incorrect; when I finish lunch, I will walk for 15 minutes.',
+              2: '"I should probably join a gym" is incorrect; when I finish lunch, I will walk for 15 minutes.',
+            },
           },
           {
             id: 'psy-sec13-u10-L3-Q4',
@@ -1879,6 +2183,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The existing habit provides a consistent, automatic trigger that cues the new behavior.',
+            distractorExplanations: {
+              0: '"It replaces an old habit with a new one" is incorrect; it uses an existing habit as a reliable cue for a new behavior.',
+              1: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              3: '"It works only for morning routines" is incorrect; it uses an existing habit as a reliable cue for a new behavior.',
+            },
           },
           {
             id: 'psy-sec13-u10-L3-Q6',
@@ -1893,6 +2202,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Habit stacking: attaching the vitamin to her existing coffee habit provides a reliable daily cue and makes forgetting unlikely.',
+            distractorExplanations: {
+              0: '"Set a phone alarm for a random time each day" does not accurately describe the concept asked about.',
+              2: '"Wait until she feels motivated enough to remember naturally" does not accurately describe the concept asked about.',
+              3: '"Take the vitamin at bedtime instead since mornings are busy" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1918,6 +2232,9 @@ export const psySection13Part2: Unit[] = [
             question: 'The biopsychosocial model says health is determined entirely by biology.',
             correctAnswer: false,
             explanation: 'The model explicitly states that biology, psychology, and social context all contribute to health outcomes.',
+            distractorExplanations: {
+              0: 'The model explicitly states that biology, psychology, and social context all contribute to health outcomes.',
+            },
           },
           {
             id: 'psy-sec13-u10-L4-Q2',
@@ -1962,6 +2279,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'When you cannot change the situation, managing your emotional response is the most adaptive strategy.',
+            distractorExplanations: {
+              0: '"When the stressor is controllable and has a clear solution" is incorrect; when the stressor is uncontrollable, like a terminal diagnosis.',
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"When you have plenty of time to solve the problem" is incorrect; when the stressor is uncontrollable, like a terminal diagnosis.',
+            },
           },
           {
             id: 'psy-sec13-u10-L4-T3',
@@ -1990,6 +2312,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The biopsychosocial model predicts that increased stress and lost social support can worsen physical health, even without biological or behavioral changes.',
+            distractorExplanations: {
+              1: '"Her medication stopped working due to biological resistance" is incorrect; chronic stress and social isolation are worsening her condition.',
+              2: '"She is secretly eating unhealthy food" is incorrect; chronic stress and social isolation are worsening her condition.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
         ],
       },
@@ -2015,6 +2342,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Giving people health information is usually sufficient to change their behavior.',
             correctAnswer: false,
             explanation: 'The intention-action gap shows that knowledge and intention rarely translate directly into behavior change.',
+            distractorExplanations: {
+              0: 'The intention-action gap shows that knowledge and intention rarely translate directly into behavior change.',
+            },
           },
           {
             id: 'psy-sec13-u10-L5-Q2',
@@ -2028,6 +2358,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Medication non-adherence is estimated at about 50%, making it one of the most significant challenges in healthcare.',
+            distractorExplanations: {
+              0: 'About 5% greatly underestimates medication non-adherence, which is approximately 50% across patient populations.',
+              1: 'About 20% underestimates the problem; research shows roughly half of patients do not take medications as prescribed.',
+              3: 'About 90% overestimates non-adherence; the actual rate is approximately 50%, which is still a major healthcare challenge.',
+            },
           },
           {
             id: 'psy-sec13-u10-L5-T2',
@@ -2047,6 +2382,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Present bias discounts future benefits in favor of immediate gratification, making long-term health changes difficult.',
+            distractorExplanations: {
+              0: '"A tendency to remember past health events more vividly" is incorrect; valuing immediate rewards over larger future health benefits.',
+              1: '"A preference for seeing a doctor now rather than later" is incorrect; valuing immediate rewards over larger future health benefits.',
+              2: '"Believing current health is better than it actually is" is incorrect; valuing immediate rewards over larger future health benefits.',
+            },
           },
           {
             id: 'psy-sec13-u10-L5-Q4',
@@ -2097,6 +2437,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Default scheduling uses choice architecture to convert intention into action. Opt-out systems dramatically increase participation.',
+            distractorExplanations: {
+              0: '"Send longer, more detailed emails about flu complications" is incorrect; schedule vaccination appointments by default and let patients opt out.',
+              1: '"Post flu statistics on social media to raise awareness" is incorrect; schedule vaccination appointments by default and let patients opt out.',
+              3: '"Add a quiz about flu prevention to the patient portal" is incorrect; schedule vaccination appointments by default and let patients opt out.',
+            },
           },
         ],
       },
@@ -2141,6 +2486,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Anchoring causes disproportionate reliance on the first number or fact encountered, skewing subsequent judgments.',
+            distractorExplanations: {
+              0: '"Prefer options that are presented last in a list" is incorrect; rely too heavily on the first piece of information they encounter.',
+              2: '"Ignore all numerical information when making decisions" is incorrect; rely too heavily on the first piece of information they encounter.',
+              3: 'Not choose the cheapest available option.',
+            },
           },
           {
             id: 'psy-sec13-u11-L1-Q2',
@@ -2148,6 +2498,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Mental accounting means people treat all money as interchangeable regardless of its source.',
             correctAnswer: false,
             explanation: 'Mental accounting shows the opposite: people treat money differently based on its source or intended use, even though all dollars are objectively equal.',
+            distractorExplanations: {
+              0: 'Mental accounting shows the opposite: people treat money differently based on its source or intended use.',
+            },
           },
           {
             id: 'psy-sec13-u11-L1-Q3',
@@ -2170,6 +2523,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The fake original price of $200 serves as an anchor, making $120 feel like a bargain by comparison.',
+            distractorExplanations: {
+              0: '"Mental accounting: the customer creates a "savings" mental bucket" is incorrect; anchoring: the $200 makes $120 seem like a great deal.',
+              2: '"Loss aversion: the customer fears losing the deal" is incorrect; anchoring: the $200 makes $120 seem like a great deal.',
+              3: '"The endowment effect: the customer feels they own the jacket" is incorrect; anchoring: the $200 makes $120 seem like a great deal.',
+            },
           },
           {
             id: 'psy-sec13-u11-L1-Q5',
@@ -2199,6 +2557,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The decoy is an inferior option added to make the target option look superior by comparison.',
+            distractorExplanations: {
+              0: '"Offering only 2 choices so the decision is simple" is incorrect; adding a third option that nobody wants but makes one look better.',
+              1: '"Making all options equally attractive" is incorrect; adding a third option that nobody wants but makes one look better.',
+              3: '"Removing the most expensive option from the menu" is incorrect; adding a third option that nobody wants but makes one look better.',
+            },
           },
         ],
       },
@@ -2243,6 +2606,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Transformational leadership motivates through vision, meaning, and intellectual stimulation, not just rewards and punishments.',
+            distractorExplanations: {
+              1: '"It pays employees more money for creative ideas" is incorrect; it inspires intrinsic motivation and a shared vision beyond rewards.',
+              2: '"It eliminates all rules and structure" is incorrect; it inspires intrinsic motivation and a shared vision beyond rewards.',
+              3: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+            },
           },
           {
             id: 'psy-sec13-u11-L2-Q3',
@@ -2250,6 +2618,9 @@ export const psySection13Part2: Unit[] = [
             question: 'The SBI feedback model requires describing specific situations, behaviors, and their impact.',
             correctAnswer: true,
             explanation: 'SBI (Situation-Behavior-Impact) structures feedback around observable specifics rather than character judgments.',
+            distractorExplanations: {
+              1: 'SBI (Situation-Behavior-Impact) structures feedback around observable specifics rather than character judgments.',
+            },
           },
           {
             id: 'psy-sec13-u11-L2-Q4',
@@ -2263,6 +2634,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Work sample tests directly assess job-relevant skills and outperform all other single predictors.',
+            distractorExplanations: {
+              0: '"Years of experience" is incorrect; work sample tests.',
+              1: '"Educational credentials" is incorrect; work sample tests.',
+              2: '"Unstructured interview rapport" is incorrect; work sample tests.',
+            },
           },
           {
             id: 'psy-sec13-u11-L2-Q5',
@@ -2277,6 +2653,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Undocumented criteria violate procedural justice. Notification by mass email violates interactional justice (dignity and respect).',
+            distractorExplanations: {
+              0: '"Distributive justice only" does not accurately describe the concept asked about.',
+              2: 'The scope is broader than interactional justice alone.',
+              3: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+            },
           },
           {
             id: 'psy-sec13-u11-L2-Q6',
@@ -2337,6 +2718,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'In both cases, having the ability or intention is not enough. Contextual factors disrupt the translation into action.',
+            distractorExplanations: {
+              0: '"Both are caused by lack of knowledge" does not accurately describe the concept asked about.',
+              1: '"Both only affect beginners" does not accurately describe the concept asked about.',
+              2: '"Both are solved by increasing motivation" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec13-u11-L3-Q3',
@@ -2344,6 +2730,9 @@ export const psySection13Part2: Unit[] = [
             question: 'Dark patterns and ethical nudges both influence behavior, but dark patterns serve the company at the user\'s expense.',
             correctAnswer: true,
             explanation: 'The key distinction is whose interest is served. Nudges help users. Dark patterns exploit them.',
+            distractorExplanations: {
+              1: 'The key distinction is whose interest is served. Nudges help users. Dark patterns exploit them.',
+            },
           },
           {
             id: 'psy-sec13-u11-L3-Q4',
@@ -2357,6 +2746,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Complex tasks requiring precision and thinking perform best at moderate to low arousal levels.',
+            distractorExplanations: {
+              1: '"Maximum arousal for peak energy" is incorrect; moderate to low arousal for clear thinking.',
+              2: '"Zero arousal for complete calm" is incorrect; moderate to low arousal for clear thinking.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec13-u11-L3-Q5',
@@ -2379,6 +2773,11 @@ export const psySection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'She is thinking about it, has purchased aids, and is planning a start date. This is preparation, not yet action.',
+            distractorExplanations: {
+              0: '"She is in the action stage and already quit" is incorrect; she is in the preparation stage: planning but not yet acting.',
+              2: '"She is in precontemplation: unaware of the problem" is incorrect; she is in the preparation stage: planning but not yet acting.',
+              3: '"She is in maintenance: sustaining a behavior change" is incorrect; she is in the preparation stage: planning but not yet acting.',
+            },
           },
         ],
       },

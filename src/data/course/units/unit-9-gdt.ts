@@ -33,6 +33,9 @@ export const unit9: Unit = {
           correctAnswer: true,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="5" fill="#334155" text-anchor="middle" font-weight="bold">Transition Fit</text><line x1="40" y1="70" x2="40" y2="14" stroke="#3B8700" stroke-width="0.8" opacity="0.3"/><line x1="12" y1="42" x2="68" y2="42" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.3"/><text x="10" y="44" font-size="3" fill="#6B7280">nom</text><rect x="18" y="30" width="14" height="20" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.2"/><text x="25" y="43" font-size="4" fill="#58CC02" text-anchor="middle" font-weight="bold">H7</text><rect x="48" y="34" width="14" height="16" rx="1" fill="#3B8700" opacity="0.15" stroke="#3B8700" stroke-width="1.2"/><text x="55" y="45" font-size="4" fill="#3B8700" text-anchor="middle" font-weight="bold">k6</text><rect x="34" y="34" width="12" height="8" rx="0.5" fill="#A5E86C" opacity="0.3" stroke="#A5E86C" stroke-width="0.8"><animate attributeName="opacity" values="0.15;0.4;0.15" dur="2s" repeatCount="indefinite"/></rect><text x="40" y="62" font-size="3.5" fill="#6B7280" text-anchor="middle">Overlap zone</text><text x="40" y="74" font-size="3.5" fill="#334155" text-anchor="middle">Clearance OR interference</text></svg>',
           explanation: 'A transition fit is defined by overlapping tolerance zones of the hole and shaft.',
+          distractorExplanations: {
+            1: 'A transition fit is defined by overlapping tolerance zones of the hole and shaft.',
+          },
           hint: 'If the shaft and hole tolerance zones overlap, what happens depends on the actual sizes produced.',
         },
         {
@@ -48,6 +51,11 @@ export const unit9: Unit = {
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><line x1="40" y1="70" x2="40" y2="10" stroke="#3B8700" stroke-width="0.8" opacity="0.3"/><line x1="12" y1="40" x2="68" y2="40" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.3"/><text x="40" y="78" font-size="4" fill="#334155" text-anchor="middle">Nominal 50 mm</text><rect x="25" y="28" width="14" height="24" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.2"/><line x1="23" y1="28" x2="41" y2="28" stroke="#58CC02" stroke-width="0.6" opacity="0.5"/><text x="32" y="26" font-size="3.5" fill="#334155" text-anchor="middle">+0.05</text><line x1="23" y1="52" x2="41" y2="52" stroke="#58CC02" stroke-width="0.6" opacity="0.5"/><text x="32" y="58" font-size="3.5" fill="#334155" text-anchor="middle">-0.10</text><text x="32" y="42" font-size="4.5" fill="#58CC02" text-anchor="middle" font-weight="bold">0.15</text><line x1="18" y1="28" x2="18" y2="52" stroke="#3B8700" stroke-width="1" opacity="0.4"/><polygon points="16.5,29 18,26 19.5,29" fill="#3B8700" opacity="0.4"/><polygon points="16.5,51 18,54 19.5,51" fill="#3B8700" opacity="0.4"/><text x="40" y="8" font-size="5" fill="#334155" text-anchor="middle" font-weight="bold">Bilateral Tolerance</text><text x="56" y="36" font-size="3.5" fill="#6B7280" text-anchor="middle">+side</text><text x="56" y="48" font-size="3.5" fill="#6B7280" text-anchor="middle">-side</text></svg>',
           explanation: 'Total tolerance = upper deviation minus lower deviation = +0.05 minus (-0.10) = 0.15 mm.',
+          distractorExplanations: {
+            0: 'This focuses on unilateral, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on unilateral, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on unilateral, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Tolerance = upper limit minus lower limit.',
         },
         {
@@ -70,6 +78,11 @@ export const unit9: Unit = {
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Unilateral Tolerance</text><line x1="40" y1="68" x2="40" y2="16" stroke="#3B8700" stroke-width="0.8" opacity="0.3"/><line x1="12" y1="44" x2="68" y2="44" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.3"/><text x="10" y="46" font-size="3" fill="#6B7280">nom</text><rect x="28" y="28" width="24" height="16" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.2"/><text x="58" y="30" font-size="3.5" fill="#334155">+0.021</text><text x="58" y="46" font-size="3.5" fill="#334155">+0.000</text><text x="40" y="38" font-size="4.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Bore</text><text x="40" y="58" font-size="3.5" fill="#6B7280" text-anchor="middle">Both deviations same side</text></svg>',
           explanation: 'Both deviations are on the same side of nominal (zero and positive), making this unilateral tolerancing. The bore ranges from 30.000 to 30.021 mm.',
+          distractorExplanations: {
+            0: 'This focuses on bilateral/symmetric, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on bilateral/asymmetric, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on limit/dimensioning, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Look at whether the deviations straddle the nominal or sit on one side.',
         },
         {
@@ -121,6 +134,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <line x1="40" y1="72" x2="40" y2="8" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <line x1="12" y1="44" x2="68" y2="44" stroke="#3B8700" stroke-width="1" stroke-dasharray="3,2" opacity="0.3"/> <text x="40" y="78" font-size="4.5" fill="#334155" text-anchor="middle">Nominal dia 50</text> <rect x="16" y="44" width="14" height="20" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.2"/> <line x1="14" y1="44" x2="32" y2="44" stroke="#58CC02" stroke-width="0.8" opacity="0.5"/> <text x="23" y="42" font-size="3.5" fill="#334155" text-anchor="middle">+0.000</text> <line x1="14" y1="64" x2="32" y2="64" stroke="#58CC02" stroke-width="0.8" opacity="0.5"/> <text x="23" y="70" font-size="3.5" fill="#334155" text-anchor="middle">-0.050</text> <text x="23" y="56" font-size="5" fill="#58CC02" text-anchor="middle" font-weight="bold">Hole</text> <rect x="50" y="24" width="14" height="10" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="1.2"/> <line x1="48" y1="24" x2="66" y2="24" stroke="#3B8700" stroke-width="0.8" opacity="0.5"/> <text x="57" y="22" font-size="3.5" fill="#334155" text-anchor="middle">+0.050</text> <line x1="48" y1="34" x2="66" y2="34" stroke="#3B8700" stroke-width="0.8" opacity="0.5"/> <text x="57" y="39" font-size="3.5" fill="#334155" text-anchor="middle">+0.025</text> <text x="57" y="31" font-size="5" fill="#3B8700" text-anchor="middle" font-weight="bold">Shaft</text> <text x="40" y="10" font-size="5" fill="#334155" text-anchor="middle" font-weight="bold">Interference</text> </svg>',
           explanation: 'Maximum shaft = 50.050, minimum shaft = 50.025. Maximum hole = 50.000, minimum hole = 49.950. Even the smallest shaft (50.025) exceeds the largest hole (50.000), so interference is guaranteed.',
+          distractorExplanations: {
+            0: 'This focuses on clearance, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on transition, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on tolerances/invalid, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Check if the smallest shaft can fit in the largest hole.',
         },
         {
@@ -136,6 +154,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="40" cy="40" r="28" fill="#58CC02" opacity="0.05"/> <circle cx="40" cy="40" r="28" stroke="#58CC02" stroke-width="3" fill="none" opacity="0.3"/> <circle cx="40" cy="40" r="23.5" stroke="#A5E86C" stroke-width="3" fill="none" opacity="0.06"/> <circle cx="40" cy="40" r="12.5" fill="#58CC02" opacity="0.06"/> <circle cx="40" cy="40" r="12.5" stroke="#3B8700" stroke-width="3" fill="none"/> <circle cx="40" cy="40" r="13.5" stroke="#A5E86C" stroke-width="2" fill="none" opacity="0.06"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/> <line x1="40" y1="28" x2="40" y2="52" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> <line x1="28" y1="40" x2="52" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> </g> <circle cx="40" cy="40" r="5" fill="#3B8700" opacity="0.25"/> <circle cx="40" cy="40" r="2" fill="white" opacity="0.12"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="4s" repeatCount="indefinite"/> <circle cx="40" cy="40" r="18" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="4,10" fill="none" opacity="0.2"/> <circle cx="58" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="58" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="56.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <circle cx="52.7" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <circle cx="40" cy="22" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="22" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="20.5" r="1.5" fill="white" opacity="0.3"/> <circle cx="27.3" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <circle cx="22" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="22" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="20.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <circle cx="27.3" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="51.2" r="1.5" fill="white" opacity="0.3"/> <circle cx="40" cy="58" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="58" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="56.5" r="1.5" fill="white" opacity="0.3"/> <circle cx="52.7" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="51.2" r="1.5" fill="white" opacity="0.3"/> </g> </svg>',
           explanation: 'The ring that rotates relative to the load direction must have an interference fit to prevent "creep," which is gradual rotation of the ring relative to its seat due to cyclic loading.',
+          distractorExplanations: {
+            0: 'This focuses on arbitrary,/rings, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on inner/needs, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on clearance/outer, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Consider which ring sees the rotating load vector.',
         },
       ]
@@ -171,6 +194,11 @@ export const unit9: Unit = {
           correctIndex: 3,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <text x="40" y="7" font-size="5" fill="#334155" text-anchor="middle" font-weight="bold">H7 / g6 Clearance Fit</text> <circle cx="26" cy="40" r="18" fill="#58CC02" opacity="0.06"/> <circle cx="26" cy="40" r="18" stroke="#58CC02" stroke-width="2" fill="none"/> <circle cx="26" cy="40" r="14" fill="#3B8700" opacity="0.1"/> <circle cx="26" cy="40" r="14" stroke="#3B8700" stroke-width="1.5" fill="none"/> <text x="26" y="42" font-size="4" fill="#334155" text-anchor="middle">shaft</text> <text x="26" y="62" font-size="4" fill="#334155" text-anchor="middle">hole</text> <line x1="62" y1="68" x2="62" y2="14" stroke="#3B8700" stroke-width="0.8" opacity="0.3"/> <line x1="52" y1="44" x2="76" y2="44" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.3"/> <text x="76" y="46" font-size="3" fill="#6B7280">nom</text> <rect x="54" y="30" width="6" height="14" rx="1" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="1"/> <text x="57" y="38" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">H7</text> <rect x="66" y="48" width="6" height="10" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="1"/> <text x="69" y="55" font-size="3.5" fill="#3B8700" text-anchor="middle" font-weight="bold">g6</text> </svg>',
           explanation: 'In the ISO system, uppercase letters denote hole deviations and lowercase letters denote shaft deviations. "H" means the hole has a zero lower deviation (hole starts at nominal).',
+          distractorExplanations: {
+            0: 'This focuses on transition/where, which is not the correct mechanism or principle for this problem.',
+            1: 'Regarding mating shaft: In the ISO system, uppercase letters denote hole deviations and lowercase letters denote shaft deviations.',
+            2: 'This focuses on interference, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Uppercase = hole, lowercase = shaft.',
         },
         {
@@ -196,6 +224,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><line x1="40" y1="70" x2="40" y2="10" stroke="#3B8700" stroke-width="0.8" opacity="0.3"/><line x1="12" y1="35" x2="68" y2="35" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.3"/><text x="10" y="37" font-size="3" fill="#6B7280">dia 25.000</text><rect x="30" y="35" width="20" height="16" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="1.2"/><text x="40" y="46" font-size="5" fill="#3B8700" text-anchor="middle" font-weight="bold">h6</text><line x1="28" y1="35" x2="52" y2="35" stroke="#3B8700" stroke-width="0.6" opacity="0.5"/><text x="56" y="34" font-size="3.5" fill="#334155">0.000</text><line x1="28" y1="51" x2="52" y2="51" stroke="#3B8700" stroke-width="0.6" opacity="0.5"/><text x="56" y="53" font-size="3.5" fill="#334155">-0.013</text><text x="40" y="8" font-size="5" fill="#334155" text-anchor="middle" font-weight="bold">dia 25 h6 Shaft</text><text x="40" y="68" font-size="3.5" fill="#6B7280" text-anchor="middle">Zone below nominal</text></svg>',
           explanation: 'The fundamental deviation "h" for a shaft means the upper deviation is zero. The shaft at its largest equals the nominal size. The tolerance zone extends below nominal.',
+          distractorExplanations: {
+            0: 'This focuses on +0.013, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on +0.013, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on +0.006/-0.006, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The lowercase "h" means the tolerance zone lies at and below nominal.',
         },
         {
@@ -218,6 +251,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Hole-Basis vs Shaft-Basis</text><rect x="4" y="14" width="34" height="28" rx="2" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1"/><text x="21" y="22" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Hole-Basis</text><rect x="10" y="26" width="8" height="12" rx="1" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="0.8"/><text x="14" y="34" font-size="3" fill="#334155" text-anchor="middle">H</text><rect x="22" y="28" width="8" height="8" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="0.8"/><text x="26" y="34" font-size="3" fill="#334155" text-anchor="middle">var</text><rect x="42" y="14" width="34" height="28" rx="2" fill="#3B8700" opacity="0.06" stroke="#3B8700" stroke-width="1"/><text x="59" y="22" font-size="3.5" fill="#3B8700" text-anchor="middle" font-weight="bold">Shaft-Basis</text><rect x="48" y="28" width="8" height="8" rx="1" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="0.8"/><text x="52" y="34" font-size="3" fill="#334155" text-anchor="middle">var</text><rect x="60" y="26" width="8" height="12" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="0.8"/><text x="64" y="34" font-size="3" fill="#334155" text-anchor="middle">h</text><text x="21" y="52" font-size="3.5" fill="#58CC02" text-anchor="middle">Fixed hole</text><text x="21" y="57" font-size="3.5" fill="#58CC02" text-anchor="middle">Vary shaft</text><text x="59" y="52" font-size="3.5" fill="#3B8700" text-anchor="middle">Fixed shaft</text><text x="59" y="57" font-size="3.5" fill="#3B8700" text-anchor="middle">Vary hole</text><text x="40" y="70" font-size="3.5" fill="#6B7280" text-anchor="middle">Shaft-basis: drawn bar stock</text></svg>',
           explanation: 'The hole-basis system is most common because it is generally harder (more expensive) to adjust hole size than shaft size.',
+          distractorExplanations: {
+            0: 'This focuses on there/difference,, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on metric/shaft-basis, which is not the correct mechanism or principle for this problem.',
+            3: 'This "always" claim is too broad; shaft-basis produces the principle has important exceptions.',
+          },
           hint: 'Consider when it is cheaper to vary the hole rather than the shaft.',
         },
         {
@@ -242,6 +280,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">IT Grade vs Tolerance</text><line x1="12" y1="65" x2="68" y2="65" stroke="#3B8700" stroke-width="0.8"/><line x1="12" y1="65" x2="12" y2="15" stroke="#3B8700" stroke-width="0.8"/><rect x="16" y="62" width="5" height="3" rx="0.5" fill="#58CC02" opacity="0.4"/><rect x="23" y="59" width="5" height="6" rx="0.5" fill="#58CC02" opacity="0.5"/><rect x="30" y="54" width="5" height="11" rx="0.5" fill="#58CC02" opacity="0.6"/><rect x="37" y="47" width="5" height="18" rx="0.5" fill="#A5E86C" opacity="0.7"/><rect x="44" y="38" width="5" height="27" rx="0.5" fill="#A5E86C" opacity="0.8"/><rect x="51" y="28" width="5" height="37" rx="0.5" fill="#3B8700" opacity="0.4"/><rect x="58" y="18" width="5" height="47" rx="0.5" fill="#3B8700" opacity="0.5"/><text x="18" y="72" font-size="3" fill="#6B7280" text-anchor="middle">5</text><text x="25" y="72" font-size="3" fill="#6B7280" text-anchor="middle">7</text><text x="32" y="72" font-size="3" fill="#6B7280" text-anchor="middle">9</text><text x="39" y="72" font-size="3" fill="#6B7280" text-anchor="middle">11</text><text x="46" y="72" font-size="3" fill="#6B7280" text-anchor="middle">13</text><text x="53" y="72" font-size="3" fill="#6B7280" text-anchor="middle">15</text><text x="60" y="72" font-size="3" fill="#6B7280" text-anchor="middle">18</text><text x="40" y="78" font-size="3.5" fill="#334155" text-anchor="middle">Higher IT = looser</text></svg>',
           explanation: 'ISO tolerance grades range from IT01 (tightest, used for gauge blocks) through IT18 (loosest, rough castings/forgings).',
+          distractorExplanations: {
+            0: 'This focuses on indicate/tighter, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on refer/surface, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on grades/magnitude, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Consider the scale: IT01 for gauge blocks, IT16 for rough castings.',
         },
         {
@@ -251,6 +294,9 @@ export const unit9: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">IT7 vs Diameter</text><line x1="12" y1="65" x2="68" y2="65" stroke="#3B8700" stroke-width="0.8"/><line x1="12" y1="65" x2="12" y2="18" stroke="#3B8700" stroke-width="0.8"/><circle cx="20" cy="58" r="2" fill="#58CC02" opacity="0.7"/><circle cx="30" cy="52" r="2" fill="#58CC02" opacity="0.7"/><circle cx="40" cy="44" r="2" fill="#A5E86C" opacity="0.8"/><circle cx="50" cy="35" r="2" fill="#A5E86C" opacity="0.8"/><circle cx="60" cy="26" r="2" fill="#3B8700" opacity="0.6"/><path d="M20,58 Q30,52 40,44 Q50,35 60,26" stroke="#58CC02" stroke-width="1.2" fill="none"/><text x="40" y="76" font-size="3.5" fill="#334155" text-anchor="middle">Nominal diameter (mm)</text><text x="20" y="70" font-size="3" fill="#6B7280" text-anchor="middle">10</text><text x="40" y="70" font-size="3" fill="#6B7280" text-anchor="middle">50</text><text x="60" y="70" font-size="3" fill="#6B7280" text-anchor="middle">120</text></svg>',
           explanation: 'The tolerance value increases with nominal diameter. For example, IT7 tolerance for dia 6-10 mm is 0.015 mm, but for dia 100-120 mm it is 0.035 mm.',
+          distractorExplanations: {
+            0: 'The tolerance value increases with nominal diameter.',
+          },
           hint: 'Is it equally easy to hold +/-0.01 mm on a 5 mm part and a 500 mm part?',
         },
         {
@@ -266,6 +312,11 @@ export const unit9: Unit = {
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">H Hole Popularity</text><rect x="8" y="18" width="64" height="20" rx="2" fill="#58CC02" opacity="0.08" stroke="#58CC02" stroke-width="1"/><text x="40" y="30" font-size="4" fill="#58CC02" text-anchor="middle" font-weight="bold">H hole: lower dev = 0</text><text x="40" y="36" font-size="3.5" fill="#334155" text-anchor="middle">Standard reamers match H</text><rect x="14" y="46" width="12" height="8" rx="1" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="0.8"/><rect x="34" y="46" width="12" height="8" rx="1" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="0.8"/><rect x="54" y="46" width="12" height="8" rx="1" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="0.8"/><text x="20" y="52" font-size="3" fill="#334155" text-anchor="middle">H6</text><text x="40" y="52" font-size="3" fill="#334155" text-anchor="middle">H7</text><text x="60" y="52" font-size="3" fill="#334155" text-anchor="middle">H8</text><text x="40" y="68" font-size="3.5" fill="#6B7280" text-anchor="middle">Off-the-shelf tooling</text></svg>',
           explanation: 'Standard reamers, boring bars, and broaches are manufactured to produce H-type holes (zero lower deviation = hole at nominal minimum). Using H holes means off-the-shelf tooling can be used.',
+          distractorExplanations: {
+            0: 'This focuses on non-h/permitted, which is not the correct mechanism or principle for this problem.',
+            1: 'This "always" claim is too broad; h-type holes the principle has important exceptions.',
+            3: 'This is too restrictive; the principle applies more broadly than holes metric suggests.',
+          },
           hint: 'Consider tooling availability.',
         },
       ]
@@ -301,6 +352,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">H7/h6 Sliding Fit</text><circle cx="40" cy="40" r="18" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1.5"/><circle cx="40" cy="40" r="14" fill="#3B8700" opacity="0.1" stroke="#3B8700" stroke-width="1.5"/><line x1="54" y1="26" x2="62" y2="18" stroke="#A5E86C" stroke-width="0.8" opacity="0.5"/><text x="64" y="20" font-size="3.5" fill="#6B7280">tiny gap</text><g><animateTransform attributeName="transform" type="translate" values="0,0;0,-2;0,0" dur="1.5s" repeatCount="indefinite"/><circle cx="40" cy="40" r="14" fill="none" stroke="#3B8700" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/></g><text x="40" y="62" font-size="3.5" fill="#6B7280" text-anchor="middle">Hand-insertable, minimal play</text></svg>',
           explanation: 'H7/h6 is a precision sliding fit (also called a "push fit") that allows hand insertion with very little clearance.',
+          distractorExplanations: {
+            0: 'This focuses on h7/s6,/heavy, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on h11/c11,/extra-loose, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on h7/p6,/light, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'You want minimal play but hand-insertable.',
         },
         {
@@ -316,6 +372,11 @@ export const unit9: Unit = {
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Gear Hub on Keyed Shaft</text><circle cx="40" cy="42" r="22" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1.5"/><circle cx="40" cy="42" r="14" fill="#3B8700" opacity="0.1" stroke="#3B8700" stroke-width="1.5"/><rect x="36" y="28" width="8" height="6" rx="0.5" fill="#A5E86C" opacity="0.3" stroke="#3B8700" stroke-width="0.8"/><text x="40" y="32" font-size="3" fill="#334155" text-anchor="middle">key</text><text x="40" y="46" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">H7/k6</text><text x="40" y="74" font-size="3.5" fill="#6B7280" text-anchor="middle">Transition fit, accurate centering</text></svg>',
           explanation: 'H7/k6 is a locational transition fit ideal for components that need precise centering on a shaft but must be removable.',
+          distractorExplanations: {
+            0: 'This focuses on h7/d9,/loose, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on h7/s6,/heavy, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on h11/c11,/extra-loose, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Consider a fit that centers accurately but is still removable.',
         },
         {
@@ -331,6 +392,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="4" y="58" width="72" height="8" rx="3" fill="#58CC02" opacity="0.1"/> <rect x="4" y="58" width="72" height="8" rx="3" stroke="#3B8700" stroke-width="1.5" fill="none"/> <rect x="4" y="28" width="18" height="30" rx="4" fill="#58CC02" opacity="0.1"/> <rect x="4" y="28" width="18" height="30" rx="4" stroke="#3B8700" stroke-width="2" fill="none"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,22,44;360,22,44" dur="0.8s" repeatCount="indefinite"/> <circle cx="22" cy="44" r="12" fill="#58CC02" opacity="0.1"/> <circle cx="22" cy="44" r="12" stroke="#58CC02" stroke-width="2" fill="none"/> </g> <circle cx="22" cy="44" r="3" fill="#3B8700" opacity="0.3"/> <rect x="22" y="37" width="38" height="14" rx="1" fill="#58CC02" opacity="0.16"/> <rect x="22" y="37" width="38" height="14" rx="1" stroke="#3B8700" stroke-width="1.5" fill="none"/> <rect x="60" y="32" width="14" height="26" rx="4" fill="#58CC02" opacity="0.08"/> <rect x="60" y="32" width="14" height="26" rx="4" stroke="#3B8700" stroke-width="1.5" fill="none"/> </svg>',
           explanation: 'ISO tolerance grades reflect manufacturing process capability. Sand casting typically achieves IT11 to IT16, investment casting IT7 to IT9, die casting IT8 to IT10.',
+          distractorExplanations: {
+            0: 'This focuses on loose/surface, which is not the correct mechanism or principle for this problem.',
+            2: 'This incorrectly denies an effect that is relevant to tolerance grade and significant in this context.',
+            3: 'This focuses on modern/processes, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Consider what tolerance grades different manufacturing processes can achieve.',
         },
         {
@@ -361,6 +427,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">ASME Rule #1</text><rect x="10" y="16" width="60" height="20" rx="2" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/><circle cx="40" cy="26" r="7" fill="white" stroke="#3B8700" stroke-width="1.2"/><text x="40" y="28" font-size="3" fill="#334155" text-anchor="middle">dia 20</text><circle cx="40" cy="54" r="14" fill="none" stroke="#58CC02" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.5"/><text x="40" y="52" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Perfect form</text><text x="40" y="57" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">at MMC</text><text x="40" y="76" font-size="3.5" fill="#6B7280" text-anchor="middle">Envelope Principle</text></svg>',
           explanation: 'ASME Y14.5 Rule #1 (the Envelope Principle) states that the surface of a regular feature of size at MMC must not extend beyond the envelope of perfect form at MMC.',
+          distractorExplanations: {
+            0: 'This focuses on acceptable/two-point, which is not the correct mechanism or principle for this problem.',
+            2: 'This "always" claim is too broad; control requires the principle has important exceptions.',
+            3: 'This is too restrictive; the principle applies more broadly than applies angles suggests.',
+          },
           hint: 'ASME Rule #1 ties form control to the MMC size.',
         },
         {
@@ -370,6 +441,9 @@ export const unit9: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">ASME vs ISO Default</text><rect x="4" y="16" width="34" height="26" rx="2" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1"/><text x="21" y="24" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">ASME</text><text x="21" y="32" font-size="3" fill="#334155" text-anchor="middle">Rule #1 default</text><text x="21" y="38" font-size="3" fill="#334155" text-anchor="middle">Envelope ON</text><rect x="42" y="16" width="34" height="26" rx="2" fill="#3B8700" opacity="0.06" stroke="#3B8700" stroke-width="1"/><text x="59" y="24" font-size="3.5" fill="#3B8700" text-anchor="middle" font-weight="bold">ISO</text><text x="59" y="32" font-size="3" fill="#334155" text-anchor="middle">Independence</text><text x="59" y="38" font-size="3" fill="#334155" text-anchor="middle">Envelope OFF</text><text x="40" y="54" font-size="3.5" fill="#6B7280" text-anchor="middle">Key difference between standards</text></svg>',
           explanation: 'This is a key difference. ASME Y14.5 applies the Envelope Principle (Rule #1) by default. ISO uses the Independence Principle, where form and size are independent unless explicitly linked.',
+          distractorExplanations: {
+            0: 'This is a key difference.',
+          },
           hint: 'ASME and ISO have different default rules regarding form and size.',
         },
         {
@@ -385,6 +459,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Thermal Expansion</text><circle cx="26" cy="40" r="14" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1.5"/><circle cx="26" cy="40" r="8" fill="#3B8700" opacity="0.1" stroke="#3B8700" stroke-width="1.5"/><text x="26" y="42" font-size="3" fill="#334155" text-anchor="middle">20C</text><circle cx="58" cy="40" r="14" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1.5"/><circle cx="58" cy="40" r="10" fill="#EC4899" opacity="0.08" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="2,2"><animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite"/></circle><text x="58" y="42" font-size="3" fill="#EC4899" text-anchor="middle">Hot</text><text x="26" y="62" font-size="3.5" fill="#6B7280" text-anchor="middle">Fit OK</text><text x="58" y="62" font-size="3.5" fill="#EC4899" text-anchor="middle">Tighter!</text></svg>',
           explanation: 'Differential thermal expansion is critical for interference fits. If the shaft heats up more, it expands and the fit tightens.',
+          distractorExplanations: {
+            0: 'This focuses on nothing/changes,, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on loosens/parts, which is not the correct mechanism or principle for this problem.',
+            3: 'Temperature is not the primary factor in this problem; the correct analysis uses a different variable.',
+          },
           hint: 'If the shaft is much hotter than the housing, it expands more.',
         },
         {
@@ -394,6 +473,9 @@ export const unit9: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Cost vs Tolerance</text><line x1="12" y1="65" x2="68" y2="65" stroke="#3B8700" stroke-width="0.8"/><line x1="12" y1="65" x2="12" y2="15" stroke="#3B8700" stroke-width="0.8"/><path d="M16,62 Q28,60 38,50 Q48,35 56,18" stroke="#58CC02" stroke-width="2" fill="none"/><text x="40" y="76" font-size="3.5" fill="#334155" text-anchor="middle">Tighter tolerance</text><text x="8" y="40" font-size="3" fill="#334155" text-anchor="middle" transform="rotate(-90,8,40)">Cost</text><circle cx="50" cy="28" r="8" fill="none" stroke="#EC4899" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/><text x="50" y="30" font-size="3" fill="#EC4899" text-anchor="middle">avoid</text></svg>',
           explanation: 'Over-tolerancing dramatically increases manufacturing cost, inspection time, and scrap rate without improving product function.',
+          distractorExplanations: {
+            0: 'Over-tolerancing dramatically increases manufacturing cost, inspection time, and scrap rate without improving product function.',
+          },
           hint: 'What happens to cost and scrap when you make tolerances tighter than needed?',
         },
       ]
@@ -423,6 +505,9 @@ export const unit9: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Form = No Datums</text><rect x="8" y="16" width="64" height="14" rx="1" fill="#58CC02" opacity="0.04" stroke="#3B8700" stroke-width="1.5"/><line x1="22" y1="16" x2="22" y2="30" stroke="#3B8700" stroke-width="1"/><text x="36" y="25" font-size="4" fill="#334155" text-anchor="middle">0.05</text><text x="55" y="25" font-size="4" fill="#EC4899" text-anchor="middle">no datum</text><text x="40" y="46" font-size="3.5" fill="#6B7280" text-anchor="middle">Form tolerances are self-referencing</text><text x="40" y="56" font-size="3.5" fill="#6B7280" text-anchor="middle">Controls shape against itself</text><text x="40" y="66" font-size="3.5" fill="#58CC02" text-anchor="middle">Flatness, straightness,</text><text x="40" y="73" font-size="3.5" fill="#58CC02" text-anchor="middle">circularity, cylindricity</text></svg>',
           explanation: 'Form tolerances are self-referencing. They control the shape of a feature relative to itself, not to any external datum.',
+          distractorExplanations: {
+            0: 'Form tolerances are self-referencing.',
+          },
           hint: 'Form tolerances measure a feature against its own ideal shape.',
         },
         {
@@ -438,6 +523,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="7" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">5 GD&amp;T Categories</text><rect x="4" y="12" width="14" height="14" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="0.8"/><text x="11" y="21" font-size="3.5" fill="#334155" text-anchor="middle">Form</text><rect x="20" y="12" width="18" height="14" rx="1" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="0.8"/><text x="29" y="21" font-size="3.5" fill="#334155" text-anchor="middle">Orient.</text><rect x="40" y="12" width="16" height="14" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="0.8"/><text x="48" y="21" font-size="3.5" fill="#334155" text-anchor="middle">Locat.</text><rect x="58" y="12" width="18" height="14" rx="1" fill="#3B8700" opacity="0.15" stroke="#3B8700" stroke-width="0.8"/><text x="67" y="21" font-size="3" fill="#334155" text-anchor="middle">Profile</text><rect x="22" y="30" width="36" height="10" rx="1" fill="#A5E86C" opacity="0.1" stroke="#A5E86C" stroke-width="0.8"/><text x="40" y="37" font-size="3.5" fill="#334155" text-anchor="middle">Runout</text><text x="40" y="52" font-size="3" fill="#6B7280" text-anchor="middle">Form: flatness, straightness...</text><text x="40" y="58" font-size="3" fill="#6B7280" text-anchor="middle">Orient: perp, parallel, angular</text><text x="40" y="64" font-size="3" fill="#6B7280" text-anchor="middle">Location: position, concentricity</text><text x="40" y="70" font-size="3" fill="#6B7280" text-anchor="middle">Profile: line, surface</text><text x="40" y="76" font-size="3" fill="#6B7280" text-anchor="middle">Runout: circular, total</text></svg>',
           explanation: 'ASME Y14.5 defines five categories: Form, Orientation, Location, Profile, and Runout.',
+          distractorExplanations: {
+            0: 'This focuses on size,/position,, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on flatness,/roundness,, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on primary,/secondary,, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Think of the five groups that contain the 14 geometric tolerance symbols.',
         },
         {
@@ -470,6 +560,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Circularity vs Cylindricity</text><rect x="4" y="16" width="34" height="48" rx="2" fill="#58CC02" opacity="0.04" stroke="#58CC02" stroke-width="1"/><text x="21" y="24" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Circularity</text><ellipse cx="21" cy="42" rx="10" ry="4" fill="none" stroke="#58CC02" stroke-width="1.5"/><ellipse cx="21" cy="42" rx="8" ry="3" fill="none" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="2,2"/><text x="21" y="56" font-size="3" fill="#6B7280" text-anchor="middle">2D slice</text><rect x="42" y="16" width="34" height="48" rx="2" fill="#3B8700" opacity="0.04" stroke="#3B8700" stroke-width="1"/><text x="59" y="24" font-size="3.5" fill="#3B8700" text-anchor="middle" font-weight="bold">Cylindricity</text><ellipse cx="59" cy="32" rx="10" ry="4" fill="none" stroke="#3B8700" stroke-width="1"/><ellipse cx="59" cy="50" rx="10" ry="4" fill="none" stroke="#3B8700" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/><line x1="49" y1="32" x2="49" y2="50" stroke="#3B8700" stroke-width="1"/><line x1="69" y1="32" x2="69" y2="50" stroke="#3B8700" stroke-width="1"/><text x="59" y="56" font-size="3" fill="#6B7280" text-anchor="middle">Full 3D</text></svg>',
           explanation: 'Circularity (roundness) applies to individual cross-sections. Cylindricity controls the full 3D surface. Cylindricity is more comprehensive.',
+          distractorExplanations: {
+            0: 'This focuses on tolerance/applied, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on applies/internal, which is not the correct mechanism or principle for this problem.',
+            3: 'This "always" claim is too broad; cylindricity tighter the principle has important exceptions.',
+          },
           hint: 'One is a 2D slice control, the other is a full 3D surface control.',
         },
         {
@@ -494,6 +589,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Flatness on Cylinder?</text><rect x="20" y="20" width="40" height="30" rx="10" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/><ellipse cx="40" cy="20" rx="20" ry="6" fill="#58CC02" opacity="0.08" stroke="#3B8700" stroke-width="1"/><ellipse cx="40" cy="50" rx="20" ry="6" fill="none" stroke="#3B8700" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/><line x1="50" y1="56" x2="58" y2="64" stroke="#EC4899" stroke-width="1"/><text x="60" y="68" font-size="4" fill="#EC4899" font-weight="bold">X wrong</text><text x="40" y="78" font-size="3.5" fill="#6B7280" text-anchor="middle">Use cylindricity instead</text></svg>',
           explanation: 'Flatness is a form tolerance that applies only to nominally flat (planar) surfaces. For cylindrical bores, use cylindricity.',
+          distractorExplanations: {
+            0: 'This focuses on nothing,/apply, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on should/straightness, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on issue/needs, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Consider which geometric surfaces each form tolerance applies to.',
         },
         {
@@ -509,6 +609,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="6" y="12" width="68" height="14" rx="1" fill="#58CC02" opacity="0.04" stroke="#3B8700" stroke-width="1.5"/> <line x1="22" y1="12" x2="22" y2="26" stroke="#3B8700" stroke-width="1.2"/> <line x1="40" y1="12" x2="40" y2="26" stroke="#3B8700" stroke-width="1.2"/> <line x1="52" y1="12" x2="52" y2="26" stroke="#3B8700" stroke-width="1.2"/> <line x1="60" y1="12" x2="60" y2="26" stroke="#3B8700" stroke-width="1.2"/> <circle cx="14" cy="19" r="4" stroke="#58CC02" stroke-width="1.2" fill="none"/> <line x1="14" y1="15" x2="14" y2="23" stroke="#58CC02" stroke-width="1"/> <line x1="10" y1="19" x2="18" y2="19" stroke="#58CC02" stroke-width="1"/> <text x="24" y="22" font-size="5" fill="#334155">dia 0.25</text> <text x="42" y="22" font-size="5" fill="#334155" font-weight="bold">M</text> <circle cx="46" cy="19" r="4" stroke="#334155" stroke-width="0.8" fill="none"/> <text x="54" y="22" font-size="6" fill="#334155" font-weight="bold">A</text> <text x="63" y="22" font-size="6" fill="#334155" font-weight="bold">B</text> <text x="14" y="40" font-size="4" fill="#6B7280" text-anchor="middle">Geo.</text> <text x="14" y="45" font-size="4" fill="#6B7280" text-anchor="middle">symbol</text> <text x="31" y="40" font-size="4" fill="#6B7280" text-anchor="middle">Tolerance</text> <text x="46" y="40" font-size="4" fill="#6B7280" text-anchor="middle">Mod.</text> <text x="46" y="45" font-size="4" fill="#6B7280" text-anchor="middle">(MMC)</text> <text x="60" y="40" font-size="4" fill="#6B7280" text-anchor="middle">Datum</text> <text x="60" y="45" font-size="4" fill="#6B7280" text-anchor="middle">refs</text> <rect x="14" y="54" width="52" height="16" rx="2" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1"/> <circle cx="40" cy="62" r="4" fill="white" stroke="#3B8700" stroke-width="1"/> </svg>',
           explanation: 'The functional requirement for a bolt pattern is that the bolts pass through the holes. At MMC (smallest holes, largest bolts) the fit is tightest. Bonus tolerance as features depart from MMC matches the physics.',
+          distractorExplanations: {
+            0: 'This focuses on simply/default,, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on actually/preferred, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than applies shafts suggests.',
+          },
           hint: 'Consider when assembly fit is tightest and when extra tolerance helps.',
         },
         {
@@ -524,6 +629,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Bonus Tolerance at MMC</text><line x1="10" y1="65" x2="70" y2="65" stroke="#3B8700" stroke-width="0.8"/><line x1="10" y1="65" x2="10" y2="20" stroke="#3B8700" stroke-width="0.8"/><rect x="16" y="52" width="10" height="13" rx="0.5" fill="#58CC02" opacity="0.3" stroke="#58CC02" stroke-width="0.8"/><text x="21" y="60" font-size="3" fill="#334155" text-anchor="middle">0.25</text><rect x="44" y="32" width="10" height="33" rx="0.5" fill="#A5E86C" opacity="0.3" stroke="#A5E86C" stroke-width="0.8"/><rect x="44" y="52" width="10" height="13" rx="0.5" fill="#58CC02" opacity="0.3" stroke="#58CC02" stroke-width="0.8"/><text x="49" y="44" font-size="2.5" fill="#334155" text-anchor="middle">+0.3</text><text x="21" y="72" font-size="3" fill="#6B7280" text-anchor="middle">MMC</text><text x="49" y="72" font-size="3" fill="#6B7280" text-anchor="middle">10.3</text></svg>',
           explanation: 'With the MMC modifier, bonus tolerance = actual size minus MMC size. The hole MMC is dia 10.0 (smallest hole). At dia 10.3: bonus = 10.3 minus 10.0 = 0.30. Total = 0.25 + 0.30 = 0.55.',
+          distractorExplanations: {
+            0: 'This focuses on 0.25,/fixed, which is not the correct mechanism or principle for this problem.',
+            2: 'This is too restrictive; the principle applies more broadly than bonus tolerance suggests.',
+            3: 'This focuses on 0.50,/twice, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Bonus = departure from MMC.',
         },
       ]
@@ -559,6 +669,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="7" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Orientation Controls Form</text><line x1="10" y1="55" x2="70" y2="55" stroke="#3B8700" stroke-width="2"/><text x="68" y="52" font-size="3.5" fill="#334155">A</text><rect x="15" y="35" width="50" height="0.5" fill="#A5E86C" opacity="0.4"/><rect x="15" y="55" width="50" height="0.5" fill="#A5E86C" opacity="0.4"/><text x="68" y="38" font-size="3" fill="#334155">0.02</text><path d="M18,45 Q28,38 40,46 Q52,50 62,42" stroke="#58CC02" stroke-width="1.5" fill="none"/><text x="40" y="28" font-size="3.5" fill="#58CC02" text-anchor="middle">Parallelism 0.02</text><text x="40" y="68" font-size="3.5" fill="#6B7280" text-anchor="middle">Form inherently controlled</text></svg>',
           explanation: 'Orientation tolerances inherently refine form. If a surface must lie between two parallel planes 0.02 apart, it cannot have flatness error greater than 0.02.',
+          distractorExplanations: {
+            0: 'This focuses on parallelism/flatness, which is not the correct mechanism or principle for this problem.',
+            2: 'This is too restrictive; the principle applies more broadly than separate flatness suggests.',
+            3: 'This incorrectly denies an effect that is relevant to parallelism apply and significant in this context.',
+          },
           hint: 'If a surface is constrained between two planes 0.02 apart, can it be less flat than 0.02?',
         },
         {
@@ -574,6 +689,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Perpendicularity Zone</text><line x1="10" y1="60" x2="70" y2="60" stroke="#3B8700" stroke-width="2"/><text x="68" y="58" font-size="3.5" fill="#334155">A</text><polygon points="64,60 62,66 66,66" fill="#3B8700" opacity="0.4"/><rect x="30" y="20" width="20" height="40" rx="1" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/><rect x="32" y="20" width="0.5" height="40" fill="#A5E86C" opacity="0.3"/><rect x="47.5" y="20" width="0.5" height="40" fill="#A5E86C" opacity="0.3"/><text x="40" y="42" font-size="3.5" fill="#334155" text-anchor="middle">0.05</text><text x="40" y="74" font-size="3.5" fill="#6B7280" text-anchor="middle">Two planes 0.05 apart at 90 deg</text></svg>',
           explanation: 'When perpendicularity is applied to a surface (not preceded by a diameter symbol), the tolerance zone is two parallel planes 0.05 mm apart, oriented exactly 90 degrees to datum A.',
+          distractorExplanations: {
+            0: 'This focuses on cylinder/around, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on single/plane, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on square/around, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'For a surface control, the zone is two parallel planes.',
         },
         {
@@ -582,6 +702,9 @@ export const unit9: Unit = {
           question: 'Position tolerance in ASME Y14.5 always requires at least one datum reference in the feature control frame.',
           correctAnswer: true,
           explanation: 'Position tolerance defines where a feature is located relative to other features. This inherently requires a reference frame (datums).',
+          distractorExplanations: {
+            1: 'Position tolerance defines where a feature is located relative to other features.',
+          },
           hint: 'Position means "where relative to something."',
         },
         {
@@ -613,6 +736,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Virtual Condition</text><circle cx="40" cy="40" r="18" fill="none" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.5"/><circle cx="40" cy="40" r="15" fill="#3B8700" opacity="0.1" stroke="#3B8700" stroke-width="1.5"/><text x="40" y="38" font-size="3.5" fill="#334155" text-anchor="middle">MMC=20.1</text><text x="40" y="44" font-size="3.5" fill="#334155" text-anchor="middle">+perp 0.05</text><text x="40" y="62" font-size="4" fill="#EC4899" text-anchor="middle" font-weight="bold">VC = 20.15</text><text x="40" y="72" font-size="3.5" fill="#6B7280" text-anchor="middle">Worst-case boundary</text></svg>',
           explanation: 'Virtual condition is the worst-case boundary. For an external feature at MMC: VC = MMC size + geometric tolerance = 20.1 + 0.05 = 20.15.',
+          distractorExplanations: {
+            0: 'This focuses on 20.00,/nominal, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on 20.10,, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on 20.05,/nominal, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The worst-case boundary for an external feature = largest size + geometric tolerance.',
         },
         {
@@ -628,6 +756,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">LMC - Min Wall</text><rect x="10" y="20" width="60" height="36" rx="2" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/><circle cx="40" cy="38" r="12" fill="white" stroke="#3B8700" stroke-width="1.5"/><line x1="52" y1="38" x2="70" y2="38" stroke="#A5E86C" stroke-width="1.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/></line><text x="64" y="36" font-size="3" fill="#334155" text-anchor="middle">min</text><text x="64" y="42" font-size="3" fill="#334155" text-anchor="middle">wall</text><text x="40" y="40" font-size="3.5" fill="#334155" text-anchor="middle">LMC hole</text><text x="40" y="68" font-size="3.5" fill="#6B7280" text-anchor="middle">LMC protects minimum material</text></svg>',
           explanation: 'LMC is used when the critical concern is minimum wall thickness or minimum remaining material, for example a hole close to an edge.',
+          distractorExplanations: {
+            0: 'This focuses on maximizing/assembly, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on reducing/manufacturing, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on feature/shaft, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Consider when having less material is the dangerous condition.',
         },
         {
@@ -651,6 +784,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: 'This is valid and common. The parallelism tolerance (0.05) defines the overall orientation zone. The flatness tolerance (0.01) refines the form within that zone, requiring the surface to be flatter than the parallelism alone would demand.',
+          distractorExplanations: {
+            1: 'This "always" claim is too broad; flatness larger the principle has important exceptions.',
+            2: 'This incorrectly claims impossibility; the described outcome is achievable under proper conditions.',
+            3: 'This focuses on overrides/parallelism,, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'A form tolerance tighter than the orientation tolerance adds extra control.',
         },
       ]
@@ -686,6 +824,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="7" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Circular vs Total Runout</text><rect x="4" y="14" width="34" height="50" rx="2" fill="#58CC02" opacity="0.04" stroke="#58CC02" stroke-width="1"/><text x="21" y="22" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Circular</text><line x1="10" y1="44" x2="32" y2="44" stroke="#3B8700" stroke-width="1.5"/><circle cx="21" cy="44" r="0.5" fill="#3B8700"/><text x="21" y="38" font-size="3" fill="#6B7280" text-anchor="middle">one slice</text><text x="21" y="56" font-size="3" fill="#6B7280" text-anchor="middle">cross-section</text><rect x="42" y="14" width="34" height="50" rx="2" fill="#3B8700" opacity="0.04" stroke="#3B8700" stroke-width="1"/><text x="59" y="22" font-size="3.5" fill="#3B8700" text-anchor="middle" font-weight="bold">Total</text><line x1="48" y1="36" x2="70" y2="36" stroke="#3B8700" stroke-width="0.8"/><line x1="48" y1="40" x2="70" y2="40" stroke="#3B8700" stroke-width="0.8"/><line x1="48" y1="44" x2="70" y2="44" stroke="#3B8700" stroke-width="0.8"/><line x1="48" y1="48" x2="70" y2="48" stroke="#3B8700" stroke-width="0.8"/><line x1="48" y1="52" x2="70" y2="52" stroke="#3B8700" stroke-width="0.8"/><text x="59" y="58" font-size="3" fill="#6B7280" text-anchor="middle">entire surface</text></svg>',
           explanation: 'Circular runout (single arrow symbol) controls the full indicator movement at each individual cross-section. Total runout (double arrow) controls the entire surface simultaneously.',
+          distractorExplanations: {
+            0: 'This focuses on applies/round, which is not the correct mechanism or principle for this problem.',
+            2: 'This "always" claim is too broad; total runout the principle has important exceptions.',
+            3: 'This focuses on measured/different, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'One checks cross-section by cross-section; the other checks everything at once.',
         },
         {
@@ -700,6 +843,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Profile of a surface is the most versatile GD&T tolerance. It controls form, orientation, size, and location simultaneously relative to datums.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than profile tolerance suggests.',
+            2: 'This "always" claim is too broad; profile preferred the principle has important exceptions.',
+            3: 'This is too restrictive; the principle applies more broadly than surface suggests.',
+          },
           hint: 'Consider complex surfaces where multiple geometric controls would otherwise be needed.',
         },
         {
@@ -708,6 +856,9 @@ export const unit9: Unit = {
           question: 'Profile of a line and profile of a surface are functionally identical.',
           correctAnswer: false,
           explanation: 'Profile of a line controls at individual cross-sections independently (2D slices). Profile of a surface controls the entire 3D surface at once. Similar to circularity vs. cylindricity.',
+          distractorExplanations: {
+            0: 'Profile of a line controls at individual cross-sections independently (2D slices).',
+          },
           hint: 'Similar to circularity vs. cylindricity: one is 2D, one is 3D.',
         },
         {
@@ -723,6 +874,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="7" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Composite Position</text><rect x="8" y="14" width="64" height="12" rx="1" fill="#58CC02" opacity="0.04" stroke="#3B8700" stroke-width="1.2"/><circle cx="15" cy="20" r="3.5" stroke="#58CC02" stroke-width="0.8" fill="none"/><line x1="15" y1="17" x2="15" y2="23" stroke="#58CC02" stroke-width="0.7"/><line x1="12" y1="20" x2="18" y2="20" stroke="#58CC02" stroke-width="0.7"/><text x="30" y="22" font-size="3.5" fill="#334155">0.5</text><text x="48" y="22" font-size="4" fill="#334155" font-weight="bold">A B C</text><rect x="8" y="26" width="64" height="12" rx="1" fill="#A5E86C" opacity="0.04" stroke="#3B8700" stroke-width="1.2"/><circle cx="15" cy="32" r="3.5" stroke="#58CC02" stroke-width="0.8" fill="none"/><line x1="15" y1="29" x2="15" y2="35" stroke="#58CC02" stroke-width="0.7"/><line x1="12" y1="32" x2="18" y2="32" stroke="#58CC02" stroke-width="0.7"/><text x="30" y="34" font-size="3.5" fill="#334155">0.15</text><text x="48" y="34" font-size="4" fill="#334155" font-weight="bold">A</text><text x="40" y="50" font-size="3.5" fill="#58CC02" text-anchor="middle">Upper: pattern location (PLTZF)</text><text x="40" y="58" font-size="3.5" fill="#A5E86C" text-anchor="middle">Lower: feature-to-feature (FRTZF)</text></svg>',
           explanation: 'Composite position has two levels: the upper segment (PLTZF) locates the entire pattern relative to datums. The lower segment (FRTZF) controls feature-to-feature spacing within the pattern with a tighter tolerance.',
+          distractorExplanations: {
+            0: 'This focuses on upper/segment, which is not the correct mechanism or principle for this problem.',
+            2: 'This is too restrictive; the principle applies more broadly than lower segment suggests.',
+            3: 'This focuses on lower/segment, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Two levels: one for where the whole pattern sits, one for how the holes relate to each other.',
         },
         {
@@ -737,6 +893,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Concentricity requires establishing the derived median line, which requires many measurement points and complex calculations. Position at RFS is simpler and almost always preferred.',
+          distractorExplanations: {
+            0: 'This focuses on produce/identical, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on accurate, which is not the correct mechanism or principle for this problem.',
+            3: 'This incorrectly claims impossibility; the described outcome is achievable under proper conditions.',
+          },
           hint: 'One requires median-point analysis (expensive); the other uses axis-based measurement.',
         },
         {
@@ -758,6 +919,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: 'A projected tolerance zone extends from the feature surface into the mating part space for a specified height. It controls where the bolt (not just the hole) ends up.',
+          distractorExplanations: {
+            1: 'This is too restrictive; the principle applies more broadly than tolerance applied suggests.',
+            2: 'This focuses on projected/datum, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on enlarged/tolerance, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What happens when a bolt in a tilted tapped hole extends into the mating part?',
         },
         {
@@ -772,6 +938,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'This is one of the most common GD&T problems. If the CMM datum setup does not match how the part actually sits in the assembly, the measurement results are misleading.',
+          distractorExplanations: {
+            0: 'This focuses on parts/defective,, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on position/tolerance, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on measuring/metric, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If inspection says "pass" but reality says "fail," the measurement setup may not match assembly.',
         },
         {
@@ -786,6 +957,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'With zero positional tolerance at MMC, the feature has no positional tolerance at its MMC size. As it departs from MMC, all geometric tolerance comes from the bonus. This can increase yield by making tolerance proportional to material condition.',
+          distractorExplanations: {
+            0: 'This focuses on means/applied, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on feature/exactly, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on valid/concept, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If the geometric tolerance is zero at MMC, where does all the tolerance come from?',
         },
         {
@@ -794,6 +970,9 @@ export const unit9: Unit = {
           question: 'Straightness applied to the axis of a cylindrical feature allows the feature to violate Rule #1.',
           correctAnswer: true,
           explanation: 'This is one of the important exceptions to Rule #1. Axis straightness with a diameter symbol creates a cylindrical tolerance zone for the axis, allowing the part to bow beyond the MMC envelope.',
+          distractorExplanations: {
+            1: 'This is one of the important exceptions to Rule #1.',
+          },
           hint: 'Axis straightness with a diameter creates a virtual condition larger than MMC.',
         },
       ]
@@ -823,6 +1002,9 @@ export const unit9: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Datum Feature vs Datum</text><rect x="6" y="18" width="30" height="28" rx="2" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1"/><text x="21" y="26" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Feature</text><path d="M10,38 Q15,34 21,36 Q27,40 32,35" stroke="#3B8700" stroke-width="1.5" fill="none"/><text x="21" y="44" font-size="3" fill="#6B7280" text-anchor="middle">Real, imperfect</text><rect x="44" y="18" width="30" height="28" rx="2" fill="#3B8700" opacity="0.06" stroke="#3B8700" stroke-width="1"/><text x="59" y="26" font-size="3.5" fill="#3B8700" text-anchor="middle" font-weight="bold">Datum</text><line x1="48" y1="36" x2="70" y2="36" stroke="#3B8700" stroke-width="1.5"/><text x="59" y="44" font-size="3" fill="#6B7280" text-anchor="middle">Theoretical, perfect</text><text x="40" y="60" font-size="3.5" fill="#6B7280" text-anchor="middle">Feature = physical surface</text><text x="40" y="68" font-size="3.5" fill="#6B7280" text-anchor="middle">Datum = derived ideal geometry</text></svg>',
           explanation: 'A datum feature is the actual physical feature on the part (e.g., a machined surface). A datum is the theoretically perfect geometric element (plane, axis, center point) derived from it.',
+          distractorExplanations: {
+            0: 'A datum feature is the actual physical feature on the part (e.g., a machined surface).',
+          },
           hint: 'One is the real, imperfect feature on the part. The other is the theoretical, perfect geometry.',
         },
         {
@@ -853,6 +1035,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: 'A primary datum plane constrains 3 DOF using a minimum of 3 contact points: 1 translation (normal to the surface) and 2 rotations (tilting in two directions).',
+          distractorExplanations: {
+            0: '1 is one-third of the correct value, from using an incorrect formula or coefficient.',
+            1: 'This value results from an incorrect approach; DOF, the two translations within the plane.',
+            3: '6 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+          },
           hint: 'Place a block on a table. It cannot move down or tilt, but it can still slide and rotate in the plane.',
         },
         {
@@ -868,6 +1055,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Datum Precedence 3-2-1</text><rect x="10" y="55" width="60" height="6" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.5"/><text x="40" y="60" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">A - Primary (3 DOF)</text><rect x="10" y="25" width="6" height="30" rx="1" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="1.2"/><text x="13" y="42" font-size="3" fill="#A5E86C" text-anchor="middle" transform="rotate(-90,13,42)">B (2 DOF)</text><rect x="28" y="25" width="30" height="6" rx="1" fill="#3B8700" opacity="0.1" stroke="#3B8700" stroke-width="1"/><text x="43" y="30" font-size="3" fill="#3B8700" text-anchor="middle">C (1 DOF)</text><text x="40" y="72" font-size="3.5" fill="#6B7280" text-anchor="middle">Order matters: A first, then B, C</text></svg>',
           explanation: 'The primary datum constrains 3 DOF and is contacted first. The secondary constrains 2 more DOF, and the tertiary constrains the last 1.',
+          distractorExplanations: {
+            0: 'This incorrectly denies an effect that is relevant to matter datum and significant in this context.',
+            2: 'This is too restrictive; the principle applies more broadly than order matters suggests.',
+            3: 'This "always" claim is too broad; primary datum the principle has important exceptions.',
+          },
           hint: 'Consider what changes physically when a part contacts each datum in order.',
         },
         {
@@ -891,6 +1083,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Datum selection should follow the functional principle: datums should represent the surfaces that locate and constrain the part in its assembly.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; select smallest the principle has important exceptions.',
+            2: 'This "always" claim is too broad; three mutually the principle has important exceptions.',
+            3: 'This focuses on features/tightest, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Datums should mirror how the part is located in its real-world use.',
         },
         {
@@ -899,6 +1096,9 @@ export const unit9: Unit = {
           question: 'The order in which datums appear in the feature control frame (left to right) defines their precedence.',
           correctAnswer: true,
           explanation: 'In the feature control frame, datum references are read left to right with decreasing precedence. The first datum compartment (leftmost) is primary.',
+          distractorExplanations: {
+            1: 'In the feature control frame, datum references are read left to right with decreasing precedence.',
+          },
           hint: 'The feature control frame reads left to right: primary, secondary, tertiary.',
         },
         {
@@ -922,6 +1122,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Datum simulators are the physical embodiment of the theoretical datums. A surface plate simulates a datum plane. An expanding mandrel simulates a datum axis.',
+          distractorExplanations: {
+            0: 'This focuses on computer/program, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on software/designing, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on alternate/datum, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'How does a surface plate establish a datum plane in practice?',
         },
       ]
@@ -957,6 +1162,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Datum Targets</text><line x1="10" y1="50" x2="70" y2="50" stroke="#3B8700" stroke-width="1.5"/><path d="M20,50 Q30,44 40,50 Q50,44 60,50" stroke="#EC4899" stroke-width="1.5" fill="none"/><g><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/><text x="25" y="58" font-size="6" fill="#58CC02" text-anchor="middle">+</text><text x="40" y="58" font-size="6" fill="#58CC02" text-anchor="middle">+</text><text x="55" y="58" font-size="6" fill="#58CC02" text-anchor="middle">+</text></g><text x="25" y="66" font-size="3" fill="#334155" text-anchor="middle">A1</text><text x="40" y="66" font-size="3" fill="#334155" text-anchor="middle">A2</text><text x="55" y="66" font-size="3" fill="#334155" text-anchor="middle">A3</text><text x="40" y="76" font-size="3.5" fill="#6B7280" text-anchor="middle">Specific contact points on rough surface</text></svg>',
           explanation: 'Datum targets specify discrete contact locations. They are essential for cast, forged, or sheet metal parts where the entire surface is rough or warped.',
+          distractorExplanations: {
+            0: 'This focuses on granite/enough, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on needs/ground, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on apply/flatness, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If the whole surface cannot make reliable contact, how do you establish a repeatable datum?',
         },
         {
@@ -980,6 +1190,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'When a cylindrical bore is the secondary datum (after a planar primary datum constrains 3 DOF), the bore constrains 2 additional DOF: two translations perpendicular to the bore axis.',
+          distractorExplanations: {
+            0: 'This value results from an incorrect approach; DOF (one translation plus two rotations).',
+            2: '1 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            3: '4 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+          },
           hint: 'The primary plane already constrains 3 DOF. What does the bore add?',
         },
         {
@@ -994,6 +1209,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'When a datum feature of size is referenced at MMC, the datum simulator is fixed at the datum\'s virtual condition boundary. When the actual bore is larger than VC, the part can shift on the fixed pin.',
+          distractorExplanations: {
+            0: 'This focuses on established, which is not the correct mechanism or principle for this problem.',
+            2: 'This is too restrictive; the principle applies more broadly than tolerance applies suggests.',
+            3: 'This focuses on produced/exactly, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If the datum bore is bigger than the fixed simulator pin, what happens?',
         },
         {
@@ -1024,6 +1244,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'When two or more features together establish a single datum, they are designated as a common datum using the same letter (A-A notation).',
+          distractorExplanations: {
+            0: 'This focuses on different/letters, which is not the correct mechanism or principle for this problem.',
+            2: 'This is too restrictive; the principle applies more broadly than datum ignore suggests.',
+            3: 'This focuses on target/independent, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If two bores share the same axis, can they be combined into one datum?',
         },
         {
@@ -1038,6 +1263,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'At RFS, the datum simulator is variable-size (e.g., expanding mandrel) that conforms to the actual bore, producing a unique datum axis with no play. At MMC, the simulator is fixed, allowing datum shift.',
+          distractorExplanations: {
+            0: 'This focuses on there/difference, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on gives/larger, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on requires/different, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Does the datum pin expand to fit the hole (RFS) or stay fixed (MMC)?',
         },
         {
@@ -1046,6 +1276,9 @@ export const unit9: Unit = {
           question: 'A datum feature with a flatness tolerance of 0.1 mm establishes a datum plane that also has 0.1 mm of form error.',
           correctAnswer: false,
           explanation: 'The datum feature (the real surface) may have up to 0.1 mm of flatness error. But the datum (the theoretical plane) derived from it is always a perfect, infinite plane.',
+          distractorExplanations: {
+            0: 'The datum feature (the real surface) may have up to 0.1 mm of flatness error.',
+          },
           hint: 'Is the datum the real surface or the theoretical plane derived from it?',
         },
         {
@@ -1054,6 +1287,9 @@ export const unit9: Unit = {
           question: 'When a feature control frame references only one datum, the measurement is fully constrained in all 6 degrees of freedom.',
           correctAnswer: false,
           explanation: 'A single planar datum constrains only 3 DOF. The remaining 3 DOF are unconstrained. This is sometimes sufficient (e.g., for flatness or perpendicularity).',
+          distractorExplanations: {
+            0: 'A single planar datum constrains only 3 DOF.',
+          },
           hint: 'If datum A constrains 3 DOF, what about the other 3?',
         },
       ]
@@ -1088,6 +1324,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The manufacturing fixture should replicate the datum reference frame as closely as possible. A mismatch means parts are made to one coordinate system and measured to another.',
+          distractorExplanations: {
+            0: 'This focuses on machinist/should, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on drawing/datums, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on inspector/should, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If the part is made using one coordinate system but inspected using another, what happens?',
         },
         {
@@ -1102,6 +1343,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'For a circular bolt pattern on a flange: A = face (sits on mating surface), B = bore (centers the part), C = one bolt hole (clocks the rotational orientation).',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than flange suggests.',
+            2: 'This focuses on holes/serve, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on outer/diameter, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The flange sits on a face, centers on a bore, and clocks with a hole.',
         },
         {
@@ -1125,6 +1371,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Conical Datum</text><path d="M30,58 L40,18 L50,58" stroke="#3B8700" stroke-width="1.5" fill="#58CC02" fill-opacity="0.06"/><line x1="40" y1="14" x2="40" y2="62" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.3"/><circle cx="40" cy="58" r="1.5" fill="#3B8700"/><text x="48" y="42" font-size="3.5" fill="#3B8700">axis</text><text x="48" y="60" font-size="3.5" fill="#3B8700">point</text><text x="40" y="72" font-size="3.5" fill="#6B7280" text-anchor="middle">Cone = axis + point (5 DOF)</text></svg>',
           explanation: 'A conical datum feature is unique because it simultaneously establishes a datum axis and a datum point. It constrains 5 DOF, leaving only rotation about the axis.',
+          distractorExplanations: {
+            0: 'This incorrectly claims impossibility; the described outcome is achievable under proper conditions.',
+            2: 'This is too restrictive; the principle applies more broadly than establishes datum suggests.',
+            3: 'This focuses on perpendicular/planes, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'A cone has both an axis and a specific axial position (the apex). That is two datums in one.',
         },
         {
@@ -1133,6 +1384,9 @@ export const unit9: Unit = {
           question: 'Datum features should always have tighter tolerances than the features they control.',
           correctAnswer: false,
           explanation: 'While datum features should be repeatable and stable, there is no absolute rule requiring them to have tighter tolerances. Repeatability matters most.',
+          distractorExplanations: {
+            0: 'While datum features should be repeatable and stable, there is no absolute rule requiring them to have tighter tolerances.',
+          },
           hint: 'Are datum feature tolerances dictated by the features they control?',
         },
         {
@@ -1154,6 +1408,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The simultaneous requirement means feature control frames with the same datum references and material condition modifiers are evaluated as one combined pattern.',
+          distractorExplanations: {
+            0: 'This focuses on datums/manufactured, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on three/datums, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on datum/features, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If two hole patterns reference the same datums at MMC, are they linked?',
         },
         {
@@ -1168,6 +1427,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'When a full-surface primary datum has significant form error and no datum targets are specified, the part can rock on the datum simulator, producing non-repeatable measurements.',
+          distractorExplanations: {
+            0: 'This focuses on datum/plane, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on software/automatically, which is not the correct mechanism or principle for this problem.',
+            3: 'This incorrectly denies an effect that is relevant to datum feature and significant in this context.',
+          },
           hint: 'If the part rocks on the surface plate, does it sit the same way every time?',
         },
         {
@@ -1182,6 +1446,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'ASME Y14.5 allows patterns of features to serve as datum features. The datum is established from the best-fit alignment of all the features in the pattern.',
+          distractorExplanations: {
+            0: 'This focuses on arbitrarily/selected, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on establishes/separate, which is not the correct mechanism or principle for this problem.',
+            3: 'This incorrectly claims impossibility; the described outcome is achievable under proper conditions.',
+          },
           hint: 'If no single feature is sufficient, can a group of features work together?',
         },
         {
@@ -1196,6 +1465,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Flexible parts require special datum treatment per ASME Y14.5. The drawing should specify whether the part is inspected in the free state or restrained state, with datum targets and clamps replicating assembly.',
+          distractorExplanations: {
+            0: 'This focuses on standard/full-surface, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on sheet/metal, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than datum point suggests.',
+          },
           hint: 'If the part changes shape depending on how you hold it, how do you get consistent measurements?',
         },
       ]
@@ -1224,6 +1498,9 @@ export const unit9: Unit = {
           question: 'In a 1D tolerance chain, if a dimension contributes positively to the gap, it is called an "increasing" contributor.',
           correctAnswer: true,
           explanation: 'In 1D chain analysis, each dimension is classified as either an "increasing" contributor (gap increases as dimension increases) or a "decreasing" contributor.',
+          distractorExplanations: {
+            1: 'In 1D chain analysis, each dimension is classified as either an .',
+          },
           hint: 'Consider the direction each dimension pushes the gap.',
         },
         {
@@ -1239,6 +1516,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <text x="40" y="8" font-size="5" fill="#334155" text-anchor="middle" font-weight="bold">3-Part Tolerance Stack-Up</text> <rect x="4" y="22" width="4" height="30" rx="1" fill="#3B8700" opacity="0.3"/> <rect x="8" y="24" width="18" height="26" rx="1" fill="#58CC02" opacity="0.12" stroke="#58CC02" stroke-width="1.2"/> <text x="17" y="40" font-size="5" fill="#334155" text-anchor="middle">A</text> <rect x="28" y="24" width="18" height="26" rx="1" fill="#A5E86C" opacity="0.12" stroke="#3B8700" stroke-width="1.2"/> <text x="37" y="40" font-size="5" fill="#334155" text-anchor="middle">B</text> <rect x="48" y="24" width="18" height="26" rx="1" fill="#58CC02" opacity="0.12" stroke="#58CC02" stroke-width="1.2"/> <text x="57" y="40" font-size="5" fill="#334155" text-anchor="middle">C</text> <rect x="68" y="22" width="4" height="30" rx="1" fill="#3B8700" opacity="0.3"/> <text x="67" y="20" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Gap</text> <text x="40" y="78" font-size="4" fill="#334155" text-anchor="middle">Total = 60 +0.5 (worst-case)</text> </svg>',
           explanation: 'Worst-case stack-up simply adds all tolerances: total = +/-(0.1 + 0.1 + 0.1 + 0.1 + 0.1) = +/-0.50 mm.',
+          distractorExplanations: {
+            0: 'Worst-case stack-up simply adds all tolerances: total = +/-(0.1 + 0.1 + 0.1 + 0.1 + 0.1) = +/-0.50 mm.',
+            2: 'Worst-case stack-up simply adds all tolerances: total = +/-(0.1 + 0.1 + 0.1 + 0.1 + 0.1) = +/-0.50 mm.',
+            3: 'Worst-case stack-up simply adds all tolerances: total = +/-(0.1 + 0.1 + 0.1 + 0.1 + 0.1) = +/-0.50 mm.',
+          },
           hint: 'Worst-case = simple sum of all individual tolerances.',
         },
         {
@@ -1269,6 +1551,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The first step is to define the assembly requirement (what gap must be controlled) and trace the complete dimension chain from one side to the other.',
+          distractorExplanations: {
+            0: 'This focuses on select/analysis, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on assign/tolerances, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on build/prototype, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Before you can calculate anything, you need to know what you are analyzing.',
         },
         {
@@ -1291,6 +1578,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The sign convention follows from the dimension loop: start at one surface defining the gap, trace through each contributing dimension to the other surface. Direction determines sign.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; positive dimensions the principle has important exceptions.',
+            2: 'This focuses on first/positive, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on positive/assignment, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Increase each dimension mentally and see if the gap gets bigger (+) or smaller (-).',
         },
         {
@@ -1305,6 +1597,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: 'RSS assumes normal distributions and statistical independence, predicting ~99.73% success. For safety-critical applications, even a 0.27% failure rate is unacceptable.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; worst-case obsolete the principle has important exceptions.',
+            1: 'This focuses on production/volumes, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than customer specifically suggests.',
+          },
           hint: 'Consider when even a 0.27% failure rate (2700 ppm) is too risky.',
         },
         {
@@ -1319,6 +1616,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Nominal gap = 56.0 - 25.0 - 30.0 = 1.0 mm. Min gap = 1.0 - (0.1 + 0.15 + t) >= 0.5. So t <= 0.25 mm.',
+          distractorExplanations: {
+            0: 'Nominal gap = 56.0 - 25.0 - 30.0 = 1.0 mm.',
+            1: 'Nominal gap = 56.0 - 25.0 - 30.0 = 1.0 mm.',
+            2: 'Nominal gap = 56.0 - 25.0 - 30.0 = 1.0 mm.',
+          },
           hint: 'Set up the equation: nominal gap - sum of all tolerances >= minimum required gap.',
         },
       ]
@@ -1347,6 +1649,9 @@ export const unit9: Unit = {
           question: 'RSS tolerance analysis assumes that all individual dimension variations follow a normal distribution and are statistically independent.',
           correctAnswer: true,
           explanation: 'The standard RSS method assumes: each dimension follows a normal distribution, and the dimensions are statistically independent (no correlation between them).',
+          distractorExplanations: {
+            1: 'The standard RSS method assumes: each dimension follows a normal distribution, and the dimensions are statistically independent (no corre...',
+          },
           hint: 'RSS is based on the central limit theorem and independence assumption.',
         },
         {
@@ -1361,6 +1666,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'RSS = sqrt(0.01 + 0.04 + 0.01 + 0.0225) = sqrt(0.0825) = +/-0.287, approx +/-0.28 mm. Compare to worst-case: +/-0.55 mm.',
+          distractorExplanations: {
+            0: 'Regarding worst-case: RSS = sqrt(0.01 + 0.04 + 0.01 + 0.0225) = sqrt(0.0825) = +/-0.287, approx +/-0.28 mm.',
+            2: 'RSS = sqrt(0.01 + 0.04 + 0.01 + 0.0225) = sqrt(0.0825) = +/-0.287, approx +/-0.28 mm.',
+            3: 'RSS = sqrt(0.01 + 0.04 + 0.01 + 0.0225) = sqrt(0.0825) = +/-0.287, approx +/-0.28 mm.',
+          },
           hint: 'RSS = square root of (sum of each tolerance squared).',
         },
         {
@@ -1384,6 +1694,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Monte Carlo simulation randomly samples each dimension from its statistical distribution, calculates the assembly result, and repeats thousands of times. It is preferred when distributions are non-normal or dimensions are correlated.',
+          distractorExplanations: {
+            0: 'This focuses on manufacturing/sampling, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on casino-based/randomly, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on simplified/version, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Instead of formulas, this method simulates millions of assemblies on a computer.',
         },
         {
@@ -1414,6 +1729,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Cpk = min[(USL minus mean)/(3 sigma), (mean minus LSL)/(3 sigma)]. It captures both the spread and centering of the process within the tolerance band.',
+          distractorExplanations: {
+            0: 'This focuses on divided, which is not the correct mechanism or principle for this problem.',
+            2: 'This is too restrictive; the principle applies more broadly than relevant quality suggests.',
+            3: 'This "always" claim is too broad; equal exactly the principle has important exceptions.',
+          },
           hint: 'This index tells you how much of the tolerance band is actually being used.',
         },
         {
@@ -1428,6 +1748,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Modified RSS multiplies the standard RSS result by a safety factor (k = 1.2 to 1.5) to account for non-normal distributions, process shifts, and other real-world deviations.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than applied largest suggests.',
+            2: 'This is too restrictive; the principle applies more broadly than applied smallest suggests.',
+            3: 'This focuses on method/dimensions, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'RSS may be too optimistic, and worst-case too pessimistic. This splits the difference.',
         },
         {
@@ -1442,6 +1767,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'For n equal tolerances (+/-t each): WCA = n x t, RSS = sqrt(n) x t. The RSS/WCA ratio = 1/sqrt(n). For n = 4, RSS is 50% of WCA. For n = 25, RSS is only 20% of WCA.',
+          distractorExplanations: {
+            0: 'The outcome does depend on the factor this option dismisses (benefit constant).',
+            2: 'This is too restrictive; the principle applies more broadly than better chains suggests.',
+            3: 'This "always" claim is too broad; contributors favor the principle has important exceptions.',
+          },
           hint: 'Compare how n (worst-case) grows versus sqrt(n) (RSS).',
         },
         {
@@ -1450,6 +1780,9 @@ export const unit9: Unit = {
           question: 'RSS tolerance analysis is appropriate for assemblies consisting of only 2-3 parts with 2-3 contributing dimensions.',
           correctAnswer: false,
           explanation: 'RSS is based on the central limit theorem, which works best with many independent contributors. With only 2-3 contributors, the statistical assumptions are weak.',
+          distractorExplanations: {
+            0: 'RSS is based on the central limit theorem, which works best with many independent contributors.',
+          },
           hint: 'Does the central limit theorem work well with only 2-3 samples?',
         },
       ]
@@ -1484,6 +1817,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Cost-optimized tolerance allocation assigns tighter tolerances to dimensions that are inexpensive to control (e.g., turned diameters, features in the same CNC setup).',
+          distractorExplanations: {
+            0: 'This focuses on equal/tolerance, which is not the correct mechanism or principle for this problem.',
+            2: 'This "always" claim is too broad; tightest tolerance the principle has important exceptions.',
+            3: 'This is too restrictive; the principle applies more broadly than analysis ignore suggests.',
+          },
           hint: 'Tolerance is directly tied to cost. Tight where cheap, loose where costly.',
         },
         {
@@ -1507,6 +1845,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Selective assembly measures each part and classifies it into groups based on actual size. Large shafts are paired with large holes, small with small, achieving tighter fits without tighter tolerances.',
+          distractorExplanations: {
+            0: 'This focuses on selecting/best-looking, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on randomly/selecting, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on assembling/parts, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If you measure each part and match it with a compatible mate, the effective tolerance shrinks.',
         },
         {
@@ -1537,6 +1880,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Geometric tolerances are critical stack-up contributors that are often overlooked. Position, perpendicularity, and flatness all add variation to the assembly.',
+          distractorExplanations: {
+            0: 'This incorrectly denies an effect that is relevant to geometric tolerances and significant in this context.',
+            2: 'This focuses on reduce/stack-up, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than included worst-case suggests.',
+          },
           hint: 'If a mating surface is not perfectly perpendicular, does it affect the gap?',
         },
         {
@@ -1551,6 +1899,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'In 2D stack-ups, dimensions at angles to the stack direction contribute through trigonometric functions. A 1-degree angular tolerance can have very different linear effects at different distances from the pivot.',
+          distractorExplanations: {
+            0: 'This focuses on there/additional, which is not the correct mechanism or principle for this problem.',
+            2: 'This is too restrictive; the principle applies more broadly than analysis monte suggests.',
+            3: 'This focuses on tolerances/doubled, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'When dimensions are at angles, they contribute to the gap through sine and cosine.',
         },
         {
@@ -1565,6 +1918,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'An adjustable feature (shim, spacer, set screw, adjustable cam) absorbs the cumulative variation from the tolerance chain at one location. This can dramatically simplify the stack-up.',
+          distractorExplanations: {
+            0: 'This focuses on eliminates/tolerances, which is not the correct mechanism or principle for this problem.',
+            2: 'This "always" claim is too broad; adjustable features the principle has important exceptions.',
+            3: 'This focuses on makes/easier, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If you can adjust one dimension at assembly time, the stack-up problem shrinks.',
         },
         {
@@ -1573,6 +1931,9 @@ export const unit9: Unit = {
           question: 'In a worst-case stack-up, the probability that all dimensions are at their worst limits is very high for typical production.',
           correctAnswer: false,
           explanation: 'The probability that all dimensions are simultaneously at their worst limits is extremely low. It decreases exponentially with the number of dimensions. That is why RSS is often more realistic.',
+          distractorExplanations: {
+            0: 'The probability that all dimensions are simultaneously at their worst limits is extremely low.',
+          },
           hint: 'If each dimension has a small chance of being at its worst limit, what is the chance they ALL are?',
         },
         {
@@ -1587,6 +1948,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The virtual condition approach converts each feature into its worst-case boundary (VC = MMC size +/- geometric tolerance) and uses that single boundary in the stack-up. This simplifies the analysis.',
+          distractorExplanations: {
+            0: 'This focuses on visualization/method, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on ignores/entirely, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than applicable position suggests.',
+          },
           hint: 'Instead of tracking size and geometric tolerance separately, combine them into one boundary.',
         },
       ]
@@ -1615,6 +1981,9 @@ export const unit9: Unit = {
           question: 'When specifying surface roughness on a drawing, the roughness value always represents the maximum allowable roughness.',
           correctAnswer: true,
           explanation: 'Per ISO 1302 and ASME Y14.36M, the surface roughness value on a drawing is an upper limit by default. The actual surface must have roughness equal to or less than (smoother than) the specified value.',
+          distractorExplanations: {
+            1: 'Per ISO 1302 and ASME Y14.36M, the surface roughness value on a drawing is an upper limit by default.',
+          },
           hint: 'If a drawing says Ra 1.6, can you deliver Ra 0.8? Yes, smoother is always OK.',
         },
         {
@@ -1630,6 +1999,11 @@ export const unit9: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Ra Hides Defects</text><path d="M8,40 L16,38 L24,42 L32,36 L36,50 L40,38 L48,42 L56,38 L64,42 L72,40" stroke="#58CC02" stroke-width="1.5" fill="none"/><line x1="8" y1="40" x2="72" y2="40" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.3"/><circle cx="36" cy="50" r="4" fill="none" stroke="#EC4899" stroke-width="1.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/></circle><text x="36" y="62" font-size="3" fill="#EC4899" text-anchor="middle">deep scratch</text><text x="40" y="72" font-size="3.5" fill="#6B7280" text-anchor="middle">Ra averages out extremes</text></svg>',
           explanation: 'Ra is a statistical average that can mask extreme features. One deep scratch can cause a leak even though the average roughness looks fine. Use Rz or Rmax for sealing surfaces.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than relevant parameter suggests.',
+            2: 'This focuses on surface/smooth,, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on measured/wrong, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Consider what kind of surface feature would allow fluid to leak past a seal.',
         },
         {
@@ -1651,6 +2025,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Rz is preferred for sealing surfaces because it captures the extreme peak-to-valley deviations that affect seal contact and leakage paths.',
+          distractorExplanations: {
+            0: 'This focuses on (arithmetic/average), which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on (root/square), which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on (skewness), which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Seals are affected by the tallest peaks and deepest valleys, not the average.',
         },
         {
@@ -1674,6 +2053,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The lay symbol perpendicular indicates the predominant surface pattern runs perpendicular to the boundary line (the edge of the surface as viewed on the drawing).',
+          distractorExplanations: {
+            0: 'This focuses on parallel, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on multi-directional/dominant, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on circular/relative, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'This symbol shows the direction of the machining marks relative to the boundary.',
         },
         {
@@ -1682,6 +2066,9 @@ export const unit9: Unit = {
           question: 'A surface with Ra 0.4 is always functionally better than a surface with Ra 0.8.',
           correctAnswer: false,
           explanation: 'Ra alone does not determine functional performance. A surface with Ra 0.4 might have unfavorable skewness, lay, or waviness that makes it worse for a specific application.',
+          distractorExplanations: {
+            0: 'Ra alone does not determine functional performance.',
+          },
           hint: 'Does a lower Ra number always mean better performance for every application?',
         },
         {
@@ -1696,6 +2083,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Surface roughness directly affects fatigue life. Valleys and scratches act as micro-notch stress concentrators that initiate fatigue cracks.',
+          distractorExplanations: {
+            0: 'This incorrectly denies an effect that is relevant to surface roughness and significant in this context.',
+            2: 'This "always" claim is too broad; smoother surfaces the principle has important exceptions.',
+            3: 'This is too restrictive; the principle applies more broadly than fatigue depends suggests.',
+          },
           hint: 'What happens at a microscopic scratch when cyclic stress is applied?',
         },
         {
@@ -1710,6 +2102,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Each manufacturing process has a characteristic roughness range determined by the physics of material removal.',
+          distractorExplanations: {
+            0: 'This focuses on machining/processes, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on every/process, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than surface roughness suggests.',
+          },
           hint: 'Each process has physical limits on the smoothness it can achieve.',
         },
       ]
@@ -1738,6 +2135,9 @@ export const unit9: Unit = {
           question: 'A surface profilometer measures the same characteristics as a CMM. They are interchangeable for GD&T inspection.',
           correctAnswer: false,
           explanation: 'A profilometer measures micro-geometry (roughness) with a 2-5 micrometer tip. A CMM measures macro-geometry (GD&T features) with a 1-4 mm tip. Different scales, different purposes.',
+          distractorExplanations: {
+            0: 'A profilometer measures micro-geometry (roughness) with a 2-5 micrometer tip.',
+          },
           hint: 'One measures micro-geometry (roughness), the other measures macro-geometry (GD&T).',
         },
         {
@@ -1752,6 +2152,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'A CMM uses a precision probe on a 3-axis motion system to capture X, Y, Z coordinates. It can verify flatness, position, concentricity, and all other GD&T requirements from a single setup.',
+          distractorExplanations: {
+            0: 'This focuses on measuring/surface, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on visual/inspection, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than machine measures suggests.',
+          },
           hint: 'This machine captures 3D coordinate data and computes GD&T results.',
         },
         {
@@ -1782,6 +2187,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Measurement uncertainty is inherent in every measurement. Near tolerance limits, the uncertainty zone creates ambiguity in accept/reject decisions.',
+          distractorExplanations: {
+            0: 'This focuses on operator\, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on eliminated/using, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than applies manual suggests.',
+          },
           hint: 'If your measurement is right at the tolerance limit, can you be sure the part is good or bad?',
         },
         {
@@ -1796,6 +2206,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The 10:1 rule says measurement uncertainty should be at most 1/10 of the tolerance. With 0.002 mm resolution, the tightest tolerance is 0.002 x 10 = 0.020 mm.',
+          distractorExplanations: {
+            0: 'This focuses on +/-0.005, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on +/-0.010, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on +/-0.050, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The measurement uncertainty should consume no more than 1/10 of the tolerance.',
         },
         {
@@ -1810,6 +2225,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Gauge R&R decomposes total measurement variation into repeatability (same person, same gauge) and reproducibility (different people). Less than 10% = acceptable, 10-30% = marginal, over 30% = unacceptable.',
+          distractorExplanations: {
+            0: 'This focuses on verify/gauges, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on method/repair, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on comparison/between, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If different operators get different results measuring the same part, the measurement system has a problem.',
         },
         {
@@ -1824,6 +2244,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'CMM measurements are only as good as the sampling strategy. With 9 points on a 200 mm surface, the average spacing is ~67 mm. Local deviations between points will be missed.',
+          distractorExplanations: {
+            0: 'This focuses on wrong,/sufficient, which is not the correct mechanism or principle for this problem.',
+            2: 'This incorrectly denies an effect that is relevant to point count and significant in this context.',
+            3: 'This is too restrictive; the principle applies more broadly than right small suggests.',
+          },
           hint: 'Can 9 discrete points fully represent the shape of a 200 mm surface?',
         },
         {
@@ -1838,6 +2263,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Go/no-go gauges are fixed-limit gauges that verify a feature is within tolerance without measuring the actual value. They are fast, simple, and ideal for high-volume production.',
+          distractorExplanations: {
+            0: 'This focuses on measures/dimensions, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on measures/roughness, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on program, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'For high-volume production, do you need to know the actual size, or just pass/fail?',
         },
         {
@@ -1846,6 +2276,9 @@ export const unit9: Unit = {
           question: 'Gauge blocks (Johansson blocks) can be combined by wringing to create custom lengths with accuracy better than 0.1 micrometers.',
           correctAnswer: true,
           explanation: 'Gauge blocks are precision ground and lapped metal blocks with faces so flat and smooth that they adhere by "wringing." Combinations can achieve sub-0.1 micrometer accuracy.',
+          distractorExplanations: {
+            1: 'Gauge blocks are precision ground and lapped metal blocks with faces so flat and smooth that they adhere by .',
+          },
           hint: 'Gauge blocks are the primary physical length standards in metrology labs.',
         },
       ]
@@ -1880,6 +2313,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Per ISO 1302, the circle in the V-notch indicates that no material removal is allowed. The surface must be obtained as-manufactured (cast, forged, etc.).',
+          distractorExplanations: {
+            0: 'This focuses on machined/specification, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on requires/processing, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than roughness applies suggests.',
+          },
           hint: 'The circle signifies "no removal." The surface stays as-manufactured.',
         },
         {
@@ -1894,6 +2332,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'An optical comparator magnifies the part shadow (typically 10x to 100x) onto a screen. The operator overlays a template or uses digital crosshairs to measure features.',
+          distractorExplanations: {
+            0: 'This focuses on device/compares, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on camera/takes, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on precision/scale, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'This instrument uses a magnified shadow to inspect 2D profiles.',
         },
         {
@@ -1908,6 +2351,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Tight tolerances on legacy drawings may exist for a reason not obvious from the drawing alone (past failure, customer requirement, coating adhesion). Always investigate before changing.',
+          distractorExplanations: {
+            0: 'This focuses on change/notify, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on leave/as-is, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on manufacturing/ignore, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Legacy drawings may have hidden reasons for tight tolerances.',
         },
         {
@@ -1922,6 +2370,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The cutoff length is a high-pass filter that separates short-wavelength roughness from long-wavelength waviness. Standard values are 0.08, 0.25, 0.8, 2.5, and 8 mm.',
+          distractorExplanations: {
+            0: 'This focuses on maximum/length, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on distance/between, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on minimum/feature, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The filter setting determines which surface features count as roughness vs waviness.',
         },
         {
@@ -1943,6 +2396,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Abbe\'s principle states that the measuring scale and the dimension being measured should be collinear. Offset causes angular errors to be amplified.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; measurements taken the principle has important exceptions.',
+            2: 'This focuses on digital/instruments, which is not the correct mechanism or principle for this problem.',
+            3: 'This "always" claim is too broad; measurements averaged the principle has important exceptions.',
+          },
           hint: 'If the ruler is not on the same line as what you are measuring, angular errors create cosine error.',
         },
         {
@@ -1957,6 +2415,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Changing the manufacturing process changes far more than just Ra. Grinding can induce tensile residual stress, thermal damage, and microstructural changes that affect fatigue life and performance.',
+          distractorExplanations: {
+            0: 'This focuses on surfaces/equivalent, which is not the correct mechanism or principle for this problem.',
+            2: 'This is too restrictive; the principle applies more broadly than verify dimensional suggests.',
+            3: 'This "always" claim is too broad; grinding superior the principle has important exceptions.',
+          },
           hint: 'Ra is the same, but is the metallurgical condition also the same?',
         },
         {
@@ -1989,6 +2452,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The Abbott-Firestone curve is generated by slicing the surface profile at successively deeper levels and plotting the material ratio at each depth. It predicts wear-in, oil retention, and load-bearing behavior.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than applies bearing suggests.',
+            2: 'This is too restrictive; the principle applies more broadly than research industry suggests.',
+            3: 'This focuses on measurement/plotted, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If you slice the surface profile horizontally, how much material is present at each depth?',
         },
       ]

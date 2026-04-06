@@ -34,6 +34,9 @@ export const psySection14Part1: Unit[] = [
             question: 'Psychology uses systematic methods to study behavior and mental processes.',
             correctAnswer: true,
             explanation: 'Psychology is an empirical science that relies on observation, measurement, and experimentation.',
+            distractorExplanations: {
+              1: 'Psychology is an empirical science that relies on observation, measurement, and experimentation.',
+            },
           },
           {
             id: 'psy-sec14-u1-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Science requires systematic observation and testing, not just logical reasoning about ideas.',
+            distractorExplanations: {
+              0: '"It studies interesting topics" is incorrect; it uses systematic observation and testing.',
+              2: '"It was invented more recently" is incorrect; it uses systematic observation and testing.',
+              3: '"It focuses only on the brain" is incorrect; it uses systematic observation and testing.',
+            },
           },
           {
             id: 'psy-sec14-u1-L1-T2',
@@ -97,6 +105,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A theory organizes existing findings and generates predictions that researchers can test.',
+            distractorExplanations: {
+              0: '"To end all debate on a topic" is incorrect; to provide a testable explanation for observations.',
+              2: '"To express a personal opinion about behavior" is incorrect; to provide a testable explanation for observations.',
+              3: '"To replace the need for experiments" is incorrect; to provide a testable explanation for observations.',
+            },
           },
           {
             id: 'psy-sec14-u1-L1-Q6',
@@ -104,6 +117,9 @@ export const psySection14Part1: Unit[] = [
             question: 'A scientific theory is just a guess that has not been tested.',
             correctAnswer: false,
             explanation: 'A scientific theory is a well-supported explanation backed by evidence. It is much more than a guess.',
+            distractorExplanations: {
+              0: 'A scientific theory is a well-supported explanation backed by evidence. It is much more than a guess.',
+            },
           },
         ],
       },
@@ -129,6 +145,9 @@ export const psySection14Part1: Unit[] = [
             question: 'Common sense always provides accurate explanations for human behavior.',
             correctAnswer: false,
             explanation: 'Common sense often gives contradictory explanations. Scientific testing reveals which beliefs actually hold up.',
+            distractorExplanations: {
+              0: 'Common sense often gives contradictory explanations. Scientific testing reveals which beliefs actually hold up.',
+            },
           },
           {
             id: 'psy-sec14-u1-L2-Q2',
@@ -142,6 +161,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Common sense offers contradictory proverbs. Only research can tell us which pattern is more common.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"It only applies to birds" does not accurately describe the concept asked about.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec14-u1-L2-T2',
@@ -195,6 +219,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'She notices evidence that fits her belief and ignores evidence that contradicts it. That is confirmation bias.',
+            distractorExplanations: {
+              0: '"Hindsight bias" is incorrect; confirmation bias.',
+              2: '"Anchoring bias" is incorrect; confirmation bias.',
+              3: '"Availability heuristic" is incorrect; confirmation bias.',
+            },
           },
           {
             id: 'psy-sec14-u1-L2-Q6',
@@ -208,6 +237,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Science requires testing predictions that could be proven wrong, which counteracts our tendency to seek confirming evidence.',
+            distractorExplanations: {
+              0: '"It eliminates all human error" does not accurately describe the concept asked about.',
+              2: '"It only allows psychologists to run studies" does not accurately describe the concept asked about.',
+              3: '"It relies on larger sample sizes exclusively" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -247,6 +281,9 @@ export const psySection14Part1: Unit[] = [
             question: 'A hypothesis is a testable prediction about what a study will find.',
             correctAnswer: true,
             explanation: 'A hypothesis states a specific, testable prediction that the research will support or reject.',
+            distractorExplanations: {
+              1: 'A hypothesis states a specific, testable prediction that the research will support or reject.',
+            },
           },
           {
             id: 'psy-sec14-u1-L3-T2',
@@ -266,6 +303,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'You could test exam scores with and without music. The other statements cannot be disproven with data.',
+            distractorExplanations: {
+              0: '"Human nature is fundamentally good" is incorrect; students who study with music score lower on exams.',
+              2: '"People are meant to be happy" is incorrect; students who study with music score lower on exams.',
+              3: '"The universe has a purpose" is incorrect; students who study with music score lower on exams.',
+            },
           },
           {
             id: 'psy-sec14-u1-L3-Q4',
@@ -309,6 +351,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A single study could have flaws. Replication by other researchers builds confidence that the finding is real.',
+            distractorExplanations: {
+              1: '"Scientists enjoy repeating work unnecessarily" is incorrect; one study might have errors or unusual participants.',
+              2: '"Journals only publish replications" is incorrect; one study might have errors or unusual participants.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
         ],
       },
@@ -334,6 +381,9 @@ export const psySection14Part1: Unit[] = [
             question: 'Peer review means other experts evaluate a study before it is published.',
             correctAnswer: true,
             explanation: 'Peer reviewers check for errors in methods, analysis, and conclusions before a paper is accepted for publication.',
+            distractorExplanations: {
+              1: 'Peer reviewers check for errors in methods, analysis, and conclusions before a paper is accepted for publication.',
+            },
           },
           {
             id: 'psy-sec14-u1-L4-Q2',
@@ -347,6 +397,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Peer review focuses on catching errors in methods, reasoning, and conclusions. It does not guarantee correctness.',
+            distractorExplanations: {
+              0: '"To make sure the writing sounds professional" is incorrect; to check for errors in methods and conclusions.',
+              2: '"To guarantee the results are correct" is incorrect; to check for errors in methods and conclusions.',
+              3: '"To delay publication as long as possible" is incorrect; to check for errors in methods and conclusions.',
+            },
           },
           {
             id: 'psy-sec14-u1-L4-T2',
@@ -408,6 +463,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'When only positive results get published, the scientific literature paints an inaccurate picture. This is publication bias.',
+            distractorExplanations: {
+              0: '"Confirmation bias" is incorrect; publication bias.',
+              2: '"Hindsight bias" is incorrect; publication bias.',
+              3: '"Selection bias" is incorrect; publication bias.',
+            },
           },
           {
             id: 'psy-sec14-u1-L4-Q6',
@@ -421,6 +481,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'When negative results go unpublished, we get a distorted view of how effective treatments and interventions really are.',
+            distractorExplanations: {
+              0: '"It makes research too expensive" is incorrect; it means the published literature overrepresents positive findings.',
+              2: '"It prevents researchers from getting degrees" is incorrect; it means the published literature overrepresents positive findings.',
+              3: '"It makes peer review impossible" is incorrect; it means the published literature overrepresents positive findings.',
+            },
           },
         ],
       },
@@ -560,6 +625,9 @@ export const psySection14Part1: Unit[] = [
             question: 'Experiments are the only research design that can demonstrate cause and effect.',
             correctAnswer: true,
             explanation: 'Because experiments control variables and use random assignment, they can establish causal relationships.',
+            distractorExplanations: {
+              1: 'Because experiments control variables and use random assignment, they can establish causal relationships.',
+            },
           },
           {
             id: 'psy-sec14-u2-L1-Q2',
@@ -573,6 +641,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The defining feature of an experiment is that the researcher actively manipulates a variable to observe its effect.',
+            distractorExplanations: {
+              0: '"It uses more participants" is incorrect; the researcher manipulates a variable and measures the outcome.',
+              2: '"It takes longer to complete" is incorrect; the researcher manipulates a variable and measures the outcome.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec14-u2-L1-T2',
@@ -601,6 +674,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'This has the three features of a true experiment: manipulation (nap vs. no nap), a control group, and random assignment.',
+            distractorExplanations: {
+              1: '"No, because it does not use brain scans" is incorrect; yes, it has manipulation, a control group, and random assignment.',
+              2: '"No, because 100 students is too few" is incorrect; yes, it has manipulation, a control group, and random assignment.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
           {
             id: 'psy-sec14-u2-L1-T3',
@@ -637,6 +715,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Field experiments gain realism but lose some control over variables compared to lab experiments.',
+            distractorExplanations: {
+              0: '"They cost more money" is incorrect; they sacrifice some control for greater realism.',
+              2: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              3: '"They are not considered scientific" is incorrect; they sacrifice some control for greater realism.',
+            },
           },
         ],
       },
@@ -661,6 +744,9 @@ export const psySection14Part1: Unit[] = [
             question: 'If two variables are correlated, one must cause the other.',
             correctAnswer: false,
             explanation: 'Correlation shows a relationship, not causation. A third variable could explain both.',
+            distractorExplanations: {
+              0: 'Correlation shows a relationship, not causation. A third variable could explain both.',
+            },
           },
           {
             id: 'psy-sec14-u2-L2-Q2',
@@ -674,6 +760,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Hot weather is the third variable that drives both ice cream sales and outdoor activity, where more crime occurs.',
+            distractorExplanations: {
+              0: '"Ice cream causes crime" is incorrect; a third variable, hot weather, increases both.',
+              1: '"Crime causes people to buy ice cream" is incorrect; a third variable, hot weather, increases both.',
+              3: '"This is a coincidence with no explanation" is incorrect; a third variable, hot weather, increases both.',
+            },
           },
           {
             id: 'psy-sec14-u2-L2-T2',
@@ -736,6 +827,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'You cannot ethically expose children to trauma. Correlational studies let researchers study these relationships without manipulation.',
+            distractorExplanations: {
+              0: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: '"Because surveys are cheaper than experiments" is incorrect; because you cannot ethically assign trauma to children.',
+              3: '"Because correlation studies are more accurate than experiments" is incorrect; because you cannot ethically assign trauma to children.',
+            },
           },
           {
             id: 'psy-sec14-u2-L2-Q6',
@@ -749,6 +845,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Correlational studies show relationships but cannot prove that one variable causes changes in another.',
+            distractorExplanations: {
+              0: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: '"It requires too many participants" is incorrect; it cannot establish cause and effect.',
+              3: '"It takes too long to complete" is incorrect; it cannot establish cause and effect.',
+            },
           },
         ],
       },
@@ -774,6 +875,9 @@ export const psySection14Part1: Unit[] = [
             question: 'Case studies examine many participants briefly to find broad patterns.',
             correctAnswer: false,
             explanation: 'Case studies focus deeply on one or very few participants. Surveys examine many participants broadly.',
+            distractorExplanations: {
+              0: 'Case studies focus deeply on one or very few participants. Surveys examine many participants broadly.',
+            },
           },
           {
             id: 'psy-sec14-u2-L3-Q2',
@@ -787,6 +891,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Gage\'s personality changed dramatically after frontal lobe damage, teaching us about that region\'s functions.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: 'These are distinct concepts with different characteristics, causes, or applications.',
+              3: '"It demonstrated that case studies are unreliable" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec14-u2-L3-T2',
@@ -837,6 +946,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'This is a rare condition in one person. A case study allows in-depth investigation that other methods cannot provide.',
+            distractorExplanations: {
+              0: '"An experiment with random assignment" is incorrect; a case study with in-depth testing.',
+              1: '"A correlational study with surveys" is incorrect; a case study with in-depth testing.',
+              3: '"A naturalistic observation in a park" is incorrect; a case study with in-depth testing.',
+            },
           },
           {
             id: 'psy-sec14-u2-L3-Q6',
@@ -850,6 +964,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Ethical guidelines prevent researchers from causing harm. Case studies let us learn from naturally occurring events.',
+            distractorExplanations: {
+              0: '"Experiments would be too expensive" is incorrect; it would be unethical to deliberately damage someone\\\'s brain.',
+              2: '"Brain injuries are not interesting enough to study" is incorrect; it would be unethical to deliberately damage someone\\\'s brain.',
+              3: '"Experiments require at least 1,000 participants" is incorrect; it would be unethical to deliberately damage someone\\\'s brain.',
+            },
           },
         ],
       },
@@ -875,6 +994,9 @@ export const psySection14Part1: Unit[] = [
             question: 'In naturalistic observation, the researcher manipulates variables to see their effect.',
             correctAnswer: false,
             explanation: 'The researcher only observes. Manipulation is what defines an experiment, not naturalistic observation.',
+            distractorExplanations: {
+              0: 'The researcher only observes. Manipulation is what defines an experiment, not naturalistic observation.',
+            },
           },
           {
             id: 'psy-sec14-u2-L4-Q2',
@@ -888,6 +1010,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The researcher is watching natural behavior without interfering. That is naturalistic observation.',
+            distractorExplanations: {
+              0: '"An experiment" is incorrect; naturalistic observation.',
+              1: '"A case study" is incorrect; naturalistic observation.',
+              3: '"A correlational survey" is incorrect; naturalistic observation.',
+            },
           },
           {
             id: 'psy-sec14-u2-L4-T2',
@@ -941,6 +1068,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Ecological validity means findings reflect real-world behavior. Natural settings produce this better than labs do.',
+            distractorExplanations: {
+              0: '"It uses large sample sizes" is incorrect; it observes behavior in real-world settings, not artificial labs.',
+              2: '"It controls all confounding variables" is incorrect; it observes behavior in real-world settings, not artificial labs.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec14-u2-L4-Q6',
@@ -955,6 +1087,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'She is observing natural behavior without interfering. This is naturalistic observation.',
+            distractorExplanations: {
+              0: '"Running a field experiment" is incorrect; conducting naturalistic observation.',
+              2: '"Performing a case study" is incorrect; conducting naturalistic observation.',
+              3: '"Completing a survey study" is incorrect; conducting naturalistic observation.',
+            },
           },
         ],
       },
@@ -1098,6 +1235,9 @@ export const psySection14Part1: Unit[] = [
             question: 'The independent variable is what the researcher measures as the outcome.',
             correctAnswer: false,
             explanation: 'The independent variable is what the researcher manipulates. The dependent variable is the measured outcome.',
+            distractorExplanations: {
+              0: 'The independent variable is what the researcher manipulates. The dependent variable is the measured outcome.',
+            },
           },
           {
             id: 'psy-sec14-u3-L1-Q2',
@@ -1111,6 +1251,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The researcher manipulates caffeine (gives it or not). That makes it the independent variable.',
+            distractorExplanations: {
+              0: '"Reaction time" is incorrect; caffeine (given or not given).',
+              1: '"The number of participants" is incorrect; caffeine (given or not given).',
+              3: '"The time of day" is incorrect; caffeine (given or not given).',
+            },
           },
           {
             id: 'psy-sec14-u3-L1-T2',
@@ -1164,6 +1309,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The researcher manipulates exercise (IV) and measures mood ratings (DV).',
+            distractorExplanations: {
+              0: '"IV: mood, DV: exercise" is incorrect; iV: exercise, DV: mood ratings.',
+              2: '"IV: participants, DV: exercise" is incorrect; iV: exercise, DV: mood ratings.',
+              3: '"IV: mood ratings, DV: participants" is incorrect; iV: exercise, DV: mood ratings.',
+            },
           },
           {
             id: 'psy-sec14-u3-L1-Q6',
@@ -1205,6 +1355,9 @@ export const psySection14Part1: Unit[] = [
             question: 'A confounding variable is an uncontrolled factor that could explain the results instead of the IV.',
             correctAnswer: true,
             explanation: 'Confounds create alternative explanations for results, making it impossible to draw clear causal conclusions.',
+            distractorExplanations: {
+              1: 'Confounds create alternative explanations for results, making it impossible to draw clear causal conclusions.',
+            },
           },
           {
             id: 'psy-sec14-u3-L2-Q2',
@@ -1219,6 +1372,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Time of day varies with the teaching method. Morning students may be more alert, confounding the results.',
+            distractorExplanations: {
+              0: '"The teaching method" is incorrect; the time of day the class meets.',
+              1: '"The grades" is incorrect; the time of day the class meets.',
+              3: '"The number of students in each class" is incorrect; the time of day the class meets.',
+            },
           },
           {
             id: 'psy-sec14-u3-L2-T2',
@@ -1238,6 +1396,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Random assignment distributes differences (age, personality, etc.) roughly equally so they do not systematically bias one group.',
+            distractorExplanations: {
+              0: '"It eliminates all variables except the IV" is incorrect; it spreads individual differences evenly across groups.',
+              2: 'These are distinct concepts with different characteristics, causes, or applications.',
+              3: '"It makes confounds easier to measure" is incorrect; it spreads individual differences evenly across groups.',
+            },
           },
           {
             id: 'psy-sec14-u3-L2-Q4',
@@ -1266,6 +1429,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'An extraneous variable becomes a confound when it changes systematically with the IV across groups.',
+            distractorExplanations: {
+              0: '"When it is measured by the researcher" is incorrect; when it varies systematically between experimental groups.',
+              2: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              3: '"When it is included in the hypothesis" is incorrect; when it varies systematically between experimental groups.',
+            },
           },
           {
             id: 'psy-sec14-u3-L2-Q6',
@@ -1310,6 +1478,9 @@ export const psySection14Part1: Unit[] = [
             question: 'An operational definition specifies exactly how a variable will be measured in a study.',
             correctAnswer: true,
             explanation: 'Operational definitions turn abstract concepts into specific, measurable quantities.',
+            distractorExplanations: {
+              1: 'Operational definitions turn abstract concepts into specific, measurable quantities.',
+            },
           },
           {
             id: 'psy-sec14-u3-L3-Q2',
@@ -1323,6 +1494,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A specific, measurable definition like "IQ test score" lets researchers consistently measure intelligence across studies.',
+            distractorExplanations: {
+              0: '"Being smart and quick-witted" is incorrect; score on a standardized IQ test.',
+              2: '"The ability to understand complex things" is incorrect; score on a standardized IQ test.',
+              3: '"Having good common sense" is incorrect; score on a standardized IQ test.',
+            },
           },
           {
             id: 'psy-sec14-u3-L3-T2',
@@ -1393,6 +1569,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Before collecting data, abstract concepts must be turned into specific, measurable operational definitions.',
+            distractorExplanations: {
+              0: '"Start collecting data immediately" is incorrect; create operational definitions for both loneliness and health.',
+              2: '"Ask participants what loneliness means to them" is incorrect; create operational definitions for both loneliness and health.',
+              3: '"Use only participants who feel lonely" is incorrect; create operational definitions for both loneliness and health.',
+            },
           },
         ],
       },
@@ -1417,6 +1598,9 @@ export const psySection14Part1: Unit[] = [
             question: '"Learning is important" is a good scientific hypothesis.',
             correctAnswer: false,
             explanation: 'It is vague and not testable. A good hypothesis makes a specific, falsifiable prediction.',
+            distractorExplanations: {
+              0: 'It is vague and not testable. A good hypothesis makes a specific, falsifiable prediction.',
+            },
           },
           {
             id: 'psy-sec14-u3-L4-Q2',
@@ -1430,6 +1614,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'It specifies the IV (sleep duration), DV (memory scores), and predicted direction (higher).',
+            distractorExplanations: {
+              0: '"Sleep is good for you" does not accurately describe the concept asked about.',
+              2: '"Sleep probably affects memory somehow" does not accurately describe the concept asked about.',
+              3: '"Everyone should get more sleep" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec14-u3-L4-T2',
@@ -1480,6 +1669,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'It specifies the direction: Group A will be higher. A non-directional version would just say "different."',
+            distractorExplanations: {
+              0: 'These are distinct concepts with different characteristics, causes, or applications.',
+              2: '"There will be a difference between the two groups" is incorrect; group A will score higher than Group B.',
+              3: '"The results will be interesting" is incorrect; group A will score higher than Group B.',
+            },
           },
           {
             id: 'psy-sec14-u3-L4-Q6',
@@ -1494,6 +1688,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This hypothesis is specific, directional, testable, and identifies both the IV and DV.',
+            distractorExplanations: {
+              0: '"Breakfast is healthy for children" does not accurately describe the concept asked about.',
+              2: '"Math tests are hard for children" does not accurately describe the concept asked about.',
+              3: '"Breakfast and math may be related" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1639,6 +1838,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Only a true experiment with manipulation and random assignment can demonstrate causation.',
+            distractorExplanations: {
+              0: '"A case study" is incorrect; a true experiment with random assignment.',
+              1: '"A correlational study" is incorrect; a true experiment with random assignment.',
+              3: '"Naturalistic observation" is incorrect; a true experiment with random assignment.',
+            },
           },
           {
             id: 'psy-sec14-u4-L1-Q2',
@@ -1692,6 +1896,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The honors class was already higher-performing. Student ability confounds the comparison.',
+            distractorExplanations: {
+              0: '"Nothing, the results are clear" is incorrect; student ability is a confounding variable.',
+              2: '"She should have used a case study instead" is incorrect; student ability is a confounding variable.',
+              3: '"The sample size is too large" is incorrect; student ability is a confounding variable.',
+            },
           },
           {
             id: 'psy-sec14-u4-L1-T3',
@@ -1735,6 +1944,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Random assignment spreads participant differences evenly, reducing the influence of confounding variables.',
+            distractorExplanations: {
+              0: '"It makes the study more interesting" is incorrect; it distributes individual differences evenly across groups.',
+              1: '"It ensures the researcher picks the best participants" is incorrect; it distributes individual differences evenly across groups.',
+              3: '"It guarantees the hypothesis will be supported" is incorrect; it distributes individual differences evenly across groups.',
+            },
           },
         ],
       },
@@ -1766,6 +1980,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Since the researcher cannot ethically manipulate poverty, a correlational study is the best option.',
+            distractorExplanations: {
+              0: '"A true experiment with random assignment" is incorrect; a correlational study surveying adults about childhood and depression.',
+              2: '"Naturalistic observation of poor children" is incorrect; a correlational study surveying adults about childhood and depression.',
+              3: '"A case study of one wealthy person" is incorrect; a correlational study surveying adults about childhood and depression.',
+            },
           },
           {
             id: 'psy-sec14-u4-L2-Q2',
@@ -1780,6 +1999,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Temperature varies between groups and could affect performance. It is an uncontrolled confound.',
+            distractorExplanations: {
+              0: 'Dependent PD involves excessive need for others to make decisions, not the pattern described here.',
+              1: 'Dependent PD involves excessive need for others to make decisions, not the pattern described here.',
+              3: '"Controlled variable" is incorrect; confounding variable.',
+            },
           },
           {
             id: 'psy-sec14-u4-L2-T2',
@@ -1801,6 +2025,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Without a control group, the improvement could be due to practice effects, motivation, or regression to the mean.',
+            distractorExplanations: {
+              1: '"The test was too short" is incorrect; no control group for comparison.',
+              2: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              3: '"Ten people is a normal sample size" is incorrect; no control group for comparison.',
+            },
           },
           {
             id: 'psy-sec14-u4-L2-Q4',
@@ -1833,6 +2062,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Without random assignment and a control group, this is a correlational finding. People who choose to meditate may already be less stressed.',
+            distractorExplanations: {
+              0: '"Yes, the evidence is clear" is incorrect; no, this is correlational and does not prove causation.',
+              2: '"Yes, if the sample was large enough" is incorrect; no, this is correlational and does not prove causation.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec14-u4-L2-T3',
@@ -1853,6 +2087,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Identical rooms and random assignment control for confounds like lighting, temperature, and individual differences.',
+            distractorExplanations: {
+              0: '"Add more lavender to the second room too" is incorrect; use rooms with identical conditions and randomly assign students.',
+              2: 'The scope is broader than test students who like lavender alone.',
+              3: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+            },
           },
           {
             id: 'psy-sec14-u4-L2-Q7',
@@ -2009,6 +2248,9 @@ export const psySection14Part1: Unit[] = [
             question: 'A sample is a subset of the larger population that a researcher actually studies.',
             correctAnswer: true,
             explanation: 'Researchers study samples because testing the entire population is usually impossible.',
+            distractorExplanations: {
+              1: 'Researchers study samples because testing the entire population is usually impossible.',
+            },
           },
           {
             id: 'psy-sec14-u5-L1-Q2',
@@ -2022,6 +2264,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The population is the entire group she wants to generalize to: all American teenagers.',
+            distractorExplanations: {
+              0: '"The 200 teens in her study" is incorrect; all American teenagers.',
+              2: 'Not teenagers worldwide.',
+              3: 'The scope is broader than teens with anxiety alone.',
+            },
           },
           {
             id: 'psy-sec14-u5-L1-T2',
@@ -2076,6 +2323,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'College students at one campus are not representative of all adults. The sample limits generalizability.',
+            distractorExplanations: {
+              0: '"Yes, 300 people is a large enough sample" is incorrect; no, college students at one campus do not represent all adults.',
+              2: '"Yes, because they used a survey method" is incorrect; no, college students at one campus do not represent all adults.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec14-u5-L1-Q6',
@@ -2089,6 +2341,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Psychology has been criticized for relying heavily on WEIRD samples (Western, educated, industrialized, rich, democratic).',
+            distractorExplanations: {
+              0: '"People from diverse global backgrounds" is incorrect; western, educated, and relatively wealthy college students.',
+              2: '"Children under age 10" is incorrect; western, educated, and relatively wealthy college students.',
+              3: '"Retired adults over age 65" is incorrect; western, educated, and relatively wealthy college students.',
+            },
           },
         ],
       },
@@ -2113,6 +2370,9 @@ export const psySection14Part1: Unit[] = [
             question: 'Random sampling means the researcher picks whoever is easiest to find.',
             correctAnswer: false,
             explanation: 'That is convenience sampling. Random sampling gives every population member an equal chance of being selected.',
+            distractorExplanations: {
+              0: 'That is convenience sampling. Random sampling gives every population member an equal chance of being selected.',
+            },
           },
           {
             id: 'psy-sec14-u5-L2-Q2',
@@ -2126,6 +2386,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Random sampling is about who participates. Random assignment is about which condition participants are placed in.',
+            distractorExplanations: {
+              0: 'These are distinct concepts with different characteristics, causes, or applications.',
+              2: 'This is incorrect; random sampling selects who is in the study. Random assignment decides which group they join..',
+              3: '"Neither is actually random" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec14-u5-L2-T2',
@@ -2176,6 +2441,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Stratified sampling divides the population into subgroups and randomly samples from each, ensuring both genders are represented.',
+            distractorExplanations: {
+              0: '"Convenience sampling" is incorrect; stratified random sampling.',
+              2: '"Voluntary response sampling" is incorrect; stratified random sampling.',
+              3: '"Snowball sampling" is incorrect; stratified random sampling.',
+            },
           },
           {
             id: 'psy-sec14-u5-L2-Q6',
@@ -2190,6 +2460,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Every student had an equal chance of being selected via the random computer selection. This is random sampling.',
+            distractorExplanations: {
+              0: '"Convenience sampling" is incorrect; random sampling.',
+              2: '"Stratified sampling" is incorrect; random sampling.',
+              3: '"Voluntary response sampling" is incorrect; random sampling.',
+            },
           },
         ],
       },
@@ -2214,6 +2489,9 @@ export const psySection14Part1: Unit[] = [
             question: 'Selection bias means the sample accurately represents the population.',
             correctAnswer: false,
             explanation: 'Selection bias means the sample is systematically different from the population, making results unrepresentative.',
+            distractorExplanations: {
+              0: 'Selection bias means the sample is systematically different from the population, making results unrepresentative.',
+            },
           },
           {
             id: 'psy-sec14-u5-L3-Q2',
@@ -2227,6 +2505,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Gym members exercise more than the average person. This sample has selection bias.',
+            distractorExplanations: {
+              0: '"The survey was too short" is incorrect; gym members are not representative of the general population.',
+              2: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              3: '"The gym did not use enough questions" is incorrect; gym members are not representative of the general population.',
+            },
           },
           {
             id: 'psy-sec14-u5-L3-T2',
@@ -2278,6 +2561,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'People who gained weight dropped out, leaving only successful dieters. That is attrition bias.',
+            distractorExplanations: {
+              0: '"Confirmation bias" is incorrect; attrition bias.',
+              1: '"Observer bias" is incorrect; attrition bias.',
+              3: '"Publication bias" is incorrect; attrition bias.',
+            },
           },
           {
             id: 'psy-sec14-u5-L3-Q6',
@@ -2291,6 +2579,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Random sampling gives every member of the population an equal chance, minimizing systematic differences.',
+            distractorExplanations: {
+              0: '"Use only volunteers" is incorrect; use random sampling from the target population.',
+              1: '"Study people you already know" is incorrect; use random sampling from the target population.',
+              3: '"Make the study harder so only smart people finish" is incorrect; use random sampling from the target population.',
+            },
           },
         ],
       },
@@ -2316,6 +2609,9 @@ export const psySection14Part1: Unit[] = [
             question: 'A study with 5 participants is just as reliable as one with 500.',
             correctAnswer: false,
             explanation: 'Small samples are more easily influenced by unusual individuals. Larger samples produce more reliable results.',
+            distractorExplanations: {
+              0: 'Small samples are more easily influenced by unusual individuals. Larger samples produce more reliable results.',
+            },
           },
           {
             id: 'psy-sec14-u5-L4-Q2',
@@ -2329,6 +2625,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'With more people, individual quirks and outliers have less influence on the overall results.',
+            distractorExplanations: {
+              0: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Because researchers are more careful with bigger samples" is incorrect; because individual differences average out with more people.',
+            },
           },
           {
             id: 'psy-sec14-u5-L4-T2',
@@ -2358,6 +2659,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'With only 4 people, the improvement could be coincidence. The sample is too small for reliable conclusions.',
+            distractorExplanations: {
+              0: '"The treatment was probably too strong" is incorrect; the sample is far too small to draw general conclusions.',
+              2: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              3: '"She should have used a survey instead" is incorrect; the sample is far too small to draw general conclusions.',
+            },
           },
           {
             id: 'psy-sec14-u5-L4-T3',
@@ -2393,6 +2699,11 @@ export const psySection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'A large biased sample just produces biased results with more confidence. Representativeness is more important than size alone.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              1: '"Sample size does not matter if the topic is interesting" is incorrect; a large, biased sample is worse than a smaller, representative one.',
+              3: '"Any study with over 100 people is automatically valid" is incorrect; a large, biased sample is worse than a smaller, representative one.',
+            },
           },
         ],
       },

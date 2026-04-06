@@ -34,6 +34,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Social influence refers to how other people affect your thoughts, feelings, and behavior.',
             correctAnswer: true,
             explanation: 'Social influence is exactly this: the effect that others have on what you think, feel, and do.',
+            distractorExplanations: {
+              1: 'Social influence is exactly this: the effect that others have on what you think, feel, and do.',
+            },
           },
           {
             id: 'psy-sec8-u1-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Laughing louder around friends shows how others\' presence changes your behavior. The rest are biological responses.',
+            distractorExplanations: {
+              1: 'Laughing louder around friends shows how others\' presence changes your behavior.',
+              2: 'Laughing louder around friends shows how others\' presence changes your behavior.',
+              3: 'Laughing louder around friends shows how others\' presence changes your behavior.',
+            },
           },
           {
             id: 'psy-sec8-u1-L1-T2',
@@ -97,6 +105,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Your neighbors\' recycling habits subtly influenced your own behavior without anyone directly asking you.',
+            distractorExplanations: {
+              0: 'Biological is a different concept that does not explain this particular phenomenon.',
+              2: 'Classical conditioning is a different concept that does not explain this particular phenomenon.',
+              3: 'Inherited is a different concept that does not explain this particular phenomenon.',
+            },
           },
           {
             id: 'psy-sec8-u1-L1-Q6',
@@ -111,6 +124,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The group\'s unanimous agreement created pressure for you to stay silent. That\'s direct social influence.',
+            distractorExplanations: {
+              1: 'Biological is a different concept that does not explain this particular phenomenon.',
+              2: 'Classical conditioning is a different concept that does not explain this particular phenomenon.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -136,6 +154,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Conformity means adjusting your behavior or thinking to align with a group standard.',
             correctAnswer: true,
             explanation: 'Conformity is changing yourself to match the group. It can be conscious or unconscious.',
+            distractorExplanations: {
+              1: 'Conformity is changing yourself to match the group. It can be conscious or unconscious.',
+            },
           },
           {
             id: 'psy-sec8-u1-L2-Q2',
@@ -149,6 +170,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Adopting the same style as your peer group is a classic example of conformity.',
+            distractorExplanations: {
+              0: 'This is not random; a systematic psychological process is at work.',
+              2: 'Adopting the same style as your peer group is a classic example of conformity.',
+              3: 'Adopting the same style as your peer group is a classic example of conformity.',
+            },
           },
           {
             id: 'psy-sec8-u1-L2-T2',
@@ -182,6 +208,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Compliance is going along with the group publicly while privately disagreeing.',
+            distractorExplanations: {
+              0: 'Compliance is going along with the group publicly while privately disagreeing.',
+              1: 'Compliance is going along with the group publicly while privately disagreeing.',
+              3: 'Compliance is going along with the group publicly while privately disagreeing.',
+            },
           },
           {
             id: 'psy-sec8-u1-L2-Q5',
@@ -210,6 +241,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'You\'ve genuinely adopted the group\'s values as your own. This is internalization.',
+            distractorExplanations: {
+              0: 'You\'ve genuinely adopted the group\'s values as your own. This is internalization.',
+              2: 'You\'ve genuinely adopted the group\'s values as your own. This is internalization.',
+              3: 'You\'ve genuinely adopted the group\'s values as your own. This is internalization.',
+            },
           },
         ],
       },
@@ -235,6 +271,9 @@ export const psySection8Part1: Unit[] = [
             question: 'In Asch\'s experiment, the line-matching task was intentionally difficult to solve.',
             correctAnswer: false,
             explanation: 'The task was deliberately easy. Asch wanted to see if group pressure could make people deny an obvious answer.',
+            distractorExplanations: {
+              0: 'The task was deliberately easy. Asch wanted to see if group pressure could make people deny an obvious answer.',
+            },
           },
           {
             id: 'psy-sec8-u1-L3-Q2',
@@ -248,6 +287,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'About 75% of participants conformed at least once. On average, people conformed on about 1 in 3 trials.',
+            distractorExplanations: {
+              0: 'About 75% of participants conformed at least once.',
+              1: 'About 75% of participants conformed at least once.',
+              3: 'About 75% of participants conformed at least once.',
+            },
           },
           {
             id: 'psy-sec8-u1-L3-T2',
@@ -280,6 +324,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Even one ally giving the correct answer dramatically reduced conformity. Unanimity is a key driver of conformity.',
+            distractorExplanations: {
+              0: 'Even one ally giving the correct answer dramatically reduced conformity.',
+              1: 'This describes the opposite of what actually happens; even one ally giving the correct answer dramatically reduced conformity.',
+              3: 'Even one ally giving the correct answer dramatically reduced conformity.',
+            },
           },
           {
             id: 'psy-sec8-u1-L3-Q5',
@@ -308,6 +357,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Asch showed that unanimous groups create strong conformity pressure, even when the individual believes the group is wrong.',
+            distractorExplanations: {
+              0: 'Asch showed that unanimous groups create strong conformity pressure, even when the individual b',
+              2: 'Research shows a meaningful effect exists here, not the absence of one.',
+              3: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -332,6 +386,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Informational influence occurs when you conform because you believe the group knows more than you do.',
             correctAnswer: true,
             explanation: 'Informational influence is about accepting information from others as evidence about reality.',
+            distractorExplanations: {
+              1: 'Informational influence is about accepting information from others as evidence about reality.',
+            },
           },
           {
             id: 'psy-sec8-u1-L4-Q2',
@@ -345,6 +402,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'When you\'re uncertain, you look to others for information about what to do. This is informational influence.',
+            distractorExplanations: {
+              0: 'When you\'re uncertain, you look to others for information about what to do.',
+              1: 'When you\'re uncertain, you look to others for information about what to do.',
+              3: 'When you\'re uncertain, you look to others for information about what to do.',
+            },
           },
           {
             id: 'psy-sec8-u1-L4-T2',
@@ -381,6 +443,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Ambiguity and uncertainty increase informational influence. The less sure you are, the more you rely on others.',
+            distractorExplanations: {
+              0: 'Ambiguity and uncertainty increase informational influence.',
+              2: 'This describes the opposite of what actually happens; ambiguity and uncertainty increase informational influence.',
+              3: 'Ambiguity and uncertainty increase informational influence.',
+            },
           },
           {
             id: 'psy-sec8-u1-L4-Q5',
@@ -409,6 +476,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'You first used the group as a source of information about the elevator. The reason turned out to be valid.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "purely" overstates the case — the reality is more nuanced.',
+              2: 'You first used the group as a source of information about the elevator.',
+              3: 'Classical conditioning is a different concept that does not explain this particular phenomenon.',
+            },
           },
         ],
       },
@@ -548,6 +620,9 @@ export const psySection8Part1: Unit[] = [
             question: 'In Milgram\'s study, participants actually delivered real electric shocks to another person.',
             correctAnswer: false,
             explanation: 'The shocks were fake. The "learner" was a confederate who pretended to be in pain. Only the participant believed the shocks were real.',
+            distractorExplanations: {
+              0: 'The shocks were fake. The "learner" was a confederate who pretended to be in pain.',
+            },
           },
           {
             id: 'psy-sec8-u2-L1-Q2',
@@ -561,6 +636,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'About 65% of participants went all the way to 450 volts. This result shocked the psychology community.',
+            distractorExplanations: {
+              0: 'About 65% of participants went all the way to 450 volts.',
+              1: 'About 65% of participants went all the way to 450 volts.',
+              3: 'About 65% of participants went all the way to 450 volts.',
+            },
           },
           {
             id: 'psy-sec8-u2-L1-T2',
@@ -594,6 +674,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The gradual escalation meant each new shock was only slightly more than the last. This made it hard to find a clear stopping point.',
+            distractorExplanations: {
+              0: 'The gradual escalation meant each new shock was only slightly more than the last.',
+              2: 'The gradual escalation meant each new shock was only slightly more than the last.',
+              3: 'The gradual escalation meant each new shock was only slightly more than the last.',
+            },
           },
           {
             id: 'psy-sec8-u2-L1-T3',
@@ -623,6 +708,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Consistent results across diverse groups showed that obedience to authority is a broad human tendency driven by the situation, not personality.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'Consistent results across diverse groups showed that obedience to authority is a broad human te',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -647,6 +737,9 @@ export const psySection8Part1: Unit[] = [
             question: 'In the agentic state, people feel personally responsible for the consequences of their actions.',
             correctAnswer: false,
             explanation: 'In the agentic state, people shift responsibility to the authority figure. They see themselves as just following orders.',
+            distractorExplanations: {
+              0: 'In the agentic state, people shift responsibility to the authority figure. They see themselves as just following orders.',
+            },
           },
           {
             id: 'psy-sec8-u2-L2-Q2',
@@ -660,6 +753,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Shifting responsibility to the authority figure is the core of the agentic state.',
+            distractorExplanations: {
+              1: 'Classical conditioning is a different concept that does not explain this particular phenomenon.',
+              2: 'This describes the opposite of what actually happens; shifting responsibility to the authority figure is the core of the agentic state.',
+              3: 'Shifting responsibility to the authority figure is the core of the agentic state.',
+            },
           },
           {
             id: 'psy-sec8-u2-L2-T2',
@@ -704,6 +802,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Starting with small, harmless shocks made each increase feel minor. Once committed, people found it hard to stop.',
+            distractorExplanations: {
+              0: 'Starting with small, harmless shocks made each increase feel minor.',
+              1: 'Starting with small, harmless shocks made each increase feel minor.',
+              3: 'Starting with small, harmless shocks made each increase feel minor.',
+            },
           },
           {
             id: 'psy-sec8-u2-L2-T3',
@@ -724,6 +827,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Politeness norms are a powerful binding factor. People struggle to be "rude" to an authority figure, even when they want to stop.',
+            distractorExplanations: {
+              0: 'Politeness norms are a powerful binding factor.',
+              2: 'Politeness norms are a powerful binding factor.',
+              3: 'Politeness norms are a powerful binding factor.',
+            },
           },
         ],
       },
@@ -748,6 +856,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Obedience decreased when participants were closer to the person being harmed.',
             correctAnswer: true,
             explanation: 'Physical closeness to the victim made the harm feel more real and personal, reducing obedience.',
+            distractorExplanations: {
+              1: 'Physical closeness to the victim made the harm feel more real and personal, reducing obedience.',
+            },
           },
           {
             id: 'psy-sec8-u2-L3-Q2',
@@ -761,6 +872,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Obedience dropped when the authority was remote. Physical presence of the authority figure increases obedience.',
+            distractorExplanations: {
+              0: 'Obedience dropped when the authority was remote.',
+              1: 'Obedience dropped when the authority was remote.',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec8-u2-L3-T2',
@@ -795,6 +911,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Seeing someone else refuse gave participants permission to refuse too. Social support is a powerful counter to obedience.',
+            distractorExplanations: {
+              0: 'Research shows a meaningful effect exists here, not the absence of one.',
+              1: 'Seeing someone else refuse gave participants permission to refuse too.',
+              3: 'Seeing someone else refuse gave participants permission to refuse too.',
+            },
           },
           {
             id: 'psy-sec8-u2-L3-Q5',
@@ -823,6 +944,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Maximum obedience occurs when the victim is distant, the authority is present, and the setting is prestigious.',
+            distractorExplanations: {
+              0: 'Maximum obedience occurs when the victim is distant, the authority is present, and the setting ',
+              1: 'Maximum obedience occurs when the victim is distant, the authority is present, and the setting ',
+              3: 'Maximum obedience occurs when the victim is distant, the authority is present, and the setting ',
+            },
           },
         ],
       },
@@ -847,6 +973,9 @@ export const psySection8Part1: Unit[] = [
             question: 'One ethical criticism of Milgram\'s study was that participants experienced significant psychological distress.',
             correctAnswer: true,
             explanation: 'Many participants sweated, trembled, and showed signs of extreme anxiety. This level of distress raised major ethical concerns.',
+            distractorExplanations: {
+              1: 'Many participants sweated, trembled, and showed signs of extreme anxiety. This level of distress raised major ethical concerns.',
+            },
           },
           {
             id: 'psy-sec8-u2-L4-Q2',
@@ -860,6 +989,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The main ethical concern was that participants suffered real psychological distress during and after the study.',
+            distractorExplanations: {
+              0: 'The main ethical concern was that participants suffered real psychological distress during and ',
+              2: 'The main ethical concern was that participants suffered real psychological distress during and ',
+              3: 'The main ethical concern was that participants suffered real psychological distress during and ',
+            },
           },
           {
             id: 'psy-sec8-u2-L4-T2',
@@ -895,6 +1029,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'IRBs (Institutional Review Boards) now review research proposals to ensure participants are protected from harm.',
+            distractorExplanations: {
+              0: 'IRBs (Institutional Review Boards) now review research proposals to ensure participants are pro',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "permanently" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec8-u2-L4-Q5',
@@ -923,6 +1062,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'All human research must be reviewed by an IRB before it begins, regardless of how low the risk seems.',
+            distractorExplanations: {
+              0: 'All human research must be reviewed by an IRB before it begins, regardless of how low the risk ',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'All human research must be reviewed by an IRB before it begins, regardless of how low the risk ',
+            },
           },
         ],
       },
@@ -1066,6 +1210,9 @@ export const psySection8Part1: Unit[] = [
             question: 'The central route to persuasion involves carefully analyzing the quality of arguments.',
             correctAnswer: true,
             explanation: 'The central route is all about thinking deeply. You evaluate the evidence and logic behind a message.',
+            distractorExplanations: {
+              1: 'The central route is all about thinking deeply. You evaluate the evidence and logic behind a message.',
+            },
           },
           {
             id: 'psy-sec8-u3-L1-Q2',
@@ -1079,6 +1226,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Relying on celebrity endorsement instead of product facts is a classic peripheral route response.',
+            distractorExplanations: {
+              0: 'Relying on celebrity endorsement instead of product facts is a classic peripheral route respons',
+              2: 'Classical conditioning is a different concept that does not explain this particular phenomenon.',
+              3: 'Relying on celebrity endorsement instead of product facts is a classic peripheral route respons',
+            },
           },
           {
             id: 'psy-sec8-u3-L1-T2',
@@ -1122,6 +1274,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Central route processing happens when people are both motivated and able to think carefully about the message.',
+            distractorExplanations: {
+              0: 'Central route processing happens when people are both motivated and able to think carefully abo',
+              2: 'Central route processing happens when people are both motivated and able to think carefully abo',
+              3: 'Central route processing happens when people are both motivated and able to think carefully abo',
+            },
           },
           {
             id: 'psy-sec8-u3-L1-T3',
@@ -1142,6 +1299,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Careful evaluation of policies, records, and debates is central route processing.',
+            distractorExplanations: {
+              0: 'Careful evaluation of policies, records, and debates is central route processing.',
+              1: 'This describes the opposite of what actually happens; careful evaluation of policies, records, and debates is central route processing.',
+              3: 'Careful evaluation of policies, records, and debates is central route processing.',
+            },
           },
         ],
       },
@@ -1166,6 +1328,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Cialdini identified 6 key principles of persuasion and influence.',
             correctAnswer: true,
             explanation: 'Cialdini\'s 6 principles are reciprocity, commitment/consistency, social proof, authority, liking, and scarcity.',
+            distractorExplanations: {
+              1: 'Cialdini\'s 6 principles are reciprocity, commitment/consistency, social proof, authority, liking, and scarcity.',
+            },
           },
           {
             id: 'psy-sec8-u3-L2-Q2',
@@ -1179,6 +1344,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Reciprocity means we feel compelled to return favors. A free sample creates a sense of obligation.',
+            distractorExplanations: {
+              0: 'Reciprocity means we feel compelled to return favors.',
+              2: 'Reciprocity means we feel compelled to return favors.',
+              3: 'This is too absolute; the word "everyone" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec8-u3-L2-T2',
@@ -1213,6 +1383,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Scarcity creates urgency. When something seems rare or limited, we want it more.',
+            distractorExplanations: {
+              0: 'Scarcity creates urgency. When something seems rare or limited, we want it more.',
+              1: 'Scarcity creates urgency. When something seems rare or limited, we want it more.',
+              2: 'Scarcity creates urgency. When something seems rare or limited, we want it more.',
+            },
           },
           {
             id: 'psy-sec8-u3-L2-Q5',
@@ -1241,6 +1416,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Building personal connection through compliments and shared experiences is the liking principle.',
+            distractorExplanations: {
+              0: 'Building personal connection through compliments and shared experiences is the liking principle.',
+              1: 'Building personal connection through compliments and shared experiences is the liking principle.',
+              3: 'Building personal connection through compliments and shared experiences is the liking principle.',
+            },
           },
         ],
       },
@@ -1265,6 +1445,9 @@ export const psySection8Part1: Unit[] = [
             question: 'The foot-in-the-door technique starts with a large request and then scales down.',
             correctAnswer: false,
             explanation: 'It starts with a small request first. Once someone agrees, they\'re more likely to say yes to a bigger request later.',
+            distractorExplanations: {
+              0: 'It starts with a small request first. Once someone agrees, they\'re more likely to say yes to a bigger request later.',
+            },
           },
           {
             id: 'psy-sec8-u3-L3-Q2',
@@ -1278,6 +1461,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Starting with a small request (signing) and escalating to a bigger one (donating) is foot-in-the-door.',
+            distractorExplanations: {
+              0: 'Starting with a small request (signing) and escalating to a bigger one (donating) is foot-in-th',
+              2: 'Starting with a small request (signing) and escalating to a bigger one (donating) is foot-in-th',
+              3: 'Classical conditioning is a different concept that does not explain this particular phenomenon.',
+            },
           },
           {
             id: 'psy-sec8-u3-L3-T2',
@@ -1319,6 +1507,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The small sticker created a self-image as someone who supports safe driving, making the large sign feel consistent.',
+            distractorExplanations: {
+              0: 'The small sticker created a self-image as someone who supports safe driving, making the large s',
+              2: 'The small sticker created a self-image as someone who supports safe driving, making the large s',
+              3: 'The small sticker created a self-image as someone who supports safe driving, making the large s',
+            },
           },
           {
             id: 'psy-sec8-u3-L3-T3',
@@ -1339,6 +1532,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Each step is slightly bigger than the last: free trial, basic plan, premium. This is foot-in-the-door.',
+            distractorExplanations: {
+              0: 'Each step is slightly bigger than the last: free trial, basic plan, premium.',
+              2: 'Each step is slightly bigger than the last: free trial, basic plan, premium.',
+              3: 'Each step is slightly bigger than the last: free trial, basic plan, premium.',
+            },
           },
         ],
       },
@@ -1363,6 +1561,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Door-in-the-face starts with a small request and then asks for more.',
             correctAnswer: false,
             explanation: 'It\'s the opposite. Door-in-the-face starts with an unreasonably large request, then makes a smaller one that seems reasonable by comparison.',
+            distractorExplanations: {
+              0: 'It\'s the opposite. Door-in-the-face starts with an unreasonably large request, then makes a smaller one that seems reasonable by c',
+            },
           },
           {
             id: 'psy-sec8-u3-L4-Q2',
@@ -1376,6 +1577,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Starting with an extreme request (20 hours) and then reducing it (2 hours) is the door-in-the-face technique.',
+            distractorExplanations: {
+              0: 'Starting with an extreme request (20 hours) and then reducing it (2 hours) is the door-in-the-f',
+              2: 'Starting with an extreme request (20 hours) and then reducing it (2 hours) is the door-in-the-f',
+              3: 'Starting with an extreme request (20 hours) and then reducing it (2 hours) is the door-in-the-f',
+            },
           },
           {
             id: 'psy-sec8-u3-L4-T2',
@@ -1417,6 +1623,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The initial request must be large enough to refuse but still within the realm of possibility. Truly absurd requests break the technique.',
+            distractorExplanations: {
+              0: 'The initial request must be large enough to refuse but still within the realm of possibility.',
+              1: 'The initial request must be large enough to refuse but still within the realm of possibility.',
+              3: 'The initial request must be large enough to refuse but still within the realm of possibility.',
+            },
           },
           {
             id: 'psy-sec8-u3-L4-T3',
@@ -1437,6 +1648,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The extreme request (2-week trip) was rejected, making the smaller request (overnight camping) seem very reasonable.',
+            distractorExplanations: {
+              0: 'The extreme request (2-week trip) was rejected, making the smaller request (overnight camping) ',
+              1: 'The extreme request (2-week trip) was rejected, making the smaller request (overnight camping) ',
+              3: 'The extreme request (2-week trip) was rejected, making the smaller request (overnight camping) ',
+            },
           },
         ],
       },
@@ -1581,6 +1797,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Conformity is pressure from peers and groups. Obedience is responding to direct commands from authority figures.',
+            distractorExplanations: {
+              1: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'Conformity is pressure from peers and groups.',
+            },
           },
           {
             id: 'psy-sec8-u4-L1-Q2',
@@ -1604,6 +1825,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Asch\'s line experiment studied obedience to authority figures.',
             correctAnswer: false,
             explanation: 'Asch studied conformity to group pressure, not obedience. Milgram studied obedience to authority.',
+            distractorExplanations: {
+              0: 'Asch studied conformity to group pressure, not obedience. Milgram studied obedience to authority.',
+            },
           },
           {
             id: 'psy-sec8-u4-L1-Q4',
@@ -1646,6 +1870,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Following a doctor\'s orders despite personal doubts is obedience to authority, similar to what Milgram demonstrated.',
+            distractorExplanations: {
+              0: 'Following a doctor\'s orders despite personal doubts is obedience to authority, similar to what ',
+              1: 'Following a doctor\'s orders despite personal doubts is obedience to authority, similar to what ',
+              3: 'Following a doctor\'s orders despite personal doubts is obedience to authority, similar to what ',
+            },
           },
         ],
       },
@@ -1677,6 +1906,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The large request (whole weekend) was rejected, making the smaller request (Saturday morning) seem reasonable. This is door-in-the-face.',
+            distractorExplanations: {
+              0: 'The large request (whole weekend) was rejected, making the smaller request (Saturday morning) s',
+              2: 'The large request (whole weekend) was rejected, making the smaller request (Saturday morning) s',
+              3: 'The large request (whole weekend) was rejected, making the smaller request (Saturday morning) s',
+            },
           },
           {
             id: 'psy-sec8-u4-L2-Q2',
@@ -1690,6 +1924,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Even one ally breaks the unanimity that drives conformity. This was Asch\'s most important finding about reducing conformity.',
+            distractorExplanations: {
+              0: 'Even one ally breaks the unanimity that drives conformity.',
+              1: 'Even one ally breaks the unanimity that drives conformity.',
+              3: 'Even one ally breaks the unanimity that drives conformity.',
+            },
           },
           {
             id: 'psy-sec8-u4-L2-Q3',
@@ -1720,6 +1959,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'In an ambiguous situation, the new employee uses others\' calm behavior as information that the alarm isn\'t serious.',
+            distractorExplanations: {
+              0: 'In an ambiguous situation, the new employee uses others\' calm behavior as information that the ',
+              1: 'This describes the opposite of what actually happens; in an ambiguous situation, the new employee uses others\' calm behavior as information that the ',
+              3: 'In an ambiguous situation, the new employee uses others\' calm behavior as information that the ',
+            },
           },
           {
             id: 'psy-sec8-u4-L2-Q5',
@@ -1747,6 +1991,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Maximum obedience occurs with the authority physically present, the victim in a separate room, and a prestigious institutional setting.',
+            distractorExplanations: {
+              1: 'Maximum obedience occurs with the authority physically present, the victim in a separate room, ',
+              2: 'Maximum obedience occurs with the authority physically present, the victim in a separate room, ',
+              3: 'Maximum obedience occurs with the authority physically present, the victim in a separate room, ',
+            },
           },
         ],
       },
@@ -1890,6 +2139,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Social facilitation means you always perform better when others are present.',
             correctAnswer: false,
             explanation: 'Social facilitation improves performance on easy or well-learned tasks. For difficult or new tasks, the presence of others can actually hurt performance.',
+            distractorExplanations: {
+              0: 'Social facilitation improves performance on easy or well-learned tasks.',
+            },
           },
           {
             id: 'psy-sec8-u5-L1-Q2',
@@ -1903,6 +2155,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Piano playing is well-practiced for a professional. The audience\'s presence enhances this mastered skill through social facilitation.',
+            distractorExplanations: {
+              0: 'Piano playing is well-practiced for a professional.',
+              2: 'Piano playing is well-practiced for a professional.',
+              3: 'Piano playing is well-practiced for a professional.',
+            },
           },
           {
             id: 'psy-sec8-u5-L1-T2',
@@ -1946,6 +2203,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Zajonc proposed that others\' presence increases physiological arousal, which strengthens dominant (well-learned) responses.',
+            distractorExplanations: {
+              0: 'Zajonc proposed that others\' presence increases physiological arousal, which strengthens domina',
+              2: 'Zajonc proposed that others\' presence increases physiological arousal, which strengthens domina',
+              3: 'Research shows a meaningful effect exists here, not the absence of one.',
+            },
           },
           {
             id: 'psy-sec8-u5-L1-T3',
@@ -1966,6 +2228,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'If the material is well-learned, the presence of others should enhance performance through social facilitation.',
+            distractorExplanations: {
+              0: 'If the material is well-learned, the presence of others should enhance performance through soci',
+              2: 'If the material is well-learned, the presence of others should enhance performance through soci',
+              3: 'If the material is well-learned, the presence of others should enhance performance through soci',
+            },
           },
         ],
       },
@@ -1991,6 +2258,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Social loafing means people tend to work harder in groups than they do alone.',
             correctAnswer: false,
             explanation: 'Social loafing is the opposite. People reduce their effort when individual contributions can\'t be identified within the group.',
+            distractorExplanations: {
+              0: 'Social loafing is the opposite. People reduce their effort when individual contributions can\'t be identified within the group.',
+            },
           },
           {
             id: 'psy-sec8-u5-L2-Q2',
@@ -2004,6 +2274,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Reduced individual effort in a group task where contributions blend together is social loafing.',
+            distractorExplanations: {
+              0: 'Reduced individual effort in a group task where contributions blend together is social loafing.',
+              1: 'Reduced individual effort in a group task where contributions blend together is social loafing.',
+              3: 'Reduced individual effort in a group task where contributions blend together is social loafing.',
+            },
           },
           {
             id: 'psy-sec8-u5-L2-T2',
@@ -2045,6 +2320,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Assigning specific tasks makes individual contributions identifiable, which reduces loafing.',
+            distractorExplanations: {
+              0: 'Assigning specific tasks makes individual contributions identifiable, which reduces loafing.',
+              2: 'Assigning specific tasks makes individual contributions identifiable, which reduces loafing.',
+              3: 'Assigning specific tasks makes individual contributions identifiable, which reduces loafing.',
+            },
           },
           {
             id: 'psy-sec8-u5-L2-T3',
@@ -2065,6 +2345,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'When individual contributions are anonymous, people put in less effort. This is social loafing.',
+            distractorExplanations: {
+              0: 'When individual contributions are anonymous, people put in less effort. This is social loafing.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'When individual contributions are anonymous, people put in less effort. This is social loafing.',
+            },
           },
         ],
       },
@@ -2089,6 +2374,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Groupthink produces better decisions because everyone agrees.',
             correctAnswer: false,
             explanation: 'Groupthink produces worse decisions. Suppressing disagreement means flaws in the plan go unchallenged.',
+            distractorExplanations: {
+              0: 'Groupthink produces worse decisions. Suppressing disagreement means flaws in the plan go unchallenged.',
+            },
           },
           {
             id: 'psy-sec8-u5-L3-Q2',
@@ -2102,6 +2390,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Groupthink thrives in cohesive groups with strong leaders, isolation from outsiders, and pressure to agree.',
+            distractorExplanations: {
+              0: 'Groupthink thrives in cohesive groups with strong leaders, isolation from outsiders, and pressu',
+              2: 'Groupthink thrives in cohesive groups with strong leaders, isolation from outsiders, and pressu',
+              3: 'Groupthink thrives in cohesive groups with strong leaders, isolation from outsiders, and pressu',
+            },
           },
           {
             id: 'psy-sec8-u5-L3-T2',
@@ -2146,6 +2439,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Janis studied disastrous policy decisions and found that groupthink was a common factor in these failures.',
+            distractorExplanations: {
+              0: 'Janis studied disastrous policy decisions and found that groupthink was a common factor in thes',
+              1: 'Janis studied disastrous policy decisions and found that groupthink was a common factor in thes',
+              3: 'Janis studied disastrous policy decisions and found that groupthink was a common factor in thes',
+            },
           },
           {
             id: 'psy-sec8-u5-L3-T3',
@@ -2166,6 +2464,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Self-censorship is a classic groupthink symptom. The engineer silenced their legitimate concerns to avoid disrupting the group\'s enthusiasm.',
+            distractorExplanations: {
+              0: 'This describes the opposite of what actually happens; self-censorship is a classic groupthink symptom.',
+              2: 'Self-censorship is a classic groupthink symptom.',
+              3: 'Self-censorship is a classic groupthink symptom.',
+            },
           },
         ],
       },
@@ -2190,6 +2493,9 @@ export const psySection8Part1: Unit[] = [
             question: 'Deindividuation increases personal responsibility and self-awareness.',
             correctAnswer: false,
             explanation: 'Deindividuation decreases self-awareness and personal responsibility. People feel anonymous and act less restrained.',
+            distractorExplanations: {
+              0: 'Deindividuation decreases self-awareness and personal responsibility. People feel anonymous and act less restrained.',
+            },
           },
           {
             id: 'psy-sec8-u5-L4-Q2',
@@ -2203,6 +2509,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Anonymity in large groups is the primary trigger. When nobody can identify you, self-restraint decreases.',
+            distractorExplanations: {
+              0: 'Anonymity in large groups is the primary trigger.',
+              1: 'Anonymity in large groups is the primary trigger.',
+              3: 'Anonymity in large groups is the primary trigger.',
+            },
           },
           {
             id: 'psy-sec8-u5-L4-T2',
@@ -2245,6 +2556,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Zimbardo showed that anonymizing conditions (hoods, costumes) increased aggressive behavior through deindividuation.',
+            distractorExplanations: {
+              0: 'Zimbardo showed that anonymizing conditions (hoods, costumes) increased aggressive behavior thr',
+              2: 'Zimbardo showed that anonymizing conditions (hoods, costumes) increased aggressive behavior thr',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec8-u5-L4-T3',
@@ -2265,6 +2581,11 @@ export const psySection8Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Online anonymity creates deindividuation. Without personal identification, normal social restraints weaken.',
+            distractorExplanations: {
+              0: 'Online anonymity creates deindividuation.',
+              1: 'Online anonymity creates deindividuation.',
+              3: 'Online anonymity creates deindividuation.',
+            },
           },
         ],
       },

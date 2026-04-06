@@ -41,6 +41,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "A day on Mars lasts about 24.6 hours, very close to Earth's day.",
             correctAnswer: true,
             explanation: "Mars's rotation period is 24 hours and 37 minutes. This similarity makes it easier for human biology to adapt.",
+            distractorExplanations: {
+              1: 'This statement is correct because mars\'s rotation period is 24 hours and 37 minutes. This similarity makes it easier for human biology to adapt.',
+            },
           },
           {
             id: "sp-sec14-u1-L1-Q2",
@@ -54,6 +57,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With current propulsion technology, a trip to Mars takes roughly six to nine months depending on orbital alignment.",
+            distractorExplanations: {
+              1: 'About two weeks is incorrect; with current propulsion technology, a trip to Mars takes roughly six to nine months depending on orbital alignment.',
+              2: 'About five years is incorrect; with current propulsion technology, a trip to Mars takes roughly six to nine months depending on orbital alignment.',
+              3: 'About three days is incorrect; with current propulsion technology, a trip to Mars takes roughly six to nine months depending on orbital alignment.',
+            },
           },
           {
             id: "sp-sec14-u1-L1-T2",
@@ -128,6 +136,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "Mars's atmosphere is thick enough to breathe with a simple oxygen mask.",
             correctAnswer: false,
             explanation: "Mars's atmosphere is only 1% as thick as Earth's and is mostly CO2. You need a full pressure suit or sealed habitat to survive.",
+            distractorExplanations: {
+              0: 'Mars\'s atmosphere is only 1% as thick as Earth\'s and is mostly CO2. You need a full pressure suit or sealed habitat to survive.',
+            },
           },
           {
             id: "sp-sec14-u1-L2-Q2",
@@ -141,6 +152,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without a strong magnetic field or thick atmosphere, Mars gets bombarded by cosmic rays and solar particle events that damage DNA.",
+            distractorExplanations: {
+              1: 'Radioactive rocks on the surface is incorrect; without a strong magnetic field or thick atmosphere, Mars gets bombarded by cosmic rays and solar particle events that damage DNA.',
+              2: 'Ultraviolet light from the Sun is incorrect; without a strong magnetic field or thick atmosphere, Mars gets bombarded by cosmic rays and solar particle events that damage DNA.',
+              3: 'Microwave radiation from the soil is incorrect; without a strong magnetic field or thick atmosphere, Mars gets bombarded by cosmic rays and solar particle events that damage DNA.',
+            },
           },
           {
             id: "sp-sec14-u1-L2-T2",
@@ -186,6 +202,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The speed of light limits communication. At best, there's an 8-minute round trip. At worst, nearly 48 minutes.",
+            distractorExplanations: {
+              1: 'Mars blocks all radio frequencies is incorrect; the speed of light limits communication. At best, there\'s an 8-minute round trip. At worst, nearly 48 minutes.',
+              2: 'Earth\'s atmosphere absorbs Mars signals is incorrect; the speed of light limits communication. At best, there\'s an 8-minute round trip. At worst, nearly 48 minutes.',
+              3: 'Satellites can\'t relay between planets is incorrect; the speed of light limits communication. At best, there\'s an 8-minute round trip. At worst, nearly 48 minutes.',
+            },
           },
           {
             id: "sp-sec14-u1-L2-Q6",
@@ -200,6 +221,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With a 40-minute round trip for advice, colonists must act independently. Sealing the leak immediately is critical. Waiting could be fatal.",
+            distractorExplanations: {
+              0: 'Wait for Mission Control to respond with instructions is incorrect; with a 40-minute round trip for advice, colonists must act independently. Sealing the leak immediately is critical. Waiting could be fatal.',
+              2: 'Evacuate the entire base to the surface is incorrect; with a 40-minute round trip for advice, colonists must act independently. Sealing the leak immediately is critical. Waiting could be fatal.',
+              3: 'Increase the habitat pressure to compensate for the leak is incorrect; with a 40-minute round trip for advice, colonists must act independently. Sealing the leak immediately is critical. Waiting could be fatal.',
+            },
           },
         ],
       },
@@ -225,6 +251,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "Terraforming Mars could be completed within a few decades using current technology.",
             correctAnswer: false,
             explanation: "Terraforming Mars would take centuries to millennia, and we don't yet have the technology to do it. It remains a theoretical concept.",
+            distractorExplanations: {
+              0: 'Terraforming Mars would take centuries to millennia, and we don\'t yet have the technology to do it. It remains a theoretical concept.',
+            },
           },
           {
             id: "sp-sec14-u1-L3-Q2",
@@ -238,6 +267,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Releasing CO2 from polar caps and soil would thicken the atmosphere and create a greenhouse effect, warming the planet further.",
+            distractorExplanations: {
+              1: 'Planting forests on the surface is incorrect; releasing CO2 from polar caps and soil would thicken the atmosphere and create a greenhouse effect, warming the planet further.',
+              2: 'Building cities across the equator is incorrect; releasing CO2 from polar caps and soil would thicken the atmosphere and create a greenhouse effect, warming the planet further.',
+              3: 'Spinning Mars faster to create gravity is incorrect; releasing CO2 from polar caps and soil would thicken the atmosphere and create a greenhouse effect, warming the planet further.',
+            },
           },
           {
             id: "sp-sec14-u1-L3-T2",
@@ -285,6 +319,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Paraterraforming focuses on enclosed, controlled environments rather than trying to change the entire planet's atmosphere.",
+            distractorExplanations: {
+              1: 'Sending bacteria to terraform the soil is incorrect; paraterraforming focuses on enclosed, controlled environments rather than trying to change the entire planet\'s atmosphere.',
+              2: 'Heating Mars from orbit with giant mirrors is incorrect; paraterraforming focuses on enclosed, controlled environments rather than trying to change the entire planet\'s atmosphere.',
+              3: 'Moving Mars closer to the Sun is incorrect; paraterraforming focuses on enclosed, controlled environments rather than trying to change the entire planet\'s atmosphere.',
+            },
           },
           {
             id: "sp-sec14-u1-L3-Q6",
@@ -298,6 +337,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Paraterraforming with enclosed habitats is achievable with extensions of current technology. Full terraforming would take centuries and technology we don't have.",
+            distractorExplanations: {
+              0: 'Full planetary terraforming with gene-edited bacteria is incorrect; paraterraforming with enclosed habitats is achievable with extensions of current technology. Full terraforming would take centuries and technology we don\'t have.',
+              1: 'Moving Mars into Earth\'s orbit is incorrect; paraterraforming with enclosed habitats is achievable with extensions of current technology. Full terraforming would take centuries and technology we don\'t have.',
+              3: 'Detonating nuclear bombs at the poles to release CO2 is incorrect; paraterraforming with enclosed habitats is achievable with extensions of current technology. Full terraforming would take centuries and technology we don\'t have.',
+            },
           },
         ],
       },
@@ -337,6 +381,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Every kilogram sent to Mars costs enormous amounts. A self-sustaining base must recycle air, water, and waste to minimize resupply needs.",
+            distractorExplanations: {
+              1: 'Mars has no gravity to hold supplies is incorrect; every kilogram sent to Mars costs enormous amounts. A self-sustaining base must recycle air, water, and waste to minimize resupply needs.',
+              2: 'Recycling generates extra energy is incorrect; every kilogram sent to Mars costs enormous amounts. A self-sustaining base must recycle air, water, and waste to minimize resupply needs.',
+              3: 'NASA regulations require it for all missions is incorrect; every kilogram sent to Mars costs enormous amounts. A self-sustaining base must recycle air, water, and waste to minimize resupply needs.',
+            },
           },
           {
             id: "sp-sec14-u1-L4-T2",
@@ -381,6 +430,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Water and radiation shelter are the hardest problems to solve. A lava tube provides natural shielding, and nearby water ice supplies drinking water and fuel.",
+            distractorExplanations: {
+              0: 'Site B, because warmth is the most important factor is incorrect; water and radiation shelter are the hardest problems to solve. A lava tube provides natural shielding, and nearby water ice supplies drinking water and fuel.',
+              2: 'Neither site. Build the base at the south pole for maximu... is incorrect; water and radiation shelter are the hardest problems to solve. A lava tube provides natural shielding, and nearby water ice supplies drinking water and fuel.',
+              3: 'Choose randomly because all locations on Mars are equally... is incorrect; water and radiation shelter are the hardest problems to solve. A lava tube provides natural shielding, and nearby water ice supplies drinking water and fuel.',
+            },
           },
           {
             id: "sp-sec14-u1-L4-Q6",
@@ -553,6 +607,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "The Moon is about three days of travel from Earth.",
             correctAnswer: true,
             explanation: "At typical spacecraft speeds, the Moon is roughly three days away. This makes rescue and resupply much more practical than for Mars.",
+            distractorExplanations: {
+              1: 'This statement is correct because at typical spacecraft speeds, the Moon is roughly three days away. This makes rescue and resupply much more practical than for Mars.',
+            },
           },
           {
             id: "sp-sec14-u2-L1-Q2",
@@ -566,6 +623,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Moon's proximity means help is just days away. Colonists can test technologies and procedures before committing to the months-long Mars journey.",
+            distractorExplanations: {
+              0: 'It has the same atmosphere as Mars is incorrect; the Moon\'s proximity means help is just days away. Colonists can test technologies and procedures before committing to the months-long Mars journey.',
+              2: 'It has stronger gravity than Earth is incorrect; the Moon\'s proximity means help is just days away. Colonists can test technologies and procedures before committing to the months-long Mars journey.',
+              3: 'It rains frequently on the lunar surface is incorrect; the Moon\'s proximity means help is just days away. Colonists can test technologies and procedures before committing to the months-long Mars journey.',
+            },
           },
           {
             id: "sp-sec14-u2-L1-T2",
@@ -608,6 +670,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Peaks of near-eternal light provide solar power. Nearby permanently shadowed craters preserve water ice. This combination is unique to the poles.",
+            distractorExplanations: {
+              0: 'It has the warmest temperatures on the Moon is incorrect; peaks of near-eternal light provide solar power. Nearby permanently shadowed craters preserve water ice. This combination is unique to the poles.',
+              2: 'It faces Earth directly for easy communication is incorrect; peaks of near-eternal light provide solar power. Nearby permanently shadowed craters preserve water ice. This combination is unique to the poles.',
+              3: 'It has a thicker atmosphere than other regions is incorrect; peaks of near-eternal light provide solar power. Nearby permanently shadowed craters preserve water ice. This combination is unique to the poles.',
+            },
           },
           {
             id: "sp-sec14-u2-L1-Q6",
@@ -622,6 +689,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Water ice is the most critical resource. Solar gaps can be bridged with batteries, but you can't create water from nothing. ISRU water extraction enables long-term survival.",
+            distractorExplanations: {
+              0: 'Site A, because solar power is more important than water is incorrect; water ice is the most critical resource. Solar gaps can be bridged with batteries, but you can\'t create water from nothing. ISRU water extraction enables long-term survival.',
+              2: 'Neither site. Build at the equator where it\'s warmer is incorrect; water ice is the most critical resource. Solar gaps can be bridged with batteries, but you can\'t create water from nothing. ISRU water extraction enables long-term survival.',
+              3: 'Choose based on which crater has the prettiest view of Earth is incorrect; water ice is the most critical resource. Solar gaps can be bridged with batteries, but you can\'t create water from nothing. ISRU water extraction enables long-term survival.',
+            },
           },
         ],
       },
@@ -646,6 +718,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "Water ice on the Moon can be used to produce rocket fuel.",
             correctAnswer: true,
             explanation: "Electrolysis splits water into hydrogen and oxygen, which are the components of powerful rocket propellant. A lunar fuel depot could dramatically lower mission costs.",
+            distractorExplanations: {
+              1: 'This statement is correct because electrolysis splits water into hydrogen and oxygen, which are the components of powerful rocket propellant. A lunar fuel depot could dramatically lower mission costs.',
+            },
           },
           {
             id: "sp-sec14-u2-L2-Q2",
@@ -659,6 +734,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Temperatures in permanently shadowed craters drop below minus 230 degrees Celsius. Water ice delivered by comets has survived there for billions of years.",
+            distractorExplanations: {
+              1: 'In lakes on the lunar equator is incorrect; temperatures in permanently shadowed craters drop below minus 230 degrees Celsius. Water ice delivered by comets has survived there for billions of years.',
+              2: 'Flowing in underground rivers is incorrect; temperatures in permanently shadowed craters drop below minus 230 degrees Celsius. Water ice delivered by comets has survived there for billions of years.',
+              3: 'Evenly distributed across the entire surface is incorrect; temperatures in permanently shadowed craters drop below minus 230 degrees Celsius. Water ice delivered by comets has survived there for billions of years.',
+            },
           },
           {
             id: "sp-sec14-u2-L2-T2",
@@ -702,6 +782,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Helium-3 fusion produces almost no radioactive waste. The Moon's surface has been collecting it from solar wind for billions of years.",
+            distractorExplanations: {
+              1: 'It makes rocket engines more efficient is incorrect; helium-3 fusion produces almost no radioactive waste. The Moon\'s surface has been collecting it from solar wind for billions of years.',
+              2: 'It\'s used to inflate space station modules is incorrect; helium-3 fusion produces almost no radioactive waste. The Moon\'s surface has been collecting it from solar wind for billions of years.',
+              3: 'It creates artificial gravity fields is incorrect; helium-3 fusion produces almost no radioactive waste. The Moon\'s surface has been collecting it from solar wind for billions of years.',
+            },
           },
           {
             id: "sp-sec14-u2-L2-Q6",
@@ -735,6 +820,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "The Lunar Gateway will orbit Earth, not the Moon.",
             correctAnswer: false,
             explanation: "Gateway will orbit the Moon in a near-rectilinear halo orbit (NRHO). This unique path keeps it close to the Moon while requiring minimal fuel to maintain.",
+            distractorExplanations: {
+              0: 'Gateway will orbit the Moon in a near-rectilinear halo orbit (NRHO). This unique path keeps it close to the Moon while requiring minimal fuel to maintain.',
+            },
           },
           {
             id: "sp-sec14-u2-L3-Q2",
@@ -748,6 +836,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Gateway supports crew transfers to the lunar surface and serves as a testbed for deep space technologies needed for Mars missions.",
+            distractorExplanations: {
+              1: 'A replacement for the International Space Station is incorrect; gateway supports crew transfers to the lunar surface and serves as a testbed for deep space technologies needed for Mars missions.',
+              2: 'A satellite for Earth weather monitoring is incorrect; gateway supports crew transfers to the lunar surface and serves as a testbed for deep space technologies needed for Mars missions.',
+              3: 'A telescope platform for observing galaxies is incorrect; gateway supports crew transfers to the lunar surface and serves as a testbed for deep space technologies needed for Mars missions.',
+            },
           },
           {
             id: "sp-sec14-u2-L3-T2",
@@ -777,6 +870,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Gateway lets crews practice living and working beyond low Earth orbit. Systems for radiation protection, life support, and autonomy are tested in deep space conditions.",
+            distractorExplanations: {
+              1: 'It provides a faster route to Mars is incorrect; gateway lets crews practice living and working beyond low Earth orbit. Systems for radiation protection, life support, and autonomy are tested in deep space conditions.',
+              2: 'It generates artificial gravity for Mars trips is incorrect; gateway lets crews practice living and working beyond low Earth orbit. Systems for radiation protection, life support, and autonomy are tested in deep space conditions.',
+              3: 'It manufactures rocket fuel from moonlight is incorrect; gateway lets crews practice living and working beyond low Earth orbit. Systems for radiation protection, life support, and autonomy are tested in deep space conditions.',
+            },
           },
           {
             id: "sp-sec14-u2-L3-T3",
@@ -829,6 +927,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "Human construction crews will build the first lunar base from scratch after landing.",
             correctAnswer: false,
             explanation: "Robots will do the heavy construction before humans arrive. This minimizes risk and ensures the base is functional when crew lands.",
+            distractorExplanations: {
+              0: 'Robots will do the heavy construction before humans arrive. This minimizes risk and ensures the base is functional when crew lands.',
+            },
           },
           {
             id: "sp-sec14-u2-L4-Q2",
@@ -842,6 +943,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Launching materials from Earth costs thousands of dollars per kilogram. Using local regolith eliminates this cost for the bulk of the structure.",
+            distractorExplanations: {
+              1: 'Regolith is stronger than steel is incorrect; launching materials from Earth costs thousands of dollars per kilogram. Using local regolith eliminates this cost for the bulk of the structure.',
+              2: '3D printing is faster than traditional construction is incorrect; launching materials from Earth costs thousands of dollars per kilogram. Using local regolith eliminates this cost for the bulk of the structure.',
+              3: 'Regolith has a beautiful natural color is incorrect; launching materials from Earth costs thousands of dollars per kilogram. Using local regolith eliminates this cost for the bulk of the structure.',
+            },
           },
           {
             id: "sp-sec14-u2-L4-T2",
@@ -899,6 +1005,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A combined approach uses natural shelter where available, 3D prints with local materials, and applies regolith shielding. This minimizes Earth launches while maximizing protection.",
+            distractorExplanations: {
+              0: 'Ship all materials from Earth for maximum quality is incorrect; a combined approach uses natural shelter where available, 3D prints with local materials, and applies regolith shielding. This minimizes Earth launches while maximizing protection.',
+              1: 'Use only inflatable modules without any regolith covering is incorrect; a combined approach uses natural shelter where available, 3D prints with local materials, and applies regolith shielding. This minimizes Earth launches while maximizing protection.',
+              3: 'Build entirely underground with no surface infrastructure is incorrect; a combined approach uses natural shelter where available, 3D prints with local materials, and applies regolith shielding. This minimizes Earth launches while maximizing protection.',
+            },
           },
         ],
       },
@@ -1043,6 +1154,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "Some asteroids contain more platinum than has ever been mined on Earth.",
             correctAnswer: true,
             explanation: "Metallic asteroids can contain enormous quantities of platinum-group metals. The asteroid Psyche alone is estimated to hold vast reserves.",
+            distractorExplanations: {
+              1: 'This statement is correct because metallic asteroids can contain enormous quantities of platinum-group metals. The asteroid Psyche alone is estimated to hold vast reserves.',
+            },
           },
           {
             id: "sp-sec14-u3-L1-Q2",
@@ -1056,6 +1170,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Water is the most immediately useful resource. It supports life and can be split into hydrogen and oxygen for rocket fuel. Precious metals are valuable but harder to return to Earth profitably.",
+            distractorExplanations: {
+              1: 'Gold, for jewelry is incorrect; water is the most immediately useful resource. It supports life and can be split into hydrogen and oxygen for rocket fuel. Precious metals are valuable but harder to return to Earth profitably.',
+              2: 'Diamonds, for luxury goods is incorrect; water is the most immediately useful resource. It supports life and can be split into hydrogen and oxygen for rocket fuel. Precious metals are valuable but harder to return to Earth profitably.',
+              3: 'Uranium, for nuclear reactors is incorrect; water is the most immediately useful resource. It supports life and can be split into hydrogen and oxygen for rocket fuel. Precious metals are valuable but harder to return to Earth profitably.',
+            },
           },
           {
             id: "sp-sec14-u3-L1-T2",
@@ -1099,6 +1218,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "If rare metals can be sourced from asteroids, demand for environmentally destructive mining on Earth decreases significantly.",
+            distractorExplanations: {
+              1: 'Asteroids absorb Earth\'s pollution is incorrect; if rare metals can be sourced from asteroids, demand for environmentally destructive mining on Earth decreases significantly.',
+              2: 'Mining in space creates oxygen for Earth is incorrect; if rare metals can be sourced from asteroids, demand for environmentally destructive mining on Earth decreases significantly.',
+              3: 'It makes Earth\'s gravity weaker, reducing strain on build... is incorrect; if rare metals can be sourced from asteroids, demand for environmentally destructive mining on Earth decreases significantly.',
+            },
           },
           {
             id: "sp-sec14-u3-L1-Q6",
@@ -1113,6 +1237,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Water has immediate value for space operations (fuel, life support) and the near-Earth location keeps mission costs manageable. Platinum has more total value but is harder and costlier to access.",
+            distractorExplanations: {
+              0: 'Asteroid B, because platinum is more valuable is incorrect; water has immediate value for space operations (fuel, life support) and the near-Earth location keeps mission costs manageable. Platinum has more total value but is harder and costlier to access.',
+              1: 'Both at the same time to maximize returns is incorrect; water has immediate value for space operations (fuel, life support) and the near-Earth location keeps mission costs manageable. Platinum has more total value but is harder and costlier to access.',
+              3: 'Neither. Wait for better technology is incorrect; water has immediate value for space operations (fuel, life support) and the near-Earth location keeps mission costs manageable. Platinum has more total value but is harder and costlier to access.',
+            },
           },
         ],
       },
@@ -1137,6 +1266,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "Every asteroid in the solar system is worth mining for resources.",
             correctAnswer: false,
             explanation: "Most asteroids are too far away, too small, or too poor in valuable resources. Only specific near-Earth asteroids with the right composition are economically viable.",
+            distractorExplanations: {
+              0: 'Most asteroids are too far away, too small, or too poor in valuable resources. Only specific near-Earth asteroids with the right composition are economically viable.',
+            },
           },
           {
             id: "sp-sec14-u3-L2-Q2",
@@ -1150,6 +1282,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Spectroscopy analyzes light reflected from an asteroid to identify minerals. Different minerals absorb and reflect specific wavelengths.",
+            distractorExplanations: {
+              1: 'Sonar is incorrect; spectroscopy analyzes light reflected from an asteroid to identify minerals. Different minerals absorb and reflect specific wavelengths.',
+              2: 'Magnetic resonance imaging is incorrect; spectroscopy analyzes light reflected from an asteroid to identify minerals. Different minerals absorb and reflect specific wavelengths.',
+              3: 'Carbon dating is incorrect; spectroscopy analyzes light reflected from an asteroid to identify minerals. Different minerals absorb and reflect specific wavelengths.',
+            },
           },
           {
             id: "sp-sec14-u3-L2-T2",
@@ -1198,6 +1335,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The cost per kilogram of returning material to Earth is enormous. Processing in space extracts only the valuable resources, reducing transport mass and cost dramatically.",
+            distractorExplanations: {
+              1: 'Raw asteroid rock is toxic to Earth\'s atmosphere is incorrect; the cost per kilogram of returning material to Earth is enormous. Processing in space extracts only the valuable resources, reducing transport mass and cost dramatically.',
+              2: 'Processing is faster in microgravity is incorrect; the cost per kilogram of returning material to Earth is enormous. Processing in space extracts only the valuable resources, reducing transport mass and cost dramatically.',
+              3: 'Earth doesn\'t have the technology to process it is incorrect; the cost per kilogram of returning material to Earth is enormous. Processing in space extracts only the valuable resources, reducing transport mass and cost dramatically.',
+            },
           },
           {
             id: "sp-sec14-u3-L2-Q6",
@@ -1231,6 +1373,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "Water in space is only useful for drinking.",
             correctAnswer: false,
             explanation: "Water is far more versatile in space: it's used for drinking, farming, radiation shielding, oxygen production, and rocket fuel through electrolysis.",
+            distractorExplanations: {
+              0: 'Water is far more versatile in space: it\'s used for drinking, farming, radiation shielding, oxygen production, and rocket fuel through electrolysis.',
+            },
           },
           {
             id: "sp-sec14-u3-L3-Q2",
@@ -1260,6 +1405,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Launching fuel from Earth is extremely expensive. If spacecraft can refuel in orbit using water mined from asteroids or the Moon, they launch much lighter and cheaper.",
+            distractorExplanations: {
+              1: 'Fuel depots generate free energy from sunlight is incorrect; launching fuel from Earth is extremely expensive. If spacecraft can refuel in orbit using water mined from asteroids or the Moon, they launch much lighter and cheaper.',
+              2: 'They eliminate the need for rockets entirely is incorrect; launching fuel from Earth is extremely expensive. If spacecraft can refuel in orbit using water mined from asteroids or the Moon, they launch much lighter and cheaper.',
+              3: 'They slow down spacecraft to save fuel is incorrect; launching fuel from Earth is extremely expensive. If spacecraft can refuel in orbit using water mined from asteroids or the Moon, they launch much lighter and cheaper.',
+            },
           },
           {
             id: "sp-sec14-u3-L3-Q4",
@@ -1288,6 +1438,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Low Earth orbit has the most traffic and demand. Spacecraft headed anywhere can refuel there. It's the most commercially viable location to start.",
+            distractorExplanations: {
+              0: 'On the asteroid itself for cheapest extraction is incorrect; low Earth orbit has the most traffic and demand. Spacecraft headed anywhere can refuel there. It\'s the most commercially viable location to start.',
+              2: 'On the surface of Mars for future colonists is incorrect; low Earth orbit has the most traffic and demand. Spacecraft headed anywhere can refuel there. It\'s the most commercially viable location to start.',
+              3: 'At a Sun-Earth Lagrange point for deep space missions is incorrect; low Earth orbit has the most traffic and demand. Spacecraft headed anywhere can refuel there. It\'s the most commercially viable location to start.',
+            },
           },
           {
             id: "sp-sec14-u3-L3-Q6",
@@ -1325,6 +1480,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "Platinum-group metals are used in smartphones, catalytic converters, and fuel cells.",
             correctAnswer: true,
             explanation: "These metals are critical for modern technology. Platinum catalyzes chemical reactions. Iridium hardens alloys. Palladium is used in electronics and emission controls.",
+            distractorExplanations: {
+              1: 'This statement is correct because these metals are critical for modern technology. Platinum catalyzes chemical reactions. Iridium hardens alloys. Palladium is used in electronics and emission controls.',
+            },
           },
           {
             id: "sp-sec14-u3-L4-Q2",
@@ -1338,6 +1496,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Rare earth elements aren't actually rare in the crust, but they're rarely found in concentrated, economically mineable deposits. Extraction is expensive and polluting.",
+            distractorExplanations: {
+              1: 'They only exist in one country is incorrect; rare earth elements aren\'t actually rare in the crust, but they\'re rarely found in concentrated, economically mineable deposits. Extraction is expensive and polluting.',
+              2: 'Scientists have only recently discovered them is incorrect; rare earth elements aren\'t actually rare in the crust, but they\'re rarely found in concentrated, economically mineable deposits. Extraction is expensive and polluting.',
+              3: 'They decay radioactively within weeks is incorrect; rare earth elements aren\'t actually rare in the crust, but they\'re rarely found in concentrated, economically mineable deposits. Extraction is expensive and polluting.',
+            },
           },
           {
             id: "sp-sec14-u3-L4-T2",
@@ -1381,6 +1544,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Using metals in space avoids the cost of Earth launch and the risk of crashing commodity markets. In-space construction is the highest-value use.",
+            distractorExplanations: {
+              0: 'Flood Earth markets with cheap platinum is incorrect; using metals in space avoids the cost of Earth launch and the risk of crashing commodity markets. In-space construction is the highest-value use.',
+              2: 'Store the metal on the Moon for future use is incorrect; using metals in space avoids the cost of Earth launch and the risk of crashing commodity markets. In-space construction is the highest-value use.',
+              3: 'Drop asteroid metals into the ocean for later retrieval is incorrect; using metals in space avoids the cost of Earth launch and the risk of crashing commodity markets. In-space construction is the highest-value use.',
+            },
           },
           {
             id: "sp-sec14-u3-L4-Q6",
@@ -1394,6 +1562,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Flooding the market with enormous supply would collapse the price. Smart operators would release material slowly or use it in space where demand is growing.",
+            distractorExplanations: {
+              1: 'The platinum would be worth even more due to publicity is incorrect; flooding the market with enormous supply would collapse the price. Smart operators would release material slowly or use it in space where demand is growing.',
+              2: 'Governments would ban the sale is incorrect; flooding the market with enormous supply would collapse the price. Smart operators would release material slowly or use it in space where demand is growing.',
+              3: 'The platinum would evaporate in Earth\'s atmosphere is incorrect; flooding the market with enormous supply would collapse the price. Smart operators would release material slowly or use it in space where demand is growing.',
+            },
           },
         ],
       },
@@ -1577,6 +1750,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gateway provides a staging platform. The lunar base tests technologies and ISRU. Both prepare for the much harder Mars mission. This step-by-step approach reduces risk.",
+            distractorExplanations: {
+              0: 'Mars landing first, then Gateway, then lunar base is incorrect; gateway provides a staging platform. The lunar base tests technologies and ISRU. Both prepare for the much harder Mars mission. This step-by-step approach reduces risk.',
+              2: 'All three simultaneously to save time is incorrect; gateway provides a staging platform. The lunar base tests technologies and ISRU. Both prepare for the much harder Mars mission. This step-by-step approach reduces risk.',
+              3: 'Cancel all three and focus on Earth problems is incorrect; gateway provides a staging platform. The lunar base tests technologies and ISRU. Both prepare for the much harder Mars mission. This step-by-step approach reduces risk.',
+            },
           },
           {
             id: "sp-sec14-u4-L1-Q4",
@@ -1590,6 +1768,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Mars is so far that communication has significant delay and resupply takes months. Colonists can't wait for help the way lunar crews can.",
+            distractorExplanations: {
+              1: 'Mars has stronger gravity that prevents supply deliveries is incorrect; mars is so far that communication has significant delay and resupply takes months. Colonists can\'t wait for help the way lunar crews can.',
+              2: 'Mars is too hot for supply spacecraft to land is incorrect; mars is so far that communication has significant delay and resupply takes months. Colonists can\'t wait for help the way lunar crews can.',
+              3: 'The Moon already has all the supplies anyone needs is incorrect; mars is so far that communication has significant delay and resupply takes months. Colonists can\'t wait for help the way lunar crews can.',
+            },
           },
           {
             id: "sp-sec14-u4-L1-Q5",
@@ -1605,6 +1788,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "The Lunar Gateway will orbit the Moon in a standard circular low orbit.",
             correctAnswer: false,
             explanation: "Gateway uses a near-rectilinear halo orbit (NRHO), which is a unique elongated path that requires very little fuel to maintain.",
+            distractorExplanations: {
+              0: 'Gateway uses a near-rectilinear halo orbit (NRHO), which is a unique elongated path that requires very little fuel to maintain.',
+            },
           },
           {
             id: "sp-sec14-u4-L1-Q7",
@@ -1653,6 +1839,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Like oil on Earth, water in space drives the economy. It's used for drinking, farming, rocket fuel, oxygen, and radiation shielding.",
+            distractorExplanations: {
+              1: 'It looks like oil when viewed from space is incorrect; like oil on Earth, water in space drives the economy. It\'s used for drinking, farming, rocket fuel, oxygen, and radiation shielding.',
+              2: 'It\'s equally polluting as fossil fuels is incorrect; like oil on Earth, water in space drives the economy. It\'s used for drinking, farming, rocket fuel, oxygen, and radiation shielding.',
+              3: 'It only exists on Earth, making it rare in space is incorrect; like oil on Earth, water in space drives the economy. It\'s used for drinking, farming, rocket fuel, oxygen, and radiation shielding.',
+            },
           },
           {
             id: "sp-sec14-u4-L2-Q3",
@@ -1667,6 +1858,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dumping massive supply crashes prices. The company should release platinum slowly or use it for in-space manufacturing where demand is growing.",
+            distractorExplanations: {
+              0: 'Investors feared the platinum would be lost during reentry is incorrect; dumping massive supply crashes prices. The company should release platinum slowly or use it for in-space manufacturing where demand is growing.',
+              2: 'The company forgot to file mining permits with the UN is incorrect; dumping massive supply crashes prices. The company should release platinum slowly or use it for in-space manufacturing where demand is growing.',
+              3: 'Investors prefer gold to platinum is incorrect; dumping massive supply crashes prices. The company should release platinum slowly or use it for in-space manufacturing where demand is growing.',
+            },
           },
           {
             id: "sp-sec14-u4-L2-Q4",
@@ -1683,6 +1879,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "Mining in microgravity uses the same drilling techniques as on Earth.",
             correctAnswer: false,
             explanation: "Standard drilling pushes the spacecraft away in microgravity. New techniques like anchoring, enclosed chambers, and thermal extraction are needed.",
+            distractorExplanations: {
+              0: 'Standard drilling pushes the spacecraft away in microgravity. New techniques like anchoring, enclosed chambers, and thermal extraction are needed.',
+            },
           },
           {
             id: "sp-sec14-u4-L2-Q6",
@@ -1696,6 +1895,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Water from a nearby asteroid has immediate demand as fuel. LEO has the most customers. This generates revenue to fund more ambitious mining later.",
+            distractorExplanations: {
+              0: 'Mine platinum from a distant M-type asteroid is incorrect; water from a nearby asteroid has immediate demand as fuel. LEO has the most customers. This generates revenue to fund more ambitious mining later.',
+              2: 'Build a refinery on Mars to process asteroid ore is incorrect; water from a nearby asteroid has immediate demand as fuel. LEO has the most customers. This generates revenue to fund more ambitious mining later.',
+              3: 'Wait for fusion power to make space travel cheaper is incorrect; water from a nearby asteroid has immediate demand as fuel. LEO has the most customers. This generates revenue to fund more ambitious mining later.',
+            },
           },
           {
             id: "sp-sec14-u4-L2-Q7",
@@ -1709,6 +1913,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Spectroscopy analyzes light reflected from asteroids. Different minerals absorb and reflect characteristic wavelengths, revealing composition.",
+            distractorExplanations: {
+              1: 'Seismography is incorrect; spectroscopy analyzes light reflected from asteroids. Different minerals absorb and reflect characteristic wavelengths, revealing composition.',
+              2: 'Sonar is incorrect; spectroscopy analyzes light reflected from asteroids. Different minerals absorb and reflect characteristic wavelengths, revealing composition.',
+              3: 'Thermography is incorrect; spectroscopy analyzes light reflected from asteroids. Different minerals absorb and reflect characteristic wavelengths, revealing composition.',
+            },
           },
         ],
       },
@@ -1853,6 +2062,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "A space elevator would be anchored at Earth's equator.",
             correctAnswer: true,
             explanation: "The equator is the only location where the cable can remain vertical and balanced between gravity pulling down and centrifugal force pulling up.",
+            distractorExplanations: {
+              1: 'This statement is correct because the equator is the only location where the cable can remain vertical and balanced between gravity pulling down and centrifugal force pulling up.',
+            },
           },
           {
             id: "sp-sec14-u5-L1-Q2",
@@ -1866,6 +2078,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The counterweight beyond geostationary orbit is flung outward by Earth's rotation. This tension keeps the entire cable taut against gravity.",
+            distractorExplanations: {
+              1: 'Rockets at the top pulling the cable upward is incorrect; the counterweight beyond geostationary orbit is flung outward by Earth\'s rotation. This tension keeps the entire cable taut against gravity.',
+              2: 'Magnetic levitation from Earth\'s core is incorrect; the counterweight beyond geostationary orbit is flung outward by Earth\'s rotation. This tension keeps the entire cable taut against gravity.',
+              3: 'Solar wind pushing on the cable is incorrect; the counterweight beyond geostationary orbit is flung outward by Earth\'s rotation. This tension keeps the entire cable taut against gravity.',
+            },
           },
           {
             id: "sp-sec14-u5-L1-T2",
@@ -1908,6 +2125,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon's gravity is only 1/6 of Earth's. The forces on the cable are much lower, making it possible with materials we already have.",
+            distractorExplanations: {
+              1: 'The Moon has no equator is incorrect; the Moon\'s gravity is only 1/6 of Earth\'s. The forces on the cable are much lower, making it possible with materials we already have.',
+              2: 'Lunar elevators don\'t need cables is incorrect; the Moon\'s gravity is only 1/6 of Earth\'s. The forces on the cable are much lower, making it possible with materials we already have.',
+              3: 'The Moon is smaller so the cable is shorter is incorrect; the Moon\'s gravity is only 1/6 of Earth\'s. The forces on the cable are much lower, making it possible with materials we already have.',
+            },
           },
           {
             id: "sp-sec14-u5-L1-Q6",
@@ -1943,6 +2165,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "O'Neill cylinders use rotation to create artificial gravity.",
             correctAnswer: true,
             explanation: "As the cylinder spins, centrifugal force pushes everything toward the inner wall. This mimics gravity for the people living on the interior surface.",
+            distractorExplanations: {
+              1: 'This statement is correct because as the cylinder spins, centrifugal force pushes everything toward the inner wall. This mimics gravity for the people living on the interior surface.',
+            },
           },
           {
             id: "sp-sec14-u5-L2-Q2",
@@ -1956,6 +2181,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Rotation pushes everything outward. The inner curved surface becomes the 'floor' where people walk, build, and live.",
+            distractorExplanations: {
+              1: 'At the center of the cylinder is incorrect; rotation pushes everything outward. The inner curved surface becomes the \'floor\' where people walk, build, and live.',
+              2: 'On the outside surface is incorrect; rotation pushes everything outward. The inner curved surface becomes the \'floor\' where people walk, build, and live.',
+              3: 'In pods attached to the ends is incorrect; rotation pushes everything outward. The inner curved surface becomes the \'floor\' where people walk, build, and live.',
+            },
           },
           {
             id: "sp-sec14-u5-L2-T2",
@@ -2002,6 +2232,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The sheer mass required makes Earth launches impossible. Mining asteroids and the Moon in the low-gravity space environment is far more practical.",
+            distractorExplanations: {
+              1: 'Earth materials are too weak for space construction is incorrect; the sheer mass required makes Earth launches impossible. Mining asteroids and the Moon in the low-gravity space environment is far more practical.',
+              2: 'Asteroid metal is lighter than Earth metal is incorrect; the sheer mass required makes Earth launches impossible. Mining asteroids and the Moon in the low-gravity space environment is far more practical.',
+              3: 'Only asteroid metal can withstand rotation is incorrect; the sheer mass required makes Earth launches impossible. Mining asteroids and the Moon in the low-gravity space environment is far more practical.',
+            },
           },
           {
             id: "sp-sec14-u5-L2-Q6",
@@ -2035,6 +2270,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "A Dyson sphere is a solid shell completely enclosing a star.",
             correctAnswer: false,
             explanation: "A solid shell would be gravitationally unstable. The more practical concept is a Dyson swarm: millions of individual solar collectors orbiting the star.",
+            distractorExplanations: {
+              0: 'A solid shell would be gravitationally unstable. The more practical concept is a Dyson swarm: millions of individual solar collectors orbiting the star.',
+            },
           },
           {
             id: "sp-sec14-u5-L3-Q2",
@@ -2048,6 +2286,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Physicist Freeman Dyson proposed the concept in 1960 as a way for advanced civilizations to meet their growing energy needs.",
+            distractorExplanations: {
+              1: 'Albert Einstein is incorrect; physicist Freeman Dyson proposed the concept in 1960 as a way for advanced civilizations to meet their growing energy needs.',
+              2: 'Carl Sagan is incorrect; physicist Freeman Dyson proposed the concept in 1960 as a way for advanced civilizations to meet their growing energy needs.',
+              3: 'Stephen Hawking is incorrect; physicist Freeman Dyson proposed the concept in 1960 as a way for advanced civilizations to meet their growing energy needs.',
+            },
           },
           {
             id: "sp-sec14-u5-L3-T2",
@@ -2096,6 +2339,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Solar collectors block visible light but reradiate the absorbed energy as infrared heat. This distinctive signature could reveal the presence of a megastructure.",
+            distractorExplanations: {
+              1: 'The star would become invisible is incorrect; solar collectors block visible light but reradiate the absorbed energy as infrared heat. This distinctive signature could reveal the presence of a megastructure.',
+              2: 'The star would pulse rapidly is incorrect; solar collectors block visible light but reradiate the absorbed energy as infrared heat. This distinctive signature could reveal the presence of a megastructure.',
+              3: 'The star would appear brighter in all wavelengths is incorrect; solar collectors block visible light but reradiate the absorbed energy as infrared heat. This distinctive signature could reveal the presence of a megastructure.',
+            },
           },
           {
             id: "sp-sec14-u5-L3-Q6",
@@ -2128,6 +2376,9 @@ export const spaceSection14Part1: Unit[] = [
             question: "Building a Dyson swarm would require raw materials from dismantling an entire planet.",
             correctAnswer: true,
             explanation: "The surface area needed to surround a star is so vast that asteroid mining alone wouldn't suffice. Mercury is often suggested as a source of raw materials.",
+            distractorExplanations: {
+              1: 'This statement is correct because the surface area needed to surround a star is so vast that asteroid mining alone wouldn\'t suffice. Mercury is often suggested as a source of raw materials.',
+            },
           },
           {
             id: "sp-sec14-u5-L4-Q2",
@@ -2141,6 +2392,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The physics is understood. The barrier is practical: we can't yet mine, refine, and manufacture at the scale required. It would take a self-replicating industrial base in space.",
+            distractorExplanations: {
+              1: 'There isn\'t enough sunlight in space is incorrect; the physics is understood. The barrier is practical: we can\'t yet mine, refine, and manufacture at the scale required. It would take a self-replicating industrial base in space.',
+              2: 'Gravity prevents building large objects in space is incorrect; the physics is understood. The barrier is practical: we can\'t yet mine, refine, and manufacture at the scale required. It would take a self-replicating industrial base in space.',
+              3: 'We don\'t understand the physics is incorrect; the physics is understood. The barrier is practical: we can\'t yet mine, refine, and manufacture at the scale required. It would take a self-replicating industrial base in space.',
+            },
           },
           {
             id: "sp-sec14-u5-L4-T2",
@@ -2198,6 +2454,11 @@ export const spaceSection14Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A solar power satellite and space mining are achievable within that budget and timeframe. They also build the foundation for larger projects. The other options are too ambitious for current technology.",
+            distractorExplanations: {
+              0: 'Begin construction of a Dyson swarm is incorrect; a solar power satellite and space mining are achievable within that budget and timeframe. They also build the foundation for larger projects. The other options are too ambitious for current technology.',
+              1: 'Build a full-size O\'Neill cylinder for 1 million people is incorrect; a solar power satellite and space mining are achievable within that budget and timeframe. They also build the foundation for larger projects. The other options are too ambitious for current technology.',
+              3: 'Construct a space elevator on Earth is incorrect; a solar power satellite and space mining are achievable within that budget and timeframe. They also build the foundation for larger projects. The other options are too ambitious for current technology.',
+            },
           },
         ],
       },

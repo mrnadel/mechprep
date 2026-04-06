@@ -38,6 +38,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "During a solar eclipse, the Moon moves directly between Earth and the Sun, casting its shadow on Earth's surface.",
+            distractorExplanations: {
+              1: 'This is incorrect; during a solar eclipse, the Moon moves directly between Earth and the Sun, casting its shadow on Earth\'s surface.',
+              2: 'The Sun moves behind Earth is incorrect; during a solar eclipse, the Moon moves directly between Earth and the Sun, casting its shadow on Earth\'s surface.',
+              3: 'Clouds block the Sun\'s light is incorrect; during a solar eclipse, the Moon moves directly between Earth and the Sun, casting its shadow on Earth\'s surface.',
+            },
           },
           {
             id: "sp-sec3-u6-L1-Q2",
@@ -45,6 +50,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "A solar eclipse can only happen during a new moon.",
             correctAnswer: true,
             explanation: "The Moon must be between Earth and the Sun, which only happens at new moon. But not every new moon produces an eclipse because the orbits aren't perfectly aligned.",
+            distractorExplanations: {
+              1: 'The Moon must be between Earth and the Sun, which only happens at new moon.',
+            },
           },
           {
             id: "sp-sec3-u6-L1-T2",
@@ -72,6 +80,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The corona is the Sun's outer atmosphere, normally invisible due to the Sun's brightness. Total eclipses reveal its wispy, pearly-white glow.",
+            distractorExplanations: {
+              1: 'The Moon\'s craters is incorrect; the corona is the Sun\'s outer atmosphere, normally invisible due to the Sun\'s brightness.',
+              2: 'Other planets in the solar system is incorrect; the corona is the Sun\'s outer atmosphere, normally invisible due to the Sun\'s brightness.',
+              3: 'The Milky Way\'s center is incorrect; the corona is the Sun\'s outer atmosphere, normally invisible due to the Sun\'s brightness.',
+            },
           },
           {
             id: "sp-sec3-u6-L1-T3",
@@ -94,6 +107,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Everyone on Earth can see a total solar eclipse when one occurs.",
             correctAnswer: false,
             explanation: "The Moon's shadow is narrow, only about 270 km wide. Only people within the path of totality see the total eclipse. Others see a partial eclipse or nothing at all.",
+            distractorExplanations: {
+              0: 'The Moon\'s shadow is narrow, only about 270 km wide.',
+            },
           },
           {
             id: "sp-sec3-u6-L1-Q7",
@@ -132,6 +148,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "During a lunar eclipse, Earth is between the Sun and Moon. Earth's shadow darkens the Moon's surface.",
+            distractorExplanations: {
+              1: 'The Moon\'s shadow falls on Earth is incorrect; during a lunar eclipse, Earth is between the Sun and Moon.',
+              2: 'The Moon moves behind the Sun is incorrect; during a lunar eclipse, Earth is between the Sun and Moon.',
+              3: 'Clouds cover the Moon is incorrect; during a lunar eclipse, Earth is between the Sun and Moon.',
+            },
           },
           {
             id: "sp-sec3-u6-L2-Q2",
@@ -139,6 +160,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "A lunar eclipse can only happen during a full moon.",
             correctAnswer: true,
             explanation: "The Moon must be on the opposite side of Earth from the Sun, which only happens at full moon. But not every full moon produces an eclipse.",
+            distractorExplanations: {
+              1: 'The Moon must be on the opposite side of Earth from the Sun, which only happens at full moon.',
+            },
           },
           {
             id: "sp-sec3-u6-L2-T2",
@@ -159,6 +183,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's atmosphere scatters blue light away and refracts red light toward the Moon. It's the same physics that makes sunsets red.",
+            distractorExplanations: {
+              1: 'The Moon heats up and glows red is incorrect; earth\'s atmosphere scatters blue light away and refracts red light toward the Moon.',
+              2: 'Mars reflects red light onto the Moon is incorrect; earth\'s atmosphere scatters blue light away and refracts red light toward the Moon.',
+              3: 'This is incorrect; earth\'s atmosphere scatters blue light away and refracts red light toward the Moon.',
+            },
           },
           {
             id: "sp-sec3-u6-L2-Q4",
@@ -189,6 +218,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "You need special glasses to safely watch a lunar eclipse.",
             correctAnswer: false,
             explanation: "Lunar eclipses are safe to view without any eye protection. The Moon only reflects dim light. Solar eclipses are the ones that require protective glasses.",
+            distractorExplanations: {
+              0: 'Lunar eclipses are safe to view without any eye protection.',
+            },
           },
           {
             id: "sp-sec3-u6-L2-Q7",
@@ -203,6 +235,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Lunar eclipses have no narrow 'path.' Anyone on the night side of Earth can see the Moon pass through Earth's shadow.",
+            distractorExplanations: {
+              1: 'This answer is wrong; lunar eclipses have no narrow \'path.\' Anyone on the night side of Earth can see the Moon pass through Earth\'s shadow.',
+              2: 'This answer is wrong; lunar eclipses have no narrow \'path.\' Anyone on the night side of Earth can see the Moon pass through Earth\'s shadow.',
+              3: 'This answer is wrong; lunar eclipses have no narrow \'path.\' Anyone on the night side of Earth can see the Moon pass through Earth\'s shadow.',
+            },
           },
         ],
       },
@@ -232,6 +269,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The 5-degree tilt means the Moon usually passes above or below the Sun (at new moon) or above or below Earth's shadow (at full moon).",
+            distractorExplanations: {
+              1: 'This claim is incorrect; the 5-degree tilt means the Moon usually passes above or below the Sun (at new moon) or above or below Earth\'s.',
+              2: 'This is incorrect; the 5-degree tilt means the Moon usually passes above or below the Sun (at new moon) or above or below Earth\'s.',
+              3: 'This claim is incorrect; the 5-degree tilt means the Moon usually passes above or below the Sun (at new moon) or above or below Earth\'s.',
+            },
           },
           {
             id: "sp-sec3-u6-L3-Q2",
@@ -239,6 +281,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "The Moon's orbit lies in exactly the same plane as Earth's orbit around the Sun.",
             correctAnswer: false,
             explanation: "The Moon's orbit is tilted about 5 degrees. If it were in the same plane, we'd have eclipses every month.",
+            distractorExplanations: {
+              0: 'The Moon\'s orbit is tilted about 5 degrees.',
+            },
           },
           {
             id: "sp-sec3-u6-L3-T2",
@@ -276,6 +321,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "There are typically 2 to 5 solar eclipses per year somewhere on Earth, though most are partial. Total solar eclipses at any given location are very rare.",
+            distractorExplanations: {
+              1: '12, one per month is incorrect; there are typically 2 to 5 solar eclipses per year somewhere on Earth, though most are partial.',
+              2: 'About 50 is incorrect; there are typically 2 to 5 solar eclipses per year somewhere on Earth, though most are partial.',
+              3: 'Only one per decade is incorrect; there are typically 2 to 5 solar eclipses per year somewhere on Earth, though most are partial.',
+            },
           },
           {
             id: "sp-sec3-u6-L3-T3",
@@ -289,6 +339,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "A total solar eclipse visible from a specific city happens roughly once every 375 years on average.",
             correctAnswer: true,
             explanation: "While there are several solar eclipses per year globally, the path of totality is narrow. Any single location sees a total solar eclipse only about once every few centuries.",
+            distractorExplanations: {
+              1: 'While there are several solar eclipses per year globally, the path of totality is narrow.',
+            },
           },
           {
             id: "sp-sec3-u6-L3-Q7",
@@ -311,6 +364,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The 5-degree orbital tilt is the key. The Moon must be near one of its two orbital nodes during new moon for a solar eclipse to occur.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; the 5-degree orbital tilt is the key.',
+              2: 'This claim is incorrect; the 5-degree orbital tilt is the key.',
+              3: 'This is incorrect; the 5-degree orbital tilt is the key.',
+            },
           },
         ],
       },
@@ -334,6 +392,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Regular sunglasses are safe enough for viewing a solar eclipse.",
             correctAnswer: false,
             explanation: "Regular sunglasses block far too little light. Only certified solar eclipse glasses or proper solar filters can protect your eyes during an eclipse.",
+            distractorExplanations: {
+              0: 'Regular sunglasses block far too little light.',
+            },
           },
           {
             id: "sp-sec3-u6-L4-Q2",
@@ -347,6 +408,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "ISO 12312-2 is the international safety standard for solar viewing filters. Always check for this certification on eclipse glasses.",
+            distractorExplanations: {
+              1: 'UV 400 is incorrect; iSO 12312-2 is the international safety standard for solar viewing filters.',
+              2: 'SPF 50 is incorrect; iSO 12312-2 is the international safety standard for solar viewing filters.',
+              3: 'ANSI Z87.1 is incorrect; iSO 12312-2 is the international safety standard for solar viewing filters.',
+            },
           },
           {
             id: "sp-sec3-u6-L4-T2",
@@ -376,6 +442,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A pinhole projector is a safe, cheap way to view an eclipse. Sunlight passes through a tiny hole and projects a small image of the Sun onto a card or ground.",
+            distractorExplanations: {
+              1: 'A laser pointer aimed at the Sun is incorrect; a pinhole projector is a safe, cheap way to view an eclipse.',
+              2: 'A telescope with a pinhole lens is incorrect; a pinhole projector is a safe, cheap way to view an eclipse.',
+              3: 'A camera that can photograph the eclipse is incorrect; a pinhole projector is a safe, cheap way to view an eclipse.',
+            },
           },
           {
             id: "sp-sec3-u6-L4-T3",
@@ -389,6 +460,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "It's safe to look at the Sun through a regular camera or phone without a solar filter.",
             correctAnswer: false,
             explanation: "Cameras and phones can focus sunlight and damage the sensor and your eyes. Always use a proper solar filter on any optical device aimed at the Sun.",
+            distractorExplanations: {
+              0: 'Cameras and phones can focus sunlight and damage the sensor and your eyes.',
+            },
           },
           {
             id: "sp-sec3-u6-L4-Q6",
@@ -411,6 +485,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Regular sunglasses are far too weak. Even the darkest sunglasses don't block enough of the Sun's harmful radiation. You need certified solar filters.",
+            distractorExplanations: {
+              1: 'This is incorrect; regular sunglasses are far too weak.',
+              2: 'This claim is incorrect; regular sunglasses are far too weak.',
+              3: 'This is incorrect; regular sunglasses are far too weak.',
+            },
           },
           {
             id: "sp-sec3-u6-L4-Q8",
@@ -574,6 +653,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The troposphere extends from the surface to about 12 km up. It contains 75% of the atmosphere's mass and is where clouds, rain, and storms happen.",
+            distractorExplanations: {
+              1: 'Stratosphere is incorrect; the troposphere extends from the surface to about 12 km up.',
+              2: 'Mesosphere is incorrect; the troposphere extends from the surface to about 12 km up.',
+              3: 'Thermosphere is incorrect; the troposphere extends from the surface to about 12 km up.',
+            },
           },
           {
             id: "sp-sec3-u7-L1-T2",
@@ -604,6 +688,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "The International Space Station orbits in the thermosphere.",
             correctAnswer: true,
             explanation: "The ISS orbits at about 400 km altitude, within the thermosphere. There's still a tiny amount of atmosphere there, which slowly drags on the station.",
+            distractorExplanations: {
+              1: 'The ISS orbits at about 400 km altitude, within the thermosphere.',
+            },
           },
           {
             id: "sp-sec3-u7-L1-T3",
@@ -659,6 +746,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without greenhouse gases trapping heat, Earth would be about 33 degrees colder. The oceans would freeze and life as we know it couldn't exist.",
+            distractorExplanations: {
+              1: 'About +15 C (same as now) is incorrect; without greenhouse gases trapping heat, Earth would be about 33 degrees colder.',
+              2: 'About +30 C (tropical everywhere) is incorrect; without greenhouse gases trapping heat, Earth would be about 33 degrees colder.',
+              3: 'About 0 C (exactly freezing) is incorrect; without greenhouse gases trapping heat, Earth would be about 33 degrees colder.',
+            },
           },
           {
             id: "sp-sec3-u7-L2-Q2",
@@ -666,6 +758,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "The greenhouse effect is entirely harmful to Earth.",
             correctAnswer: false,
             explanation: "The natural greenhouse effect is essential for life. It keeps Earth warm enough for liquid water. The problem is the enhanced greenhouse effect from too much CO2 added by human activities.",
+            distractorExplanations: {
+              0: 'The natural greenhouse effect is essential for life.',
+            },
           },
           {
             id: "sp-sec3-u7-L2-T2",
@@ -717,6 +812,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Venus's dense CO2 atmosphere traps so much heat that its surface reaches 465 C. Mercury is closer to the Sun but much cooler because it lacks a greenhouse atmosphere.",
+            distractorExplanations: {
+              1: 'It\'s the closest planet to the Sun is incorrect; venus\'s dense CO2 atmosphere traps so much heat that its surface reaches 465 C.',
+              2: 'It has no atmosphere to cool it down is incorrect; venus\'s dense CO2 atmosphere traps so much heat that its surface reaches 465 C.',
+              3: 'This is incorrect; venus\'s dense CO2 atmosphere traps so much heat that its surface reaches 465 C.',
+            },
           },
           {
             id: "sp-sec3-u7-L2-Q7",
@@ -724,6 +824,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Water vapor is the most abundant greenhouse gas in Earth's atmosphere.",
             correctAnswer: true,
             explanation: "Water vapor is the single largest contributor to Earth's natural greenhouse effect. CO2 is important because small changes in its concentration have big effects.",
+            distractorExplanations: {
+              1: 'Water vapor is the single largest contributor to Earth\'s natural greenhouse effect.',
+            },
           },
         ],
       },
@@ -753,6 +856,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The ozone layer is in the stratosphere, about 15 to 35 km above Earth's surface. This is above where weather happens but below where meteors burn.",
+            distractorExplanations: {
+              1: 'In the troposphere is incorrect; the ozone layer is in the stratosphere, about 15 to 35 km above Earth\'s surface.',
+              2: 'In the thermosphere is incorrect; the ozone layer is in the stratosphere, about 15 to 35 km above Earth\'s surface.',
+              3: 'At Earth\'s surface is incorrect; the ozone layer is in the stratosphere, about 15 to 35 km above Earth\'s surface.',
+            },
           },
           {
             id: "sp-sec3-u7-L3-Q2",
@@ -760,6 +868,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "The ozone layer protects life by absorbing most ultraviolet radiation from the Sun.",
             correctAnswer: true,
             explanation: "Ozone (O3) absorbs about 97-99% of the Sun's medium-frequency UV radiation, preventing it from reaching Earth's surface and harming living organisms.",
+            distractorExplanations: {
+              1: 'Ozone (O3) absorbs about 97-99% of the Sun\'s medium-frequency UV radiation, preventing it from reaching Earth\'s.',
+            },
           },
           {
             id: "sp-sec3-u7-L3-T2",
@@ -788,6 +899,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Montreal Protocol banned CFCs and related chemicals. It's considered one of the most successful environmental agreements in history.",
+            distractorExplanations: {
+              1: 'Reduce carbon dioxide emissions is incorrect; the Montreal Protocol banned CFCs and related chemicals.',
+              2: 'Limit nuclear weapons testing is incorrect; the Montreal Protocol banned CFCs and related chemicals.',
+              3: 'Stop ocean pollution from plastics is incorrect; the Montreal Protocol banned CFCs and related chemicals.',
+            },
           },
           {
             id: "sp-sec3-u7-L3-Q5",
@@ -795,6 +911,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "The ozone hole is slowly recovering thanks to international cooperation.",
             correctAnswer: true,
             explanation: "Since CFCs were banned, the ozone layer has been gradually healing. Scientists expect it to fully recover by the mid-to-late 21st century.",
+            distractorExplanations: {
+              1: 'Since CFCs were banned, the ozone layer has been gradually healing.',
+            },
           },
           {
             id: "sp-sec3-u7-L3-T3",
@@ -824,6 +943,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The ozone layer blocks most UV-B and UV-C but less UVA. Some UV radiation still reaches the surface, which is why sunscreen remains important.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; the ozone layer blocks most UV-B and UV-C but less UVA.',
+              2: 'This reasoning is wrong because the ozone layer blocks most UV-B and UV-C but less UVA.',
+              3: 'This claim is incorrect; the ozone layer blocks most UV-B and UV-C but less UVA.',
+            },
           },
         ],
       },
@@ -854,6 +978,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's magnetic field is generated by convection currents in the liquid iron outer core. This process is called the geodynamo.",
+            distractorExplanations: {
+              1: 'Permanent magnets embedded in the crust is incorrect; earth\'s magnetic field is generated by convection currents in the liquid iron outer core.',
+              2: 'The Moon\'s gravitational pull is incorrect; earth\'s magnetic field is generated by convection currents in the liquid iron outer core.',
+              3: 'Electrical currents in the atmosphere is incorrect; earth\'s magnetic field is generated by convection currents in the liquid iron outer core.',
+            },
           },
           {
             id: "sp-sec3-u7-L4-Q2",
@@ -861,6 +990,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "The magnetosphere protects Earth from the solar wind.",
             correctAnswer: true,
             explanation: "The magnetosphere deflects most charged particles from the solar wind, preventing them from stripping away Earth's atmosphere.",
+            distractorExplanations: {
+              1: 'The magnetosphere deflects most charged particles from the solar wind, preventing them from stripping away Earth\'s atmosphere.',
+            },
           },
           {
             id: "sp-sec3-u7-L4-T2",
@@ -888,6 +1020,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's magnetic field guides solar wind particles toward the magnetic poles. When those particles hit atmospheric gases, the gases glow and create auroras.",
+            distractorExplanations: {
+              1: 'The atmosphere is thinner at the poles is incorrect; earth\'s magnetic field guides solar wind particles toward the magnetic poles.',
+              2: 'The Sun shines more directly on the poles is incorrect; earth\'s magnetic field guides solar wind particles toward the magnetic poles.',
+              3: 'This is incorrect; earth\'s magnetic field guides solar wind particles toward the magnetic poles.',
+            },
           },
           {
             id: "sp-sec3-u7-L4-Q5",
@@ -910,6 +1047,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Mars lost most of its atmosphere because its magnetic field disappeared.",
             correctAnswer: true,
             explanation: "When Mars's core cooled and its magnetic field died, the solar wind gradually stripped away the atmosphere. Without that magnetic shield, Mars couldn't hold onto its air.",
+            distractorExplanations: {
+              1: 'When Mars\'s core cooled and its magnetic field died, the solar wind gradually stripped away the atmosphere.',
+            },
           },
           {
             id: "sp-sec3-u7-L4-Q7",
@@ -924,6 +1064,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without the magnetosphere, the solar wind would slowly erode our atmosphere and radiation levels would increase. Mars shows what happens over billions of years without this protection.",
+            distractorExplanations: {
+              1: 'This reasoning is wrong because without the magnetosphere, the solar wind would slowly erode our atmosphere and radiation levels would increase.',
+              2: 'This reasoning is wrong because without the magnetosphere, the solar wind would slowly erode our atmosphere and radiation levels would increase.',
+              3: 'This claim is incorrect; without the magnetosphere, the solar wind would slowly erode our atmosphere and radiation levels would increase.',
+            },
           },
           {
             id: "sp-sec3-u7-L4-Q8",
@@ -1093,6 +1238,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth zooms through space at about 107,000 km/h (67,000 mph). You don't feel it because everything around you moves at the same speed.",
+            distractorExplanations: {
+              1: '1,600 km/h is incorrect; earth zooms through space at about 107,000 km/h (67,000 mph).',
+              2: '300,000 km/s is incorrect; earth zooms through space at about 107,000 km/h (67,000 mph).',
+              3: '10,000 km/h is incorrect; earth zooms through space at about 107,000 km/h (67,000 mph).',
+            },
           },
           {
             id: "sp-sec3-u8-L1-Q2",
@@ -1100,6 +1250,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Earth's orbit around the Sun is a perfect circle.",
             correctAnswer: false,
             explanation: "Earth's orbit is slightly elliptical (oval-shaped). The eccentricity is small (about 0.017), so it's close to circular but not perfect.",
+            distractorExplanations: {
+              0: 'Earth\'s orbit is slightly elliptical (oval-shaped).',
+            },
           },
           {
             id: "sp-sec3-u8-L1-T2",
@@ -1127,6 +1280,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Perihelion occurs around January 3, when Earth is about 147 million km from the Sun. Aphelion (farthest point) is around July 4.",
+            distractorExplanations: {
+              1: 'Aphelion is incorrect; perihelion occurs around January 3, when Earth is about 147 million km from the Sun.',
+              2: 'Equinox is incorrect; perihelion occurs around January 3, when Earth is about 147 million km from the Sun.',
+              3: 'Solstice is incorrect; perihelion occurs around January 3, when Earth is about 147 million km from the Sun.',
+            },
           },
           {
             id: "sp-sec3-u8-L1-T3",
@@ -1149,6 +1307,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Earth rotates from west to east, which is why the Sun appears to rise in the east.",
             correctAnswer: true,
             explanation: "Earth spins counterclockwise when viewed from above the North Pole (west to east). This makes the Sun and stars appear to move from east to west across our sky.",
+            distractorExplanations: {
+              1: 'Earth spins counterclockwise when viewed from above the North Pole (west to east).',
+            },
           },
           {
             id: "sp-sec3-u8-L1-Q7",
@@ -1187,6 +1348,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's axis completes one full wobble every 26,000 years. This gradually shifts which star serves as the 'North Star.'",
+            distractorExplanations: {
+              1: '365 days is incorrect; earth\'s axis completes one full wobble every 26,000 years.',
+              2: '1 million years is incorrect; earth\'s axis completes one full wobble every 26,000 years.',
+              3: '100 years is incorrect; earth\'s axis completes one full wobble every 26,000 years.',
+            },
           },
           {
             id: "sp-sec3-u8-L2-Q2",
@@ -1194,6 +1360,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Polaris will always be the North Star.",
             correctAnswer: false,
             explanation: "Precession slowly shifts where the axis points. In about 13,000 years, Vega will be close to the north celestial pole instead of Polaris.",
+            distractorExplanations: {
+              0: 'Precession slowly shifts where the axis points.',
+            },
           },
           {
             id: "sp-sec3-u8-L2-T2",
@@ -1239,6 +1408,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "We are currently in the middle of an ice age with ice covering most continents.",
             correctAnswer: false,
             explanation: "We're in a warm interglacial period. While technically still in an 'ice age' (Antarctica has ice sheets), we're in a relatively warm phase between glacial advances.",
+            distractorExplanations: {
+              0: 'We\'re in a warm interglacial period.',
+            },
           },
           {
             id: "sp-sec3-u8-L2-Q7",
@@ -1252,6 +1424,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Precession will shift the north celestial pole away from Polaris and toward Vega over the next 13,000 years.",
+            distractorExplanations: {
+              1: 'Sirius is incorrect; precession will shift the north celestial pole away from Polaris and toward Vega over the next 13,000 years.',
+              2: 'Betelgeuse is incorrect; precession will shift the north celestial pole away from Polaris and toward Vega over the next 13,000 years.',
+              3: 'Rigel is incorrect; precession will shift the north celestial pole away from Polaris and toward Vega over the next 13,000 years.',
+            },
           },
           {
             id: "sp-sec3-u8-L2-Q8",
@@ -1266,6 +1443,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Small orbital changes alter how sunlight is distributed. Feedback loops (ice-albedo effect, ocean circulation, CO2) amplify these small triggers into major climate shifts.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; small orbital changes alter how sunlight is distributed.',
+              2: 'This is incorrect; small orbital changes alter how sunlight is distributed.',
+              3: 'This is incorrect; small orbital changes alter how sunlight is distributed.',
+            },
           },
         ],
       },
@@ -1295,6 +1477,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The habitable zone (Goldilocks zone) is the range of distances from a star where surface temperatures can support liquid water.",
+            distractorExplanations: {
+              1: 'The area where planets can form from dust is incorrect; the habitable zone (Goldilocks zone) is the range of distances from a star where surface.',
+              2: 'The zone where gravity is strongest is incorrect; the habitable zone (Goldilocks zone) is the range of distances from a star where surface temperatures can.',
+              3: 'This claim is incorrect; the habitable zone (Goldilocks zone) is the range of distances from a star where surface temperatures can support liquid water.',
+            },
           },
           {
             id: "sp-sec3-u8-L3-Q2",
@@ -1302,6 +1489,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Earth is the third planet from the Sun.",
             correctAnswer: true,
             explanation: "The order from the Sun is: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune. Earth is third.",
+            distractorExplanations: {
+              1: 'The order from the Sun is: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.',
+            },
           },
           {
             id: "sp-sec3-u8-L3-T2",
@@ -1354,6 +1544,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon's gravity keeps Earth's tilt relatively stable around 23.5 degrees. Without it, the tilt could swing wildly, creating catastrophic climate changes.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; the Moon\'s gravity keeps Earth\'s tilt relatively stable around 23.5 degrees.',
+              2: 'This claim is incorrect; the Moon\'s gravity keeps Earth\'s tilt relatively stable around 23.5 degrees.',
+              3: 'It blocks asteroids from hitting Earth is incorrect; the Moon\'s gravity keeps Earth\'s tilt relatively stable around 23.5 degrees.',
+            },
           },
           {
             id: "sp-sec3-u8-L3-Q7",
@@ -1361,6 +1556,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Jupiter's strong gravity helps protect Earth by deflecting some asteroids and comets.",
             correctAnswer: true,
             explanation: "Jupiter acts as a partial cosmic shield, with its enormous gravity deflecting or capturing some objects that might otherwise threaten the inner solar system.",
+            distractorExplanations: {
+              1: 'Jupiter acts as a partial cosmic shield, with its enormous gravity deflecting or capturing some objects that might.',
+            },
           },
         ],
       },
@@ -1507,6 +1705,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Neil Armstrong stepped onto the Moon first, followed by Buzz Aldrin about 20 minutes later. Michael Collins stayed in orbit aboard the command module.",
+            distractorExplanations: {
+              1: 'Buzz Aldrin is incorrect; neil Armstrong stepped onto the Moon first, followed by Buzz Aldrin about 20 minutes later.',
+              2: 'Michael Collins is incorrect; neil Armstrong stepped onto the Moon first, followed by Buzz Aldrin about 20 minutes later.',
+              3: 'John Glenn is incorrect; neil Armstrong stepped onto the Moon first, followed by Buzz Aldrin about 20 minutes later.',
+            },
           },
           {
             id: "sp-sec3-u9-L1-Q2",
@@ -1514,6 +1717,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Apollo 11 landed on the Moon in 1969.",
             correctAnswer: true,
             explanation: "Apollo 11 landed on July 20, 1969, in the Sea of Tranquility. The mission fulfilled President Kennedy's goal of landing on the Moon before the end of the 1960s.",
+            distractorExplanations: {
+              1: 'Apollo 11 landed on July 20, 1969, in the Sea of Tranquility.',
+            },
           },
           {
             id: "sp-sec3-u9-L1-T2",
@@ -1544,6 +1750,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Apollo 13's oxygen tank exploded on the way to the Moon. The crew used the lunar module as a lifeboat and made it back to Earth safely in a dramatic rescue.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; apollo 13\'s oxygen tank exploded on the way to the Moon.',
+              2: 'This claim is incorrect; apollo 13\'s oxygen tank exploded on the way to the Moon.',
+              3: 'It crashed on the Moon with no survivors is incorrect; apollo 13\'s oxygen tank exploded on the way to the Moon.',
+            },
           },
           {
             id: "sp-sec3-u9-L1-T3",
@@ -1573,6 +1784,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Astronauts have walked on the Moon in the 21st century.",
             correctAnswer: false,
             explanation: "No human has walked on the Moon since December 1972. All 12 moonwalkers flew during the Apollo program between 1969 and 1972.",
+            distractorExplanations: {
+              0: 'No human has walked on the Moon since December 1972.',
+            },
           },
         ],
       },
@@ -1602,6 +1816,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The six Apollo landing missions collected a combined 382 kg (842 pounds) of lunar samples from various locations on the Moon.",
+            distractorExplanations: {
+              1: '10 kg is incorrect; the six Apollo landing missions collected a combined 382 kg (842 pounds) of lunar samples from various locations on the Moon.',
+              2: '5,000 kg is incorrect; the six Apollo landing missions collected a combined 382 kg (842 pounds) of lunar samples from various locations on the Moon.',
+              3: '1 kg is incorrect; the six Apollo landing missions collected a combined 382 kg (842 pounds) of lunar samples from various locations on the Moon.',
+            },
           },
           {
             id: "sp-sec3-u9-L2-Q2",
@@ -1609,6 +1828,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Moon rocks helped confirm the giant impact hypothesis for the Moon's formation.",
             correctAnswer: true,
             explanation: "The chemical similarity between Moon rocks and Earth's mantle is strong evidence that the Moon formed from material blasted off Earth by a giant impact.",
+            distractorExplanations: {
+              1: 'The chemical similarity between Moon rocks and Earth\'s mantle is strong evidence that the Moon formed from material.',
+            },
           },
           {
             id: "sp-sec3-u9-L2-T2",
@@ -1646,6 +1868,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Modern instruments can detect things that 1970s technology couldn't. NASA even kept some samples sealed for decades, waiting for better analytical tools.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; modern instruments can detect things that 1970s technology couldn\'t.',
+              2: 'This claim is incorrect; modern instruments can detect things that 1970s technology couldn\'t.',
+              3: 'This is incorrect; modern instruments can detect things that 1970s technology couldn\'t.',
+            },
           },
           {
             id: "sp-sec3-u9-L2-T3",
@@ -1659,6 +1886,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "All Apollo Moon samples were fully analyzed in the 1970s and no new discoveries have been made since.",
             correctAnswer: false,
             explanation: "NASA saved some samples for future technology. Modern instruments continue to reveal new information, and some sealed samples weren't opened until 2019.",
+            distractorExplanations: {
+              0: 'NASA saved some samples for future technology.',
+            },
           },
           {
             id: "sp-sec3-u9-L2-Q7",
@@ -1697,6 +1927,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "China's Chang'e 4 mission made the first-ever landing on the Moon's far side in January 2019, deploying the Yutu-2 rover.",
+            distractorExplanations: {
+              1: 'United States is incorrect; china\'s Chang\'e 4 mission made the first-ever landing on the Moon\'s far side in January 2019, deploying the Yutu-2 rover.',
+              2: 'Russia is incorrect; china\'s Chang\'e 4 mission made the first-ever landing on the Moon\'s far side in January 2019, deploying the Yutu-2 rover.',
+              3: 'India is incorrect; china\'s Chang\'e 4 mission made the first-ever landing on the Moon\'s far side in January 2019, deploying the Yutu-2 rover.',
+            },
           },
           {
             id: "sp-sec3-u9-L3-Q2",
@@ -1704,6 +1939,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "India's Chandrayaan missions have studied the Moon from orbit.",
             correctAnswer: true,
             explanation: "India's Chandrayaan-1 (2008) orbited the Moon and helped confirm water ice at the poles. Chandrayaan-3 (2023) successfully landed near the lunar south pole.",
+            distractorExplanations: {
+              1: 'India\'s Chandrayaan-1 (2008) orbited the Moon and helped confirm water ice at the poles.',
+            },
           },
           {
             id: "sp-sec3-u9-L3-T2",
@@ -1741,6 +1979,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Chandrayaan-3 landed near the lunar south pole in August 2023, making India the fourth country to achieve a soft landing on the Moon.",
+            distractorExplanations: {
+              1: 'This reasoning is wrong because chandrayaan-3 landed near the lunar south pole in August 2023, making India the fourth country to achieve a soft.',
+              2: 'First sample return from the far side is incorrect; chandrayaan-3 landed near the lunar south pole in August 2023, making India the fourth country to.',
+              3: 'First telescope placed on the Moon is incorrect; chandrayaan-3 landed near the lunar south pole in August 2023, making India the fourth country to achieve.',
+            },
           },
           {
             id: "sp-sec3-u9-L3-T3",
@@ -1754,6 +1997,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Only government space agencies have sent spacecraft to the Moon.",
             correctAnswer: false,
             explanation: "Private companies have also attempted and achieved Moon missions. Commercial lunar landers are becoming a reality alongside government missions.",
+            distractorExplanations: {
+              0: 'Private companies have also attempted and achieved Moon missions.',
+            },
           },
           {
             id: "sp-sec3-u9-L3-Q7",
@@ -1768,6 +2014,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "While crewed missions paused, robotic missions continued. Japan, Europe, China, India, and others sent orbiters and landers. The Moon is far from fully explored.",
+            distractorExplanations: {
+              1: 'This answer is wrong; while crewed missions paused, robotic missions continued.',
+              2: 'This is incorrect; while crewed missions paused, robotic missions continued.',
+              3: 'This claim is incorrect; while crewed missions paused, robotic missions continued.',
+            },
           },
         ],
       },
@@ -1798,6 +2049,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Artemis aims to expand who gets to explore the Moon. Previous Apollo astronauts were all men. Artemis will include the first woman and first person of color on the Moon.",
+            distractorExplanations: {
+              1: 'Land on Mars by 2030 is incorrect; artemis aims to expand who gets to explore the Moon.',
+              2: 'Build a space elevator to the Moon is incorrect; artemis aims to expand who gets to explore the Moon.',
+              3: 'This is incorrect; artemis aims to expand who gets to explore the Moon.',
+            },
           },
           {
             id: "sp-sec3-u9-L4-Q2",
@@ -1805,6 +2061,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Artemis I successfully flew an uncrewed Orion capsule around the Moon.",
             correctAnswer: true,
             explanation: "Artemis I launched in November 2022, sending the Orion spacecraft on a 25-day mission around the Moon and back without a crew aboard.",
+            distractorExplanations: {
+              1: 'Artemis I launched in November 2022, sending the Orion spacecraft on a 25-day mission around the Moon and back.',
+            },
           },
           {
             id: "sp-sec3-u9-L4-T2",
@@ -1833,6 +2092,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The south pole has permanently shadowed craters with confirmed water ice. This water could be used for drinking, oxygen, and rocket fuel.",
+            distractorExplanations: {
+              1: 'This is incorrect; the south pole has permanently shadowed craters with confirmed water ice.',
+              2: 'This claim is incorrect; the south pole has permanently shadowed craters with confirmed water ice.',
+              3: 'Radio signals are strongest there is incorrect; the south pole has permanently shadowed craters with confirmed water ice.',
+            },
           },
           {
             id: "sp-sec3-u9-L4-Q5",
@@ -1862,6 +2126,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Artemis plans to use the Moon as a stepping stone toward eventual Mars missions.",
             correctAnswer: true,
             explanation: "NASA explicitly views Artemis and the Moon as preparation for Mars. Technologies for living on the Moon will be tested before the much harder Mars journey.",
+            distractorExplanations: {
+              1: 'NASA explicitly views Artemis and the Moon as preparation for Mars.',
+            },
           },
           {
             id: "sp-sec3-u9-L4-Q8",
@@ -1876,6 +2143,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Artemis is fundamentally different from Apollo. The goal is sustained presence, resource utilization, and using the Moon as a proving ground for deeper space exploration.",
+            distractorExplanations: {
+              1: 'This is incorrect; artemis is fundamentally different from Apollo.',
+              2: 'This is incorrect; artemis is fundamentally different from Apollo.',
+              3: 'It\'s just for tourism and entertainment. is incorrect; artemis is fundamentally different from Apollo.',
+            },
           },
         ],
       },
@@ -2035,6 +2307,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Axial tilt determines how directly sunlight hits each hemisphere throughout the year, driving seasonal changes.",
+            distractorExplanations: {
+              1: 'Distance from the Sun is incorrect; axial tilt determines how directly sunlight hits each hemisphere throughout the year, driving seasonal changes.',
+              2: 'The greenhouse effect is incorrect; axial tilt determines how directly sunlight hits each hemisphere throughout the year, driving seasonal changes.',
+              3: 'The Moon\'s orbit is incorrect; axial tilt determines how directly sunlight hits each hemisphere throughout the year, driving seasonal changes.',
+            },
           },
           {
             id: "sp-sec3-u10-L1-Q2",
@@ -2042,6 +2319,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Spring tides happen when the Sun and Moon are at right angles to Earth.",
             correctAnswer: false,
             explanation: "Spring tides happen when the Sun and Moon are aligned (at new and full moon). Right angles produce neap tides.",
+            distractorExplanations: {
+              0: 'Spring tides happen when the Sun and Moon are aligned (at new and full moon).',
+            },
           },
           {
             id: "sp-sec3-u10-L1-Q3",
@@ -2072,6 +2352,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The 5-degree tilt means the Moon usually passes above or below the Sun or Earth's shadow, preventing monthly eclipses.",
+            distractorExplanations: {
+              1: 'Tides are stronger at the equator is incorrect; the 5-degree tilt means the Moon usually passes above or below the Sun or Earth\'s shadow, preventing.',
+              2: 'Moon phases take longer in summer is incorrect; the 5-degree tilt means the Moon usually passes above or below the Sun or Earth\'s shadow, preventing.',
+              3: 'The Moon drifts farther away each year is incorrect; the 5-degree tilt means the Moon usually passes above or below the Sun or Earth\'s shadow, preventing.',
+            },
           },
           {
             id: "sp-sec3-u10-L1-Q6",
@@ -2102,6 +2387,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Apollo missions returned 382 kg of lunar samples. NASA kept some sealed for decades and opened them as recently as 2019 for study with modern instruments.",
+            distractorExplanations: {
+              1: 'Live microorganisms from the Moon is incorrect; apollo missions returned 382 kg of lunar samples.',
+              2: 'Samples of lunar atmosphere is incorrect; apollo missions returned 382 kg of lunar samples.',
+              3: 'Pieces of an alien spacecraft is incorrect; apollo missions returned 382 kg of lunar samples.',
+            },
           },
           {
             id: "sp-sec3-u10-L1-Q9",
@@ -2109,6 +2399,9 @@ export const spaceSection3Part2: Unit[] = [
             question: "Mars lost its atmosphere partly because its magnetic field disappeared.",
             correctAnswer: true,
             explanation: "When Mars's core cooled and the magnetic field died, the solar wind gradually stripped away the atmosphere over billions of years.",
+            distractorExplanations: {
+              1: 'When Mars\'s core cooled and the magnetic field died, the solar wind gradually stripped away the atmosphere over.',
+            },
           },
         ],
       },
@@ -2139,6 +2432,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Quarter moons produce neap tides with the smallest tidal range. Full and new moons produce spring tides with the largest range.",
+            distractorExplanations: {
+              1: 'This reasoning is wrong because quarter moons produce neap tides with the smallest tidal range.',
+              2: 'This is incorrect; quarter moons produce neap tides with the smallest tidal range.',
+              3: 'This reasoning is wrong because quarter moons produce neap tides with the smallest tidal range.',
+            },
           },
           {
             id: "sp-sec3-u10-L2-Q2",
@@ -2153,6 +2451,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The path of totality is very narrow. People outside it might see a partial eclipse, but the dramatic total eclipse only occurs within the shadow path.",
+            distractorExplanations: {
+              1: 'This is incorrect; the path of totality is very narrow.',
+              2: 'This is incorrect; the path of totality is very narrow.',
+              3: 'This is incorrect; the path of totality is very narrow.',
+            },
           },
           {
             id: "sp-sec3-u10-L2-Q3",
@@ -2167,6 +2470,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Water ice in permanently shadowed south pole craters is the main attraction. It could be used for life support, fuel production, and reducing the need for Earth resupply missions.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; water ice in permanently shadowed south pole craters is the main attraction.',
+              2: 'Radio reception is best at the poles is incorrect; water ice in permanently shadowed south pole craters is the main attraction.',
+              3: 'This claim is incorrect; water ice in permanently shadowed south pole craters is the main attraction.',
+            },
           },
           {
             id: "sp-sec3-u10-L2-Q4",
@@ -2181,6 +2489,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Mars shows what happens without a magnetic field: the solar wind strips the atmosphere, radiation increases, and the planet becomes less habitable over billions of years.",
+            distractorExplanations: {
+              1: 'This reasoning is wrong because Mars shows what happens without a magnetic field: atmosphere loss and increased radiation.',
+              2: 'This claim is incorrect; without a magnetic field, solar wind strips the atmosphere, making the planet less habitable.',
+              3: 'This reasoning is wrong because Mars lost its magnetic field and subsequently lost most of its atmosphere to solar wind.',
+            },
           },
           {
             id: "sp-sec3-u10-L2-Q5",
@@ -2194,6 +2507,11 @@ export const spaceSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With no tilt, every location would receive the same amount of sunlight year-round. There would be no solstices, equinoxes, or meaningful seasonal changes.",
+            distractorExplanations: {
+              1: 'This is incorrect; with no tilt, every location would receive the same amount of sunlight year-round.',
+              2: 'Only the equator would lose its seasons is incorrect; with no tilt, every location would receive the same amount of sunlight year-round.',
+              3: 'This is incorrect; with no tilt, every location would receive the same amount of sunlight year-round.',
+            },
           },
           {
             id: "sp-sec3-u10-L2-Q6",

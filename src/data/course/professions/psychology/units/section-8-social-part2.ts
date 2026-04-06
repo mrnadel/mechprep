@@ -34,6 +34,9 @@ export const psySection8Part2: Unit[] = [
             question: 'The ABC model of attitudes includes affective, behavioral, and cognitive components.',
             correctAnswer: true,
             explanation: 'Affect (feelings), behavior (actions), and cognition (beliefs) make up the three parts of any attitude.',
+            distractorExplanations: {
+              1: 'Affect (feelings), behavior (actions), and cognition (beliefs) make up the three parts of any attitude.',
+            },
           },
           {
             id: 'psy-sec8-u6-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Feeling excited is an emotional response, which is the affective component of an attitude.',
+            distractorExplanations: {
+              0: 'Feeling excited is an emotional response, which is the affective component of an attitude.',
+              1: 'Feeling excited is an emotional response, which is the affective component of an attitude.',
+              3: 'Feeling excited is an emotional response, which is the affective component of an attitude.',
+            },
           },
           {
             id: 'psy-sec8-u6-L1-T2',
@@ -111,6 +119,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The IAT measures automatic associations that bypass conscious self-presentation, revealing attitudes people may not admit.',
+            distractorExplanations: {
+              0: 'The IAT measures automatic associations that bypass conscious self-presentation, revealing atti',
+              2: 'The IAT measures automatic associations that bypass conscious self-presentation, revealing atti',
+              3: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -135,6 +148,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Cognitive dissonance is the comfortable feeling of holding consistent beliefs.',
             correctAnswer: false,
             explanation: 'Cognitive dissonance is uncomfortable. It\'s the tension that arises when beliefs, attitudes, or behaviors conflict with each other.',
+            distractorExplanations: {
+              0: 'Cognitive dissonance is uncomfortable. It\'s the tension that arises when beliefs, attitudes, or behaviors conflict with each other.',
+            },
           },
           {
             id: 'psy-sec8-u6-L2-Q2',
@@ -148,6 +164,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'People reduce dissonance by changing behavior, changing beliefs, or adding new beliefs that justify the inconsistency.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              1: 'People reduce dissonance by changing behavior, changing beliefs, or adding new beliefs that jus',
+              2: 'People reduce dissonance by changing behavior, changing beliefs, or adding new beliefs that jus',
+            },
           },
           {
             id: 'psy-sec8-u6-L2-T2',
@@ -181,6 +202,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The $20 was sufficient justification for lying. But $1 wasn\'t enough to explain it, so they changed their attitude instead.',
+            distractorExplanations: {
+              0: 'The $20 was sufficient justification for lying.',
+              1: 'The $20 was sufficient justification for lying.',
+              3: 'The $20 was sufficient justification for lying.',
+            },
           },
           {
             id: 'psy-sec8-u6-L2-Q5',
@@ -209,6 +235,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Seeking out positive information to justify an already-made decision reduces dissonance by adding supportive beliefs.',
+            distractorExplanations: {
+              0: 'Seeking out positive information to justify an already-made decision reduces dissonance by addi',
+              2: 'This describes the opposite of what actually happens; seeking out positive information to justify an already-made decision reduces dissonance by addi',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -233,6 +264,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Self-perception theory says we figure out our attitudes by observing our own behavior.',
             correctAnswer: true,
             explanation: 'Bem proposed that we look at what we do and infer what we must believe, especially when our attitudes are weak or unclear.',
+            distractorExplanations: {
+              1: 'Bem proposed that we look at what we do and infer what we must believe, especially when our attitudes are weak or unclear.',
+            },
           },
           {
             id: 'psy-sec8-u6-L3-Q2',
@@ -246,6 +280,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Self-perception theory says you watched yourself volunteer and concluded, "I must be a generous person."',
+            distractorExplanations: {
+              0: 'Self-perception theory says you watched yourself volunteer and concluded, "I must be a generous',
+              2: 'Self-perception theory says you watched yourself volunteer and concluded, "I must be a generous',
+              3: 'Self-perception theory says you watched yourself volunteer and concluded, "I must be a generous',
+            },
           },
           {
             id: 'psy-sec8-u6-L3-T2',
@@ -289,6 +328,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Self-perception works best when you don\'t already have a clear attitude. You look at your behavior to figure out what you think.',
+            distractorExplanations: {
+              0: 'Self-perception works best when you don\'t already have a clear attitude.',
+              1: 'Self-perception works best when you don\'t already have a clear attitude.',
+              3: 'Self-perception works best when you don\'t already have a clear attitude.',
+            },
           },
           {
             id: 'psy-sec8-u6-L3-T3',
@@ -309,6 +353,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The child observed themselves getting paid and concluded they were drawing for the money. When the money stopped, so did the motivation.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+              1: 'The child observed themselves getting paid and concluded they were drawing for the money.',
+              3: 'Classical conditioning is a different concept that does not explain this particular phenomenon.',
+            },
           },
         ],
       },
@@ -333,6 +382,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Knowing someone\'s attitude about recycling will reliably predict whether they recycle.',
             correctAnswer: false,
             explanation: 'Attitudes alone are weak predictors of specific behaviors. Convenience, social norms, and habits matter more in predicting actual recycling behavior.',
+            distractorExplanations: {
+              0: 'Attitudes alone are weak predictors of specific behaviors.',
+            },
           },
           {
             id: 'psy-sec8-u6-L4-Q2',
@@ -346,6 +398,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Over 90% of restaurants that said they\'d refuse Chinese guests actually served them. Attitudes didn\'t match behavior.',
+            distractorExplanations: {
+              0: 'Over 90% of restaurants that said they\'d refuse Chinese guests actually served them.',
+              2: 'Over 90% of restaurants that said they\'d refuse Chinese guests actually served them.',
+              3: 'Over 90% of restaurants that said they\'d refuse Chinese guests actually served them.',
+            },
           },
           {
             id: 'psy-sec8-u6-L4-T2',
@@ -388,6 +445,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Attitudes formed through direct experience are stronger, more accessible, and better predict behavior than secondhand attitudes.',
+            distractorExplanations: {
+              0: 'Attitudes formed through direct experience are stronger, more accessible, and better predict be',
+              1: 'Attitudes formed through direct experience are stronger, more accessible, and better predict be',
+              3: 'Attitudes formed through direct experience are stronger, more accessible, and better predict be',
+            },
           },
           {
             id: 'psy-sec8-u6-L4-T3',
@@ -408,6 +470,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The attitude is genuine, but habits and practical barriers (forgetting bags) prevent the attitude from becoming consistent behavior.',
+            distractorExplanations: {
+              0: 'This describes the opposite of what actually happens; the attitude is genuine, but habits and practical barriers (forgetting bags) prevent the attitu',
+              1: 'The attitude is genuine, but habits and practical barriers (forgetting bags) prevent the attitu',
+              3: 'The attitude is genuine, but habits and practical barriers (forgetting bags) prevent the attitu',
+            },
           },
         ],
       },
@@ -551,6 +618,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Prejudice and discrimination are the same thing.',
             correctAnswer: false,
             explanation: 'Prejudice is an attitude (how you feel). Discrimination is behavior (how you act). You can be prejudiced without discriminating, or discriminate without being personally prejudiced.',
+            distractorExplanations: {
+              0: 'Prejudice is an attitude (how you feel). Discrimination is behavior (how you act).',
+            },
           },
           {
             id: 'psy-sec8-u7-L1-Q2',
@@ -564,6 +634,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A generalized belief about a group is a stereotype. It becomes prejudice when it involves a negative emotional evaluation.',
+            distractorExplanations: {
+              0: 'A generalized belief about a group is a stereotype.',
+              2: 'A generalized belief about a group is a stereotype.',
+              3: 'A generalized belief about a group is a stereotype.',
+            },
           },
           {
             id: 'psy-sec8-u7-L1-T2',
@@ -628,6 +703,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'She sees her in-group (marketing) as diverse individuals but views the out-group (accounting) as all the same. This is the out-group homogeneity effect.',
+            distractorExplanations: {
+              1: 'She sees her in-group (marketing) as diverse individuals but views the out-group (accounting) a',
+              2: 'She sees her in-group (marketing) as diverse individuals but views the out-group (accounting) a',
+              3: 'She sees her in-group (marketing) as diverse individuals but views the out-group (accounting) a',
+            },
           },
         ],
       },
@@ -652,6 +732,9 @@ export const psySection8Part2: Unit[] = [
             question: 'A person who explicitly rejects racism can still hold implicit racial biases.',
             correctAnswer: true,
             explanation: 'Implicit and explicit attitudes can be independent. Someone can genuinely oppose racism while still having automatic biases from cultural exposure.',
+            distractorExplanations: {
+              1: 'Implicit and explicit attitudes can be independent.',
+            },
           },
           {
             id: 'psy-sec8-u7-L2-Q2',
@@ -665,6 +748,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The IAT measures how quickly you associate different concepts. Faster pairings suggest stronger automatic associations.',
+            distractorExplanations: {
+              0: 'The IAT measures how quickly you associate different concepts.',
+              2: 'The IAT measures how quickly you associate different concepts.',
+              3: 'The IAT measures how quickly you associate different concepts.',
+            },
           },
           {
             id: 'psy-sec8-u7-L2-T2',
@@ -693,6 +781,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Exposure to counter-stereotypical examples (such as successful people from stereotyped groups) can gradually update implicit associations.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "entirely" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+              3: 'Exposure to counter-stereotypical examples (such as successful people from stereotyped groups) ',
+            },
           },
           {
             id: 'psy-sec8-u7-L2-Q5',
@@ -729,6 +822,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This is a classic demonstration of implicit bias. The manager\'s automatic associations affect decisions despite their genuine belief in equality.',
+            distractorExplanations: {
+              0: 'This is a classic demonstration of implicit bias.',
+              2: 'This is a classic demonstration of implicit bias.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },
@@ -753,6 +851,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Stereotype threat means that awareness of a stereotype about your group can reduce your performance.',
             correctAnswer: true,
             explanation: 'When you\'re aware of a negative stereotype and fear confirming it, the added anxiety can impair performance.',
+            distractorExplanations: {
+              1: 'When you\'re aware of a negative stereotype and fear confirming it, the added anxiety can impair performance.',
+            },
           },
           {
             id: 'psy-sec8-u7-L3-Q2',
@@ -766,6 +867,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Framing the test as diagnostic of ability activated the "women are bad at math" stereotype, which hurt performance through anxiety.',
+            distractorExplanations: {
+              0: 'Framing the test as diagnostic of ability activated the "women are bad at math" stereotype, whi',
+              1: 'Framing the test as diagnostic of ability activated the "women are bad at math" stereotype, whi',
+              3: 'Framing the test as diagnostic of ability activated the "women are bad at math" stereotype, whi',
+            },
           },
           {
             id: 'psy-sec8-u7-L3-T2',
@@ -808,6 +914,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Teaching a growth mindset (intelligence can improve) reduces the threat because failure no longer confirms a fixed limitation.',
+            distractorExplanations: {
+              0: 'Teaching a growth mindset (intelligence can improve) reduces the threat because failure no long',
+              1: 'Teaching a growth mindset (intelligence can improve) reduces the threat because failure no long',
+              3: 'Teaching a growth mindset (intelligence can improve) reduces the threat because failure no long',
+            },
           },
           {
             id: 'psy-sec8-u7-L3-T3',
@@ -828,6 +939,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Reducing identity salience and reframing the task removes the threatening context, which reduces stereotype threat.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'Reducing identity salience and reframing the task removes the threatening context, which reduce',
+              3: 'This describes the opposite of what actually happens; reducing identity salience and reframing the task removes the threatening context, which reduce',
+            },
           },
         ],
       },
@@ -852,6 +968,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Simply putting two groups in the same room is enough to reduce prejudice.',
             correctAnswer: false,
             explanation: 'Contact alone doesn\'t reduce prejudice. It must involve equal status, shared goals, cooperation, and institutional support.',
+            distractorExplanations: {
+              0: 'Contact alone doesn\'t reduce prejudice. It must involve equal status, shared goals, cooperation, and institutional support.',
+            },
           },
           {
             id: 'psy-sec8-u7-L4-Q2',
@@ -865,6 +984,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Common goals require groups to cooperate toward something they both want, which builds connection and breaks down barriers.',
+            distractorExplanations: {
+              0: 'Common goals require groups to cooperate toward something they both want, which builds connecti',
+              2: 'Common goals require groups to cooperate toward something they both want, which builds connecti',
+              3: 'Common goals require groups to cooperate toward something they both want, which builds connecti',
+            },
           },
           {
             id: 'psy-sec8-u7-L4-T2',
@@ -930,6 +1054,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Cooperative projects with shared goals meet Allport\'s conditions for effective intergroup contact and prejudice reduction.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "completely" overstates the case — the reality is more nuanced.',
+              1: 'Cooperative projects with shared goals meet Allport\'s conditions for effective intergroup conta',
+              3: 'Cooperative projects with shared goals meet Allport\'s conditions for effective intergroup conta',
+            },
           },
         ],
       },
@@ -1069,6 +1198,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Physical proximity is one of the strongest predictors of who we become friends with.',
             correctAnswer: true,
             explanation: 'Studies consistently show that people who are physically close to each other are far more likely to develop friendships and romantic relationships.',
+            distractorExplanations: {
+              1: 'Studies consistently show that people who are physically close to each other are far more likely to develop friendships and romant',
+            },
           },
           {
             id: 'psy-sec8-u8-L1-Q2',
@@ -1082,6 +1214,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Festinger\'s MIT housing study showed that physical closeness, especially being next-door neighbors, was the strongest predictor of friendship.',
+            distractorExplanations: {
+              0: 'Festinger\'s MIT housing study showed that physical closeness, especially being next-door neighb',
+              2: 'Festinger\'s MIT housing study showed that physical closeness, especially being next-door neighb',
+              3: 'Festinger\'s MIT housing study showed that physical closeness, especially being next-door neighb',
+            },
           },
           {
             id: 'psy-sec8-u8-L1-T2',
@@ -1125,6 +1262,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Proximity leads to more frequent exposure, which triggers the mere exposure effect. Familiarity increases liking.',
+            distractorExplanations: {
+              0: 'Proximity leads to more frequent exposure, which triggers the mere exposure effect.',
+              2: 'Proximity leads to more frequent exposure, which triggers the mere exposure effect.',
+              3: 'Biological is a different concept that does not explain this particular phenomenon.',
+            },
           },
           {
             id: 'psy-sec8-u8-L1-T3',
@@ -1145,6 +1287,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Increased proximity and repeated exposure between departments should lead to more cross-department friendships.',
+            distractorExplanations: {
+              1: 'Increased proximity and repeated exposure between departments should lead to more cross-departm',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'This describes the opposite of what actually happens; increased proximity and repeated exposure between departments should lead to more cross-departm',
+            },
           },
         ],
       },
@@ -1169,6 +1316,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Research supports the idea that opposites attract in romantic relationships.',
             correctAnswer: false,
             explanation: 'The opposite is true. Research strongly supports similarity as a driver of attraction. "Opposites attract" is a popular myth.',
+            distractorExplanations: {
+              0: 'The opposite is true. Research strongly supports similarity as a driver of attraction. "Opposites attract" is a popular myth.',
+            },
           },
           {
             id: 'psy-sec8-u8-L2-Q2',
@@ -1182,6 +1332,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'People who share our views validate us and make interactions smoother. We feel understood and accepted.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              2: 'Biological is a different concept that does not explain this particular phenomenon.',
+              3: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec8-u8-L2-T2',
@@ -1224,6 +1379,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The halo effect causes us to assume attractive people are also smarter, kinder, and more competent, even without evidence.',
+            distractorExplanations: {
+              1: 'The halo effect causes us to assume attractive people are also smarter, kinder, and more compet',
+              2: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              3: 'The halo effect causes us to assume attractive people are also smarter, kinder, and more compet',
+            },
           },
           {
             id: 'psy-sec8-u8-L2-T3',
@@ -1244,6 +1404,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Sitting together (proximity), shared interests and views (similarity), and mutual expressed interest (reciprocity) all contribute.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'This describes the opposite of what actually happens; sitting together (proximity), shared interests and views (similarity), and mutual expressed int',
+            },
           },
         ],
       },
@@ -1268,6 +1433,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Adult romantic attachment styles are completely unrelated to childhood attachment patterns.',
             correctAnswer: false,
             explanation: 'Research shows strong parallels between how you bonded with caregivers and how you relate to romantic partners.',
+            distractorExplanations: {
+              0: 'Research shows strong parallels between how you bonded with caregivers and how you relate to romantic partners.',
+            },
           },
           {
             id: 'psy-sec8-u8-L3-Q2',
@@ -1281,6 +1449,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Secure attachment involves comfort with intimacy, trust, and healthy interdependence.',
+            distractorExplanations: {
+              0: 'Secure attachment involves comfort with intimacy, trust, and healthy interdependence.',
+              1: 'Secure attachment involves comfort with intimacy, trust, and healthy interdependence.',
+              3: 'Secure attachment involves comfort with intimacy, trust, and healthy interdependence.',
+            },
           },
           {
             id: 'psy-sec8-u8-L3-T2',
@@ -1346,6 +1519,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Constant reassurance-seeking, fear of abandonment, and temporary relief that quickly fades are hallmarks of anxious attachment.',
+            distractorExplanations: {
+              0: 'Constant reassurance-seeking, fear of abandonment, and temporary relief that quickly fades are ',
+              1: 'Constant reassurance-seeking, fear of abandonment, and temporary relief that quickly fades are ',
+              3: 'This describes the opposite of what actually happens; constant reassurance-seeking, fear of abandonment, and temporary relief that quickly fades are ',
+            },
           },
         ],
       },
@@ -1370,6 +1548,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Sternberg\'s theory says love is made up of intimacy, passion, and commitment.',
             correctAnswer: true,
             explanation: 'These three components combine in different ways to create 7 types of love in Sternberg\'s model.',
+            distractorExplanations: {
+              1: 'These three components combine in different ways to create 7 types of love in Sternberg\'s model.',
+            },
           },
           {
             id: 'psy-sec8-u8-L4-Q2',
@@ -1383,6 +1564,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Companionate love combines intimacy and commitment without passion. It\'s common in long-term relationships.',
+            distractorExplanations: {
+              0: 'Companionate love combines intimacy and commitment without passion.',
+              2: 'Companionate love combines intimacy and commitment without passion.',
+              3: 'Companionate love combines intimacy and commitment without passion.',
+            },
           },
           {
             id: 'psy-sec8-u8-L4-T2',
@@ -1425,6 +1611,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Consummate love includes all three: intimacy, passion, and commitment. It\'s considered the ideal but is difficult to maintain.',
+            distractorExplanations: {
+              0: 'Consummate love includes all three: intimacy, passion, and commitment.',
+              1: 'Consummate love includes all three: intimacy, passion, and commitment.',
+              3: 'Consummate love includes all three: intimacy, passion, and commitment.',
+            },
           },
           {
             id: 'psy-sec8-u8-L4-T3',
@@ -1445,6 +1636,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Companionate love (intimacy + commitment) with perceived equity predicts high relationship satisfaction in long-term partnerships.',
+            distractorExplanations: {
+              0: 'Companionate love (intimacy + commitment) with perceived equity predicts high relationship sati',
+              2: 'Companionate love (intimacy + commitment) with perceived equity predicts high relationship sati',
+              3: 'Companionate love (intimacy + commitment) with perceived equity predicts high relationship sati',
+            },
           },
         ],
       },
@@ -1588,6 +1784,9 @@ export const psySection8Part2: Unit[] = [
             question: 'The bystander effect means people are more likely to help when more witnesses are present.',
             correctAnswer: false,
             explanation: 'The bystander effect is the opposite. More bystanders means each individual feels less personal responsibility to help.',
+            distractorExplanations: {
+              0: 'The bystander effect is the opposite. More bystanders means each individual feels less personal responsibility to help.',
+            },
           },
           {
             id: 'psy-sec8-u9-L1-Q2',
@@ -1601,6 +1800,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Diffusion of responsibility means each person assumes someone else will help. The more people present, the less responsible each one feels.',
+            distractorExplanations: {
+              0: 'Diffusion of responsibility means each person assumes someone else will help.',
+              2: 'This describes the opposite of what actually happens; diffusion of responsibility means each person assumes someone else will help.',
+              3: 'Diffusion of responsibility means each person assumes someone else will help.',
+            },
           },
           {
             id: 'psy-sec8-u9-L1-T2',
@@ -1642,6 +1846,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Singling out a specific person assigns personal responsibility, which breaks through diffusion of responsibility.',
+            distractorExplanations: {
+              0: 'Singling out a specific person assigns personal responsibility, which breaks through diffusion ',
+              2: 'Singling out a specific person assigns personal responsibility, which breaks through diffusion ',
+              3: 'Singling out a specific person assigns personal responsibility, which breaks through diffusion ',
+            },
           },
           {
             id: 'psy-sec8-u9-L1-T3',
@@ -1662,6 +1871,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Everyone is looking to others for information. Since nobody is acting, everyone concludes it must not be serious. This is pluralistic ignorance.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              2: 'Everyone is looking to others for information.',
+              3: 'Everyone is looking to others for information.',
+            },
           },
         ],
       },
@@ -1686,6 +1900,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Altruism refers to helping behavior that is motivated by personal gain.',
             correctAnswer: false,
             explanation: 'Altruism is specifically helping without expecting anything in return. If personal gain motivates the helping, it\'s not altruism.',
+            distractorExplanations: {
+              0: 'Altruism is specifically helping without expecting anything in return. If personal gain motivates the helping, it\'s not altruism.',
+            },
           },
           {
             id: 'psy-sec8-u9-L2-Q2',
@@ -1699,6 +1916,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Batson argued that genuine empathy for another person can motivate truly altruistic helping, not driven by self-interest.',
+            distractorExplanations: {
+              0: 'Batson argued that genuine empathy for another person can motivate truly altruistic helping, no',
+              2: 'Batson argued that genuine empathy for another person can motivate truly altruistic helping, no',
+              3: 'Batson argued that genuine empathy for another person can motivate truly altruistic helping, no',
+            },
           },
           {
             id: 'psy-sec8-u9-L2-T2',
@@ -1743,6 +1965,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'From an evolutionary perspective, helping relatives protects shared genetic material, even at personal cost.',
+            distractorExplanations: {
+              0: 'From an evolutionary perspective, helping relatives protects shared genetic material, even at p',
+              2: 'From an evolutionary perspective, helping relatives protects shared genetic material, even at p',
+              3: 'From an evolutionary perspective, helping relatives protects shared genetic material, even at p',
+            },
           },
           {
             id: 'psy-sec8-u9-L2-T3',
@@ -1763,6 +1990,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Immediate, unplanned helping driven by emotional response to someone in danger is consistent with empathy-driven altruism.',
+            distractorExplanations: {
+              0: 'Immediate, unplanned helping driven by emotional response to someone in danger is consistent wi',
+              2: 'Immediate, unplanned helping driven by emotional response to someone in danger is consistent wi',
+              3: 'Immediate, unplanned helping driven by emotional response to someone in danger is consistent wi',
+            },
           },
         ],
       },
@@ -1787,6 +2019,9 @@ export const psySection8Part2: Unit[] = [
             question: 'Aggression is caused entirely by biological factors like hormones.',
             correctAnswer: false,
             explanation: 'Aggression has both biological and social components. Hormones like testosterone play a role, but social learning, frustration, and situational factors are equally important.',
+            distractorExplanations: {
+              0: 'Aggression has both biological and social components.',
+            },
           },
           {
             id: 'psy-sec8-u9-L3-Q2',
@@ -1800,6 +2035,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Bandura showed that children imitated aggressive behavior they observed in adults, demonstrating social learning of aggression.',
+            distractorExplanations: {
+              0: 'Instinct is a different concept that does not explain this particular phenomenon.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'Bandura showed that children imitated aggressive behavior they observed in adults, demonstratin',
+            },
           },
           {
             id: 'psy-sec8-u9-L3-T2',
@@ -1865,6 +2105,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The child observed aggression being used successfully and later imitated it. This is social learning theory in action.',
+            distractorExplanations: {
+              0: 'Biological is a different concept that does not explain this particular phenomenon.',
+              2: 'The child observed aggression being used successfully and later imitated it.',
+              3: 'The child observed aggression being used successfully and later imitated it.',
+            },
           },
         ],
       },
@@ -1889,6 +2134,9 @@ export const psySection8Part2: Unit[] = [
             question: 'The frustration-aggression hypothesis states that frustration always leads to overt aggression.',
             correctAnswer: false,
             explanation: 'Frustration creates a readiness for aggression, but it doesn\'t always result in actual aggressive behavior. Other factors determine whether aggression occurs.',
+            distractorExplanations: {
+              0: 'Frustration creates a readiness for aggression, but it doesn\'t always result in actual aggressive behavior.',
+            },
           },
           {
             id: 'psy-sec8-u9-L4-Q2',
@@ -1902,6 +2150,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Your goal (driving smoothly) was blocked, creating frustration that triggered an aggressive response.',
+            distractorExplanations: {
+              0: 'Your goal (driving smoothly) was blocked, creating frustration that triggered an aggressive res',
+              2: 'Your goal (driving smoothly) was blocked, creating frustration that triggered an aggressive res',
+              3: 'Your goal (driving smoothly) was blocked, creating frustration that triggered an aggressive res',
+            },
           },
           {
             id: 'psy-sec8-u9-L4-T2',
@@ -1929,6 +2182,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Berkowitz broadened the theory: any negative feeling (not just frustration) can lead to either aggression or withdrawal.',
+            distractorExplanations: {
+              0: 'This is too absolute; the word "always" overstates the case — the reality is more nuanced.',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'Research shows a meaningful effect exists here, not the absence of one.',
+            },
           },
           {
             id: 'psy-sec8-u9-L4-Q5',
@@ -1966,6 +2224,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The employee couldn\'t express frustration at the boss (unsafe target), so they redirected it to the roommate (safe target). This is displaced aggression.',
+            distractorExplanations: {
+              0: 'The employee couldn\'t express frustration at the boss (unsafe target), so they redirected it to',
+              2: 'The employee couldn\'t express frustration at the boss (unsafe target), so they redirected it to',
+              3: 'The employee couldn\'t express frustration at the boss (unsafe target), so they redirected it to',
+            },
           },
         ],
       },
@@ -2140,6 +2403,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Suppressed dissent in a cohesive group with a directive leader is groupthink.',
+            distractorExplanations: {
+              0: 'Suppressed dissent in a cohesive group with a directive leader is groupthink.',
+              2: 'Suppressed dissent in a cohesive group with a directive leader is groupthink.',
+              3: 'Suppressed dissent in a cohesive group with a directive leader is groupthink.',
+            },
           },
           {
             id: 'psy-sec8-u10-L1-Q4',
@@ -2155,6 +2423,9 @@ export const psySection8Part2: Unit[] = [
             question: 'The contact hypothesis says any form of intergroup contact will reduce prejudice.',
             correctAnswer: false,
             explanation: 'Contact reduces prejudice only under specific conditions: equal status, shared goals, cooperation, and institutional support.',
+            distractorExplanations: {
+              0: 'Contact reduces prejudice only under specific conditions: equal status, shared goals, cooperation, and institutional support.',
+            },
           },
           {
             id: 'psy-sec8-u10-L1-T2',
@@ -2175,6 +2446,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A cohesive team with an enthusiastic leader where nobody voices doubts is a textbook case of groupthink.',
+            distractorExplanations: {
+              0: 'A cohesive team with an enthusiastic leader where nobody voices doubts is a textbook case of gr',
+              2: 'A cohesive team with an enthusiastic leader where nobody voices doubts is a textbook case of gr',
+              3: 'A cohesive team with an enthusiastic leader where nobody voices doubts is a textbook case of gr',
+            },
           },
         ],
       },
@@ -2206,6 +2482,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The cohesive group suppressed dissent (groupthink) and deferred to the CEO\'s authority (obedience), leading to an unchallenged bad plan.',
+            distractorExplanations: {
+              0: 'The cohesive group suppressed dissent (groupthink) and deferred to the CEO\'s authority (obedien',
+              2: 'The cohesive group suppressed dissent (groupthink) and deferred to the CEO\'s authority (obedien',
+              3: 'The cohesive group suppressed dissent (groupthink) and deferred to the CEO\'s authority (obedien',
+            },
           },
           {
             id: 'psy-sec8-u10-L2-Q2',
@@ -2219,6 +2500,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Companionate love (intimacy + commitment) is the natural evolution of long-term relationships. Passion typically fades, but deep connection remains.',
+            distractorExplanations: {
+              0: 'Companionate love (intimacy + commitment) is the natural evolution of long-term relationships.',
+              2: 'Companionate love (intimacy + commitment) is the natural evolution of long-term relationships.',
+              3: 'This is too absolute; the word "never" overstates the case — the reality is more nuanced.',
+            },
           },
           {
             id: 'psy-sec8-u10-L2-Q3',
@@ -2277,6 +2563,11 @@ export const psySection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Structured protocols that legitimize questioning create systematic protection against blind obedience. This changes the situation, which is more effective than changing individuals.',
+            distractorExplanations: {
+              0: 'Structured protocols that legitimize questioning create systematic protection against blind obe',
+              2: 'This is too absolute; the word "only" overstates the case — the reality is more nuanced.',
+              3: 'This is too absolute; the word "all" overstates the case — the reality is more nuanced.',
+            },
           },
         ],
       },

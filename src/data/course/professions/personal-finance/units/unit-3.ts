@@ -50,6 +50,9 @@ export const unit3: Unit = {
           question: "All debt is bad and should be avoided completely.",
           correctAnswer: false,
           explanation: "Not true. Strategic debt, like a mortgage or student loan for a high-earning degree, can actually build wealth. The key is whether the debt helps you earn more or own more than it costs you in interest.",
+          distractorExplanations: {
+            0: 'Strategic debt, like a mortgage or student loan for a high-earning degree, can actually build wealth',
+          },
         },
         {
           id: "pf-u3-L1-Q1",
@@ -72,6 +75,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "The right question is about long-term value. Just affording the payment doesn't mean it's smart, you could 'afford' a 500/month car payment while it drains your wealth. Focus on whether the debt builds something lasting.",
+          distractorExplanations: {
+            1: 'The right question is about long-term value',
+            2: 'The right question is about long-term value',
+            3: 'The right question is about long-term value',
+          },
         },
         {
           id: "pf-u3-L1-Q4",
@@ -110,6 +118,11 @@ export const unit3: Unit = {
             CA: "A Canada Student Loan has 0% interest and repayment assistance programs. Credit card advances and payday loans are absurdly expensive, and informal friend loans can destroy relationships.",
             IL: "A student loan from a major bank at a regulated rate is the best option. Credit card advances and payday loans are absurdly expensive, and informal friend loans can destroy relationships. Check for university-specific scholarships first.",
           },
+          distractorExplanations: {
+            1: 'The federal student loan has the lowest rate, best protections, and flexible repayment',
+            2: 'The federal student loan has the lowest rate, best protections, and flexible repayment',
+            3: 'The federal student loan has the lowest rate, best protections, and flexible repayment',
+          },
         },
         {
           id: "pf-u3-L1-Q7",
@@ -132,6 +145,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Using savings plus a low-interest loan minimizes borrowing costs. The business should pay off the 3,000 loan quickly with 1,500/month revenue, and credit cards and payday loans are way too expensive.",
+          distractorExplanations: {
+            1: 'Using savings plus a low-interest loan minimizes borrowing costs',
+            2: 'Using savings plus a low-interest loan minimizes borrowing costs',
+            3: 'Using savings plus a low-interest loan minimizes borrowing costs',
+          },
         },
         {
           id: "pf-u3-L1-Q9",
@@ -182,6 +200,9 @@ export const unit3: Unit = {
           question: "When you borrow money, you have to pay back more than you originally borrowed.",
           correctAnswer: true,
           explanation: "Yes! The extra you pay is called interest. It's the cost of borrowing someone else's money.",
+          distractorExplanations: {
+            1: 'The extra you pay is called interest',
+          },
         },
         {
           id: "pf-u3-L2-Q1",
@@ -195,6 +216,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "With daily compounding at 24% APR, the actual amount is about 270, more than the simple 240 calculation because you're paying interest on interest. That's compound interest working against you.",
+          distractorExplanations: {
+            1: 'With daily compounding at 24% APR, the actual amount is about 270, more than the simple 240 calculation because you\'re paying interest on interest',
+            2: 'The correct answer is About 270 (due to compounding), not About 24',
+            3: 'The correct answer is About 270 (due to compounding), not About 1,000',
+          },
         },
         {
           id: "pf-u3-L2-Q3",
@@ -251,6 +277,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Paying off 24% interest debt is a guaranteed 24% return on your money. No savings account comes close. Eliminating 480/year in interest is like giving yourself a permanent raise.",
+          distractorExplanations: {
+            1: 'Paying off 24% interest debt is a guaranteed 24% return on your money',
+            2: 'Paying off 24% interest debt is a guaranteed 24% return on your money',
+            3: 'Paying off 24% interest debt is a guaranteed 24% return on your money',
+          },
         },
         {
           id: "pf-u3-L2-Q8",
@@ -318,6 +349,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Interest is the cash cow. People carrying balances pay 18-28% interest on every dollar owed. That's why credit card companies love minimum payments, they keep you in debt longer, paying more interest.",
+          distractorExplanations: {
+            1: 'Interest is the cash cow. People carrying balances pay 18-28% interest on every dollar owed',
+            2: 'Interest is the cash cow. People carrying balances pay 18-28% interest on every dollar owed',
+            3: 'Interest is the cash cow. People carrying balances pay 18-28% interest on every dollar owed',
+          },
         },
         {
           id: "pf-u3-L3-Q2",
@@ -325,6 +361,9 @@ export const unit3: Unit = {
           question: "If you pay your full credit card balance by the due date each month, you pay zero interest.",
           correctAnswer: true,
           explanation: "This is the golden rule of credit cards. Pay the full statement balance by the due date and you never pay a cent in interest, plus you earn rewards.",
+          distractorExplanations: {
+            1: 'This is the golden rule of credit cards',
+          },
         },
         {
           id: "pf-u3-L3-Q3",
@@ -370,6 +409,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "Paying in full saves you from 24% interest, and you'll have 300 left until next paycheck. Paying only 35 means about 30/month in interest charges that compound.",
+          distractorExplanations: {
+            0: 'Paying in full saves you from 24% interest, and you\'ll have 300 left until next paycheck',
+            1: 'Paying in full saves you from 24% interest, and you\'ll have 300 left until next paycheck',
+            3: 'Paying in full saves you from 24% interest, and you\'ll have 300 left until next paycheck',
+          },
         },
         {
           id: "pf-u3-L3-Q7",
@@ -470,6 +514,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Income-driven repayment (IDR) caps your monthly payment at a percentage of your discretionary income. If you're earning little after graduation, your payment could be as low as 0/month. It adjusts as your income changes.",
+          distractorExplanations: {
+            1: 'Income-driven repayment (IDR) caps your monthly payment at a percentage of your discretionary income',
+            2: 'Income-driven repayment (IDR) caps your monthly payment at a percentage of your discretionary income',
+            3: 'Income-driven repayment (IDR) caps your monthly payment at a percentage of your discretionary income',
+          },
         },
         {
           id: "pf-u3-L4-Q3",
@@ -477,6 +526,9 @@ export const unit3: Unit = {
           question: "Private student loans qualify for Public Service Loan Forgiveness (PSLF).",
           correctAnswer: false,
           explanation: "Only federal Direct Loans qualify for PSLF. Private loans never qualify for any government forgiveness program. This is one of the biggest reasons to prioritize federal borrowing over private.",
+          distractorExplanations: {
+            0: 'Only federal Direct Loans qualify for PSLF',
+          },
         },
         {
           id: "pf-u3-L4-Q4",
@@ -508,6 +560,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "As a public school teacher (qualifying public service), you could have your remaining balance forgiven after 120 qualifying payments through PSLF. Refinancing to private would disqualify you from forgiveness. IDR keeps payments manageable on a teacher salary.",
+          distractorExplanations: {
+            1: 'As a public school teacher (qualifying public service), you could have your remaining balance forgiven after 120 qualifying payments through PSLF',
+            2: 'As a public school teacher (qualifying public service), you could have your remaining balance forgiven after 120 qualifying payments through PSLF',
+            3: 'As a public school teacher (qualifying public service), you could have your remaining balance forgiven after 120 qualifying payments through PSLF',
+          },
         },
         {
           id: "pf-u3-L4-Q7",
@@ -521,6 +578,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "All options get you a degree, but the state school minimizes debt, uses federal loans with better protections, and keeps total borrowing manageable. Prestige rarely justifies 200,000 in debt unless the field practically guarantees high earnings.",
+          distractorExplanations: {
+            1: 'All options get you a degree, but the state school minimizes debt, uses federal loans with better protections, and keeps total borrowing manageable',
+            2: 'All options get you a degree, but the state school minimizes debt, uses federal loans with better protections, and keeps total borrowing manageable',
+            3: 'All options get you a degree, but the state school minimizes debt, uses federal loans with better protections, and keeps total borrowing manageable',
+          },
         },
         {
           id: "pf-u3-L4-Q8",
@@ -591,6 +653,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "35,000 × 20% = 7,000 lost. Worth about 28,000 the moment you leave the lot. You just lost 7,000 in the time it took to drive home. That's depreciation in action.",
+          distractorExplanations: {
+            1: 'The correct answer is About 28,000, not About 35,000, it\'s still new',
+            2: 'The correct answer is About 28,000, not About 15,000',
+            3: 'The correct answer is About 28,000, not About 32,000',
+          },
         },
         {
           id: "pf-u3-L5-Q2",
@@ -598,6 +665,9 @@ export const unit3: Unit = {
           question: "Dealerships often make more profit from financing the car than from selling it.",
           correctAnswer: true,
           explanation: "True. Dealers mark up interest rates, sell add-ons (warranties, gap insurance, paint protection), and earn kickbacks from lenders. The finance office is often their biggest profit center, not the showroom.",
+          distractorExplanations: {
+            1: 'True. Dealers mark up interest rates, sell add-ons (warranties, gap insurance, paint protection), and earn kickbacks from lenders',
+          },
         },
         {
           id: "pf-u3-L5-Q3",
@@ -621,6 +691,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Dealer A: 350 × 84 = 29,400 total. Dealer B: 450 × 60 = 27,000 total. Dealer B saves you 2,400 despite the higher monthly payment. The lower monthly payment TRAP made Dealer A look better. Always calculate the total cost.",
+          distractorExplanations: {
+            1: 'Dealer A: 350 × 84 = 29,400 total. Dealer B: 450 × 60 = 27,000 total',
+            2: 'Dealer A: 350 × 84 = 29,400 total. Dealer B: 450 × 60 = 27,000 total',
+            3: 'Dealer A: 350 × 84 = 29,400 total. Dealer B: 450 × 60 = 27,000 total',
+          },
         },
         {
           id: "pf-u3-L5-Q5",
@@ -651,6 +726,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "The certified used car gives you reliability at a lower price, shorter loan term, and total cost of about 19,200. The 84-month new car costs 36,120 total. The lease gives you nothing at the end. Shorter term + used = best value.",
+          distractorExplanations: {
+            1: 'The certified used car gives you reliability at a lower price, shorter loan term, and total cost of about 19,200',
+            2: 'The certified used car gives you reliability at a lower price, shorter loan term, and total cost of about 19,200',
+            3: 'The certified used car gives you reliability at a lower price, shorter loan term, and total cost of about 19,200',
+          },
         },
         {
           id: "pf-u3-L5-Q8",
@@ -714,6 +794,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "5,000 × 22% ÷ 12 = about 92 in monthly interest. Out of your 100 minimum, only 8 actually reduces your debt. At that rate, it barely moves. This is exactly how banks want it.",
+          distractorExplanations: {
+            1: 'The correct answer is About 8, the rest is interest, not About 50, half and half',
+            2: '5,000 × 22% ÷ 12 = about 92 in monthly interest',
+            3: 'The correct answer is About 8, the rest is interest, not About 75, most goes to debt',
+          },
         },
         {
           id: "pf-u3-L6-Q2",
@@ -721,6 +806,9 @@ export const unit3: Unit = {
           question: "Paying just the minimum on your credit card is a good long-term strategy as long as you're not missing payments.",
           correctAnswer: false,
           explanation: "Not missing payments is better than missing them, but minimum payments keep you trapped in debt for decades. You end up paying 2-3x the original amount in interest. The minimum is the WORST payment strategy, it's the maximum profit for the bank.",
+          distractorExplanations: {
+            0: 'Not missing payments is better than missing them, but minimum payments keep you trapped in debt for decades',
+          },
         },
         {
           id: "pf-u3-L6-Q3",
@@ -755,6 +843,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "At 280/month, you'd pay off the 4,000 in about 17 months and pay roughly 700 in interest. At 80/month, you'd be in debt for 25+ years and pay over 10,000 in interest. The 200 extra saves you over 9,000. There's no better investment than killing 24% debt.",
+          distractorExplanations: {
+            1: 'At 280/month, you\'d pay off the 4,000 in about 17 months and pay roughly 700 in interest',
+            2: 'At 280/month, you\'d pay off the 4,000 in about 17 months and pay roughly 700 in interest',
+            3: 'At 280/month, you\'d pay off the 4,000 in about 17 months and pay roughly 700 in interest',
+          },
         },
         {
           id: "pf-u3-L6-Q6",
@@ -838,6 +931,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Snowball = smallest balance first. The logic is psychological: quick wins create momentum and motivation to keep going. Seeing a debt hit zero gives you a dopamine boost to tackle the next one.",
+          distractorExplanations: {
+            1: 'Snowball = smallest balance first. The logic is psychological: quick wins create momentum and motivation to keep going',
+            2: 'Snowball = smallest balance first. The logic is psychological: quick wins create momentum and motivation to keep going',
+            3: 'Snowball = smallest balance first. The logic is psychological: quick wins create momentum and motivation to keep going',
+          },
         },
         {
           id: "pf-u3-L7-Q2",
@@ -845,6 +943,9 @@ export const unit3: Unit = {
           question: "The debt avalanche method saves more money on interest than the snowball method.",
           correctAnswer: true,
           explanation: "Mathematically, yes. The avalanche targets the highest interest rate, which means less total interest paid over time. But the snowball's psychological wins help more people actually finish paying off debt. The best method is the one you stick with.",
+          distractorExplanations: {
+            1: 'Mathematically, yes. The avalanche targets the highest interest rate, which means less total interest paid over time',
+          },
         },
         {
           id: "pf-u3-L7-Q3",
@@ -873,6 +974,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Avalanche targets the highest RATE, not the smallest balance. The credit card at 24% is costing you the most per dollar owed. Paying it first saves the most in total interest. (The snowball method would pick the 1,200 personal loan instead.)",
+          distractorExplanations: {
+            1: 'Avalanche targets the highest RATE, not the smallest balance',
+            2: 'Avalanche targets the highest RATE, not the smallest balance',
+            3: 'Avalanche targets the highest RATE, not the smallest balance',
+          },
         },
         {
           id: "pf-u3-L7-Q5",
@@ -912,6 +1018,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "If motivation is your problem, the snowball is your answer. Eliminating that first small debt quickly creates a psychological win that fuels you forward. The math difference between snowball and avalanche is usually small, but the motivation difference is huge.",
+          distractorExplanations: {
+            1: 'If motivation is your problem, the snowball is your answer',
+            2: 'If motivation is your problem, the snowball is your answer',
+            3: 'If motivation is your problem, the snowball is your answer',
+          },
         },
         {
           id: "pf-u3-L7-Q9",
@@ -971,6 +1082,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Consolidation rolls multiple debts into one. Instead of five different payments at different rates, you have one payment at (ideally) a lower rate. Simpler management, potentially lower cost.",
+          distractorExplanations: {
+            1: 'Consolidation rolls multiple debts into one',
+            2: 'Consolidation rolls multiple debts into one',
+            3: 'Consolidation rolls multiple debts into one',
+          },
         },
         {
           id: "pf-u3-L8-Q2",
@@ -978,6 +1094,9 @@ export const unit3: Unit = {
           question: "After consolidating credit card debt into a personal loan, it's safe to max out your credit cards again.",
           correctAnswer: false,
           explanation: "This is the #1 consolidation trap. You consolidate 10,000 in card debt into a loan, then run up 10,000 more on the now-empty cards. Now you owe 20,000 instead of 10,000. Consolidation only works if you stop using the cards.",
+          distractorExplanations: {
+            0: 'This is the #1 consolidation trap. You consolidate 10,000 in card debt into a loan, then run up 10,000 more on the now-empty cards',
+          },
         },
         {
           id: "pf-u3-L8-Q3",
@@ -1018,6 +1137,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "The 240 fee saves you roughly 2,000 in interest IF you pay it off in 15 months. 8,240 ÷ 15 = 549/month. That's aggressive but saves massively. Making minimums means you still owe most of it when the 22% rate kicks in, defeating the purpose.",
+          distractorExplanations: {
+            1: 'The 240 fee saves you roughly 2,000 in interest IF you pay it off in 15 months',
+            2: 'The 240 fee saves you roughly 2,000 in interest IF you pay it off in 15 months',
+            3: 'The 240 fee saves you roughly 2,000 in interest IF you pay it off in 15 months',
+          },
         },
         {
           id: "pf-u3-L8-Q7",
@@ -1031,6 +1155,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Saving 1% on interest sounds good, but refinancing federal loans to private means losing income-driven repayment, deferment, forbearance, and forgiveness options forever. The 1% savings rarely justifies losing those safety nets, especially if your income or job is uncertain.",
+          distractorExplanations: {
+            1: 'Saving 1% on interest sounds good, but refinancing federal loans to private means losing income-driven repayment, deferment, forbearance, and forgi...',
+            2: 'Saving 1% on interest sounds good, but refinancing federal loans to private means losing income-driven repayment, deferment, forbearance, and forgi...',
+            3: 'Saving 1% on interest sounds good, but refinancing federal loans to private means losing income-driven repayment, deferment, forbearance, and forgi...',
+          },
         },
         {
           id: "pf-u3-L8-Q8",
@@ -1092,6 +1221,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "The earning power / net worth question is the core test. If borrowing makes you richer over time (home appreciation, higher salary, business income), it's likely smart. If it just funds consumption, it's probably not worth the interest.",
+          distractorExplanations: {
+            1: 'The earning power / net worth question is the core test',
+            2: 'The earning power / net worth question is the core test',
+            3: 'The earning power / net worth question is the core test',
+          },
         },
         {
           id: "pf-u3-L9-Q2",
@@ -1115,6 +1249,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "This passes the framework easily: builds earning power (+25K/year), rate is reasonable (8%), payments are comfortable (226/month), and the value (higher salary) far outlasts the debt. The ROI is massive: 5,400 borrowed to earn 25,000 more per year.",
+          distractorExplanations: {
+            1: 'This passes the framework easily: builds earning power (+25K/year), rate is reasonable (8%), payments are comfortable (226/month), and the value (h...',
+            2: 'This passes the framework easily: builds earning power (+25K/year), rate is reasonable (8%), payments are comfortable (226/month), and the value (h...',
+            3: 'This passes the framework easily: builds earning power (+25K/year), rate is reasonable (8%), payments are comfortable (226/month), and the value (h...',
+          },
         },
         {
           id: "pf-u3-L9-Q4",
@@ -1144,6 +1283,9 @@ export const unit3: Unit = {
           question: "If you can answer 'yes' to all 5 framework questions, borrowing is probably a smart move.",
           correctAnswer: true,
           explanation: "If the debt increases your earning power, has a low rate, you can afford payments comfortably, you've considered alternatives, and the value outlasts the debt, that's a strong case for borrowing. Not guaranteed to be perfect, but the odds are heavily in your favor.",
+          distractorExplanations: {
+            1: 'If the debt increases your earning power, has a low rate, you can afford payments comfortably, you\'ve considered alternatives, and the value outlas...',
+          },
         },
         {
           id: "pf-u3-L9-Q7",
@@ -1157,6 +1299,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "The refurbished laptop meets the need at the lowest cost with zero debt. You already saved for it (sinking fund), so no interest. The other options all add debt with high interest for features you probably don't need. Need vs want, the 800 machine does the job.",
+          distractorExplanations: {
+            1: 'The refurbished laptop meets the need at the lowest cost with zero debt',
+            2: 'The refurbished laptop meets the need at the lowest cost with zero debt',
+            3: 'The refurbished laptop meets the need at the lowest cost with zero debt',
+          },
         },
         {
           id: "pf-u3-L9-Q8",
@@ -1228,6 +1375,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "The avalanche method saves the most money here. The 26% card is costing you the most per dollar. Kill it first (~3 months), then the 22% card (~10 months with rolled-over payments), then the lower-rate loans. Total interest saved vs equal payments: thousands.",
+          distractorExplanations: {
+            1: 'The avalanche method saves the most money here',
+            2: 'The avalanche method saves the most money here',
+            3: 'The avalanche method saves the most money here',
+          },
         },
         {
           id: "pf-u3-L10-Q4",
@@ -1235,6 +1387,9 @@ export const unit3: Unit = {
           question: "Consolidating credit card debt and then continuing to use the cards makes your debt situation worse.",
           correctAnswer: true,
           explanation: "Yes. You now have the consolidation loan PLUS new credit card debt. This is the most common consolidation failure. Cut the cards or lock them away after consolidating.",
+          distractorExplanations: {
+            1: 'You now have the consolidation loan PLUS new credit card debt',
+          },
         },
         {
           id: "pf-u3-L10-Q5",
@@ -1257,6 +1412,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Aggressive repayment (500/month) pays about 270 in interest total. Minimums cost 4,500 in interest. The 0% transfer helps IF you pay it off before the promo ends, but minimums on a transfer card is risky. Banks never forget.",
+          distractorExplanations: {
+            1: 'Aggressive repayment (500/month) pays about 270 in interest total',
+            2: 'Aggressive repayment (500/month) pays about 270 in interest total',
+            3: 'Aggressive repayment (500/month) pays about 270 in interest total',
+          },
         },
         {
           id: "pf-u3-L10-Q7",
@@ -1313,6 +1473,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Debt isn't inherently good or bad, it's a tool. A mortgage builds wealth. A payday loan destroys it. Credit cards are free money if you pay in full, or a trap if you don't. Knowledge is the difference. You now have that knowledge. Use it.",
+          distractorExplanations: {
+            1: 'Debt isn\'t inherently good or bad, it\'s a tool',
+            2: 'Debt isn\'t inherently good or bad, it\'s a tool',
+            3: 'Debt isn\'t inherently good or bad, it\'s a tool',
+          },
         },
       ],
     },
@@ -1681,6 +1846,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 1,
           explanation: "The 50/30/20 rule allocates 50% of income to needs, 30% to wants, and 20% to savings and debt repayment.",
+          distractorExplanations: {
+            0: 'The 50/30/20 rule allocates 50% of income to needs, 30% to wants, and 20% to savings and debt repayment',
+            2: 'The 50/30/20 rule allocates 50% of income to needs, 30% to wants, and 20% to savings and debt repayment',
+            3: 'The 50/30/20 rule allocates 50% of income to needs, 30% to wants, and 20% to savings and debt repayment',
+          },
         },
         {
           id: "pf-u3-rev-Q2",
@@ -1688,6 +1858,9 @@ export const unit3: Unit = {
           question: "Net pay is the amount deposited into your bank account after taxes and deductions.",
           correctAnswer: true,
           explanation: "Gross pay is your full salary. Net pay (take-home pay) is what's left after taxes, insurance, and other deductions.",
+          distractorExplanations: {
+            1: 'Gross pay is your full salary. Net pay (take-home pay) is what\'s left after taxes, insurance, and other deductions',
+          },
         },
         {
           id: "pf-u3-rev-Q3",
@@ -1695,6 +1868,9 @@ export const unit3: Unit = {
           question: "A high-yield savings account typically earns the same interest as a regular savings account.",
           correctAnswer: false,
           explanation: "High-yield savings accounts pay significantly more interest, often 10x or more than traditional bank savings accounts.",
+          distractorExplanations: {
+            0: 'High-yield savings accounts pay significantly more interest, often 10x or more than traditional bank savings accounts',
+          },
         },
         {
           id: "pf-u3-rev-Q4",
@@ -1742,6 +1918,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Automation works because you never see the money in your checking account, so you never miss it. No willpower required.",
+          distractorExplanations: {
+            1: 'Automation works because you never see the money in your checking account, so you never miss it',
+            2: 'Automation works because you never see the money in your checking account, so you never miss it',
+            3: 'Automation works because you never see the money in your checking account, so you never miss it',
+          },
         },
         {
           id: "pf-u3-rev-Q9",
@@ -1755,6 +1936,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "$4,500 / $5,000 = 90% utilization. That's way too high. Experts recommend staying below 30% for a healthy credit score.",
+          distractorExplanations: {
+            0: 'The correct answer is 90%, not 10%',
+            1: 'The correct answer is 90%, not 50%',
+            3: 'The correct answer is 90%, not 45%',
+          },
         },
         {
           id: "pf-u3-rev-Q10",
@@ -1769,6 +1955,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 1,
           explanation: "A small emergency buffer ($500) prevents new debt from surprises. Then focus all extra money on the high-interest credit card. Investing can wait until the debt is gone.",
+          distractorExplanations: {
+            0: 'A small emergency buffer ($500) prevents new debt from surprises',
+            2: 'A small emergency buffer ($500) prevents new debt from surprises',
+            3: 'A small emergency buffer ($500) prevents new debt from surprises',
+          },
         },
       ],
     },

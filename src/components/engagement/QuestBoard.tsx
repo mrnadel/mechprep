@@ -1,19 +1,20 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { DAILY_QUEST_COUNT, WEEKLY_QUEST_COUNT } from '@/lib/quest-engine';
+import { DAILY_QUEST_COUNT, WEEKLY_QUEST_COUNT, createQuests } from '@/lib/quest-engine';
 import {
   useDailyQuests,
   useWeeklyQuests,
   useEngagementActions,
   useComeback,
-  useEngagementStore,
 } from '@/store/useEngagementStore';
-import { comebackQuests, dailyChestReward, weeklyChestReward } from '@/data/quests';
+import { comebackQuests, dailyQuestPool, weeklyQuestPool } from '@/data/quests';
 import { QuestCard } from './QuestCard';
 import { ChestAnimation } from './ChestAnimation';
 import { useIsDark } from '@/store/useThemeStore';
+import type { Quest } from '@/data/engagement-types';
+
+const IS_DEV = process.env.NODE_ENV === 'development';
 
 function useMidnightCountdown() {
   const [timeLeft, setTimeLeft] = useState('');
@@ -36,18 +37,62 @@ function useMidnightCountdown() {
   return timeLeft;
 }
 
+function useWeeklyCountdown() {
+  const [timeLeft, setTimeLeft] = useState('');
+
+  useEffect(() => {
+    function update() {
+      const now = new Date();
+      const day = now.getDay(); // 0=Sun, 1=Mon
+      const daysUntilMonday = (8 - day) % 7 || 7;
+      const nextMonday = new Date(now);
+      nextMonday.setDate(now.getDate() + daysUntilMonday);
+      nextMonday.setHours(0, 0, 0, 0);
+      const diff = nextMonday.getTime() - now.getTime();
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff % 86400000) / 3600000);
+      if (days > 0) {
+        setTimeLeft(`${days}d ${hours}h`);
+      } else {
+        const m = Math.floor((diff % 3600000) / 60000);
+        setTimeLeft(`${hours}h ${m}m`);
+      }
+    }
+    update();
+    const id = setInterval(update, 60000);
+    return () => clearInterval(id);
+  }, []);
+
+  return timeLeft;
+}
+
+function shufflePick<T>(pool: T[], count: number): T[] {
+  const copy = [...pool];
+  const picked: T[] = [];
+  for (let i = 0; i < count && copy.length > 0; i++) {
+    const idx = Math.floor(Math.random() * copy.length);
+    picked.push(copy.splice(idx, 1)[0]);
+  }
+  return picked;
+}
+
 export function QuestBoard() {
   const dailyQuests = useDailyQuests();
   const weeklyQuests = useWeeklyQuests();
   const comeback = useComeback();
-  const { claimQuestReward, claimChest, initDailyQuests, initWeeklyQuests } = useEngagementActions();
-  const dailyChestClaimed = useEngagementStore((s) => s.dailyChestClaimed);
-  const weeklyChestClaimed = useEngagementStore((s) => s.weeklyChestClaimed);
+  const { claimQuestReward, initDailyQuests, initWeeklyQuests } = useEngagementActions();
 
-  const [weeklyExpanded, setWeeklyExpanded] = useState(true);
-  const [chestOpen, setChestOpen] = useState<{ type: 'daily' | 'weekly'; reward: { xp: number; gems: number } } | null>(null);
+  const [chestOpen, setChestOpen] = useState<{
+    questId: string;
+    type: 'daily' | 'weekly';
+    reward: { xp: number; gems: number };
+  } | null>(null);
 
-  const timeLeft = useMidnightCountdown();
+  const [debugDaily, setDebugDaily] = useState<Quest[] | null>(null);
+  const [debugWeekly, setDebugWeekly] = useState<Quest[] | null>(null);
+
+  const dailyTimeLeft = useMidnightCountdown();
+  const weeklyTimeLeft = useWeeklyCountdown();
   const isDark = useIsDark();
 
   useEffect(() => {
@@ -55,199 +100,179 @@ export function QuestBoard() {
     initWeeklyQuests();
   }, [initDailyQuests, initWeeklyQuests]);
 
-  const allDailyComplete = dailyQuests.length >= DAILY_QUEST_COUNT && dailyQuests.every((q) => q.completed);
-  const allWeeklyComplete = weeklyQuests.length >= WEEKLY_QUEST_COUNT && weeklyQuests.every((q) => q.completed);
+  const handleOpenChest = useCallback((quest: Quest) => {
+    setChestOpen({ questId: quest.definitionId, type: quest.type, reward: quest.reward });
+  }, []);
 
-  const handleDailyChest = useCallback(() => {
-    if (!allDailyComplete || dailyChestClaimed) return;
-    claimChest('daily');
-    setChestOpen({ type: 'daily', reward: dailyChestReward });
-  }, [allDailyComplete, dailyChestClaimed, claimChest]);
+  const handleCloseChest = useCallback(() => {
+    if (chestOpen) {
+      claimQuestReward(chestOpen.questId);
+    }
+    setChestOpen(null);
+  }, [chestOpen, claimQuestReward]);
 
-  const handleWeeklyChest = useCallback(() => {
-    if (!allWeeklyComplete || weeklyChestClaimed) return;
-    claimChest('weekly');
-    setChestOpen({ type: 'weekly', reward: weeklyChestReward });
-  }, [allWeeklyComplete, weeklyChestClaimed, claimChest]);
+  const handleDebugRegenDaily = useCallback(() => {
+    const defs = shufflePick(dailyQuestPool, DAILY_QUEST_COUNT);
+    const quests = createQuests(defs, 'daily');
+    // Fake states: first quest claimed, second quest complete-unclaimed, rest in-progress
+    setDebugDaily(quests.map((q, i) => {
+      if (i === 0) return { ...q, progress: q.target, completed: true, claimed: true };
+      if (i === 1) return { ...q, progress: q.target, completed: true, claimed: false };
+      return { ...q, progress: Math.floor(Math.random() * q.target) };
+    }));
+  }, []);
 
-  // Determine displayed daily quests
-  const displayDailyQuests = comeback.isInComebackFlow
-    ? comebackQuests.map((def, idx) => {
-        // Use actual quest progress from store if available, otherwise default
-        const storeQuest = dailyQuests[idx];
-        return {
-          definitionId: def.id,
-          type: 'daily' as const,
-          title: def.title,
-          description: def.description,
-          icon: def.icon,
-          target: def.target,
-          progress: storeQuest?.progress ?? 0,
-          rarity: def.rarity,
-          reward: def.reward,
-          trackingKey: def.trackingKey,
-          filter: def.filter,
-          completed: storeQuest?.completed ?? false,
-          claimed: storeQuest?.claimed ?? false,
-        };
-      })
-    : dailyQuests;
+  const handleDebugRegenWeekly = useCallback(() => {
+    const defs = shufflePick(weeklyQuestPool, WEEKLY_QUEST_COUNT);
+    const quests = createQuests(defs, 'weekly');
+    setDebugWeekly(quests.map((q, i) => {
+      if (i === 0) return { ...q, progress: q.target, completed: true, claimed: true };
+      if (i === 1) return { ...q, progress: q.target, completed: true, claimed: false };
+      return { ...q, progress: Math.floor(Math.random() * q.target) };
+    }));
+  }, []);
+
+  const displayDailyQuests = debugDaily
+    ? debugDaily
+    : comeback.isInComebackFlow
+      ? comebackQuests.map((def, idx) => {
+          const storeQuest = dailyQuests[idx];
+          return {
+            definitionId: def.id,
+            type: 'daily' as const,
+            title: def.title,
+            description: def.description,
+            icon: def.icon,
+            target: def.target,
+            progress: storeQuest?.progress ?? 0,
+            rarity: def.rarity,
+            reward: def.reward,
+            trackingKey: def.trackingKey,
+            filter: def.filter,
+            completed: storeQuest?.completed ?? false,
+            claimed: storeQuest?.claimed ?? false,
+          };
+        })
+      : dailyQuests;
+
+  const displayWeeklyQuests = debugWeekly ?? weeklyQuests;
 
   return (
-    <div className="space-y-4">
-      {/* Daily Quests Section */}
-      <div className="bg-white dark:bg-surface-900 rounded-2xl shadow-sm border border-gray-100 dark:border-surface-700 overflow-hidden">
-        {/* Warm gradient accent */}
-        <div className="h-1" style={{ background: 'linear-gradient(90deg, #F59E0B, #F97316, #EF4444)' }} />
-        {/* Section header */}
-        <div className="flex items-center justify-between gap-2 px-4 pt-3 pb-2">
-          <div className="min-w-0 flex-1">
-            {comeback.isInComebackFlow ? (
-              <h2 className="text-base font-extrabold text-gray-800 dark:text-surface-50 truncate">Welcome Back! 👋</h2>
-            ) : (
-              <h2 className="text-base font-extrabold text-gray-800 dark:text-surface-50">Daily Quests</h2>
-            )}
-            {!comeback.isInComebackFlow && timeLeft && (
-              <p className="text-xs text-gray-400 dark:text-surface-500 mt-0.5">Resets in {timeLeft}</p>
-            )}
-            {comeback.isInComebackFlow && (
-              <p className="text-xs text-gray-400 dark:text-surface-500 mt-0.5 truncate">Complete 3 quests to get back on track</p>
+    <div className="space-y-6">
+      {/* ---- Daily Quests ---- */}
+      <section className="space-y-2.5">
+        <div className="flex items-center justify-between px-1">
+          <div className="min-w-0">
+            <h2 className="text-base font-extrabold text-gray-800 dark:text-surface-50">
+              {comeback.isInComebackFlow && !debugDaily ? 'Welcome Back!' : 'Daily Quests'}
+            </h2>
+            {debugDaily && (
+              <p className="text-[11px] text-amber-500 dark:text-amber-400 font-medium mt-0.5">
+                Debug preview — refresh to revert
+              </p>
             )}
           </div>
-
-          {/* Daily chest button */}
-          <button
-            onClick={handleDailyChest}
-            disabled={!allDailyComplete || dailyChestClaimed}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold transition-all shrink-0"
-            style={{
-              background: dailyChestClaimed
-                ? (isDark ? 'rgba(6,78,59,0.3)' : '#F0FDF4')
-                : allDailyComplete
-                  ? '#7C3AED'
-                  : (isDark ? '#334155' : '#F3F4F6'),
-              color: dailyChestClaimed
-                ? '#16A34A'
-                : allDailyComplete
-                  ? '#FFFFFF'
-                  : (isDark ? '#94A3B8' : '#9CA3AF'),
-              cursor: allDailyComplete && !dailyChestClaimed ? 'pointer' : 'default',
-              border: 'none',
-            }}
-          >
-            {dailyChestClaimed ? (
-              <>✓ Collected</>
-            ) : (
-              <>
-                <span>🎁</span>
-                <span>{allDailyComplete ? 'Open Chest!' : 'Chest'}</span>
-              </>
+          <div className="flex items-center gap-2 shrink-0">
+            {IS_DEV && (
+              <button
+                onClick={handleDebugRegenDaily}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-bold transition-colors"
+                style={{
+                  background: isDark ? 'rgba(245,158,11,0.15)' : '#FEF3C7',
+                  color: isDark ? '#FBBF24' : '#B45309',
+                  border: `1px solid ${isDark ? 'rgba(245,158,11,0.25)' : 'rgba(245,158,11,0.3)'}`,
+                  cursor: 'pointer',
+                }}
+                title="Regenerate daily quests (debug)"
+              >
+                <span style={{ display: 'inline-block', transform: 'scaleX(-1)' }}>↻</span>
+                Shuffle
+              </button>
             )}
-          </button>
-        </div>
-
-        {/* Quest cards */}
-        <div className="px-3 pb-3 space-y-2">
-          {displayDailyQuests.slice(0, 3).map((quest) => (
-            <QuestCard
-              key={quest.definitionId}
-              quest={quest}
-              onClaim={claimQuestReward}
-            />
-          ))}
-          {displayDailyQuests.length === 0 && (
-            <p className="text-center text-sm text-gray-400 dark:text-surface-500 py-4">No quests today yet.</p>
-          )}
-        </div>
-      </div>
-
-      {/* Weekly Quests Section */}
-      <div className="bg-white dark:bg-surface-900 rounded-2xl shadow-sm border border-gray-100 dark:border-surface-700 overflow-hidden">
-        {/* Cool gradient accent */}
-        <div className="h-1" style={{ background: 'linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899)' }} />
-        {/* Expandable header */}
-        <button
-          onClick={() => setWeeklyExpanded((v) => !v)}
-          className="w-full flex items-center justify-between px-4 py-3 text-left"
-          style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
-        >
-          <h2 className="text-base font-extrabold text-gray-800 dark:text-surface-50">Weekly Quests</h2>
-          <motion.span
-            animate={{ rotate: weeklyExpanded ? 180 : 0 }}
-            transition={{ duration: 0.2 }}
-            className="text-gray-400 dark:text-surface-500 text-lg"
-          >
-            ▾
-          </motion.span>
-        </button>
-
-        <AnimatePresence initial={false}>
-          {weeklyExpanded && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.25, ease: 'easeInOut' }}
-              style={{ overflow: 'hidden' }}
+            <span
+              className="text-xs font-semibold tabular-nums px-2.5 py-1 rounded-lg"
+              style={{
+                background: isDark ? 'rgba(100,116,139,0.15)' : 'rgba(148,163,184,0.12)',
+                color: isDark ? '#94A3B8' : '#64748B',
+              }}
             >
-              {/* Weekly chest button */}
-              <div className="flex items-center justify-between gap-2 px-4 pb-2">
-                <p className="text-xs text-gray-400 dark:text-surface-500">Resets each Monday</p>
-                <button
-                  onClick={handleWeeklyChest}
-                  disabled={!allWeeklyComplete || weeklyChestClaimed}
-                  className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold transition-all shrink-0"
-                  style={{
-                    background: weeklyChestClaimed
-                      ? (isDark ? 'rgba(6,78,59,0.3)' : '#F0FDF4')
-                      : allWeeklyComplete
-                        ? '#7C3AED'
-                        : (isDark ? '#334155' : '#F3F4F6'),
-                    color: weeklyChestClaimed
-                      ? '#16A34A'
-                      : allWeeklyComplete
-                        ? '#FFFFFF'
-                        : (isDark ? '#94A3B8' : '#9CA3AF'),
-                    cursor: allWeeklyComplete && !weeklyChestClaimed ? 'pointer' : 'default',
-                    border: 'none',
-                  }}
-                >
-                  {weeklyChestClaimed ? (
-                    <>✓ Collected</>
-                  ) : (
-                    <>
-                      <span>🎁</span>
-                      <span>{allWeeklyComplete ? 'Open Chest!' : 'Chest'}</span>
-                    </>
-                  )}
-                </button>
-              </div>
+              {dailyTimeLeft}
+            </span>
+          </div>
+        </div>
 
-              {/* Weekly quest cards */}
-              <div className="px-3 pb-3 space-y-2">
-                {weeklyQuests.slice(0, 3).map((quest) => (
-                  <QuestCard
-                    key={quest.definitionId}
-                    quest={quest}
-                    onClaim={claimQuestReward}
-                  />
-                ))}
-                {weeklyQuests.length === 0 && (
-                  <p className="text-center text-sm text-gray-400 dark:text-surface-500 py-4">No weekly quests yet.</p>
-                )}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+        {displayDailyQuests.slice(0, 3).map((quest) => (
+          <QuestCard
+            key={quest.definitionId}
+            quest={quest}
+            onClaim={claimQuestReward}
+            onOpenChest={handleOpenChest}
+          />
+        ))}
+        {displayDailyQuests.length === 0 && (
+          <p className="text-center text-sm text-gray-400 dark:text-surface-500 py-4">No quests today yet.</p>
+        )}
+      </section>
 
-      {/* Chest animation modal */}
+      {/* ---- Weekly Quests ---- */}
+      <section className="space-y-2.5">
+        <div className="flex items-center justify-between px-1">
+          <div className="min-w-0">
+            <h2 className="text-base font-extrabold text-gray-800 dark:text-surface-50">Weekly Quests</h2>
+            {debugWeekly && (
+              <p className="text-[11px] text-violet-500 dark:text-violet-400 font-medium mt-0.5">
+                Debug preview — refresh to revert
+              </p>
+            )}
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            {IS_DEV && (
+              <button
+                onClick={handleDebugRegenWeekly}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-bold transition-colors"
+                style={{
+                  background: isDark ? 'rgba(139,92,246,0.15)' : '#EDE9FE',
+                  color: isDark ? '#A78BFA' : '#6D28D9',
+                  border: `1px solid ${isDark ? 'rgba(139,92,246,0.25)' : 'rgba(139,92,246,0.3)'}`,
+                  cursor: 'pointer',
+                }}
+                title="Regenerate weekly quests (debug)"
+              >
+                <span style={{ display: 'inline-block', transform: 'scaleX(-1)' }}>↻</span>
+                Shuffle
+              </button>
+            )}
+            <span
+              className="text-xs font-semibold tabular-nums px-2.5 py-1 rounded-lg"
+              style={{
+                background: isDark ? 'rgba(100,116,139,0.15)' : 'rgba(148,163,184,0.12)',
+                color: isDark ? '#94A3B8' : '#64748B',
+              }}
+            >
+              {weeklyTimeLeft}
+            </span>
+          </div>
+        </div>
+
+        {displayWeeklyQuests.slice(0, 3).map((quest) => (
+          <QuestCard
+            key={quest.definitionId}
+            quest={quest}
+            onClaim={claimQuestReward}
+            onOpenChest={handleOpenChest}
+          />
+        ))}
+        {displayWeeklyQuests.length === 0 && (
+          <p className="text-center text-sm text-gray-400 dark:text-surface-500 py-4">No weekly quests yet.</p>
+        )}
+      </section>
+
       {chestOpen && (
         <ChestAnimation
           isOpen={!!chestOpen}
           type={chestOpen.type}
           reward={chestOpen.reward}
-          onClose={() => setChestOpen(null)}
+          onClose={handleCloseChest}
         />
       )}
     </div>

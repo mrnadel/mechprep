@@ -32,6 +32,9 @@ export const unit8: Unit = {
           question: 'A shaft transmits power by rotating under torque.',
           correctAnswer: true,
           explanation: 'Yes. Shafts transmit mechanical power through rotation. Power equals torque times angular velocity (P = T x omega).',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Think about what a motor output shaft does.',
         },
         {
@@ -46,6 +49,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Beach marks are the definitive indicator of fatigue failure. The crack originated at the keyway corner, a classic stress concentration site (Kt = 2.0 to 3.0).',
+          distractorExplanations: {
+            0: 'This focuses on shaft/overloaded, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on loose,/causing, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on corrosion/gradually, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Beach marks point to the failure mode.',
         },
         {
@@ -60,6 +68,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Shaft sizing never stops at the formula result. Account for standard sizes, keyway stress concentration, bearing bore, and deflection limits.',
+          distractorExplanations: {
+            0: 'This focuses on adjustment/needed,, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on double/safety, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than round going suggests.',
+          },
           hint: 'The formula gives a minimum; real-world factors add more.',
         },
         {
@@ -75,6 +88,9 @@ export const unit8: Unit = {
           question: 'For a shaft under pure torsion, the maximum shear stress occurs at the center of the shaft cross-section.',
           correctAnswer: false,
           explanation: 'For a solid circular shaft under torsion, shear stress is linear from zero at the center to maximum at the outer surface. tau = Tr/J.',
+          distractorExplanations: {
+            0: 'For a solid circular shaft under torsion, shear stress is linear from zero at the center to maximum at the outer surface.',
+          },
           hint: 'Consider the torsion formula tau = Tr/J.',
         },
         {
@@ -99,6 +115,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'T = P/omega = 30000/(720 x 2pi/60) = 397.9 N*m. J = pi*d^4/32 = 4.026 x 10^-7 m^4. tau = Tc/J = 397.9 x 0.0225 / 4.026e-7 = 22.1 MPa.',
+          distractorExplanations: {
+            0: '11.1 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            2: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: '44.2 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+          },
           hint: 'Use T = P/omega, then tau = Tc/J where c = d/2.',
         },
         {
@@ -113,6 +134,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'For combined bending and torsion on a solid circular shaft, the principal stresses come from the Mohr circle. The equivalent shear stress uses the square root of the sum of squares.',
+          distractorExplanations: {
+            0: 'This focuses on (pi*d^3/16), which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on (pi*d^3/32), which is not the correct mechanism or principle for this problem.',
+            3: 'Regarding taueq: For combined bending and torsion on a solid circular shaft, the principal stresses come from the Mohr circle.',
+          },
           hint: 'Combine bending stress sigma = 32M/(pi*d^3) and torsional shear.',
         },
         {
@@ -121,6 +147,9 @@ export const unit8: Unit = {
           question: 'A shaft operating above its first critical speed will always experience dangerous vibrations and should be avoided.',
           correctAnswer: false,
           explanation: 'Supercritical shaft operation is routine in turbomachinery, centrifugal separators, and dental drills. They pass through the critical speed quickly during startup.',
+          distractorExplanations: {
+            0: 'Supercritical shaft operation is routine in turbomachinery, centrifugal separators, and dental drills.',
+          },
           hint: 'Think about what happens to shaft deflection as speed continues past the resonance.',
         },
         {
@@ -159,6 +188,9 @@ export const unit8: Unit = {
           question: 'A keyway creates a stress concentration on a shaft.',
           correctAnswer: true,
           explanation: 'Yes. The sharp corners of a keyway slot raise local stress by a factor of 2 to 3, making it a common fatigue crack initiation site.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Sharp geometric changes raise local stress.',
         },
         {
@@ -173,6 +205,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'A single keyway creates a severe stress concentration and transmits torque through a single contact area. Splines distribute the load around the full circumference.',
+          distractorExplanations: {
+            0: 'This focuses on cheaper/manufacture, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on allow/axial, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on create/permanent,, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Compare the load path: one keyway slot vs. many spline teeth.',
         },
         {
@@ -181,6 +218,9 @@ export const unit8: Unit = {
           question: 'A Woodruff key is preferred over a rectangular key when the shaft diameter is large (>100 mm) and the torque is very high.',
           correctAnswer: false,
           explanation: 'Woodruff keys are semicircular and preferred for small shafts and light-to-moderate torque. They self-align with tapered hubs but have less shear area than rectangular keys.',
+          distractorExplanations: {
+            0: 'Woodruff keys are semicircular and preferred for small shafts and light-to-moderate torque.',
+          },
           hint: 'Consider which key type provides more shear area.',
         },
         {
@@ -202,6 +242,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Supercritical operation (above the first critical speed) is completely routine in many high-speed machines.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; unsafe operating the principle has important exceptions.',
+            2: 'This is too restrictive; the principle applies more broadly than balanced sub-gram suggests.',
+            3: 'This is too restrictive; the principle applies more broadly than below twice suggests.',
+          },
           hint: 'Consider what actually happens above the critical speed.',
         },
         {
@@ -225,6 +270,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The Dunkerley formula estimates the first critical speed by combining individual critical speeds using reciprocal squares. It gives a lower-bound (conservative) estimate.',
+          distractorExplanations: {
+            0: 'This focuses on speeds/directly, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on average/individual, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on multiply/speeds, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'This method provides a lower-bound estimate.',
         },
         {
@@ -233,6 +283,9 @@ export const unit8: Unit = {
           question: 'A hollow shaft (same OD and material as solid) always has lower critical speed due to less stiffness.',
           correctAnswer: false,
           explanation: 'A hollow shaft is lighter than a solid shaft of the same OD. Its stiffness (I) decreases less than its mass per unit length, so the stiffness-to-mass ratio can actually increase.',
+          distractorExplanations: {
+            0: 'A hollow shaft is lighter than a solid shaft of the same OD.',
+          },
           hint: 'Critical speed depends on the ratio of stiffness to mass.',
         },
         {
@@ -280,6 +333,8 @@ export const unit8: Unit = {
           options: ['Goodman', 'Soderberg', 'Gerber', 'They are all identical'],
           correctIndex: 1,
           explanation: 'Soderberg uses yield strength (not ultimate) for the mean stress axis, making it the most conservative choice for ductile materials.',
+          distractorExplanations: {
+          },
           hint: 'The one that uses yield strength instead of ultimate.',
         },
         {
@@ -294,6 +349,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'A rotating shaft with a fixed bending load sees each surface point cycle from tension to compression each revolution, creating fully reversed stress, which is the most damaging fatigue condition.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; bending forces the principle has important exceptions.',
+            2: 'This focuses on causes/axial, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on factor/arbitrary, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Consider what a single point on the shaft surface experiences during one revolution.',
         },
         {
@@ -308,6 +368,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Soderberg draws a line from the endurance limit (alternating axis) to the yield strength (mean axis). Points below the line are considered safe.',
+          distractorExplanations: {
+            0: 'This focuses on ultimate/tensile, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on endurance/limit, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on fracture/toughness, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Soderberg is the most conservative of the common fatigue criteria.',
         },
         {
@@ -323,6 +388,9 @@ export const unit8: Unit = {
           question: 'In service, a shaft\'s endurance limit is typically 25 to 50% of the lab specimen value due to Marin derating factors.',
           correctAnswer: true,
           explanation: 'Standard endurance values come from polished, small specimens. Real conditions (surface finish, size, temperature, reliability) reduce the practical endurance limit significantly.',
+          distractorExplanations: {
+            1: 'Standard endurance values come from polished, small specimens.',
+          },
           hint: 'Consider the Marin modification factors.',
         },
         {
@@ -347,6 +415,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'For steels with S_ut < 1400 MPa: S_e\' = 0.5 x S_ut = 0.5 x 900 = 450 MPa. This is the lab specimen value before Marin corrections.',
+          distractorExplanations: {
+            0: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            2: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: 'This numerical value does not result from the correct formula applied to the given parameters.',
+          },
           hint: 'The standard approximation for steel endurance limit.',
         },
         {
@@ -361,6 +434,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'M_eq = sqrt(M^2 + (3/4)*T^2) = sqrt(500^2 + 0.75*400^2) = sqrt(250000 + 120000) = sqrt(370000) = 583 N*m.',
+          distractorExplanations: {
+            0: 'M_eq = sqrt(M^2 + (3/4)*T^2) = sqrt(500^2 + 0.75*400^2) = sqrt(250000 + 120000) = sqrt(370000) = 583 N*m.',
+            2: 'M_eq = sqrt(M^2 + (3/4)*T^2) = sqrt(500^2 + 0.75*400^2) = sqrt(250000 + 120000) = sqrt(370000) = 583 N*m.',
+            3: 'M_eq = sqrt(M^2 + (3/4)*T^2) = sqrt(500^2 + 0.75*400^2) = sqrt(250000 + 120000) = sqrt(370000) = 583 N*m.',
+          },
           hint: 'Von Mises equivalent: M_eq = sqrt(M^2 + 0.75*T^2).',
         },
         {
@@ -375,6 +453,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The distortion energy theory converts shear stress to equivalent normal stress by multiplying by sqrt(3). So sigma_m\' = sqrt(3) x 80 = 138.6 MPa.',
+          distractorExplanations: {
+            0: 'Regarding sigmam: The distortion energy theory converts shear stress to equivalent normal stress by multiplying by sqrt(3).',
+            2: 'Regarding sigmam: The distortion energy theory converts shear stress to equivalent normal stress by multiplying by sqrt(3).',
+            3: 'Regarding sigmam: The distortion energy theory converts shear stress to equivalent normal stress by multiplying by sqrt(3).',
+          },
           hint: 'The DE theory converts shear to equivalent normal stress.',
         },
         {
@@ -389,6 +472,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: 'The fillet radius is the dominant factor controlling stress concentration at a shoulder. Increasing it from 1 to 4 mm can drop Kt from 2.5 to 1.5 or less.',
+          distractorExplanations: {
+            0: 'This focuses on retaining/groove, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on second/keeping, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on polish/mirror, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Which geometric parameter has the greatest influence on Kt?',
         },
       ]
@@ -417,6 +505,9 @@ export const unit8: Unit = {
           question: 'Ball bearings use rolling elements to reduce friction between a shaft and its housing.',
           correctAnswer: true,
           explanation: 'Yes. Ball bearings replace sliding friction with rolling friction by placing balls between inner and outer races.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Rolling contact has much lower friction than sliding contact.',
         },
         {
@@ -431,6 +522,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Deep groove ball bearings excel at high speed and moderate loads. Tapered rollers handle heavy combined radial and axial loads but have more friction.',
+          distractorExplanations: {
+            0: 'This focuses on every, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on every, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than choice depends suggests.',
+          },
           hint: 'Match the bearing characteristics to the application requirements.',
         },
         {
@@ -455,6 +551,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Self-aligning ball bearings have a spherical outer raceway that allows the inner ring assembly to tilt 2 to 3 degrees relative to the outer ring.',
+          distractorExplanations: {
+            0: 'This focuses on higher/capacity, which is not the correct mechanism or principle for this problem.',
+            2: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+            3: 'This focuses on handle/axial, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The outer raceway shape is the key feature.',
         },
         {
@@ -476,6 +577,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'When the shaft rotates, the inner race rotates with it (rotating load on inner race), so it needs an interference fit to prevent creep.',
+          distractorExplanations: {
+            0: 'The reasoning about clearance shaft does not correctly apply to this engineering problem.',
+            2: 'The reasoning about clearance does not correctly apply to this engineering problem.',
+            3: 'The reasoning about interference does not correctly apply to this engineering problem.',
+          },
           hint: 'The race that rotates relative to the load direction needs a tight fit.',
         },
         {
@@ -484,6 +590,9 @@ export const unit8: Unit = {
           question: 'Needle roller bearings are ideal for applications with large available radial space but limited axial space.',
           correctAnswer: false,
           explanation: 'This is reversed. Needle rollers are thin and long, making them ideal when radial space is limited. They have a very small cross-section compared to standard rollers.',
+          distractorExplanations: {
+            0: 'This is reversed.',
+          },
           hint: 'Needle rollers are thin and long.',
         },
         {
@@ -508,6 +617,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The contact angle (typically 15 to 40 degrees) allows angular contact bearings to support significant axial loads alongside radial loads.',
+          distractorExplanations: {
+            0: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+            2: 'This focuses on cheaper/manufacture, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on preload/required, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The contact angle determines how the load is distributed.',
         },
         {
@@ -522,6 +636,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The wear pattern is diagnostic. Normal loading distributes contact across most of the raceway width. A narrow band indicates concentrated load from misalignment.',
+          distractorExplanations: {
+            0: 'This focuses on normal/fatigue, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on contaminated/lubricant, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on electrical/discharge, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The key clue is that the spalling is in a narrow band.',
         },
       ]
@@ -550,6 +669,9 @@ export const unit8: Unit = {
           question: 'L10 life means 90% of bearings survive to that number of revolutions.',
           correctAnswer: true,
           explanation: 'L10 (pronounced "L-ten") life means 10% failure rate, so 90% of bearings in a population will reach this life.',
+          distractorExplanations: {
+            1: 'L10 (pronounced .',
+          },
           hint: 'The subscript 10 represents the failure percentage.',
         },
         {
@@ -564,6 +686,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'For ball bearings: L10 = (C/P)^p where p = 3. L10 = (25/5)^3 = 5^3 = 125 million revolutions.',
+          distractorExplanations: {
+            0: '25 is one-quarter of the correct value, from an extra division or missing squared term.',
+            2: 'This value results from an incorrect approach; million revolutions.',
+            3: '3125 significantly exceeds the correct answer due to a fundamental formula or calculation error.',
+          },
           hint: 'L10 = (C/P)^p with p = 3 for ball bearings.',
         },
         {
@@ -587,6 +714,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'For roller bearings, p = 10/3. L10 = (50/10)^(10/3) = 5^3.333 = 208.3 million revolutions. Hours = 208.3e6 / (500 x 60) = 6945 hours.',
+          distractorExplanations: {
+            0: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            2: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: '13890 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+          },
           hint: 'Use p = 10/3 for roller bearings, then convert revolutions to hours.',
         },
         {
@@ -608,6 +740,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'P = X*Fr + Y*Fa = 0.56 x 4 + 1.2 x 3 = 2.24 + 3.6 = 5.84 kN.',
+          distractorExplanations: {
+            0: 'P = X*Fr + Y*Fa = 0.56 x 4 + 1.2 x 3 = 2.24 + 3.6 = 5.84 kN.',
+            1: 'P = X*Fr + Y*Fa = 0.56 x 4 + 1.2 x 3 = 2.24 + 3.6 = 5.84 kN.',
+            3: 'P = X*Fr + Y*Fa = 0.56 x 4 + 1.2 x 3 = 2.24 + 3.6 = 5.84 kN.',
+          },
           hint: 'P = X*Fr + Y*Fa. Plug in the values.',
         },
         {
@@ -622,6 +759,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The reliability adjustment factor a1 for 99% reliability is approximately 0.21. So L1 = 0.21 x L10.',
+          distractorExplanations: {
+            0: 'This focuses on increases, which is not the correct mechanism or principle for this problem.',
+            2: 'Regarding drops: The reliability adjustment factor a1 for 99% reliability is approximately 0.21.',
+            3: 'This focuses on change,/already, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Higher reliability means fewer bearings can fail, so rated life drops.',
         },
         {
@@ -639,6 +781,9 @@ export const unit8: Unit = {
           question: 'Grease lubrication is preferred over oil for bearings at very high speeds because grease provides better cooling.',
           correctAnswer: false,
           explanation: 'Oil lubrication is preferred for high-speed bearings. Oil can be circulated for cooling and removes heat much better than grease, which stays in place and can overheat.',
+          distractorExplanations: {
+            0: 'Oil lubrication is preferred for high-speed bearings.',
+          },
           hint: 'Which lubricant can be circulated through the bearing for cooling?',
         },
         {
@@ -653,6 +798,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: 'ISO VG (Viscosity Grade) numbers represent kinematic viscosity in centistokes (cSt) at 40 C. VG 68 means approximately 68 cSt at 40 C.',
+          distractorExplanations: {
+            0: 'This focuses on density/kg/m^3, which is not the correct mechanism or principle for this problem.',
+            1: 'Regarding kinematic viscosity: ISO VG (Viscosity Grade) numbers represent kinematic viscosity in centistokes (cSt) at 40 C.',
+            2: 'This focuses on dynamic, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'ISO VG stands for Viscosity Grade, measured at 40 C.',
         },
       ]
@@ -681,6 +831,9 @@ export const unit8: Unit = {
           question: 'In hydrodynamic lubrication, a full oil film separates the shaft from the bearing surface.',
           correctAnswer: true,
           explanation: 'Yes. In the hydrodynamic regime, the shaft drags oil into a converging wedge that builds pressure, completely separating the metal surfaces.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Hydro = fluid, dynamic = motion.',
         },
         {
@@ -689,6 +842,9 @@ export const unit8: Unit = {
           question: 'In hydrodynamic lubrication, load-carrying capacity increases with increasing viscosity and shaft speed.',
           correctAnswer: true,
           explanation: 'The Sommerfeld number S = (mu*N*d)/(P*c^2) governs hydrodynamic performance. Higher viscosity and speed both increase the oil film pressure.',
+          distractorExplanations: {
+            1: 'The Sommerfeld number S = (mu*N*d)/(P*c^2) governs hydrodynamic performance.',
+          },
           hint: 'Consider the hydrodynamic wedge effect.',
         },
         {
@@ -703,6 +859,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'This is a classic Stribeck curve problem. Hydrodynamic bearings need shaft rotation to drag lubricant into the wedge and build pressure. At startup speeds, the oil film hasn\'t formed yet.',
+          distractorExplanations: {
+            0: 'This focuses on clearance/large,, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on lubricant/viscosity, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on shaft/misalignment, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'On the Stribeck curve, low speed means the bearing number is low.',
         },
         {
@@ -734,6 +895,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Higher speed increases the Sommerfeld number, which reduces eccentricity and increases film thickness. The relationship is not linear because the Sommerfeld number charts are nonlinear.',
+          distractorExplanations: {
+            0: 'This focuses on stays, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on approximately/doubles, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on decreases/because, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Higher speed means more oil is dragged into the wedge.',
         },
         {
@@ -758,6 +924,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The Petroff equation estimates friction torque (and power loss) in a concentric (lightly loaded) journal bearing where the shaft is centered in the bearing.',
+          distractorExplanations: {
+            0: 'This focuses on calculating, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on determining/contact, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on selecting/clearance, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'This equation assumes no eccentricity (concentric operation).',
         },
         {
@@ -766,6 +937,9 @@ export const unit8: Unit = {
           question: 'A bearing with a higher dynamic load rating C always lasts longer than one with a lower C, regardless of conditions.',
           correctAnswer: false,
           explanation: 'Life also depends on the applied load P, lubrication, alignment, contamination, and temperature. A high-C bearing under poor conditions can fail faster than a lower-C bearing in ideal conditions.',
+          distractorExplanations: {
+            0: 'Life also depends on the applied load P, lubrication, alignment, contamination, and temperature.',
+          },
           hint: 'The formula is L10 = (C/P)^p, but real life has many other factors.',
         },
         {
@@ -780,6 +954,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Preload eliminates internal clearance, increases stiffness, and distributes load more evenly among the rolling elements. It\'s essential for precision spindle applications.',
+          distractorExplanations: {
+            0: 'Temperature is not the primary factor in this problem; the correct analysis uses a different variable.',
+            2: 'This focuses on reduce/dynamic, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on bearing/self-aligning, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Think about what happens if there\'s play in a precision spindle.',
         },
       ]
@@ -808,6 +987,9 @@ export const unit8: Unit = {
           question: 'In a gear pair, power is conserved (minus friction losses).',
           correctAnswer: true,
           explanation: 'Yes. P = T x omega stays constant through the gear mesh. If speed drops, torque increases proportionally.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Energy in = energy out (minus losses to friction and heat).',
         },
         {
@@ -822,6 +1004,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'D = m x Z = 4 x 25 = 100 mm. The module is the ratio of pitch diameter to number of teeth (m = D/Z).',
+          distractorExplanations: {
+            0: '50 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            2: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: '200 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+          },
           hint: 'The pitch circle diameter is simply module times teeth.',
         },
         {
@@ -836,6 +1023,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Gear ratio = 80/20 = 4. Gear speed = 1200/4 = 300 RPM. Torque on pinion: T_p = P/omega = 10000/125.66 = 79.6 N*m. Gear torque = 79.6 x 4 = 318.4 N*m.',
+          distractorExplanations: {
+            0: '79.6 is one-quarter of the correct value, from an extra division or missing squared term.',
+            1: '159.2 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            3: '636.6 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+          },
           hint: 'Power is constant (P = T*omega). Gear ratio multiplies torque.',
         },
         {
@@ -857,6 +1049,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Overall gear ratio = 3 x 4 x 2 = 24:1. Output speed = 2400/24 = 100 RPM.',
+          distractorExplanations: {
+            0: '800 significantly exceeds the correct answer due to a fundamental formula or calculation error.',
+            1: '200 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+            2: '400 is approximately four times too large, likely from squaring a term incorrectly.',
+          },
           hint: 'For gears in series, the total ratio is the product.',
         },
         {
@@ -865,6 +1062,9 @@ export const unit8: Unit = {
           question: 'In a standard 20-degree pressure angle spur gear, the minimum number of teeth to avoid undercutting is 17.',
           correctAnswer: true,
           explanation: 'Undercutting occurs when the dedendum circle extends below the base circle. For 20-degree pressure angle: Z_min = 2/sin^2(20) = 2/0.117 = 17.1, so 17 teeth minimum.',
+          distractorExplanations: {
+            1: 'Undercutting occurs when the dedendum circle extends below the base circle.',
+          },
           hint: 'Use Z_min = 2/sin^2(phi).',
         },
         {
@@ -889,6 +1089,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Using the Willis equation with the ring fixed (N_R = 0): carrier speed N_C = N_S x Z_S / (Z_S + Z_R) = 1000 x 20 / (20 + 80) = 200 RPM.',
+          distractorExplanations: {
+            0: '100 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            2: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: 'This numerical value does not result from the correct formula applied to the given parameters.',
+          },
           hint: 'Use the Willis equation with ring speed set to zero.',
         },
         {
@@ -903,6 +1108,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The contact ratio equals the length of the path of contact divided by the base pitch. A value above 1.0 means at least one tooth pair is always in contact for smooth, continuous operation.',
+          distractorExplanations: {
+            0: 'This focuses on tooth/total, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on pinion/speed, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on percentage/width, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'This ratio ensures smooth, continuous tooth engagement.',
         },
       ]
@@ -932,6 +1142,8 @@ export const unit8: Unit = {
           options: ['Helical', 'Spur', 'Bevel', 'Worm'],
           correctIndex: 1,
           explanation: 'Spur gears have straight teeth parallel to the shaft axis. They\'re the simplest and cheapest to manufacture.',
+          distractorExplanations: {
+          },
           hint: 'The most basic gear type.',
         },
         {
@@ -946,6 +1158,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Helical gears engage gradually (smoother, quieter) and share load across more tooth length. But they create axial thrust and cost more to manufacture.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; gears preferred the principle has important exceptions.',
+            1: 'This "always" claim is too broad; helical gears the principle has important exceptions.',
+            3: 'This is too restrictive; the principle applies more broadly than difference noise suggests.',
+          },
           hint: 'Consider how the tooth contact differs between spur and helical.',
         },
         {
@@ -964,6 +1181,9 @@ export const unit8: Unit = {
           question: 'Self-locking worm gears are inherently less efficient than non-self-locking worm gears.',
           correctAnswer: true,
           explanation: 'Self-locking requires high friction (low lead angle), which means more energy is lost to heat. This is a fundamental trade-off: safety vs. efficiency.',
+          distractorExplanations: {
+            1: 'Self-locking requires high friction (low lead angle), which means more energy is lost to heat.',
+          },
           hint: 'Consider the relationship between friction and efficiency.',
         },
         {
@@ -985,6 +1205,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The helix angle creates an additional axial force component that spur gears don\'t have. This is why helical gears need thrust bearings.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than tangential radial suggests.',
+            2: 'This focuses on gravitational,/centrifugal, which is not the correct mechanism or principle for this problem.',
+            3: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+          },
           hint: 'The helix angle introduces a force that spur gears don\'t have.',
         },
         {
@@ -993,6 +1218,9 @@ export const unit8: Unit = {
           question: 'Bevel gears can connect shafts at any angle, not just 90 degrees.',
           correctAnswer: true,
           explanation: 'Bevel gears transmit power between intersecting shafts at various angles. 90-degree configurations are most common, but other angles work too.',
+          distractorExplanations: {
+            1: 'Bevel gears transmit power between intersecting shafts at various angles.',
+          },
           hint: 'Bevel gear cones can be designed for various included angles.',
         },
         {
@@ -1017,6 +1245,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Worm gear ratio = number of worm wheel teeth / number of worm starts = 40/1 = 40:1. This is why worm gears achieve very high ratios in a compact package.',
+          distractorExplanations: {
+            0: '10 is one-quarter of the correct value, from an extra division or missing squared term.',
+            1: '20 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            3: '80 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+          },
           hint: 'Ratio = wheel teeth / worm starts.',
         },
         {
@@ -1060,6 +1293,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 0,
           explanation: 'AGMA requires checking bending stress at the tooth root (Lewis/AGMA method) and contact stress on the tooth flank (Hertzian/AGMA method). Both must be within allowable limits.',
+          distractorExplanations: {
+            1: 'This focuses on tooth/shear, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on abrasive/corrosion, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on thermal/distortion, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Teeth can break off at the root or pit on the surface.',
         },
         {
@@ -1074,6 +1312,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The Lewis form factor Y depends on number of teeth because the tooth profile geometry (root fillet shape and thickness) changes with tooth count.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than material hardness suggests.',
+            1: 'This is too restrictive; the principle applies more broadly than module width suggests.',
+            3: 'This focuses on rotational/speed, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The form factor characterizes the tooth root geometry.',
         },
         {
@@ -1088,6 +1331,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Pitting is surface fatigue driven by cyclic Hertzian contact stress. Subsurface cracks initiate at the depth of maximum shear stress and propagate to the surface.',
+          distractorExplanations: {
+            0: 'This focuses on teeth/thin,, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on abrasive/contaminated, which is not the correct mechanism or principle for this problem.',
+            3: 'This "always" claim is too broad; pitting occurs the principle has important exceptions.',
+          },
           hint: 'Pitting is a contact stress (Hertzian) problem.',
         },
         {
@@ -1109,6 +1357,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'AGMA gear rating requires checking bending stress at the tooth root and contact stress on the flank. Both must be below their respective allowable stresses.',
+          distractorExplanations: {
+            0: 'This focuses on abrasive/corrosion, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on tooth/shear, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on thermal/distortion, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Gear teeth can fail by breaking off or by surface fatigue.',
         },
         {
@@ -1132,6 +1385,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Bending stress is inversely proportional to face width (sigma ~ 1/b, so 1/1.5 = 33% reduction). Contact stress is inversely proportional to sqrt(b) (1/sqrt(1.5) = 18% reduction).',
+          distractorExplanations: {
+            0: 'This focuses on decrease, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on decrease, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than contact stress suggests.',
+          },
           hint: 'Bending stress is proportional to 1/b, contact stress to 1/sqrt(b).',
         },
         {
@@ -1140,6 +1398,9 @@ export const unit8: Unit = {
           question: 'Case-hardened gears are stronger in both bending and surface contact than through-hardened gears of the same grade.',
           correctAnswer: true,
           explanation: 'Case hardening gives a hard, wear-resistant surface (high contact strength) with a tough core (good bending strength). Through-hardening compromises between surface and core properties.',
+          distractorExplanations: {
+            1: 'Case hardening gives a hard, wear-resistant surface (high contact strength) with a tough core (good bending strength).',
+          },
           hint: 'Case hardening optimizes both surface and core properties.',
         },
         {
@@ -1154,6 +1415,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Spur and helical gears are very efficient, typically 95 to 99% per stage. Worm gears are much lower (40 to 90% depending on lead angle).',
+          distractorExplanations: {
+            0: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            1: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: 'This numerical value does not result from the correct formula applied to the given parameters.',
+          },
           hint: 'Involute gears have very low sliding losses.',
         },
         {
@@ -1192,6 +1458,9 @@ export const unit8: Unit = {
           question: 'A bolt creates clamping force by being pre-stretched during tightening.',
           correctAnswer: true,
           explanation: 'Yes. When you tighten a bolt, you stretch it slightly. That stretch creates the preload force that clamps the joint members in compression.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Think about what happens to the bolt when you turn the nut.',
         },
         {
@@ -1209,6 +1478,9 @@ export const unit8: Unit = {
           question: 'A bolted joint should always be designed so the bolt is loaded in shear rather than tension.',
           correctAnswer: false,
           explanation: 'Properly designed bolted joints usually load the bolt in tension (clamping). The preload creates friction between surfaces that resists shear loads.',
+          distractorExplanations: {
+            0: 'Properly designed bolted joints usually load the bolt in tension (clamping).',
+          },
           hint: 'Consider how a properly preloaded joint resists sliding.',
         },
         {
@@ -1240,6 +1512,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Stiffness ratio C = k_b/(k_b + k_c) = 400/(400 + 1200) = 0.25. Additional bolt load = C x F_ext = 0.25 x 20 = 5 kN. The stiff members absorb most of the external load.',
+          distractorExplanations: {
+            0: '15 results from an incorrect multiplier in the calculation.',
+            1: '10 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+            3: '20 is approximately four times too large, likely from squaring a term incorrectly.',
+          },
           hint: 'The load split depends on the stiffness ratio C = k_b/(k_b + k_c).',
         },
         {
@@ -1254,6 +1531,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Torque-controlled tightening depends heavily on thread and underhead friction. Only 10 to 15% of applied torque actually stretches the bolt. Friction variation is the main source of preload scatter.',
+          distractorExplanations: {
+            0: 'This focuses on torque/wrench, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on bolts/different, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on flange/warped, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'If the wrench is accurate but preloads vary, something else is consuming the torque.',
         },
         {
@@ -1268,6 +1550,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Proof strength for 8.8 = 600 MPa. Proof load = 600 x 84.3 = 50,580 N = 50.6 kN. Recommended preload = 0.75 x 50.6 = 37.9 kN.',
+          distractorExplanations: {
+            0: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            2: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: 'This numerical value does not result from the correct formula applied to the given parameters.',
+          },
           hint: 'Target preload is typically 75% of proof load.',
         },
         {
@@ -1306,6 +1593,9 @@ export const unit8: Unit = {
           question: 'In a bolted joint, stiffer clamped members mean the bolt carries a smaller fraction of external load.',
           correctAnswer: true,
           explanation: 'Yes. C = k_b/(k_b + k_c). As k_c increases, C decreases, so the bolt carries a smaller fraction of the external tensile load.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'The stiffness ratio C determines load sharing.',
         },
         {
@@ -1320,6 +1610,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Joint separation occurs when F_ext = F_i/(1 - C) = 40/(1 - 0.25) = 40/0.75 = 53.3 kN. At this point, the clamping force drops to zero.',
+          distractorExplanations: {
+            0: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            2: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: '160 results from an incorrect multiplier in the calculation.',
+          },
           hint: 'Separation happens when clamping force reaches zero.',
         },
         {
@@ -1334,6 +1629,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'With high preload and stiff members, the bolt sees only a small fraction of the cyclic external load. This keeps the alternating stress low, which is what drives fatigue failure.',
+          distractorExplanations: {
+            0: 'This focuses on makes/stronger, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on prevents/rotating, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than preload needed suggests.',
+          },
           hint: 'Fatigue depends on alternating stress, not total stress.',
         },
         {
@@ -1349,6 +1649,9 @@ export const unit8: Unit = {
           question: 'Adding a gasket to a bolted joint increases the fraction of external load carried by the bolt.',
           correctAnswer: true,
           explanation: 'Gaskets are soft, reducing k_c dramatically. This increases C = k_b/(k_b + k_c), so the bolt carries a larger fraction of external load.',
+          distractorExplanations: {
+            1: 'Gaskets are soft, reducing k_c dramatically.',
+          },
           hint: 'A soft gasket reduces member stiffness k_c.',
         },
         {
@@ -1372,6 +1675,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Adhesive joints excel in shear but are weak in peel and cleavage. Maximize bond area, use lap joints, and control surface preparation.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; adhesive inferior the principle has important exceptions.',
+            2: 'This focuses on apply/adhesive, which is not the correct mechanism or principle for this problem.',
+            3: 'This incorrectly claims impossibility; the described outcome is achievable under proper conditions.',
+          },
           hint: 'Adhesive joints are strong in shear but weak in peel.',
         },
         {
@@ -1386,6 +1694,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Fillet welds fail through the throat, which is the minimum cross-section at 45 degrees through the weld. Throat = 0.707 x leg size.',
+          distractorExplanations: {
+            0: 'This focuses on plate, which is not the correct mechanism or principle for this problem.',
+            2: 'Fillet welds fail through the throat, which is the minimum cross-section at 45 degrees through the weld.',
+            3: 'This focuses on thinner/plate, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The weakest plane through a fillet weld is at 45 degrees.',
         },
         {
@@ -1410,6 +1723,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Lock washers (split, toothed, or Nordlock) resist bolt loosening from vibration and dynamic loads. They don\'t increase preload or distribute load.',
+          distractorExplanations: {
+            0: 'This focuses on increase/preload, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on distribute/larger, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on joint/against, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Vibration can cause bolts to rotate and lose preload.',
         },
       ]
@@ -1439,6 +1757,8 @@ export const unit8: Unit = {
           options: ['Fillet weld', 'Full-penetration butt weld', 'Spot weld', 'Plug weld'],
           correctIndex: 1,
           explanation: 'A full-penetration butt weld fuses the entire cross-section, making it as strong as the base metal (with proper technique and filler).',
+          distractorExplanations: {
+          },
           hint: 'Which weld fuses the entire thickness of the plates?',
         },
         {
@@ -1453,6 +1773,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Throat = 0.707 x leg = 0.707 x 8 = 5.66 mm. The throat is the shortest distance through the weld cross-section.',
+          distractorExplanations: {
+            0: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            2: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: '11.3 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+          },
           hint: 'The throat is 0.707 times the leg size (sin 45 degrees).',
         },
         {
@@ -1461,6 +1786,9 @@ export const unit8: Unit = {
           question: 'Welded joints under fatigue loading should avoid sharp notches and undercuts at the weld toe.',
           correctAnswer: true,
           explanation: 'The weld toe is a stress concentration site. Sharp notches and undercuts drastically reduce fatigue life. Proper weld profile and toe grinding improve fatigue performance.',
+          distractorExplanations: {
+            1: 'The weld toe is a stress concentration site.',
+          },
           hint: 'Stress concentrations are the enemy of fatigue life.',
         },
         {
@@ -1492,6 +1820,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Lack of fusion creates a crack-like defect at the weld root. Under cyclic loading, this acts as a pre-existing crack and dramatically reduces fatigue life.',
+          distractorExplanations: {
+            0: 'This focuses on slight/porosity, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on minor/spatter, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on slight/discoloration, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Which defect acts most like a pre-existing crack?',
         },
         {
@@ -1510,6 +1843,9 @@ export const unit8: Unit = {
           question: 'Riveted joints are still commonly used in new steel building construction because they are stronger than bolted joints.',
           correctAnswer: false,
           explanation: 'Rivets have been largely replaced by high-strength bolts in structural steel. Bolts are easier to install, inspect, and can be tightened to precise preloads.',
+          distractorExplanations: {
+            0: 'Rivets have been largely replaced by high-strength bolts in structural steel.',
+          },
           hint: 'Modern construction uses high-strength bolts almost exclusively.',
         },
         {
@@ -1524,6 +1860,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'A single-lap joint creates a bending moment because the load path is offset. A double-lap joint is symmetric, eliminating this eccentricity.',
+          distractorExplanations: {
+            0: 'This focuses on material, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on easier/manufacture, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on requires/fewer, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Think about the load path in each configuration.',
         },
         {
@@ -1561,6 +1902,9 @@ export const unit8: Unit = {
           question: 'A stiffer spring (higher k) deflects less under the same load.',
           correctAnswer: true,
           explanation: 'Yes. F = k*x, so for a given force F, higher k means smaller deflection x.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Spring rate k = F/x.',
         },
         {
@@ -1575,6 +1919,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Wire diameter appears as d^4 in the spring rate formula, so it has the strongest effect. Doubling d increases k by 16 times.',
+          distractorExplanations: {
+            0: 'This focuses on number/active, which is not the correct mechanism or principle for this problem.',
+            2: 'Regarding diameter: Wire diameter appears as d^4 in the spring rate formula, so it has the strongest effect.',
+            3: 'This focuses on length, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Look at the exponents in k = Gd^4/(8D^3*Na).',
         },
         {
@@ -1599,6 +1948,9 @@ export const unit8: Unit = {
           question: 'The Wahl factor is always greater than 1.0 because it accounts for curvature effects.',
           correctAnswer: true,
           explanation: 'The inner surface of a coil has higher stress due to curvature. The Wahl factor is always > 1.0 to correct for this, typically 1.1 to 1.4.',
+          distractorExplanations: {
+            1: 'The inner surface of a coil has higher stress due to curvature.',
+          },
           hint: 'Curvature concentrates stress on the inner side of the coil.',
         },
         {
@@ -1623,6 +1975,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'C = D/d = 24/3 = 8. This is in the practical range of 4 to 12.',
+          distractorExplanations: {
+            0: '4 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            1: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: 'This numerical value does not result from the correct formula applied to the given parameters.',
+          },
           hint: 'C = mean coil diameter / wire diameter.',
         },
         {
@@ -1637,6 +1994,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Low C means the coil is wound very tightly. This makes manufacturing difficult, increases residual stresses, and raises the Wahl correction factor significantly.',
+          distractorExplanations: {
+            0: 'This focuses on becomes, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on decreases/dramatically, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on nothing,/value, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Tight coils are hard to wind and have high curvature stress.',
         },
         {
@@ -1651,6 +2013,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Springs in parallel add: k_total = k1 + k2 = 2k. Both springs share the load and deflect the same amount.',
+          distractorExplanations: {
+            0: 'Springs in parallel add: k_total = k1 + k2 = 2k.',
+            1: 'Springs in parallel add: k_total = k1 + k2 = 2k.',
+            3: 'Springs in parallel add: k_total = k1 + k2 = 2k.',
+          },
           hint: 'Parallel springs share the load. Series springs share the deflection.',
         },
         {
@@ -1689,6 +2056,9 @@ export const unit8: Unit = {
           question: 'Shot peening a spring wire improves its fatigue life.',
           correctAnswer: true,
           explanation: 'Yes. Shot peening creates a compressive residual stress layer on the surface, which opposes the tensile stresses that drive fatigue cracks.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Surface compression resists crack initiation.',
         },
         {
@@ -1697,6 +2067,9 @@ export const unit8: Unit = {
           question: 'Spring surge occurs when the operating frequency matches a natural frequency of the spring coils.',
           correctAnswer: true,
           explanation: 'Spring surge is resonance. The coils vibrate as a distributed mass-spring system, and if the operating frequency hits a natural frequency, amplitudes spike and can cause failure.',
+          distractorExplanations: {
+            1: 'Spring surge is resonance.',
+          },
           hint: 'Surge is the spring version of shaft whirling.',
         },
         {
@@ -1711,6 +2084,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'A general guideline is that helical compression springs with free length > 4 x D are susceptible to buckling, especially if the ends are not well-guided.',
+          distractorExplanations: {
+            0: '2 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            2: '8 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+            3: '12 results from an incorrect multiplier in the calculation.',
+          },
           hint: 'Slender springs buckle, like slender columns.',
         },
         {
@@ -1732,6 +2110,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Mechanical face seals are the standard for centrifugal pumps. Two precision-lapped surfaces maintain a thin fluid film under pressure and high speed.',
+          distractorExplanations: {
+            0: 'This focuses on o-ring/groove, which is not the correct mechanism or principle for this problem.',
+            1: 'Mechanical face seals are the standard for centrifugal pumps.',
+            3: 'This focuses on labyrinth, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Two flat, precision-lapped surfaces.',
         },
         {
@@ -1756,6 +2139,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'PV = pressure x sliding velocity. It\'s a measure of heat generation at the seal interface. Exceeding the PV limit causes overheating and rapid wear.',
+          distractorExplanations: {
+            0: 'This focuses on volume, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on power/vibration, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on preload/viscosity, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'P is contact pressure, V is rubbing speed.',
         },
         {
@@ -1764,6 +2152,9 @@ export const unit8: Unit = {
           question: 'An O-ring seal works by being squeezed between surfaces, and the system pressure pushes it harder against the sealing surface.',
           correctAnswer: true,
           explanation: 'O-rings work by initial squeeze (compression) plus pressure energization. As system pressure rises, the O-ring is pushed harder against the groove walls, improving the seal.',
+          distractorExplanations: {
+            1: 'O-rings work by initial squeeze (compression) plus pressure energization.',
+          },
           hint: 'Higher pressure makes the O-ring seal better.',
         },
         {
@@ -1787,6 +2178,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Lip seals ride on the shaft surface. If it\'s too rough, the lip wears quickly. If too smooth, the seal can\'t form a proper oil film. Ra 0.2 to 0.5 micrometers is typical.',
+          distractorExplanations: {
+            0: 'This focuses on wrong/material, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on incorrect/lubricant, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on over-tightening/housing, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The seal lip rides directly on the shaft surface.',
         },
       ]
@@ -1816,6 +2212,8 @@ export const unit8: Unit = {
           options: ['12', '9', '10', '8'],
           correctIndex: 3,
           explanation: 'Squared and ground ends have 2 inactive coils (one at each end for flat seating). So Na = N - 2 = 10 - 2 = 8 active coils.',
+          distractorExplanations: {
+          },
           hint: 'Each squared end removes one coil from being active.',
         },
         {
@@ -1830,6 +2228,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Inconel X-750 is a nickel-based superalloy that maintains its spring properties above 250 C. Standard spring steels lose significant strength above 150 to 200 C.',
+          distractorExplanations: {
+            0: 'This focuses on music/(astm, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on chrome-vanadium/(astm, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on stainless/steel, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Nickel-based superalloys maintain strength at high temperature.',
         },
         {
@@ -1838,6 +2241,9 @@ export const unit8: Unit = {
           question: 'Music wire (ASTM A228) has the highest tensile strength of common spring materials.',
           correctAnswer: true,
           explanation: 'Music wire has the highest tensile strength among common spring steels, making it the go-to choice for small, high-stress springs at room temperature.',
+          distractorExplanations: {
+            1: 'Music wire has the highest tensile strength among common spring steels, making it the go-to choice for small, high-stress springs at room...',
+          },
           hint: 'This wire type is the strongest but can\'t handle high temps.',
         },
         {
@@ -1869,6 +2275,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'For millions of cycles, fatigue life is the primary concern. The working stress range must be below the endurance limit, and shot peening is typically required.',
+          distractorExplanations: {
+            0: 'This focuses on length/tolerance, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on spring/color, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on surface/finish, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'High cycle count = fatigue is the dominant concern.',
         },
         {
@@ -1893,6 +2304,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Presetting compresses the spring beyond its intended working deflection. This yields the high-stress areas slightly, so they don\'t yield again in service. The spring loses a small amount of free length but won\'t take additional set.',
+          distractorExplanations: {
+            0: 'This focuses on increase, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on improve/surface, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on change/diameter, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Over-compress once so it doesn\'t lose height later.',
         },
         {
@@ -1901,6 +2317,9 @@ export const unit8: Unit = {
           question: 'Extension springs are more prone to fatigue failure than compression springs because of stress concentration at the hooks.',
           correctAnswer: true,
           explanation: 'Extension spring hooks create stress concentrations where the wire bends sharply. This makes them more susceptible to fatigue failure than compression springs with flat, ground ends.',
+          distractorExplanations: {
+            1: 'Extension spring hooks create stress concentrations where the wire bends sharply.',
+          },
           hint: 'Hooks are the weak point of extension springs.',
         },
         {
@@ -1915,6 +2334,11 @@ export const unit8: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Deep grooves on mechanical seal faces are caused by abrasive particles (sand, dirt, scale) in the fluid. Clean fluid or add filtration upstream of the seal.',
+          distractorExplanations: {
+            0: 'This focuses on normal/service, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on incorrect/spring, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on thermal/expansion, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Something hard is scratching the precision-lapped faces.',
         },
       ]

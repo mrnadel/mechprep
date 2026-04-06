@@ -39,6 +39,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Scientists have one universally agreed definition of life.",
             correctAnswer: false,
             explanation: "There's no single definition that every scientist agrees on. NASA's working definition focuses on chemistry and evolution.",
+            distractorExplanations: {
+              0: 'There\'s no single definition that every scientist agrees on. NASA\'s working definition focuses on chemistry and evolution.',
+            },
           },
           {
             id: "sp-sec11-u6-L1-Q2",
@@ -52,6 +55,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "NASA's definition emphasizes self-sustaining chemistry and the ability to evolve. It's broad enough to include forms of life we haven't seen yet.",
+            distractorExplanations: {
+              0: 'Anything that moves and breathes is incorrect; nASA\'s definition emphasizes self-sustaining chemistry and the ability to evolve. It\'s broad enough to include forms of life we haven\'t seen yet.',
+              2: 'Any carbon-based molecule in water is incorrect; nASA\'s definition emphasizes self-sustaining chemistry and the ability to evolve. It\'s broad enough to include forms of life we haven\'t seen yet.',
+              3: 'Something with DNA that can reproduce is incorrect; nASA\'s definition emphasizes self-sustaining chemistry and the ability to evolve. It\'s broad enough to include forms of life we haven\'t seen yet.',
+            },
           },
           {
             id: "sp-sec11-u6-L1-T2",
@@ -88,6 +96,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Most biologists consider viruses to be fully alive.",
             correctAnswer: false,
             explanation: "Viruses can't reproduce independently or metabolize on their own. They need a host cell, which puts them in a gray zone.",
+            distractorExplanations: {
+              0: 'Viruses can\'t reproduce independently or metabolize on their own. They need a host cell, which puts them in a gray zone.',
+            },
           },
           {
             id: "sp-sec11-u6-L1-Q6",
@@ -101,6 +112,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Viruses have genetic material and evolve, which are life-like. But they can't reproduce or metabolize without a host cell.",
+            distractorExplanations: {
+              0: 'They\'re too small to observe is incorrect; viruses have genetic material and evolve, which are life-like. But they can\'t reproduce or metabolize without a host cell.',
+              2: 'They live in extreme environments is incorrect; viruses have genetic material and evolve, which are life-like. But they can\'t reproduce or metabolize without a host cell.',
+              3: 'They contain no genetic material is incorrect; viruses have genetic material and evolve, which are life-like. But they can\'t reproduce or metabolize without a host cell.',
+            },
           },
         ],
       },
@@ -125,6 +141,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Carbon can form up to 4 chemical bonds with other atoms.",
             correctAnswer: true,
             explanation: "Carbon's 4 bonding sites let it build chains, rings, and branching structures. This versatility is why life uses it.",
+            distractorExplanations: {
+              1: 'This statement is correct because carbon\'s 4 bonding sites let it build chains, rings, and branching structures. This versatility is why life uses it.',
+            },
           },
           {
             id: "sp-sec11-u6-L2-Q2",
@@ -138,6 +157,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Carbon's ability to bond in chains, rings, and branches creates the molecular complexity that life requires.",
+            distractorExplanations: {
+              0: 'It\'s the most abundant element in the universe is incorrect; carbon\'s ability to bond in chains, rings, and branches creates the molecular complexity that life requires.',
+              2: 'It\'s the heaviest element available is incorrect; carbon\'s ability to bond in chains, rings, and branches creates the molecular complexity that life requires.',
+              3: 'It produces energy when it reacts with water is incorrect; carbon\'s ability to bond in chains, rings, and branches creates the molecular complexity that life requires.',
+            },
           },
           {
             id: "sp-sec11-u6-L2-T2",
@@ -180,6 +204,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Silicon sits below carbon on the periodic table and can also form 4 bonds. But silicon chemistry is less versatile than carbon's.",
+            distractorExplanations: {
+              0: 'Iron is incorrect; silicon sits below carbon on the periodic table and can also form 4 bonds. But silicon chemistry is less versatile than carbon\'s.',
+              2: 'Hydrogen is incorrect; silicon sits below carbon on the periodic table and can also form 4 bonds. But silicon chemistry is less versatile than carbon\'s.',
+              3: 'Helium is incorrect; silicon sits below carbon on the periodic table and can also form 4 bonds. But silicon chemistry is less versatile than carbon\'s.',
+            },
           },
           {
             id: "sp-sec11-u6-L2-Q6",
@@ -187,6 +216,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "All known life on Earth is carbon-based.",
             correctAnswer: true,
             explanation: "Without exception, every living organism on Earth uses carbon as its structural backbone. Alternative biochemistries remain hypothetical.",
+            distractorExplanations: {
+              1: 'This statement is correct because without exception, every living organism on Earth uses carbon as its structural backbone. Alternative biochemistries remain hypothetical.',
+            },
           },
         ],
       },
@@ -211,6 +243,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Extremophiles are organisms that thrive in extreme environments.",
             correctAnswer: true,
             explanation: "The name literally means 'extreme-loving.' These organisms don't just survive harsh conditions, they thrive in them.",
+            distractorExplanations: {
+              1: 'This statement is correct because the name literally means \'extreme-loving.\' These organisms don\'t just survive harsh conditions, they thrive in them.',
+            },
           },
           {
             id: "sp-sec11-u6-L3-Q2",
@@ -224,6 +259,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Extremophiles live in an astonishing range of environments, from volcanic hot springs to the dry valleys of Antarctica.",
+            distractorExplanations: {
+              0: 'Only in tropical forests is incorrect; extremophiles live in an astonishing range of environments, from volcanic hot springs to the dry valleys of Antarctica.',
+              1: 'Only in the deep ocean is incorrect; extremophiles live in an astonishing range of environments, from volcanic hot springs to the dry valleys of Antarctica.',
+              3: 'Only in laboratory conditions is incorrect; extremophiles live in an astonishing range of environments, from volcanic hot springs to the dry valleys of Antarctica.',
+            },
           },
           {
             id: "sp-sec11-u6-L3-T2",
@@ -266,6 +306,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Extremophiles show that life doesn't need comfortable conditions. Harsh environments on Mars or Europa might support similar organisms.",
+            distractorExplanations: {
+              0: 'They can travel through space on their own is incorrect; extremophiles show that life doesn\'t need comfortable conditions. Harsh environments on Mars or Europa might support similar organisms.',
+              2: 'They communicate with alien organisms is incorrect; extremophiles show that life doesn\'t need comfortable conditions. Harsh environments on Mars or Europa might support similar organisms.',
+              3: 'They evolved from extraterrestrial life is incorrect; extremophiles show that life doesn\'t need comfortable conditions. Harsh environments on Mars or Europa might support similar organisms.',
+            },
           },
           {
             id: "sp-sec11-u6-L3-Q6",
@@ -534,6 +579,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Mars once had liquid water on its surface.",
             correctAnswer: true,
             explanation: "Rover missions and orbital images show ancient riverbeds, lake sediments, and mineral deposits that only form in water.",
+            distractorExplanations: {
+              1: 'This statement is correct because rover missions and orbital images show ancient riverbeds, lake sediments, and mineral deposits that only form in water.',
+            },
           },
           {
             id: "sp-sec11-u7-L1-Q2",
@@ -547,6 +595,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Mars lost its global magnetic field billions of years ago. Without protection, solar wind stripped the atmosphere, and surface water escaped to space or froze underground.",
+            distractorExplanations: {
+              1: 'It was absorbed by the Martian core is incorrect; mars lost its global magnetic field billions of years ago. Without protection, solar wind stripped the atmosphere, and surface water escaped to space or froze underground.',
+              2: 'Other planets pulled it away with gravity is incorrect; mars lost its global magnetic field billions of years ago. Without protection, solar wind stripped the atmosphere, and surface water escaped to space or froze underground.',
+              3: 'It was never there in large amounts is incorrect; mars lost its global magnetic field billions of years ago. Without protection, solar wind stripped the atmosphere, and surface water escaped to space or froze underground.',
+            },
           },
           {
             id: "sp-sec11-u7-L1-T2",
@@ -574,6 +627,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jezero Crater was once a lake fed by a river. Ancient lake sediments could preserve signs of microbial life.",
+            distractorExplanations: {
+              0: 'It\'s the tallest mountain on Mars is incorrect; jezero Crater was once a lake fed by a river. Ancient lake sediments could preserve signs of microbial life.',
+              2: 'It has active volcanoes for energy is incorrect; jezero Crater was once a lake fed by a river. Ancient lake sediments could preserve signs of microbial life.',
+              3: 'It\'s the warmest location on Mars is incorrect; jezero Crater was once a lake fed by a river. Ancient lake sediments could preserve signs of microbial life.',
+            },
           },
           {
             id: "sp-sec11-u7-L1-T3",
@@ -587,6 +645,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Methane detected on Mars is definitive proof of life there.",
             correctAnswer: false,
             explanation: "Methane can come from biological or geological sources. Its detection is intriguing but not proof of life.",
+            distractorExplanations: {
+              0: 'Methane can come from biological or geological sources. Its detection is intriguing but not proof of life.',
+            },
           },
           {
             id: "sp-sec11-u7-L1-Q6",
@@ -619,6 +680,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Europa's ocean contains more water than all of Earth's oceans combined.",
             correctAnswer: true,
             explanation: "Despite being smaller than Earth, Europa's subsurface ocean is estimated to hold 2 to 3 times the water volume of all Earth's oceans.",
+            distractorExplanations: {
+              1: 'This statement is correct because despite being smaller than Earth, Europa\'s subsurface ocean is estimated to hold 2 to 3 times the water volume of all Earth\'s oceans.',
+            },
           },
           {
             id: "sp-sec11-u7-L2-Q2",
@@ -632,6 +696,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Jupiter's enormous gravity flexes Europa as it orbits, generating internal heat through tidal friction. This keeps the ocean liquid beneath the ice.",
+            distractorExplanations: {
+              0: 'Sunlight warming the surface is incorrect; jupiter\'s enormous gravity flexes Europa as it orbits, generating internal heat through tidal friction. This keeps the ocean liquid beneath the ice.',
+              1: 'Radioactive decay in the core is incorrect; jupiter\'s enormous gravity flexes Europa as it orbits, generating internal heat through tidal friction. This keeps the ocean liquid beneath the ice.',
+              3: 'Heat from nearby Io\'s volcanoes is incorrect; jupiter\'s enormous gravity flexes Europa as it orbits, generating internal heat through tidal friction. This keeps the ocean liquid beneath the ice.',
+            },
           },
           {
             id: "sp-sec11-u7-L2-T2",
@@ -660,6 +729,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If plumes carry ocean water to the surface, a spacecraft could fly through them and analyze the chemistry without needing to drill through kilometers of ice.",
+            distractorExplanations: {
+              0: 'They prove life exists under the ice is incorrect; if plumes carry ocean water to the surface, a spacecraft could fly through them and analyze the chemistry without needing to drill through kilometers of ice.',
+              2: 'They show Europa is getting warmer is incorrect; if plumes carry ocean water to the surface, a spacecraft could fly through them and analyze the chemistry without needing to drill through kilometers of ice.',
+              3: 'They contain visible organisms is incorrect; if plumes carry ocean water to the surface, a spacecraft could fly through them and analyze the chemistry without needing to drill through kilometers of ice.',
+            },
           },
           {
             id: "sp-sec11-u7-L2-T3",
@@ -673,6 +747,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Deep-sea life on Earth depends on sunlight for energy.",
             correctAnswer: false,
             explanation: "Hydrothermal vent communities use chemosynthesis, getting energy from chemical reactions instead of sunlight. This could work on Europa too.",
+            distractorExplanations: {
+              0: 'Hydrothermal vent communities use chemosynthesis, getting energy from chemical reactions instead of sunlight. This could work on Europa too.',
+            },
           },
           {
             id: "sp-sec11-u7-L2-Q6",
@@ -706,6 +783,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Cassini found organic molecules in Enceladus's water plumes.",
             correctAnswer: true,
             explanation: "Cassini detected complex organic molecules, hydrogen, and silica nanoparticles. These suggest hydrothermal vents on the ocean floor.",
+            distractorExplanations: {
+              1: 'This statement is correct because cassini detected complex organic molecules, hydrogen, and silica nanoparticles. These suggest hydrothermal vents on the ocean floor.',
+            },
           },
           {
             id: "sp-sec11-u7-L3-Q2",
@@ -719,6 +799,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hydrogen and silica nanoparticles form through hot water reacting with rock. On Earth, this happens at hydrothermal vents on the ocean floor.",
+            distractorExplanations: {
+              0: 'Gold and platinum particles is incorrect; hydrogen and silica nanoparticles form through hot water reacting with rock. On Earth, this happens at hydrothermal vents on the ocean floor.',
+              2: 'Fossilized microbes is incorrect; hydrogen and silica nanoparticles form through hot water reacting with rock. On Earth, this happens at hydrothermal vents on the ocean floor.',
+              3: 'Oxygen and nitrogen gas is incorrect; hydrogen and silica nanoparticles form through hot water reacting with rock. On Earth, this happens at hydrothermal vents on the ocean floor.',
+            },
           },
           {
             id: "sp-sec11-u7-L3-T2",
@@ -761,6 +846,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Titan's atmosphere is 4 times denser than Earth's and its gravity is much weaker. Both make flying much easier.",
+            distractorExplanations: {
+              0: 'Titan has no gravity is incorrect; titan\'s atmosphere is 4 times denser than Earth\'s and its gravity is much weaker. Both make flying much easier.',
+              2: 'Titan\'s methane is lighter than air is incorrect; titan\'s atmosphere is 4 times denser than Earth\'s and its gravity is much weaker. Both make flying much easier.',
+              3: 'Titan has strong upward winds is incorrect; titan\'s atmosphere is 4 times denser than Earth\'s and its gravity is much weaker. Both make flying much easier.',
+            },
           },
           {
             id: "sp-sec11-u7-L3-Q6",
@@ -1029,6 +1119,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "The Drake equation gives an exact count of alien civilizations.",
             correctAnswer: false,
             explanation: "The Drake equation is a framework, not a calculator. Many of its factors are unknown, so results range wildly depending on assumptions.",
+            distractorExplanations: {
+              0: 'The Drake equation is a framework, not a calculator. Many of its factors are unknown, so results range wildly depending on assumptions.',
+            },
           },
           {
             id: "sp-sec11-u8-L1-Q2",
@@ -1056,6 +1149,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Thanks to Kepler and TESS, we now know that most stars have planets. This was one of the biggest unknowns when Drake wrote the equation.",
+            distractorExplanations: {
+              0: 'How long civilizations last is incorrect; thanks to Kepler and TESS, we now know that most stars have planets. This was one of the biggest unknowns when Drake wrote the equation.',
+              1: 'How often life develops intelligence is incorrect; thanks to Kepler and TESS, we now know that most stars have planets. This was one of the biggest unknowns when Drake wrote the equation.',
+              3: 'How often life begins on habitable planets is incorrect; thanks to Kepler and TESS, we now know that most stars have planets. This was one of the biggest unknowns when Drake wrote the equation.',
+            },
           },
           {
             id: "sp-sec11-u8-L1-Q4",
@@ -1083,6 +1181,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Even if many civilizations arise, they need to exist at the same time to detect each other. Short lifetimes mean fewer overlaps.",
+            distractorExplanations: {
+              0: 'It determines how fast civilizations travel is incorrect; even if many civilizations arise, they need to exist at the same time to detect each other. Short lifetimes mean fewer overlaps.',
+              2: 'It measures how far signals travel is incorrect; even if many civilizations arise, they need to exist at the same time to detect each other. Short lifetimes mean fewer overlaps.',
+              3: 'It counts the number of planets is incorrect; even if many civilizations arise, they need to exist at the same time to detect each other. Short lifetimes mean fewer overlaps.',
+            },
           },
           {
             id: "sp-sec11-u8-L1-Q6",
@@ -1090,6 +1193,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "We now know the value of every factor in the Drake equation.",
             correctAnswer: false,
             explanation: "We have good estimates for the first few factors (star formation, planets). But life origin, intelligence, and civilization lifetime remain deeply uncertain.",
+            distractorExplanations: {
+              0: 'We have good estimates for the first few factors (star formation, planets). But life origin, intelligence, and civilization lifetime remain deeply uncertain.',
+            },
           },
           {
             id: "sp-sec11-u8-L1-Q7",
@@ -1124,6 +1230,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "The Fermi paradox asks why we've found no evidence of extraterrestrial intelligence despite the galaxy's size and age.",
             correctAnswer: true,
             explanation: "The galaxy is over 13 billion years old with 100 billion stars. Even if civilizations are rare, the numbers suggest we should see some evidence.",
+            distractorExplanations: {
+              1: 'This statement is correct because the galaxy is over 13 billion years old with 100 billion stars. Even if civilizations are rare, the numbers suggest we should see some evidence.',
+            },
           },
           {
             id: "sp-sec11-u8-L2-Q2",
@@ -1161,6 +1270,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Great Filter suggests that somewhere between dead chemistry and galaxy-spanning civilization, there's a nearly impossible step that almost no species survives.",
+            distractorExplanations: {
+              0: 'A telescope that blocks noise from space is incorrect; the Great Filter suggests that somewhere between dead chemistry and galaxy-spanning civilization, there\'s a nearly impossible step that almost no species survives.',
+              2: 'A filter that separates habitable from non-habitable planets is incorrect; the Great Filter suggests that somewhere between dead chemistry and galaxy-spanning civilization, there\'s a nearly impossible step that almost no species survives.',
+              3: 'A government program that hides alien signals is incorrect; the Great Filter suggests that somewhere between dead chemistry and galaxy-spanning civilization, there\'s a nearly impossible step that almost no species survives.',
+            },
           },
           {
             id: "sp-sec11-u8-L2-T3",
@@ -1189,6 +1303,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If life arises easily, the Great Filter isn't at life's origin. That means the filter might be something civilizations face later, which is a more concerning possibility for humanity.",
+            distractorExplanations: {
+              0: 'It means Mars is habitable for humans is incorrect; if life arises easily, the Great Filter isn\'t at life\'s origin. That means the filter might be something civilizations face later, which is a more concerning possibility for humanity.',
+              2: 'It proves the Fermi paradox is wrong is incorrect; if life arises easily, the Great Filter isn\'t at life\'s origin. That means the filter might be something civilizations face later, which is a more concerning possibility for humanity.',
+              3: 'It means we\'ll soon find intelligent aliens is incorrect; if life arises easily, the Great Filter isn\'t at life\'s origin. That means the filter might be something civilizations face later, which is a more concerning possibility for humanity.',
+            },
           },
         ],
       },
@@ -1213,6 +1332,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "SETI searches for artificial signals using radio telescopes.",
             correctAnswer: true,
             explanation: "SETI primarily listens for narrow-band radio signals that couldn't be produced by natural processes.",
+            distractorExplanations: {
+              1: 'This statement is correct because sETI primarily listens for narrow-band radio signals that couldn\'t be produced by natural processes.',
+            },
           },
           {
             id: "sp-sec11-u8-L3-Q2",
@@ -1240,6 +1362,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Wow! signal was a one-time event that perfectly matched the expected profile of an alien signal. Despite decades of searching, it was never repeated.",
+            distractorExplanations: {
+              0: 'It was confirmed as an alien message is incorrect; the Wow! signal was a one-time event that perfectly matched the expected profile of an alien signal. Despite decades of searching, it was never repeated.',
+              2: 'It was traced to a military satellite is incorrect; the Wow! signal was a one-time event that perfectly matched the expected profile of an alien signal. Despite decades of searching, it was never repeated.',
+              3: 'It repeated every 24 hours for a year is incorrect; the Wow! signal was a one-time event that perfectly matched the expected profile of an alien signal. Despite decades of searching, it was never repeated.',
+            },
           },
           {
             id: "sp-sec11-u8-L3-Q4",
@@ -1253,6 +1380,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Natural sources produce broad-band radio noise. A narrow-band signal concentrated at one frequency is a hallmark of deliberate technology.",
+            distractorExplanations: {
+              0: 'They travel faster than other signals is incorrect; natural sources produce broad-band radio noise. A narrow-band signal concentrated at one frequency is a hallmark of deliberate technology.',
+              2: 'They\'re the cheapest to detect is incorrect; natural sources produce broad-band radio noise. A narrow-band signal concentrated at one frequency is a hallmark of deliberate technology.',
+              3: 'Aliens can only communicate using radio is incorrect; natural sources produce broad-band radio noise. A narrow-band signal concentrated at one frequency is a hallmark of deliberate technology.',
+            },
           },
           {
             id: "sp-sec11-u8-L3-T3",
@@ -1275,6 +1407,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "SETI has confirmed the detection of an alien signal.",
             correctAnswer: false,
             explanation: "Despite decades of searching, no confirmed alien signal has ever been detected. The search continues with better technology each year.",
+            distractorExplanations: {
+              0: 'Despite decades of searching, no confirmed alien signal has ever been detected. The search continues with better technology each year.',
+            },
           },
         ],
       },
@@ -1417,6 +1552,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "A biosignature is a sign in a planet's atmosphere that suggests life.",
             correctAnswer: true,
             explanation: "Biosignatures are chemical or physical markers that are best explained by biological processes.",
+            distractorExplanations: {
+              1: 'This statement is correct because biosignatures are chemical or physical markers that are best explained by biological processes.',
+            },
           },
           {
             id: "sp-sec11-u9-L1-Q2",
@@ -1430,6 +1568,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Oxygen and methane react with each other over time. Finding both together means something is continuously producing them, most likely life.",
+            distractorExplanations: {
+              0: 'Both gases are rare in the universe is incorrect; oxygen and methane react with each other over time. Finding both together means something is continuously producing them, most likely life.',
+              2: 'Only plants produce oxygen is incorrect; oxygen and methane react with each other over time. Finding both together means something is continuously producing them, most likely life.',
+              3: 'Methane is always biological in origin is incorrect; oxygen and methane react with each other over time. Finding both together means something is continuously producing them, most likely life.',
+            },
           },
           {
             id: "sp-sec11-u9-L1-T2",
@@ -1466,6 +1609,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Finding oxygen in an exoplanet atmosphere is definitive proof of life.",
             correctAnswer: false,
             explanation: "Oxygen can be produced abiotically by UV light splitting water molecules. Multiple biosignatures together make a stronger case.",
+            distractorExplanations: {
+              0: 'Oxygen can be produced abiotically by UV light splitting water molecules. Multiple biosignatures together make a stronger case.',
+            },
           },
           {
             id: "sp-sec11-u9-L1-Q6",
@@ -1479,6 +1625,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Any single gas might have an abiotic explanation. Finding oxygen AND methane together is much harder to explain without life.",
+            distractorExplanations: {
+              0: 'Each gas is too faint to detect alone is incorrect; any single gas might have an abiotic explanation. Finding oxygen AND methane together is much harder to explain without life.',
+              2: 'Telescopes can only detect gases in groups is incorrect; any single gas might have an abiotic explanation. Finding oxygen AND methane together is much harder to explain without life.',
+              3: 'Single gases don\'t exist in atmospheres is incorrect; any single gas might have an abiotic explanation. Finding oxygen AND methane together is much harder to explain without life.',
+            },
           },
         ],
       },
@@ -1503,6 +1654,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "JWST has detected carbon dioxide in an exoplanet atmosphere.",
             correctAnswer: true,
             explanation: "JWST detected CO2 in the atmosphere of WASP-39 b, a gas giant about 700 light-years away. It was the first clear detection of CO2 on an exoplanet.",
+            distractorExplanations: {
+              1: 'This statement is correct because jWST detected CO2 in the atmosphere of WASP-39 b, a gas giant about 700 light-years away. It was the first clear detection of CO2 on an exoplanet.',
+            },
           },
           {
             id: "sp-sec11-u9-L2-Q2",
@@ -1516,6 +1670,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Many molecules like CO2, methane, and water have strong absorption features in infrared wavelengths. JWST's infrared instruments are ideal for detecting them.",
+            distractorExplanations: {
+              0: 'Infrared is prettier than visible light is incorrect; many molecules like CO2, methane, and water have strong absorption features in infrared wavelengths. JWST\'s infrared instruments are ideal for detecting them.',
+              2: 'Infrared telescopes are cheaper to build is incorrect; many molecules like CO2, methane, and water have strong absorption features in infrared wavelengths. JWST\'s infrared instruments are ideal for detecting them.',
+              3: 'Stars only emit infrared light is incorrect; many molecules like CO2, methane, and water have strong absorption features in infrared wavelengths. JWST\'s infrared instruments are ideal for detecting them.',
+            },
           },
           {
             id: "sp-sec11-u9-L2-T2",
@@ -1557,6 +1716,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Small rocky planets have thinner atmospheres that absorb less starlight. The signal is much weaker than for puffy gas giants.",
+            distractorExplanations: {
+              0: 'Rocky planets don\'t have atmospheres is incorrect; small rocky planets have thinner atmospheres that absorb less starlight. The signal is much weaker than for puffy gas giants.',
+              2: 'JWST can only observe gas giants is incorrect; small rocky planets have thinner atmospheres that absorb less starlight. The signal is much weaker than for puffy gas giants.',
+              3: 'Rocky planets never transit their stars is incorrect; small rocky planets have thinner atmospheres that absorb less starlight. The signal is much weaker than for puffy gas giants.',
+            },
           },
           {
             id: "sp-sec11-u9-L2-Q6",
@@ -1564,6 +1728,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "JWST can easily detect biosignatures on Earth-sized exoplanets.",
             correctAnswer: false,
             explanation: "Detecting biosignatures on small rocky worlds is extremely challenging even for JWST. It requires many observations and may push beyond the telescope's capabilities.",
+            distractorExplanations: {
+              0: 'Detecting biosignatures on small rocky worlds is extremely challenging even for JWST. It requires many observations and may push beyond the telescope\'s capabilities.',
+            },
           },
         ],
       },
@@ -1587,6 +1754,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Future extremely large telescopes will have mirrors 30 to 40 meters wide.",
             correctAnswer: true,
             explanation: "The European ELT will have a 39-meter mirror. The GMT and TMT will be 25 and 30 meters respectively. These dwarf current telescopes.",
+            distractorExplanations: {
+              1: 'This statement is correct because the European ELT will have a 39-meter mirror. The GMT and TMT will be 25 and 30 meters respectively. These dwarf current telescopes.',
+            },
           },
           {
             id: "sp-sec11-u9-L3-Q2",
@@ -1600,6 +1770,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "ELTs will have enough resolution and light-gathering power to directly image and characterize rocky exoplanets around nearby stars.",
+            distractorExplanations: {
+              0: 'Travel to exoplanets is incorrect; eLTs will have enough resolution and light-gathering power to directly image and characterize rocky exoplanets around nearby stars.',
+              2: 'Send messages to alien civilizations is incorrect; eLTs will have enough resolution and light-gathering power to directly image and characterize rocky exoplanets around nearby stars.',
+              3: 'Create artificial stars is incorrect; eLTs will have enough resolution and light-gathering power to directly image and characterize rocky exoplanets around nearby stars.',
+            },
           },
           {
             id: "sp-sec11-u9-L3-T2",
@@ -1643,6 +1818,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A starshade precisely blocks the overwhelming starlight, allowing the faint light from orbiting planets to be detected by the telescope behind it.",
+            distractorExplanations: {
+              0: 'It amplifies the planet\'s light is incorrect; a starshade precisely blocks the overwhelming starlight, allowing the faint light from orbiting planets to be detected by the telescope behind it.',
+              2: 'It reflects starlight toward the planet is incorrect; a starshade precisely blocks the overwhelming starlight, allowing the faint light from orbiting planets to be detected by the telescope behind it.',
+              3: 'It creates a gravitational lens effect is incorrect; a starshade precisely blocks the overwhelming starlight, allowing the faint light from orbiting planets to be detected by the telescope behind it.',
+            },
           },
           {
             id: "sp-sec11-u9-L3-Q6",
@@ -1916,6 +2096,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "You have size from the transit. Radial velocity gives mass. Density (mass/volume) tells you if it's rocky or gaseous.",
+            distractorExplanations: {
+              1: 'Use direct imaging to photograph the surface is incorrect; you have size from the transit. Radial velocity gives mass. Density (mass/volume) tells you if it\'s rocky or gaseous.',
+              2: 'Use microlensing to measure its composition is incorrect; you have size from the transit. Radial velocity gives mass. Density (mass/volume) tells you if it\'s rocky or gaseous.',
+              3: 'Just wait for more transits to gather additional size data is incorrect; you have size from the transit. Radial velocity gives mass. Density (mass/volume) tells you if it\'s rocky or gaseous.',
+            },
           },
           {
             id: "sp-sec11-u10-L1-Q2",
@@ -1947,6 +2132,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Planets close to their star complete orbits quickly, transiting more frequently. More transits mean more chances to detect and confirm the planet.",
+            distractorExplanations: {
+              0: 'Short-period planets are larger is incorrect; planets close to their star complete orbits quickly, transiting more frequently. More transits mean more chances to detect and confirm the planet.',
+              2: 'They\'re always in the habitable zone is incorrect; planets close to their star complete orbits quickly, transiting more frequently. More transits mean more chances to detect and confirm the planet.',
+              3: 'They have thicker atmospheres is incorrect; planets close to their star complete orbits quickly, transiting more frequently. More transits mean more chances to detect and confirm the planet.',
+            },
           },
           {
             id: "sp-sec11-u10-L1-T2",
@@ -1968,6 +2158,9 @@ export const spaceSection11Part2: Unit[] = [
             question: "Combining transit and radial velocity lets us determine if a planet is rocky or gaseous.",
             correctAnswer: true,
             explanation: "Transit gives size, radial velocity gives mass. Density (mass divided by volume) reveals composition: rocky planets are denser than gas giants.",
+            distractorExplanations: {
+              1: 'This statement is correct because transit gives size, radial velocity gives mass. Density (mass divided by volume) reveals composition: rocky planets are denser than gas giants.',
+            },
           },
         ],
       },
@@ -1998,6 +2191,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Organic molecules and energy sources are the most direct evidence for habitability. This is what Cassini found in Enceladus's plumes.",
+            distractorExplanations: {
+              1: 'Measure the moon\'s distance from its planet is incorrect; organic molecules and energy sources are the most direct evidence for habitability. This is what Cassini found in Enceladus\'s plumes.',
+              2: 'Take photographs of the ice surface is incorrect; organic molecules and energy sources are the most direct evidence for habitability. This is what Cassini found in Enceladus\'s plumes.',
+              3: 'Count the number of vents visible is incorrect; organic molecules and energy sources are the most direct evidence for habitability. This is what Cassini found in Enceladus\'s plumes.',
+            },
           },
           {
             id: "sp-sec11-u10-L2-Q2",
@@ -2020,6 +2218,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Cassini flew through Enceladus's plumes and detected organic molecules, hydrogen, and silica nanoparticles, all signs of hydrothermal activity.",
+            distractorExplanations: {
+              0: 'Mars is incorrect; cassini flew through Enceladus\'s plumes and detected organic molecules, hydrogen, and silica nanoparticles, all signs of hydrothermal activity.',
+              1: 'Europa is incorrect; cassini flew through Enceladus\'s plumes and detected organic molecules, hydrogen, and silica nanoparticles, all signs of hydrothermal activity.',
+              3: 'Titan is incorrect; cassini flew through Enceladus\'s plumes and detected organic molecules, hydrogen, and silica nanoparticles, all signs of hydrothermal activity.',
+            },
           },
           {
             id: "sp-sec11-u10-L2-Q4",
@@ -2056,6 +2259,11 @@ export const spaceSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Every discovery in this section feeds into the biggest question: whether life exists beyond Earth. It's the driving force behind exoplanet research.",
+            distractorExplanations: {
+              0: 'How many stars are in the galaxy? is incorrect; every discovery in this section feeds into the biggest question: whether life exists beyond Earth. It\'s the driving force behind exoplanet research.',
+              1: 'What is the universe made of? is incorrect; every discovery in this section feeds into the biggest question: whether life exists beyond Earth. It\'s the driving force behind exoplanet research.',
+              3: 'How old is the Earth? is incorrect; every discovery in this section feeds into the biggest question: whether life exists beyond Earth. It\'s the driving force behind exoplanet research.',
+            },
           },
         ],
       },

@@ -50,6 +50,9 @@ export const unit6: Unit = {
  question: "Investing means putting your money into things that can grow in value over time.",
  correctAnswer: true,
  explanation: "That's exactly what investing is. You put money to work so it grows faster than inflation.",
+ distractorExplanations: {
+   1: 'That\'s exactly what investing is. You put money to work so it grows faster than inflation',
+ },
  },
  {
  id: "pf-u6-L1-Q1",
@@ -57,6 +60,9 @@ export const unit6: Unit = {
  question: "If inflation is 3% and your savings account earns 0.5%, your money is growing in real terms.",
  correctAnswer: false,
  explanation: "Not quite. You're actually losing 2.5% of purchasing power per year. Your balance looks the same, but it buys less. That's the inflation trap.",
+ distractorExplanations: {
+   0: 'You\'re actually losing 2.5% of purchasing power per year',
+ },
  },
  {
  id: "pf-u6-L1-Q2",
@@ -81,6 +87,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "The core issue is math: if inflation is 3% and your savings earns 0.5%, you're losing ground every year. Fees and taxes make it worse, but the interest-vs-inflation gap is the real culprit.",
+ distractorExplanations: {
+   0: 'The core issue is math: if inflation is 3% and your savings earns 0.5%, you\'re losing ground every year',
+   2: 'The core issue is math: if inflation is 3% and your savings earns 0.5%, you\'re losing ground every year',
+   3: 'The core issue is math: if inflation is 3% and your savings earns 0.5%, you\'re losing ground every year',
+ },
  },
  {
  id: "pf-u6-L1-Q4",
@@ -103,6 +114,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Your balance grew to $10,511, but you'd need $13,439 to buy the same stuff. That's a real loss of nearly $3,000 in purchasing power. The number in your account went up, but what it can buy went down. This is why just 'saving' isn't enough.",
+ distractorExplanations: {
+   0: 'Your balance grew to $10,511, but you\'d need $13,439 to buy the same stuff',
+   2: 'Your balance grew to $10,511, but you\'d need $13,439 to buy the same stuff',
+   3: 'Your balance grew to $10,511, but you\'d need $13,439 to buy the same stuff',
+ },
  },
  {
  id: "pf-u6-L1-Q6",
@@ -134,6 +150,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 0,
  explanation: "All great reasons, but beating inflation is the foundational one. If your money can't outpace rising prices, every other financial goal becomes harder. Investing to beat inflation is the base layer, retirement, wealth, and compound interest all build on top of it.",
+ distractorExplanations: {
+   1: 'All great reasons, but beating inflation is the foundational one',
+   2: 'All great reasons, but beating inflation is the foundational one',
+   3: 'All great reasons, but beating inflation is the foundational one',
+ },
  },
  ],
  },
@@ -166,6 +187,9 @@ export const unit6: Unit = {
  question: "Compound interest means you earn interest on your interest, not just your original amount.",
  correctAnswer: true,
  explanation: "That's it! Your interest earns its own interest, creating a snowball effect that grows faster over time.",
+ distractorExplanations: {
+   1: 'Your interest earns its own interest, creating a snowball effect that grows faster over time',
+ },
  },
  {
  id: "pf-u6-L2-Q1",
@@ -179,6 +203,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "That's the magic of compound interest, in year 2, you earn 8% on the full $5,400, not just the original $5,000. Your interest earns interest. That extra $32 might seem small now, but over decades it becomes massive.",
+ distractorExplanations: {
+   0: 'That\'s the magic of compound interest, in year 2, you earn 8% on the full $5,400, not just the original $5,000',
+   2: 'That\'s the magic of compound interest, in year 2, you earn 8% on the full $5,400, not just the original $5,000',
+   3: 'That\'s the magic of compound interest, in year 2, you earn 8% on the full $5,400, not just the original $5,000',
+ },
  },
  {
  id: "pf-u6-L2-Q2",
@@ -221,6 +250,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 0,
  explanation: "Alex's $10,000 compounds for 40 years to ~$217,000. Jordan's compounds for 30 years to ~$100,600. Alex has more than double, from the exact same $10,000! Those first 10 years of compounding make all the difference. Time is literally money.",
+ distractorExplanations: {
+   1: 'Alex\'s $10,000 compounds for 40 years to ~$217,000',
+   2: 'Alex\'s $10,000 compounds for 40 years to ~$217,000',
+   3: 'Alex\'s $10,000 compounds for 40 years to ~$217,000',
+ },
  },
  {
  id: "pf-u6-L2-Q6",
@@ -237,6 +271,9 @@ export const unit6: Unit = {
  question: "If you wait 10 years to start investing, you can make up for lost time by simply investing twice as much money.",
  correctAnswer: false,
  explanation: "Not quite. Because of compounding, those early years are the most powerful. A 10-year delay often means you'd need to invest 2-3x more to reach the same end result. Time > money when it comes to compound growth.",
+ distractorExplanations: {
+   0: 'Because of compounding, those early years are the most powerful',
+ },
  },
  {
  id: "pf-u6-L2-Q8",
@@ -289,6 +326,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "A share of stock is literal ownership. You own a tiny fraction of the company, its assets, earnings, and future growth. It's not a loan, not a bet, and sadly not a car discount.",
+ distractorExplanations: {
+   0: 'A share of stock is literal ownership',
+   2: 'A share of stock is literal ownership',
+   3: 'A share of stock is literal ownership',
+ },
  },
  {
  id: "pf-u6-L3-Q2",
@@ -305,6 +347,9 @@ export const unit6: Unit = {
  question: "You need at least $1,000 to buy your first stock.",
  correctAnswer: false,
  explanation: "Not anymore! Most modern brokerages offer fractional shares, meaning you can invest as little as $1. You can own a piece of a $500 stock for just $5. The 'you need lots of money to invest' myth is dead.",
+ distractorExplanations: {
+   0: 'Not anymore! Most modern brokerages offer fractional shares, meaning you can invest as little as $1',
+ },
  },
  {
  id: "pf-u6-L3-Q4",
@@ -336,6 +381,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Capital gains: ($75 - $50) x 10 shares = $250. Dividends: $2 x 10 shares = $20. Total return: $270. Always count both sources of return. Your shares are worth $750, but your profit (return) is $270 on the $500 invested.",
+ distractorExplanations: {
+   0: 'Capital gains: ($75 - $50) x 10 shares = $250',
+   2: 'Capital gains: ($75 - $50) x 10 shares = $250',
+   3: 'Capital gains: ($75 - $50) x 10 shares = $250',
+ },
  },
  {
  id: "pf-u6-L3-Q7",
@@ -358,6 +408,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Start now! $50 in a fractional share of an index fund gets the compounding clock ticking immediately. Waiting is the most expensive mistake in investing. Penny stocks are gambling, not investing. And a savings account won't build wealth.",
+ distractorExplanations: {
+   0: 'Start now! $50 in a fractional share of an index fund gets the compounding clock ticking immediately',
+   2: 'Start now! $50 in a fractional share of an index fund gets the compounding clock ticking immediately',
+   3: 'Start now! $50 in a fractional share of an index fund gets the compounding clock ticking immediately',
+ },
  },
  ],
  },
@@ -396,6 +451,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Stocks = ownership. Bonds = lending. When you buy Apple stock, you own a piece of Apple. When you buy an Apple bond, you're lending Apple money and they owe you back plus interest.",
+ distractorExplanations: {
+   0: 'Stocks = ownership. Bonds = lending',
+   2: 'Stocks = ownership. Bonds = lending',
+   3: 'Stocks = ownership. Bonds = lending',
+ },
  },
  {
  id: "pf-u6-L4-Q2",
@@ -428,6 +488,9 @@ export const unit6: Unit = {
  question: "Bonds are completely risk-free investments.",
  correctAnswer: false,
  explanation: "Bonds are generally SAFER than stocks, but not risk-free. Companies can default (go bankrupt and not pay you back). Even government bonds carry inflation risk, if inflation outpaces your interest rate, you lose purchasing power. Lower risk doesn't mean no risk.",
+ distractorExplanations: {
+   0: 'Bonds are generally SAFER than stocks, but not risk-free',
+ },
  },
  {
  id: "pf-u6-L4-Q6",
@@ -451,6 +514,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "This is the risk-return tradeoff in action. A startup is much more likely to go bankrupt than the U.S. government. To convince you to take that risk, they have to offer a higher interest rate. More risk = more potential reward (and more potential loss).",
+ distractorExplanations: {
+   0: 'This is the risk-return tradeoff in action',
+   2: 'This is the risk-return tradeoff in action',
+   3: 'This is the risk-return tradeoff in action',
+ },
  },
  {
  id: "pf-u6-L4-Q8",
@@ -506,6 +574,9 @@ export const unit6: Unit = {
  question: "Over a 15-year period, most professional fund managers outperform a simple S&P 500 index fund.",
  correctAnswer: false,
  explanation: "The opposite is true! About 90% of actively managed funds underperform the S&P 500 over 15+ years. The pros can't consistently beat the market, and they charge high fees for trying. Index funds win by not trying to be clever.",
+ distractorExplanations: {
+   0: 'Is true! About 90% of actively managed funds underperform the S&P 500 over 15+ years',
+ },
  },
  {
  id: "pf-u6-L5-Q2",
@@ -530,6 +601,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "An S&P 500 index fund owns shares of ALL 500 companies in the index. You get instant diversification. Apple, Microsoft, Amazon, Johnson & Johnson, JPMorgan, and 495 more. One purchase, 500 companies.",
+ distractorExplanations: {
+   0: 'An S&P 500 index fund owns shares of ALL 500 companies in the index',
+   2: 'An S&P 500 index fund owns shares of ALL 500 companies in the index',
+   3: 'An S&P 500 index fund owns shares of ALL 500 companies in the index',
+ },
  },
  {
  id: "pf-u6-L5-Q4",
@@ -552,6 +628,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 2,
  explanation: "Option A grows to about $434,000. Option B grows to about $655,000. That's roughly $220,000 MORE from the index fund, all because of lower fees. The managed fund would need to consistently beat the market by 1.5% just to break even, and 90% of them can't even match it.",
+ distractorExplanations: {
+   0: 'Option A grows to about $434,000. Option B grows to about $655,000',
+   1: 'Option A grows to about $434,000. Option B grows to about $655,000',
+   3: 'Option A grows to about $434,000. Option B grows to about $655,000',
+ },
  },
  {
  id: "pf-u6-L5-Q6",
@@ -583,6 +664,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 2,
  explanation: "An S&P 500 index fund is the perfect starting point. Instant diversification, rock-bottom fees, no expertise needed. Reading is great but shouldn't delay action. A single stock is risky. And a financial advisor's fees will eat into returns for a simple portfolio.",
+ distractorExplanations: {
+   0: 'An S&P 500 index fund is the perfect starting point',
+   1: 'An S&P 500 index fund is the perfect starting point',
+   3: 'An S&P 500 index fund is the perfect starting point',
+ },
  },
  ],
  },
@@ -608,6 +694,9 @@ export const unit6: Unit = {
  question: "You can buy and sell an ETF at any time during market hours, just like a stock.",
  correctAnswer: true,
  explanation: "Exactly right. ETFs trade on stock exchanges throughout the day. You can buy at 10:15 AM, sell at 2:30 PM, the price fluctuates in real-time. Mutual funds, by contrast, only execute trades at end of day.",
+ distractorExplanations: {
+   1: 'ETFs trade on stock exchanges throughout the day',
+ },
  },
  {
  id: "pf-u6-L6-Q2",
@@ -630,6 +719,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Mutual funds let you invest exact dollar amounts ($100, $50, whatever you want). With ETFs, you traditionally had to buy whole shares at whatever the price was. Many brokerages now offer fractional ETF shares, but mutual funds still make exact-dollar auto-investing simpler.",
+ distractorExplanations: {
+   0: 'Mutual funds let you invest exact dollar amounts ($100, $50, whatever you want)',
+   2: 'Mutual funds let you invest exact dollar amounts ($100, $50, whatever you want)',
+   3: 'Mutual funds let you invest exact dollar amounts ($100, $50, whatever you want)',
+ },
  },
  {
  id: "pf-u6-L6-Q4",
@@ -675,6 +769,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Use both! Workplace plans often only offer mutual funds, and that's perfectly fine. Use your personal brokerage for ETFs if you want more flexibility. The worst choice is waiting.",
+ distractorExplanations: {
+   0: 'Use both! Workplace plans often only offer mutual funds, and that\'s perfectly fine',
+   2: 'Use both! Workplace plans often only offer mutual funds, and that\'s perfectly fine',
+   3: 'Use both! Workplace plans often only offer mutual funds, and that\'s perfectly fine',
+ },
  },
  {
  id: "pf-u6-L6-Q8",
@@ -725,6 +824,9 @@ export const unit6: Unit = {
  question: "A 25-year-old saving for retirement should generally take on more investment risk than a 60-year-old.",
  correctAnswer: true,
  explanation: "Absolutely. At 25, you have 35-40 years for the market to recover from any crashes. At 60, you might need that money in 5 years, so you can't afford a big drop right before retirement. Time is the best risk buffer.",
+ distractorExplanations: {
+   1: 'At 25, you have 35-40 years for the market to recover from any crashes',
+ },
  },
  {
  id: "pf-u6-L7-Q3",
@@ -739,6 +841,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "If a market drop causes that level of distress, your portfolio is likely too risky for your emotional tolerance. The solution isn't to sell during the crash (worst timing), but to adjust your allocation during calm times so future drops don't trigger panic. Know yourself.",
+ distractorExplanations: {
+   0: 'If a market drop causes that level of distress, your portfolio is likely too risky for your emotional tolerance',
+   2: 'If a market drop causes that level of distress, your portfolio is likely too risky for your emotional tolerance',
+   3: 'If a market drop causes that level of distress, your portfolio is likely too risky for your emotional tolerance',
+ },
  },
  {
  id: "pf-u6-L7-Q4",
@@ -761,6 +868,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Diversification means not putting all your eggs in one basket. By spreading money across stocks, bonds, and different sectors/regions, you reduce the impact of any single investment tanking. If tech crashes but healthcare rises, your diversified portfolio is cushioned.",
+ distractorExplanations: {
+   0: 'Diversification means not putting all your eggs in one basket',
+   2: 'Diversification means not putting all your eggs in one basket',
+   3: 'Diversification means not putting all your eggs in one basket',
+ },
  },
  {
  id: "pf-u6-L7-Q6",
@@ -794,6 +906,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 0,
  explanation: "A broad index fund gives you instant diversification across hundreds of companies in one purchase, the simplest, most effective risk management for beginners. Cash reserves help but don't grow. News-watching creates anxiety and tempts bad timing. Blue chips are fine but still concentrate in one sector or style.",
+ distractorExplanations: {
+   1: 'A broad index fund gives you instant diversification across hundreds of companies in one purchase, the simplest, most effective risk management for...',
+   2: 'A broad index fund gives you instant diversification across hundreds of companies in one purchase, the simplest, most effective risk management for...',
+   3: 'A broad index fund gives you instant diversification across hundreds of companies in one purchase, the simplest, most effective risk management for...',
+ },
  },
  ],
  },
@@ -840,6 +957,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 0,
  explanation: "All major brokerages are free to open, most have no minimum balance, and they charge $0 commissions on stock and ETF trades. The barriers to investing have never been lower. No excuses!",
+ distractorExplanations: {
+   1: 'All major brokerages are free to open, most have no minimum balance, and they charge $0 commissions on stock and ETF trades',
+   2: 'All major brokerages are free to open, most have no minimum balance, and they charge $0 commissions on stock and ETF trades',
+   3: 'All major brokerages are free to open, most have no minimum balance, and they charge $0 commissions on stock and ETF trades',
+ },
  },
  {
  id: "pf-u6-L8-Q3",
@@ -856,6 +978,9 @@ export const unit6: Unit = {
  question: "You need to be an expert in stock analysis before opening a brokerage account.",
  correctAnswer: false,
  explanation: "Not quite. You can open an account and buy a simple index fund with zero expertise. You don't need to analyze stocks, read earnings reports, or understand charts. Buy an S&P 500 index fund and you're set. Start learning while your money is already working.",
+ distractorExplanations: {
+   0: 'You can open an account and buy a simple index fund with zero expertise',
+ },
  },
  {
  id: "pf-u6-L8-Q5",
@@ -887,6 +1012,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Put the full $500 into a broad market index fund. Done. You're now diversified across 500+ companies, paying almost nothing in fees, and your money is growing. Don't let analysis paralysis keep your money sitting in cash, time in the market beats timing the market.",
+ distractorExplanations: {
+   0: 'Put the full $500 into a broad market index fund',
+   2: 'Put the full $500 into a broad market index fund',
+   3: 'Put the full $500 into a broad market index fund',
+ },
  },
  {
  id: "pf-u6-L8-Q8",
@@ -932,6 +1062,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Keep investing your normal amount! That's the whole point of DCA. When prices drop, your fixed dollar amount buys MORE shares. Those extra shares purchased during dips are what supercharge your returns when the market recovers. Stay the course.",
+ distractorExplanations: {
+   0: 'Keep investing your normal amount! That\'s the whole point of DCA',
+   2: 'Keep investing your normal amount! That\'s the whole point of DCA',
+   3: 'Keep investing your normal amount! That\'s the whole point of DCA',
+ },
  },
  {
  id: "pf-u6-L9-Q2",
@@ -954,6 +1089,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Your average cost is $900 \u{00F7} 37 shares = $24.32. Notice this is LOWER than the simple average of the three prices ($25). That's DCA's magic, you automatically buy more shares when prices are low, pulling your average cost down.",
+ distractorExplanations: {
+   0: 'Your average cost is $900 \u{00F7} 37 shares = $24.32',
+   2: 'Your average cost is $900 \u{00F7} 37 shares = $24.32',
+   3: 'Your average cost is $900 \u{00F7} 37 shares = $24.32',
+ },
  },
  {
  id: "pf-u6-L9-Q4",
@@ -961,6 +1101,9 @@ export const unit6: Unit = {
  question: "Dollar-cost averaging guarantees you'll make a profit on your investments.",
  correctAnswer: false,
  explanation: "DCA doesn't guarantee profits, nothing does. If the market goes down and stays down, you'll lose money regardless. What DCA does is remove the risk of terrible timing (investing your entire lump sum right before a crash) and reduce the emotional rollercoaster. It's a risk management strategy, not a profit guarantee.",
+ distractorExplanations: {
+   0: 'DCA doesn\'t guarantee profits, nothing does',
+ },
  },
  {
  id: "pf-u6-L9-Q5",
@@ -1000,6 +1143,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "For a nervous investor, DCA over 12 months is the best balance of getting money invested while reducing the anxiety of a lump sum. Technically, lump sum investing has a slight historical edge, but the emotional comfort of DCA means they're more likely to actually follow through. The worst outcome is keeping it in savings out of fear.",
+ distractorExplanations: {
+   0: 'For a nervous investor, DCA over 12 months is the best balance of getting money invested while reducing the anxiety of a lump sum',
+   2: 'For a nervous investor, DCA over 12 months is the best balance of getting money invested while reducing the anxiety of a lump sum',
+   3: 'For a nervous investor, DCA over 12 months is the best balance of getting money invested while reducing the anxiety of a lump sum',
+ },
  },
  ],
  },
@@ -1049,6 +1197,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 2,
  explanation: "The market fully recovered from the COVID crash in about 5 months, one of the fastest recoveries in history. By August 2020, the S&P 500 had already hit new all-time highs. Anyone who panic-sold in March locked in losses while those who held (or bought more) were rewarded.",
+ distractorExplanations: {
+   0: 'The market fully recovered from the COVID crash in about 5 months, one of the fastest recoveries in history',
+   1: 'The market fully recovered from the COVID crash in about 5 months, one of the fastest recoveries in history',
+   3: 'The market fully recovered from the COVID crash in about 5 months, one of the fastest recoveries in history',
+ },
  },
  {
  id: "pf-u6-L10-Q3",
@@ -1056,6 +1209,9 @@ export const unit6: Unit = {
  question: "Historically, the stock market has always eventually recovered from every crash and gone on to new all-time highs.",
  correctAnswer: true,
  explanation: "100% true for the U.S. stock market. The Great Depression, 1987 crash, dot-com bubble, 2008 crisis, COVID, every single time, the market recovered and reached new highs. Past performance doesn't guarantee the future, but the track record over 100+ years is remarkably consistent.",
+ distractorExplanations: {
+   1: '100% true for the U.S. stock market',
+ },
  },
  {
  id: "pf-u6-L10-Q4",
@@ -1079,6 +1235,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 2,
  explanation: "Your friend locked in a $17,000 loss. Within 5 months, the market fully recovered. If you held your $50,000 portfolio, it was worth $50,000+ again by August 2020, and much more by 2021. Doing nothing (or better yet, buying more) was the winning move. 'This time is different' has been said before every crash. It never is.",
+ distractorExplanations: {
+   0: 'Your friend locked in a $17,000 loss',
+   1: 'Your friend locked in a $17,000 loss',
+   3: 'Your friend locked in a $17,000 loss',
+ },
  },
  {
  id: "pf-u6-L10-Q6",
@@ -1141,6 +1302,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Dividends are portions of a company's profits shared with shareholders. It's the company saying 'hey, we made money, here's your cut.' Not all companies pay dividends, but those that do typically pay quarterly.",
+ distractorExplanations: {
+   0: 'Dividends are portions of a company\'s profits shared with shareholders',
+   2: 'Dividends are portions of a company\'s profits shared with shareholders',
+   3: 'Dividends are portions of a company\'s profits shared with shareholders',
+ },
  },
  {
  id: "pf-u6-L11-Q2",
@@ -1183,6 +1349,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "$3 x 200 shares = $600 in annual dividends. At $60/share, that buys 10 new shares. Next year you'll have 210 shares earning dividends, which buys even more shares. This is the dividend reinvestment snowball, more shares = more dividends = more shares.",
+ distractorExplanations: {
+   0: '$3 x 200 shares = $600 in annual dividends',
+   2: '$3 x 200 shares = $600 in annual dividends',
+   3: '$3 x 200 shares = $600 in annual dividends',
+ },
  },
  {
  id: "pf-u6-L11-Q6",
@@ -1190,6 +1361,9 @@ export const unit6: Unit = {
  question: "A stock with a very high dividend yield (like 12%) is always a great investment.",
  correctAnswer: false,
  explanation: "Be careful! Extremely high yields can be a warning sign. The yield might be high because the stock price crashed (yield = dividend / price). A company in trouble might cut its dividend soon. Yields above 6-7% deserve extra scrutiny. Sustainable, growing dividends matter more than a sky-high yield.",
+ distractorExplanations: {
+   0: 'Be careful! Extremely high yields can be a warning sign',
+ },
  },
  {
  id: "pf-u6-L11-Q7",
@@ -1221,6 +1395,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "While all benefits are real, reinvesting dividends to create compound growth is the most powerful long-term advantage. It's the snowball effect, dividends buy shares, which earn more dividends, which buy more shares. Over 30+ years, dividend reinvestment can account for 40%+ of total stock market returns.",
+ distractorExplanations: {
+   0: 'While all benefits are real, reinvesting dividends to create compound growth is the most powerful long-term advantage',
+   2: 'While all benefits are real, reinvesting dividends to create compound growth is the most powerful long-term advantage',
+   3: 'While all benefits are real, reinvesting dividends to create compound growth is the most powerful long-term advantage',
+ },
  },
  ],
  },
@@ -1264,6 +1443,9 @@ export const unit6: Unit = {
  question: "Checking your portfolio daily and making frequent adjustments typically leads to better investment returns.",
  correctAnswer: false,
  explanation: "The opposite is true. Studies consistently show that the more frequently investors check their portfolios and trade, the worse their returns. It triggers emotional decisions, selling when things look scary, buying when things look exciting. The best returns come from patience and inaction.",
+ distractorExplanations: {
+   0: 'Is true. Studies consistently show that the more frequently investors check their portfolios and trade, the worse their returns',
+ },
  },
  {
  id: "pf-u6-L12-Q3",
@@ -1278,6 +1460,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 2,
  explanation: "With 25+ years ahead, keep investing. Nobody can consistently predict crashes. If you sell and the market goes up another 30% before the 'crash,' you've lost huge gains. Time in the market beats timing the market. Studies show that even if you invested at the absolute worst time each year, you'd still build massive wealth over decades.",
+ distractorExplanations: {
+   0: 'With 25+ years ahead, keep investing',
+   1: 'With 25+ years ahead, keep investing',
+   3: 'With 25+ years ahead, keep investing',
+ },
  },
  {
  id: "pf-u6-L12-Q4",
@@ -1340,6 +1527,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 2,
  explanation: "You've already done the hard part! You're investing early, investing consistently, investing in a low-cost index fund, and you've committed not to panic-sell. The best next step is genuinely to do nothing. Live your life, focus on your career, enjoy your 20s and 30s. Your portfolio will quietly do the rest. That's the beauty of set-it-and-forget-it investing.",
+ distractorExplanations: {
+   0: 'You\'ve already done the hard part! You\'re investing early, investing consistently, investing in a low-cost index fund, and you\'ve committed not to ...',
+   1: 'You\'ve already done the hard part! You\'re investing early, investing consistently, investing in a low-cost index fund, and you\'ve committed not to ...',
+   3: 'You\'ve already done the hard part! You\'re investing early, investing consistently, investing in a low-cost index fund, and you\'ve committed not to ...',
+ },
  },
  {
  id: "pf-u6-L12-Q10",
@@ -1353,6 +1545,11 @@ export const unit6: Unit = {
  ],
  correctIndex: 1,
  explanation: "Start early (time is everything), invest consistently (DCA removes emotion), use index funds (low fees, instant diversification), and leave it alone (patience beats activity). That one sentence is worth more than a thousand hours of stock analysis. You now know more about building wealth than most people ever learn. Now go do it!",
+ distractorExplanations: {
+   0: 'Start early (time is everything), invest consistently (DCA removes emotion), use index funds (low fees, instant diversification), and leave it alon...',
+   2: 'Start early (time is everything), invest consistently (DCA removes emotion), use index funds (low fees, instant diversification), and leave it alon...',
+   3: 'Start early (time is everything), invest consistently (DCA removes emotion), use index funds (low fees, instant diversification), and leave it alon...',
+ },
  },
  ],
  },

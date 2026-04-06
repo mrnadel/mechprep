@@ -34,6 +34,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Stars are mainly made of hydrogen and helium.",
             correctAnswer: true,
             explanation: "About 98% of a typical star's mass is hydrogen and helium. Heavier elements make up only a tiny fraction.",
+            distractorExplanations: {
+              1: 'About 98% of a typical star\'s mass is hydrogen and helium.',
+            },
           },
           {
             id: "sp-sec5-u1-L1-Q2",
@@ -47,6 +50,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gravity pulls all the star's gas inward. Without gravity, the hot gas would fly apart into space.",
+            distractorExplanations: {
+              0: 'Magnetic force is incorrect; gravity pulls all the star\'s gas inward.',
+              2: 'Chemical bonds is incorrect; gravity pulls all the star\'s gas inward.',
+              3: 'Electric charge is incorrect; gravity pulls all the star\'s gas inward.',
+            },
           },
           {
             id: "sp-sec5-u1-L1-T2",
@@ -74,6 +82,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Only the core is hot and dense enough for fusion. Temperatures there reach 15 million degrees or more.",
+            distractorExplanations: {
+              0: 'On the star\'s surface is incorrect; only the core is hot and dense enough for fusion.',
+              1: 'In the outer atmosphere is incorrect; only the core is hot and dense enough for fusion.',
+              3: 'In the magnetic field is incorrect; only the core is hot and dense enough for fusion.',
+            },
           },
           {
             id: "sp-sec5-u1-L1-T3",
@@ -88,6 +101,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Stars shine because they're on fire like a giant campfire.",
             correctAnswer: false,
             explanation: "Stars don't use combustion. They produce energy through nuclear fusion, a completely different and far more powerful process.",
+            distractorExplanations: {
+              0: 'Stars don\'t use combustion.',
+            },
           },
           {
             id: "sp-sec5-u1-L1-Q6",
@@ -120,6 +136,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "In stellar fusion, four hydrogen nuclei combine to form one helium nucleus.",
             correctAnswer: true,
             explanation: "This is the basic fusion reaction in Sun-like stars. Four protons fuse step by step into one helium-4 nucleus.",
+            distractorExplanations: {
+              1: 'This is the basic fusion reaction in Sun-like stars.',
+            },
           },
           {
             id: "sp-sec5-u1-L2-Q2",
@@ -133,6 +152,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Einstein's famous equation E=mc2 explains this. A tiny amount of mass converts into an enormous amount of energy.",
+            distractorExplanations: {
+              0: 'It disappears completely is incorrect; einstein\'s famous equation E=mc2 explains this.',
+              2: 'It becomes dark matter is incorrect; einstein\'s famous equation E=mc2 explains this.',
+              3: 'It floats away as gas is incorrect; einstein\'s famous equation E=mc2 explains this.',
+            },
           },
           {
             id: "sp-sec5-u1-L2-T2",
@@ -161,6 +185,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Einstein's E=mc2 shows that mass and energy are interchangeable. Even a tiny mass produces enormous energy because c (speed of light) is huge.",
+            distractorExplanations: {
+              0: 'F = ma is incorrect; einstein\'s E=mc2 shows that mass and energy are interchangeable.',
+              2: 'PV = nRT is incorrect; einstein\'s E=mc2 shows that mass and energy are interchangeable.',
+              3: 'V = IR is incorrect; einstein\'s E=mc2 shows that mass and energy are interchangeable.',
+            },
           },
           {
             id: "sp-sec5-u1-L2-T3",
@@ -174,6 +203,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Protons repel each other because they have opposite charges.",
             correctAnswer: false,
             explanation: "Protons have the same positive charge, so they repel each other. Extreme heat gives them enough speed to overcome this electrical repulsion.",
+            distractorExplanations: {
+              0: 'Protons have the same positive charge, so they repel each other.',
+            },
           },
           {
             id: "sp-sec5-u1-L2-Q6",
@@ -222,6 +254,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Photons bounce off particles billions of times inside the Sun. This random walk takes roughly 100,000 to 200,000 years.",
+            distractorExplanations: {
+              0: 'About 8 minutes is incorrect; photons bounce off particles billions of times inside the Sun.',
+              1: 'About 1 year is incorrect; photons bounce off particles billions of times inside the Sun.',
+              3: 'Less than a second is incorrect; photons bounce off particles billions of times inside the Sun.',
+            },
           },
           {
             id: "sp-sec5-u1-L3-Q2",
@@ -229,6 +266,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Light from the Sun's core travels in a straight line to the surface.",
             correctAnswer: false,
             explanation: "Photons constantly bounce off gas particles in a random zigzag path. This is why the journey takes so long despite light's incredible speed.",
+            distractorExplanations: {
+              0: 'Photons constantly bounce off gas particles in a random zigzag path.',
+            },
           },
           {
             id: "sp-sec5-u1-L3-T2",
@@ -258,6 +298,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Convection is the physical movement of hot gas upward and cool gas downward. It works like boiling water in a pot.",
+            distractorExplanations: {
+              0: 'Nuclear reactions in the core is incorrect; convection is the physical movement of hot gas upward and cool gas downward.',
+              1: 'Light bouncing off particles is incorrect; convection is the physical movement of hot gas upward and cool gas downward.',
+              3: 'Magnetic field lines twisting is incorrect; convection is the physical movement of hot gas upward and cool gas downward.',
+            },
           },
           {
             id: "sp-sec5-u1-L3-T3",
@@ -314,6 +359,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "In a stable star, gravity and fusion pressure are balanced.",
             correctAnswer: true,
             explanation: "This balance, called hydrostatic equilibrium, keeps the star at a steady size. If one force wins, the star shrinks or expands.",
+            distractorExplanations: {
+              1: 'This balance, called hydrostatic equilibrium, keeps the star at a steady size.',
+            },
           },
           {
             id: "sp-sec5-u1-L4-Q2",
@@ -327,6 +375,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without fusion pressure pushing outward, gravity would be unopposed. The star's core would collapse inward.",
+            distractorExplanations: {
+              0: 'Nothing would change is incorrect; without fusion pressure pushing outward, gravity would be unopposed.',
+              1: 'The star would expand rapidly is incorrect; without fusion pressure pushing outward, gravity would be unopposed.',
+              3: 'The star would start spinning faster is incorrect; without fusion pressure pushing outward, gravity would be unopposed.',
+            },
           },
           {
             id: "sp-sec5-u1-L4-T2",
@@ -381,6 +434,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A shrinking, cooling star suggests fusion is weakening. Gravity is slowly winning the battle as fuel runs low.",
+            distractorExplanations: {
+              0: 'Fusion pressure is winning over gravity is incorrect; a shrinking, cooling star suggests fusion is weakening.',
+              2: 'The star is just beginning its life is incorrect; a shrinking, cooling star suggests fusion is weakening.',
+              3: 'The star has too much hydrogen fuel is incorrect; a shrinking, cooling star suggests fusion is weakening.',
+            },
           },
         ],
       },
@@ -537,6 +595,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Stars form inside clouds of gas and dust called nebulae.",
             correctAnswer: true,
             explanation: "Nebulae provide the raw material for star formation. Gravity pulls the gas and dust together to create new stars.",
+            distractorExplanations: {
+              1: 'Nebulae provide the raw material for star formation.',
+            },
           },
           {
             id: "sp-sec5-u2-L1-Q2",
@@ -550,6 +611,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Nebulae are mostly hydrogen gas with traces of helium and tiny dust grains. This is the same material that makes up stars.",
+            distractorExplanations: {
+              0: 'Solid rock and ice is incorrect; nebulae are mostly hydrogen gas with traces of helium and tiny dust grains.',
+              2: 'Liquid metals is incorrect; nebulae are mostly hydrogen gas with traces of helium and tiny dust grains.',
+              3: 'Pure helium is incorrect; nebulae are mostly hydrogen gas with traces of helium and tiny dust grains.',
+            },
           },
           {
             id: "sp-sec5-u2-L1-T2",
@@ -563,6 +629,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Nebulae where stars form are extremely hot.",
             correctAnswer: false,
             explanation: "Star-forming nebulae are very cold. If the gas were too hot, pressure would prevent it from collapsing under gravity.",
+            distractorExplanations: {
+              0: 'Star-forming nebulae are very cold.',
+            },
           },
           {
             id: "sp-sec5-u2-L1-Q4",
@@ -576,6 +645,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Cold gas has less pressure pushing outward. This lets gravity win and pull the gas into clumps that eventually become stars.",
+            distractorExplanations: {
+              1: 'Cold gas glows brighter than hot gas is incorrect; cold gas has less pressure pushing outward.',
+              2: 'Stars can only form from frozen material is incorrect; cold gas has less pressure pushing outward.',
+              3: 'Heat destroys hydrogen atoms is incorrect; cold gas has less pressure pushing outward.',
+            },
           },
           {
             id: "sp-sec5-u2-L1-T3",
@@ -628,6 +702,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A supernova shockwave can compress nearby gas enough to trigger gravitational collapse. This starts the star formation process.",
+            distractorExplanations: {
+              1: 'Magnetic storms on Earth is incorrect; a supernova shockwave can compress nearby gas enough to trigger gravitational collapse.',
+              2: 'The nebula heating up is incorrect; a supernova shockwave can compress nearby gas enough to trigger gravitational collapse.',
+              3: 'Starlight from distant galaxies is incorrect; a supernova shockwave can compress nearby gas enough to trigger gravitational collapse.',
+            },
           },
           {
             id: "sp-sec5-u2-L2-Q2",
@@ -635,6 +714,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Gravity alone can start a nebula collapsing without any outside trigger.",
             correctAnswer: true,
             explanation: "If a region of the nebula becomes dense enough on its own, gravity can overcome gas pressure and start the collapse. External triggers just speed up the process.",
+            distractorExplanations: {
+              1: 'If a region of the nebula becomes dense enough on its own, gravity can overcome gas pressure and start the collapse.',
+            },
           },
           {
             id: "sp-sec5-u2-L2-T2",
@@ -663,6 +745,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Large collapsing clouds almost always fragment. This is why stars often form in clusters of hundreds or thousands.",
+            distractorExplanations: {
+              0: 'It forms exactly one star is incorrect; large collapsing clouds almost always fragment.',
+              2: 'It bounces back and expands is incorrect; large collapsing clouds almost always fragment.',
+              3: 'It turns into a black hole immediately is incorrect; large collapsing clouds almost always fragment.',
+            },
           },
           {
             id: "sp-sec5-u2-L2-T3",
@@ -676,6 +763,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Gravitational collapse slows down as the cloud gets denser.",
             correctAnswer: false,
             explanation: "It actually speeds up. As density increases, gravity gets stronger, pulling material inward faster. It's a runaway process.",
+            distractorExplanations: {
+              0: 'It actually speeds up.',
+            },
           },
           {
             id: "sp-sec5-u2-L2-Q6",
@@ -707,6 +797,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "A protostar produces energy through nuclear fusion.",
             correctAnswer: false,
             explanation: "Protostars shine from the heat of gravitational collapse, not fusion. Fusion hasn't started yet because the core isn't hot enough.",
+            distractorExplanations: {
+              0: 'Protostars shine from the heat of gravitational collapse, not fusion.',
+            },
           },
           {
             id: "sp-sec5-u2-L3-Q2",
@@ -720,6 +813,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "As gas falls inward, gravitational energy converts to heat. This makes the protostar hot enough to glow, even without fusion.",
+            distractorExplanations: {
+              0: 'Nuclear fusion of hydrogen is incorrect; as gas falls inward, gravitational energy converts to heat.',
+              1: 'Chemical reactions with oxygen is incorrect; as gas falls inward, gravitational energy converts to heat.',
+              3: 'Reflected light from nearby stars is incorrect; as gas falls inward, gravitational energy converts to heat.',
+            },
           },
           {
             id: "sp-sec5-u2-L3-T2",
@@ -740,6 +838,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dust surrounding protostars absorbs visible light. Infrared radiation passes through dust more easily, so infrared telescopes can reveal them.",
+            distractorExplanations: {
+              0: 'They don\'t produce any light at all is incorrect; dust surrounding protostars absorbs visible light.',
+              2: 'They\'re too small to detect is incorrect; dust surrounding protostars absorbs visible light.',
+              3: 'They move too fast to photograph is incorrect; dust surrounding protostars absorbs visible light.',
+            },
           },
           {
             id: "sp-sec5-u2-L3-Q4",
@@ -761,6 +864,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Gas falling toward a protostar forms a flat spinning disk.",
             correctAnswer: true,
             explanation: "Conservation of angular momentum forces the gas into a disk shape. This accretion disk feeds material onto the growing protostar.",
+            distractorExplanations: {
+              1: 'Conservation of angular momentum forces the gas into a disk shape.',
+            },
           },
           {
             id: "sp-sec5-u2-L3-Q6",
@@ -793,6 +899,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "T Tauri stars are fully mature, stable stars.",
             correctAnswer: false,
             explanation: "T Tauri stars are still contracting and haven't settled into stable hydrogen fusion. They're in the final pre-main-sequence stage.",
+            distractorExplanations: {
+              0: 'T Tauri stars are still contracting and haven\'t settled into stable hydrogen fusion.',
+            },
           },
           {
             id: "sp-sec5-u2-L4-Q2",
@@ -806,6 +915,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "T Tauri stars are variable, unstable, and produce powerful stellar winds. Like teenagers, they're energetic and unpredictable before settling down.",
+            distractorExplanations: {
+              0: 'They\'re exactly 13 years old is incorrect; t Tauri stars are variable, unstable, and produce powerful stellar winds.',
+              2: 'They only appear during certain seasons is incorrect; t Tauri stars are variable, unstable, and produce powerful stellar winds.',
+              3: 'They orbit in pairs like best friends is incorrect; t Tauri stars are variable, unstable, and produce powerful stellar winds.',
+            },
           },
           {
             id: "sp-sec5-u2-L4-T2",
@@ -834,6 +948,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Jets carry away angular momentum. Without shedding spin, the star couldn't contract enough to reach fusion temperatures.",
+            distractorExplanations: {
+              0: 'Attract more gas for fusion is incorrect; jets carry away angular momentum.',
+              1: 'Create new planets is incorrect; jets carry away angular momentum.',
+              3: 'Signal other nearby stars is incorrect; jets carry away angular momentum.',
+            },
           },
           {
             id: "sp-sec5-u2-L4-T3",
@@ -1001,6 +1120,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Blue stars are cooler than red stars.",
             correctAnswer: false,
             explanation: "It's the opposite of what many people expect. Blue stars are the hottest, and red stars are the coolest. Think of a blowtorch flame: the blue part is hottest.",
+            distractorExplanations: {
+              0: 'It\'s the opposite of what many people expect.',
+            },
           },
           {
             id: "sp-sec5-u3-L1-Q2",
@@ -1028,6 +1150,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "At 3,000 K, a star glows red. This is at the cool end of the stellar temperature range.",
+            distractorExplanations: {
+              0: 'Blue is incorrect; at 3,000 K, a star glows red.',
+              1: 'White is incorrect; at 3,000 K, a star glows red.',
+              2: 'Yellow is incorrect; at 3,000 K, a star glows red.',
+            },
           },
           {
             id: "sp-sec5-u3-L1-Q4",
@@ -1056,6 +1183,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Betelgeuse's red color reveals that its surface temperature is relatively cool, around 3,500 K. It's a red supergiant.",
+            distractorExplanations: {
+              0: 'This is incorrect; betelgeuse\'s red color reveals that its surface temperature is relatively cool, around 3,500 K.',
+              2: 'It\'s very far away is incorrect; betelgeuse\'s red color reveals that its surface temperature is relatively cool, around 3,500 K.',
+              3: 'It\'s very young is incorrect; betelgeuse\'s red color reveals that its surface temperature is relatively cool, around 3,500 K.',
+            },
           },
           {
             id: "sp-sec5-u3-L1-Q6",
@@ -1070,6 +1202,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Blue-white stars are the hottest. The color sequence from cool to hot is red, orange, yellow, white, blue-white.",
+            distractorExplanations: {
+              1: 'Star B (yellow) is incorrect; blue-white stars are the hottest.',
+              2: 'Star C (deep red) is incorrect; blue-white stars are the hottest.',
+              3: 'They\'re all the same temperature is incorrect; blue-white stars are the hottest.',
+            },
           },
         ],
       },
@@ -1093,6 +1230,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "O-type stars are the hottest spectral class.",
             correctAnswer: true,
             explanation: "O stars have surface temperatures above 30,000 K. They're extremely hot, luminous, and blue. They're also the rarest.",
+            distractorExplanations: {
+              1: 'O stars have surface temperatures above 30,000 K.',
+            },
           },
           {
             id: "sp-sec5-u3-L2-Q2",
@@ -1130,6 +1270,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "'Oh Be A Fine Guy/Girl, Kiss Me' is the classic mnemonic for OBAFGKM, used by astronomy students worldwide.",
+            distractorExplanations: {
+              1: 'Only Bright And Fiery Giants Keep Moving is incorrect; \'Oh Be A Fine Guy/Girl, Kiss Me\' is the classic mnemonic for OBAFGKM, used by astronomy students.',
+              2: 'This is incorrect; \'Oh Be A Fine Guy/Girl, Kiss Me\' is the classic mnemonic for OBAFGKM, used by astronomy students worldwide.',
+              3: 'This is incorrect; \'Oh Be A Fine Guy/Girl, Kiss Me\' is the classic mnemonic for OBAFGKM, used by astronomy students worldwide.',
+            },
           },
           {
             id: "sp-sec5-u3-L2-T3",
@@ -1149,6 +1294,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "About three-quarters of all stars are M-type red dwarfs. They're small, cool, and incredibly long-lived.",
+            distractorExplanations: {
+              0: 'O (the hottest) is incorrect; about three-quarters of all stars are M-type red dwarfs.',
+              1: 'G (like our Sun) is incorrect; about three-quarters of all stars are M-type red dwarfs.',
+              3: 'A (white stars) is incorrect; about three-quarters of all stars are M-type red dwarfs.',
+            },
           },
           {
             id: "sp-sec5-u3-L2-Q6",
@@ -1181,6 +1331,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Our Sun is classified as a G-type star.",
             correctAnswer: true,
             explanation: "The Sun is a G2V star. It sits in the middle of the temperature range, making it a typical yellow star.",
+            distractorExplanations: {
+              1: 'The Sun is a G2V star.',
+            },
           },
           {
             id: "sp-sec5-u3-L3-Q2",
@@ -1194,6 +1347,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Roman numeral V stands for luminosity class V, meaning main sequence. These are stable stars fusing hydrogen in their cores.",
+            distractorExplanations: {
+              0: 'The star is very large is incorrect; roman numeral V stands for luminosity class V, meaning main sequence.',
+              2: 'The star has five planets is incorrect; roman numeral V stands for luminosity class V, meaning main sequence.',
+              3: 'The star is variable is incorrect; roman numeral V stands for luminosity class V, meaning main sequence.',
+            },
           },
           {
             id: "sp-sec5-u3-L3-T2",
@@ -1222,6 +1380,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Sun is average in mass, size, and temperature. Most stars are actually smaller and cooler red dwarfs.",
+            distractorExplanations: {
+              0: 'This is incorrect; the Sun is average in mass, size, and temperature.',
+              1: 'This is incorrect; the Sun is average in mass, size, and temperature.',
+              3: 'It\'s the only G-type star we know of is incorrect; the Sun is average in mass, size, and temperature.',
+            },
           },
           {
             id: "sp-sec5-u3-L3-T3",
@@ -1251,6 +1414,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At 5,800 K and main sequence, this star is at the hot end of the G class. G0V fits perfectly.",
+            distractorExplanations: {
+              0: 'M5V (cool red dwarf) is incorrect; at 5,800 K and main sequence, this star is at the hot end of the G class.',
+              2: 'O5V (very hot blue star) is incorrect; at 5,800 K and main sequence, this star is at the hot end of the G class.',
+              3: 'K7V (cool orange star) is incorrect; at 5,800 K and main sequence, this star is at the hot end of the G class.',
+            },
           },
         ],
       },
@@ -1274,6 +1442,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "A star that looks dim from Earth must have low luminosity.",
             correctAnswer: false,
             explanation: "A star can appear dim simply because it's very far away. Its actual luminosity could be enormous.",
+            distractorExplanations: {
+              0: 'A star can appear dim simply because it\'s very far away.',
+            },
           },
           {
             id: "sp-sec5-u3-L4-Q2",
@@ -1287,6 +1458,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Apparent brightness depends on how much light the star emits (luminosity) and how far away it is (distance). A nearby dim star can outshine a distant luminous one.",
+            distractorExplanations: {
+              0: 'Color and size is incorrect; apparent brightness depends on how much light the star emits (luminosity) and how far away it is (distance).',
+              2: 'Mass and age is incorrect; apparent brightness depends on how much light the star emits (luminosity) and how far away it is (distance).',
+              3: 'Temperature and composition is incorrect; apparent brightness depends on how much light the star emits (luminosity) and how far away it is (distance).',
+            },
           },
           {
             id: "sp-sec5-u3-L4-T2",
@@ -1315,6 +1491,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "If two stars have the same temperature, the larger one is more luminous. It has more surface area radiating energy.",
+            distractorExplanations: {
+              0: 'This is incorrect; if two stars have the same temperature, the larger one is more luminous.',
+              1: 'A small hot star is incorrect; if two stars have the same temperature, the larger one is more luminous.',
+              3: 'Size doesn\'t affect luminosity is incorrect; if two stars have the same temperature, the larger one is more luminous.',
+            },
           },
           {
             id: "sp-sec5-u3-L4-T3",
@@ -1328,6 +1509,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Some stars are over a million times more luminous than the Sun.",
             correctAnswer: true,
             explanation: "The most luminous stars, like blue supergiants, can be millions of times brighter than the Sun. They're also extremely rare and short-lived.",
+            distractorExplanations: {
+              1: 'The most luminous stars, like blue supergiants, can be millions of times brighter than the Sun.',
+            },
           },
           {
             id: "sp-sec5-u3-L4-Q6",
@@ -1342,6 +1526,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Luminosity is the star's actual energy output, not how bright it looks. Star B is 10,000 times more luminous despite appearing fainter due to distance.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because luminosity is the star\'s actual energy output, not how bright it looks.',
+              2: 'They have equal luminosity is incorrect; luminosity is the star\'s actual energy output, not how bright it looks.',
+              3: 'You can\'t tell from this information is incorrect; luminosity is the star\'s actual energy output, not how bright it looks.',
+            },
           },
         ],
       },
@@ -1521,6 +1710,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Spectral class (OBAFGKM) is based on surface temperature. O stars are hottest, M stars are coolest.",
+            distractorExplanations: {
+              0: 'Its distance from Earth is incorrect; spectral class (OBAFGKM) is based on surface temperature.',
+              2: 'Its age is incorrect; spectral class (OBAFGKM) is based on surface temperature.',
+              3: 'Its number of planets is incorrect; spectral class (OBAFGKM) is based on surface temperature.',
+            },
           },
           {
             id: "sp-sec5-u4-L1-T2",
@@ -1534,6 +1728,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "More massive stars are generally hotter and more luminous.",
             correctAnswer: true,
             explanation: "Higher mass means stronger gravity, higher core temperatures, faster fusion, and greater energy output. This makes massive stars hot and bright.",
+            distractorExplanations: {
+              1: 'Higher mass means stronger gravity, higher core temperatures, faster fusion, and greater energy output.',
+            },
           },
           {
             id: "sp-sec5-u4-L1-Q5",
@@ -1563,6 +1760,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "About 75% of all stars are cool, dim M-type red dwarfs. They're hard to see because they're so faint, but they vastly outnumber all other types.",
+            distractorExplanations: {
+              0: 'Blue O-type supergiants is incorrect; about 75% of all stars are cool, dim M-type red dwarfs.',
+              1: 'Yellow G-type stars like the Sun is incorrect; about 75% of all stars are cool, dim M-type red dwarfs.',
+              3: 'White A-type stars is incorrect; about 75% of all stars are cool, dim M-type red dwarfs.',
+            },
           },
           {
             id: "sp-sec5-u4-L1-Q8",
@@ -1577,6 +1779,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Over 30,000 K, blue-white, extremely luminous, and very young: this is a classic O-type star. They live fast and die young.",
+            distractorExplanations: {
+              0: 'An M-type red dwarf is incorrect; over 30,000 K, blue-white, extremely luminous, and very young: this is a classic O-type star.',
+              1: 'A G-type star like the Sun is incorrect; over 30,000 K, blue-white, extremely luminous, and very young: this is a classic O-type star.',
+              3: 'A K-type orange star is incorrect; over 30,000 K, blue-white, extremely luminous, and very young: this is a classic O-type star.',
+            },
           },
         ],
       },
@@ -1607,6 +1814,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Hidden in dust, getting hotter, not yet fusing: this is a protostar. It's in the process of contracting toward main sequence ignition.",
+            distractorExplanations: {
+              0: 'A dying white dwarf cooling down is incorrect; hidden in dust, getting hotter, not yet fusing: this is a protostar.',
+              1: 'A main sequence star hidden by dust is incorrect; hidden in dust, getting hotter, not yet fusing: this is a protostar.',
+              3: 'A red giant shedding its outer layers is incorrect; hidden in dust, getting hotter, not yet fusing: this is a protostar.',
+            },
           },
           {
             id: "sp-sec5-u4-L2-Q2",
@@ -1621,6 +1833,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jets, variable brightness, and a disk are hallmarks of a T Tauri star. It hasn't started stable fusion yet.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; jets, variable brightness, and a disk are hallmarks of a T Tauri star.',
+              2: 'The star has run out of hydrogen fuel is incorrect; jets, variable brightness, and a disk are hallmarks of a T Tauri star.',
+              3: 'It\'s an eclipsing binary star system is incorrect; jets, variable brightness, and a disk are hallmarks of a T Tauri star.',
+            },
           },
           {
             id: "sp-sec5-u4-L2-Q3",
@@ -1635,6 +1852,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Same temperature, same distance, but different brightness means different size. Star X must have more surface area to radiate 100 times more light.",
+            distractorExplanations: {
+              1: 'Star Y is larger than Star X is incorrect; same temperature, same distance, but different brightness means different size.',
+              2: 'They must be different spectral classes is incorrect; same temperature, same distance, but different brightness means different size.',
+              3: 'Star X is closer to us is incorrect; same temperature, same distance, but different brightness means different size.',
+            },
           },
           {
             id: "sp-sec5-u4-L2-T2",
@@ -1655,6 +1877,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At 30 solar masses, this star is massive, hot, and blue. It burns fuel so fast that it will live only a few million years.",
+            distractorExplanations: {
+              0: 'This is incorrect; at 30 solar masses, this star is massive, hot, and blue.',
+              2: 'It\'s identical to our Sun in every way is incorrect; at 30 solar masses, this star is massive, hot, and blue.',
+              3: 'This is incorrect; at 30 solar masses, this star is massive, hot, and blue.',
+            },
           },
           {
             id: "sp-sec5-u4-L2-Q5",
@@ -1668,6 +1895,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Temperature is the primary classifier. It determines spectral class (OBAFGKM) and correlates with color. Luminosity class adds size information.",
+            distractorExplanations: {
+              0: 'By how far away they are from Earth is incorrect; temperature is the primary classifier.',
+              2: 'By the year they were discovered is incorrect; temperature is the primary classifier.',
+              3: 'By their chemical composition alone is incorrect; temperature is the primary classifier.',
+            },
           },
           {
             id: "sp-sec5-u4-L2-Q6",
@@ -1691,6 +1923,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Stars born together from the same cloud can have very different masses. Mass determines temperature and color, creating the colorful variety in a cluster.",
+            distractorExplanations: {
+              0: 'The stars have different ages is incorrect; stars born together from the same cloud can have very different masses.',
+              1: 'The stars formed from different elements is incorrect; stars born together from the same cloud can have very different masses.',
+              3: 'This is incorrect; stars born together from the same cloud can have very different masses.',
+            },
           },
           {
             id: "sp-sec5-u4-L2-Q8",
@@ -1704,6 +1941,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Luminosity = temperature effect x surface area. Two stars at the same temperature but different sizes will have very different luminosities.",
+            distractorExplanations: {
+              0: 'Distance from Earth is incorrect; luminosity = temperature effect x surface area.',
+              1: 'Age in years is incorrect; luminosity = temperature effect x surface area.',
+              3: 'Number of orbiting planets is incorrect; luminosity = temperature effect x surface area.',
+            },
           },
         ],
       },
@@ -1846,6 +2088,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "The H-R diagram plots stars by their temperature and luminosity.",
             correctAnswer: true,
             explanation: "Temperature on the x-axis and luminosity on the y-axis. Every star has a specific spot on this diagram.",
+            distractorExplanations: {
+              1: 'Temperature on the x-axis and luminosity on the y-axis.',
+            },
           },
           {
             id: "sp-sec5-u5-L1-Q2",
@@ -1859,6 +2104,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Temperature is on the x-axis. Unusually, it goes from hot on the left to cool on the right, which is backwards from most graphs.",
+            distractorExplanations: {
+              0: 'The vertical (y) axis is incorrect; temperature is on the x-axis.',
+              2: 'Neither axis is incorrect; temperature is on the x-axis.',
+              3: 'Both axes is incorrect; temperature is on the x-axis.',
+            },
           },
           {
             id: "sp-sec5-u5-L1-T2",
@@ -1872,6 +2122,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "On the H-R diagram, the hottest stars are on the right side.",
             correctAnswer: false,
             explanation: "The temperature axis runs backwards: hot stars (blue) are on the left, cool stars (red) are on the right. This catches many people off guard.",
+            distractorExplanations: {
+              0: 'The temperature axis runs backwards: hot stars (blue) are on the left, cool stars (red) are on the right.',
+            },
           },
           {
             id: "sp-sec5-u5-L1-Q4",
@@ -1908,6 +2161,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hot stars are on the left, dim stars are near the bottom. A hot but dim star falls in the lower left region.",
+            distractorExplanations: {
+              0: 'This is incorrect; hot stars are on the left, dim stars are near the bottom.',
+              2: 'This is incorrect; hot stars are on the left, dim stars are near the bottom.',
+              3: 'This is incorrect; hot stars are on the left, dim stars are near the bottom.',
+            },
           },
         ],
       },
@@ -1931,6 +2189,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Main sequence stars are fusing hydrogen in their cores.",
             correctAnswer: true,
             explanation: "The main sequence is the hydrogen-burning phase. A star spends most of its life here, steadily converting hydrogen to helium.",
+            distractorExplanations: {
+              1: 'The main sequence is the hydrogen-burning phase.',
+            },
           },
           {
             id: "sp-sec5-u5-L2-Q2",
@@ -1944,6 +2205,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Hot, bright stars at the upper left to cool, dim stars at the lower right. This diagonal band is the main sequence.",
+            distractorExplanations: {
+              1: 'Upper right to lower left is incorrect; hot, bright stars at the upper left to cool, dim stars at the lower right.',
+              2: 'Top center to bottom center is incorrect; hot, bright stars at the upper left to cool, dim stars at the lower right.',
+              3: 'Left center to right center is incorrect; hot, bright stars at the upper left to cool, dim stars at the lower right.',
+            },
           },
           {
             id: "sp-sec5-u5-L2-T2",
@@ -1972,6 +2238,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Sun is a G2V star, sitting roughly in the middle of the main sequence. It's not the hottest or coolest, brightest or faintest.",
+            distractorExplanations: {
+              0: 'At the very top (most luminous) is incorrect; the Sun is a G2V star, sitting roughly in the middle of the main sequence.',
+              1: 'At the very bottom (least luminous) is incorrect; the Sun is a G2V star, sitting roughly in the middle of the main sequence.',
+              3: 'Off the main sequence entirely is incorrect; the Sun is a G2V star, sitting roughly in the middle of the main sequence.',
+            },
           },
           {
             id: "sp-sec5-u5-L2-T3",
@@ -1985,6 +2256,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Stars stay on the main sequence forever.",
             correctAnswer: false,
             explanation: "Stars leave the main sequence when they exhaust their hydrogen fuel. Massive stars leave after a few million years; low-mass stars can last trillions.",
+            distractorExplanations: {
+              0: 'Stars leave the main sequence when they exhaust their hydrogen fuel.',
+            },
           },
           {
             id: "sp-sec5-u5-L2-Q6",
@@ -2023,6 +2297,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Red giants are cool but extremely luminous. Cool puts them on the right, bright puts them near the top.",
+            distractorExplanations: {
+              0: 'This is incorrect; red giants are cool but extremely luminous.',
+              1: 'This is incorrect; red giants are cool but extremely luminous.',
+              3: 'This is incorrect; red giants are cool but extremely luminous.',
+            },
           },
           {
             id: "sp-sec5-u5-L3-Q2",
@@ -2030,6 +2309,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Red giants are bright because they're very hot.",
             correctAnswer: false,
             explanation: "Red giants are actually cool stars. They're bright because they're enormous. A huge surface area radiates a lot of total light even at a low temperature.",
+            distractorExplanations: {
+              0: 'Red giants are actually cool stars.',
+            },
           },
           {
             id: "sp-sec5-u5-L3-T2",
@@ -2061,6 +2343,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Luminosity = energy per area x total area. Even though each square meter radiates less (cool), the total area is so vast that the star is very luminous.",
+            distractorExplanations: {
+              0: 'They have extremely fast fusion is incorrect; luminosity = energy per area x total area.',
+              1: 'They\'re very close to Earth is incorrect; luminosity = energy per area x total area.',
+              3: 'They reflect light from other stars is incorrect; luminosity = energy per area x total area.',
+            },
           },
           {
             id: "sp-sec5-u5-L3-T3",
@@ -2089,6 +2376,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cool (3,800 K) but very luminous (500 solar luminosities) places this star in the upper right: the red giant region.",
+            distractorExplanations: {
+              0: 'On the main sequence (diagonal band) is incorrect; cool (3,800 K) but very luminous (500 solar luminosities) places this star in the upper right: the red.',
+              2: 'In the lower left (white dwarf region) is incorrect; cool (3,800 K) but very luminous (500 solar luminosities) places this star in the upper right: the red.',
+              3: 'This is incorrect; cool (3,800 K) but very luminous (500 solar luminosities) places this star in the upper right: the red giant region.',
+            },
           },
         ],
       },
@@ -2118,6 +2410,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "White dwarfs are hot but dim. Hot places them on the left, dim places them near the bottom.",
+            distractorExplanations: {
+              0: 'This is incorrect; white dwarfs are hot but dim.',
+              1: 'This is incorrect; white dwarfs are hot but dim.',
+              3: 'Center (the main sequence) is incorrect; white dwarfs are hot but dim.',
+            },
           },
           {
             id: "sp-sec5-u5-L4-Q2",
@@ -2125,6 +2422,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "White dwarfs are dim because they're cold.",
             correctAnswer: false,
             explanation: "White dwarfs can be very hot, over 20,000 K when young. They're dim because they're tiny. Earth-sized objects simply don't have much surface area to radiate from.",
+            distractorExplanations: {
+              0: 'White dwarfs can be very hot, over 20,000 K when young.',
+            },
           },
           {
             id: "sp-sec5-u5-L4-T2",
@@ -2153,6 +2453,11 @@ export const spaceSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "White dwarfs are the remnant cores of dead stars. They've exhausted their fusible fuel and shine only from leftover heat.",
+            distractorExplanations: {
+              0: 'They\'re too hot for fusion is incorrect; white dwarfs are the remnant cores of dead stars.',
+              2: 'Their gravity is too weak is incorrect; white dwarfs are the remnant cores of dead stars.',
+              3: 'This is incorrect; white dwarfs are the remnant cores of dead stars.',
+            },
           },
           {
             id: "sp-sec5-u5-L4-T3",
@@ -2166,6 +2471,9 @@ export const spaceSection5Part1: Unit[] = [
             question: "Black dwarfs don't exist yet because the universe isn't old enough.",
             correctAnswer: true,
             explanation: "White dwarfs take longer than the current age of the universe (13.8 billion years) to cool completely. No black dwarfs have formed yet.",
+            distractorExplanations: {
+              1: 'White dwarfs take longer than the current age of the universe (13.8 billion years) to cool completely.',
+            },
           },
           {
             id: "sp-sec5-u5-L4-Q6",

@@ -29,6 +29,9 @@ export const unit7: Unit = {
           question: "An exoplanet orbits a star other than our Sun.",
           correctAnswer: true,
           explanation: "That's the definition. 'Exo' means outside, so exoplanets are planets outside our solar system.",
+          distractorExplanations: {
+            1: 'That\'s the definition. \'Exo\' means outside, so exoplanets are planets outside our solar system',
+          },
         },
         {
           id: "sp-u7-L1-Q2",
@@ -60,6 +63,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 3,
           explanation: "The first confirmed exoplanets were found in 1992, orbiting a pulsar. The first around a Sun-like star came in 1995.",
+          distractorExplanations: {
+            0: 'The correct answer is 1992, not 1878',
+            1: 'The correct answer is 1992, not 1969',
+            2: 'The correct answer is 1992, not 2004',
+          },
         },
         {
           id: "sp-u7-L1-Q4",
@@ -75,6 +83,9 @@ export const unit7: Unit = {
           question: "Scientists discovered the first exoplanet in the 1800s.",
           correctAnswer: false,
           explanation: "Not quite. The first confirmed exoplanet discovery came in 1992. Before that, we lacked the technology to detect them.",
+          distractorExplanations: {
+            0: 'The first confirmed exoplanet discovery came in 1992',
+          },
         },
         {
           id: "sp-u7-L1-T3",
@@ -94,6 +105,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 2,
           explanation: "Studies show planets are the rule, not the exception. Most stars have at least one orbiting world.",
+          distractorExplanations: {
+            0: 'Studies show planets are the rule, not the exception',
+            1: 'Studies show planets are the rule, not the exception',
+            3: 'Studies show planets are the rule, not the exception',
+          },
         },
         {
           id: "sp-u7-L1-Q7",
@@ -110,6 +126,9 @@ export const unit7: Unit = {
           question: "The Milky Way likely contains billions of exoplanets.",
           correctAnswer: true,
           explanation: "With hundreds of billions of stars and most having at least one planet, the total number of exoplanets in our galaxy is in the billions.",
+          distractorExplanations: {
+            1: 'With hundreds of billions of stars and most having at least one planet, the total number of exoplanets in our galaxy is in the billions',
+          },
         },
       ],
     },
@@ -134,6 +153,9 @@ export const unit7: Unit = {
           question: "Most exoplanets are detected indirectly, not by taking photos of them.",
           correctAnswer: true,
           explanation: "Correct. Stars are billions of times brighter than their planets, so direct imaging is extremely difficult.",
+          distractorExplanations: {
+            1: 'Stars are billions of times brighter than their planets, so direct imaging is extremely difficult',
+          },
         },
         {
           id: "sp-u7-L2-Q2",
@@ -148,6 +170,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "The regular, periodic dip in brightness is the hallmark of the transit method. The planet blocks a tiny fraction of starlight each time it passes in front of its star.",
+          distractorExplanations: {
+            1: 'The regular, periodic dip in brightness is the hallmark of the transit method',
+            2: 'The regular, periodic dip in brightness is the hallmark of the transit method',
+            3: 'The regular, periodic dip in brightness is the hallmark of the transit method',
+          },
         },
         {
           id: "sp-u7-L2-T2",
@@ -176,6 +203,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "Kepler monitored over 150,000 stars for brightness dips, confirming thousands of exoplanets via the transit method.",
+          distractorExplanations: {
+            1: 'Kepler monitored over 150,000 stars for brightness dips, confirming thousands of exoplanets via the transit method',
+            2: 'Kepler monitored over 150,000 stars for brightness dips, confirming thousands of exoplanets via the transit method',
+            3: 'Kepler monitored over 150,000 stars for brightness dips, confirming thousands of exoplanets via the transit method',
+          },
         },
         {
           id: "sp-u7-L2-T3",
@@ -189,6 +221,9 @@ export const unit7: Unit = {
           question: "The radial velocity method measures how a planet's gravity makes its star wobble.",
           correctAnswer: true,
           explanation: "Yes. The planet pulls on the star, causing a tiny back-and-forth motion we can detect in the star's light spectrum.",
+          distractorExplanations: {
+            1: 'The planet pulls on the star, causing a tiny back-and-forth motion we can detect in the star\'s light spectrum',
+          },
         },
         {
           id: "sp-u7-L2-Q6",
@@ -205,6 +240,9 @@ export const unit7: Unit = {
           question: "Most exoplanets are found by taking direct photographs of them.",
           correctAnswer: false,
           explanation: "Direct imaging is extremely difficult. Most exoplanets are found indirectly through the transit method or radial velocity.",
+          distractorExplanations: {
+            0: 'Direct imaging is extremely difficult',
+          },
         },
         {
           id: "sp-u7-L2-Q7",
@@ -218,6 +256,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "The transit method, especially from the Kepler mission, has found the vast majority of known exoplanets.",
+          distractorExplanations: {
+            1: 'The transit method, especially from the Kepler mission, has found the vast majority of known exoplanets',
+            2: 'The transit method, especially from the Kepler mission, has found the vast majority of known exoplanets',
+            3: 'The transit method, especially from the Kepler mission, has found the vast majority of known exoplanets',
+          },
         },
         {
           id: "sp-u7-L2-Q8",
@@ -251,6 +294,9 @@ export const unit7: Unit = {
           question: "The habitable zone is the region around a star where liquid water could exist on a planet's surface.",
           correctAnswer: true,
           explanation: "Exactly. Liquid water is considered a key ingredient for life as we know it.",
+          distractorExplanations: {
+            1: 'Liquid water is considered a key ingredient for life as we know it',
+          },
         },
         {
           id: "sp-u7-L3-Q2",
@@ -264,6 +310,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 1,
           explanation: "Like the porridge in the fairy tale: not too hot, not too cold, but just right for liquid water.",
+          distractorExplanations: {
+            0: 'Like the porridge in the fairy tale: not too hot, not too cold, but just right for liquid water',
+            2: 'Like the porridge in the fairy tale: not too hot, not too cold, but just right for liquid water',
+            3: 'Like the porridge in the fairy tale: not too hot, not too cold, but just right for liquid water',
+          },
         },
         {
           id: "sp-u7-L3-T2",
@@ -284,6 +335,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "A cooler, dimmer star has its habitable zone much closer in. Less energy output means planets need to orbit nearer to receive enough warmth for liquid water.",
+          distractorExplanations: {
+            1: 'A cooler, dimmer star has its habitable zone much closer in',
+            2: 'A cooler, dimmer star has its habitable zone much closer in',
+            3: 'A cooler, dimmer star has its habitable zone much closer in',
+          },
         },
         {
           id: "sp-u7-L3-Q4",
@@ -307,6 +363,9 @@ export const unit7: Unit = {
           question: "A planet in the habitable zone is guaranteed to have life.",
           correctAnswer: false,
           explanation: "Not at all. The habitable zone only means liquid water is possible. Life requires many additional conditions.",
+          distractorExplanations: {
+            0: 'The habitable zone only means liquid water is possible',
+          },
         },
         {
           id: "sp-u7-L3-Q6",
@@ -328,6 +387,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "Earth is perfectly positioned in the Sun's habitable zone, which is why we have liquid oceans.",
+          distractorExplanations: {
+            1: 'Earth is perfectly positioned in the Sun\'s habitable zone, which is why we have liquid oceans',
+            2: 'Earth is perfectly positioned in the Sun\'s habitable zone, which is why we have liquid oceans',
+            3: 'Earth is perfectly positioned in the Sun\'s habitable zone, which is why we have liquid oceans',
+          },
         },
         {
           id: "sp-u7-L3-Q8",
@@ -335,6 +399,9 @@ export const unit7: Unit = {
           question: "A dim, cool star has its habitable zone closer to the star than a bright, hot star.",
           correctAnswer: true,
           explanation: "Less energy output means planets need to orbit closer to receive enough warmth for liquid water.",
+          distractorExplanations: {
+            1: 'Less energy output means planets need to orbit closer to receive enough warmth for liquid water',
+          },
         },
       ],
     },
@@ -359,6 +426,9 @@ export const unit7: Unit = {
           question: "All exoplanets are similar to the planets in our solar system.",
           correctAnswer: false,
           explanation: "Many exoplanets are completely unlike anything in our solar system, including hot Jupiters and super-Earths.",
+          distractorExplanations: {
+            0: 'Many exoplanets are completely unlike anything in our solar system, including hot Jupiters and super-Earths',
+          },
         },
         {
           id: "sp-u7-L4-Q2",
@@ -372,6 +442,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "Hot Jupiters are massive gas planets that orbit extremely close to their stars, making them scorching hot.",
+          distractorExplanations: {
+            1: 'Hot Jupiters are massive gas planets that orbit extremely close to their stars, making them scorching hot',
+            2: 'Hot Jupiters are massive gas planets that orbit extremely close to their stars, making them scorching hot',
+            3: 'Hot Jupiters are massive gas planets that orbit extremely close to their stars, making them scorching hot',
+          },
         },
         {
           id: "sp-u7-L4-T2",
@@ -408,6 +483,9 @@ export const unit7: Unit = {
           question: "A rogue planet orbits a star just like other planets do.",
           correctAnswer: false,
           explanation: "Rogue planets don't orbit any star. They wander through interstellar space on their own.",
+          distractorExplanations: {
+            0: 'Rogue planets don\'t orbit any star',
+          },
         },
         {
           id: "sp-u7-L4-Q6",
@@ -421,6 +499,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "Super-Earths and mini-Neptunes are the most common types discovered, even though our own solar system doesn't have any.",
+          distractorExplanations: {
+            1: 'Super-Earths and mini-Neptunes are the most common types discovered, even though our own solar system doesn\'t have any',
+            2: 'Super-Earths and mini-Neptunes are the most common types discovered, even though our own solar system doesn\'t have any',
+            3: 'Super-Earths and mini-Neptunes are the most common types discovered, even though our own solar system doesn\'t have any',
+          },
         },
         {
           id: "sp-u7-L4-Q7",
@@ -443,6 +526,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 1,
           explanation: "Gas giants are thought to form far from their star where it's cold enough for gas to accumulate. Finding them close in challenged planet formation theories.",
+          distractorExplanations: {
+            0: 'Gas giants are thought to form far from their star where it\'s cold enough for gas to accumulate',
+            2: 'Gas giants are thought to form far from their star where it\'s cold enough for gas to accumulate',
+            3: 'Gas giants are thought to form far from their star where it\'s cold enough for gas to accumulate',
+          },
         },
       ],
     },
@@ -467,6 +555,9 @@ export const unit7: Unit = {
           question: "The Drake Equation estimates the number of detectable civilizations in our galaxy.",
           correctAnswer: true,
           explanation: "That's exactly its purpose. It breaks the big question into smaller, estimable factors.",
+          distractorExplanations: {
+            1: 'It breaks the big question into smaller, estimable factors',
+          },
         },
         {
           id: "sp-u7-L5-Q2",
@@ -480,6 +571,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 2,
           explanation: "Frank Drake created the equation in 1961 to frame the search for intelligent life in a scientific way.",
+          distractorExplanations: {
+            0: 'Frank Drake created the equation in 1961 to frame the search for intelligent life in a scientific way',
+            1: 'Frank Drake created the equation in 1961 to frame the search for intelligent life in a scientific way',
+            3: 'Frank Drake created the equation in 1961 to frame the search for intelligent life in a scientific way',
+          },
         },
         {
           id: "sp-u7-L5-T2",
@@ -499,6 +595,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "The speed of light isn't part of the Drake Equation. The equation focuses on how many civilizations exist, not how fast signals travel.",
+          distractorExplanations: {
+            1: 'The speed of light isn\'t part of the Drake Equation',
+            2: 'The speed of light isn\'t part of the Drake Equation',
+            3: 'The speed of light isn\'t part of the Drake Equation',
+          },
         },
         {
           id: "sp-u7-L5-Q4",
@@ -520,6 +621,9 @@ export const unit7: Unit = {
           question: "Scientists agree on a single answer from the Drake Equation.",
           correctAnswer: false,
           explanation: "The equation's value depends on assumptions. Depending on the inputs, N could be 1 (just us) or millions.",
+          distractorExplanations: {
+            0: 'The equation\'s value depends on assumptions',
+          },
         },
         {
           id: "sp-u7-L5-Q6",
@@ -544,6 +648,9 @@ export const unit7: Unit = {
           question: "The Drake Equation was created in the 1990s.",
           correctAnswer: false,
           explanation: "It was created in 1961 by Frank Drake, decades before exoplanet discoveries began.",
+          distractorExplanations: {
+            0: 'It was created in 1961 by Frank Drake, decades before exoplanet discoveries began',
+          },
         },
       ],
     },
@@ -568,6 +675,9 @@ export const unit7: Unit = {
           question: "A biosignature is evidence that could indicate the presence of life.",
           correctAnswer: true,
           explanation: "Correct. Biosignatures include atmospheric gases, chemical compounds, or other signs that life may be present.",
+          distractorExplanations: {
+            1: 'Biosignatures include atmospheric gases, chemical compounds, or other signs that life may be present',
+          },
         },
         {
           id: "sp-u7-L6-Q2",
@@ -581,6 +691,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 0,
           explanation: "Oxygen is reactive and breaks down quickly. Large amounts in an atmosphere suggest something (like life) is constantly producing it.",
+          distractorExplanations: {
+            1: 'Oxygen is reactive and breaks down quickly',
+            2: 'Oxygen is reactive and breaks down quickly',
+            3: 'Oxygen is reactive and breaks down quickly',
+          },
         },
         {
           id: "sp-u7-L6-T2",
@@ -626,6 +741,9 @@ export const unit7: Unit = {
           question: "SETI has confirmed receiving a signal from an alien civilization.",
           correctAnswer: false,
           explanation: "No confirmed alien signal has ever been received. SETI continues to search, but so far the sky has been silent.",
+          distractorExplanations: {
+            0: 'Confirmed alien signal has ever been received',
+          },
         },
         {
           id: "sp-u7-L6-Q7",
@@ -648,6 +766,11 @@ export const unit7: Unit = {
           ],
           correctIndex: 3,
           explanation: "Oxygen and methane destroy each other chemically. Finding both means something is actively producing them, possibly life.",
+          distractorExplanations: {
+            0: 'Oxygen and methane destroy each other chemically',
+            1: 'Oxygen and methane destroy each other chemically',
+            2: 'Oxygen and methane destroy each other chemically',
+          },
         },
       ],
     },

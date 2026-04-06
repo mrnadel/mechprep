@@ -39,6 +39,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "A stock exchange is a marketplace that connects buyers and sellers of company shares.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Exchanges provide an organized, regulated marketplace for trading stocks.' },
             explanation: "Exchanges provide an organized, regulated marketplace for trading stocks.",
           },
           {
@@ -52,6 +53,11 @@ export const finSection9Part1: Unit[] = [
               "To lend money to companies that need cash",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; exchanges provide a fair, transparent place where buyers and sellers can trade.',
+              2: 'This is not the best answer; exchanges provide a fair, transparent place where buyers and sellers can trade.',
+              3: 'This is not the best answer; exchanges provide a fair, transparent place where buyers and sellers can trade.',
+            },
             explanation: "Exchanges provide a fair, transparent place where buyers and sellers can trade.",
           },
           {
@@ -66,6 +72,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "When you buy shares through a brokerage app, you're typically buying in the primary market.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Most everyday trades happen in the secondary market.' },
             explanation: "Most everyday trades happen in the secondary market. The primary market is for brand-new share offerings like IPOs.",
           },
           {
@@ -102,6 +109,11 @@ export const finSection9Part1: Unit[] = [
               "Shanghai Exchange and Nasdaq",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; the New York Stock Exchange (NYSE) and Nasdaq are the 2 largest U.',
+              2: 'This is not the best answer; the New York Stock Exchange (NYSE) and Nasdaq are the 2 largest U.',
+              3: 'Shanghai Exchange and Nasdaq is not correct in this context; the New York Stock Exchange (NYSE) and Nasdaq are the 2 largest U.',
+            },
             explanation: "The New York Stock Exchange (NYSE) and Nasdaq are the 2 largest U.S. exchanges by market capitalization.",
           },
           {
@@ -141,6 +153,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "The Nasdaq stock exchange operates with a physical trading floor, just like the NYSE.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Nasdaq is fully electronic.' },
             explanation: "Nasdaq is fully electronic. The NYSE is the one with a famous physical trading floor.",
           },
           {
@@ -154,6 +167,11 @@ export const finSection9Part1: Unit[] = [
               "NYSE is only open to institutional investors",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; The NYSE still uses a physical trading floor with designated market makers, w...',
+              2: 'This is not the best answer; The NYSE still uses a physical trading floor with designated market makers, w...',
+              3: 'This is not the best answer; The NYSE still uses a physical trading floor with designated market makers, w...',
+            },
             explanation: "The NYSE still uses a physical trading floor with designated market makers, while Nasdaq is fully electronic.",
           },
           {
@@ -174,6 +192,11 @@ export const finSection9Part1: Unit[] = [
               "Tech stocks can only trade electronically",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Nasdaq generally has less strict listing requirements.',
+              2: 'This is not the best answer; Nasdaq generally has less strict listing requirements.',
+              3: 'This is not the best answer; Nasdaq generally has less strict listing requirements.',
+            },
             explanation: "Nasdaq generally has less strict listing requirements, making it more accessible to newer and smaller companies.",
           },
           {
@@ -196,6 +219,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "Over-the-counter (OTC) markets are generally less regulated than major stock exchanges.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'OTC markets have fewer listing requirements and less oversight, which means higher risk for investors.' },
             explanation: "OTC markets have fewer listing requirements and less oversight, which means higher risk for investors.",
           },
           {
@@ -234,6 +258,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "Market makers stand ready to buy or sell stocks at any time during trading hours.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'That\'s their role, making this statement true.' },
             explanation: "That's their role. They provide continuous liquidity so trades can happen quickly.",
           },
           {
@@ -247,6 +272,11 @@ export const finSection9Part1: Unit[] = [
               "They set the official price for every stock",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; Market makers provide liquidity by always being available to buy or sell, so ...',
+              1: 'This is not the best answer; Market makers provide liquidity by always being available to buy or sell, so ...',
+              3: 'This is not the best answer; Market makers provide liquidity by always being available to buy or sell, so ...',
+            },
             explanation: "Market makers provide liquidity by always being available to buy or sell, so trades execute quickly.",
           },
           {
@@ -276,6 +306,11 @@ export const finSection9Part1: Unit[] = [
               "$49.90 because buyers get a discount",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that that\'s the lower price does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that it\'s the average of bid and ask does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that buyers get a discount does not accurately reflect the financial principle at work.',
+            },
             explanation: "When you buy, you pay the ask price ($50.05). When you sell, you receive the bid price ($49.95). The $0.10 spread goes to the market maker.",
           },
           {
@@ -344,6 +379,11 @@ export const finSection9Part1: Unit[] = [
               "24 hours a day, 7 days a week",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: '8:00 AM to 5:00 PM Eastern is not correct in this context; u.',
+              2: '10:00 AM to 3:00 PM Eastern is not correct in this context; u.',
+              3: '24 hours a day, 7 days a week is not correct in this context; u.',
+            },
             explanation: "U.S. stock exchanges open at 9:30 AM and close at 4:00 PM Eastern Time on weekdays.",
           },
           {
@@ -351,6 +391,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "U.S. stock exchanges are open for trading on weekends.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'exchanges are closed on Saturdays and Sundays, plus certain holidays..' },
             explanation: "Major U.S. exchanges are closed on Saturdays and Sundays, plus certain holidays.",
           },
           {
@@ -371,6 +412,11 @@ export const finSection9Part1: Unit[] = [
               "Only institutional investors are allowed to trade",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; Fewer participants in after-hours sessions means less liquidity.',
+              1: 'This is not the best answer; Fewer participants in after-hours sessions means less liquidity.',
+              3: 'This is not the best answer; Fewer participants in after-hours sessions means less liquidity.',
+            },
             explanation: "Fewer participants in after-hours sessions means less liquidity, wider bid-ask spreads, and more price volatility.",
           },
           {
@@ -416,6 +462,11 @@ export const finSection9Part1: Unit[] = [
               "The price will definitely keep going up overnight",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; after-hours trading has wider spreads and more volatile prices.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; after-hours trading has wider spreads and more volatile prices.',
+            },
             explanation: "After-hours trading has wider spreads and more volatile prices. Waiting for regular hours might get you better execution.",
           },
         ],
@@ -561,6 +612,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "A single candlestick on a stock chart shows 4 data points: open, close, high, and low.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Every candle encodes the open, high, low, and close for that time period.' },
             explanation: "Every candle encodes the open, high, low, and close for that time period.",
           },
           {
@@ -595,6 +647,11 @@ export const finSection9Part1: Unit[] = [
               "White, because the move was less than 5%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that the stock traded during the day does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that it was a volatile day does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that the move was less than 5% does not accurately reflect the financial principle at work.',
+            },
             explanation: "The stock closed lower ($48) than it opened ($50), so the candle is red.",
           },
           {
@@ -623,6 +680,11 @@ export const finSection9Part1: Unit[] = [
               "The stock's volume was extremely high",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The stock is about to split is not correct in this context; A small body with long wicks (a doji) means the price swung widely but ended ...',
+              1: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; A small body with long wicks (a doji) means the price swung widely but ended ...',
+            },
             explanation: "A small body with long wicks (a doji) means the price swung widely but ended near where it started, signaling indecision.",
           },
           {
@@ -664,6 +726,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "A support level is a price where a stock tends to stop falling because buyers step in.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Support forms at prices where buying interest is strong enough to halt a decline.' },
             explanation: "Support forms at prices where buying interest is strong enough to halt a decline.",
           },
           {
@@ -677,6 +740,11 @@ export const finSection9Part1: Unit[] = [
               "A price target",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'A resistance level is not correct in this context; When a stock repeatedly bounces off the same low price.',
+              2: 'A moving average is not correct in this context; When a stock repeatedly bounces off the same low price.',
+              3: 'A price target is not correct in this context; When a stock repeatedly bounces off the same low price.',
+            },
             explanation: "When a stock repeatedly bounces off the same low price, that price is a support level.",
           },
           {
@@ -729,6 +797,11 @@ export const finSection9Part1: Unit[] = [
               "A guaranteed floor that can never break",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; when resistance is broken, it often flips to become a support level.',
+              2: 'The reasoning that the pattern is broken does not accurately reflect the financial principle at work.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "When resistance is broken, it often flips to become a support level. The old ceiling becomes the new floor.",
           },
           {
@@ -742,6 +815,11 @@ export const finSection9Part1: Unit[] = [
               "Market makers are required to stop prices from dropping",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Support forms naturally because enough buyers find the stock attractive at th...',
+              2: 'This is not the best answer; Support forms naturally because enough buyers find the stock attractive at th...',
+              3: 'This is not the best answer; Support forms naturally because enough buyers find the stock attractive at th...',
+            },
             explanation: "Support forms naturally because enough buyers find the stock attractive at that price, creating buying pressure.",
           },
         ],
@@ -767,6 +845,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "Trading volume represents the total number of shares bought and sold during a time period.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Volume measures trading activity, making this statement true.' },
             explanation: "Volume measures trading activity. Each share that changes hands counts toward the total.",
           },
           {
@@ -780,6 +859,11 @@ export const finSection9Part1: Unit[] = [
               "Volume has no connection to price direction",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; high volume on a price rise means strong conviction.',
+              2: 'This is not the best answer; high volume on a price rise means strong conviction.',
+              3: 'This is not the best answer; high volume on a price rise means strong conviction.',
+            },
             explanation: "High volume on a price rise means strong conviction. Many buyers are participating, which confirms the upward move.",
           },
           {
@@ -825,6 +909,11 @@ export const finSection9Part1: Unit[] = [
               "The stock will definitely keep rising from here",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              1: 'This is not the best answer; Volume that\'s 4 times the average during a breakout shows strong participatio...',
+              3: 'This is not the best answer; Volume that\'s 4 times the average during a breakout shows strong participatio...',
+            },
             explanation: "Volume that's 4 times the average during a breakout shows strong participation and confirms the move is real.",
           },
           {
@@ -845,6 +934,11 @@ export const finSection9Part1: Unit[] = [
               "Impossible, volume can't change that much",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; at 5 times its average, this is a massive volume spike that deserves attention.',
+              2: 'The reasoning that 2.5 million is not a lot does not accurately reflect the financial principle at work.',
+              3: 'This is not the best answer; at 5 times its average, this is a massive volume spike that deserves attention.',
+            },
             explanation: "At 5 times its average, this is a massive volume spike that deserves attention.",
           },
         ],
@@ -870,6 +964,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "A moving average smooths out daily price fluctuations to reveal the overall trend.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'By averaging prices over many days, moving averages filter out short-term noise.' },
             explanation: "By averaging prices over many days, moving averages filter out short-term noise.",
           },
           {
@@ -883,6 +978,11 @@ export const finSection9Part1: Unit[] = [
               "100-day and 500-day",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: '5-day and 10-day is not correct in this context; the 50-day moving average tracks medium-term trends.',
+              2: '30-day and 60-day is not correct in this context; the 50-day moving average tracks medium-term trends.',
+              3: '100-day and 500-day is not correct in this context; the 50-day moving average tracks medium-term trends.',
+            },
             explanation: "The 50-day moving average tracks medium-term trends. The 200-day moving average tracks long-term trends.",
           },
           {
@@ -949,6 +1049,11 @@ export const finSection9Part1: Unit[] = [
               "The 200-day average will automatically adjust lower",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; Breaking above the 200-day moving average on high volume is a classic bullish...',
+              1: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              3: 'This is not the best answer; Breaking above the 200-day moving average on high volume is a classic bullish...',
+            },
             explanation: "Breaking above the 200-day moving average on high volume is a classic bullish signal, suggesting a potential trend reversal.",
           },
         ],
@@ -1017,6 +1122,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "The P/E ratio compares a stock's price to how much the company earns per share.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'P/E = stock price divided by earnings per share, making this statement true.' },
             explanation: "P/E = stock price divided by earnings per share. It tells you how much you pay for each dollar of profit.",
           },
           {
@@ -1030,6 +1136,11 @@ export const finSection9Part1: Unit[] = [
               "80",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is 20.',
+              1: 'This does not match the correct calculation; the right answer is 20.',
+              3: 'This does not match the correct calculation; the right answer is 20.',
+            },
             explanation: "P/E = price / earnings per share = $80 / $4 = 20. You're paying $20 for every $1 of profit.",
           },
           {
@@ -1050,6 +1161,11 @@ export const finSection9Part1: Unit[] = [
               "Because its stock price is artificially reduced",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              1: 'This is not the best answer; Investors pay less per dollar of earnings when they don\'t expect rapid growth...',
+              3: 'This is not the best answer; Investors pay less per dollar of earnings when they don\'t expect rapid growth...',
+            },
             explanation: "Investors pay less per dollar of earnings when they don't expect rapid growth, which results in a lower P/E ratio.",
           },
           {
@@ -1087,6 +1203,11 @@ export const finSection9Part1: Unit[] = [
               "Neither, because P/E doesn't matter for comparisons",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that 30 is a high number does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that both have a P/E of 30 does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that P/E doesn\'t matter for comparisons does not accurately reflect the financial principle at work.',
+            },
             explanation: "Stock B's P/E of 30 is 2.5 times the banking average of 12. Stock A at 30 is actually below the tech average of 35.",
           },
           {
@@ -1131,6 +1252,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "A P/B ratio below 1 means the stock trades for less than the company's net asset value.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'A P/B under 1 means you can buy the company for less than its assets minus liabilities are worth on paper.' },
             explanation: "A P/B under 1 means you can buy the company for less than its assets minus liabilities are worth on paper.",
           },
           {
@@ -1144,6 +1266,11 @@ export const finSection9Part1: Unit[] = [
               "The price at the last stock split",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; book value = total assets minus total liabilities.',
+              2: 'Annual revenue minus expenses is not correct in this context; book value = total assets minus total liabilities.',
+              3: 'This is not the best answer; book value = total assets minus total liabilities.',
+            },
             explanation: "Book value = total assets minus total liabilities. It's the net worth of the company on its balance sheet.",
           },
           {
@@ -1164,6 +1291,11 @@ export const finSection9Part1: Unit[] = [
               "When a company pays large dividends",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; p/S is valuable for unprofitable companies with revenue.',
+              2: 'This is not the best answer; p/S is valuable for unprofitable companies with revenue.',
+              3: 'This is not the best answer; p/S is valuable for unprofitable companies with revenue.',
+            },
             explanation: "P/S is valuable for unprofitable companies with revenue. P/E can't be calculated without positive earnings.",
           },
           {
@@ -1207,6 +1339,11 @@ export const finSection9Part1: Unit[] = [
               "Dividend yield, because it doesn't need earnings",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that it works without earnings does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that book value ignores profits does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that it doesn\'t need earnings does not accurately reflect the financial principle at work.',
+            },
             explanation: "P/S uses revenue, so it works for unprofitable companies. P/E requires positive earnings to calculate.",
           },
         ],
@@ -1232,6 +1369,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "Over the long term, a stock's price tends to follow the growth of the company's earnings.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Earnings growth is the fundamental driver of stock prices over long periods.' },
             explanation: "Earnings growth is the fundamental driver of stock prices over long periods.",
           },
           {
@@ -1245,6 +1383,11 @@ export const finSection9Part1: Unit[] = [
               "The speed at which dividends are paid out",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; EPS growth measures how fast a company\'s earnings per share are increasing, u...',
+              2: 'This is not the best answer; EPS growth measures how fast a company\'s earnings per share are increasing, u...',
+              3: 'This is not the best answer; EPS growth measures how fast a company\'s earnings per share are increasing, u...',
+            },
             explanation: "EPS growth measures how fast a company's earnings per share are increasing, usually year over year.",
           },
           {
@@ -1273,6 +1416,11 @@ export const finSection9Part1: Unit[] = [
               "20",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is 2.0.',
+              1: 'This does not match the correct calculation; the right answer is 2.0.',
+              3: 'This does not match the correct calculation; the right answer is 2.0.',
+            },
             explanation: "PEG = P/E / growth rate = 40 / 20 = 2.0. A PEG above 1 suggests the stock may be overvalued relative to its growth.",
           },
           {
@@ -1321,6 +1469,11 @@ export const finSection9Part1: Unit[] = [
               "Neither, because PEG ratios can't be compared",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that it has a lower P/E does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that P/E and PEG cancel out does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that PEG ratios can\'t be compared does not accurately reflect the financial principle at work.',
+            },
             explanation: "Stock A's PEG of 1.0 means you're paying fairly for its growth. Stock B's PEG of 3.0 means you're overpaying relative to its slower growth.",
           },
         ],
@@ -1346,6 +1499,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "Intrinsic value is an investor's estimate of what a stock is truly worth based on its fundamentals.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Intrinsic value is a calculated estimate, not a fixed number, making this statement true.' },
             explanation: "Intrinsic value is a calculated estimate, not a fixed number. Different investors may arrive at different intrinsic values.",
           },
           {
@@ -1359,6 +1513,11 @@ export const finSection9Part1: Unit[] = [
               "The stock price will immediately rise to intrinsic value",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; if market price is below intrinsic value, the stock might be a bargain.',
+              2: 'This is not the best answer; if market price is below intrinsic value, the stock might be a bargain.',
+              3: 'This is not the best answer; if market price is below intrinsic value, the stock might be a bargain.',
+            },
             explanation: "If market price is below intrinsic value, the stock might be a bargain. But intrinsic value is an estimate, not a guarantee.",
           },
           {
@@ -1387,6 +1546,11 @@ export const finSection9Part1: Unit[] = [
               "$80",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $50.',
+              1: 'This does not match the correct calculation; the right answer is $50.',
+              3: 'This does not match the correct calculation; the right answer is $50.',
+            },
             explanation: "Buying at $50 when intrinsic value is $80 gives a 37.5% margin of safety, the largest gap among the choices.",
           },
           {
@@ -1433,6 +1597,11 @@ export const finSection9Part1: Unit[] = [
               "Don't buy because the 2 estimates disagree",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that it\'s below both estimates does not accurately reflect the financial principle at work.',
+              2: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              3: 'The reasoning that the 2 estimates disagree does not accurately reflect the financial principle at work.',
+            },
             explanation: "Both estimates suggest the stock is below intrinsic value, but the difference shows that valuation involves judgment. The margin of safety is your buffer.",
           },
         ],
@@ -1578,6 +1747,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "Growth investors focus on companies with above-average earnings growth.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Growth investing targets companies expanding faster than the broader market, even if their stock prices seem expensive.' },
             explanation: "Growth investing targets companies expanding faster than the broader market, even if their stock prices seem expensive.",
           },
           {
@@ -1591,6 +1761,11 @@ export const finSection9Part1: Unit[] = [
               "A retailer with flat earnings for 5 years",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Growth investors want companies with rapid revenue and earnings expansion, ev...',
+              2: 'A bank trading at a P/E of 8 is not correct in this context; Growth investors want companies with rapid revenue and earnings expansion, ev...',
+              3: 'This is not the best answer; Growth investors want companies with rapid revenue and earnings expansion, ev...',
+            },
             explanation: "Growth investors want companies with rapid revenue and earnings expansion, even if the stock price is already high.",
           },
           {
@@ -1611,6 +1786,11 @@ export const finSection9Part1: Unit[] = [
               "Only old companies can pay dividends",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Growth companies prefer to reinvest earnings into research.',
+              2: 'This is not the best answer; Growth companies prefer to reinvest earnings into research.',
+              3: 'This is not the best answer; Growth companies prefer to reinvest earnings into research.',
+            },
             explanation: "Growth companies prefer to reinvest earnings into research, expansion, and new products rather than returning cash to shareholders.",
           },
           {
@@ -1656,6 +1836,11 @@ export const finSection9Part1: Unit[] = [
               "The P/E ratio automatically adjusts to compensate",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The reasoning that earnings still grew does not accurately reflect the financial principle at work.',
+              1: 'This is not the best answer; growth stocks are priced for perfection.',
+              3: 'This is not the best answer; growth stocks are priced for perfection.',
+            },
             explanation: "Growth stocks are priced for perfection. Missing expectations, even slightly, often triggers a significant sell-off.",
           },
         ],
@@ -1681,6 +1866,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "Value investors seek stocks they believe the market has temporarily underpriced.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Value investing is about finding quality companies trading below what they\'re actually worth.' },
             explanation: "Value investing is about finding quality companies trading below what they're actually worth.",
           },
           {
@@ -1694,6 +1880,11 @@ export const finSection9Part1: Unit[] = [
               "The number of social media mentions",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; Value investors use fundamental ratios like P/E and P/B to find stocks tradin...',
+              1: 'This is not the best answer; Value investors use fundamental ratios like P/E and P/B to find stocks tradin...',
+              3: 'This is not the best answer; Value investors use fundamental ratios like P/E and P/B to find stocks tradin...',
+            },
             explanation: "Value investors use fundamental ratios like P/E and P/B to find stocks trading below their fair value.",
           },
           {
@@ -1743,6 +1934,11 @@ export const finSection9Part1: Unit[] = [
               "A brokerage fee that reduces your investment returns",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; A value trap is a stock with low valuations that continues to decline because...',
+              2: 'This is not the best answer; A value trap is a stock with low valuations that continues to decline because...',
+              3: 'This is not the best answer; A value trap is a stock with low valuations that continues to decline because...',
+            },
             explanation: "A value trap is a stock with low valuations that continues to decline because the company faces genuine, ongoing challenges.",
           },
           {
@@ -1757,6 +1953,11 @@ export const finSection9Part1: Unit[] = [
               "The stock will definitely bounce back to the industry average P/E",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The reasoning that the P/E is far below the industry average does not accurately reflect the financial principle at work.',
+              1: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; declining earnings and revenue suggest this company has real problems.',
+            },
             explanation: "Declining earnings and revenue suggest this company has real problems. The low P/E reflects legitimate concerns, not a hidden opportunity.",
           },
         ],
@@ -1782,6 +1983,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "Growth stocks have outperformed value stocks in every single decade of market history.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Leadership rotates.' },
             explanation: "Leadership rotates. Value outperformed in some decades and growth in others. Neither style wins permanently.",
           },
           {
@@ -1795,6 +1997,11 @@ export const finSection9Part1: Unit[] = [
               "Both styles produce identical returns every year",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              1: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; market conditions favor different styles at different times.',
+            },
             explanation: "Market conditions favor different styles at different times. Neither approach dominates permanently.",
           },
           {
@@ -1831,6 +2038,11 @@ export const finSection9Part1: Unit[] = [
               "Investors can only buy value stocks when rates rise",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; growth stocks are valued on future earnings.',
+              2: 'This is not the best answer; growth stocks are valued on future earnings.',
+              3: 'This is not the best answer; growth stocks are valued on future earnings.',
+            },
             explanation: "Growth stocks are valued on future earnings. Higher interest rates reduce the present value of those future earnings, making growth stocks less attractive.",
           },
           {
@@ -1860,6 +2072,11 @@ export const finSection9Part1: Unit[] = [
               "Value stocks no longer exist in the modern market",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; predicting when leadership will rotate is nearly impossible.',
+              1: 'This is not the best answer; predicting when leadership will rotate is nearly impossible.',
+              3: 'This is not the best answer; predicting when leadership will rotate is nearly impossible.',
+            },
             explanation: "Predicting when leadership will rotate is nearly impossible. Past performance doesn't guarantee future results.",
           },
         ],
@@ -1885,6 +2102,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "A blend portfolio holds both growth and value stocks together.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Blend investing combines both styles so you benefit regardless of which one is currently leading.' },
             explanation: "Blend investing combines both styles so you benefit regardless of which one is currently leading.",
           },
           {
@@ -1898,6 +2116,11 @@ export const finSection9Part1: Unit[] = [
               "It doubles your dividend income",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; Holding both styles smooths returns because when one underperforms.',
+              1: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; Holding both styles smooths returns because when one underperforms.',
+            },
             explanation: "Holding both styles smooths returns because when one underperforms, the other may pick up the slack.",
           },
           {
@@ -1947,6 +2170,11 @@ export const finSection9Part1: Unit[] = [
               "It switches between growth and value based on market conditions",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The reasoning that they go up faster does not accurately reflect the financial principle at work.',
+              1: 'This is not the best answer; A total market index fund owns everything.',
+              3: 'This is not the best answer; A total market index fund owns everything.',
+            },
             explanation: "A total market index fund owns everything, giving you natural exposure to both growth and value stocks.",
           },
           {
@@ -2028,6 +2256,7 @@ export const finSection9Part1: Unit[] = [
             type: "true-false",
             question: "The bid-ask spread is the difference between what buyers offer and what sellers accept.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The bid is the buyer\'s price, the ask is the seller\'s price, making this statement true.' },
             explanation: "The bid is the buyer's price, the ask is the seller's price. The gap between them is the spread.",
           },
           {
@@ -2041,6 +2270,11 @@ export const finSection9Part1: Unit[] = [
               "The stock price will rise 30%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The stock costs $30 total is not correct in this context; A P/E of 30 means investors are paying $30 for every $1 of annual earnings pe...',
+              2: 'This is not the best answer; A P/E of 30 means investors are paying $30 for every $1 of annual earnings pe...',
+              3: 'The stock price will rise 30% is not correct in this context; A P/E of 30 means investors are paying $30 for every $1 of annual earnings pe...',
+            },
             explanation: "A P/E of 30 means investors are paying $30 for every $1 of annual earnings per share.",
           },
           {
@@ -2100,6 +2334,11 @@ export const finSection9Part1: Unit[] = [
               "High volume always means the stock will drop",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; A below-average P/E with strong earnings.',
+              2: 'This is not the best answer; A below-average P/E with strong earnings.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "A below-average P/E with strong earnings, plus a support bounce on high volume, combines positive fundamental and technical signals.",
           },
         ],
@@ -2132,6 +2371,11 @@ export const finSection9Part1: Unit[] = [
               "Income investing because tech stocks pay high dividends",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that the stock broke resistance does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that it combines charts and fundamentals does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that tech stocks pay high dividends does not accurately reflect the financial principle at work.',
+            },
             explanation: "High P/E, rapid revenue growth, and no dividend are classic growth stock characteristics.",
           },
           {
@@ -2146,6 +2390,11 @@ export const finSection9Part1: Unit[] = [
               "A momentum investor following rising trends",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; Low P/E, P/B below 1, strong dividend, and trading at lows are textbook value...',
+              1: 'This is not the best answer; Low P/E, P/B below 1, strong dividend, and trading at lows are textbook value...',
+              3: 'This is not the best answer; Low P/E, P/B below 1, strong dividend, and trading at lows are textbook value...',
+            },
             explanation: "Low P/E, P/B below 1, strong dividend, and trading at lows are textbook value investing characteristics.",
           },
           {
@@ -2159,6 +2408,11 @@ export const finSection9Part1: Unit[] = [
               "The stock price will drop 70%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; A PEG below 1 suggests you\'re paying less per unit of growth than average, wh...',
+              2: 'The company has no earnings is not correct in this context; A PEG below 1 suggests you\'re paying less per unit of growth than average, wh...',
+              3: 'The stock price will drop 70% is not correct in this context; A PEG below 1 suggests you\'re paying less per unit of growth than average, wh...',
+            },
             explanation: "A PEG below 1 suggests you're paying less per unit of growth than average, which may indicate undervaluation.",
           },
           {
@@ -2209,6 +2463,11 @@ export const finSection9Part1: Unit[] = [
               "Chart patterns are the only thing that matters",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              1: 'The reasoning that they go up faster does not accurately reflect the financial principle at work.',
+              3: 'This is not the best answer; no single metric or method works alone.',
+            },
             explanation: "No single metric or method works alone. The best investors use fundamentals, charts, and valuation together.",
           },
         ],

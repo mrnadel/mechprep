@@ -269,6 +269,32 @@ export const paymentHistory = pgTable(
   ]
 );
 
+// ─── Payment Audit (survives user deletion) ─────────────────
+
+export const paymentAudit = pgTable(
+  'payment_audit',
+  {
+    id: text('id')
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    originalUserId: text('original_user_id').notNull(),   // NOT a FK — user row is gone
+    email: text('email'),                                  // snapshot for audit trail
+    paddleCustomerId: text('paddle_customer_id'),
+    paddleSubscriptionId: text('paddle_subscription_id'),
+    paddleTransactionId: text('paddle_transaction_id'),
+    amountCents: integer('amount_cents'),
+    currency: text('currency'),
+    status: text('status'),                                // 'succeeded' | 'failed' | 'refunded' | etc.
+    description: text('description'),
+    deletedAt: timestamp('deleted_at', { mode: 'date' }).defaultNow().notNull(),
+    originalCreatedAt: timestamp('original_created_at', { mode: 'date' }),
+  },
+  (table) => [
+    index('payment_audit_user_idx').on(table.originalUserId),
+    index('payment_audit_email_idx').on(table.email),
+  ]
+);
+
 // ─── Pro Waitlist ────────────────────────────────────────────
 
 export const proWaitlist = pgTable('pro_waitlist', {
@@ -613,5 +639,61 @@ export const courseAccess = pgTable(
   (table) => [
     uniqueIndex('course_access_user_profession_idx').on(table.userId, table.professionId),
     index('course_access_user_idx').on(table.userId),
+  ]
+);
+
+// ─── Friend Quests ───────────────────────────────────────��──────
+
+export const friendQuests = pgTable(
+  'friend_quests',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    questWeek: text('quest_week').notNull(), // ISO Monday date (e.g. "2026-04-06")
+    userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+    partnerId: text('partner_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+    questType: text('quest_type').notNull(), // 'combined_xp' | 'combined_lessons' | 'combined_accuracy'
+    target: integer('target').notNull(),
+    progressUser: integer('progress_user').notNull().default(0),
+    progressPartner: integer('progress_partner').notNull().default(0),
+    completed: boolean('completed').notNull().default(false),
+    rewardClaimed: boolean('reward_claimed').notNull().default(false),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    uniqueIndex('friend_quests_week_pair_idx').on(table.questWeek, table.userId, table.partnerId),
+    index('friend_quests_user_idx').on(table.userId),
+    index('friend_quests_partner_idx').on(table.partnerId),
+  ]
+);
+
+// ─── Activity Feed ──────────────────────────────────────────────
+
+export const activityFeed = pgTable(
+  'activity_feed',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+    type: text('type').notNull(), // 'streak_milestone' | 'lesson_complete' | 'course_complete' | 'level_up' | 'quest_complete'
+    data: jsonb('data'), // { streakDays?: number, lessonName?: string, level?: number, etc. }
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    index('activity_feed_user_idx').on(table.userId),
+    index('activity_feed_created_idx').on(table.createdAt),
+  ]
+);
+
+export const activityReactions = pgTable(
+  'activity_reactions',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    activityId: text('activity_id').notNull().references(() => activityFeed.id, { onDelete: 'cascade' }),
+    userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+    emoji: text('emoji').notNull().default('🙌'), // high-five emoji
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    uniqueIndex('activity_reactions_unique_idx').on(table.activityId, table.userId),
+    index('activity_reactions_activity_idx').on(table.activityId),
   ]
 );

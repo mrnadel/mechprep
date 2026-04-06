@@ -41,6 +41,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Space debris includes objects as small as paint flakes from old rockets.",
             correctAnswer: true,
             explanation: "Even tiny flakes travel at orbital speed and can damage spacecraft windows and solar panels.",
+            distractorExplanations: {
+              1: 'This statement is correct because even tiny flakes travel at orbital speed and can damage spacecraft windows and solar panels.',
+            },
           },
           {
             id: "sp-sec13-u6-L1-Q2",
@@ -54,6 +57,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Space surveillance networks track over 36,000 objects larger than 10 cm. Millions of smaller, untrackable fragments also exist.",
+            distractorExplanations: {
+              0: 'About 500 is incorrect; space surveillance networks track over 36,000 objects larger than 10 cm. Millions of smaller, untrackable fragments also exist.',
+              1: 'About 5,000 is incorrect; space surveillance networks track over 36,000 objects larger than 10 cm. Millions of smaller, untrackable fragments also exist.',
+              2: 'About 500,000 is incorrect; space surveillance networks track over 36,000 objects larger than 10 cm. Millions of smaller, untrackable fragments also exist.',
+            },
           },
           {
             id: "sp-sec13-u6-L1-T2",
@@ -99,6 +107,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The 700 to 1,000 km band is the most congested because atmospheric drag is too weak there to pull debris down quickly.",
+            distractorExplanations: {
+              1: '100 to 300 km is incorrect; the 700 to 1,000 km band is the most congested because atmospheric drag is too weak there to pull debris down quickly.',
+              2: '2,000 to 5,000 km is incorrect; the 700 to 1,000 km band is the most congested because atmospheric drag is too weak there to pull debris down quickly.',
+              3: '35,786 km (geostationary) is incorrect; the 700 to 1,000 km band is the most congested because atmospheric drag is too weak there to pull debris down quickly.',
+            },
           },
           {
             id: "sp-sec13-u6-L1-Q6",
@@ -113,6 +126,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Operators evaluate collision probability and plan avoidance burns when the risk exceeds a threshold. Immediate deorbit wastes fuel, and 200 meters is dangerously close at orbital speeds.",
+            distractorExplanations: {
+              1: 'Immediately deorbit the satellite to avoid all risk is incorrect; operators evaluate collision probability and plan avoidance burns when the risk exceeds a threshold. Immediate deorbit wastes fuel, and 200 meters is dangerously close at orbital speeds.',
+              2: 'Ignore the alert because 200 meters is far enough is incorrect; operators evaluate collision probability and plan avoidance burns when the risk exceeds a threshold. Immediate deorbit wastes fuel, and 200 meters is dangerously close at orbital speeds.',
+              3: 'Shut down all electronics to reduce damage if hit is incorrect; operators evaluate collision probability and plan avoidance burns when the risk exceeds a threshold. Immediate deorbit wastes fuel, and 200 meters is dangerously close at orbital speeds.',
+            },
           },
         ],
       },
@@ -137,6 +155,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Kessler syndrome describes a chain reaction where debris collisions create more debris, causing further collisions.",
             correctAnswer: true,
             explanation: "Each collision fragments objects into hundreds or thousands of new pieces, each capable of causing another collision.",
+            distractorExplanations: {
+              1: 'This statement is correct because each collision fragments objects into hundreds or thousands of new pieces, each capable of causing another collision.',
+            },
           },
           {
             id: "sp-sec13-u6-L2-Q2",
@@ -150,6 +171,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "NASA scientist Donald Kessler published his landmark paper on collisional cascading in 1978.",
+            distractorExplanations: {
+              1: 'Wernher von Braun is incorrect; nASA scientist Donald Kessler published his landmark paper on collisional cascading in 1978.',
+              2: 'Carl Sagan is incorrect; nASA scientist Donald Kessler published his landmark paper on collisional cascading in 1978.',
+              3: 'Elon Musk is incorrect; nASA scientist Donald Kessler published his landmark paper on collisional cascading in 1978.',
+            },
           },
           {
             id: "sp-sec13-u6-L2-T2",
@@ -217,6 +243,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The cascade is self-sustaining because collisions generate fragments faster than drag can remove them at those altitudes.",
+            distractorExplanations: {
+              1: 'Debris burns up too quickly to accumulate is incorrect; the cascade is self-sustaining because collisions generate fragments faster than drag can remove them at those altitudes.',
+              2: 'Satellites can always dodge debris automatically is incorrect; the cascade is self-sustaining because collisions generate fragments faster than drag can remove them at those altitudes.',
+              3: 'Gravity quickly pulls all fragments back to Earth is incorrect; the cascade is self-sustaining because collisions generate fragments faster than drag can remove them at those altitudes.',
+            },
           },
         ],
       },
@@ -241,6 +272,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Space debris can only be tracked using ground-based optical telescopes, not radar.",
             correctAnswer: false,
             explanation: "Both radar and optical telescopes are used. Radar works in any weather or lighting, while optical telescopes track objects by reflected sunlight.",
+            distractorExplanations: {
+              0: 'Both radar and optical telescopes are used. Radar works in any weather or lighting, while optical telescopes track objects by reflected sunlight.',
+            },
           },
           {
             id: "sp-sec13-u6-L3-Q2",
@@ -254,6 +288,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A conjunction is a predicted close approach. Conjunction data messages (CDMs) alert operators so they can assess collision probability.",
+            distractorExplanations: {
+              1: 'Two satellites docking together is incorrect; a conjunction is a predicted close approach. Conjunction data messages (CDMs) alert operators so they can assess collision probability.',
+              2: 'The moment a satellite enters orbit is incorrect; a conjunction is a predicted close approach. Conjunction data messages (CDMs) alert operators so they can assess collision probability.',
+              3: 'A planned collision for debris removal is incorrect; a conjunction is a predicted close approach. Conjunction data messages (CDMs) alert operators so they can assess collision probability.',
+            },
           },
           {
             id: "sp-sec13-u6-L3-T2",
@@ -302,6 +341,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Space-based sensors can detect fragments as small as 1 cm, filling a dangerous gap in ground-based coverage.",
+            distractorExplanations: {
+              1: 'They can physically capture debris is incorrect; space-based sensors can detect fragments as small as 1 cm, filling a dangerous gap in ground-based coverage.',
+              2: 'They only track geostationary satellites is incorrect; space-based sensors can detect fragments as small as 1 cm, filling a dangerous gap in ground-based coverage.',
+              3: 'They replace the need for avoidance maneuvers is incorrect; space-based sensors can detect fragments as small as 1 cm, filling a dangerous gap in ground-based coverage.',
+            },
           },
           {
             id: "sp-sec13-u6-L3-Q6",
@@ -316,6 +360,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Operators weigh collision probability against fuel cost. A 1-in-1,000 chance may or may not justify a burn depending on remaining fuel and mission requirements.",
+            distractorExplanations: {
+              1: 'The color of the debris fragment is incorrect; operators weigh collision probability against fuel cost. A 1-in-1,000 chance may or may not justify a burn depending on remaining fuel and mission requirements.',
+              2: 'Whether the fragment is from a known satellite is incorrect; operators weigh collision probability against fuel cost. A 1-in-1,000 chance may or may not justify a burn depending on remaining fuel and mission requirements.',
+              3: 'The time of day at your ground station is incorrect; operators weigh collision probability against fuel cost. A 1-in-1,000 chance may or may not justify a burn depending on remaining fuel and mission requirements.',
+            },
           },
         ],
       },
@@ -340,6 +389,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Current international guidelines recommend deorbiting satellites within 25 years of mission end.",
             correctAnswer: true,
             explanation: "The 25-year guideline was established by the Inter-Agency Space Debris Coordination Committee (IADC). Stricter rules are being proposed.",
+            distractorExplanations: {
+              1: 'This statement is correct because the 25-year guideline was established by the Inter-Agency Space Debris Coordination Committee (IADC). Stricter rules are being proposed.',
+            },
           },
           {
             id: "sp-sec13-u6-L4-Q2",
@@ -353,6 +405,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With thousands of new satellites launching each year, objects lingering for 25 years create unacceptable congestion in popular orbits.",
+            distractorExplanations: {
+              1: 'Satellite technology has improved enough to last 25 years is incorrect; with thousands of new satellites launching each year, objects lingering for 25 years create unacceptable congestion in popular orbits.',
+              2: 'No satellites currently comply with the 25-year rule is incorrect; with thousands of new satellites launching each year, objects lingering for 25 years create unacceptable congestion in popular orbits.',
+              3: '5 years is easier to enforce legally is incorrect; with thousands of new satellites launching each year, objects lingering for 25 years create unacceptable congestion in popular orbits.',
+            },
           },
           {
             id: "sp-sec13-u6-L4-T2",
@@ -389,6 +446,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Geostationary satellites can't practically reenter, so they're boosted about 300 km above GEO into a disposal orbit where they won't collide with active assets.",
+            distractorExplanations: {
+              1: 'To bring them closer to Earth for recovery is incorrect; geostationary satellites can\'t practically reenter, so they\'re boosted about 300 km above GEO into a disposal orbit where they won\'t collide with active assets.',
+              2: 'To speed up their atmospheric reentry is incorrect; geostationary satellites can\'t practically reenter, so they\'re boosted about 300 km above GEO into a disposal orbit where they won\'t collide with active assets.',
+              3: 'To park them behind the Moon is incorrect; geostationary satellites can\'t practically reenter, so they\'re boosted about 300 km above GEO into a disposal orbit where they won\'t collide with active assets.',
+            },
           },
           {
             id: "sp-sec13-u6-L4-T3",
@@ -422,6 +484,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Mandatory rapid deorbit for all new satellites prevents the problem from growing. Removing large objects helps, but without preventing new debris, the problem returns.",
+            distractorExplanations: {
+              0: 'Removing the 10 largest defunct objects from crowded orbits is incorrect; mandatory rapid deorbit for all new satellites prevents the problem from growing. Removing large objects helps, but without preventing new debris, the problem returns.',
+              1: 'Tracking all debris down to 1 mm in size is incorrect; mandatory rapid deorbit for all new satellites prevents the problem from growing. Removing large objects helps, but without preventing new debris, the problem returns.',
+              2: 'Banning all future launches until debris is cleaned up is incorrect; mandatory rapid deorbit for all new satellites prevents the problem from growing. Removing large objects helps, but without preventing new debris, the problem returns.',
+            },
           },
         ],
       },
@@ -446,6 +513,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "A mega-constellation typically contains fewer than 50 satellites.",
             correctAnswer: false,
             explanation: "Mega-constellations contain hundreds to thousands of satellites. Starlink alone plans over 12,000.",
+            distractorExplanations: {
+              0: 'Mega-constellations contain hundreds to thousands of satellites. Starlink alone plans over 12,000.',
+            },
           },
           {
             id: "sp-sec13-u6-L5-Q2",
@@ -476,6 +546,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Doubling the satellite count more than doubles the number of possible close encounters because every satellite can approach every other one.",
+            distractorExplanations: {
+              1: 'More satellites orbit faster is incorrect; doubling the satellite count more than doubles the number of possible close encounters because every satellite can approach every other one.',
+              2: 'Larger satellites are harder to track is incorrect; doubling the satellite count more than doubles the number of possible close encounters because every satellite can approach every other one.',
+              3: 'Constellation satellites don\'t carry propulsion is incorrect; doubling the satellite count more than doubles the number of possible close encounters because every satellite can approach every other one.',
+            },
           },
           {
             id: "sp-sec13-u6-L5-Q4",
@@ -511,6 +586,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "International debris guidelines are voluntary. National licensing varies, and enforcement is limited, leaving a significant governance gap.",
+            distractorExplanations: {
+              1: 'No technology exists to track these satellites is incorrect; international debris guidelines are voluntary. National licensing varies, and enforcement is limited, leaving a significant governance gap.',
+              2: 'Constellations operate outside any nation\'s jurisdiction is incorrect; international debris guidelines are voluntary. National licensing varies, and enforcement is limited, leaving a significant governance gap.',
+              3: 'Satellites are too small to cause damage is incorrect; international debris guidelines are voluntary. National licensing varies, and enforcement is limited, leaving a significant governance gap.',
+            },
           },
           {
             id: "sp-sec13-u6-L5-Q6",
@@ -525,6 +605,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Active deorbit within 5 years is the emerging standard. Graveyard orbits are for GEO, not LEO. Solar pressure alone is far too weak for timely disposal.",
+            distractorExplanations: {
+              0: 'Leave satellites in orbit since they\'re small enough to a... is incorrect; active deorbit within 5 years is the emerging standard. Graveyard orbits are for GEO, not LEO. Solar pressure alone is far too weak for timely disposal.',
+              1: 'Boost all satellites to a graveyard orbit at 36,000 km is incorrect; active deorbit within 5 years is the emerging standard. Graveyard orbits are for GEO, not LEO. Solar pressure alone is far too weak for timely disposal.',
+              2: 'Rely on solar radiation pressure to slowly push them down is incorrect; active deorbit within 5 years is the emerging standard. Graveyard orbits are for GEO, not LEO. Solar pressure alone is far too weak for timely disposal.',
+            },
           },
         ],
       },
@@ -565,6 +650,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Manufacturing in space can reduce costs by avoiding the expense of launching heavy parts from Earth.",
             correctAnswer: true,
             explanation: "Every kilogram not launched saves thousands of dollars. Building structures in orbit from local materials is a major cost-reduction strategy.",
+            distractorExplanations: {
+              1: 'This statement is correct because every kilogram not launched saves thousands of dollars. Building structures in orbit from local materials is a major cost-reduction strategy.',
+            },
           },
           {
             id: "sp-sec13-u7-L1-Q2",
@@ -578,6 +666,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Launch costs dominate space budgets. Manufacturing in space bypasses this bottleneck entirely for structures that don't need to leave orbit.",
+            distractorExplanations: {
+              1: 'Space factories use less electricity is incorrect; launch costs dominate space budgets. Manufacturing in space bypasses this bottleneck entirely for structures that don\'t need to leave orbit.',
+              2: 'Workers in space are more productive is incorrect; launch costs dominate space budgets. Manufacturing in space bypasses this bottleneck entirely for structures that don\'t need to leave orbit.',
+              3: 'Raw materials are free in space is incorrect; launch costs dominate space budgets. Manufacturing in space bypasses this bottleneck entirely for structures that don\'t need to leave orbit.',
+            },
           },
           {
             id: "sp-sec13-u7-L1-T2",
@@ -627,6 +720,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Rocket fairings have size limits. Structures larger than the fairing must be assembled or manufactured directly in orbit.",
+            distractorExplanations: {
+              1: 'Earth\'s atmosphere would corrode it during ascent is incorrect; rocket fairings have size limits. Structures larger than the fairing must be assembled or manufactured directly in orbit.',
+              2: 'Microgravity is needed to keep it from collapsing is incorrect; rocket fairings have size limits. Structures larger than the fairing must be assembled or manufactured directly in orbit.',
+              3: 'Launch vibrations would make it stronger is incorrect; rocket fairings have size limits. Structures larger than the fairing must be assembled or manufactured directly in orbit.',
+            },
           },
           {
             id: "sp-sec13-u7-L1-Q6",
@@ -641,6 +739,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A 200-meter structure cannot fold into a 5-meter fairing. In-space manufacturing or assembly is the practical solution for structures this large.",
+            distractorExplanations: {
+              1: 'Design a smaller antenna that fits inside the fairing is incorrect; a 200-meter structure cannot fold into a 5-meter fairing. In-space manufacturing or assembly is the practical solution for structures this large.',
+              2: 'Launch the reflector folded and hope it deploys correctly is incorrect; a 200-meter structure cannot fold into a 5-meter fairing. In-space manufacturing or assembly is the practical solution for structures this large.',
+              3: 'Use multiple smaller rockets launched simultaneously is incorrect; a 200-meter structure cannot fold into a 5-meter fairing. In-space manufacturing or assembly is the practical solution for structures this large.',
+            },
           },
         ],
       },
@@ -665,6 +768,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "The first 3D printer sent to the ISS failed because microgravity prevented the layers from bonding.",
             correctAnswer: false,
             explanation: "The first ISS 3D printer succeeded. It printed a functional ratchet wrench in 2014, proving additive manufacturing works in microgravity.",
+            distractorExplanations: {
+              0: 'The first ISS 3D printer succeeded. It printed a functional ratchet wrench in 2014, proving additive manufacturing works in microgravity.',
+            },
           },
           {
             id: "sp-sec13-u7-L2-Q2",
@@ -678,6 +784,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Made In Space printed a ratchet wrench on the ISS in 2014 as a proof of concept for on-demand tool manufacturing.",
+            distractorExplanations: {
+              1: 'A solar panel bracket is incorrect; made In Space printed a ratchet wrench on the ISS in 2014 as a proof of concept for on-demand tool manufacturing.',
+              2: 'A camera lens is incorrect; made In Space printed a ratchet wrench on the ISS in 2014 as a proof of concept for on-demand tool manufacturing.',
+              3: 'An oxygen filter is incorrect; made In Space printed a ratchet wrench on the ISS in 2014 as a proof of concept for on-demand tool manufacturing.',
+            },
           },
           {
             id: "sp-sec13-u7-L2-T2",
@@ -706,6 +817,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without convection, fumes linger around the printer and in the cabin. Enclosed chambers with filtration systems are essential for crew safety.",
+            distractorExplanations: {
+              1: 'Space radiation makes fumes explosive is incorrect; without convection, fumes linger around the printer and in the cabin. Enclosed chambers with filtration systems are essential for crew safety.',
+              2: 'The vacuum of space pulls fumes through the hull is incorrect; without convection, fumes linger around the printer and in the cabin. Enclosed chambers with filtration systems are essential for crew safety.',
+              3: '3D printers generate toxic gases only in space is incorrect; without convection, fumes linger around the printer and in the cabin. Enclosed chambers with filtration systems are essential for crew safety.',
+            },
           },
           {
             id: "sp-sec13-u7-L2-T3",
@@ -761,6 +877,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Space 3D printers are limited to printing only plastic parts.",
             correctAnswer: false,
             explanation: "Modern space-rated printers can process metals, ceramics, and even regolith. Metal printing enables structural and load-bearing parts.",
+            distractorExplanations: {
+              0: 'Modern space-rated printers can process metals, ceramics, and even regolith. Metal printing enables structural and load-bearing parts.',
+            },
           },
           {
             id: "sp-sec13-u7-L3-Q2",
@@ -794,6 +913,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "EBF3 feeds metal wire into a focused electron beam, melting it and depositing each layer precisely. It works well in vacuum.",
+            distractorExplanations: {
+              1: 'It presses metal powder into molds at high pressure is incorrect; eBF3 feeds metal wire into a focused electron beam, melting it and depositing each layer precisely. It works well in vacuum.',
+              2: 'It chemically bonds metal atoms from a gas is incorrect; eBF3 feeds metal wire into a focused electron beam, melting it and depositing each layer precisely. It works well in vacuum.',
+              3: 'It cools liquid metal in a centrifuge is incorrect; eBF3 feeds metal wire into a focused electron beam, melting it and depositing each layer precisely. It works well in vacuum.',
+            },
           },
           {
             id: "sp-sec13-u7-L3-Q4",
@@ -838,6 +962,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Structural beams need to bear significant loads. Metal printing provides the necessary strength, while polymer and raw regolith lack adequate structural properties.",
+            distractorExplanations: {
+              1: 'Print with recycled polymer since it\'s fastest is incorrect; structural beams need to bear significant loads. Metal printing provides the necessary strength, while polymer and raw regolith lack adequate structural properties.',
+              2: 'Pack raw regolith into beam shapes and let it dry is incorrect; structural beams need to bear significant loads. Metal printing provides the necessary strength, while polymer and raw regolith lack adequate structural properties.',
+              3: 'Order beams from Earth on the next supply mission is incorrect; structural beams need to bear significant loads. Metal printing provides the necessary strength, while polymer and raw regolith lack adequate structural properties.',
+            },
           },
         ],
       },
@@ -863,6 +992,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "ZBLAN optical fiber made in microgravity has fewer defects than fiber made on Earth.",
             correctAnswer: true,
             explanation: "Gravity causes microcrystals to form during ZBLAN production on Earth. In microgravity, the fiber solidifies without these defects.",
+            distractorExplanations: {
+              1: 'This statement is correct because gravity causes microcrystals to form during ZBLAN production on Earth. In microgravity, the fiber solidifies without these defects.',
+            },
           },
           {
             id: "sp-sec13-u7-L4-Q2",
@@ -876,6 +1008,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "ZBLAN is light and extremely valuable when defect-free. The high value-to-mass ratio makes it economical to manufacture in orbit and return to Earth.",
+            distractorExplanations: {
+              0: 'It\'s very heavy, so it\'s cheap to launch is incorrect; zBLAN is light and extremely valuable when defect-free. The high value-to-mass ratio makes it economical to manufacture in orbit and return to Earth.',
+              1: 'It\'s used exclusively for space communications is incorrect; zBLAN is light and extremely valuable when defect-free. The high value-to-mass ratio makes it economical to manufacture in orbit and return to Earth.',
+              2: 'ZBLAN can only exist in a vacuum is incorrect; zBLAN is light and extremely valuable when defect-free. The high value-to-mass ratio makes it economical to manufacture in orbit and return to Earth.',
+            },
           },
           {
             id: "sp-sec13-u7-L4-T2",
@@ -895,6 +1032,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "On Earth, gravity causes soft biological structures to sag and deform during printing. Microgravity lets them maintain their shape until they solidify.",
+            distractorExplanations: {
+              0: 'Cells grow faster without gravity is incorrect; on Earth, gravity causes soft biological structures to sag and deform during printing. Microgravity lets them maintain their shape until they solidify.',
+              1: 'Radiation in space sterilizes the printed organs is incorrect; on Earth, gravity causes soft biological structures to sag and deform during printing. Microgravity lets them maintain their shape until they solidify.',
+              2: 'The ISS has a sterile environment is incorrect; on Earth, gravity causes soft biological structures to sag and deform during printing. Microgravity lets them maintain their shape until they solidify.',
+            },
           },
           {
             id: "sp-sec13-u7-L4-Q4",
@@ -938,6 +1080,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "ZBLAN checks all boxes: extremely high value per kilogram, low mass for return, and significantly better quality when made in microgravity.",
+            distractorExplanations: {
+              0: 'Steel construction beams (heavy, low value per kg) is incorrect; zBLAN checks all boxes: extremely high value per kilogram, low mass for return, and significantly better quality when made in microgravity.',
+              1: 'Semiconductor wafers (high value, can be made on Earth) is incorrect; zBLAN checks all boxes: extremely high value per kilogram, low mass for return, and significantly better quality when made in microgravity.',
+              3: 'Drinking water (essential but heavy and cheap) is incorrect; zBLAN checks all boxes: extremely high value per kilogram, low mass for return, and significantly better quality when made in microgravity.',
+            },
           },
         ],
       },
@@ -962,6 +1109,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "ISRU requires all building materials to be launched from Earth to the construction site.",
             correctAnswer: false,
             explanation: "ISRU (in-situ resource utilization) is the opposite: it means using materials found at the destination, like lunar regolith, to avoid launch costs.",
+            distractorExplanations: {
+              0: 'ISRU (in-situ resource utilization) is the opposite: it means using materials found at the destination, like lunar regolith, to avoid launch costs.',
+            },
           },
           {
             id: "sp-sec13-u7-L5-Q2",
@@ -975,6 +1125,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The primary benefit is avoiding launch costs. Lunar regolith is abundant on-site and can be processed into construction-grade material.",
+            distractorExplanations: {
+              0: 'Regolith is lighter than any Earth material is incorrect; the primary benefit is avoiding launch costs. Lunar regolith is abundant on-site and can be processed into construction-grade material.',
+              1: 'Regolith is already in brick-like shapes is incorrect; the primary benefit is avoiding launch costs. Lunar regolith is abundant on-site and can be processed into construction-grade material.',
+              2: 'Lunar regolith is stronger than steel is incorrect; the primary benefit is avoiding launch costs. Lunar regolith is abundant on-site and can be processed into construction-grade material.',
+            },
           },
           {
             id: "sp-sec13-u7-L5-T2",
@@ -1041,6 +1196,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A regolith shell provides radiation and micrometeorite protection while using abundant local materials. This reduces long-term dependence on Earth launches.",
+            distractorExplanations: {
+              0: 'The fully imported inflatable, because it\'s faster to deploy is incorrect; a regolith shell provides radiation and micrometeorite protection while using abundant local materials. This reduces long-term dependence on Earth launches.',
+              1: 'Use underground lava tubes instead, since printing techno... is incorrect; a regolith shell provides radiation and micrometeorite protection while using abundant local materials. This reduces long-term dependence on Earth launches.',
+              2: 'Neither approach works without Earth-based construction c... is incorrect; a regolith shell provides radiation and micrometeorite protection while using abundant local materials. This reduces long-term dependence on Earth launches.',
+            },
           },
         ],
       },
@@ -1081,6 +1241,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Space tourism vehicles must be designed for passengers with little or no astronaut training.",
             correctAnswer: true,
             explanation: "Unlike professional astronauts, tourists may have minimal training. Vehicle design must compensate with automation, safety systems, and comfort features.",
+            distractorExplanations: {
+              1: 'This statement is correct because unlike professional astronauts, tourists may have minimal training. Vehicle design must compensate with automation, safety systems, and comfort features.',
+            },
           },
           {
             id: "sp-sec13-u8-L1-Q2",
@@ -1094,6 +1257,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Astronauts can manage complex systems manually. Tourist vehicles need extensive automation so passengers don't need to operate anything.",
+            distractorExplanations: {
+              0: 'Tourists need faster engines is incorrect; astronauts can manage complex systems manually. Tourist vehicles need extensive automation so passengers don\'t need to operate anything.',
+              1: 'Tourists prefer rockets without windows is incorrect; astronauts can manage complex systems manually. Tourist vehicles need extensive automation so passengers don\'t need to operate anything.',
+              2: 'Tourist vehicles don\'t need life support is incorrect; astronauts can manage complex systems manually. Tourist vehicles need extensive automation so passengers don\'t need to operate anything.',
+            },
           },
           {
             id: "sp-sec13-u8-L1-T2",
@@ -1146,6 +1314,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Professional astronauts accept significant risk as part of their job. Paying passengers expect risk levels much closer to commercial airline travel.",
+            distractorExplanations: {
+              0: 'Tourists weigh more than astronauts is incorrect; professional astronauts accept significant risk as part of their job. Paying passengers expect risk levels much closer to commercial airline travel.',
+              1: 'Astronauts don\'t need life support systems is incorrect; professional astronauts accept significant risk as part of their job. Paying passengers expect risk levels much closer to commercial airline travel.',
+              2: 'Tourist vehicles travel faster is incorrect; professional astronauts accept significant risk as part of their job. Paying passengers expect risk levels much closer to commercial airline travel.',
+            },
           },
           {
             id: "sp-sec13-u8-L1-Q6",
@@ -1178,6 +1351,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "At 3g, your body feels three times lighter than normal.",
             correctAnswer: false,
             explanation: "At 3g, you feel three times heavier, not lighter. A 70 kg person would feel as though they weigh 210 kg.",
+            distractorExplanations: {
+              0: 'At 3g, you feel three times heavier, not lighter. A 70 kg person would feel as though they weigh 210 kg.',
+            },
           },
           {
             id: "sp-sec13-u8-L2-Q2",
@@ -1191,6 +1367,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Tourist vehicles typically limit peak g-forces to about 3 to 4g during launch. Fighter pilots endure more, but untrained passengers need lower limits.",
+            distractorExplanations: {
+              0: '0.5g is incorrect; tourist vehicles typically limit peak g-forces to about 3 to 4g during launch. Fighter pilots endure more, but untrained passengers need lower limits.',
+              1: '1g (same as standing on Earth) is incorrect; tourist vehicles typically limit peak g-forces to about 3 to 4g during launch. Fighter pilots endure more, but untrained passengers need lower limits.',
+              3: '10 to 12g is incorrect; tourist vehicles typically limit peak g-forces to about 3 to 4g during launch. Fighter pilots endure more, but untrained passengers need lower limits.',
+            },
           },
           {
             id: "sp-sec13-u8-L2-T2",
@@ -1211,6 +1392,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "When reclined, g-forces push you into the seat across your back rather than compressing your spine from head to toe.",
+            distractorExplanations: {
+              0: 'Reclined seats save weight is incorrect; when reclined, g-forces push you into the seat across your back rather than compressing your spine from head to toe.',
+              1: 'They let passengers see out the windows better is incorrect; when reclined, g-forces push you into the seat across your back rather than compressing your spine from head to toe.',
+              3: 'It\'s easier to reach control panels while reclined is incorrect; when reclined, g-forces push you into the seat across your back rather than compressing your spine from head to toe.',
+            },
           },
           {
             id: "sp-sec13-u8-L2-Q4",
@@ -1256,6 +1442,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Anti-nausea medication and visual horizon references help the brain reconcile conflicting sensory inputs, reducing motion sickness without major vehicle redesign.",
+            distractorExplanations: {
+              0: 'Remove windows so passengers can\'t see they\'re floating is incorrect; anti-nausea medication and visual horizon references help the brain reconcile conflicting sensory inputs, reducing motion sickness without major vehicle redesign.',
+              1: 'Spin the capsule to create artificial gravity is incorrect; anti-nausea medication and visual horizon references help the brain reconcile conflicting sensory inputs, reducing motion sickness without major vehicle redesign.',
+              3: 'Reduce the flight duration to under 30 seconds is incorrect; anti-nausea medication and visual horizon references help the brain reconcile conflicting sensory inputs, reducing motion sickness without major vehicle redesign.',
+            },
           },
         ],
       },
@@ -1280,6 +1471,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Suborbital tourist vehicles use stored oxygen rather than regenerative life support.",
             correctAnswer: true,
             explanation: "For flights lasting minutes, carrying tanks of oxygen and using chemical scrubbers is simpler and lighter than recycling systems designed for months-long missions.",
+            distractorExplanations: {
+              1: 'This statement is correct because for flights lasting minutes, carrying tanks of oxygen and using chemical scrubbers is simpler and lighter than recycling systems designed for months-long missions.',
+            },
           },
           {
             id: "sp-sec13-u8-L3-Q2",
@@ -1315,6 +1509,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Sea-level pressure means passengers don't need pressure suits during normal flight, improving comfort for untrained civilians.",
+            distractorExplanations: {
+              0: 'Zero pressure (vacuum) is incorrect; sea-level pressure means passengers don\'t need pressure suits during normal flight, improving comfort for untrained civilians.',
+              1: 'About 50 kPa (like high altitude) is incorrect; sea-level pressure means passengers don\'t need pressure suits during normal flight, improving comfort for untrained civilians.',
+              3: 'About 200 kPa (double sea level) is incorrect; sea-level pressure means passengers don\'t need pressure suits during normal flight, improving comfort for untrained civilians.',
+            },
           },
           {
             id: "sp-sec13-u8-L3-Q4",
@@ -1342,6 +1541,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The abort system fires small rockets to pull the crew capsule away from a failing launch vehicle, carrying passengers to safety.",
+            distractorExplanations: {
+              0: 'Reduces engine power to slow the rocket is incorrect; the abort system fires small rockets to pull the crew capsule away from a failing launch vehicle, carrying passengers to safety.',
+              1: 'Shuts down all onboard computers is incorrect; the abort system fires small rockets to pull the crew capsule away from a failing launch vehicle, carrying passengers to safety.',
+              2: 'Deploys parachutes immediately after liftoff is incorrect; the abort system fires small rockets to pull the crew capsule away from a failing launch vehicle, carrying passengers to safety.',
+            },
           },
           {
             id: "sp-sec13-u8-L3-Q6",
@@ -1380,6 +1584,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Commercial space stations for tourists require only oxygen and water systems.",
             correctAnswer: false,
             explanation: "Space hotels need complete life support including oxygen, CO2 removal, water recycling, temperature control, waste management, food, and sleeping quarters.",
+            distractorExplanations: {
+              0: 'Space hotels need complete life support including oxygen, CO2 removal, water recycling, temperature control, waste management, food, and sleeping quarters.',
+            },
           },
           {
             id: "sp-sec13-u8-L4-Q2",
@@ -1393,6 +1600,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Paying guests expect comfort levels closer to a hotel than a military outpost. This means better food, private sleeping areas, large windows, and entertainment.",
+            distractorExplanations: {
+              0: 'Tourists don\'t need to eat is incorrect; paying guests expect comfort levels closer to a hotel than a military outpost. This means better food, private sleeping areas, large windows, and entertainment.',
+              1: 'Tourist stations orbit at higher altitudes is incorrect; paying guests expect comfort levels closer to a hotel than a military outpost. This means better food, private sleeping areas, large windows, and entertainment.',
+              2: 'Professional astronauts don\'t experience microgravity is incorrect; paying guests expect comfort levels closer to a hotel than a military outpost. This means better food, private sleeping areas, large windows, and entertainment.',
+            },
           },
           {
             id: "sp-sec13-u8-L4-T2",
@@ -1441,6 +1653,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Without gravity, water forms floating blobs. Showers need enclosed stalls with airflow or suction systems to direct water toward drains.",
+            distractorExplanations: {
+              0: 'Water freezes instantly in space is incorrect; without gravity, water forms floating blobs. Showers need enclosed stalls with airflow or suction systems to direct water toward drains.',
+              1: 'Space stations don\'t have plumbing is incorrect; without gravity, water forms floating blobs. Showers need enclosed stalls with airflow or suction systems to direct water toward drains.',
+              2: 'Soap doesn\'t lather in microgravity is incorrect; without gravity, water forms floating blobs. Showers need enclosed stalls with airflow or suction systems to direct water toward drains.',
+            },
           },
           {
             id: "sp-sec13-u8-L4-Q6",
@@ -1455,6 +1672,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Surveys show Earth observation is the primary draw for space tourists. Large windows deliver the core experience. Artificial gravity can be added in later modules.",
+            distractorExplanations: {
+              0: 'Artificial gravity, since tourists need Earth-like condit... is incorrect; surveys show Earth observation is the primary draw for space tourists. Large windows deliver the core experience. Artificial gravity can be added in later modules.',
+              1: 'Cancel the project since both features are required is incorrect; surveys show Earth observation is the primary draw for space tourists. Large windows deliver the core experience. Artificial gravity can be added in later modules.',
+              2: 'Neither feature matters since the module will be too smal... is incorrect; surveys show Earth observation is the primary draw for space tourists. Large windows deliver the core experience. Artificial gravity can be added in later modules.',
+            },
           },
         ],
       },
@@ -1479,6 +1701,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "The FAA's Office of Commercial Space Transportation licenses commercial launch and reentry operations in the US.",
             correctAnswer: true,
             explanation: "The FAA-AST issues licenses for commercial launches and reentries, ensuring public safety during operations.",
+            distractorExplanations: {
+              1: 'This statement is correct because the FAA-AST issues licenses for commercial launches and reentries, ensuring public safety during operations.',
+            },
           },
           {
             id: "sp-sec13-u8-L5-Q2",
@@ -1492,6 +1717,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Congress imposed a moratorium on passenger safety regulations to let the industry innovate. This learning period has been extended multiple times.",
+            distractorExplanations: {
+              0: 'No agency has jurisdiction over space is incorrect; congress imposed a moratorium on passenger safety regulations to let the industry innovate. This learning period has been extended multiple times.',
+              1: 'Space tourism is too dangerous to regulate is incorrect; congress imposed a moratorium on passenger safety regulations to let the industry innovate. This learning period has been extended multiple times.',
+              2: 'Tourists sign waivers that remove all government responsi... is incorrect; congress imposed a moratorium on passenger safety regulations to let the industry innovate. This learning period has been extended multiple times.',
+            },
           },
           {
             id: "sp-sec13-u8-L5-T2",
@@ -1553,6 +1783,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Reusability is the single biggest factor in reducing launch cost. Just as reusable aircraft made air travel affordable, reusable rockets are the key to accessible space tourism.",
+            distractorExplanations: {
+              0: 'Building larger launch facilities is incorrect; reusability is the single biggest factor in reducing launch cost. Just as reusable aircraft made air travel affordable, reusable rockets are the key to accessible space tourism.',
+              1: 'Government subsidies for ticket prices is incorrect; reusability is the single biggest factor in reducing launch cost. Just as reusable aircraft made air travel affordable, reusable rockets are the key to accessible space tourism.',
+              2: 'Longer flight durations to improve value for money is incorrect; reusability is the single biggest factor in reducing launch cost. Just as reusable aircraft made air travel affordable, reusable rockets are the key to accessible space tourism.',
+            },
           },
         ],
       },
@@ -1593,6 +1828,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Chemical rockets are limited for deep space travel partly because they must carry enormous amounts of fuel.",
             correctAnswer: true,
             explanation: "The rocket equation means each additional kilogram of payload requires disproportionately more fuel, making long missions with heavy payloads extremely challenging.",
+            distractorExplanations: {
+              1: 'This statement is correct because the rocket equation means each additional kilogram of payload requires disproportionately more fuel, making long missions with heavy payloads extremely challenging.',
+            },
           },
           {
             id: "sp-sec13-u9-L1-Q2",
@@ -1606,6 +1844,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Specific impulse measures fuel efficiency. Higher Isp means more thrust per kilogram of propellant consumed, which translates to longer or faster missions.",
+            distractorExplanations: {
+              0: 'How loud a rocket engine is is incorrect; specific impulse measures fuel efficiency. Higher Isp means more thrust per kilogram of propellant consumed, which translates to longer or faster missions.',
+              1: 'How much thrust a rocket produces is incorrect; specific impulse measures fuel efficiency. Higher Isp means more thrust per kilogram of propellant consumed, which translates to longer or faster missions.',
+              2: 'The maximum speed a rocket can reach is incorrect; specific impulse measures fuel efficiency. Higher Isp means more thrust per kilogram of propellant consumed, which translates to longer or faster missions.',
+            },
           },
           {
             id: "sp-sec13-u9-L1-T2",
@@ -1672,6 +1915,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Ion engines produce tiny thrust (often less than 1 Newton). Overcoming Earth's gravity requires millions of Newtons. Ion engines are only useful once already in space.",
+            distractorExplanations: {
+              0: 'Ion engines don\'t work in an atmosphere is incorrect; ion engines produce tiny thrust (often less than 1 Newton). Overcoming Earth\'s gravity requires millions of Newtons. Ion engines are only useful once already in space.',
+              1: 'Ion engines produce no exhaust is incorrect; ion engines produce tiny thrust (often less than 1 Newton). Overcoming Earth\'s gravity requires millions of Newtons. Ion engines are only useful once already in space.',
+              2: 'They can only operate in sunlight is incorrect; ion engines produce tiny thrust (often less than 1 Newton). Overcoming Earth\'s gravity requires millions of Newtons. Ion engines are only useful once already in space.',
+            },
           },
         ],
       },
@@ -1696,6 +1944,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Ion engines work by burning ionized gas in a combustion chamber, similar to chemical rockets.",
             correctAnswer: false,
             explanation: "Ion engines don't burn anything. They ionize gas and accelerate the ions using electric fields. There's no combustion involved.",
+            distractorExplanations: {
+              0: 'Ion engines don\'t burn anything. They ionize gas and accelerate the ions using electric fields. There\'s no combustion involved.',
+            },
           },
           {
             id: "sp-sec13-u9-L2-Q2",
@@ -1723,6 +1974,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Dawn needed to orbit Vesta, leave, and then travel to orbit Ceres. The total delta-v required was only achievable with the high efficiency of ion propulsion.",
+            distractorExplanations: {
+              0: 'Chemical engines couldn\'t survive the asteroid belt is incorrect; dawn needed to orbit Vesta, leave, and then travel to orbit Ceres. The total delta-v required was only achievable with the high efficiency of ion propulsion.',
+              1: 'Dawn needed to reach light speed is incorrect; dawn needed to orbit Vesta, leave, and then travel to orbit Ceres. The total delta-v required was only achievable with the high efficiency of ion propulsion.',
+              2: 'The asteroids had gravity too weak for chemical braking is incorrect; dawn needed to orbit Vesta, leave, and then travel to orbit Ceres. The total delta-v required was only achievable with the high efficiency of ion propulsion.',
+            },
           },
           {
             id: "sp-sec13-u9-L2-Q4",
@@ -1770,6 +2026,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A 6-month slow transfer doesn't need high thrust. Electric propulsion provides the efficiency to move heavy cargo with minimal fuel, which is ideal for this mission.",
+            distractorExplanations: {
+              0: 'Chemical engine for maximum speed is incorrect; a 6-month slow transfer doesn\'t need high thrust. Electric propulsion provides the efficiency to move heavy cargo with minimal fuel, which is ideal for this mission.',
+              1: 'Cold gas thruster for minimal cost is incorrect; a 6-month slow transfer doesn\'t need high thrust. Electric propulsion provides the efficiency to move heavy cargo with minimal fuel, which is ideal for this mission.',
+              2: 'Solid rocket booster for simplicity is incorrect; a 6-month slow transfer doesn\'t need high thrust. Electric propulsion provides the efficiency to move heavy cargo with minimal fuel, which is ideal for this mission.',
+            },
           },
         ],
       },
@@ -1794,6 +2055,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Solar sails generate thrust by capturing and absorbing sunlight, converting it into heat energy for propulsion.",
             correctAnswer: false,
             explanation: "Solar sails use reflection, not absorption. Photons bounce off the reflective surface, transferring momentum. The sail doesn't convert light to heat for thrust.",
+            distractorExplanations: {
+              0: 'Solar sails use reflection, not absorption. Photons bounce off the reflective surface, transferring momentum. The sail doesn\'t convert light to heat for thrust.',
+            },
           },
           {
             id: "sp-sec13-u9-L3-Q2",
@@ -1807,6 +2071,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Solar sails need no fuel. As long as sunlight hits the sail, the spacecraft accelerates. This means unlimited delta-v over time.",
+            distractorExplanations: {
+              0: 'It produces the highest thrust of any engine is incorrect; solar sails need no fuel. As long as sunlight hits the sail, the spacecraft accelerates. This means unlimited delta-v over time.',
+              1: 'It can change direction instantly is incorrect; solar sails need no fuel. As long as sunlight hits the sail, the spacecraft accelerates. This means unlimited delta-v over time.',
+              2: 'It works best in deep space far from the Sun is incorrect; solar sails need no fuel. As long as sunlight hits the sail, the spacecraft accelerates. This means unlimited delta-v over time.',
+            },
           },
           {
             id: "sp-sec13-u9-L3-T2",
@@ -1827,6 +2096,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Japan's IKAROS launched in 2010 and successfully used solar radiation pressure to accelerate during its flight toward Venus.",
+            distractorExplanations: {
+              0: 'Voyager 1 is incorrect; japan\'s IKAROS launched in 2010 and successfully used solar radiation pressure to accelerate during its flight toward Venus.',
+              2: 'New Horizons is incorrect; japan\'s IKAROS launched in 2010 and successfully used solar radiation pressure to accelerate during its flight toward Venus.',
+              3: 'Parker Solar Probe is incorrect; japan\'s IKAROS launched in 2010 and successfully used solar radiation pressure to accelerate during its flight toward Venus.',
+            },
           },
           {
             id: "sp-sec13-u9-L3-Q4",
@@ -1886,6 +2160,11 @@ export const spaceSection13Part2: Unit[] = [
             type: "teaching",
             question: "Nuclear thermal propulsion (NTP)",
             explanation: "NTP uses a nuclear reactor to heat hydrogen to extreme temperatures, then expels it through a nozzle. It achieves about twice the Isp of chemical rockets (800 to 900 seconds) with significant thrust.",
+            distractorExplanations: {
+              0: 'Sail directly away from the Sun for continuous acceleration is incorrect; a \\.',
+              2: 'Solar sails can\'t work beyond Jupiter\'s orbit is incorrect; a \\.',
+              3: 'Use the sail to brake and stop at 200 AU is incorrect; a \\.',
+            },
           },
           {
             id: "sp-sec13-u9-L4-Q1",
@@ -1893,6 +2172,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Nuclear thermal propulsion works by detonating small nuclear explosions behind the spacecraft.",
             correctAnswer: false,
             explanation: "That describes nuclear pulse propulsion (Project Orion). Nuclear thermal propulsion uses a reactor to heat hydrogen, which is then expelled through a nozzle.",
+            distractorExplanations: {
+              0: 'That describes nuclear pulse propulsion (Project Orion). Nuclear thermal propulsion uses a reactor to heat hydrogen, which is then expelled through a nozzle.',
+            },
           },
           {
             id: "sp-sec13-u9-L4-Q2",
@@ -1940,6 +2222,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "NTP's higher efficiency could reduce Mars transit from 7 months to about 3 to 4 months, significantly reducing crew radiation exposure and life support requirements.",
+            distractorExplanations: {
+              0: 'Mars has no atmosphere for aerobraking is incorrect; nTP\'s higher efficiency could reduce Mars transit from 7 months to about 3 to 4 months, significantly reducing crew radiation exposure and life support requirements.',
+              2: 'Chemical rockets can\'t reach Mars orbit at all is incorrect; nTP\'s higher efficiency could reduce Mars transit from 7 months to about 3 to 4 months, significantly reducing crew radiation exposure and life support requirements.',
+              3: 'Nuclear engines work better in cold environments is incorrect; nTP\'s higher efficiency could reduce Mars transit from 7 months to about 3 to 4 months, significantly reducing crew radiation exposure and life support requirements.',
+            },
           },
           {
             id: "sp-sec13-u9-L4-T3",
@@ -1992,6 +2279,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Breakthrough Starshot plans to use onboard nuclear reactors to propel probes to another star.",
             correctAnswer: false,
             explanation: "Breakthrough Starshot uses ground-based lasers, not onboard reactors. The laser array pushes gram-scale probes with light sails to about 20% of light speed.",
+            distractorExplanations: {
+              0: 'Breakthrough Starshot uses ground-based lasers, not onboard reactors. The laser array pushes gram-scale probes with light sails to about 20% of light speed.',
+            },
           },
           {
             id: "sp-sec13-u9-L5-Q2",
@@ -2005,6 +2295,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A laser beam stays focused over long distances, delivering far more energy per square meter than diffuse sunlight, especially far from the Sun.",
+            distractorExplanations: {
+              0: 'Lasers produce less heat is incorrect; a laser beam stays focused over long distances, delivering far more energy per square meter than diffuse sunlight, especially far from the Sun.',
+              2: 'Laser sails don\'t need to be reflective is incorrect; a laser beam stays focused over long distances, delivering far more energy per square meter than diffuse sunlight, especially far from the Sun.',
+              3: 'Lasers work only in vacuum is incorrect; a laser beam stays focused over long distances, delivering far more energy per square meter than diffuse sunlight, especially far from the Sun.',
+            },
           },
           {
             id: "sp-sec13-u9-L5-T2",
@@ -2055,6 +2350,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The physics was sound and performance extraordinary. The 1963 Partial Test Ban Treaty banned nuclear explosions in space, making the concept illegal to test.",
+            distractorExplanations: {
+              0: 'The physics didn\'t work is incorrect; the physics was sound and performance extraordinary. The 1963 Partial Test Ban Treaty banned nuclear explosions in space, making the concept illegal to test.',
+              1: 'It was too slow for practical missions is incorrect; the physics was sound and performance extraordinary. The 1963 Partial Test Ban Treaty banned nuclear explosions in space, making the concept illegal to test.',
+              3: 'No country had nuclear weapons at the time is incorrect; the physics was sound and performance extraordinary. The 1963 Partial Test Ban Treaty banned nuclear explosions in space, making the concept illegal to test.',
+            },
           },
           {
             id: "sp-sec13-u9-L5-Q6",
@@ -2103,6 +2403,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Kessler syndrome is a runaway cascade where collisions create debris that causes more collisions, potentially rendering an orbital zone unusable.",
+            distractorExplanations: {
+              0: 'A medical condition affecting astronauts is incorrect; kessler syndrome is a runaway cascade where collisions create debris that causes more collisions, potentially rendering an orbital zone unusable.',
+              2: 'A type of rocket engine failure is incorrect; kessler syndrome is a runaway cascade where collisions create debris that causes more collisions, potentially rendering an orbital zone unusable.',
+              3: 'A gravitational effect near black holes is incorrect; kessler syndrome is a runaway cascade where collisions create debris that causes more collisions, potentially rendering an orbital zone unusable.',
+            },
           },
           {
             id: "sp-sec13-u10-L1-Q2",
@@ -2110,6 +2415,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Debris above 800 km altitude can persist in orbit for centuries.",
             correctAnswer: true,
             explanation: "Atmospheric drag is negligible above 800 km. Without active removal, debris at those altitudes remains indefinitely.",
+            distractorExplanations: {
+              1: 'This statement is correct because atmospheric drag is negligible above 800 km. Without active removal, debris at those altitudes remains indefinitely.',
+            },
           },
           {
             id: "sp-sec13-u10-L1-Q3",
@@ -2132,6 +2440,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A collision at 900 km creates long-lived debris in an already crowded zone. Neither object can avoid the other, and prediction uncertainties make 50 meters dangerously close.",
+            distractorExplanations: {
+              0: '50 meters is too far for a collision to occur is incorrect; a collision at 900 km creates long-lived debris in an already crowded zone. Neither object can avoid the other, and prediction uncertainties make 50 meters dangerously close.',
+              2: 'Defunct satellites automatically deorbit when they get close is incorrect; a collision at 900 km creates long-lived debris in an already crowded zone. Neither object can avoid the other, and prediction uncertainties make 50 meters dangerously close.',
+              3: 'Only active satellites can create debris is incorrect; a collision at 900 km creates long-lived debris in an already crowded zone. Neither object can avoid the other, and prediction uncertainties make 50 meters dangerously close.',
+            },
           },
           {
             id: "sp-sec13-u10-L1-Q5",
@@ -2172,6 +2485,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The number of possible conjunction pairs grows roughly as the square of the satellite count. Doubling satellites more than doubles conjunction events.",
+            distractorExplanations: {
+              0: 'Each new satellite doubles the orbital speed is incorrect; the number of possible conjunction pairs grows roughly as the square of the satellite count. Doubling satellites more than doubles conjunction events.',
+              2: 'Mega-constellation satellites lack propulsion is incorrect; the number of possible conjunction pairs grows roughly as the square of the satellite count. Doubling satellites more than doubles conjunction events.',
+              3: 'More satellites increase atmospheric drag is incorrect; the number of possible conjunction pairs grows roughly as the square of the satellite count. Doubling satellites more than doubles conjunction events.',
+            },
           },
           {
             id: "sp-sec13-u10-L1-Q8",
@@ -2199,6 +2517,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Mandatory rapid deorbit prevents debris accumulation at its source. Tracking helps but doesn't prevent collisions. Launch bans are impractical.",
+            distractorExplanations: {
+              0: 'Track all debris down to 1 mm is incorrect; mandatory rapid deorbit prevents debris accumulation at its source. Tracking helps but doesn\'t prevent collisions. Launch bans are impractical.',
+              1: 'Ban all satellite launches for 10 years is incorrect; mandatory rapid deorbit prevents debris accumulation at its source. Tracking helps but doesn\'t prevent collisions. Launch bans are impractical.',
+              3: 'Paint all satellites white so they\'re easier to see is incorrect; mandatory rapid deorbit prevents debris accumulation at its source. Tracking helps but doesn\'t prevent collisions. Launch bans are impractical.',
+            },
           },
           {
             id: "sp-sec13-u10-L1-Q10",
@@ -2212,6 +2535,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Objects in LEO travel at about 7.8 km/s. Head-on collisions between two objects can reach relative speeds of over 14 km/s.",
+            distractorExplanations: {
+              0: 'About 800 m/s is incorrect; objects in LEO travel at about 7.8 km/s. Head-on collisions between two objects can reach relative speeds of over 14 km/s.',
+              1: 'About 3 km/s is incorrect; objects in LEO travel at about 7.8 km/s. Head-on collisions between two objects can reach relative speeds of over 14 km/s.',
+              3: 'About 30 km/s is incorrect; objects in LEO travel at about 7.8 km/s. Head-on collisions between two objects can reach relative speeds of over 14 km/s.',
+            },
           },
         ],
       },
@@ -2236,6 +2564,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Launch costs are the biggest expense in space operations. Manufacturing in orbit from local or recycled materials eliminates this cost for many products.",
+            distractorExplanations: {
+              0: 'Space factories use cheaper labor is incorrect; launch costs are the biggest expense in space operations. Manufacturing in orbit from local or recycled materials eliminates this cost for many products.',
+              2: 'Microgravity makes all products better is incorrect; launch costs are the biggest expense in space operations. Manufacturing in orbit from local or recycled materials eliminates this cost for many products.',
+              3: 'Space has unlimited raw materials is incorrect; launch costs are the biggest expense in space operations. Manufacturing in orbit from local or recycled materials eliminates this cost for many products.',
+            },
           },
           {
             id: "sp-sec13-u10-L2-Q2",
@@ -2243,6 +2576,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "ZBLAN optical fiber made in microgravity has fewer defects because gravity doesn't cause microcrystal formation.",
             correctAnswer: true,
             explanation: "On Earth, gravity-driven convection causes tiny crystals to form in ZBLAN, creating signal loss. Microgravity eliminates this, producing nearly perfect fiber.",
+            distractorExplanations: {
+              1: 'This statement is correct because on Earth, gravity-driven convection causes tiny crystals to form in ZBLAN, creating signal loss. Microgravity eliminates this, producing nearly perfect fiber.',
+            },
           },
           {
             id: "sp-sec13-u10-L2-Q3",
@@ -2280,6 +2616,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Made In Space sent the first 3D printer to the ISS in 2014, printing a ratchet wrench as a proof of concept.",
+            distractorExplanations: {
+              0: '2008 is incorrect; made In Space sent the first 3D printer to the ISS in 2014, printing a ratchet wrench as a proof of concept.',
+              2: '2018 is incorrect; made In Space sent the first 3D printer to the ISS in 2014, printing a ratchet wrench as a proof of concept.',
+              3: '2022 is incorrect; made In Space sent the first 3D printer to the ISS in 2014, printing a ratchet wrench as a proof of concept.',
+            },
           },
           {
             id: "sp-sec13-u10-L2-Q6",
@@ -2294,6 +2635,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Launching heavy lead panels is prohibitively expensive. Regolith is abundant on-site and 2 to 3 meters provides adequate radiation protection.",
+            distractorExplanations: {
+              0: 'Import lead panels for their superior shielding density is incorrect; launching heavy lead panels is prohibitively expensive. Regolith is abundant on-site and 2 to 3 meters provides adequate radiation protection.',
+              2: 'Use water tanks as shielding, imported from Earth is incorrect; launching heavy lead panels is prohibitively expensive. Regolith is abundant on-site and 2 to 3 meters provides adequate radiation protection.',
+              3: 'Build underground to avoid needing shielding entirely is incorrect; launching heavy lead panels is prohibitively expensive. Regolith is abundant on-site and 2 to 3 meters provides adequate radiation protection.',
+            },
           },
           {
             id: "sp-sec13-u10-L2-Q7",
@@ -2321,6 +2667,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without convection, fumes and particles linger. Enclosed, filtered chambers protect the crew while allowing the printer to operate safely.",
+            distractorExplanations: {
+              0: 'The vacuum of space would destroy the printer is incorrect; without convection, fumes and particles linger. Enclosed, filtered chambers protect the crew while allowing the printer to operate safely.',
+              2: 'The printer needs higher pressure to work is incorrect; without convection, fumes and particles linger. Enclosed, filtered chambers protect the crew while allowing the printer to operate safely.',
+              3: 'Microgravity makes plastic melt at lower temperatures is incorrect; without convection, fumes and particles linger. Enclosed, filtered chambers protect the crew while allowing the printer to operate safely.',
+            },
           },
           {
             id: "sp-sec13-u10-L2-Q9",
@@ -2345,6 +2696,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "ZBLAN is high value per kilogram, low mass for reentry, and dramatically better when made in microgravity. It's the textbook case for space manufacturing.",
+            distractorExplanations: {
+              0: 'Aluminum ingots is incorrect; zBLAN is high value per kilogram, low mass for reentry, and dramatically better when made in microgravity. It\'s the textbook case for space manufacturing.',
+              2: 'Standard computer chips is incorrect; zBLAN is high value per kilogram, low mass for reentry, and dramatically better when made in microgravity. It\'s the textbook case for space manufacturing.',
+              3: 'Cotton fabric is incorrect; zBLAN is high value per kilogram, low mass for reentry, and dramatically better when made in microgravity. It\'s the textbook case for space manufacturing.',
+            },
           },
         ],
       },
@@ -2369,6 +2725,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Professional astronauts can manage systems manually. Tourist vehicles must automate nearly everything since passengers have minimal training.",
+            distractorExplanations: {
+              0: 'Tourist vehicles are smaller is incorrect; professional astronauts can manage systems manually. Tourist vehicles must automate nearly everything since passengers have minimal training.',
+              2: 'Astronaut vehicles don\'t need life support is incorrect; professional astronauts can manage systems manually. Tourist vehicles must automate nearly everything since passengers have minimal training.',
+              3: 'Tourist vehicles travel faster is incorrect; professional astronauts can manage systems manually. Tourist vehicles must automate nearly everything since passengers have minimal training.',
+            },
           },
           {
             id: "sp-sec13-u10-L3-Q2",
@@ -2376,6 +2737,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "A suborbital tourist flight typically lasts about 10 minutes total.",
             correctAnswer: true,
             explanation: "Suborbital flights are brief hops above 100 km. The entire experience, from engine ignition to landing, lasts roughly 10 minutes.",
+            distractorExplanations: {
+              1: 'This statement is correct because suborbital flights are brief hops above 100 km. The entire experience, from engine ignition to landing, lasts roughly 10 minutes.',
+            },
           },
           {
             id: "sp-sec13-u10-L3-Q3",
@@ -2413,6 +2777,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Reclining spreads acceleration forces across the back and chest rather than compressing the spine from top to bottom.",
+            distractorExplanations: {
+              0: 'Reclined seats weigh less is incorrect; reclining spreads acceleration forces across the back and chest rather than compressing the spine from top to bottom.',
+              2: 'It\'s easier to see out the window is incorrect; reclining spreads acceleration forces across the back and chest rather than compressing the spine from top to bottom.',
+              3: 'Regulations require reclined seating is incorrect; reclining spreads acceleration forces across the back and chest rather than compressing the spine from top to bottom.',
+            },
           },
           {
             id: "sp-sec13-u10-L3-Q6",
@@ -2427,6 +2796,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Space motion sickness is common and treatable. Medication and a visual horizon reference help the brain adapt. It typically resolves within 2 to 3 days.",
+            distractorExplanations: {
+              0: 'Abort the mission and return to Earth immediately is incorrect; space motion sickness is common and treatable. Medication and a visual horizon reference help the brain adapt. It typically resolves within 2 to 3 days.',
+              2: 'Tell the tourist to close their eyes until the feeling pa... is incorrect; space motion sickness is common and treatable. Medication and a visual horizon reference help the brain adapt. It typically resolves within 2 to 3 days.',
+              3: 'Spin the station to create artificial gravity is incorrect; space motion sickness is common and treatable. Medication and a visual horizon reference help the brain adapt. It typically resolves within 2 to 3 days.',
+            },
           },
           {
             id: "sp-sec13-u10-L3-Q7",
@@ -2454,6 +2828,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The learning period delays strict passenger safety certification to allow the young industry to innovate, similar to early aviation regulation.",
+            distractorExplanations: {
+              0: 'Tourists must complete a learning course before flying is incorrect; the learning period delays strict passenger safety certification to allow the young industry to innovate, similar to early aviation regulation.',
+              2: 'Only trained pilots can operate tourist vehicles is incorrect; the learning period delays strict passenger safety certification to allow the young industry to innovate, similar to early aviation regulation.',
+              3: 'New regulations are added after every flight is incorrect; the learning period delays strict passenger safety certification to allow the young industry to innovate, similar to early aviation regulation.',
+            },
           },
           {
             id: "sp-sec13-u10-L3-Q9",
@@ -2478,6 +2857,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Reusability is the single biggest cost driver. Reusable vehicles amortize manufacturing costs over many flights, just as reusable aircraft enabled affordable air travel.",
+            distractorExplanations: {
+              0: 'Faster rockets that reach orbit in 2 minutes is incorrect; reusability is the single biggest cost driver. Reusable vehicles amortize manufacturing costs over many flights, just as reusable aircraft enabled affordable air travel.',
+              2: 'Larger launch pads near the equator is incorrect; reusability is the single biggest cost driver. Reusable vehicles amortize manufacturing costs over many flights, just as reusable aircraft enabled affordable air travel.',
+              3: 'Government subsidies for ticket prices is incorrect; reusability is the single biggest cost driver. Reusable vehicles amortize manufacturing costs over many flights, just as reusable aircraft enabled affordable air travel.',
+            },
           },
         ],
       },
@@ -2502,6 +2886,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Specific impulse is the key measure of propellant efficiency. Higher Isp means more velocity change per kilogram of fuel.",
+            distractorExplanations: {
+              0: 'Maximum rocket speed is incorrect; specific impulse is the key measure of propellant efficiency. Higher Isp means more velocity change per kilogram of fuel.',
+              2: 'Thrust force in Newtons is incorrect; specific impulse is the key measure of propellant efficiency. Higher Isp means more velocity change per kilogram of fuel.',
+              3: 'Time to reach orbit is incorrect; specific impulse is the key measure of propellant efficiency. Higher Isp means more velocity change per kilogram of fuel.',
+            },
           },
           {
             id: "sp-sec13-u10-L4-Q2",
@@ -2509,6 +2898,9 @@ export const spaceSection13Part2: Unit[] = [
             question: "Ion engines can be used to launch rockets from Earth's surface.",
             correctAnswer: false,
             explanation: "Ion engines produce far too little thrust to overcome Earth's gravity. They work only in the microgravity of space for slow, efficient acceleration.",
+            distractorExplanations: {
+              0: 'Ion engines produce far too little thrust to overcome Earth\'s gravity. They work only in the microgravity of space for slow, efficient acceleration.',
+            },
           },
           {
             id: "sp-sec13-u10-L4-Q3",
@@ -2561,6 +2953,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Beyond Mars, solar power is insufficient. Nuclear electric combines a reactor power source with the high efficiency of ion engines, ideal for this mission profile.",
+            distractorExplanations: {
+              0: 'Solar sail, since it needs no fuel is incorrect; beyond Mars, solar power is insufficient. Nuclear electric combines a reactor power source with the high efficiency of ion engines, ideal for this mission profile.',
+              2: 'Chemical rocket with a large fuel tank is incorrect; beyond Mars, solar power is insufficient. Nuclear electric combines a reactor power source with the high efficiency of ion engines, ideal for this mission profile.',
+              3: 'Hall thruster powered by solar panels is incorrect; beyond Mars, solar power is insufficient. Nuclear electric combines a reactor power source with the high efficiency of ion engines, ideal for this mission profile.',
+            },
           },
           {
             id: "sp-sec13-u10-L4-Q7",
@@ -2574,6 +2971,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Orion's physics was sound and performance extraordinary. The 1963 Partial Test Ban Treaty made detonating nuclear devices in space illegal.",
+            distractorExplanations: {
+              0: 'The physics calculations were wrong is incorrect; orion\'s physics was sound and performance extraordinary. The 1963 Partial Test Ban Treaty made detonating nuclear devices in space illegal.',
+              1: 'It couldn\'t carry useful payload is incorrect; orion\'s physics was sound and performance extraordinary. The 1963 Partial Test Ban Treaty made detonating nuclear devices in space illegal.',
+              3: 'No country had the technology is incorrect; orion\'s physics was sound and performance extraordinary. The 1963 Partial Test Ban Treaty made detonating nuclear devices in space illegal.',
+            },
           },
           {
             id: "sp-sec13-u10-L4-Q8",
@@ -2606,6 +3008,11 @@ export const spaceSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Breakthrough Starshot has active funding, a defined engineering roadmap, and uses physics that's already been demonstrated at small scales. The others remain largely theoretical.",
+            distractorExplanations: {
+              0: 'Antimatter drive is incorrect; breakthrough Starshot has active funding, a defined engineering roadmap, and uses physics that\'s already been demonstrated at small scales. The others remain largely theoretical.',
+              1: 'Fusion-powered spacecraft is incorrect; breakthrough Starshot has active funding, a defined engineering roadmap, and uses physics that\'s already been demonstrated at small scales. The others remain largely theoretical.',
+              3: 'Alcubierre warp drive is incorrect; breakthrough Starshot has active funding, a defined engineering roadmap, and uses physics that\'s already been demonstrated at small scales. The others remain largely theoretical.',
+            },
           },
         ],
       },

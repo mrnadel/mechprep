@@ -2006,6 +2006,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Circumpolar stars are close enough to the celestial pole that they circle it all night without dipping below the horizon.",
+            distractorExplanations: {
+              0: 'Circumpolar stars are not exclusive to polar nights; they\'re visible year-round from their latitude.',
+              2: 'Stars don\'t orbit Earth\'s poles; they appear to circle the celestial pole due to Earth\'s rotation.',
+              3: 'Circumpolar stars are visible from middle and high latitudes, not just from the equator.',
+            },
           },
           {
             id: "sp-sec1-u8-L3-Q4",
@@ -2048,6 +2053,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Orion appears to shift because Earth has moved in its orbit. We face a slightly different direction each month, so constellations appear in different positions at the same time.",
+            distractorExplanations: {
+              0: 'Stars don\'t noticeably drift through the galaxy on human timescales; the shift is from Earth\'s orbit.',
+              2: 'Light pollution doesn\'t change constellation positions; it only affects how many stars you can see.',
+              3: 'Orion\'s position does change over months due to Earth\'s orbit; it doesn\'t always stay in the same spot.',
+            },
           },
         ],
       },

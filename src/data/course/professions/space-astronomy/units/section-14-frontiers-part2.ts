@@ -41,6 +41,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "The nearest star system to our Sun is about 4.37 light-years away.",
             correctAnswer: true,
             explanation: "Alpha Centauri is a triple star system 4.37 light-years from Earth. Even at this 'close' distance, the journey would take thousands of years with current technology.",
+            distractorExplanations: {
+              1: 'This statement is correct because alpha Centauri is a triple star system 4.37 light-years from Earth. Even at this \'close\' distance, the journey would take thousands of years with current technology.',
+            },
           },
           {
             id: "sp-sec14-u6-L1-Q2",
@@ -71,6 +74,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "At 10% light speed (0.1c), the 4.37-light-year trip would take about 44 years. That's still incredibly fast: 30,000 km per second.",
+            distractorExplanations: {
+              1: 'About 1% of light speed is incorrect; at 10% light speed (0.1c), the 4.37-light-year trip would take about 44 years. That\'s still incredibly fast: 30,000 km per second.',
+              2: 'About 50% of light speed is incorrect; at 10% light speed (0.1c), the 4.37-light-year trip would take about 44 years. That\'s still incredibly fast: 30,000 km per second.',
+              3: 'About 0.001% of light speed is incorrect; at 10% light speed (0.1c), the 4.37-light-year trip would take about 44 years. That\'s still incredibly fast: 30,000 km per second.',
+            },
           },
           {
             id: "sp-sec14-u6-L1-Q4",
@@ -99,6 +107,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The energy required to accelerate to interstellar speeds is immense. Everything else, radiation shielding, navigation, life support, follows from solving the propulsion problem.",
+            distractorExplanations: {
+              1: 'Stars move too fast to catch is incorrect; the energy required to accelerate to interstellar speeds is immense. Everything else, radiation shielding, navigation, life support, follows from solving the propulsion problem.',
+              2: 'Space radiation destroys all spacecraft is incorrect; the energy required to accelerate to interstellar speeds is immense. Everything else, radiation shielding, navigation, life support, follows from solving the propulsion problem.',
+              3: 'Navigation between stars is impossible is incorrect; the energy required to accelerate to interstellar speeds is immense. Everything else, radiation shielding, navigation, life support, follows from solving the propulsion problem.',
+            },
           },
           {
             id: "sp-sec14-u6-L1-Q6",
@@ -132,6 +145,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "On a generation ship, the people who launch are the same ones who arrive.",
             correctAnswer: false,
             explanation: "The journey takes centuries. The original crew's descendants, born and raised aboard the ship, are the ones who reach the destination.",
+            distractorExplanations: {
+              0: 'The journey takes centuries. The original crew\'s descendants, born and raised aboard the ship, are the ones who reach the destination.',
+            },
           },
           {
             id: "sp-sec14-u6-L2-Q2",
@@ -145,6 +161,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Studies suggest at least 10,000 people are needed to maintain healthy genetic diversity over centuries. Smaller populations risk genetic bottlenecks and health problems.",
+            distractorExplanations: {
+              1: 'About 10 people is incorrect; studies suggest at least 10,000 people are needed to maintain healthy genetic diversity over centuries. Smaller populations risk genetic bottlenecks and health problems.',
+              2: 'About 100 people is incorrect; studies suggest at least 10,000 people are needed to maintain healthy genetic diversity over centuries. Smaller populations risk genetic bottlenecks and health problems.',
+              3: 'Just 2 people is incorrect; studies suggest at least 10,000 people are needed to maintain healthy genetic diversity over centuries. Smaller populations risk genetic bottlenecks and health problems.',
+            },
           },
           {
             id: "sp-sec14-u6-L2-T2",
@@ -188,6 +209,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Future generations are born into a mission they never chose. They can't leave, can't return to Earth, and have their entire life path decided by ancestors. This is a profound ethical dilemma.",
+            distractorExplanations: {
+              0: 'The cost of building such a large spacecraft is incorrect; future generations are born into a mission they never chose. They can\'t leave, can\'t return to Earth, and have their entire life path decided by ancestors. This is a profound ethical dilemma.',
+              2: 'The ship might run out of paint for the walls is incorrect; future generations are born into a mission they never chose. They can\'t leave, can\'t return to Earth, and have their entire life path decided by ancestors. This is a profound ethical dilemma.',
+              3: 'Passengers might get bored during the journey is incorrect; future generations are born into a mission they never chose. They can\'t leave, can\'t return to Earth, and have their entire life path decided by ancestors. This is a profound ethical dilemma.',
+            },
           },
           {
             id: "sp-sec14-u6-L2-Q6",
@@ -202,6 +228,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Life support and food production are non-negotiable for centuries. If they fail, everyone dies. Redundancy and self-repair capability must be the top priority.",
+            distractorExplanations: {
+              0: 'Luxury entertainment systems for passenger comfort is incorrect; life support and food production are non-negotiable for centuries. If they fail, everyone dies. Redundancy and self-repair capability must be the top priority.',
+              1: 'Maximum speed engines to reduce travel time is incorrect; life support and food production are non-negotiable for centuries. If they fail, everyone dies. Redundancy and self-repair capability must be the top priority.',
+              3: 'The largest windows possible for scenic views is incorrect; life support and food production are non-negotiable for centuries. If they fail, everyone dies. Redundancy and self-repair capability must be the top priority.',
+            },
           },
         ],
       },
@@ -226,6 +257,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "Chemical rockets could reach interstellar speeds if we just built them big enough.",
             correctAnswer: false,
             explanation: "The rocket equation makes chemical propulsion hopeless for interstellar travel. The fuel mass required grows exponentially and quickly exceeds any practical limit.",
+            distractorExplanations: {
+              0: 'The rocket equation makes chemical propulsion hopeless for interstellar travel. The fuel mass required grows exponentially and quickly exceeds any practical limit.',
+            },
           },
           {
             id: "sp-sec14-u6-L3-Q2",
@@ -239,6 +273,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Project Orion proposed detonating small nuclear bombs behind a massive pusher plate. It could theoretically reach 5 to 10% of light speed.",
+            distractorExplanations: {
+              1: 'Ion drive is incorrect; project Orion proposed detonating small nuclear bombs behind a massive pusher plate. It could theoretically reach 5 to 10% of light speed.',
+              2: 'Solar sail is incorrect; project Orion proposed detonating small nuclear bombs behind a massive pusher plate. It could theoretically reach 5 to 10% of light speed.',
+              3: 'Chemical rocket is incorrect; project Orion proposed detonating small nuclear bombs behind a massive pusher plate. It could theoretically reach 5 to 10% of light speed.',
+            },
           },
           {
             id: "sp-sec14-u6-L3-T2",
@@ -315,6 +354,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "A warp drive concept works by moving space itself rather than moving the ship through space.",
             correctAnswer: true,
             explanation: "The Alcubierre warp drive contracts space ahead and expands it behind. The ship sits in a 'bubble' of flat space and doesn't actually accelerate.",
+            distractorExplanations: {
+              1: 'This statement is correct because the Alcubierre warp drive contracts space ahead and expands it behind. The ship sits in a \'bubble\' of flat space and doesn\'t actually accelerate.',
+            },
           },
           {
             id: "sp-sec14-u6-L4-Q2",
@@ -328,6 +370,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Mexican physicist Miguel Alcubierre published his warp drive metric in 1994. It's mathematically consistent with general relativity but requires exotic matter.",
+            distractorExplanations: {
+              1: 'Albert Einstein is incorrect; mexican physicist Miguel Alcubierre published his warp drive metric in 1994. It\'s mathematically consistent with general relativity but requires exotic matter.',
+              2: 'Stephen Hawking is incorrect; mexican physicist Miguel Alcubierre published his warp drive metric in 1994. It\'s mathematically consistent with general relativity but requires exotic matter.',
+              3: 'Gene Roddenberry is incorrect; mexican physicist Miguel Alcubierre published his warp drive metric in 1994. It\'s mathematically consistent with general relativity but requires exotic matter.',
+            },
           },
           {
             id: "sp-sec14-u6-L4-T2",
@@ -380,6 +427,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The math doesn't violate general relativity. The problem is purely practical: we don't have exotic matter and may never find it. Warp drives remain a theoretical possibility.",
+            distractorExplanations: {
+              1: 'Proven impossible by Einstein\'s equations is incorrect; the math doesn\'t violate general relativity. The problem is purely practical: we don\'t have exotic matter and may never find it. Warp drives remain a theoretical possibility.',
+              2: 'Successfully tested in a laboratory is incorrect; the math doesn\'t violate general relativity. The problem is purely practical: we don\'t have exotic matter and may never find it. Warp drives remain a theoretical possibility.',
+              3: 'Fully understood and waiting for funding is incorrect; the math doesn\'t violate general relativity. The problem is purely practical: we don\'t have exotic matter and may never find it. Warp drives remain a theoretical possibility.',
+            },
           },
         ],
       },
@@ -538,6 +590,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "JWST primarily observes the universe in infrared light.",
             correctAnswer: true,
             explanation: "JWST's instruments are optimized for infrared. This lets it see through dust clouds, detect the most distant galaxies, and study exoplanet atmospheres.",
+            distractorExplanations: {
+              1: 'This statement is correct because jWST\'s instruments are optimized for infrared. This lets it see through dust clouds, detect the most distant galaxies, and study exoplanet atmospheres.',
+            },
           },
           {
             id: "sp-sec14-u7-L1-Q2",
@@ -551,6 +606,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Future telescopes like the Habitable Worlds Observatory aim to directly photograph Earth-like planets around nearby stars and search their atmospheres for signs of life.",
+            distractorExplanations: {
+              1: 'Landing on distant planets is incorrect; future telescopes like the Habitable Worlds Observatory aim to directly photograph Earth-like planets around nearby stars and search their atmospheres for signs of life.',
+              2: 'Communicating with alien civilizations is incorrect; future telescopes like the Habitable Worlds Observatory aim to directly photograph Earth-like planets around nearby stars and search their atmospheres for signs of life.',
+              3: 'Traveling to the galaxies they observe is incorrect; future telescopes like the Habitable Worlds Observatory aim to directly photograph Earth-like planets around nearby stars and search their atmospheres for signs of life.',
+            },
           },
           {
             id: "sp-sec14-u7-L1-T2",
@@ -593,6 +653,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A coronagraph is inside the telescope. A starshade is a separate spacecraft flying thousands of kilometers ahead, creating a deeper stellar shadow.",
+            distractorExplanations: {
+              1: 'A starshade amplifies starlight for better viewing is incorrect; a coronagraph is inside the telescope. A starshade is a separate spacecraft flying thousands of kilometers ahead, creating a deeper stellar shadow.',
+              2: 'A starshade is smaller and cheaper than a coronagraph is incorrect; a coronagraph is inside the telescope. A starshade is a separate spacecraft flying thousands of kilometers ahead, creating a deeper stellar shadow.',
+              3: 'A starshade works only for radio wavelengths is incorrect; a coronagraph is inside the telescope. A starshade is a separate spacecraft flying thousands of kilometers ahead, creating a deeper stellar shadow.',
+            },
           },
           {
             id: "sp-sec14-u7-L1-Q6",
@@ -607,6 +672,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Finding signs of life on other worlds would be the most transformative discovery in science. Dark matter and asteroids are important but can be studied with existing and ground-based telescopes.",
+            distractorExplanations: {
+              1: 'Mapping dark matter in galaxy clusters is incorrect; finding signs of life on other worlds would be the most transformative discovery in science. Dark matter and asteroids are important but can be studied with existing and ground-based telescopes.',
+              2: 'Monitoring asteroids that could hit Earth is incorrect; finding signs of life on other worlds would be the most transformative discovery in science. Dark matter and asteroids are important but can be studied with existing and ground-based telescopes.',
+              3: 'Taking prettier pictures of nebulae for public outreach is incorrect; finding signs of life on other worlds would be the most transformative discovery in science. Dark matter and asteroids are important but can be studied with existing and ground-based telescopes.',
+            },
           },
         ],
       },
@@ -631,6 +701,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "LIGO detected the first gravitational waves in 2015.",
             correctAnswer: true,
             explanation: "On September 14, 2015, LIGO detected gravitational waves from two black holes merging 1.3 billion light-years away. This confirmed Einstein's prediction from 1916.",
+            distractorExplanations: {
+              1: 'This statement is correct because on September 14, 2015, LIGO detected gravitational waves from two black holes merging 1.3 billion light-years away. This confirmed Einstein\'s prediction from 1916.',
+            },
           },
           {
             id: "sp-sec14-u7-L2-Q2",
@@ -644,6 +717,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Gravitational waves are produced by accelerating massive objects. The strongest sources are merging black holes and neutron stars.",
+            distractorExplanations: {
+              1: 'Stars shining brightly is incorrect; gravitational waves are produced by accelerating massive objects. The strongest sources are merging black holes and neutron stars.',
+              2: 'Planets orbiting their star is incorrect; gravitational waves are produced by accelerating massive objects. The strongest sources are merging black holes and neutron stars.',
+              3: 'Light reflecting off cosmic dust is incorrect; gravitational waves are produced by accelerating massive objects. The strongest sources are merging black holes and neutron stars.',
+            },
           },
           {
             id: "sp-sec14-u7-L2-T2",
@@ -718,6 +796,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "Interferometry combines signals from multiple telescopes to act as one giant telescope.",
             correctAnswer: true,
             explanation: "By precisely combining light waves from separated telescopes, interferometry achieves the angular resolution of a telescope as large as the distance between them.",
+            distractorExplanations: {
+              1: 'This statement is correct because by precisely combining light waves from separated telescopes, interferometry achieves the angular resolution of a telescope as large as the distance between them.',
+            },
           },
           {
             id: "sp-sec14-u7-L3-Q2",
@@ -731,6 +812,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Event Horizon Telescope linked radio dishes worldwide to create an Earth-sized virtual telescope. In 2019, it revealed the shadow of M87's supermassive black hole.",
+            distractorExplanations: {
+              1: 'The Hubble Deep Field is incorrect; the Event Horizon Telescope linked radio dishes worldwide to create an Earth-sized virtual telescope. In 2019, it revealed the shadow of M87\'s supermassive black hole.',
+              2: 'The Pillars of Creation is incorrect; the Event Horizon Telescope linked radio dishes worldwide to create an Earth-sized virtual telescope. In 2019, it revealed the shadow of M87\'s supermassive black hole.',
+              3: 'The first exoplanet photograph is incorrect; the Event Horizon Telescope linked radio dishes worldwide to create an Earth-sized virtual telescope. In 2019, it revealed the shadow of M87\'s supermassive black hole.',
+            },
           },
           {
             id: "sp-sec14-u7-L3-T2",
@@ -783,6 +869,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Surveys like LSST will generate terabytes of data per night. AI can classify objects, find transients, and discover patterns across billions of observations.",
+            distractorExplanations: {
+              1: 'AI can look through telescopes better than humans is incorrect; surveys like LSST will generate terabytes of data per night. AI can classify objects, find transients, and discover patterns across billions of observations.',
+              2: 'Machine learning was invented specifically for astronomy is incorrect; surveys like LSST will generate terabytes of data per night. AI can classify objects, find transients, and discover patterns across billions of observations.',
+              3: 'Computers are cheaper than telescopes is incorrect; surveys like LSST will generate terabytes of data per night. AI can classify objects, find transients, and discover patterns across billions of observations.',
+            },
           },
         ],
       },
@@ -927,6 +1018,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "The Outer Space Treaty bans all weapons of mass destruction in space.",
             correctAnswer: true,
             explanation: "Article IV prohibits placing nuclear weapons or weapons of mass destruction in orbit or on celestial bodies. Space is to be used for peaceful purposes.",
+            distractorExplanations: {
+              1: 'This statement is correct because article IV prohibits placing nuclear weapons or weapons of mass destruction in orbit or on celestial bodies. Space is to be used for peaceful purposes.',
+            },
           },
           {
             id: "sp-sec14-u8-L1-Q2",
@@ -940,6 +1034,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Outer Space Treaty was opened for signature on January 27, 1967, and entered into force on October 10, 1967.",
+            distractorExplanations: {
+              1: '1945 is incorrect; the Outer Space Treaty was opened for signature on January 27, 1967, and entered into force on October 10, 1967.',
+              2: '1986 is incorrect; the Outer Space Treaty was opened for signature on January 27, 1967, and entered into force on October 10, 1967.',
+              3: '2001 is incorrect; the Outer Space Treaty was opened for signature on January 27, 1967, and entered into force on October 10, 1967.',
+            },
           },
           {
             id: "sp-sec14-u8-L1-T2",
@@ -983,6 +1082,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Under the Liability Convention and Outer Space Treaty, the launching state bears international liability for damage caused by its space objects, even if a private company operated the mission.",
+            distractorExplanations: {
+              1: 'The company alone is responsible since it built the rocket is incorrect; under the Liability Convention and Outer Space Treaty, the launching state bears international liability for damage caused by its space objects, even if a private company operated the mission.',
+              2: 'Country Y is liable because the debris landed on its terr... is incorrect; under the Liability Convention and Outer Space Treaty, the launching state bears international liability for damage caused by its space objects, even if a private company operated the mission.',
+              3: 'Nobody is liable because space law doesn\'t cover accidents is incorrect; under the Liability Convention and Outer Space Treaty, the launching state bears international liability for damage caused by its space objects, even if a private company operated the mission.',
+            },
           },
           {
             id: "sp-sec14-u8-L1-Q6",
@@ -1016,6 +1120,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "The Outer Space Treaty clearly defines whether companies can own mined space resources.",
             correctAnswer: false,
             explanation: "The treaty bans national sovereignty claims but doesn't explicitly address resource extraction rights. This legal gap is a major debate in modern space law.",
+            distractorExplanations: {
+              0: 'The treaty bans national sovereignty claims but doesn\'t explicitly address resource extraction rights. This legal gap is a major debate in modern space law.',
+            },
           },
           {
             id: "sp-sec14-u8-L2-Q2",
@@ -1029,6 +1136,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The 2015 law grants US citizens property rights over resources they extract from asteroids or other celestial bodies. It doesn't claim sovereignty over the bodies themselves.",
+            distractorExplanations: {
+              1: 'The US claims ownership of the Moon is incorrect; the 2015 law grants US citizens property rights over resources they extract from asteroids or other celestial bodies. It doesn\'t claim sovereignty over the bodies themselves.',
+              2: 'All space mining profits go to the United Nations is incorrect; the 2015 law grants US citizens property rights over resources they extract from asteroids or other celestial bodies. It doesn\'t claim sovereignty over the bodies themselves.',
+              3: 'Only NASA can mine asteroids is incorrect; the 2015 law grants US citizens property rights over resources they extract from asteroids or other celestial bodies. It doesn\'t claim sovereignty over the bodies themselves.',
+            },
           },
           {
             id: "sp-sec14-u8-L2-T2",
@@ -1072,6 +1184,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon Agreement's 'common heritage' clause implied sharing profits from space mining. The US, Russia, and China saw this as a barrier to commercial activity and refused to join.",
+            distractorExplanations: {
+              1: 'The United Nations abolished it is incorrect; the Moon Agreement\'s \'common heritage\' clause implied sharing profits from space mining. The US, Russia, and China saw this as a barrier to commercial activity and refused to join.',
+              2: 'It only applied to the Moon, not other bodies is incorrect; the Moon Agreement\'s \'common heritage\' clause implied sharing profits from space mining. The US, Russia, and China saw this as a barrier to commercial activity and refused to join.',
+              3: 'It was too permissive about weapons in space is incorrect; the Moon Agreement\'s \'common heritage\' clause implied sharing profits from space mining. The US, Russia, and China saw this as a barrier to commercial activity and refused to join.',
+            },
           },
           {
             id: "sp-sec14-u8-L2-Q6",
@@ -1086,6 +1203,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Neither first-come-first-served nor a total ban is practical. A deconfliction framework, like the Artemis Accords' safety zones, allows both parties to operate safely.",
+            distractorExplanations: {
+              0: 'Whichever company arrives first owns the entire deposit f... is incorrect; neither first-come-first-served nor a total ban is practical. A deconfliction framework, like the Artemis Accords\' safety zones, allows both parties to operate safely.',
+              2: 'The UN should ban all lunar mining until perfect laws exist is incorrect; neither first-come-first-served nor a total ban is practical. A deconfliction framework, like the Artemis Accords\' safety zones, allows both parties to operate safely.',
+              3: 'Both companies should be forced to merge is incorrect; neither first-come-first-served nor a total ban is practical. A deconfliction framework, like the Artemis Accords\' safety zones, allows both parties to operate safely.',
+            },
           },
         ],
       },
@@ -1110,6 +1232,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "A country can freely remove another nation's space debris without asking permission.",
             correctAnswer: false,
             explanation: "Space objects permanently belong to their launching state. Removing another country's debris without consent could be considered an act against that state's property.",
+            distractorExplanations: {
+              0: 'Space objects permanently belong to their launching state. Removing another country\'s debris without consent could be considered an act against that state\'s property.',
+            },
           },
           {
             id: "sp-sec14-u8-L3-Q2",
@@ -1123,6 +1248,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Even defunct satellites and fragments legally belong to their country of origin. International consent is needed before touching them.",
+            distractorExplanations: {
+              1: 'No technology exists to capture debris is incorrect; even defunct satellites and fragments legally belong to their country of origin. International consent is needed before touching them.',
+              2: 'Debris automatically deorbits within months is incorrect; even defunct satellites and fragments legally belong to their country of origin. International consent is needed before touching them.',
+              3: 'The UN has banned all debris removal is incorrect; even defunct satellites and fragments legally belong to their country of origin. International consent is needed before touching them.',
+            },
           },
           {
             id: "sp-sec14-u8-L3-T2",
@@ -1166,6 +1296,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With thousands of satellites in similar orbits, even a small failure rate means dozens of uncontrolled objects. The sheer number amplifies collision risk dramatically.",
+            distractorExplanations: {
+              1: 'Mega-constellations block sunlight from reaching Earth is incorrect; with thousands of satellites in similar orbits, even a small failure rate means dozens of uncontrolled objects. The sheer number amplifies collision risk dramatically.',
+              2: 'They make space too crowded for telescopes is incorrect; with thousands of satellites in similar orbits, even a small failure rate means dozens of uncontrolled objects. The sheer number amplifies collision risk dramatically.',
+              3: 'They interfere with airplane navigation is incorrect; with thousands of satellites in similar orbits, even a small failure rate means dozens of uncontrolled objects. The sheer number amplifies collision risk dramatically.',
+            },
           },
           {
             id: "sp-sec14-u8-L3-Q6",
@@ -1179,6 +1314,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Binding regulations with enforcement mechanisms would ensure compliance without banning beneficial activities. Self-regulation has proven insufficient.",
+            distractorExplanations: {
+              0: 'Ban all satellite launches until debris is cleaned up is incorrect; binding regulations with enforcement mechanisms would ensure compliance without banning beneficial activities. Self-regulation has proven insufficient.',
+              2: 'Let companies self-regulate without government oversight is incorrect; binding regulations with enforcement mechanisms would ensure compliance without banning beneficial activities. Self-regulation has proven insufficient.',
+              3: 'Ignore the problem since space is very large is incorrect; binding regulations with enforcement mechanisms would ensure compliance without banning beneficial activities. Self-regulation has proven insufficient.',
+            },
           },
         ],
       },
@@ -1203,6 +1343,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "Current space law adequately covers governance of permanent settlements on Mars.",
             correctAnswer: false,
             explanation: "The Outer Space Treaty was designed for short missions and research, not permanent colonies. There's no framework for taxation, criminal law, or self-government.",
+            distractorExplanations: {
+              0: 'The Outer Space Treaty was designed for short missions and research, not permanent colonies. There\'s no framework for taxation, criminal law, or self-government.',
+            },
           },
           {
             id: "sp-sec14-u8-L4-Q2",
@@ -1216,6 +1359,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Current treaties say astronauts are 'envoys of mankind' and space objects follow the launching state's jurisdiction. But birth citizenship on another planet is completely uncharted legal territory.",
+            distractorExplanations: {
+              1: 'Mars law, which already exists is incorrect; current treaties say astronauts are \'envoys of mankind\' and space objects follow the launching state\'s jurisdiction. But birth citizenship on another planet is completely uncharted legal territory.',
+              2: 'United Nations law automatically applies is incorrect; current treaties say astronauts are \'envoys of mankind\' and space objects follow the launching state\'s jurisdiction. But birth citizenship on another planet is completely uncharted legal territory.',
+              3: 'No laws apply in space is incorrect; current treaties say astronauts are \'envoys of mankind\' and space objects follow the launching state\'s jurisdiction. But birth citizenship on another planet is completely uncharted legal territory.',
+            },
           },
           {
             id: "sp-sec14-u8-L4-T2",
@@ -1261,6 +1409,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without independent governance and rights, colonists become captive customers. A fair governance system prevents exploitation and ensures basic rights.",
+            distractorExplanations: {
+              0: 'The company can charge whatever it wants since it built t... is incorrect; without independent governance and rights, colonists become captive customers. A fair governance system prevents exploitation and ensures basic rights.',
+              2: 'Earth governments should micromanage every decision via r... is incorrect; without independent governance and rights, colonists become captive customers. A fair governance system prevents exploitation and ensures basic rights.',
+              3: 'The colony should be abandoned and everyone returned to E... is incorrect; without independent governance and rights, colonists become captive customers. A fair governance system prevents exploitation and ensures basic rights.',
+            },
           },
           {
             id: "sp-sec14-u8-L4-Q6",
@@ -1432,6 +1585,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "The space industry only needs engineers and astronauts.",
             correctAnswer: false,
             explanation: "Space organizations employ people in law, medicine, communications, finance, policy, data science, manufacturing, and many other fields.",
+            distractorExplanations: {
+              0: 'Space organizations employ people in law, medicine, communications, finance, policy, data science, manufacturing, and many other fields.',
+            },
           },
           {
             id: "sp-sec14-u9-L1-Q2",
@@ -1469,6 +1625,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The commercial space sector is expanding rapidly with new companies in launch, satellite services, space tourism, and Earth observation.",
+            distractorExplanations: {
+              1: 'Government military programs only is incorrect; the commercial space sector is expanding rapidly with new companies in launch, satellite services, space tourism, and Earth observation.',
+              2: 'Academic astronomy departments is incorrect; the commercial space sector is expanding rapidly with new companies in launch, satellite services, space tourism, and Earth observation.',
+              3: 'Amateur rocket clubs is incorrect; the commercial space sector is expanding rapidly with new companies in launch, satellite services, space tourism, and Earth observation.',
+            },
           },
           {
             id: "sp-sec14-u9-L1-T3",
@@ -1497,6 +1658,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Space policy, international space law, and regulatory affairs are critical and growing fields. Political science is excellent preparation for these careers.",
+            distractorExplanations: {
+              0: 'Switch to engineering or give up on space is incorrect; space policy, international space law, and regulatory affairs are critical and growing fields. Political science is excellent preparation for these careers.',
+              2: 'Become an astronaut since that\'s the only non-engineering... is incorrect; space policy, international space law, and regulatory affairs are critical and growing fields. Political science is excellent preparation for these careers.',
+              3: 'Space is only for rocket scientists is incorrect; space policy, international space law, and regulatory affairs are critical and growing fields. Political science is excellent preparation for these careers.',
+            },
           },
         ],
       },
@@ -1521,6 +1687,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "Citizen scientists have made real astronomical discoveries.",
             correctAnswer: true,
             explanation: "Citizen scientists have discovered exoplanets (Planet Hunters), new galaxy types (Galaxy Zoo), asteroids, and comets. Their contributions are published in scientific journals.",
+            distractorExplanations: {
+              1: 'This statement is correct because citizen scientists have discovered exoplanets (Planet Hunters), new galaxy types (Galaxy Zoo), asteroids, and comets. Their contributions are published in scientific journals.',
+            },
           },
           {
             id: "sp-sec14-u9-L2-Q2",
@@ -1534,6 +1703,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Galaxy Zoo asks volunteers to classify galaxy morphologies from telescope images. Over 100 million classifications have been made, leading to multiple scientific papers.",
+            distractorExplanations: {
+              1: 'A zoo with galaxy-themed animals is incorrect; galaxy Zoo asks volunteers to classify galaxy morphologies from telescope images. Over 100 million classifications have been made, leading to multiple scientific papers.',
+              2: 'A professional astronomy conference is incorrect; galaxy Zoo asks volunteers to classify galaxy morphologies from telescope images. Over 100 million classifications have been made, leading to multiple scientific papers.',
+              3: 'A space-themed video game is incorrect; galaxy Zoo asks volunteers to classify galaxy morphologies from telescope images. Over 100 million classifications have been made, leading to multiple scientific papers.',
+            },
           },
           {
             id: "sp-sec14-u9-L2-T2",
@@ -1578,6 +1752,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Amateurs monitor the sky more continuously than professional observatories. They frequently spot new comets, track asteroids, and find supernovae in nearby galaxies.",
+            distractorExplanations: {
+              1: 'New galaxies beyond the observable universe is incorrect; amateurs monitor the sky more continuously than professional observatories. They frequently spot new comets, track asteroids, and find supernovae in nearby galaxies.',
+              2: 'New laws of physics is incorrect; amateurs monitor the sky more continuously than professional observatories. They frequently spot new comets, track asteroids, and find supernovae in nearby galaxies.',
+              3: 'New planets in our solar system is incorrect; amateurs monitor the sky more continuously than professional observatories. They frequently spot new comets, track asteroids, and find supernovae in nearby galaxies.',
+            },
           },
           {
             id: "sp-sec14-u9-L2-Q6",
@@ -1610,6 +1789,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "You must study aerospace engineering to work in the space industry.",
             correctAnswer: false,
             explanation: "Space organizations hire from many fields: computer science, biology, law, medicine, communications, business, and more. Aerospace engineering is one path among many.",
+            distractorExplanations: {
+              0: 'Space organizations hire from many fields: computer science, biology, law, medicine, communications, business, and more. Aerospace engineering is one path among many.',
+            },
           },
           {
             id: "sp-sec14-u9-L3-Q2",
@@ -1639,6 +1821,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Internships provide real experience, professional connections, and often lead directly to job offers. They're the most common entry point.",
+            distractorExplanations: {
+              1: 'Waiting until after retirement to apply is incorrect; internships provide real experience, professional connections, and often lead directly to job offers. They\'re the most common entry point.',
+              2: 'Only applying to be an astronaut is incorrect; internships provide real experience, professional connections, and often lead directly to job offers. They\'re the most common entry point.',
+              3: 'Memorizing the names of all the planets is incorrect; internships provide real experience, professional connections, and often lead directly to job offers. They\'re the most common entry point.',
+            },
           },
           {
             id: "sp-sec14-u9-L3-Q4",
@@ -1667,6 +1854,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The best space professionals combine technical expertise with strong communication and teamwork skills. Missions are collaborative, high-stakes efforts.",
+            distractorExplanations: {
+              0: 'Only deep expertise in one narrow technical field is incorrect; the best space professionals combine technical expertise with strong communication and teamwork skills. Missions are collaborative, high-stakes efforts.',
+              2: 'Only soft skills with no technical knowledge is incorrect; the best space professionals combine technical expertise with strong communication and teamwork skills. Missions are collaborative, high-stakes efforts.',
+              3: 'The ability to memorize large amounts of trivia is incorrect; the best space professionals combine technical expertise with strong communication and teamwork skills. Missions are collaborative, high-stakes efforts.',
+            },
           },
           {
             id: "sp-sec14-u9-L3-Q6",
@@ -1699,6 +1891,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "Only people employed by space agencies can contribute to space exploration.",
             correctAnswer: false,
             explanation: "Citizen scientists, educators, advocates, amateur astronomers, and informed voters all play important roles in advancing space exploration.",
+            distractorExplanations: {
+              0: 'Citizen scientists, educators, advocates, amateur astronomers, and informed voters all play important roles in advancing space exploration.',
+            },
           },
           {
             id: "sp-sec14-u9-L4-Q2",
@@ -1728,6 +1923,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Elected officials control space budgets. Advocacy groups mobilize public support and communicate directly with legislators to protect and expand space funding.",
+            distractorExplanations: {
+              1: 'Advocates personally fly the spacecraft is incorrect; elected officials control space budgets. Advocacy groups mobilize public support and communicate directly with legislators to protect and expand space funding.',
+              2: 'Advocacy groups build their own rockets is incorrect; elected officials control space budgets. Advocacy groups mobilize public support and communicate directly with legislators to protect and expand space funding.',
+              3: 'It has no real impact on space programs is incorrect; elected officials control space budgets. Advocacy groups mobilize public support and communicate directly with legislators to protect and expand space funding.',
+            },
           },
           {
             id: "sp-sec14-u9-L4-Q4",
@@ -1757,6 +1957,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Teaching inspires the next generation. Citizen science contributes real data. Advocacy influences policy. All are impactful and don't require a science degree or large budget.",
+            distractorExplanations: {
+              0: 'They can\'t contribute without a science degree is incorrect; teaching inspires the next generation. Citizen science contributes real data. Advocacy influences policy. All are impactful and don\'t require a science degree or large budget.',
+              1: 'They should try to become an astronaut is incorrect; teaching inspires the next generation. Citizen science contributes real data. Advocacy influences policy. All are impactful and don\'t require a science degree or large budget.',
+              3: 'Buy a ticket on a space tourism flight is incorrect; teaching inspires the next generation. Citizen science contributes real data. Advocacy influences policy. All are impactful and don\'t require a science degree or large budget.',
+            },
           },
           {
             id: "sp-sec14-u9-L4-Q6",
@@ -1947,6 +2152,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Water has guaranteed demand in space for drinking, farming, rocket fuel, and radiation shielding. Other resources are valuable but have less immediate space-based demand.",
+            distractorExplanations: {
+              1: 'Gold, because it\'s valuable on Earth is incorrect; water has guaranteed demand in space for drinking, farming, rocket fuel, and radiation shielding. Other resources are valuable but have less immediate space-based demand.',
+              2: 'Helium-3, because fusion reactors already exist is incorrect; water has guaranteed demand in space for drinking, farming, rocket fuel, and radiation shielding. Other resources are valuable but have less immediate space-based demand.',
+              3: 'Diamonds, because they\'re rare is incorrect; water has guaranteed demand in space for drinking, farming, rocket fuel, and radiation shielding. Other resources are valuable but have less immediate space-based demand.',
+            },
           },
           {
             id: "sp-sec14-u10-L1-T2",
@@ -1975,6 +2185,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A lunar base with ISRU builds the foundation for everything else. It tests technologies, develops infrastructure, and creates a fuel supply for deeper missions.",
+            distractorExplanations: {
+              0: 'A crewed Mars landing within 15 years is incorrect; a lunar base with ISRU builds the foundation for everything else. It tests technologies, develops infrastructure, and creates a fuel supply for deeper missions.',
+              2: 'Direct funding for a Dyson swarm project is incorrect; a lunar base with ISRU builds the foundation for everything else. It tests technologies, develops infrastructure, and creates a fuel supply for deeper missions.',
+              3: 'Building a warp drive prototype is incorrect; a lunar base with ISRU builds the foundation for everything else. It tests technologies, develops infrastructure, and creates a fuel supply for deeper missions.',
+            },
           },
           {
             id: "sp-sec14-u10-L1-Q6",
@@ -1995,6 +2210,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "The Alcubierre warp drive has been successfully tested in a laboratory.",
             correctAnswer: false,
             explanation: "The Alcubierre metric is mathematically valid but requires exotic matter that has never been observed. No warp drive has been built or tested.",
+            distractorExplanations: {
+              0: 'The Alcubierre metric is mathematically valid but requires exotic matter that has never been observed. No warp drive has been built or tested.',
+            },
           },
         ],
       },
@@ -2027,6 +2245,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Establishing governance and resource rights before building prevents future conflicts. The Artemis Accords provide a starting framework that can be adapted.",
+            distractorExplanations: {
+              0: 'Ignore the disagreement and start building is incorrect; establishing governance and resource rights before building prevents future conflicts. The Artemis Accords provide a starting framework that can be adapted.',
+              2: 'Cancel the project until perfect international law exists is incorrect; establishing governance and resource rights before building prevents future conflicts. The Artemis Accords provide a starting framework that can be adapted.',
+              3: 'Let the wealthiest nation make all decisions is incorrect; establishing governance and resource rights before building prevents future conflicts. The Artemis Accords provide a starting framework that can be adapted.',
+            },
           },
           {
             id: "sp-sec14-u10-L2-Q2",
@@ -2041,6 +2264,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "ISRU is essential for sustainability. Shipping everything from Earth costs billions and creates permanent dependency. ISRU turns local resources into water, oxygen, and fuel.",
+            distractorExplanations: {
+              0: 'Ship everything from Earth since ISRU technology is unproven is incorrect; iSRU is essential for sustainability. Shipping everything from Earth costs billions and creates permanent dependency. ISRU turns local resources into water, oxygen, and fuel.',
+              2: 'Wait for someone else to develop ISRU technology is incorrect; iSRU is essential for sustainability. Shipping everything from Earth costs billions and creates permanent dependency. ISRU turns local resources into water, oxygen, and fuel.',
+              3: 'Only send robots and never establish a human colony is incorrect; iSRU is essential for sustainability. Shipping everything from Earth costs billions and creates permanent dependency. ISRU turns local resources into water, oxygen, and fuel.',
+            },
           },
           {
             id: "sp-sec14-u10-L2-Q3",
@@ -2063,6 +2291,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Detecting signs of life on another world would be the most transformative discovery in science. It would fundamentally change priorities for space exploration and funding.",
+            distractorExplanations: {
+              1: 'A new asteroid with gold deposits is incorrect; detecting signs of life on another world would be the most transformative discovery in science. It would fundamentally change priorities for space exploration and funding.',
+              2: 'A faster way to recycle water on the ISS is incorrect; detecting signs of life on another world would be the most transformative discovery in science. It would fundamentally change priorities for space exploration and funding.',
+              3: 'A new constellation of communications satellites is incorrect; detecting signs of life on another world would be the most transformative discovery in science. It would fundamentally change priorities for space exploration and funding.',
+            },
           },
           {
             id: "sp-sec14-u10-L2-Q5",
@@ -2079,6 +2312,9 @@ export const spaceSection14Part2: Unit[] = [
             question: "The space industry only needs engineers and scientists, not people with non-technical backgrounds.",
             correctAnswer: false,
             explanation: "Space organizations employ lawyers, communicators, educators, doctors, policy analysts, business managers, artists, and many other non-technical professionals.",
+            distractorExplanations: {
+              0: 'Space organizations employ lawyers, communicators, educators, doctors, policy analysts, business managers, artists, and many other non-technical professionals.',
+            },
           },
           {
             id: "sp-sec14-u10-L2-Q7",
@@ -2092,6 +2328,11 @@ export const spaceSection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The section's core message: space exploration is a step-by-step journey that requires technology, law, diverse talent, and contributions from everyone, not just astronauts.",
+            distractorExplanations: {
+              0: 'Space exploration is only for governments and will never ... is incorrect; the section\'s core message: space exploration is a step-by-step journey that requires technology, law, diverse talent, and contributions from everyone, not just astronauts.',
+              2: 'We should focus entirely on Mars and ignore the Moon is incorrect; the section\'s core message: space exploration is a step-by-step journey that requires technology, law, diverse talent, and contributions from everyone, not just astronauts.',
+              3: 'Space exploration is too expensive and should be abandoned is incorrect; the section\'s core message: space exploration is a step-by-step journey that requires technology, law, diverse talent, and contributions from everyone, not just astronauts.',
+            },
           },
         ],
       },

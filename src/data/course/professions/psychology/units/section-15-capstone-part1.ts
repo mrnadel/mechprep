@@ -34,6 +34,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Most advertisements rely primarily on emotional appeals rather than factual product information.',
             correctAnswer: true,
             explanation: 'Research shows emotional ads are more effective because feelings drive decisions faster than rational evaluation.',
+            distractorExplanations: {
+              1: 'Research shows emotional ads are more effective because feelings drive decisions faster than rational evaluation.',
+            },
           },
           {
             id: 'psy-sec15-u1-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The ad connects the car with family bonding and joy, not the vehicle\'s technical features.',
+            distractorExplanations: {
+              0: '"Fear of missing out" is incorrect; belonging and happiness.',
+              2: '"Guilt about spending" is incorrect; belonging and happiness.',
+              3: '"Anger at competitors" is incorrect; belonging and happiness.',
+            },
           },
           {
             id: 'psy-sec15-u1-L1-T2',
@@ -117,6 +125,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The ad triggers fear of loss and then offers the product as the solution. Loss aversion makes the threat feel urgent.',
+            distractorExplanations: {
+              0: '"Classical conditioning paired with nostalgia" is incorrect; fear appeal combined with loss aversion.',
+              2: '"Social proof through celebrity endorsement" is incorrect; fear appeal combined with loss aversion.',
+              3: '"Rational persuasion with statistical evidence" is incorrect; fear appeal combined with loss aversion.',
+            },
           },
         ],
       },
@@ -142,6 +155,9 @@ export const psySection15Part1: Unit[] = [
             question: 'The scarcity principle says people value items more when they appear to be in limited supply.',
             correctAnswer: true,
             explanation: 'Scarcity triggers urgency and increases perceived value, even when the limit is artificial.',
+            distractorExplanations: {
+              1: 'Scarcity triggers urgency and increases perceived value, even when the limit is artificial.',
+            },
           },
           {
             id: 'psy-sec15-u1-L2-Q2',
@@ -155,6 +171,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The low stock count creates scarcity pressure and fear of missing out, pushing faster decisions.',
+            distractorExplanations: {
+              0: '"Anchoring bias" is incorrect; scarcity bias and loss aversion.',
+              2: '"Confirmation bias" is incorrect; scarcity bias and loss aversion.',
+              3: '"Availability heuristic" is incorrect; scarcity bias and loss aversion.',
+            },
           },
           {
             id: 'psy-sec15-u1-L2-T2',
@@ -174,6 +195,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Time pressure pushes you from deliberate System 2 processing to quick System 1 reactions.',
+            distractorExplanations: {
+              0: '"They help shoppers plan better" is incorrect; they force a shift from careful to impulsive thinking.',
+              1: '"They reduce the price further" is incorrect; they force a shift from careful to impulsive thinking.',
+              3: '"They prove the deal is genuinely rare" is incorrect; they force a shift from careful to impulsive thinking.',
+            },
           },
           {
             id: 'psy-sec15-u1-L2-Q4',
@@ -204,6 +230,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Waiting breaks the urgency spell. If you still want it tomorrow, it was a real need. Most flash sales repeat anyway.',
+            distractorExplanations: {
+              0: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              2: '"Share the deal with friends so they can buy too" is incorrect; bookmark it and check if you still want it tomorrow.',
+              3: '"Add three to your cart in case the price goes up" is incorrect; bookmark it and check if you still want it tomorrow.',
+            },
           },
           {
             id: 'psy-sec15-u1-L2-T3',
@@ -217,6 +248,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Most "limited time" offers in online shopping are genuinely one-time events that never repeat.',
             correctAnswer: false,
             explanation: 'Many sales cycle repeatedly. The artificial deadline is a psychological tool, not a real constraint.',
+            distractorExplanations: {
+              0: 'Many sales cycle repeatedly. The artificial deadline is a psychological tool, not a real constraint.',
+            },
           },
         ],
       },
@@ -241,6 +275,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Social proof works because people assume popular choices are likely to be good choices.',
             correctAnswer: true,
             explanation: 'Social proof is a mental shortcut. Popularity signals safety and quality, even when it doesn\'t guarantee either.',
+            distractorExplanations: {
+              1: 'Social proof is a mental shortcut. Popularity signals safety and quality, even when it doesn\\\'t guarantee either.',
+            },
           },
           {
             id: 'psy-sec15-u1-L3-Q2',
@@ -254,6 +291,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Citing the number of customers uses social proof to signal that the product is trustworthy because many others chose it.',
+            distractorExplanations: {
+              0: '"Our product is made with organic ingredients" is incorrect; over 5 million customers trust us.',
+              2: '"Now available in 3 new colors" is incorrect; over 5 million customers trust us.',
+              3: '"Free shipping on orders over $50" is incorrect; over 5 million customers trust us.',
+            },
           },
           {
             id: 'psy-sec15-u1-L3-T2',
@@ -301,6 +343,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Fake reviews manufacture social proof. Consumers trust them as genuine peer feedback, leading to manipulated decisions.',
+            distractorExplanations: {
+              0: '"They are illegal everywhere in the world" is incorrect; they exploit social proof to create false trust.',
+              2: '"They only affect people under age 18" is incorrect; they exploit social proof to create false trust.',
+              3: '"They raise the price of the product" is incorrect; they exploit social proof to create false trust.',
+            },
           },
           {
             id: 'psy-sec15-u1-L3-T3',
@@ -321,6 +368,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'You followed the crowd without independent evaluation. That is the bandwagon effect in everyday life.',
+            distractorExplanations: {
+              0: '"Anchoring: the line sets an expectation" is incorrect; bandwagon effect: you assume popularity means quality.',
+              2: '"Availability heuristic: you recall busy restaurants" is incorrect; bandwagon effect: you assume popularity means quality.',
+              3: '"Halo effect: the building looks attractive" is incorrect; bandwagon effect: you assume popularity means quality.',
+            },
           },
         ],
       },
@@ -346,6 +398,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Some ads deliberately create feelings of inadequacy to motivate a purchase.',
             correctAnswer: true,
             explanation: 'Creating a gap between your self-image and an ideal is a common manipulation tactic called "problem-agitate-solve."',
+            distractorExplanations: {
+              1: 'Creating a gap between your self-image and an ideal is a common manipulation tactic called "problem-agitate-solve.".',
+            },
           },
           {
             id: 'psy-sec15-u1-L4-Q2',
@@ -359,6 +414,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The ad magnifies a "flaw" you may not have noticed, creates anxiety, and then sells you the solution.',
+            distractorExplanations: {
+              0: '"Social proof by showing real results" is incorrect; problem-agitate-solve: create insecurity, then offer relief.',
+              2: '"Rational persuasion with scientific evidence" is incorrect; problem-agitate-solve: create insecurity, then offer relief.',
+              3: '"Bandwagon effect through popularity claims" is incorrect; problem-agitate-solve: create insecurity, then offer relief.',
+            },
           },
           {
             id: 'psy-sec15-u1-L4-T2',
@@ -421,6 +481,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The prefrontal cortex, responsible for critical evaluation and impulse control, does not fully mature until the mid-20s.',
+            distractorExplanations: {
+              0: '"They watch more TV than adults" does not accurately describe the concept asked about.',
+              1: '"They prefer colorful products" does not accurately describe the concept asked about.',
+              3: '"They have more spending money than teens" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -560,6 +625,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Social media platforms use variable reward schedules similar to slot machines.',
             correctAnswer: true,
             explanation: 'Variable rewards are the most addictive reinforcement schedule. You keep checking because the next reward is unpredictable.',
+            distractorExplanations: {
+              1: 'Variable rewards are the most addictive reinforcement schedule. You keep checking because the next reward is unpredictable.',
+            },
           },
           {
             id: 'psy-sec15-u2-L1-Q2',
@@ -573,6 +641,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Unpredictability keeps the dopamine system activated. You learned this in the learning section with operant conditioning.',
+            distractorExplanations: {
+              0: '"It provides bigger rewards" is incorrect; it creates unpredictability that keeps you checking.',
+              2: '"It costs more money" is incorrect; it creates unpredictability that keeps you checking.',
+              3: '"It only works on younger users" is incorrect; it creates unpredictability that keeps you checking.',
+            },
           },
           {
             id: 'psy-sec15-u2-L1-T2',
@@ -625,6 +698,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Dopamine is about anticipation, not satisfaction. This is why you keep checking even when the content disappoints.',
+            distractorExplanations: {
+              0: '"After receiving the reward" is incorrect; during anticipation of the reward.',
+              2: '"While the reward is being consumed" is incorrect; during anticipation of the reward.',
+              3: '"Hours after the experience ends" is incorrect; during anticipation of the reward.',
+            },
           },
           {
             id: 'psy-sec15-u2-L1-Q6',
@@ -639,6 +717,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The unpredictable number of likes is a variable ratio schedule, the most addictive type of reinforcement.',
+            distractorExplanations: {
+              0: '"Fixed ratio: consistent reward per post" is incorrect; variable ratio: unpredictable rewards keep you posting.',
+              1: '"Fixed interval: reward on a predictable schedule" is incorrect; variable ratio: unpredictable rewards keep you posting.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
         ],
       },
@@ -663,6 +746,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Infinite scroll is designed to remove natural stopping points that help you disengage.',
             correctAnswer: true,
             explanation: 'Without endpoints, your brain stays in a consumption loop. This is intentional design, not an accident.',
+            distractorExplanations: {
+              1: 'Without endpoints, your brain stays in a consumption loop. This is intentional design, not an accident.',
+            },
           },
           {
             id: 'psy-sec15-u2-L2-Q2',
@@ -676,6 +762,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Without clear boundaries, your brain has no natural moment to decide "I should stop now."',
+            distractorExplanations: {
+              0: '"It makes content load faster" is incorrect; it prevents the brain from recognizing a natural exit point.',
+              2: '"It shows more advertisements" is incorrect; it prevents the brain from recognizing a natural exit point.',
+              3: '"It improves content quality" is incorrect; it prevents the brain from recognizing a natural exit point.',
+            },
           },
           {
             id: 'psy-sec15-u2-L2-T2',
@@ -726,6 +817,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Infinite scroll, autoplay, and variable rewards are designed to create time distortion. It is a platform design issue, not a personal failing.',
+            distractorExplanations: {
+              0: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: '"The content was unusually important" is incorrect; the platform removes stopping cues and induces time distortion.',
+              3: 'This falsely attributes the condition to personal choice, ignoring its biological and psychological basis.',
+            },
           },
           {
             id: 'psy-sec15-u2-L2-Q6',
@@ -764,6 +860,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Social media tends to show people\'s highlight reels, leading to unfair upward comparisons.',
             correctAnswer: true,
             explanation: 'People curate their best moments online. Comparing your full life to their curated feed creates a distorted view.',
+            distractorExplanations: {
+              1: 'People curate their best moments online. Comparing your full life to their curated feed creates a distorted view.',
+            },
           },
           {
             id: 'psy-sec15-u2-L3-Q2',
@@ -777,6 +876,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Upward comparison to idealized images typically reduces self-esteem and life satisfaction.',
+            distractorExplanations: {
+              0: '"More motivated and inspired" is incorrect; inadequate and dissatisfied.',
+              2: '"Neutral and unaffected" is incorrect; inadequate and dissatisfied.',
+              3: '"Superior and confident" is incorrect; inadequate and dissatisfied.',
+            },
           },
           {
             id: 'psy-sec15-u2-L3-T2',
@@ -832,6 +936,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'You compared your everyday reality to others\' best-of moments. This is upward comparison fueled by the highlight reel effect.',
+            distractorExplanations: {
+              0: '"Classical conditioning paired the phone with sadness" is incorrect; upward social comparison against curated highlight reels.',
+              2: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              3: '"Cognitive dissonance about your travel choices" is incorrect; upward social comparison against curated highlight reels.',
+            },
           },
           {
             id: 'psy-sec15-u2-L3-T3',
@@ -845,6 +954,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Research shows that awareness of the highlight reel effect can reduce its negative impact on self-esteem.',
             correctAnswer: true,
             explanation: 'Metacognition (thinking about your thinking) helps. Reminding yourself that feeds are curated weakens the comparison.',
+            distractorExplanations: {
+              1: 'Metacognition (thinking about your thinking) helps. Reminding yourself that feeds are curated weakens the comparison.',
+            },
           },
         ],
       },
@@ -870,6 +982,9 @@ export const psySection15Part1: Unit[] = [
             question: 'FOMO is closely related to loss aversion because missing out feels like a loss.',
             correctAnswer: true,
             explanation: 'FOMO exploits loss aversion. The pain of missing out is psychologically stronger than the joy of participating.',
+            distractorExplanations: {
+              1: 'FOMO exploits loss aversion. The pain of missing out is psychologically stronger than the joy of participating.',
+            },
           },
           {
             id: 'psy-sec15-u2-L4-Q2',
@@ -883,6 +998,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Research shows outrage spreads faster and generates more clicks, shares, and comments than positive content.',
+            distractorExplanations: {
+              0: '"Joy and contentment" is incorrect; outrage and moral anger.',
+              1: '"Boredom and indifference" is incorrect; outrage and moral anger.',
+              3: '"Calm and relaxation" is incorrect; outrage and moral anger.',
+            },
           },
           {
             id: 'psy-sec15-u2-L4-T2',
@@ -932,6 +1052,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The business model depends on attention. Outrage keeps attention longer and generates more ad impressions.',
+            distractorExplanations: {
+              0: '"Because calm content is harder to create" is incorrect; because outrage drives the engagement that generates ad revenue.',
+              2: '"Because users specifically request more angry content" is incorrect; because outrage drives the engagement that generates ad revenue.',
+              3: '"Because outrage content is cheaper to produce" is incorrect; because outrage drives the engagement that generates ad revenue.',
+            },
           },
           {
             id: 'psy-sec15-u2-L4-Q6',
@@ -946,6 +1071,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Pausing breaks the outrage cycle. Verifying before sharing prevents you from amplifying possible misinformation.',
+            distractorExplanations: {
+              0: '"Share it quickly so others can be warned too" is incorrect; pause, check the source, and verify before reacting or sharing.',
+              2: '"Write an angry comment expressing your outrage" is incorrect; pause, check the source, and verify before reacting or sharing.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
         ],
       },
@@ -1089,6 +1219,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Propaganda works by exploiting cognitive biases and emotional responses.',
             correctAnswer: true,
             explanation: 'Propaganda targets known psychological weaknesses: heuristics, fear, tribalism, and the desire for simple answers.',
+            distractorExplanations: {
+              1: 'Propaganda targets known psychological weaknesses: heuristics, fear, tribalism, and the desire for simple answers.',
+            },
           },
           {
             id: 'psy-sec15-u3-L1-Q2',
@@ -1102,6 +1235,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Bandwagon propaganda uses social proof: if everyone else supports it, you should follow along.',
+            distractorExplanations: {
+              0: '"Our leader is an expert on this topic" is incorrect; everyone is joining, so you should too.',
+              2: '"The enemy is dangerous and evil" is incorrect; everyone is joining, so you should too.',
+              3: '"Things were better in the past" is incorrect; everyone is joining, so you should too.',
+            },
           },
           {
             id: 'psy-sec15-u3-L1-T2',
@@ -1171,6 +1309,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The "plain folks" technique makes a powerful person seem relatable and ordinary to gain trust.',
+            distractorExplanations: {
+              0: '"Bandwagon: everyone supports this candidate" is incorrect; plain folks: presenting as an ordinary person.',
+              1: '"Card stacking: only showing favorable data" is incorrect; plain folks: presenting as an ordinary person.',
+              3: '"Transfer: linking to respected symbols" is incorrect; plain folks: presenting as an ordinary person.',
+            },
           },
         ],
       },
@@ -1195,6 +1338,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Research shows emotional political messages are more persuasive and memorable than fact-based ones.',
             correctAnswer: true,
             explanation: 'Emotional processing is faster and more automatic. Facts require effortful, System 2 thinking.',
+            distractorExplanations: {
+              1: 'Emotional processing is faster and more automatic. Facts require effortful, System 2 thinking.',
+            },
           },
           {
             id: 'psy-sec15-u3-L2-Q2',
@@ -1208,6 +1354,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Fear messages activate the amygdala instantly. Processing statistics requires slow, deliberate thinking.',
+            distractorExplanations: {
+              0: '"Because children\\\'s safety is not important" does not accurately describe the concept asked about.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec15-u3-L2-T2',
@@ -1270,6 +1421,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Repeated information is processed more easily. Your brain mistakes that ease of processing for truthfulness.',
+            distractorExplanations: {
+              0: '"People carefully evaluate repeated claims" is incorrect; repetition increases processing fluency, which feels like truth.',
+              2: '"Slogans contain hidden subliminal messages" is incorrect; repetition increases processing fluency, which feels like truth.',
+              3: '"People only hear messages once and remember them perfectly" is incorrect; repetition increases processing fluency, which feels like truth.',
+            },
           },
         ],
       },
@@ -1294,6 +1450,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Group polarization occurs when discussion with like-minded people pushes opinions toward more extreme positions.',
             correctAnswer: true,
             explanation: 'Group discussion amplifies the initial tendency. People compete to be the "best" representative of the group\'s position.',
+            distractorExplanations: {
+              1: 'Group discussion amplifies the initial tendency. People compete to be the "best" representative of the group\\\'s position.',
+            },
           },
           {
             id: 'psy-sec15-u3-L3-Q2',
@@ -1307,6 +1466,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Echo chambers filter out opposing views, reinforcing existing beliefs and accelerating polarization.',
+            distractorExplanations: {
+              0: '"A type of recording studio" is incorrect; an environment where you only encounter opinions similar to your own.',
+              2: '"A debate format with equal representation" is incorrect; an environment where you only encounter opinions similar to your own.',
+              3: '"A classroom with poor acoustics" is incorrect; an environment where you only encounter opinions similar to your own.',
+            },
           },
           {
             id: 'psy-sec15-u3-L3-T2',
@@ -1355,6 +1519,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Group polarization occurs when like-minded discussion pushes everyone toward a more extreme version of the group\'s original position.',
+            distractorExplanations: {
+              0: 'Dependent PD involves excessive need for others to make decisions, not the pattern described here.',
+              2: '"An outside authority convinced them to change their minds" is incorrect; group polarization amplified their shared viewpoint.',
+              3: '"They experienced deindividuation and lost personal identity" is incorrect; group polarization amplified their shared viewpoint.',
+            },
           },
           {
             id: 'psy-sec15-u3-L3-T3',
@@ -1368,6 +1537,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Exposure to hostile, aggressive opposing views is the best way to reduce polarization.',
             correctAnswer: false,
             explanation: 'Hostile exposure can backfire and increase polarization. Quality, respectful disagreement is more effective at broadening perspectives.',
+            distractorExplanations: {
+              0: 'Hostile exposure can backfire and increase polarization.',
+            },
           },
         ],
       },
@@ -1392,6 +1564,9 @@ export const psySection15Part1: Unit[] = [
             question: 'A political message that claims "the other side is pure evil" is likely using manipulative framing.',
             correctAnswer: true,
             explanation: 'Extreme us-vs-them language is a red flag. Real issues are complex and rarely have purely good or evil sides.',
+            distractorExplanations: {
+              1: 'Extreme us-vs-them language is a red flag. Real issues are complex and rarely have purely good or evil sides.',
+            },
           },
           {
             id: 'psy-sec15-u3-L4-Q2',
@@ -1427,6 +1602,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Whataboutism avoids addressing the original criticism by redirecting attention to a different issue.',
+            distractorExplanations: {
+              0: '"A valid counterargument based on evidence" is incorrect; whataboutism: deflecting criticism by changing the subject.',
+              2: '"An example of the bandwagon technique" is incorrect; whataboutism: deflecting criticism by changing the subject.',
+              3: '"A fair comparison between two equal situations" is incorrect; whataboutism: deflecting criticism by changing the subject.',
+            },
           },
           {
             id: 'psy-sec15-u3-L4-Q4',
@@ -1481,6 +1661,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'High share counts do not verify accuracy. Viral spread often indicates emotional manipulation, not truth.',
+            distractorExplanations: {
+              0: '"Share it immediately to warn your friends" does not accurately describe the concept asked about.',
+              1: '"Trust it because 50,000 people shared it" does not accurately describe the concept asked about.',
+              3: '"Write an angry comment demanding action" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1625,6 +1810,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The medium differs, but the psychological mechanisms are the same across all three.',
+            distractorExplanations: {
+              0: '"They all use television as their primary medium" is incorrect; they all exploit cognitive biases and emotional responses.',
+              1: '"They all require government approval" is incorrect; they all exploit cognitive biases and emotional responses.',
+              3: '"They all target only young people" is incorrect; they all exploit cognitive biases and emotional responses.',
+            },
           },
           {
             id: 'psy-sec15-u4-L1-Q2',
@@ -1688,6 +1878,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'This combines three tactics: social proof (Sarah bought it), scarcity (only 1 left), and urgency (countdown timer).',
+            distractorExplanations: {
+              0: '"Social proof only" is incorrect; social proof, scarcity, and urgency combined.',
+              1: '"Scarcity only" is incorrect; social proof, scarcity, and urgency combined.',
+              2: '"Urgency only" is incorrect; social proof, scarcity, and urgency combined.',
+            },
           },
           {
             id: 'psy-sec15-u4-L1-Q6',
@@ -1734,6 +1929,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The discount creates potential loss (you\'ll miss out), and the 6-hour window creates artificial urgency.',
+            distractorExplanations: {
+              0: '"Classical conditioning with the email sound" is incorrect; loss aversion combined with artificial scarcity.',
+              2: '"The mere exposure effect from frequent emails" is incorrect; loss aversion combined with artificial scarcity.',
+              3: '"Social proof from other customers\\\' purchases" is incorrect; loss aversion combined with artificial scarcity.',
+            },
           },
           {
             id: 'psy-sec15-u4-L2-Q2',
@@ -1748,6 +1948,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Outrage bait uses emotionally extreme headlines to drive clicks. The content rarely matches the emotional intensity of the headline.',
+            distractorExplanations: {
+              0: '"Anchoring bias from the headline\\\'s extreme claim" is incorrect; outrage bait exploiting the gap between headline and content.',
+              1: '"Sunk cost fallacy from time spent reading" is incorrect; outrage bait exploiting the gap between headline and content.',
+              3: '"Availability heuristic from recent similar stories" is incorrect; outrage bait exploiting the gap between headline and content.',
+            },
           },
           {
             id: 'psy-sec15-u4-L2-T2',
@@ -1768,6 +1973,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Three agreeing posts in a row suggests a filter bubble. Seeking quality opposing views helps you evaluate your position more fairly.',
+            distractorExplanations: {
+              0: '"Share the posts because they confirm what you already believe" does not accurately describe the concept asked about.',
+              2: '"Feel confident that your view is correct since so many people agree" does not accurately describe the concept asked about.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec15-u4-L2-Q4',
@@ -1800,6 +2010,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Total avoidance is not realistic or healthy. The goal is critical engagement, not isolation.',
+            distractorExplanations: {
+              0: '"Pausing before reacting to emotional content" is incorrect; avoiding all media to stay safe from influence.',
+              1: '"Checking the source of a claim" is incorrect; avoiding all media to stay safe from influence.',
+              3: '"Asking "what is this trying to make me feel?" is incorrect; avoiding all media to stay safe from influence.',
+            },
           },
           {
             id: 'psy-sec15-u4-L2-T3',
@@ -1813,6 +2028,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Teaching manipulation tactics to others strengthens your own ability to recognize them.',
             correctAnswer: true,
             explanation: 'Teaching requires deep understanding. Explaining concepts to others reinforces your own knowledge and keeps your defenses sharp.',
+            distractorExplanations: {
+              1: 'Teaching requires deep understanding. Explaining concepts to others reinforces your own knowledge and keeps your defenses sharp.',
+            },
           },
         ],
       },
@@ -1956,6 +2174,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Confirmshaming uses guilt-inducing language on the opt-out button to discourage people from declining.',
             correctAnswer: true,
             explanation: 'By making the "no" option feel shameful, users are pressured into accepting even if they don\'t want to.',
+            distractorExplanations: {
+              1: 'By making the "no" option feel shameful, users are pressured into accepting even if they don\\\'t want to.',
+            },
           },
           {
             id: 'psy-sec15-u5-L1-Q2',
@@ -1969,6 +2190,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: '"I prefer to stay ignorant" shames the user for declining. Neutral options like "No, thank you" are ethical.',
+            distractorExplanations: {
+              0: '"Subscribe" / "No, thank you" is incorrect; yes, sign me up!" / "No, I prefer to stay ignorant.',
+              2: '"Accept" / "Decline" is incorrect; yes, sign me up!" / "No, I prefer to stay ignorant.',
+              3: '"Continue" / "Go back" is incorrect; yes, sign me up!" / "No, I prefer to stay ignorant.',
+            },
           },
           {
             id: 'psy-sec15-u5-L1-T2',
@@ -2018,6 +2244,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'You want to see yourself as smart, caring, and informed. The shameful opt-out text conflicts with that self-image.',
+            distractorExplanations: {
+              0: '"It provides helpful information about the product" does not accurately describe the concept asked about.',
+              2: '"It uses bright colors that attract attention" does not accurately describe the concept asked about.',
+              3: '"It offers a genuine incentive to subscribe" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u5-L1-Q6',
@@ -2032,6 +2263,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Calling the user "a fool" for declining is classic confirmshaming. It pressures acceptance through guilt.',
+            distractorExplanations: {
+              0: '"Bait and switch: the product changes after you agree" is incorrect; confirmshaming: the decline option uses guilt-inducing language.',
+              2: '"Hidden fees: extra charges are added at checkout" is incorrect; confirmshaming: the decline option uses guilt-inducing language.',
+              3: '"Roach motel: easy to get in, hard to get out" is incorrect; confirmshaming: the decline option uses guilt-inducing language.',
+            },
           },
         ],
       },
@@ -2056,6 +2292,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Drip pricing works partly because of the sunk cost fallacy: you have already invested time in the purchase process.',
             correctAnswer: true,
             explanation: 'After spending time selecting, customizing, and entering details, abandoning feels like wasting that effort. This is the sunk cost fallacy.',
+            distractorExplanations: {
+              1: 'After spending time selecting, customizing, and entering details, abandoning feels like wasting that effort.',
+            },
           },
           {
             id: 'psy-sec15-u5-L2-Q2',
@@ -2069,6 +2308,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The real price is $72, but the low initial price of $50 hooks you before the true cost is revealed.',
+            distractorExplanations: {
+              0: '"Transparent pricing with explained costs" is incorrect; drip pricing that hides the real total until checkout.',
+              2: '"A discount that was applied incorrectly" is incorrect; drip pricing that hides the real total until checkout.',
+              3: '"Standard pricing practice that benefits consumers" is incorrect; drip pricing that hides the real total until checkout.',
+            },
           },
           {
             id: 'psy-sec15-u5-L2-T2',
@@ -2131,6 +2375,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Pre-checked add-on boxes exploit the default effect because most users accept pre-selected options without reviewing them.',
             correctAnswer: true,
             explanation: 'The default effect means people tend to stick with whatever is pre-selected. Unchecking requires active effort.',
+            distractorExplanations: {
+              1: 'The default effect means people tend to stick with whatever is pre-selected. Unchecking requires active effort.',
+            },
           },
         ],
       },
@@ -2156,6 +2403,9 @@ export const psySection15Part1: Unit[] = [
             question: 'The "roach motel" dark pattern makes cancellation deliberately difficult to reduce churn.',
             correctAnswer: true,
             explanation: 'Adding friction to cancellation keeps users subscribed even when they want to leave. The asymmetry between sign-up and cancellation is intentional.',
+            distractorExplanations: {
+              1: 'Adding friction to cancellation keeps users subscribed even when they want to leave.',
+            },
           },
           {
             id: 'psy-sec15-u5-L3-Q2',
@@ -2169,6 +2419,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Status quo bias means you stick with the current situation when changing requires effort. Difficult cancellation exploits this.',
+            distractorExplanations: {
+              0: '"The mere exposure effect" does not accurately describe the concept asked about.',
+              2: '"The halo effect of the brand" does not accurately describe the concept asked about.',
+              3: '"Social proof from other subscribers" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec15-u5-L3-T2',
@@ -2218,6 +2473,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Threatening data loss exploits loss aversion. The pain of losing progress feels worse than the cost of continuing to pay.',
+            distractorExplanations: {
+              0: '"An honest warning about data policies" is incorrect; loss aversion manipulation to prevent cancellation.',
+              2: '"A legal requirement they must display" is incorrect; loss aversion manipulation to prevent cancellation.',
+              3: '"Social proof from other users who stayed" is incorrect; loss aversion manipulation to prevent cancellation.',
+            },
           },
           {
             id: 'psy-sec15-u5-L3-Q6',
@@ -2256,6 +2516,9 @@ export const psySection15Part1: Unit[] = [
             question: 'Making the "accept" button large and colorful while making "decline" small and gray is a form of visual misdirection.',
             correctAnswer: true,
             explanation: 'Visual hierarchy is used to guide your eye toward the option that benefits the company.',
+            distractorExplanations: {
+              1: 'Visual hierarchy is used to guide your eye toward the option that benefits the company.',
+            },
           },
           {
             id: 'psy-sec15-u5-L4-Q2',
@@ -2269,6 +2532,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The design deliberately makes the company-preferred option visually dominant while hiding the user-preferred option.',
+            distractorExplanations: {
+              0: '"Confirmshaming through guilt language" is incorrect; visual misdirection through design hierarchy.',
+              2: '"Drip pricing through hidden costs" is incorrect; visual misdirection through design hierarchy.',
+              3: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+            },
           },
           {
             id: 'psy-sec15-u5-L4-T2',
@@ -2339,6 +2607,11 @@ export const psySection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'You were promised a free download but received a data collection form instead. The bait (free report) and the switch (personal data request) do not match.',
+            distractorExplanations: {
+              0: '"Confirmshaming: the cancel option uses guilt language" is incorrect; bait and switch: the promised action does not match what happens.',
+              1: '"Drip pricing: hidden costs are added gradually" is incorrect; bait and switch: the promised action does not match what happens.',
+              3: '"Roach motel: easy to enter, hard to leave" is incorrect; bait and switch: the promised action does not match what happens.',
+            },
           },
         ],
       },

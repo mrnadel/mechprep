@@ -41,6 +41,22 @@ import type { ContentFeedbackType } from '@/data/types';
 import { GlossaryText } from '@/components/ui/GlossaryText';
 import { GlossaryProvider } from '@/components/lesson/GlossaryContext';
 import { useNarration } from '@/hooks/useNarration';
+import { AdaptiveToast, type AdaptiveMode } from '@/components/lesson/AdaptiveToast';
+
+// --------------- Adaptive Difficulty ---------------
+const ROLLING_WINDOW = 5;
+const STRUGGLING_THRESHOLD = 0.4; // ≤40% accuracy over last 5
+const CRUISING_THRESHOLD = 1.0;   // 100% accuracy over last 5
+const CRUISING_XP_BONUS = 1.5;
+
+function getAdaptiveMode(recentAnswers: boolean[]): AdaptiveMode {
+  if (recentAnswers.length < 3) return 'normal'; // Need at least 3 answers
+  const window = recentAnswers.slice(-ROLLING_WINDOW);
+  const accuracy = window.filter(Boolean).length / window.length;
+  if (accuracy <= STRUGGLING_THRESHOLD) return 'struggling';
+  if (accuracy >= CRUISING_THRESHOLD && window.length >= ROLLING_WINDOW) return 'cruising';
+  return 'normal';
+}
 
 /**
  * Adapter for driving LessonView from an external data source (e.g. practice sessions).
@@ -95,6 +111,9 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const [lastSelectedIndex, setLastSelectedIndex] = useState<number | undefined>(undefined);
   const [xpGain, setXpGain] = useState(0);
   const [showOutOfHearts, setShowOutOfHearts] = useState(false);
+  const [recentAnswers, setRecentAnswers] = useState<boolean[]>([]);
+  const adaptiveMode = useMemo(() => getAdaptiveMode(recentAnswers), [recentAnswers]);
+  const adaptiveSeed = useRef(0);
   const questionRef = useRef<QuestionCardHandle>(null);
   const isDoubleXp = useDoubleXpActive();
   const addMasteryEvent = useMasteryStore((s) => s.addEvent);
@@ -227,11 +246,27 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
 
   const lessonSessionQuestions = useMemo(() => {
     if (adapter || !activeLesson || !lessonData) return [];
+    // Build lookup from current lesson's questions
     const questionMap = new Map(lessonData.lesson.questions.map((q) => [q.id, q]));
+    // Include review questions from other units in the lookup
+    if (activeLesson.reviewQuestionIds?.length) {
+      const reviewIds = new Set(activeLesson.reviewQuestionIds);
+      for (const unit of courseData) {
+        if (!unit?.lessons) continue;
+        for (const lesson of unit.lessons) {
+          if (!lesson?.questions) continue;
+          for (const q of lesson.questions) {
+            if (reviewIds.has(q.id) && !questionMap.has(q.id)) {
+              questionMap.set(q.id, q);
+            }
+          }
+        }
+      }
+    }
     return activeLesson.sessionQuestionIds
       .map((id) => questionMap.get(id))
       .filter(Boolean) as typeof lessonData.lesson.questions;
-  }, [adapter, activeLesson, lessonData]);
+  }, [adapter, activeLesson, lessonData, courseData]);
 
   const lessonCurrentQuestion = useMemo(() => {
     if (adapter || !activeLesson) return null;
@@ -393,14 +428,24 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
       }
       setLastAnswerCorrect(correct);
       setLastSelectedIndex(selectedOriginalIndex);
+      // Track rolling accuracy for adaptive difficulty
+      setRecentAnswers((prev) => {
+        const next = [...prev, correct];
+        // Check if the NEW mode will be cruising for XP bonus
+        const mode = getAdaptiveMode(next);
+        if (mode !== adaptiveMode) adaptiveSeed.current++;
+        return next;
+      });
       if (correct) {
-        setXpGain((prev) => prev + (isDoubleXp ? 20 : 10));
+        // Cruising bonus: 1.5x XP per question during a perfect streak
+        const cruiseBonus = adaptiveMode === 'cruising' ? CRUISING_XP_BONUS : 1;
+        setXpGain((prev) => prev + Math.round((isDoubleXp ? 20 : 10) * cruiseBonus));
       } else if (!adapter?.noHearts) {
         playSound('heartLost');
         loseHeart();
       }
     },
-    [adapter, currentQuestion, _submitAnswer, lessonData, addMasteryEvent, isDoubleXp, loseHeart]
+    [adapter, currentQuestion, _submitAnswer, lessonData, addMasteryEvent, isDoubleXp, loseHeart, adaptiveMode]
   );
 
   const handleSelectionChange = useCallback((value: boolean) => {
@@ -932,6 +977,11 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                 </motion.div>
               )}
             </AnimatePresence>
+
+            {/* Adaptive difficulty toast (encouraging when struggling, bonus when cruising) */}
+            {lastAnswerCorrect === null && displayQuestion.type !== 'teaching' && (
+              <AdaptiveToast mode={adaptiveMode} seed={adaptiveSeed.current} />
+            )}
 
             <AnimatePresence mode="popLayout">
               <motion.div

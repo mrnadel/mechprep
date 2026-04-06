@@ -34,6 +34,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Ancient civilizations commonly attributed mental illness to supernatural causes.',
             correctAnswer: true,
             explanation: 'Evil spirits, divine punishment, and demonic possession were the dominant explanations for centuries.',
+            distractorExplanations: {
+              1: 'Evil spirits, divine punishment, and demonic possession were the dominant explanations for centuries.',
+            },
           },
           {
             id: 'psy-sec12-u1-L1-Q2',
@@ -61,6 +64,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Hippocrates shifted the explanation from supernatural to natural causes, laying groundwork for a medical approach to mental illness.',
+            distractorExplanations: {
+              0: '"He discovered the first effective medication" is incorrect; he proposed mental illness had natural, bodily causes.',
+              2: '"He invented the first psychiatric hospital" is incorrect; he proposed mental illness had natural, bodily causes.',
+              3: '"He proved that exorcism was the best treatment" is incorrect; he proposed mental illness had natural, bodily causes.',
+            },
           },
           {
             id: 'psy-sec12-u1-L1-Q4',
@@ -74,6 +82,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The humors model was wrong about the mechanism, but it moved the conversation from spirits to biology.',
+            distractorExplanations: {
+              0: '"It correctly identified brain chemistry as the cause" is incorrect; it replaced supernatural explanations with natural ones.',
+              2: '"It was the first theory to use medication" is incorrect; it replaced supernatural explanations with natural ones.',
+              3: '"It proved that all mental illness is genetic" is incorrect; it replaced supernatural explanations with natural ones.',
+            },
           },
           {
             id: 'psy-sec12-u1-L1-T3',
@@ -111,6 +124,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Attributing mental illness to evil influences and prescribing rituals reflects the supernatural model that dominated before scientific approaches.',
+            distractorExplanations: {
+              0: '"Ancient Greek medicine under Hippocrates" is incorrect; pre-scientific supernatural explanations of mental illness.',
+              1: '"Modern evidence-based practice" is incorrect; pre-scientific supernatural explanations of mental illness.',
+              3: '"The moral treatment movement of the 1800s" is incorrect; pre-scientific supernatural explanations of mental illness.',
+            },
           },
         ],
       },
@@ -136,6 +154,9 @@ export const psySection12Part1: Unit[] = [
             question: 'The moral treatment movement advocated for humane care of people with mental illness.',
             correctAnswer: true,
             explanation: 'Reformers like Pinel and Dix pushed to replace punishment and neglect with compassionate care.',
+            distractorExplanations: {
+              1: 'Reformers like Pinel and Dix pushed to replace punishment and neglect with compassionate care.',
+            },
           },
           {
             id: 'psy-sec12-u1-L2-Q2',
@@ -169,6 +190,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A combination of too many patients, too few resources, and no effective treatments turned asylums into warehouses.',
+            distractorExplanations: {
+              1: '"Patients preferred to stay permanently" is incorrect; overcrowding, underfunding, and lack of effective treatments.',
+              2: '"New laws required lifetime commitment for all patients" is incorrect; overcrowding, underfunding, and lack of effective treatments.',
+              3: '"Doctors discovered that confinement was therapeutic" is incorrect; overcrowding, underfunding, and lack of effective treatments.',
+            },
           },
           {
             id: 'psy-sec12-u1-L2-Q4',
@@ -182,6 +208,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Chlorpromazine (1950s) made it possible to manage severe symptoms outside of institutions, fueling deinstitutionalization.',
+            distractorExplanations: {
+              0: 'Classical psychoanalysis is rarely the first-line treatment for this condition.',
+              2: 'Freud\'s psychoanalytic approach is not the framework being described here.',
+              3: '"The moral treatment movement" is incorrect; the discovery of the first antipsychotic medications.',
+            },
           },
           {
             id: 'psy-sec12-u1-L2-T3',
@@ -217,6 +248,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Deinstitutionalization without sufficient community mental health funding left many people without the support they needed.',
+            distractorExplanations: {
+              0: '"Community-based care was fully funded and effective" does not accurately describe the concept asked about.',
+              2: '"People with mental illness prefer living on the streets" does not accurately describe the concept asked about.',
+              3: '"The medications stopped working after the hospital closed" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -241,6 +277,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Freud\'s psychoanalysis was the first systematic form of talk therapy.',
             correctAnswer: true,
             explanation: 'While earlier healers used conversation, Freud was the first to develop a structured therapeutic method based on talking.',
+            distractorExplanations: {
+              1: 'While earlier healers used conversation, Freud was the first to develop a structured therapeutic method based on talking.',
+            },
           },
           {
             id: 'psy-sec12-u1-L3-Q2',
@@ -254,6 +293,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Many of Freud\'s specific theories are now disputed, but his insight that structured conversation helps people heal remains foundational.',
+            distractorExplanations: {
+              0: '"The idea that childhood trauma causes all mental illness" does not accurately describe the concept asked about.',
+              1: '"The concept that dream symbols have universal meanings" does not accurately describe the concept asked about.',
+              3: '"The theory that all behavior is driven by sexual desires" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u1-L3-T2',
@@ -303,6 +347,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Humanists felt psychoanalysis reduced people to unconscious drives and behaviorism reduced them to conditioned responses. Neither honored the whole person.',
+            distractorExplanations: {
+              0: '"Both cost too much money" does not accurately describe the concept asked about.',
+              2: '"Both were too focused on childhood memories" does not accurately describe the concept asked about.',
+              3: '"Both required too many sessions to be effective" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u1-L3-Q6',
@@ -342,6 +391,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Lobotomies involved surgically severing connections in the brain.',
             correctAnswer: true,
             explanation: 'The prefrontal lobotomy deliberately cut nerve pathways in the brain\'s frontal lobes, often causing permanent personality changes and cognitive damage.',
+            distractorExplanations: {
+              1: 'The prefrontal lobotomy deliberately cut nerve pathways in the brain\\\'s frontal lobes.',
+            },
           },
           {
             id: 'psy-sec12-u1-L4-Q2',
@@ -355,6 +407,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Lobotomies often left patients permanently impaired. The development of antipsychotic medications provided a less destructive alternative.',
+            distractorExplanations: {
+              0: '"They were too expensive to perform" does not accurately describe the concept asked about.',
+              1: '"Patients consistently refused to consent" does not accurately describe the concept asked about.',
+              3: '"Governments passed laws banning all brain surgery" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u1-L4-T2',
@@ -374,6 +431,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Every major psychological and medical organization has concluded that conversion therapy is both ineffective and harmful.',
+            distractorExplanations: {
+              0: '"It is effective for about half of participants" is incorrect; it is ineffective and causes psychological harm.',
+              2: '"It works but requires many years of treatment" is incorrect; it is ineffective and causes psychological harm.',
+              3: '"There is not enough research to draw conclusions" is incorrect; it is ineffective and causes psychological harm.',
+            },
           },
           {
             id: 'psy-sec12-u1-L4-Q4',
@@ -416,6 +478,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Informed consent requires that clients understand and agree to their treatment plan before it begins.',
+            distractorExplanations: {
+              0: '"Confidentiality" is incorrect; informed consent.',
+              2: '"Dual relationships" is incorrect; informed consent.',
+              3: '"Competence boundaries" is incorrect; informed consent.',
+            },
           },
         ],
       },
@@ -441,6 +508,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Most modern evidence-based therapy involves lying on a couch and talking about your childhood.',
             correctAnswer: false,
             explanation: 'That image comes from Freudian psychoanalysis. Most evidence-based therapy today is structured, present-focused, and teaches specific skills.',
+            distractorExplanations: {
+              0: 'That image comes from Freudian psychoanalysis.',
+            },
           },
           {
             id: 'psy-sec12-u1-L5-Q2',
@@ -454,6 +524,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Modern therapies like CBT and DBT are structured, time-limited, and focused on teaching skills to manage current symptoms.',
+            distractorExplanations: {
+              0: '"Open-ended exploration of childhood memories over many years" does not accurately describe the concept asked about.',
+              2: 'Hypnosis lacks strong evidence for treating this specific condition.',
+              3: '"The therapist tells the client exactly what to do" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u1-L5-T2',
@@ -489,6 +564,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The couch image implies passive reflection, while modern therapy emphasizes active skill-building and addressing current challenges.',
+            distractorExplanations: {
+              0: '"Couches are no longer manufactured for therapy offices" does not accurately describe the concept asked about.',
+              2: '"Therapists now use standing desks instead of couches" does not accurately describe the concept asked about.',
+              3: '"It implies therapy is only for wealthy people" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u1-L5-T3',
@@ -517,6 +597,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Modern evidence-based therapy is structured, time-limited, and focused on present challenges, not open-ended childhood exploration.',
+            distractorExplanations: {
+              0: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              3: 'The scope is broader than people with severe mental illness need therapy. alone.',
+            },
           },
         ],
       },
@@ -556,6 +641,9 @@ export const psySection12Part1: Unit[] = [
             question: 'CBT is based on the idea that thoughts, feelings, and behaviors are interconnected.',
             correctAnswer: true,
             explanation: 'The CBT model holds that changing one element (especially thoughts) can shift the others.',
+            distractorExplanations: {
+              1: 'The CBT model holds that changing one element (especially thoughts) can shift the others.',
+            },
           },
           {
             id: 'psy-sec12-u2-L1-Q2',
@@ -583,6 +671,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'CBT\'s evidence base is larger than any other therapy type, with hundreds of clinical trials across many disorders.',
+            distractorExplanations: {
+              0: '"It is the oldest form of therapy" does not accurately describe the concept asked about.',
+              1: '"It is the cheapest therapy to provide" does not accurately describe the concept asked about.',
+              3: 'Freud\'s psychoanalytic approach is not the framework being described here.',
+            },
           },
           {
             id: 'psy-sec12-u2-L1-Q4',
@@ -610,6 +703,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT\'s core principle: it\'s the interpretation (thought), not the event itself, that determines the emotional response.',
+            distractorExplanations: {
+              0: '"The grade itself is causing both reactions" does not accurately describe the concept asked about.',
+              2: '"One student studied harder than the other" does not accurately describe the concept asked about.',
+              3: '"The teacher graded unfairly" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u2-L1-T3',
@@ -629,6 +727,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT is typically 12-20 structured sessions with homework, while psychoanalysis can be open-ended and exploratory over years.',
+            distractorExplanations: {
+              0: 'Classical psychoanalysis is rarely the first-line treatment for this condition.',
+              2: '"CBT requires the client to lie on a couch" is incorrect; cBT is time-limited with structured sessions and homework.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
         ],
       },
@@ -654,6 +757,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Cognitive distortions are rare thinking patterns found only in people with severe mental illness.',
             correctAnswer: false,
             explanation: 'Everyone experiences cognitive distortions. In mental health conditions, they become more frequent and harder to recognize.',
+            distractorExplanations: {
+              0: 'Everyone experiences cognitive distortions. In mental health conditions, they become more frequent and harder to recognize.',
+            },
           },
           {
             id: 'psy-sec12-u2-L2-Q2',
@@ -667,6 +773,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Cognitive distortions are not random negative thoughts. They are patterned, biased interpretations that consistently misrepresent reality.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Cognitive distortions only happen during sleep" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u2-L2-T2',
@@ -701,6 +812,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'All-or-nothing thinking sees things in extremes: one mistake equals total failure, with no middle ground.',
+            distractorExplanations: {
+              0: '"Mind reading" is incorrect; all-or-nothing thinking.',
+              1: '"Personalization" is incorrect; all-or-nothing thinking.',
+              3: '"Fortune telling" is incorrect; all-or-nothing thinking.',
+            },
           },
           {
             id: 'psy-sec12-u2-L2-T3',
@@ -737,6 +853,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Mental filtering means focusing exclusively on the negative while filtering out all positive information.',
+            distractorExplanations: {
+              0: '"Catastrophizing" is incorrect; mental filtering.',
+              2: '"Fortune telling" is incorrect; mental filtering.',
+              3: '"Personalization" is incorrect; mental filtering.',
+            },
           },
         ],
       },
@@ -762,6 +883,9 @@ export const psySection12Part1: Unit[] = [
             question: 'A thought record helps identify the connection between situations, thoughts, and emotions.',
             correctAnswer: true,
             explanation: 'Thought records make the situation-thought-emotion chain visible, which is the first step to changing it.',
+            distractorExplanations: {
+              1: 'Thought records make the situation-thought-emotion chain visible, which is the first step to changing it.',
+            },
           },
           {
             id: 'psy-sec12-u2-L3-Q2',
@@ -795,6 +919,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Behavioral experiments gather real-world evidence to check whether a feared outcome actually occurs.',
+            distractorExplanations: {
+              0: '"To prove the client is wrong about everything" is incorrect; to test whether a negative belief matches reality.',
+              2: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              3: '"To measure brain activity during therapy" is incorrect; to test whether a negative belief matches reality.',
+            },
           },
           {
             id: 'psy-sec12-u2-L3-Q4',
@@ -809,6 +938,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The therapist is setting up a behavioral experiment to test the belief "nobody likes me" against real evidence.',
+            distractorExplanations: {
+              0: '"Free association" is incorrect; behavioral experiment.',
+              2: '"Systematic desensitization" is incorrect; behavioral experiment.',
+              3: '"Dream analysis" is incorrect; behavioral experiment.',
+            },
           },
           {
             id: 'psy-sec12-u2-L3-T3',
@@ -828,6 +962,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Cognitive restructuring seeks accuracy, not forced positivity. A balanced thought can still acknowledge difficulty while being more realistic.',
+            distractorExplanations: {
+              0: '"Examining evidence for and against a thought" is incorrect; forcing yourself to think only positive thoughts.',
+              1: '"Replacing a distorted thought with a balanced one" is incorrect; forcing yourself to think only positive thoughts.',
+              3: '"Finding a more accurate interpretation of events" is incorrect; forcing yourself to think only positive thoughts.',
+            },
           },
           {
             id: 'psy-sec12-u2-L3-Q6',
@@ -860,6 +999,9 @@ export const psySection12Part1: Unit[] = [
             question: 'CBT uses exactly the same techniques for every psychological disorder.',
             correctAnswer: false,
             explanation: 'While the core model stays the same, CBT tailors its techniques to the specific disorder being treated.',
+            distractorExplanations: {
+              0: 'While the core model stays the same, CBT tailors its techniques to the specific disorder being treated.',
+            },
           },
           {
             id: 'psy-sec12-u2-L4-Q2',
@@ -893,6 +1035,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Avoidance reduces anxiety in the short term, which feels rewarding and reinforces the pattern. But the fear never gets challenged, so it grows.',
+            distractorExplanations: {
+              1: '"Avoidance uses too much physical energy" is incorrect; avoidance provides temporary relief, which reinforces the fear.',
+              2: '"Avoidance causes chemical changes in the brain" is incorrect; avoidance provides temporary relief, which reinforces the fear.',
+              3: '"Avoidance only works for the first few days" is incorrect; avoidance provides temporary relief, which reinforces the fear.',
+            },
           },
           {
             id: 'psy-sec12-u2-L4-Q4',
@@ -907,6 +1054,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'ERP involves exposure to the trigger (touching the doorknob) while preventing the compulsive response (hand washing), allowing anxiety to naturally decrease.',
+            distractorExplanations: {
+              0: '"Cognitive restructuring" is incorrect; exposure and response prevention (ERP).',
+              1: '"Behavioral activation" is incorrect; exposure and response prevention (ERP).',
+              3: '"Dream analysis" is incorrect; exposure and response prevention (ERP).',
+            },
           },
           {
             id: 'psy-sec12-u2-L4-T3',
@@ -940,6 +1092,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Behavioral activation works on the principle that action generates motivation. Waiting to "feel like it" keeps the depression cycle going.',
+            distractorExplanations: {
+              0: '"People need to feel motivated before they can take action" is incorrect; taking action can generate motivation even when mood is low.',
+              2: 'Depression involves persistent low mood and loss of interest, not the specific pattern described here.',
+              3: '"Scheduling activities is only helpful for mild sadness" is incorrect; taking action can generate motivation even when mood is low.',
+            },
           },
         ],
       },
@@ -964,6 +1121,9 @@ export const psySection12Part1: Unit[] = [
             question: 'CBT is equally effective for all psychological conditions and all clients.',
             correctAnswer: false,
             explanation: 'While CBT has broad evidence, some conditions and some individuals respond better to other therapeutic approaches.',
+            distractorExplanations: {
+              0: 'While CBT has broad evidence, some conditions and some individuals respond better to other therapeutic approaches.',
+            },
           },
           {
             id: 'psy-sec12-u2-L5-Q2',
@@ -977,6 +1137,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT focuses on thoughts and behaviors but may not fully address attachment patterns, identity exploration, or complex relational dynamics.',
+            distractorExplanations: {
+              0: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"It requires no effort from the client" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u2-L5-T2',
@@ -996,6 +1161,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT\'s focus on individual cognition can miss important social, economic, and cultural factors that contribute to distress.',
+            distractorExplanations: {
+              0: '"Because CBT only works in English-speaking countries" does not accurately describe the concept asked about.',
+              2: '"Because CBT was designed only for American clients" does not accurately describe the concept asked about.',
+              3: '"Because CBT does not allow therapists to speak during sessions" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u2-L5-Q4',
@@ -1040,6 +1210,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'ACT focuses on accepting difficult thoughts rather than challenging them, and on committing to valued actions despite discomfort.',
+            distractorExplanations: {
+              0: '"More intensive CBT with double the homework" does not accurately describe the concept asked about.',
+              1: 'Classical psychoanalysis is rarely the first-line treatment for this condition.',
+              3: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+            },
           },
         ],
       },
@@ -1064,6 +1239,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Digital CBT programs have shown effectiveness for mild to moderate depression and anxiety.',
             correctAnswer: true,
             explanation: 'Research supports that structured digital CBT can be effective, especially for mild to moderate conditions, though therapist-guided versions work better than fully self-directed ones.',
+            distractorExplanations: {
+              1: 'Research supports that structured digital CBT can be effective.',
+            },
           },
           {
             id: 'psy-sec12-u2-L6-Q2',
@@ -1077,6 +1255,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'CBT\'s clear structure, defined techniques, and skill-building focus make it easier to deliver through standardized formats.',
+            distractorExplanations: {
+              0: '"Because it requires no interaction with another person" does not accurately describe the concept asked about.',
+              1: '"Because it is unstructured and flexible" does not accurately describe the concept asked about.',
+              3: '"Because it does not require any practice between sessions" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u2-L6-T2',
@@ -1110,6 +1293,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Stepped care reserves specialist time for complex cases while providing effective, less intensive options for milder conditions.',
+            distractorExplanations: {
+              0: '"It eliminates the need for trained therapists entirely" does not accurately describe the concept asked about.',
+              2: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              3: '"It saves money by denying treatment to most people" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u2-L6-T3',
@@ -1130,6 +1318,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Preventive CBT programs teach skills that interrupt the development of unhelpful thinking patterns before they become entrenched.',
+            distractorExplanations: {
+              0: '"The students were naturally less anxious to begin with" does not accurately describe the concept asked about.',
+              2: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+              3: '"Schools are inherently therapeutic environments" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u2-L6-Q6',
@@ -1177,6 +1370,9 @@ export const psySection12Part1: Unit[] = [
             question: 'DBT was originally developed to treat people with borderline personality disorder.',
             correctAnswer: true,
             explanation: 'Marsha Linehan created DBT specifically for chronically suicidal clients with BPD, for whom other therapies were failing.',
+            distractorExplanations: {
+              1: 'Marsha Linehan created DBT specifically for chronically suicidal clients with BPD, for whom other therapies were failing.',
+            },
           },
           {
             id: 'psy-sec12-u3-L1-Q2',
@@ -1204,6 +1400,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The dialectical core of DBT is holding two truths at once: "I am doing my best" and "I need to do better."',
+            distractorExplanations: {
+              0: '"Using dialogue instead of medication" is incorrect; balancing acceptance of what is with commitment to change.',
+              2: '"Talking about your feelings in a group setting" is incorrect; balancing acceptance of what is with commitment to change.',
+              3: '"Following a strict protocol with no flexibility" is incorrect; balancing acceptance of what is with commitment to change.',
+            },
           },
           {
             id: 'psy-sec12-u3-L1-Q4',
@@ -1217,6 +1418,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT primarily focuses on changing thoughts and behaviors. DBT adds a complementary emphasis on accepting emotions and reality as they are.',
+            distractorExplanations: {
+              0: '"DBT rejects all CBT techniques entirely" is incorrect; dBT adds a strong emphasis on acceptance alongside change strategies.',
+              2: '"DBT focuses only on medication, not therapy" is incorrect; dBT adds a strong emphasis on acceptance alongside change strategies.',
+              3: '"DBT ignores emotions and focuses only on behavior" is incorrect; dBT adds a strong emphasis on acceptance alongside change strategies.',
+            },
           },
           {
             id: 'psy-sec12-u3-L1-T3',
@@ -1253,6 +1459,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'DBT was specifically designed for clients with intense emotions and self-harm who need both acceptance (validation) and change (skill-building).',
+            distractorExplanations: {
+              0: '"More intensive CBT with stricter homework requirements" does not accurately describe the concept asked about.',
+              2: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+              3: 'Classical psychoanalysis is rarely the first-line treatment for this condition.',
+            },
           },
         ],
       },
@@ -1278,6 +1489,9 @@ export const psySection12Part1: Unit[] = [
             question: 'DBT is organized around 4 core skill modules.',
             correctAnswer: true,
             explanation: 'The 4 modules are mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness.',
+            distractorExplanations: {
+              1: 'The 4 modules are mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness.',
+            },
           },
           {
             id: 'psy-sec12-u3-L2-Q2',
@@ -1311,6 +1525,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Distress tolerance is not about fixing the problem. It is about surviving the moment without self-destructive actions.',
+            distractorExplanations: {
+              0: '"Eliminating all painful emotions permanently" is incorrect; getting through a crisis without making it worse.',
+              2: '"Ignoring emotions until they go away" is incorrect; getting through a crisis without making it worse.',
+              3: '"Analyzing why the crisis happened" is incorrect; getting through a crisis without making it worse.',
+            },
           },
           {
             id: 'psy-sec12-u3-L2-Q4',
@@ -1325,6 +1544,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Using temperature change (ice) and paced breathing are TIPP skills from the distress tolerance module, designed to survive acute crises.',
+            distractorExplanations: {
+              0: '"Interpersonal effectiveness" is incorrect; distress tolerance (using TIPP skills).',
+              1: '"Emotion regulation" is incorrect; distress tolerance (using TIPP skills).',
+              3: '"Mindfulness meditation" is incorrect; distress tolerance (using TIPP skills).',
+            },
           },
           {
             id: 'psy-sec12-u3-L2-T3',
@@ -1379,6 +1603,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Comprehensive DBT includes both individual therapy and group skills training.',
             correctAnswer: true,
             explanation: 'Full DBT combines individual sessions (for personal issues) with group sessions (for learning skills), plus phone coaching and therapist consultation.',
+            distractorExplanations: {
+              1: 'Full DBT combines individual sessions (for personal issues) with group sessions (for learning skills).',
+            },
           },
           {
             id: 'psy-sec12-u3-L3-Q2',
@@ -1413,6 +1640,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Diary cards create a daily record that helps both therapist and client identify patterns and track progress.',
+            distractorExplanations: {
+              0: '"To give clients busywork between sessions" is incorrect; to track emotions, urges, skills used, and target behaviors daily.',
+              2: '"To replace the need for individual therapy sessions" is incorrect; to track emotions, urges, skills used, and target behaviors daily.',
+              3: '"To diagnose new disorders based on daily entries" is incorrect; to track emotions, urges, skills used, and target behaviors daily.',
+            },
           },
           {
             id: 'psy-sec12-u3-L3-Q4',
@@ -1426,6 +1658,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Working with chronically suicidal clients is extremely demanding. The consultation team prevents therapist burnout and maintains treatment quality.',
+            distractorExplanations: {
+              0: '"To supervise the client outside of sessions" does not accurately describe the concept asked about.',
+              2: '"To replace the individual therapy component" does not accurately describe the concept asked about.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
           {
             id: 'psy-sec12-u3-L3-T3',
@@ -1459,6 +1696,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'DBT\'s treatment hierarchy always prioritizes life-threatening behaviors first, followed by therapy-interfering behaviors, then quality-of-life issues.',
+            distractorExplanations: {
+              0: '"The fight with the partner, since relationships are important" does not accurately describe the concept asked about.',
+              2: '"Skipping group, since attendance is mandatory" does not accurately describe the concept asked about.',
+              3: '"Whatever the client wants to talk about" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1483,6 +1725,9 @@ export const psySection12Part1: Unit[] = [
             question: 'In DBT, validating someone\'s emotions means agreeing that their behavior was appropriate.',
             correctAnswer: false,
             explanation: 'Validation acknowledges that feelings make sense in context. It does not mean approving of every action taken in response to those feelings.',
+            distractorExplanations: {
+              0: 'Validation acknowledges that feelings make sense in context.',
+            },
           },
           {
             id: 'psy-sec12-u3-L4-Q2',
@@ -1496,6 +1741,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Validation acknowledges the emotional response makes sense in context without approving of destructive reactions.',
+            distractorExplanations: {
+              0: '"You shouldn\\\'t feel angry about something so small." does not accurately describe the concept asked about.',
+              2: '"You\\\'re absolutely right to be furious." does not accurately describe the concept asked about.',
+              3: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+            },
           },
           {
             id: 'psy-sec12-u3-L4-T2',
@@ -1530,6 +1780,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The therapist is reading emotional cues beyond what was stated, communicating deep understanding.',
+            distractorExplanations: {
+              0: '"Reflecting what the person said verbatim" is incorrect; reading emotions the person has not verbalized.',
+              2: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              3: '"Telling the person their feelings are wrong" is incorrect; reading emotions the person has not verbalized.',
+            },
           },
           {
             id: 'psy-sec12-u3-L4-T3',
@@ -1585,6 +1840,9 @@ export const psySection12Part1: Unit[] = [
             question: 'DBT is a completely separate therapy with no connection to CBT.',
             correctAnswer: false,
             explanation: 'DBT built upon CBT\'s cognitive-behavioral foundation and added acceptance strategies, mindfulness, and dialectical philosophy.',
+            distractorExplanations: {
+              0: 'DBT built upon CBT\\\'s cognitive-behavioral foundation and added acceptance strategies, mindfulness, and dialectical philosophy.',
+            },
           },
           {
             id: 'psy-sec12-u3-L5-Q2',
@@ -1621,6 +1879,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT is the first-line evidence-based treatment for generalized anxiety disorder when emotional dysregulation is not the primary concern.',
+            distractorExplanations: {
+              0: '"DBT, because it treats anxiety effectively" is incorrect; cBT, which has strong evidence for generalized anxiety disorder.',
+              2: '"Neither therapy would be helpful" is incorrect; cBT, which has strong evidence for generalized anxiety disorder.',
+              3: '"Both therapies must be used simultaneously" is incorrect; cBT, which has strong evidence for generalized anxiety disorder.',
+            },
           },
           {
             id: 'psy-sec12-u3-L5-Q4',
@@ -1635,6 +1898,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This pattern (intense emotions, self-harm, unstable relationships, feeling invalidated in therapy) is exactly what DBT was designed to address.',
+            distractorExplanations: {
+              0: '"A third attempt at standard CBT with a different therapist" does not accurately describe the concept asked about.',
+              2: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+              3: 'Classical psychoanalysis is rarely the first-line treatment for this condition.',
+            },
           },
           {
             id: 'psy-sec12-u3-L5-T3',
@@ -1654,6 +1922,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Integration means flexibly drawing on the most useful techniques from multiple approaches based on the client\'s current needs.',
+            distractorExplanations: {
+              0: '"They combine them into a single standardized protocol" does not accurately describe the concept asked about.',
+              2: '"They alternate sessions: CBT one week, DBT the next" does not accurately describe the concept asked about.',
+              3: '"They use neither approach and create their own" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u3-L5-Q6',
@@ -1740,6 +2013,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Antipsychotic medications made it possible to manage severe symptoms outside of institutional settings.',
+            distractorExplanations: {
+              0: '"The moral treatment movement" is incorrect; the development of antipsychotic medications.',
+              2: 'Freud\'s psychoanalytic approach is not the framework being described here.',
+              3: 'Lobotomy is a discredited procedure no longer used in modern psychiatry.',
+            },
           },
           {
             id: 'psy-sec12-u4-L1-Q4',
@@ -1747,6 +2025,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Most modern evidence-based therapy involves lying on a couch and talking about your childhood.',
             correctAnswer: false,
             explanation: 'That image comes from Freudian psychoanalysis. Most evidence-based therapy today is structured, present-focused, and skill-building.',
+            distractorExplanations: {
+              0: 'That image comes from Freudian psychoanalysis.',
+            },
           },
           {
             id: 'psy-sec12-u4-L1-Q5',
@@ -1769,6 +2050,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This repeats the historical lesson of deinstitutionalization: closing institutions without funding alternatives fails the people who need help most.',
+            distractorExplanations: {
+              0: '"The moral treatment movement succeeded in all its goals" does not accurately describe the concept asked about.',
+              2: '"Lobotomies should be reintroduced" does not accurately describe the concept asked about.',
+              3: '"People with mental illness prefer homelessness to treatment" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u4-L1-Q7',
@@ -1815,6 +2101,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT targets the thoughts and interpretations that drive emotional and behavioral responses.',
+            distractorExplanations: {
+              0: '"Their childhood memories" is incorrect; their automatic thoughts and interpretations.',
+              2: '"Their brain chemistry" is incorrect; their automatic thoughts and interpretations.',
+              3: '"Their social environment" is incorrect; their automatic thoughts and interpretations.',
+            },
           },
           {
             id: 'psy-sec12-u4-L2-Q2',
@@ -1829,6 +2120,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The person is filtering (focusing on one negative event) and overgeneralizing (one event means "everyone" and "never").',
+            distractorExplanations: {
+              1: '"Personalization only" is incorrect; mental filtering and overgeneralization.',
+              2: '"Catastrophizing only" is incorrect; mental filtering and overgeneralization.',
+              3: '"All-or-nothing thinking only" is incorrect; mental filtering and overgeneralization.',
+            },
           },
           {
             id: 'psy-sec12-u4-L2-Q3',
@@ -1880,6 +2176,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Third-wave therapies build on CBT but shift emphasis from challenging thoughts to accepting them while committing to valued action.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              1: '"Because CBT was completely ineffective" does not accurately describe the concept asked about.',
+              3: 'Freud\'s psychoanalytic approach is not the framework being described here.',
+            },
           },
           {
             id: 'psy-sec12-u4-L2-Q7',
@@ -1894,6 +2195,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT\'s core principle: the same event produces different emotions depending on how it is interpreted.',
+            distractorExplanations: {
+              0: '"One person has better brain chemistry" does not accurately describe the concept asked about.',
+              2: '"One person likes driving and the other does not" does not accurately describe the concept asked about.',
+              3: '"Traffic only causes anger in certain personality types" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1924,6 +2230,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The dialectical core of DBT is: "I accept myself as I am AND I am working to change."',
+            distractorExplanations: {
+              0: '"Using dialogue to process emotions" is incorrect; holding two seemingly opposite truths at once: acceptance and change.',
+              2: '"Debating with the therapist about beliefs" is incorrect; holding two seemingly opposite truths at once: acceptance and change.',
+              3: '"Following a strict step-by-step protocol" is incorrect; holding two seemingly opposite truths at once: acceptance and change.',
+            },
           },
           {
             id: 'psy-sec12-u4-L3-Q2',
@@ -1965,6 +2276,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'DBT validation acknowledges the pain as real while guiding toward skillful action. It does not dismiss or argue with the feeling.',
+            distractorExplanations: {
+              0: '"That\\\'s irrational. Many people care about you." does not accurately describe the concept asked about.',
+              2: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              3: '"Tell me about your childhood." does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u4-L3-Q5',
@@ -1996,6 +2312,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Comprehensive DBT includes individual therapy, group skills training, phone coaching, and a therapist consultation team.',
             correctAnswer: true,
             explanation: 'All 4 components are part of comprehensive DBT: individual sessions, group skills, phone coaching, and therapist consultation.',
+            distractorExplanations: {
+              1: 'All 4 components are part of comprehensive DBT: individual sessions, group skills, phone coaching, and therapist consultation.',
+            },
           },
         ],
       },
@@ -2035,6 +2354,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Modern psychodynamic therapy is identical to Freud\'s original psychoanalysis.',
             correctAnswer: false,
             explanation: 'Psychodynamic therapy evolved from psychoanalysis but is shorter, more focused, and more interactive.',
+            distractorExplanations: {
+              0: 'Psychodynamic therapy evolved from psychoanalysis but is shorter, more focused, and more interactive.',
+            },
           },
           {
             id: 'psy-sec12-u5-L1-Q2',
@@ -2048,6 +2370,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Modern psychodynamic therapy is a streamlined descendant of psychoanalysis, meeting weekly and often time-limited.',
+            distractorExplanations: {
+              0: 'Freud\'s psychoanalytic approach is not the framework being described here.',
+              2: '"It uses medication instead of talk therapy" is incorrect; it is shorter, more focused, and more collaborative.',
+              3: '"It requires sessions 5 days per week" is incorrect; it is shorter, more focused, and more collaborative.',
+            },
           },
           {
             id: 'psy-sec12-u5-L1-T2',
@@ -2075,6 +2402,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Defense mechanisms are unconscious psychological strategies (like denial, projection, and rationalization) that protect against emotional pain.',
+            distractorExplanations: {
+              0: '"Physical self-defense techniques taught in therapy" is incorrect; unconscious strategies the mind uses to avoid painful feelings.',
+              2: '"Arguments the client uses against the therapist" is incorrect; unconscious strategies the mind uses to avoid painful feelings.',
+              3: '"Medications that protect against relapse" is incorrect; unconscious strategies the mind uses to avoid painful feelings.',
+            },
           },
           {
             id: 'psy-sec12-u5-L1-T3',
@@ -2095,6 +2427,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Psychodynamic therapy helps clients see how early relationship templates repeat in adult life, often outside of awareness.',
+            distractorExplanations: {
+              0: '"Cognitive distortion" does not accurately describe the concept asked about.',
+              2: '"A behavioral conditioning response" does not accurately describe the concept asked about.',
+              3: '"A random coincidence with no psychological meaning" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2120,6 +2457,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Transference is when a client projects feelings from past relationships onto the therapist.',
             correctAnswer: true,
             explanation: 'Transference is the redirection of feelings originally experienced in one relationship onto the therapist.',
+            distractorExplanations: {
+              1: 'Transference is the redirection of feelings originally experienced in one relationship onto the therapist.',
+            },
           },
           {
             id: 'psy-sec12-u5-L2-Q2',
@@ -2134,6 +2474,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The client is transferring feelings about their mother onto the therapist. Recognizing this pattern is a key therapeutic opportunity.',
+            distractorExplanations: {
+              0: '"The therapist is being negligent" does not accurately describe the concept asked about.',
+              2: '"The client has a justified complaint about response times" does not accurately describe the concept asked about.',
+              3: '"The therapist provoked the reaction intentionally" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u5-L2-T2',
@@ -2181,6 +2526,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The modern unconscious is simply mental activity that operates outside of awareness, influencing feelings and behavior.',
+            distractorExplanations: {
+              0: '"A mystical realm of hidden desires" does not accurately describe the concept asked about.',
+              2: '"The state of being asleep or knocked out" does not accurately describe the concept asked about.',
+              3: '"Thoughts that only appear in dreams" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u5-L2-Q6',
@@ -2221,6 +2571,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Defense mechanisms are only used by people with mental illness.',
             correctAnswer: false,
             explanation: 'Everyone uses defense mechanisms. They become problematic only when immature ones are overused or prevent growth.',
+            distractorExplanations: {
+              0: 'Everyone uses defense mechanisms. They become problematic only when immature ones are overused or prevent growth.',
+            },
           },
           {
             id: 'psy-sec12-u5-L3-Q2',
@@ -2272,6 +2625,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Projection involves attributing your own unacceptable feelings or traits to others. The manager\'s insecurity is being projected onto the team.',
+            distractorExplanations: {
+              0: '"Sublimation" is incorrect; projection.',
+              2: '"Rationalization" is incorrect; projection.',
+              3: '"Altruism" is incorrect; projection.',
+            },
           },
           {
             id: 'psy-sec12-u5-L3-T3',
@@ -2291,6 +2649,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Awareness of a defense does not eliminate it, but it creates a choice point where the client can respond differently.',
+            distractorExplanations: {
+              0: '"The defense disappears permanently" is incorrect; the client gains the ability to choose a different response.',
+              2: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              3: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+            },
           },
           {
             id: 'psy-sec12-u5-L3-Q6',
@@ -2323,6 +2686,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Short-term psychodynamic therapy typically runs 16 to 30 sessions.',
             correctAnswer: true,
             explanation: 'STPP is time-limited, focusing intensively on a specific relational or emotional theme rather than open-ended exploration.',
+            distractorExplanations: {
+              1: 'STPP is time-limited, focusing intensively on a specific relational or emotional theme rather than open-ended exploration.',
+            },
           },
           {
             id: 'psy-sec12-u5-L4-Q2',
@@ -2336,6 +2702,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'STPP is short-term because it sets a session limit and selects a specific relational focus rather than exploring broadly.',
+            distractorExplanations: {
+              0: '"Sessions last only 10 minutes" is incorrect; it has a defined number of sessions and a focused theme.',
+              2: '"The therapist talks faster" is incorrect; it has a defined number of sessions and a focused theme.',
+              3: 'The scope is broader than simple problems are addressed alone.',
+            },
           },
           {
             id: 'psy-sec12-u5-L4-T2',
@@ -2363,6 +2734,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Clients learn to be their own observer, noticing patterns and making different choices long after therapy ends.',
+            distractorExplanations: {
+              0: '"Because the medications keep working" does not accurately describe the concept asked about.',
+              2: '"Because the therapist continues sending homework" does not accurately describe the concept asked about.',
+              3: '"Because all therapy works this way" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u5-L4-T3',
@@ -2383,6 +2759,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This client is seeking insight into recurring relational patterns, which is the core focus of psychodynamic therapy.',
+            distractorExplanations: {
+              0: '"CBT focused on cognitive distortions" is incorrect; psychodynamic therapy focused on relational patterns.',
+              2: '"DBT skills training group" is incorrect; psychodynamic therapy focused on relational patterns.',
+              3: 'Phobias involve intense fear of specific stimuli, not the pattern described here.',
+            },
           },
           {
             id: 'psy-sec12-u5-L4-Q6',
@@ -2423,6 +2804,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Psychodynamic therapy is the best first-line treatment for specific phobias.',
             correctAnswer: false,
             explanation: 'Exposure-based CBT is the first-line treatment for specific phobias. Psychodynamic therapy is better suited for relational and personality issues.',
+            distractorExplanations: {
+              0: 'Exposure-based CBT is the first-line treatment for specific phobias.',
+            },
           },
           {
             id: 'psy-sec12-u5-L5-Q2',
@@ -2458,6 +2842,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT provides concrete symptom management. Psychodynamic therapy provides deeper insight into patterns. Together, they can address both surface and depth.',
+            distractorExplanations: {
+              0: '"Because neither therapy works on its own" does not accurately describe the concept asked about.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Insurance companies require it" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u5-L5-Q4',
@@ -2472,6 +2861,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The recurring relational pattern suggests psychodynamic therapy would be a good next step, building on the CBT gains.',
+            distractorExplanations: {
+              0: 'These are distinct concepts with different characteristics, causes, or applications.',
+              2: 'Depression involves persistent low mood and loss of interest, not the specific pattern described here.',
+              3: '"Medication only, since therapy has done what it can" is incorrect; psychodynamic therapy to explore recurring relational patterns.',
+            },
           },
           {
             id: 'psy-sec12-u5-L5-T3',
@@ -2491,6 +2885,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Good clinical practice means tailoring the approach to the person, not forcing the person into a single approach.',
+            distractorExplanations: {
+              0: 'Not choosing whichever therapy is newest.',
+              2: '"Using only the therapy the therapist specializes in" does not accurately describe the concept asked about.',
+              3: '"Choosing the cheapest option available" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u5-L5-Q6',
@@ -2549,6 +2948,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Carl Rogers believed the therapist\'s main role is to diagnose problems and prescribe solutions.',
             correctAnswer: false,
             explanation: 'Rogers believed the therapist should create conditions for growth, not direct or diagnose. The client is the expert on their own life.',
+            distractorExplanations: {
+              0: 'Rogers believed the therapist should create conditions for growth, not direct or diagnose.',
+            },
           },
           {
             id: 'psy-sec12-u6-L1-Q2',
@@ -2576,6 +2978,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Rogers believed the quality of the therapeutic relationship, not specific techniques, is what creates change.',
+            distractorExplanations: {
+              0: '"Specific techniques and interventions" is incorrect; the therapeutic relationship itself.',
+              1: '"Medication combined with talk therapy" is incorrect; the therapeutic relationship itself.',
+              3: '"Homework assignments and skill practice" is incorrect; the therapeutic relationship itself.',
+            },
           },
           {
             id: 'psy-sec12-u6-L1-Q4',
@@ -2611,6 +3018,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Rogers\' principles of empathy, genuineness, and positive regard are now considered essential across virtually all therapy approaches.',
+            distractorExplanations: {
+              0: '"He invented all medication used in psychiatry" does not accurately describe the concept asked about.',
+              2: '"He was the first therapist in history" does not accurately describe the concept asked about.',
+              3: '"He proved that only person-centered therapy works" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2635,6 +3047,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Rogers believed empathy, genuineness, and unconditional positive regard are necessary for therapeutic change.',
             correctAnswer: true,
             explanation: 'Rogers considered these 3 conditions both necessary and sufficient. Without them, therapy cannot create lasting change.',
+            distractorExplanations: {
+              1: 'Rogers considered these 3 conditions both necessary and sufficient. Without them, therapy cannot create lasting change.',
+            },
           },
           {
             id: 'psy-sec12-u6-L2-Q2',
@@ -2669,6 +3084,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Unconditional positive regard separates the person from their behavior. You can accept someone while still recognizing harmful actions.',
+            distractorExplanations: {
+              0: '"Agreeing with everything the client says and does" does not accurately describe the concept asked about.',
+              2: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+              3: '"Pretending to like the client even when you don\\\'t" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u6-L2-Q4',
@@ -2683,6 +3103,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This response shows empathy (hearing the shame), genuineness (honest engagement), and unconditional positive regard (not judging the person).',
+            distractorExplanations: {
+              0: '"You\\\'re right, lying is wrong and you should feel bad." does not accurately describe the concept asked about.',
+              2: '"That\\\'s fine, everyone lies. Don\\\'t worry about it." does not accurately describe the concept asked about.',
+              3: '"Let me give you 5 steps to stop lying." does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u6-L2-T3',
@@ -2737,6 +3162,9 @@ export const psySection12Part1: Unit[] = [
             question: 'According to Rogers, conditions of worth are rules about what you must do or be to earn love and acceptance.',
             correctAnswer: true,
             explanation: 'Conditions of worth are messages like "be quiet to be loved" or "achieve to be valued" that shape self-concept.',
+            distractorExplanations: {
+              1: 'Conditions of worth are messages like "be quiet to be loved" or "achieve to be valued" that shape self-concept.',
+            },
           },
           {
             id: 'psy-sec12-u6-L3-Q2',
@@ -2750,6 +3178,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Conditions of worth create a gap between who the person truly is and who they think they need to be, causing distress.',
+            distractorExplanations: {
+              0: '"They become more authentic and self-aware" does not accurately describe the concept asked about.',
+              2: '"They become immune to all mental health problems" does not accurately describe the concept asked about.',
+              3: '"They stop needing relationships entirely" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u6-L3-T2',
@@ -2779,6 +3212,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The condition of worth ("be a doctor to be valued") has created incongruence between the person\'s authentic self (loves art) and their ideal self (must be a doctor).',
+            distractorExplanations: {
+              0: '"A cognitive distortion about career options" does not accurately describe the concept asked about.',
+              2: 'Phobias involve intense fear of specific stimuli, not the pattern described here.',
+              3: '"Normal career indecision with no psychological significance" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u6-L3-T3',
@@ -2798,6 +3236,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Unconditional positive regard in therapy lets clients drop conditions of worth and reconnect with their authentic experience.',
+            distractorExplanations: {
+              0: '"By telling the client who they really are" does not accurately describe the concept asked about.',
+              2: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+              3: '"By replacing the client\\\'s ideal self with the therapist\\\'s ideal" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u6-L3-Q6',
@@ -2836,6 +3279,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Research shows that empathy and positive regard predict good therapy outcomes across all therapy types.',
             correctAnswer: true,
             explanation: 'Rogers\' core conditions have been validated as important predictors of success across CBT, psychodynamic, and other approaches.',
+            distractorExplanations: {
+              1: 'Rogers\\\' core conditions have been validated as important predictors of success across CBT, psychodynamic, and other approaches.',
+            },
           },
           {
             id: 'psy-sec12-u6-L4-Q2',
@@ -2849,6 +3295,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'For conditions that respond best to specific interventions (like exposure for phobias), person-centered therapy alone may be insufficient.',
+            distractorExplanations: {
+              0: '"It has too many techniques for therapists to learn" does not accurately describe the concept asked about.',
+              2: '"It is too expensive for most clients" does not accurately describe the concept asked about.',
+              3: '"It requires medication to be effective" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u6-L4-T2',
@@ -2885,6 +3336,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This client is seeking the exact conditions person-centered therapy provides: deep listening, acceptance, and space for self-discovery.',
+            distractorExplanations: {
+              0: '"CBT with structured thought records" does not accurately describe the concept asked about.',
+              2: 'Anxiety disorders involve excessive fear or worry, not the specific pattern described here.',
+              3: '"Psychopharmacology only" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u6-L4-T3',
@@ -2912,6 +3368,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Rogers\' emphasis on the therapeutic relationship and core conditions influenced every form of modern therapy, not just his own.',
+            distractorExplanations: {
+              0: '"Because he invented all other therapy types" does not accurately describe the concept asked about.',
+              2: '"Because he rejected all other approaches" does not accurately describe the concept asked about.',
+              3: '"Because person-centered therapy is the only effective approach" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2936,6 +3397,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Existential therapy focuses on life\'s ultimate concerns: death, freedom, isolation, and meaninglessness.',
             correctAnswer: true,
             explanation: 'These 4 "ultimate concerns" identified by Yalom are the core focus of existential therapy.',
+            distractorExplanations: {
+              1: 'These 4 "ultimate concerns" identified by Yalom are the core focus of existential therapy.',
+            },
           },
           {
             id: 'psy-sec12-u6-L5-Q2',
@@ -2978,6 +3442,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Both traditions value authenticity, subjective experience, and the whole person. They overlap significantly and are often grouped together.',
+            distractorExplanations: {
+              0: '"They are completely unrelated approaches" does not accurately describe the concept asked about.',
+              2: '"Existential therapy rejects all humanistic ideas" does not accurately describe the concept asked about.',
+              3: '"Humanistic therapy focuses on death while existential therapy focuses on growth" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u6-L5-T3',
@@ -2998,6 +3467,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This client is grappling with existential concerns (mortality, meaning, authentic living), which are the core focus of existential therapy.',
+            distractorExplanations: {
+              0: '"CBT to challenge distorted thoughts about mortality" does not accurately describe the concept asked about.',
+              2: '"Behavioral activation to increase pleasant activities" does not accurately describe the concept asked about.',
+              3: '"Systematic desensitization for fear of illness" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u6-L5-Q6',
@@ -3053,6 +3527,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Group therapy is just a cheaper version of individual therapy with no unique benefits.',
             correctAnswer: false,
             explanation: 'Group therapy offers unique therapeutic factors (like universality, altruism, and interpersonal learning) that individual therapy cannot provide.',
+            distractorExplanations: {
+              0: 'Group therapy offers unique therapeutic factors (like universality.',
+            },
           },
           {
             id: 'psy-sec12-u7-L1-Q2',
@@ -3066,6 +3543,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Universality is the powerful experience of discovering "I\'m not the only one." It reduces shame and isolation.',
+            distractorExplanations: {
+              0: '"The belief that therapy works for everyone" does not accurately describe the concept asked about.',
+              2: 'These are distinct concepts with different characteristics, causes, or applications.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
           {
             id: 'psy-sec12-u7-L1-T2',
@@ -3100,6 +3582,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The experienced member is benefiting from altruism. Helping others reinforces their own recovery and sense of purpose.',
+            distractorExplanations: {
+              0: '"Universality" is incorrect; altruism (helping others is healing for the helper).',
+              2: '"Catharsis" is incorrect; altruism (helping others is healing for the helper).',
+              3: '"Instillation of hope (for the newer member)" is incorrect; altruism (helping others is healing for the helper).',
+            },
           },
           {
             id: 'psy-sec12-u7-L1-T3',
@@ -3127,6 +3614,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Groups provide a live setting where interpersonal patterns emerge naturally and can be addressed in the moment.',
+            distractorExplanations: {
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Group therapy eliminates the need for any other treatment" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -3151,6 +3643,9 @@ export const psySection12Part1: Unit[] = [
             question: 'All group therapy follows the same format regardless of the group\'s purpose.',
             correctAnswer: false,
             explanation: 'Groups vary widely: psychoeducational groups teach, support groups connect, and process groups explore dynamics.',
+            distractorExplanations: {
+              0: 'Groups vary widely: psychoeducational groups teach, support groups connect, and process groups explore dynamics.',
+            },
           },
           {
             id: 'psy-sec12-u7-L2-Q2',
@@ -3185,6 +3680,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'DBT skills groups are structured and educational. Process groups are open-ended and focused on what happens between members.',
+            distractorExplanations: {
+              0: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              1: '"Process groups teach specific coping skills" does not accurately describe the concept asked about.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
           {
             id: 'psy-sec12-u7-L2-Q4',
@@ -3220,6 +3720,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Self-help groups like AA are peer-led, free, and rely on shared experience rather than professional facilitation.',
+            distractorExplanations: {
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"Self-help groups charge higher fees" is incorrect; self-help groups are led by peers rather than trained therapists.',
+              3: '"Self-help groups require a diagnosis to join" is incorrect; self-help groups are led by peers rather than trained therapists.',
+            },
           },
           {
             id: 'psy-sec12-u7-L2-Q6',
@@ -3234,6 +3739,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A psychoeducational support group matches this person\'s needs: learning strategies and connecting with peers who share their experience.',
+            distractorExplanations: {
+              0: '"An intensive process group exploring interpersonal dynamics" does not accurately describe the concept asked about.',
+              2: 'Classical psychoanalysis is rarely the first-line treatment for this condition.',
+              3: '"A DBT skills group for emotional dysregulation" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -3259,6 +3769,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Family systems therapy treats the individual\'s symptoms as purely an individual problem.',
             correctAnswer: false,
             explanation: 'Family systems therapy views individual symptoms as reflections of dysfunction in the family system, not as isolated individual problems.',
+            distractorExplanations: {
+              0: 'Family systems therapy views individual symptoms as reflections of dysfunction in the family system.',
+            },
           },
           {
             id: 'psy-sec12-u7-L3-Q2',
@@ -3272,6 +3785,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The entire family system is the focus of treatment. Individual symptoms are seen as signals of system-wide issues.',
+            distractorExplanations: {
+              0: 'The scope is broader than the person with the identified symptoms alone.',
+              2: 'The scope is broader than the parents alone.',
+              3: 'The scope is broader than the children alone.',
+            },
           },
           {
             id: 'psy-sec12-u7-L3-T2',
@@ -3300,6 +3818,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A family systems therapist would see the teenager\'s behavior as connected to the broader family dynamics and address the system as a whole.',
+            distractorExplanations: {
+              0: 'The scope is broader than the teenager\\\'s behavior, since they are the problem alone.',
+              2: 'The scope is broader than the parents\\\' marriage alone.',
+              3: 'The scope is broader than the younger sibling\\\'s anxiety alone.',
+            },
           },
           {
             id: 'psy-sec12-u7-L3-T3',
@@ -3335,6 +3858,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Enmeshment occurs when family members are so interconnected that they cannot function as individuals with their own identities and feelings.',
+            distractorExplanations: {
+              0: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: '"One family member controls all decisions" does not accurately describe the concept asked about.',
+              3: '"The family refuses to attend therapy together" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -3359,6 +3887,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Triangulation is when two people in conflict draw in a third person to manage tension.',
             correctAnswer: true,
             explanation: 'Triangulation redirects conflict through a third party instead of resolving it directly between the two people involved.',
+            distractorExplanations: {
+              1: 'Triangulation redirects conflict through a third party instead of resolving it directly between the two people involved.',
+            },
           },
           {
             id: 'psy-sec12-u7-L4-Q2',
@@ -3373,6 +3904,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The son\'s academic performance serves to manage the parents\' relationship conflict. When the distraction is removed (good grades), the conflict resurfaces.',
+            distractorExplanations: {
+              0: '"Healthy parenting focused on academics" does not accurately describe the concept asked about.',
+              2: '"Normal academic concern with no family dynamic involved" does not accurately describe the concept asked about.',
+              3: '"The son is deliberately failing to get attention" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u7-L4-T2',
@@ -3402,6 +3938,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The family system is in homeostasis, resisting the change. Even positive individual change can threaten a family\'s established patterns.',
+            distractorExplanations: {
+              0: '"The family is being supportive in their own way" does not accurately describe the concept asked about.',
+              2: '"The person\\\'s boundaries are inappropriate" does not accurately describe the concept asked about.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec12-u7-L4-T3',
@@ -3435,6 +3976,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Genograms are visual tools that map family patterns across generations, helping clients see how their current dynamics have historical roots.',
+            distractorExplanations: {
+              0: '"To diagnose genetic diseases" does not accurately describe the concept asked about.',
+              2: '"To test family members\\\' DNA" does not accurately describe the concept asked about.',
+              3: '"To determine which family member is the "identified patient" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -3459,6 +4005,9 @@ export const psySection12Part1: Unit[] = [
             question: 'Individual therapy is always the best format regardless of the problem.',
             correctAnswer: false,
             explanation: 'Different problems benefit from different formats. Relational issues may need group or family therapy. Individual struggles may need individual depth.',
+            distractorExplanations: {
+              0: 'Different problems benefit from different formats.',
+            },
           },
           {
             id: 'psy-sec12-u7-L5-Q2',
@@ -3494,6 +4043,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Individual therapy can provide depth and privacy. Group therapy can provide peer connection and real-time interpersonal practice. Together, they cover more ground.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"Because insurance requires it" does not accurately describe the concept asked about.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec12-u7-L5-Q4',
@@ -3508,6 +4062,11 @@ export const psySection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'This person has needs that span individual, group, and family domains. A combination addresses all three.',
+            distractorExplanations: {
+              0: '"Individual therapy only" does not accurately describe the concept asked about.',
+              1: '"Group therapy only" does not accurately describe the concept asked about.',
+              3: '"Medication only, no therapy needed" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec12-u7-L5-T3',

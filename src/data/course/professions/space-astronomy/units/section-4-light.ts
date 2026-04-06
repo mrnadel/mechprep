@@ -32,6 +32,9 @@ export const spaceSection4: Unit[] = [
             question: "Astronomers learn about distant objects mainly by studying their light.",
             correctAnswer: true,
             explanation: "Light is the primary messenger from space. Without it, we would know almost nothing about the universe beyond Earth.",
+            distractorExplanations: {
+              1: 'Light is the primary messenger from space.',
+            },
           },
           {
             id: "sp-s4-u1-L1-Q2",
@@ -45,6 +48,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Light travels across billions of light-years carrying information about temperature, composition, and motion of distant objects.",
+            distractorExplanations: {
+              0: 'We can visit most stars directly is incorrect; light travels across billions of light-years carrying information about temperature, composition, and motion.',
+              2: 'It only comes from nearby objects is incorrect; light travels across billions of light-years carrying information from the most distant objects.',
+              3: 'It moves too slowly to be useful is incorrect; light travels across billions of light-years carrying information about temperature, composition, and motion.',
+            },
           },
           {
             id: "sp-s4-u1-L1-T2",
@@ -58,6 +66,9 @@ export const spaceSection4: Unit[] = [
             question: "Light needs air to travel from the Sun to Earth.",
             correctAnswer: false,
             explanation: "Light travels through the vacuum of space with no problem. It does not need any medium to propagate.",
+            distractorExplanations: {
+              0: 'Light travels through the vacuum of space with no problem.',
+            },
           },
           {
             id: "sp-s4-u1-L1-Q4",
@@ -96,6 +107,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon is about 384,000 km away. At 300,000 km/s, light covers that distance in roughly 1.3 seconds.",
+            distractorExplanations: {
+              1: 'About 8 minutes is incorrect; the Moon is about 384,000 km away.',
+              2: 'About 1 hour is incorrect; the Moon is about 384,000 km away.',
+              3: 'About 1 day is incorrect; the Moon is about 384,000 km away.',
+            },
           },
         ],
       },
@@ -119,6 +135,9 @@ export const spaceSection4: Unit[] = [
             question: "Light can behave like a wave.",
             correctAnswer: true,
             explanation: "Light shows classic wave behavior: it reflects off mirrors, refracts through glass, and creates interference patterns.",
+            distractorExplanations: {
+              1: 'Light shows classic wave behavior: it reflects off mirrors, refracts through glass, and creates interference patterns.',
+            },
           },
           {
             id: "sp-s4-u1-L2-Q2",
@@ -155,6 +174,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Higher frequency means more energy per photon. Gamma rays have the highest frequency and the most energy.",
+            distractorExplanations: {
+              0: 'A low-frequency radio wave photon is incorrect; higher frequency means more energy per photon.',
+              1: 'A medium-frequency visible light photon is incorrect; higher frequency means more energy per photon.',
+              3: 'All photons carry equal energy is incorrect; higher frequency means more energy per photon.',
+            },
           },
           {
             id: "sp-s4-u1-L2-T3",
@@ -175,6 +199,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Wave-particle duality means light genuinely has both natures. It is not switching between them.",
+            distractorExplanations: {
+              0: 'Light is only a wave is incorrect; wave-particle duality means light genuinely has both natures.',
+              1: 'Light is only a particle is incorrect; wave-particle duality means light genuinely has both natures.',
+              3: 'This is incorrect; wave-particle duality means light genuinely has both natures.',
+            },
           },
           {
             id: "sp-s4-u1-L2-Q6",
@@ -207,6 +236,9 @@ export const spaceSection4: Unit[] = [
             question: "When wavelength decreases, frequency increases.",
             correctAnswer: true,
             explanation: "They are inversely related. Their product always equals the speed of light (about 300,000 km/s).",
+            distractorExplanations: {
+              1: 'They are inversely related.',
+            },
           },
           {
             id: "sp-s4-u1-L3-Q2",
@@ -220,6 +252,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Speed of light = wavelength x frequency. Since the speed is constant, one must decrease when the other increases.",
+            distractorExplanations: {
+              0: 'They always increase together is incorrect; speed of light = wavelength x frequency.',
+              1: 'They always decrease together is incorrect; speed of light = wavelength x frequency.',
+              3: 'They are completely unrelated is incorrect; speed of light = wavelength x frequency.',
+            },
           },
           {
             id: "sp-s4-u1-L3-T2",
@@ -250,6 +287,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Violet light has wavelengths near 400 nm, making it the shortest wavelength our eyes can see.",
+            distractorExplanations: {
+              0: 'Red is incorrect; violet light has wavelengths near 400 nm, making it the shortest wavelength our eyes can see.',
+              1: 'Green is incorrect; violet light has wavelengths near 400 nm, making it the shortest wavelength our eyes can see.',
+              2: 'Blue is incorrect; violet light has wavelengths near 400 nm, making it the shortest wavelength our eyes can see.',
+            },
           },
           {
             id: "sp-s4-u1-L3-T3",
@@ -295,6 +337,9 @@ export const spaceSection4: Unit[] = [
             question: "Refraction is when light bounces off a surface.",
             correctAnswer: false,
             explanation: "Bouncing off a surface is reflection. Refraction is when light bends as it passes from one material into another, like air into glass.",
+            distractorExplanations: {
+              0: 'Bouncing off a surface is reflection.',
+            },
           },
           {
             id: "sp-s4-u1-L4-Q2",
@@ -324,6 +369,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The inverse square law: brightness drops as distance squared. 3 squared = 9, so 9 times dimmer.",
+            distractorExplanations: {
+              0: '3 times dimmer is incorrect; the inverse square law: brightness drops as distance squared.',
+              1: '6 times dimmer is incorrect; the inverse square law: brightness drops as distance squared.',
+              3: '27 times dimmer is incorrect; the inverse square law: brightness drops as distance squared.',
+            },
           },
           {
             id: "sp-s4-u1-L4-Q4",
@@ -349,6 +399,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Identical stars appear dimmer when farther away. The inverse square law explains why distance affects apparent brightness.",
+            distractorExplanations: {
+              1: 'Star B is a different color is incorrect; identical stars appear dimmer when farther away.',
+              2: 'Star B has stopped shining is incorrect; identical stars appear dimmer when farther away.',
+              3: 'Star B is behind a planet is incorrect; identical stars appear dimmer when farther away.',
+            },
           },
           {
             id: "sp-s4-u1-L4-T3",
@@ -368,6 +423,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Light from the Sun takes about 8 minutes to reach us. We always see the Sun as it looked 8 minutes in the past.",
+            distractorExplanations: {
+              0: 'The Sun is very cold is incorrect; light from the Sun takes about 8 minutes to reach us.',
+              2: 'Light speeds up near Earth is incorrect; light from the Sun takes about 8 minutes to reach us.',
+              3: 'The Sun is 8 light-years away is incorrect; light from the Sun takes about 8 minutes to reach us.',
+            },
           },
         ],
       },
@@ -410,6 +470,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The hottest stars glow blue or blue-white. Cooler stars appear red. Our Sun is a mid-temperature yellow-white star.",
+            distractorExplanations: {
+              0: 'Red is incorrect; the hottest stars glow blue or blue-white.',
+              1: 'Yellow is incorrect; the hottest stars glow blue or blue-white.',
+              2: 'White is incorrect; the hottest stars glow blue or blue-white.',
+            },
           },
           {
             id: "sp-s4-u1-L5-T2",
@@ -445,6 +510,9 @@ export const spaceSection4: Unit[] = [
             question: "A telescope that sees farther into space also sees farther back in time.",
             correctAnswer: true,
             explanation: "Light from distant objects took billions of years to arrive. Seeing farther means seeing older light.",
+            distractorExplanations: {
+              1: 'Light from distant objects took billions of years to arrive.',
+            },
           },
           {
             id: "sp-s4-u1-L5-Q6",
@@ -459,6 +527,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The reddish color indicates temperature, and the dark spectral lines reveal which elements are present in the galaxy.",
+            distractorExplanations: {
+              1: 'The galaxy\'s weight only is incorrect; the reddish color indicates temperature, and the dark spectral lines reveal which elements are present in the galaxy.',
+              2: 'Nothing useful from light alone is incorrect; the reddish color indicates temperature, and the dark spectral lines reveal which elements are present in the.',
+              3: 'Only the galaxy\'s distance is incorrect; the reddish color indicates temperature, and the dark spectral lines reveal which elements are present in the galaxy.',
+            },
           },
         ],
       },
@@ -495,6 +568,9 @@ export const spaceSection4: Unit[] = [
             question: "Visible light makes up most of the electromagnetic spectrum.",
             correctAnswer: false,
             explanation: "Visible light is a very narrow band. The electromagnetic spectrum stretches from radio waves (kilometers long) to gamma rays (smaller than atoms).",
+            distractorExplanations: {
+              0: 'Visible light is a very narrow band.',
+            },
           },
           {
             id: "sp-s4-u2-L1-Q2",
@@ -508,6 +584,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The 7 main regions are: radio, microwave, infrared, visible, ultraviolet, X-ray, and gamma ray.",
+            distractorExplanations: {
+              0: '3 is incorrect; the 7 main regions are: radio, microwave, infrared, visible, ultraviolet, X-ray, and gamma ray.',
+              1: '5 is incorrect; the 7 main regions are: radio, microwave, infrared, visible, ultraviolet, X-ray, and gamma ray.',
+              3: '12 is incorrect; the 7 main regions are: radio, microwave, infrared, visible, ultraviolet, X-ray, and gamma ray.',
+            },
           },
           {
             id: "sp-s4-u2-L1-T2",
@@ -550,6 +631,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hot objects emit shorter wavelengths, cool objects emit longer ones. Observing at all wavelengths reveals the complete universe.",
+            distractorExplanations: {
+              0: 'Each wavelength is a different speed is incorrect; hot objects emit shorter wavelengths, cool objects emit longer ones.',
+              2: 'Only visible light comes from space is incorrect; hot objects emit shorter wavelengths, cool objects emit longer ones.',
+              3: 'Other wavelengths are just noise is incorrect; hot objects emit shorter wavelengths, cool objects emit longer ones.',
+            },
           },
           {
             id: "sp-s4-u2-L1-Q6",
@@ -582,6 +668,9 @@ export const spaceSection4: Unit[] = [
             question: "Radio waves from space were first detected in the 1930s.",
             correctAnswer: true,
             explanation: "Karl Jansky discovered radio waves coming from the Milky Way in 1933, launching the field of radio astronomy.",
+            distractorExplanations: {
+              1: 'Karl Jansky discovered radio waves coming from the Milky Way in 1933, launching the field of radio astronomy.',
+            },
           },
           {
             id: "sp-s4-u2-L2-Q2",
@@ -595,6 +684,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Radio waves have wavelengths from centimeters to kilometers, the longest in the spectrum.",
+            distractorExplanations: {
+              0: 'Gamma rays is incorrect; radio waves have wavelengths from centimeters to kilometers, the longest in the spectrum.',
+              1: 'Visible light is incorrect; radio waves have wavelengths from centimeters to kilometers, the longest in the spectrum.',
+              3: 'X-rays is incorrect; radio waves have wavelengths from centimeters to kilometers, the longest in the spectrum.',
+            },
           },
           {
             id: "sp-s4-u2-L2-T2",
@@ -622,6 +716,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The CMB is a snapshot of the universe about 380,000 years after the Big Bang, revealing its early temperature and structure.",
+            distractorExplanations: {
+              0: 'How bright the Sun was at birth is incorrect; the CMB is a snapshot of the universe about 380,000 years after the Big Bang, revealing its early temperature.',
+              2: 'The number of planets in our galaxy is incorrect; the CMB is a snapshot of the universe about 380,000 years after the Big Bang, revealing its early.',
+              3: 'The distance to the nearest star is incorrect; the CMB is a snapshot of the universe about 380,000 years after the Big Bang, revealing its early.',
+            },
           },
           {
             id: "sp-s4-u2-L2-T3",
@@ -635,6 +734,9 @@ export const spaceSection4: Unit[] = [
             question: "Pulsars are detected mainly through their radio wave emissions.",
             correctAnswer: true,
             explanation: "Most pulsars were first found by their regular radio pulses, though some also emit X-rays and gamma rays.",
+            distractorExplanations: {
+              1: 'Most pulsars were first found by their regular radio pulses, though some also emit X-rays and gamma rays.',
+            },
           },
           {
             id: "sp-s4-u2-L2-Q6",
@@ -649,6 +751,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Cold hydrogen emits at the famous 21 cm radio wavelength. Radio telescopes are essential for mapping this gas.",
+            distractorExplanations: {
+              1: 'Gamma rays is incorrect; cold hydrogen emits at the famous 21 cm radio wavelength.',
+              2: 'Visible blue light is incorrect; cold hydrogen emits at the famous 21 cm radio wavelength.',
+              3: 'Ultraviolet radiation is incorrect; cold hydrogen emits at the famous 21 cm radio wavelength.',
+            },
           },
         ],
       },
@@ -672,6 +779,9 @@ export const spaceSection4: Unit[] = [
             question: "Your body emits infrared radiation.",
             correctAnswer: true,
             explanation: "Any object with a temperature above absolute zero emits infrared. Your body glows brightly in infrared cameras.",
+            distractorExplanations: {
+              1: 'Any object with a temperature above absolute zero emits infrared.',
+            },
           },
           {
             id: "sp-s4-u2-L3-Q2",
@@ -685,6 +795,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "New stars form inside dense dust clouds. Infrared penetrates this dust, revealing the hidden stars inside.",
+            distractorExplanations: {
+              0: 'Stars are born in clouds of hot plasma is incorrect; new stars form inside dense dust clouds.',
+              2: 'Infrared moves faster than visible light is incorrect; new stars form inside dense dust clouds.',
+              3: 'Star-forming regions only emit infrared is incorrect; new stars form inside dense dust clouds.',
+            },
           },
           {
             id: "sp-s4-u2-L3-T2",
@@ -712,6 +827,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Since warm objects emit infrared, the telescope must be colder than the objects it studies. Otherwise, its own heat would overwhelm the faint signals.",
+            distractorExplanations: {
+              0: 'Cold temperatures make them move faster is incorrect; since warm objects emit infrared, the telescope must be colder than the objects it studies.',
+              2: 'Infrared only works in frozen conditions is incorrect; since warm objects emit infrared, the telescope must be colder than the objects it studies.',
+              3: 'Cold telescopes are easier to build is incorrect; since warm objects emit infrared, the telescope must be colder than the objects it studies.',
+            },
           },
           {
             id: "sp-s4-u2-L3-T3",
@@ -734,6 +854,9 @@ export const spaceSection4: Unit[] = [
             question: "Earth's atmosphere blocks most infrared from space, which is one reason JWST is in orbit.",
             correctAnswer: true,
             explanation: "Water vapor in our atmosphere absorbs most infrared. Space telescopes avoid this problem entirely.",
+            distractorExplanations: {
+              1: 'Water vapor in our atmosphere absorbs most infrared.',
+            },
           },
         ],
       },
@@ -757,6 +880,9 @@ export const spaceSection4: Unit[] = [
             question: "Young, hot stars are strong emitters of ultraviolet light.",
             correctAnswer: true,
             explanation: "The hottest stars emit most of their energy in the ultraviolet. UV telescopes in space help us find and study them.",
+            distractorExplanations: {
+              1: 'The hottest stars emit most of their energy in the ultraviolet.',
+            },
           },
           {
             id: "sp-s4-u2-L4-Q2",
@@ -770,6 +896,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The ozone layer in the upper atmosphere absorbs most UV radiation, protecting life on Earth.",
+            distractorExplanations: {
+              0: 'The magnetic field is incorrect; the ozone layer in the upper atmosphere absorbs most UV radiation, protecting life on Earth.',
+              2: 'Cloud cover is incorrect; the ozone layer in the upper atmosphere absorbs most UV radiation, protecting life on Earth.',
+              3: 'The Van Allen belts is incorrect; the ozone layer in the upper atmosphere absorbs most UV radiation, protecting life on Earth.',
+            },
           },
           {
             id: "sp-s4-u2-L4-T2",
@@ -797,6 +928,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Gas spiraling into black holes is heated to millions of degrees, making it glow brightly in X-rays.",
+            distractorExplanations: {
+              0: 'Cool dust clouds is incorrect; gas spiraling into black holes is heated to millions of degrees, making it glow brightly in X-rays.',
+              1: 'Cold hydrogen gas is incorrect; gas spiraling into black holes is heated to millions of degrees, making it glow brightly in X-rays.',
+              3: 'Comets in the outer solar system is incorrect; gas spiraling into black holes is heated to millions of degrees, making it glow brightly in X-rays.',
+            },
           },
           {
             id: "sp-s4-u2-L4-T3",
@@ -810,6 +946,9 @@ export const spaceSection4: Unit[] = [
             question: "Gamma ray bursts can briefly outshine an entire galaxy.",
             correctAnswer: true,
             explanation: "A single gamma ray burst can release more energy in seconds than our Sun will produce in its entire lifetime.",
+            distractorExplanations: {
+              1: 'A single gamma ray burst can release more energy in seconds than our Sun will produce in its entire lifetime.',
+            },
           },
           {
             id: "sp-s4-u2-L4-Q6",
@@ -860,6 +999,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The atmosphere absorbs X-rays before they reach the ground. Only telescopes in orbit can detect them.",
+            distractorExplanations: {
+              0: 'X-rays travel too slowly through air is incorrect; the atmosphere absorbs X-rays before they reach the ground.',
+              2: 'X-rays only exist beyond Earth is incorrect; the atmosphere absorbs X-rays before they reach the ground.',
+              3: 'This is incorrect; the atmosphere absorbs X-rays before they reach the ground.',
+            },
           },
           {
             id: "sp-s4-u2-L5-T2",
@@ -902,6 +1046,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At high altitude, there is less air to absorb and distort light. Dry, stable air above mountains also reduces blurring.",
+            distractorExplanations: {
+              0: 'Mountains are closer to the stars is incorrect; at high altitude, there is less air to absorb and distort light.',
+              2: 'This is incorrect; at high altitude, there is less air to absorb and distort light.',
+              3: 'Telescopes work better in cold weather is incorrect; at high altitude, there is less air to absorb and distort light.',
+            },
           },
           {
             id: "sp-s4-u2-L5-Q6",
@@ -916,6 +1065,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "No ground-based telescope can detect gamma rays. The atmosphere blocks them completely, so a space-based satellite is the only option.",
+            distractorExplanations: {
+              0: 'Use a bigger visible-light telescope is incorrect; no ground-based telescope can detect gamma rays.',
+              1: 'Wait for clearer weather is incorrect; no ground-based telescope can detect gamma rays.',
+              3: 'Add an infrared camera to the telescope is incorrect; no ground-based telescope can detect gamma rays.',
+            },
           },
         ],
       },
@@ -939,6 +1093,9 @@ export const spaceSection4: Unit[] = [
             question: "Observing at a single wavelength gives a complete picture of any cosmic object.",
             correctAnswer: false,
             explanation: "Each wavelength reveals different features. You need multiple wavelengths for the full story.",
+            distractorExplanations: {
+              0: 'Each wavelength reveals different features.',
+            },
           },
           {
             id: "sp-s4-u2-L6-Q2",
@@ -967,6 +1124,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Human eyes cannot see radio, infrared, UV, or X-ray light. False color lets us visualize data from these invisible wavelengths.",
+            distractorExplanations: {
+              0: 'This is incorrect; human eyes cannot see radio, infrared, UV, or X-ray light.',
+              2: 'This reasoning is wrong because human eyes cannot see radio, infrared, UV, or X-ray light.',
+              3: 'To hide errors in the data is incorrect; human eyes cannot see radio, infrared, UV, or X-ray light.',
+            },
           },
           {
             id: "sp-s4-u2-L6-Q4",
@@ -1004,6 +1166,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Supernova remnants contain hot gas, warm dust, and cold expanding shells. Each shows up at a different wavelength.",
+            distractorExplanations: {
+              0: 'Only visible light telescopes is incorrect; supernova remnants contain hot gas, warm dust, and cold expanding shells.',
+              1: 'Only radio telescopes is incorrect; supernova remnants contain hot gas, warm dust, and cold expanding shells.',
+              3: 'A single space telescope at one wavelength is incorrect; supernova remnants contain hot gas, warm dust, and cold expanding shells.',
+            },
           },
         ],
       },
@@ -1041,6 +1208,9 @@ export const spaceSection4: Unit[] = [
             question: "The main purpose of a telescope is to magnify distant objects.",
             correctAnswer: false,
             explanation: "The main purpose is to collect more light. A bigger telescope sees fainter objects because it gathers more photons.",
+            distractorExplanations: {
+              0: 'The main purpose is to collect more light.',
+            },
           },
           {
             id: "sp-s4-u3-L1-Q2",
@@ -1054,6 +1224,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your eye has a small pupil (about 7 mm). A telescope can have a lens or mirror 100 mm or larger, collecting far more photons.",
+            distractorExplanations: {
+              0: 'It changes the color of light is incorrect; your eye has a small pupil (about 7 mm).',
+              2: 'It speeds up light from distant sources is incorrect; your eye has a small pupil (about 7 mm).',
+              3: 'It filters out all background noise is incorrect; your eye has a small pupil (about 7 mm).',
+            },
           },
           {
             id: "sp-s4-u3-L1-T2",
@@ -1104,6 +1279,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Light-gathering power scales with the area of the primary optic. A bigger lens or mirror means more collected light.",
+            distractorExplanations: {
+              0: 'The length of the telescope tube is incorrect; light-gathering power scales with the area of the primary optic.',
+              2: 'The number of eyepieces it has is incorrect; light-gathering power scales with the area of the primary optic.',
+              3: 'The color of the telescope body is incorrect; light-gathering power scales with the area of the primary optic.',
+            },
           },
         ],
       },
@@ -1127,6 +1307,9 @@ export const spaceSection4: Unit[] = [
             question: "A convex lens is thicker at the edges than in the middle.",
             correctAnswer: false,
             explanation: "A convex lens is thicker in the middle. That shape causes light rays to bend inward and focus.",
+            distractorExplanations: {
+              0: 'A convex lens is thicker in the middle.',
+            },
           },
           {
             id: "sp-s4-u3-L2-Q2",
@@ -1154,6 +1337,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The objective lens is the large lens at the front of the telescope. It gathers light and bends it toward the focal point.",
+            distractorExplanations: {
+              0: 'The eyepiece lens is incorrect; the objective lens is the large lens at the front of the telescope.',
+              2: 'The finder lens is incorrect; the objective lens is the large lens at the front of the telescope.',
+              3: 'The focus lens is incorrect; the objective lens is the large lens at the front of the telescope.',
+            },
           },
           {
             id: "sp-s4-u3-L2-Q4",
@@ -1182,6 +1370,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Longer focal length means higher magnification. But the telescope tube must also be longer to accommodate it.",
+            distractorExplanations: {
+              0: 'Magnification decreases is incorrect; longer focal length means higher magnification.',
+              2: 'The telescope gets lighter is incorrect; longer focal length means higher magnification.',
+              3: 'Light-gathering improves is incorrect; longer focal length means higher magnification.',
+            },
           },
           {
             id: "sp-s4-u3-L2-Q6",
@@ -1216,6 +1409,9 @@ export const spaceSection4: Unit[] = [
             question: "A simple lens focuses all colors of light to the same point.",
             correctAnswer: false,
             explanation: "Different wavelengths focus at slightly different points. This spreads colors apart and blurs the image.",
+            distractorExplanations: {
+              0: 'Different wavelengths focus at slightly different points.',
+            },
           },
           {
             id: "sp-s4-u3-L3-Q2",
@@ -1229,6 +1425,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Shorter wavelengths (blue/violet) refract more than longer wavelengths (red). This causes chromatic aberration.",
+            distractorExplanations: {
+              0: 'Red is incorrect; shorter wavelengths (blue/violet) refract more than longer wavelengths (red).',
+              1: 'Yellow is incorrect; shorter wavelengths (blue/violet) refract more than longer wavelengths (red).',
+              2: 'Green is incorrect; shorter wavelengths (blue/violet) refract more than longer wavelengths (red).',
+            },
           },
           {
             id: "sp-s4-u3-L3-T2",
@@ -1256,6 +1457,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Apochromatic refractors use 3 or more glass elements to bring 3 colors to focus. They produce the sharpest, most color-free images.",
+            distractorExplanations: {
+              0: 'A refractor with no lenses at all is incorrect; apochromatic refractors use 3 or more glass elements to bring 3 colors to focus.',
+              2: 'A refractor that only shows one color is incorrect; apochromatic refractors use 3 or more glass elements to bring 3 colors to focus.',
+              3: 'A refractor designed for radio waves is incorrect; apochromatic refractors use 3 or more glass elements to bring 3 colors to focus.',
+            },
           },
           {
             id: "sp-s4-u3-L3-T3",
@@ -1276,6 +1482,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The color fringing is chromatic aberration from the simple lens. The small 60 mm aperture also limits how much light is collected.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; the color fringing is chromatic aberration from the simple lens.',
+              2: 'Galaxies do not emit visible light is incorrect; the color fringing is chromatic aberration from the simple lens.',
+              3: 'The eyepiece is installed backward is incorrect; the color fringing is chromatic aberration from the simple lens.',
+            },
           },
           {
             id: "sp-s4-u3-L3-Q6",
@@ -1308,6 +1519,9 @@ export const spaceSection4: Unit[] = [
             question: "Galileo discovered the 4 largest moons of Jupiter using a refractor.",
             correctAnswer: true,
             explanation: "Galileo's small refractor revealed Io, Europa, Ganymede, and Callisto, now called the Galilean moons.",
+            distractorExplanations: {
+              1: 'Galileo\'s small refractor revealed Io, Europa, Ganymede, and Callisto, now called the Galilean moons.',
+            },
           },
           {
             id: "sp-s4-u3-L4-Q2",
@@ -1338,6 +1552,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lenses can only be supported at their edges. Beyond about 1 meter, glass sags and distorts the image. Mirrors can be supported from behind.",
+            distractorExplanations: {
+              0: 'Refractors were banned by governments is incorrect; lenses can only be supported at their edges.',
+              2: 'This claim is incorrect; lenses can only be supported at their edges.',
+              3: 'Reflectors had not been invented yet is incorrect; lenses can only be supported at their edges.',
+            },
           },
           {
             id: "sp-s4-u3-L4-Q4",
@@ -1365,6 +1584,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Modern refractors are popular among amateur astronomers for their sharp, high-contrast views of planets, the Moon, and double stars.",
+            distractorExplanations: {
+              0: 'This is incorrect; modern refractors are popular among amateur astronomers for their sharp, high-contrast views of planets, the Moon,.',
+              2: 'Detecting gravitational waves is incorrect; modern refractors are popular among amateur astronomers for their sharp, high-contrast views of planets, the Moon,.',
+              3: 'Sending radio signals to space is incorrect; modern refractors are popular among amateur astronomers for their sharp, high-contrast views of planets, the Moon,.',
+            },
           },
           {
             id: "sp-s4-u3-L4-Q6",
@@ -1404,6 +1628,9 @@ export const spaceSection4: Unit[] = [
             question: "A refractor produces an upright image by default.",
             correctAnswer: false,
             explanation: "Basic refractors produce an inverted image. An erecting prism or diagonal can flip it, but astronomical viewing usually keeps it inverted.",
+            distractorExplanations: {
+              0: 'Basic refractors produce an inverted image.',
+            },
           },
           {
             id: "sp-s4-u3-L5-T2",
@@ -1434,6 +1661,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Since magnification = objective focal length / eyepiece focal length, a shorter eyepiece focal length increases magnification.",
+            distractorExplanations: {
+              0: 'A longer focal length is incorrect; since magnification = objective focal length / eyepiece focal length, a shorter eyepiece focal length increases.',
+              2: 'A wider diameter is incorrect; since magnification = objective focal length / eyepiece focal length, a shorter eyepiece focal length increases magnification.',
+              3: 'A darker coating is incorrect; since magnification = objective focal length / eyepiece focal length, a shorter eyepiece focal length increases magnification.',
+            },
           },
           {
             id: "sp-s4-u3-L5-T3",
@@ -1454,6 +1686,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Maximum useful magnification for a 70 mm scope is about 140x. At 350x, there is not enough light or resolution, so the image becomes dark and blurry.",
+            distractorExplanations: {
+              1: 'Saturn is too far away for any telescope is incorrect; maximum useful magnification for a 70 mm scope is about 140x.',
+              2: 'The telescope is broken is incorrect; maximum useful magnification for a 70 mm scope is about 140x.',
+              3: 'The atmosphere on Saturn blocks the view is incorrect; maximum useful magnification for a 70 mm scope is about 140x.',
+            },
           },
           {
             id: "sp-s4-u3-L5-Q6",
@@ -1501,6 +1738,9 @@ export const spaceSection4: Unit[] = [
             question: "Reflecting telescopes suffer from chromatic aberration like refractors.",
             correctAnswer: false,
             explanation: "Mirrors reflect all wavelengths at the same angle. No color splitting occurs, so chromatic aberration is eliminated.",
+            distractorExplanations: {
+              0: 'Mirrors reflect all wavelengths at the same angle.',
+            },
           },
           {
             id: "sp-s4-u4-L1-Q2",
@@ -1514,6 +1754,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lenses can only be held at the edges. Mirrors rest on supports behind them, preventing deformation even at very large sizes.",
+            distractorExplanations: {
+              0: 'Mirrors are always lighter than lenses is incorrect; lenses can only be held at the edges.',
+              2: 'Mirrors do not need to be polished is incorrect; lenses can only be held at the edges.',
+              3: 'Mirrors are cheaper to manufacture is incorrect; lenses can only be held at the edges.',
+            },
           },
           {
             id: "sp-s4-u4-L1-T2",
@@ -1556,6 +1801,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A parabola brings all parallel rays to the same focal point, eliminating spherical aberration and creating sharp images.",
+            distractorExplanations: {
+              0: 'Parabolic mirrors are lighter is incorrect; the key advantage is eliminating spherical aberration to create sharp images.',
+              2: 'Spherical mirrors can reflect light, but they produce blurry images because they don\'t focus all rays to one point.',
+              3: 'Parabolic mirrors are actually harder and more expensive to make; their advantage is optical precision.',
+            },
           },
           {
             id: "sp-s4-u4-L1-Q6",
@@ -1563,6 +1813,9 @@ export const spaceSection4: Unit[] = [
             question: "The Newtonian telescope design is still used by amateur astronomers today.",
             correctAnswer: true,
             explanation: "Newtonian reflectors offer excellent value. They provide large apertures at low cost, making them popular for amateur stargazing.",
+            distractorExplanations: {
+              1: 'Newtonian reflectors offer excellent value.',
+            },
           },
         ],
       },
@@ -1592,6 +1845,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The flat secondary mirror redirects light 90 degrees to the side of the tube, where the eyepiece is mounted.",
+            distractorExplanations: {
+              0: 'At the bottom of the tube is incorrect; the flat secondary mirror redirects light 90 degrees to the side of the tube, where the eyepiece is mounted.',
+              1: 'At the top of the tube is incorrect; the flat secondary mirror redirects light 90 degrees to the side of the tube, where the eyepiece is mounted.',
+              3: 'Behind the primary mirror is incorrect; the flat secondary mirror redirects light 90 degrees to the side of the tube, where the eyepiece is mounted.',
+            },
           },
           {
             id: "sp-s4-u4-L2-Q2",
@@ -1599,6 +1857,9 @@ export const spaceSection4: Unit[] = [
             question: "In a Newtonian telescope, the secondary mirror is curved.",
             correctAnswer: false,
             explanation: "The Newtonian secondary mirror is flat. It simply redirects the converging light beam to the side of the tube.",
+            distractorExplanations: {
+              0: 'The Newtonian secondary mirror is flat.',
+            },
           },
           {
             id: "sp-s4-u4-L2-T2",
@@ -1627,6 +1888,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Cassegrain folds the light path by bouncing it back through the primary. This makes the tube much shorter than a Newtonian with the same focal length.",
+            distractorExplanations: {
+              0: 'It is always cheaper is incorrect; the Cassegrain folds the light path by bouncing it back through the primary.',
+              2: 'It has no secondary mirror is incorrect; the Cassegrain folds the light path by bouncing it back through the primary.',
+              3: 'It only works for radio waves is incorrect; the Cassegrain folds the light path by bouncing it back through the primary.',
+            },
           },
           {
             id: "sp-s4-u4-L2-T3",
@@ -1656,6 +1922,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dobsonians give the most aperture per dollar. They are ideal for visual deep-sky observing on a budget.",
+            distractorExplanations: {
+              0: 'A large apochromatic refractor is incorrect; dobsonians give the most aperture per dollar.',
+              2: 'This is incorrect; dobsonians give the most aperture per dollar.',
+              3: 'A space telescope is incorrect; dobsonians give the most aperture per dollar.',
+            },
           },
         ],
       },
@@ -1687,6 +1958,9 @@ export const spaceSection4: Unit[] = [
             question: "Schmidt-Cassegrain telescopes use only mirrors, no lenses.",
             correctAnswer: false,
             explanation: "The SCT uses a corrector plate (lens) at the front along with two mirrors. The corrector fixes the aberrations of the spherical primary.",
+            distractorExplanations: {
+              0: 'The SCT uses a corrector plate (lens) at the front along with two mirrors.',
+            },
           },
           {
             id: "sp-s4-u4-L3-T2",
@@ -1706,6 +1980,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "SCTs pack a long focal length into a short tube. They work well for planets, deep-sky objects, and astrophotography.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; sCTs pack a long focal length into a short tube.',
+              2: 'They have no optical imperfections is incorrect; sCTs pack a long focal length into a short tube.',
+              3: 'They work without any mount is incorrect; sCTs pack a long focal length into a short tube.',
+            },
           },
           {
             id: "sp-s4-u4-L3-Q4",
@@ -1743,6 +2022,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The thick meniscus corrector makes Maksutovs heavier than SCTs of the same aperture, but the image quality is excellent.",
+            distractorExplanations: {
+              0: 'Maksutovs produce blurrier images is incorrect; the thick meniscus corrector makes Maksutovs heavier than SCTs of the same aperture, but the image quality.',
+              2: 'Maksutovs cannot see planets is incorrect; the thick meniscus corrector makes Maksutovs heavier than SCTs of the same aperture, but the image quality is.',
+              3: 'Maksutovs require more maintenance is incorrect; the thick meniscus corrector makes Maksutovs heavier than SCTs of the same aperture, but the image quality.',
+            },
           },
         ],
       },
@@ -1783,6 +2067,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A single 10-meter glass mirror would sag and crack. Small segments are lightweight, individually adjustable, and replaceable.",
+            distractorExplanations: {
+              0: 'Segments are easier to clean is incorrect; a single 10-meter glass mirror would sag and crack.',
+              2: 'Segments produce more colorful images is incorrect; a single 10-meter glass mirror would sag and crack.',
+              3: 'Solid mirrors cannot reflect light is incorrect; a single 10-meter glass mirror would sag and crack.',
+            },
           },
           {
             id: "sp-s4-u4-L4-T2",
@@ -1796,6 +2085,9 @@ export const spaceSection4: Unit[] = [
             question: "The Extremely Large Telescope will have a primary mirror larger than 30 meters.",
             correctAnswer: true,
             explanation: "The ELT's primary mirror will be 39 meters across, making it the largest optical telescope ever built.",
+            distractorExplanations: {
+              1: 'The ELT\'s primary mirror will be 39 meters across, making it the largest optical telescope ever built.',
+            },
           },
           {
             id: "sp-s4-u4-L4-Q4",
@@ -1824,6 +2116,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Adaptive optics senses atmospheric turbulence and adjusts a flexible mirror to cancel out the blurring in real time.",
+            distractorExplanations: {
+              0: 'Chromatic aberration from lenses is incorrect; adaptive optics senses atmospheric turbulence and adjusts a flexible mirror to cancel out the blurring in.',
+              2: 'The rotation of the Earth is incorrect; adaptive optics senses atmospheric turbulence and adjusts a flexible mirror to cancel out the blurring in real time.',
+              3: 'Light pollution from cities is incorrect; adaptive optics senses atmospheric turbulence and adjusts a flexible mirror to cancel out the blurring in real time.',
+            },
           },
           {
             id: "sp-s4-u4-L4-Q6",
@@ -1855,6 +2152,9 @@ export const spaceSection4: Unit[] = [
             question: "A reflector always gives better views than a refractor.",
             correctAnswer: false,
             explanation: "It depends on what you observe. Refractors often beat reflectors for sharp planetary views due to their high contrast and lack of a central obstruction.",
+            distractorExplanations: {
+              0: 'It depends on what you observe.',
+            },
           },
           {
             id: "sp-s4-u4-L5-Q2",
@@ -1869,6 +2169,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A 5-inch Maksutov is compact (good for a balcony), delivers sharp planetary views, and fits a moderate budget.",
+            distractorExplanations: {
+              0: 'A 12-inch Dobsonian is incorrect; a 5-inch Maksutov is compact (good for a balcony), delivers sharp planetary views, and fits a moderate budget.',
+              2: 'This is incorrect; a 5-inch Maksutov is compact (good for a balcony), delivers sharp planetary views, and fits a moderate budget.',
+              3: 'A radio telescope is incorrect; a 5-inch Maksutov is compact (good for a balcony), delivers sharp planetary views, and fits a moderate budget.',
+            },
           },
           {
             id: "sp-s4-u4-L5-T2",
@@ -1923,6 +2228,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Astrophotography requires long exposures. Without accurate tracking, stars become streaks. The mount is more important than the telescope for imaging.",
+            distractorExplanations: {
+              0: 'The largest possible aperture is incorrect; astrophotography requires long exposures.',
+              2: 'The highest magnification eyepiece is incorrect; astrophotography requires long exposures.',
+              3: 'A sealed tube design is incorrect; astrophotography requires long exposures.',
+            },
           },
         ],
       },
@@ -1965,6 +2275,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Light travels at approximately 300,000 km/s (or 3 x 10^8 m/s) in a vacuum.",
+            distractorExplanations: {
+              0: '300,000 m/s is incorrect; light travels at approximately 300,000 km/s (or 3 x 10^8 m/s) in a vacuum.',
+              2: '30,000 km/s is incorrect; light travels at approximately 300,000 km/s (or 3 x 10^8 m/s) in a vacuum.',
+              3: '3,000,000 km/s is incorrect; light travels at approximately 300,000 km/s (or 3 x 10^8 m/s) in a vacuum.',
+            },
           },
           {
             id: "sp-s4-u5-L1-Q2",
@@ -1980,6 +2295,9 @@ export const spaceSection4: Unit[] = [
             question: "Longer wavelength means higher frequency.",
             correctAnswer: false,
             explanation: "Wavelength and frequency are inversely related. Longer wavelength means lower frequency.",
+            distractorExplanations: {
+              0: 'Wavelength and frequency are inversely related.',
+            },
           },
           {
             id: "sp-s4-u5-L1-Q4",
@@ -2028,6 +2346,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Infrared light passes through dust. Infrared telescopes like JWST are designed exactly for this type of observation.",
+            distractorExplanations: {
+              0: 'A gamma ray telescope is incorrect; infrared light passes through dust.',
+              2: 'This is incorrect; infrared light passes through dust.',
+              3: 'A radio telescope tuned to 21 cm is incorrect; infrared light passes through dust.',
+            },
           },
         ],
       },
@@ -2066,6 +2389,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lenses split colors, causing chromatic aberration. Mirrors reflect all colors equally, avoiding this issue.",
+            distractorExplanations: {
+              0: 'Diffraction spikes is incorrect; lenses split colors, causing chromatic aberration.',
+              2: 'Mirror alignment is incorrect; lenses split colors, causing chromatic aberration.',
+              3: 'Central obstruction is incorrect; lenses split colors, causing chromatic aberration.',
+            },
           },
           {
             id: "sp-s4-u5-L2-T2",
@@ -2105,6 +2433,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "An SCT on a tracking mount is compact, collects good light, and the motorized mount enables the long exposures needed for faint galaxies.",
+            distractorExplanations: {
+              0: 'A large Dobsonian reflector is incorrect; an SCT on a tracking mount is compact, collects good light, and the motorized mount enables the long exposures.',
+              1: 'A small handheld refractor is incorrect; an SCT on a tracking mount is compact, collects good light, and the motorized mount enables the long exposures.',
+              3: 'A pair of binoculars is incorrect; an SCT on a tracking mount is compact, collects good light, and the motorized mount enables the long exposures.',
+            },
           },
           {
             id: "sp-s4-u5-L2-Q6",
@@ -2112,6 +2445,9 @@ export const spaceSection4: Unit[] = [
             question: "Adaptive optics corrects for blurring caused by Earth's atmosphere.",
             correctAnswer: true,
             explanation: "Adaptive optics uses deformable mirrors to counteract atmospheric turbulence, producing sharper images from ground-based telescopes.",
+            distractorExplanations: {
+              1: 'Adaptive optics uses deformable mirrors to counteract atmospheric turbulence, producing sharper images from.',
+            },
           },
         ],
       },
@@ -2169,6 +2505,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "1.5 AU x 8 minutes per AU = 12 minutes for light to travel from the Sun to Mars.",
+            distractorExplanations: {
+              0: 'About 8 minutes is incorrect; 1.5 AU x 8 minutes per AU = 12 minutes for light to travel from the Sun to Mars.',
+              2: 'About 16 minutes is incorrect; 1.5 AU x 8 minutes per AU = 12 minutes for light to travel from the Sun to Mars.',
+              3: 'About 24 minutes is incorrect; 1.5 AU x 8 minutes per AU = 12 minutes for light to travel from the Sun to Mars.',
+            },
           },
           {
             id: "sp-s4-u5-L3-Q4",
@@ -2194,6 +2535,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Magnification = objective / eyepiece. 150 = 1,500 / eyepiece. Eyepiece = 1,500 / 150 = 10 mm.",
+            distractorExplanations: {
+              0: '5 mm is incorrect; magnification = objective / eyepiece.',
+              2: '15 mm is incorrect; magnification = objective / eyepiece.',
+              3: '25 mm is incorrect; magnification = objective / eyepiece.',
+            },
           },
           {
             id: "sp-s4-u5-L3-T3",
@@ -2213,6 +2559,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Light-gathering scales with area (diameter squared). (300/100) squared = 9 times more light.",
+            distractorExplanations: {
+              0: '3 times is incorrect; light-gathering scales with area (diameter squared).',
+              1: '6 times is incorrect; light-gathering scales with area (diameter squared).',
+              3: '27 times is incorrect; light-gathering scales with area (diameter squared).',
+            },
           },
         ],
       },
@@ -2249,6 +2600,9 @@ export const spaceSection4: Unit[] = [
             question: "Doubling the aperture doubles the light-gathering power.",
             correctAnswer: false,
             explanation: "Doubling the diameter quadruples the area (and the light gathered). Light-gathering power scales with diameter squared, not diameter.",
+            distractorExplanations: {
+              0: 'Doubling the diameter quadruples the area (and the light gathered).',
+            },
           },
           {
             id: "sp-s4-u6-L1-Q2",
@@ -2279,6 +2633,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Bigger aperture means more light collected and finer detail resolved. Both improve together.",
+            distractorExplanations: {
+              1: 'Only magnification improves is incorrect; bigger aperture means more light collected and finer detail resolved.',
+              2: 'Only the field of view gets wider is incorrect; bigger aperture means more light collected and finer detail resolved.',
+              3: 'The weight decreases is incorrect; bigger aperture means more light collected and finer detail resolved.',
+            },
           },
           {
             id: "sp-s4-u6-L1-Q4",
@@ -2306,6 +2665,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 200 mm telescope reaches roughly magnitude 13.5 versus 11.5 for the 70 mm, a difference of about 2 magnitudes.",
+            distractorExplanations: {
+              0: 'About 1 magnitude is incorrect; the 200 mm telescope reaches roughly magnitude 13.5 versus 11.5 for the 70 mm, a difference of about 2 magnitudes.',
+              2: 'About 5 magnitudes is incorrect; the 200 mm telescope reaches roughly magnitude 13.5 versus 11.5 for the 70 mm, a difference of about 2 magnitudes.',
+              3: 'About 10 magnitudes is incorrect; the 200 mm telescope reaches roughly magnitude 13.5 versus 11.5 for the 70 mm, a difference of about 2 magnitudes.',
+            },
           },
           {
             id: "sp-s4-u6-L1-Q6",
@@ -2320,6 +2684,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "(300/100) squared = 9 times more light. More light means brighter images with more visible detail.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; (300/100) squared = 9 times more light.',
+              2: 'The 100 mm telescope has a defective mirror is incorrect; (300/100) squared = 9 times more light.',
+              3: 'Spiral arms only appear on clear nights is incorrect; (300/100) squared = 9 times more light.',
+            },
           },
         ],
       },
@@ -2343,6 +2712,9 @@ export const spaceSection4: Unit[] = [
             question: "A longer focal length telescope gives a wider field of view.",
             correctAnswer: false,
             explanation: "Longer focal length means higher magnification but a narrower field of view. Short focal lengths give wide views.",
+            distractorExplanations: {
+              0: 'Longer focal length means higher magnification but a narrower field of view.',
+            },
           },
           {
             id: "sp-s4-u6-L2-Q2",
@@ -2373,6 +2745,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Focal ratio = focal length / aperture = 1,000 / 200 = f/5.",
+            distractorExplanations: {
+              0: 'F/3 is incorrect; focal ratio = focal length / aperture = 1,000 / 200 = f/5.',
+              2: 'F/8 is incorrect; focal ratio = focal length / aperture = 1,000 / 200 = f/5.',
+              3: 'F/10 is incorrect; focal ratio = focal length / aperture = 1,000 / 200 = f/5.',
+            },
           },
           {
             id: "sp-s4-u6-L2-Q4",
@@ -2409,6 +2786,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The f/4 Newtonian is the fastest scope listed, meaning it gathers light over the image sensor fastest.",
+            distractorExplanations: {
+              0: 'F/10 SCT is incorrect; the f/4 Newtonian is the fastest scope listed, meaning it gathers light over the image sensor fastest.',
+              1: 'F/8 refractor is incorrect; the f/4 Newtonian is the fastest scope listed, meaning it gathers light over the image sensor fastest.',
+              3: 'F/12 Maksutov is incorrect; the f/4 Newtonian is the fastest scope listed, meaning it gathers light over the image sensor fastest.',
+            },
           },
         ],
       },
@@ -2443,6 +2825,9 @@ export const spaceSection4: Unit[] = [
             question: "A telescope advertised as '500x power' is always better than one at 200x.",
             correctAnswer: false,
             explanation: "Advertised magnification means nothing without knowing the aperture. A small telescope at 500x produces only a blurry, dim image.",
+            distractorExplanations: {
+              0: 'Advertised magnification means nothing without knowing the aperture.',
+            },
           },
           {
             id: "sp-s4-u6-L3-T2",
@@ -2473,6 +2858,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your eye cannot use light that falls outside its pupil. An exit pupil larger than ~7 mm means wasted light.",
+            distractorExplanations: {
+              0: 'The image becomes brighter is incorrect; your eye cannot use light that falls outside its pupil.',
+              2: 'The telescope breaks is incorrect; your eye cannot use light that falls outside its pupil.',
+              3: 'Colors disappear from the image is incorrect; your eye cannot use light that falls outside its pupil.',
+            },
           },
           {
             id: "sp-s4-u6-L3-T3",
@@ -2502,6 +2892,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Orion Nebula is large and benefits from low magnification for a wide, bright view. 40x with a 5 mm exit pupil is ideal.",
+            distractorExplanations: {
+              0: '4 mm eyepiece (250x) is incorrect; the Orion Nebula is large and benefits from low magnification for a wide, bright view.',
+              1: '10 mm eyepiece (100x) is incorrect; the Orion Nebula is large and benefits from low magnification for a wide, bright view.',
+              3: '2 mm eyepiece (500x) is incorrect; the Orion Nebula is large and benefits from low magnification for a wide, bright view.',
+            },
           },
         ],
       },
@@ -2532,6 +2927,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Magnification = focal length / eyepiece = 650 / 25 = 26x.",
+            distractorExplanations: {
+              1: '52x is incorrect; magnification = focal length / eyepiece = 650 / 25 = 26x.',
+              2: '65x is incorrect; magnification = focal length / eyepiece = 650 / 25 = 26x.',
+              3: '130x is incorrect; magnification = focal length / eyepiece = 650 / 25 = 26x.',
+            },
           },
           {
             id: "sp-s4-u6-L4-Q2",
@@ -2571,6 +2971,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 130 mm gathers (130/60) squared = about 4.7 times more light. Aperture wins.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because the 130 mm gathers (130/60) squared = about 4.7 times more light.',
+              2: 'This reasoning is wrong because the 130 mm gathers (130/60) squared = about 4.7 times more light.',
+              3: 'This reasoning is wrong because the 130 mm gathers (130/60) squared = about 4.7 times more light.',
+            },
           },
           {
             id: "sp-s4-u6-L4-T3",
@@ -2585,6 +2990,9 @@ export const spaceSection4: Unit[] = [
             question: "The biggest possible telescope is always the best choice for a beginner.",
             correctAnswer: false,
             explanation: "A telescope you actually set up and use beats one that stays in storage. Portability and ease of use matter greatly for beginners.",
+            distractorExplanations: {
+              0: 'A telescope you actually set up and use beats one that stays in storage.',
+            },
           },
           {
             id: "sp-s4-u6-L4-Q6",
@@ -2616,6 +3024,9 @@ export const spaceSection4: Unit[] = [
             question: "Electronic sensors can detect fainter objects than the human eye.",
             correctAnswer: true,
             explanation: "CCD and CMOS sensors accumulate photons over minutes or hours of exposure, detecting objects far too faint for direct viewing.",
+            distractorExplanations: {
+              1: 'CCD and CMOS sensors accumulate photons over minutes or hours of exposure, detecting objects far too faint for direct viewing.',
+            },
           },
           {
             id: "sp-s4-u6-L5-Q2",
@@ -2629,6 +3040,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your eye takes snapshots. A CCD integrates photons over time, building up signal from very faint sources.",
+            distractorExplanations: {
+              0: 'This is incorrect; your eye takes snapshots.',
+              2: 'CCDs work without a telescope is incorrect; your eye takes snapshots.',
+              3: 'CCDs do not need electricity is incorrect; your eye takes snapshots.',
+            },
           },
           {
             id: "sp-s4-u6-L5-T2",
@@ -2656,6 +3072,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Heat generates random electronic noise (dark current). Cooling the sensor reduces this noise, revealing faint signals.",
+            distractorExplanations: {
+              0: 'Cold sensors absorb more light is incorrect; heat generates random electronic noise (dark current).',
+              2: 'CCDs only work below freezing is incorrect; heat generates random electronic noise (dark current).',
+              3: 'This is incorrect; heat generates random electronic noise (dark current).',
+            },
           },
           {
             id: "sp-s4-u6-L5-T3",
@@ -2678,6 +3099,9 @@ export const spaceSection4: Unit[] = [
             question: "Most professional astronomical images are taken in full color with a single exposure.",
             correctAnswer: false,
             explanation: "Professional images are built from multiple exposures through different filters, then combined to create a color image.",
+            distractorExplanations: {
+              0: 'Professional images are built from multiple exposures through different filters, then combined to create a color image.',
+            },
           },
         ],
       },
@@ -2719,6 +3143,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Maksutov is compact for a balcony, and its long f/14 focal ratio provides excellent planetary views.",
+            distractorExplanations: {
+              0: '200 mm Dobsonian (f/6) is incorrect; the Maksutov is compact for a balcony, and its long f/14 focal ratio provides excellent planetary views.',
+              2: 'A pair of 10x50 binoculars is incorrect; the Maksutov is compact for a balcony, and its long f/14 focal ratio provides excellent planetary views.',
+              3: 'A 400 mm f/4 Newtonian is incorrect; the Maksutov is compact for a balcony, and its long f/14 focal ratio provides excellent planetary views.',
+            },
           },
           {
             id: "sp-s4-u6-L6-T2",
@@ -2747,6 +3176,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Magnification = 650/32 = about 20x. Exit pupil = 130/20 = 6.5 mm.",
+            distractorExplanations: {
+              0: 'About 4 mm is incorrect; magnification = 650/32 = about 20x.',
+              2: 'About 20 mm is incorrect; magnification = 650/32 = about 20x.',
+              3: 'About 1 mm is incorrect; magnification = 650/32 = about 20x.',
+            },
           },
           {
             id: "sp-s4-u6-L6-T3",
@@ -2774,6 +3208,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Lower magnification gives a larger exit pupil and a brighter image. 200/30 = 6.7 mm, close to the eye's maximum.",
+            distractorExplanations: {
+              0: '200 mm at 100x (2 mm exit pupil) is incorrect; lower magnification gives a larger exit pupil and a brighter image.',
+              1: '200 mm at 40x (5 mm exit pupil) is incorrect; lower magnification gives a larger exit pupil and a brighter image.',
+              3: '200 mm at 200x (1 mm exit pupil) is incorrect; lower magnification gives a larger exit pupil and a brighter image.',
+            },
           },
         ],
       },
@@ -2811,6 +3250,9 @@ export const spaceSection4: Unit[] = [
             question: "Radio telescopes collect radio waves, not visible light.",
             correctAnswer: true,
             explanation: "Radio telescopes are designed to detect radio-frequency electromagnetic radiation, not the visible light our eyes see.",
+            distractorExplanations: {
+              1: 'Radio telescopes are designed to detect radio-frequency electromagnetic radiation, not the visible light our eyes see.',
+            },
           },
           {
             id: "sp-s4-u7-L1-Q2",
@@ -2824,6 +3266,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The dish reflects incoming radio waves and focuses them onto a receiver at the focal point, just like a reflecting telescope focuses light.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; the dish reflects incoming radio waves and focuses them onto a receiver at the focal point, just like a reflecting.',
+              2: 'It blocks radio interference from Earth is incorrect; the dish reflects incoming radio waves and focuses them onto a receiver at the focal point, just like.',
+              3: 'It converts light into sound is incorrect; the dish reflects incoming radio waves and focuses them onto a receiver at the focal point, just like a reflecting.',
+            },
           },
           {
             id: "sp-s4-u7-L1-T2",
@@ -2837,6 +3284,9 @@ export const spaceSection4: Unit[] = [
             question: "Radio dishes are large because radio waves have very long wavelengths.",
             correctAnswer: true,
             explanation: "Longer wavelengths require larger apertures to achieve useful resolution. That's the main reason radio dishes are enormous.",
+            distractorExplanations: {
+              1: 'Longer wavelengths require larger apertures to achieve useful resolution.',
+            },
           },
           {
             id: "sp-s4-u7-L1-Q4",
@@ -2864,6 +3314,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Cold hydrogen emits radio waves at 21 cm wavelength. It's invisible to optical telescopes but easy for radio dishes to detect.",
+            distractorExplanations: {
+              0: 'Bright stars in the Milky Way is incorrect; cold hydrogen emits radio waves at 21 cm wavelength.',
+              1: 'The Moon\'s surface features is incorrect; cold hydrogen emits radio waves at 21 cm wavelength.',
+              3: 'The color of nearby planets is incorrect; cold hydrogen emits radio waves at 21 cm wavelength.',
+            },
           },
           {
             id: "sp-s4-u7-L1-Q6",
@@ -2908,6 +3363,9 @@ export const spaceSection4: Unit[] = [
             question: "China's FAST telescope is currently the world's largest single-dish radio telescope.",
             correctAnswer: true,
             explanation: "FAST (Five-hundred-meter Aperture Spherical Telescope) in Guizhou, China opened in 2016 with a 500-meter dish.",
+            distractorExplanations: {
+              1: 'FAST (Five-hundred-meter Aperture Spherical Telescope) in Guizhou, China opened in 2016 with a 500-meter dish.',
+            },
           },
           {
             id: "sp-s4-u7-L2-Q2",
@@ -2921,6 +3379,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Green Bank Telescope's 100-meter dish can be pointed anywhere in the sky, making it the largest fully steerable radio telescope.",
+            distractorExplanations: {
+              0: 'This is incorrect; the Green Bank Telescope\'s 100-meter dish can be pointed anywhere in the sky, making it the largest fully steerable.',
+              2: 'It orbits Earth in space is incorrect; the Green Bank Telescope\'s 100-meter dish can be pointed anywhere in the sky, making it the largest fully steerable.',
+              3: 'It only detects visible light is incorrect; the Green Bank Telescope\'s 100-meter dish can be pointed anywhere in the sky, making it the largest fully steerable.',
+            },
           },
           {
             id: "sp-s4-u7-L2-T2",
@@ -2970,6 +3433,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A signal synced with sidereal time (star time) rather than solar time points to a cosmic origin. That's exactly what Jansky discovered.",
+            distractorExplanations: {
+              0: 'Ignore it as equipment noise is incorrect; a signal synced with sidereal time (star time) rather than solar time points to a cosmic origin.',
+              2: 'Replace the antenna and discard the data is incorrect; a signal synced with sidereal time (star time) rather than solar time points to a cosmic origin.',
+              3: 'Assume nearby power lines are the cause is incorrect; a signal synced with sidereal time (star time) rather than solar time points to a cosmic origin.',
+            },
           },
           {
             id: "sp-s4-u7-L2-Q7",
@@ -2983,6 +3451,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jansky published his discovery of radio emission from the Milky Way in 1932, founding radio astronomy.",
+            distractorExplanations: {
+              0: '1905 is incorrect; jansky published his discovery of radio emission from the Milky Way in 1932, founding radio astronomy.',
+              2: '1957 is incorrect; jansky published his discovery of radio emission from the Milky Way in 1932, founding radio astronomy.',
+              3: '1969 is incorrect; jansky published his discovery of radio emission from the Milky Way in 1932, founding radio astronomy.',
+            },
           },
         ],
       },
@@ -3007,6 +3480,9 @@ export const spaceSection4: Unit[] = [
             question: "A single radio dish produces sharper images than an optical telescope of the same size.",
             correctAnswer: false,
             explanation: "Radio wavelengths are much longer than optical ones. A single radio dish of the same size produces much blurrier images.",
+            distractorExplanations: {
+              0: 'Radio wavelengths are much longer than optical ones.',
+            },
           },
           {
             id: "sp-s4-u7-L3-Q2",
@@ -3020,6 +3496,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Interferometry combines signals from multiple dishes. The effective resolution equals that of a single dish as wide as the distance between the farthest dishes.",
+            distractorExplanations: {
+              1: 'Visible light and radio waves together is incorrect; interferometry combines signals from multiple dishes.',
+              2: 'Images from different time periods is incorrect; interferometry combines signals from multiple dishes.',
+              3: 'Signals from orbiting satellites only is incorrect; interferometry combines signals from multiple dishes.',
+            },
           },
           {
             id: "sp-s4-u7-L3-T2",
@@ -3048,6 +3529,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Resolution improves proportionally with baseline length. Double the separation, roughly double the sharpness.",
+            distractorExplanations: {
+              0: 'It stays the same is incorrect; resolution improves proportionally with baseline length.',
+              2: 'It halves is incorrect; resolution improves proportionally with baseline length.',
+              3: 'It quadruples is incorrect; resolution improves proportionally with baseline length.',
+            },
           },
           {
             id: "sp-s4-u7-L3-Q5",
@@ -3071,6 +3557,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Spreading dishes across a wide area creates long baselines, giving much finer resolution. This is exactly the VLA's design in New Mexico.",
+            distractorExplanations: {
+              0: 'This is incorrect; spreading dishes across a wide area creates long baselines, giving much finer resolution.',
+              2: 'This is incorrect; spreading dishes across a wide area creates long baselines, giving much finer resolution.',
+              3: 'This is incorrect; spreading dishes across a wide area creates long baselines, giving much finer resolution.',
+            },
           },
           {
             id: "sp-s4-u7-L3-Q7",
@@ -3106,6 +3597,9 @@ export const spaceSection4: Unit[] = [
             question: "VLBI can create a virtual telescope as wide as Earth.",
             correctAnswer: true,
             explanation: "By linking dishes on different continents, VLBI achieves baselines equal to Earth's diameter, giving extraordinary resolution.",
+            distractorExplanations: {
+              1: 'By linking dishes on different continents, VLBI achieves baselines equal to Earth\'s diameter, giving extraordinary resolution.',
+            },
           },
           {
             id: "sp-s4-u7-L4-Q2",
@@ -3134,6 +3628,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The EHT produced the first direct image of a black hole's shadow, in the galaxy M87. It confirmed predictions of general relativity.",
+            distractorExplanations: {
+              0: 'A planet outside our solar system is incorrect; the EHT produced the first direct image of a black hole\'s shadow, in the galaxy M87.',
+              2: 'The surface of a neutron star is incorrect; the EHT produced the first direct image of a black hole\'s shadow, in the galaxy M87.',
+              3: 'The edge of the observable universe is incorrect; the EHT produced the first direct image of a black hole\'s shadow, in the galaxy M87.',
+            },
           },
           {
             id: "sp-s4-u7-L4-Q4",
@@ -3147,6 +3646,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The EHT used 8 radio observatories spread across the globe to create a virtual Earth-sized telescope.",
+            distractorExplanations: {
+              0: '2 is incorrect; the EHT used 8 radio observatories spread across the globe to create a virtual Earth-sized telescope.',
+              2: '27 is incorrect; the EHT used 8 radio observatories spread across the globe to create a virtual Earth-sized telescope.',
+              3: '100 is incorrect; the EHT used 8 radio observatories spread across the globe to create a virtual Earth-sized telescope.',
+            },
           },
           {
             id: "sp-s4-u7-L4-Q5",
@@ -3204,6 +3708,9 @@ export const spaceSection4: Unit[] = [
             question: "Pulsars are rapidly spinning neutron stars that emit beams of radio waves.",
             correctAnswer: true,
             explanation: "A pulsar's magnetic field channels radiation into beams. As the star spins, these beams sweep across space like a lighthouse.",
+            distractorExplanations: {
+              1: 'A pulsar\'s magnetic field channels radiation into beams.',
+            },
           },
           {
             id: "sp-s4-u7-L5-Q2",
@@ -3217,6 +3724,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Jocelyn Bell Burnell, then a graduate student, detected the first pulsar's regular radio pulses while analyzing chart recordings.",
+            distractorExplanations: {
+              0: 'Karl Jansky is incorrect; jocelyn Bell Burnell, then a graduate student, detected the first pulsar\'s regular radio pulses while analyzing chart recordings.',
+              1: 'Edwin Hubble is incorrect; jocelyn Bell Burnell, then a graduate student, detected the first pulsar\'s regular radio pulses while analyzing chart recordings.',
+              3: 'Albert Einstein is incorrect; jocelyn Bell Burnell, then a graduate student, detected the first pulsar\'s regular radio pulses while analyzing chart recordings.',
+            },
           },
           {
             id: "sp-s4-u7-L5-T2",
@@ -3245,6 +3757,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The CMB was originally visible and ultraviolet light, but the expansion of the universe stretched it to microwave wavelengths over 13.8 billion years.",
+            distractorExplanations: {
+              0: 'Visible light is incorrect; the CMB was originally visible and ultraviolet light, but the expansion of the universe stretched it to microwave.',
+              1: 'X-rays is incorrect; the CMB was originally visible and ultraviolet light, but the expansion of the universe stretched it to microwave.',
+              3: 'Gamma rays is incorrect; the CMB was originally visible and ultraviolet light, but the expansion of the universe stretched it to microwave.',
+            },
           },
           {
             id: "sp-s4-u7-L5-Q5",
@@ -3268,6 +3785,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A uniform signal from every direction that never changes matches the cosmic microwave background. This is exactly how Penzias and Wilson discovered it.",
+            distractorExplanations: {
+              0: 'A nearby star is interfering is incorrect; a uniform signal from every direction that never changes matches the cosmic microwave background.',
+              1: 'This claim is incorrect; a uniform signal from every direction that never changes matches the cosmic microwave background.',
+              3: 'This is incorrect; a uniform signal from every direction that never changes matches the cosmic microwave background.',
+            },
           },
           {
             id: "sp-s4-u7-L5-Q7",
@@ -3314,6 +3836,9 @@ export const spaceSection4: Unit[] = [
             question: "Earth's atmosphere blocks most ultraviolet and X-ray light from reaching the ground.",
             correctAnswer: true,
             explanation: "The atmosphere absorbs UV and X-rays, which is good for life on Earth but bad for astronomers who want to study those wavelengths.",
+            distractorExplanations: {
+              1: 'The atmosphere absorbs UV and X-rays, which is good for life on Earth but bad for astronomers who want to study.',
+            },
           },
           {
             id: "sp-s4-u8-L1-Q2",
@@ -3327,6 +3852,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Space telescopes avoid the blurring, twinkling, and absorption caused by Earth's atmosphere. They're not significantly closer to their targets.",
+            distractorExplanations: {
+              0: 'It gets closer to the stars is incorrect; space telescopes avoid the blurring, twinkling, and absorption caused by Earth\'s atmosphere.',
+              2: 'This claim is incorrect; space telescopes avoid the blurring, twinkling, and absorption caused by Earth\'s atmosphere.',
+              3: 'It doesn\'t need electricity to operate is incorrect; space telescopes avoid the blurring, twinkling, and absorption caused by Earth\'s atmosphere.',
+            },
           },
           {
             id: "sp-s4-u8-L1-T2",
@@ -3363,6 +3893,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Twinkling is caused by atmospheric turbulence. Above the atmosphere, starlight arrives perfectly steady.",
+            distractorExplanations: {
+              0: 'They use better mirrors is incorrect; twinkling is caused by atmospheric turbulence.',
+              2: 'They point away from Earth is incorrect; twinkling is caused by atmospheric turbulence.',
+              3: 'They use adaptive optics automatically is incorrect; twinkling is caused by atmospheric turbulence.',
+            },
           },
           {
             id: "sp-s4-u8-L1-Q6",
@@ -3377,6 +3912,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "No ground telescope can detect cosmic X-rays because the atmosphere absorbs them completely. An orbital telescope is the only option.",
+            distractorExplanations: {
+              0: 'This is incorrect; no ground telescope can detect cosmic X-rays because the atmosphere absorbs them completely.',
+              1: 'This approach is incorrect; no ground telescope can detect cosmic X-rays because the atmosphere absorbs them completely.',
+              3: 'Wait for a clear night with no clouds is incorrect; no ground telescope can detect cosmic X-rays because the atmosphere absorbs them completely.',
+            },
           },
           {
             id: "sp-s4-u8-L1-Q7",
@@ -3384,6 +3924,9 @@ export const spaceSection4: Unit[] = [
             question: "A ground-based telescope can study cosmic gamma rays if it's on a tall enough mountain.",
             correctAnswer: false,
             explanation: "Even the tallest mountains are well within the atmosphere. Gamma rays are absorbed high up and never reach the ground.",
+            distractorExplanations: {
+              0: 'Even the tallest mountains are well within the atmosphere.',
+            },
           },
         ],
       },
@@ -3408,6 +3951,9 @@ export const spaceSection4: Unit[] = [
             question: "Hubble's mirror had a manufacturing flaw that was fixed by astronauts in space.",
             correctAnswer: true,
             explanation: "The mirror was too flat by 2 micrometers. In 1993, astronauts installed corrective optics (like contact lenses for the telescope), and Hubble delivered stunning images from that point on.",
+            distractorExplanations: {
+              1: 'The mirror was too flat by 2 micrometers.',
+            },
           },
           {
             id: "sp-s4-u8-L2-Q2",
@@ -3421,6 +3967,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hubble launched aboard the Space Shuttle Discovery on April 24, 1990.",
+            distractorExplanations: {
+              0: '1985 is incorrect; hubble launched aboard the Space Shuttle Discovery on April 24, 1990.',
+              2: '1995 is incorrect; hubble launched aboard the Space Shuttle Discovery on April 24, 1990.',
+              3: '2000 is incorrect; hubble launched aboard the Space Shuttle Discovery on April 24, 1990.',
+            },
           },
           {
             id: "sp-s4-u8-L2-T2",
@@ -3449,6 +4000,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hubble covers ultraviolet through near-infrared wavelengths, with its strongest capability in visible light.",
+            distractorExplanations: {
+              0: 'Only radio waves is incorrect; hubble covers ultraviolet through near-infrared wavelengths, with its strongest capability in visible light.',
+              2: 'Only X-rays is incorrect; hubble covers ultraviolet through near-infrared wavelengths, with its strongest capability in visible light.',
+              3: 'Only far-infrared light is incorrect; hubble covers ultraviolet through near-infrared wavelengths, with its strongest capability in visible light.',
+            },
           },
           {
             id: "sp-s4-u8-L2-Q5",
@@ -3507,6 +4063,9 @@ export const spaceSection4: Unit[] = [
             question: "JWST was designed mainly to detect infrared light.",
             correctAnswer: true,
             explanation: "JWST is optimized for infrared observation. This lets it see through dust clouds and detect light from the earliest galaxies in the universe.",
+            distractorExplanations: {
+              1: 'JWST is optimized for infrared observation.',
+            },
           },
           {
             id: "sp-s4-u8-L3-Q2",
@@ -3520,6 +4079,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The universe's expansion stretches light from the most distant sources into longer, infrared wavelengths. This is called redshift.",
+            distractorExplanations: {
+              0: 'Infrared is brighter than visible light is incorrect; the universe\'s expansion stretches light from the most distant sources into longer, infrared wavelengths.',
+              2: 'Infrared telescopes are cheaper to build is incorrect; the universe\'s expansion stretches light from the most distant sources into longer, infrared wavelengths.',
+              3: 'Earth\'s atmosphere blocks visible light is incorrect; the universe\'s expansion stretches light from the most distant sources into longer, infrared wavelengths.',
+            },
           },
           {
             id: "sp-s4-u8-L3-T2",
@@ -3559,6 +4123,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Infrared is essentially heat radiation. If the telescope itself were warm, its own thermal glow would drown out the faint signals from distant galaxies.",
+            distractorExplanations: {
+              0: 'Cold mirrors reflect better is incorrect; infrared is essentially heat radiation.',
+              2: 'The mirror segments would crack if warm is incorrect; infrared is essentially heat radiation.',
+              3: 'This is incorrect; infrared is essentially heat radiation.',
+            },
           },
           {
             id: "sp-s4-u8-L3-Q6",
@@ -3581,6 +4150,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "JWST orbits the Sun-Earth L2 Lagrange point, about 1.5 million km from Earth. This keeps it far from Earth's heat and in constant shadow behind its sunshield.",
+            distractorExplanations: {
+              0: 'This is incorrect; jWST orbits the Sun-Earth L2 Lagrange point, about 1.5 million km from Earth.',
+              1: 'The Moon\'s surface is incorrect; jWST orbits the Sun-Earth L2 Lagrange point, about 1.5 million km from Earth.',
+              3: 'A geostationary orbit above the equator is incorrect; jWST orbits the Sun-Earth L2 Lagrange point, about 1.5 million km from Earth.',
+            },
           },
           {
             id: "sp-s4-u8-L3-Q8",
@@ -3616,6 +4190,9 @@ export const spaceSection4: Unit[] = [
             question: "JWST was designed to replace Hubble and make it obsolete.",
             correctAnswer: false,
             explanation: "JWST complements Hubble. They observe different wavelengths. Hubble's UV and visible-light capabilities are things JWST cannot match.",
+            distractorExplanations: {
+              0: 'JWST complements Hubble.',
+            },
           },
           {
             id: "sp-s4-u8-L4-Q2",
@@ -3644,6 +4221,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "JWST's 6.5-meter mirror has about 6 times the collecting area of Hubble's 2.4-meter mirror.",
+            distractorExplanations: {
+              0: 'About 2 times more is incorrect; jWST\'s 6.5-meter mirror has about 6 times the collecting area of Hubble\'s 2.4-meter mirror.',
+              2: 'About 20 times more is incorrect; jWST\'s 6.5-meter mirror has about 6 times the collecting area of Hubble\'s 2.4-meter mirror.',
+              3: 'About 100 times more is incorrect; jWST\'s 6.5-meter mirror has about 6 times the collecting area of Hubble\'s 2.4-meter mirror.',
+            },
           },
           {
             id: "sp-s4-u8-L4-Q4",
@@ -3675,6 +4257,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Light from the most distant galaxies is redshifted into infrared. JWST is the ideal instrument for observing it.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because light from the most distant galaxies is redshifted into infrared.',
+              2: 'This reasoning is wrong because light from the most distant galaxies is redshifted into infrared.',
+              3: 'A ground-based optical telescope instead is incorrect; light from the most distant galaxies is redshifted into infrared.',
+            },
           },
           {
             id: "sp-s4-u8-L4-Q7",
@@ -3708,6 +4295,9 @@ export const spaceSection4: Unit[] = [
             question: "The Chandra X-ray Observatory detects X-rays from space.",
             correctAnswer: true,
             explanation: "Chandra launched in 1999 and specializes in X-ray observations of black holes, supernova remnants, and hot galaxy clusters.",
+            distractorExplanations: {
+              1: 'Chandra launched in 1999 and specializes in X-ray observations of black holes, supernova remnants, and hot galaxy clusters.',
+            },
           },
           {
             id: "sp-s4-u8-L5-Q2",
@@ -3756,6 +4346,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The atmosphere absorbs X-rays completely. Chandra must be in space to detect X-ray emission from cosmic sources.",
+            distractorExplanations: {
+              0: 'X-ray sources are too faint is incorrect; the atmosphere absorbs X-rays completely.',
+              2: 'Ground-based mirrors can\'t focus X-rays is incorrect; the atmosphere absorbs X-rays completely.',
+              3: 'This is incorrect; the atmosphere absorbs X-rays completely.',
+            },
           },
           {
             id: "sp-s4-u8-L5-Q6",
@@ -3769,6 +4364,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "TESS stands for Transiting Exoplanet Survey Satellite. It searches for planets orbiting nearby bright stars.",
+            distractorExplanations: {
+              0: 'Terrestrial Exoplanet Survey Satellite is incorrect; tESS stands for Transiting Exoplanet Survey Satellite.',
+              2: 'Thermal Emission Space Scanner is incorrect; tESS stands for Transiting Exoplanet Survey Satellite.',
+              3: 'This is incorrect; tESS stands for Transiting Exoplanet Survey Satellite.',
+            },
           },
           {
             id: "sp-s4-u8-L5-Q7",
@@ -3807,6 +4407,9 @@ export const spaceSection4: Unit[] = [
             question: "Adaptive optics correct for atmospheric distortion in real time.",
             correctAnswer: true,
             explanation: "AO systems measure atmospheric distortion using a guide star and instantly adjust a flexible mirror to cancel out the blurring.",
+            distractorExplanations: {
+              1: 'AO systems measure atmospheric distortion using a guide star and instantly adjust a flexible mirror to cancel out the blurring.',
+            },
           },
           {
             id: "sp-s4-u8-L6-Q2",
@@ -3820,6 +4423,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "AO systems use a bright guide star or fire a laser to create an artificial one. By measuring how the guide star's light is distorted, the system calculates corrections.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; aO systems use a bright guide star or fire a laser to create an artificial one.',
+              2: 'It compares images taken months apart is incorrect; aO systems use a bright guide star or fire a laser to create an artificial one.',
+              3: 'This claim is incorrect; aO systems use a bright guide star or fire a laser to create an artificial one.',
+            },
           },
           {
             id: "sp-s4-u8-L6-T2",
@@ -3859,6 +4467,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Heat generates random electrical signals (thermal noise). Cooling the CCD reduces this noise, letting astronomers detect extremely faint objects.",
+            distractorExplanations: {
+              0: 'Cold CCDs focus light better is incorrect; heat generates random electrical signals (thermal noise).',
+              2: 'This is incorrect; heat generates random electrical signals (thermal noise).',
+              3: 'Cooling makes the CCD physically larger is incorrect; heat generates random electrical signals (thermal noise).',
+            },
           },
           {
             id: "sp-s4-u8-L6-Q6",
@@ -3914,6 +4527,9 @@ export const spaceSection4: Unit[] = [
             question: "A prism splits white light into its component wavelengths.",
             correctAnswer: true,
             explanation: "Different wavelengths bend by different amounts when passing through a prism. This separates white light into a rainbow spectrum.",
+            distractorExplanations: {
+              1: 'Different wavelengths bend by different amounts when passing through a prism.',
+            },
           },
           {
             id: "sp-s4-u9-L1-Q2",
@@ -3927,6 +4543,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Diffraction gratings are more precise than prisms and are the standard tool in modern spectrographs for splitting light into its wavelengths.",
+            distractorExplanations: {
+              0: 'A magnifying glass is incorrect; diffraction gratings are more precise than prisms and are the standard tool in modern spectrographs for splitting.',
+              2: 'A concave mirror is incorrect; diffraction gratings are more precise than prisms and are the standard tool in modern spectrographs for splitting.',
+              3: 'A camera lens is incorrect; diffraction gratings are more precise than prisms and are the standard tool in modern spectrographs for splitting.',
+            },
           },
           {
             id: "sp-s4-u9-L1-T2",
@@ -3968,6 +4589,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A spectrum encodes enormous amounts of information: chemical composition, temperature, density, magnetic fields, and velocity.",
+            distractorExplanations: {
+              0: 'It makes stars appear brighter is incorrect; a spectrum encodes enormous amounts of information: chemical composition, temperature, density, magnetic.',
+              2: 'It eliminates atmospheric distortion is incorrect; a spectrum encodes enormous amounts of information: chemical composition, temperature, density, magnetic.',
+              3: 'It can see through black holes is incorrect; a spectrum encodes enormous amounts of information: chemical composition, temperature, density, magnetic.',
+            },
           },
           {
             id: "sp-s4-u9-L1-Q6",
@@ -3984,6 +4610,9 @@ export const spaceSection4: Unit[] = [
             question: "A spectrograph can determine a star's chemical composition from its light.",
             correctAnswer: true,
             explanation: "Different elements absorb and emit light at specific wavelengths. By reading the spectrum, astronomers can identify exactly which elements are in a star.",
+            distractorExplanations: {
+              1: 'Different elements absorb and emit light at specific wavelengths.',
+            },
           },
         ],
       },
@@ -4008,6 +4637,9 @@ export const spaceSection4: Unit[] = [
             question: "A hot solid produces a continuous spectrum with no gaps.",
             correctAnswer: true,
             explanation: "Hot solids and dense gases emit light across all wavelengths, producing a smooth, continuous rainbow with no missing colors.",
+            distractorExplanations: {
+              1: 'Hot solids and dense gases emit light across all wavelengths, producing a smooth, continuous rainbow with no missing colors.',
+            },
           },
           {
             id: "sp-s4-u9-L2-Q2",
@@ -4021,6 +4653,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A hot thin gas emits light only at specific wavelengths determined by its chemical elements. These show up as bright lines on a dark background.",
+            distractorExplanations: {
+              0: 'Continuous spectrum is incorrect; a hot thin gas emits light only at specific wavelengths determined by its chemical elements.',
+              2: 'Absorption spectrum with dark lines is incorrect; a hot thin gas emits light only at specific wavelengths determined by its chemical elements.',
+              3: 'No spectrum at all is incorrect; a hot thin gas emits light only at specific wavelengths determined by its chemical elements.',
+            },
           },
           {
             id: "sp-s4-u9-L2-T2",
@@ -4059,6 +4696,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A hot thin gas (like neon in a sign) produces emission lines. That's why neon signs glow in specific colors.",
+            distractorExplanations: {
+              0: 'A continuous rainbow spectrum is incorrect; a hot thin gas (like neon in a sign) produces emission lines.',
+              2: 'An absorption spectrum with dark lines is incorrect; a hot thin gas (like neon in a sign) produces emission lines.',
+              3: 'A completely dark spectrum with no light is incorrect; a hot thin gas (like neon in a sign) produces emission lines.',
+            },
           },
           {
             id: "sp-s4-u9-L2-Q6",
@@ -4081,6 +4723,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A star's hot interior produces a continuous spectrum. The cooler outer atmosphere absorbs certain wavelengths, creating dark absorption lines. This is how we determine stellar composition.",
+            distractorExplanations: {
+              0: 'Pure emission lines only is incorrect; a star\'s hot interior produces a continuous spectrum.',
+              2: 'Pure continuous spectrum with no lines is incorrect; a star\'s hot interior produces a continuous spectrum.',
+              3: 'Only dark bands with no background light is incorrect; a star\'s hot interior produces a continuous spectrum.',
+            },
           },
         ],
       },
@@ -4105,6 +4752,9 @@ export const spaceSection4: Unit[] = [
             question: "Each chemical element produces a unique pattern of spectral lines.",
             correctAnswer: true,
             explanation: "Spectral line patterns are determined by the element's atomic structure. No two elements share the same pattern, so scientists can identify elements from their spectral lines alone.",
+            distractorExplanations: {
+              1: 'Spectral line patterns are determined by the element\'s atomic structure.',
+            },
           },
           {
             id: "sp-s4-u9-L3-Q2",
@@ -4118,6 +4768,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Sun's spectrum shows hydrogen's characteristic absorption lines. This is spectroscopy in action: identifying elements by their light.",
+            distractorExplanations: {
+              0: 'They collected a sample from the Sun is incorrect; the Sun\'s spectrum shows hydrogen\'s characteristic absorption lines.',
+              2: 'They measured the Sun\'s weight is incorrect; the Sun\'s spectrum shows hydrogen\'s characteristic absorption lines.',
+              3: 'They observed the Sun\'s color is incorrect; the Sun\'s spectrum shows hydrogen\'s characteristic absorption lines.',
+            },
           },
           {
             id: "sp-s4-u9-L3-T2",
@@ -4156,6 +4811,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "In 1868, astronomers found unknown spectral lines in the Sun's spectrum. The element was named helium, from 'helios' (Greek for Sun). It was found on Earth years later.",
+            distractorExplanations: {
+              0: 'In a laboratory on Earth is incorrect; in 1868, astronomers found unknown spectral lines in the Sun\'s spectrum.',
+              2: 'On the Moon during Apollo missions is incorrect; in 1868, astronomers found unknown spectral lines in the Sun\'s spectrum.',
+              3: 'In the atmosphere of Jupiter is incorrect; in 1868, astronomers found unknown spectral lines in the Sun\'s spectrum.',
+            },
           },
           {
             id: "sp-s4-u9-L3-T3",
@@ -4185,6 +4845,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Spectral lines directly reveal composition. The pattern identifies hydrogen, helium, iron, calcium, and sodium in the star's atmosphere.",
+            distractorExplanations: {
+              0: 'Only that the star emits light is incorrect; spectral lines directly reveal composition.',
+              2: 'The star\'s exact distance from Earth is incorrect; spectral lines directly reveal composition.',
+              3: 'How old the star is in years is incorrect; spectral lines directly reveal composition.',
+            },
           },
         ],
       },
@@ -4209,6 +4874,9 @@ export const spaceSection4: Unit[] = [
             question: "Blue stars are hotter than red stars.",
             correctAnswer: true,
             explanation: "Blue stars have surface temperatures above 10,000 K. Red stars are around 3,000 K. In astronomy, blue means hot and red means cool.",
+            distractorExplanations: {
+              1: 'Blue stars have surface temperatures above 10,000 K.',
+            },
           },
           {
             id: "sp-s4-u9-L4-Q2",
@@ -4222,6 +4890,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Sun's surface temperature is about 5,800 K, which gives it a yellowish-white color.",
+            distractorExplanations: {
+              0: '1,000 K is incorrect; the Sun\'s surface temperature is about 5,800 K, which gives it a yellowish-white color.',
+              2: '25,000 K is incorrect; the Sun\'s surface temperature is about 5,800 K, which gives it a yellowish-white color.',
+              3: '100,000 K is incorrect; the Sun\'s surface temperature is about 5,800 K, which gives it a yellowish-white color.',
+            },
           },
           {
             id: "sp-s4-u9-L4-T2",
@@ -4269,6 +4942,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Blue-white stars are the hottest. Wien's law tells us hotter objects emit peak light at shorter (bluer) wavelengths.",
+            distractorExplanations: {
+              0: 'Star A (red) is incorrect; blue-white stars are the hottest.',
+              1: 'Star B (yellow) is incorrect; blue-white stars are the hottest.',
+              3: 'All three have the same temperature is incorrect; blue-white stars are the hottest.',
+            },
           },
           {
             id: "sp-s4-u9-L4-Q7",
@@ -4303,6 +4981,9 @@ export const spaceSection4: Unit[] = [
             question: "The Sun is classified as a G-type star.",
             correctAnswer: true,
             explanation: "The Sun is a G2V star, putting it in the middle of the temperature range. G stars have surface temperatures around 5,200 to 6,000 K.",
+            distractorExplanations: {
+              1: 'The Sun is a G2V star, putting it in the middle of the temperature range.',
+            },
           },
           {
             id: "sp-s4-u9-L5-Q2",
@@ -4316,6 +4997,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "O-type stars are the hottest, with temperatures above 30,000 K. They appear blue and are extremely luminous but rare.",
+            distractorExplanations: {
+              0: 'M is incorrect; o-type stars are the hottest, with temperatures above 30,000 K.',
+              1: 'G is incorrect; o-type stars are the hottest, with temperatures above 30,000 K.',
+              2: 'A is incorrect; o-type stars are the hottest, with temperatures above 30,000 K.',
+            },
           },
           {
             id: "sp-s4-u9-L5-T2",
@@ -4360,6 +5046,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "M-type red dwarfs make up about 75% of all stars in the Milky Way. Hot O and B stars are extremely rare.",
+            distractorExplanations: {
+              0: 'This is incorrect; m-type red dwarfs make up about 75% of all stars in the Milky Way.',
+              1: 'A (white) is incorrect; m-type red dwarfs make up about 75% of all stars in the Milky Way.',
+              2: 'This is incorrect; m-type red dwarfs make up about 75% of all stars in the Milky Way.',
+            },
           },
           {
             id: "sp-s4-u9-L5-Q7",
@@ -4395,6 +5086,9 @@ export const spaceSection4: Unit[] = [
             question: "A star moving toward Earth would show spectral lines shifted to shorter wavelengths.",
             correctAnswer: true,
             explanation: "Motion toward the observer compresses wavelengths (blueshift). Motion away stretches wavelengths (redshift). This is the Doppler effect.",
+            distractorExplanations: {
+              1: 'Motion toward the observer compresses wavelengths (blueshift).',
+            },
           },
           {
             id: "sp-s4-u9-L6-Q2",
@@ -4408,6 +5102,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A spinning star has one side approaching and one side receding. This shifts and broadens the combined spectral lines.",
+            distractorExplanations: {
+              0: 'Very far away is incorrect; a spinning star has one side approaching and one side receding.',
+              2: 'Extremely cold is incorrect; a spinning star has one side approaching and one side receding.',
+              3: 'Perfectly still is incorrect; a spinning star has one side approaching and one side receding.',
+            },
           },
           {
             id: "sp-s4-u9-L6-T2",
@@ -4445,6 +5144,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A shift to longer wavelength (redshift) means the star is moving away from us. The 2 nm shift can be used to calculate its speed.",
+            distractorExplanations: {
+              0: 'The star is moving toward Earth is incorrect; a shift to longer wavelength (redshift) means the star is moving away from us.',
+              2: 'The star has no hydrogen is incorrect; a shift to longer wavelength (redshift) means the star is moving away from us.',
+              3: 'Your spectrograph is broken is incorrect; a shift to longer wavelength (redshift) means the star is moving away from us.',
+            },
           },
           {
             id: "sp-s4-u9-L6-Q6",
@@ -4467,6 +5171,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Broader lines typically indicate faster rotation. The approaching and receding sides of the spinning star shift the lines in opposite directions, widening them.",
+            distractorExplanations: {
+              0: 'Star A is closer to Earth is incorrect; broader lines typically indicate faster rotation.',
+              2: 'Star A contains different elements is incorrect; broader lines typically indicate faster rotation.',
+              3: 'Star A is younger is incorrect; broader lines typically indicate faster rotation.',
+            },
           },
         ],
       },
@@ -4504,6 +5213,9 @@ export const spaceSection4: Unit[] = [
             question: "The Doppler effect applies to light as well as sound.",
             correctAnswer: true,
             explanation: "Both light and sound waves are affected by the relative motion between source and observer. The principle is the same for both.",
+            distractorExplanations: {
+              1: 'Both light and sound waves are affected by the relative motion between source and observer.',
+            },
           },
           {
             id: "sp-s4-u10-L1-Q2",
@@ -4517,6 +5229,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Motion toward the observer compresses light waves, shifting them to shorter (bluer) wavelengths. This is blueshift.",
+            distractorExplanations: {
+              0: 'Wavelengths get longer (redshift) is incorrect; motion toward the observer compresses light waves, shifting them to shorter (bluer) wavelengths.',
+              2: 'Wavelengths stay the same is incorrect; motion toward the observer compresses light waves, shifting them to shorter (bluer) wavelengths.',
+              3: 'The light disappears is incorrect; motion toward the observer compresses light waves, shifting them to shorter (bluer) wavelengths.',
+            },
           },
           {
             id: "sp-s4-u10-L1-T2",
@@ -4553,6 +5270,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The line shifted to a longer wavelength (656 to 660 nm). Longer wavelength means redshift, which means the star is moving away.",
+            distractorExplanations: {
+              0: 'The star is moving toward us is incorrect; the line shifted to a longer wavelength (656 to 660 nm).',
+              2: 'The star has no hydrogen is incorrect; the line shifted to a longer wavelength (656 to 660 nm).',
+              3: 'The star is not moving at all is incorrect; the line shifted to a longer wavelength (656 to 660 nm).',
+            },
           },
           {
             id: "sp-s4-u10-L1-Q6",
@@ -4567,6 +5289,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A 5% blueshift means all wavelengths are compressed by 5%. This indicates the galaxy is approaching us at roughly 5% of the speed of light.",
+            distractorExplanations: {
+              0: 'This is incorrect; a 5% blueshift means all wavelengths are compressed by 5%.',
+              2: 'This is incorrect; a 5% blueshift means all wavelengths are compressed by 5%.',
+              3: 'This is incorrect; a 5% blueshift means all wavelengths are compressed by 5%.',
+            },
           },
           {
             id: "sp-s4-u10-L1-Q7",
@@ -4602,6 +5329,9 @@ export const spaceSection4: Unit[] = [
             question: "The Doppler formula relates the amount of wavelength shift to the speed of the source.",
             correctAnswer: true,
             explanation: "Greater wavelength shift means faster motion. The Doppler formula precisely converts shift amount into velocity.",
+            distractorExplanations: {
+              1: 'Greater wavelength shift means faster motion.',
+            },
           },
           {
             id: "sp-s4-u10-L2-Q2",
@@ -4615,6 +5345,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Shift = 1 nm. Fraction = 1/500 = 0.002 = 0.2% of the speed of light. That's about 600 km/s.",
+            distractorExplanations: {
+              1: '1/50 or 2% is incorrect; shift = 1 nm.',
+              2: '1/5 or 20% is incorrect; shift = 1 nm.',
+              3: '1/1000 or 0.1% is incorrect; shift = 1 nm.',
+            },
           },
           {
             id: "sp-s4-u10-L2-T2",
@@ -4654,6 +5389,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Doppler effect only measures radial velocity (toward or away). A star moving sideways shows zero Doppler shift.",
+            distractorExplanations: {
+              0: 'A large redshift is incorrect; the Doppler effect only measures radial velocity (toward or away).',
+              1: 'A large blueshift is incorrect; the Doppler effect only measures radial velocity (toward or away).',
+              3: 'An alternating red and blue shift is incorrect; the Doppler effect only measures radial velocity (toward or away).',
+            },
           },
           {
             id: "sp-s4-u10-L2-Q6",
@@ -4668,6 +5408,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Velocity = (4/486) x 300,000 = about 2,469 km/s. The shift is to a longer wavelength (redshift), so the galaxy is moving away.",
+            distractorExplanations: {
+              1: 'About 2,470 km/s toward us is incorrect; velocity = (4/486) x 300,000 = about 2,469 km/s.',
+              2: 'About 24,700 km/s away from us is incorrect; velocity = (4/486) x 300,000 = about 2,469 km/s.',
+              3: 'About 300 km/s toward us is incorrect; velocity = (4/486) x 300,000 = about 2,469 km/s.',
+            },
           },
           {
             id: "sp-s4-u10-L2-Q7",
@@ -4701,6 +5446,9 @@ export const spaceSection4: Unit[] = [
             question: "Edwin Hubble discovered that most galaxies are redshifted.",
             correctAnswer: true,
             explanation: "Hubble's observations in the 1920s showed that galaxies are moving away from us, with more distant galaxies moving faster. This was the first evidence of an expanding universe.",
+            distractorExplanations: {
+              1: 'Hubble\'s observations in the 1920s showed that galaxies are moving away from us, with more distant galaxies moving faster.',
+            },
           },
           {
             id: "sp-s4-u10-L3-Q2",
@@ -4714,6 +5462,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The redshift of galaxies is caused by the expansion of space itself. As space stretches, light traveling through it gets stretched too.",
+            distractorExplanations: {
+              0: 'Galaxies are getting hotter is incorrect; the redshift of galaxies is caused by the expansion of space itself.',
+              2: 'Galaxies are getting closer is incorrect; the redshift of galaxies is caused by the expansion of space itself.',
+              3: 'Light is slowing down over time is incorrect; the redshift of galaxies is caused by the expansion of space itself.',
+            },
           },
           {
             id: "sp-s4-u10-L3-T2",
@@ -4753,6 +5506,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cosmological redshift is not from galaxies moving through space. It's from space itself expanding, stretching the light waves traveling through it.",
+            distractorExplanations: {
+              0: 'This is incorrect; cosmological redshift is not from galaxies moving through space.',
+              2: 'Light losing energy as it gets old is incorrect; cosmological redshift is not from galaxies moving through space.',
+              3: 'Gravitational pull from the Milky Way is incorrect; cosmological redshift is not from galaxies moving through space.',
+            },
           },
           {
             id: "sp-s4-u10-L3-Q6",
@@ -4767,6 +5525,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hubble's law is linear: double the distance means double the recession velocity. Galaxy B at 100 Mpc recedes at about 7,000 km/s.",
+            distractorExplanations: {
+              0: '3,500 km/s (same as Galaxy A) is incorrect; hubble\'s law is linear: double the distance means double the recession velocity.',
+              2: '1,750 km/s (half Galaxy A\'s speed) is incorrect; hubble\'s law is linear: double the distance means double the recession velocity.',
+              3: '35,000 km/s (ten times Galaxy A\'s speed) is incorrect; hubble\'s law is linear: double the distance means double the recession velocity.',
+            },
           },
           {
             id: "sp-s4-u10-L3-Q7",
@@ -4774,6 +5537,9 @@ export const spaceSection4: Unit[] = [
             question: "The Andromeda galaxy shows blueshift, not redshift.",
             correctAnswer: true,
             explanation: "Andromeda is one of the few galaxies with blueshift. It's gravitationally bound to the Milky Way and approaching at about 110 km/s. Local gravity overcomes the general expansion.",
+            distractorExplanations: {
+              1: 'Andromeda is one of the few galaxies with blueshift.',
+            },
           },
         ],
       },
@@ -4798,6 +5564,9 @@ export const spaceSection4: Unit[] = [
             question: "Light climbing out of a strong gravitational field gets redshifted.",
             correctAnswer: true,
             explanation: "Light loses energy escaping gravity. Lower energy means longer wavelength, which is a redshift. Einstein predicted this in his general theory of relativity.",
+            distractorExplanations: {
+              1: 'Light loses energy escaping gravity.',
+            },
           },
           {
             id: "sp-s4-u10-L4-Q2",
@@ -4811,6 +5580,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Neutron stars have incredibly strong gravity (surface gravity 200 billion times Earth's). Light escaping them experiences significant gravitational redshift.",
+            distractorExplanations: {
+              0: 'The Moon is incorrect; neutron stars have incredibly strong gravity (surface gravity 200 billion times Earth\'s).',
+              1: 'The Sun is incorrect; neutron stars have incredibly strong gravity (surface gravity 200 billion times Earth\'s).',
+              2: 'A white dwarf is incorrect; neutron stars have incredibly strong gravity (surface gravity 200 billion times Earth\'s).',
+            },
           },
           {
             id: "sp-s4-u10-L4-T2",
@@ -4857,6 +5631,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "For very distant galaxies, cosmological redshift from the expansion of space dominates. The galaxy isn't flying through space; space itself is expanding.",
+            distractorExplanations: {
+              0: 'This is incorrect; for very distant galaxies, cosmological redshift from the expansion of space dominates.',
+              2: 'This is incorrect; for very distant galaxies, cosmological redshift from the expansion of space dominates.',
+              3: 'A combination of all three in equal parts is incorrect; for very distant galaxies, cosmological redshift from the expansion of space dominates.',
+            },
           },
           {
             id: "sp-s4-u10-L4-Q7",
@@ -4870,6 +5649,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "General relativity predicts that time runs slower in stronger gravitational fields. This is called gravitational time dilation and is closely related to gravitational redshift.",
+            distractorExplanations: {
+              0: 'It runs faster is incorrect; general relativity predicts that time runs slower in stronger gravitational fields.',
+              2: 'It runs at the same rate is incorrect; general relativity predicts that time runs slower in stronger gravitational fields.',
+              3: 'It stops completely is incorrect; general relativity predicts that time runs slower in stronger gravitational fields.',
+            },
           },
         ],
       },
@@ -4894,6 +5678,9 @@ export const spaceSection4: Unit[] = [
             question: "A galaxy with a higher redshift is generally farther away.",
             correctAnswer: true,
             explanation: "Thanks to Hubble's law, higher redshift means greater recession speed, which means greater distance. Redshift is one of astronomy's most powerful distance indicators.",
+            distractorExplanations: {
+              1: 'Thanks to Hubble\'s law, higher redshift means greater recession speed, which means greater distance.',
+            },
           },
           {
             id: "sp-s4-u10-L5-Q2",
@@ -4907,6 +5694,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A galaxy at z = 1 is seen as it was about 7 to 8 billion years ago. Its light has been traveling for more than half the age of the universe.",
+            distractorExplanations: {
+              0: 'About 1 billion years ago is incorrect; a galaxy at z = 1 is seen as it was about 7 to 8 billion years ago.',
+              1: 'About 4 billion years ago is incorrect; a galaxy at z = 1 is seen as it was about 7 to 8 billion years ago.',
+              3: 'About 13 billion years ago is incorrect; a galaxy at z = 1 is seen as it was about 7 to 8 billion years ago.',
+            },
           },
           {
             id: "sp-s4-u10-L5-T2",
@@ -4946,6 +5738,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At very high redshifts, ultraviolet and visible light from early galaxies is stretched into infrared wavelengths. JWST's infrared detectors can see what Hubble cannot.",
+            distractorExplanations: {
+              0: 'JWST is closer to those galaxies is incorrect; at very high redshifts, ultraviolet and visible light from early galaxies is stretched into infrared wavelengths.',
+              2: 'JWST can reverse the redshift effect is incorrect; at very high redshifts, ultraviolet and visible light from early galaxies is stretched into infrared.',
+              3: 'Hubble can\'t see any galaxies at all is incorrect; at very high redshifts, ultraviolet and visible light from early galaxies is stretched into infrared.',
+            },
           },
           {
             id: "sp-s4-u10-L5-Q6",
@@ -5005,6 +5802,9 @@ export const spaceSection4: Unit[] = [
             question: "Aperture is more important than magnification when choosing a telescope.",
             correctAnswer: true,
             explanation: "Aperture determines how much light the telescope collects and how much detail it can resolve. Magnification without aperture just enlarges a blurry image.",
+            distractorExplanations: {
+              1: 'Aperture determines how much light the telescope collects and how much detail it can resolve.',
+            },
           },
           {
             id: "sp-s4-u11-L1-Q2",
@@ -5018,6 +5818,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Aperture is the diameter of the primary optical element (lens or mirror). It's the single most important telescope specification.",
+            distractorExplanations: {
+              0: 'The total weight of the telescope is incorrect; aperture is the diameter of the primary optical element (lens or mirror).',
+              2: 'The length of the telescope tube is incorrect; aperture is the diameter of the primary optical element (lens or mirror).',
+              3: 'The maximum magnification it can achieve is incorrect; aperture is the diameter of the primary optical element (lens or mirror).',
+            },
           },
           {
             id: "sp-s4-u11-L1-T2",
@@ -5057,6 +5862,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Telescope A's 130 mm aperture collects about 4.7 times more light than the 60 mm. The 525x claim on Telescope B is misleading; 60 mm can only usefully support about 120x.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because telescope A\'s 130 mm aperture collects about 4.7 times more light than the 60 mm.',
+              2: 'This reasoning is wrong because telescope A\'s 130 mm aperture collects about 4.7 times more light than the 60 mm.',
+              3: 'This reasoning is wrong because telescope A\'s 130 mm aperture collects about 4.7 times more light than the 60 mm.',
+            },
           },
           {
             id: "sp-s4-u11-L1-Q6",
@@ -5079,6 +5889,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "60 mm x 2 = 120x maximum useful magnification. The 525x claim uses low-quality optics that produce an extremely blurry, dim image.",
+            distractorExplanations: {
+              0: 'About 525x as advertised is incorrect; 60 mm x 2 = 120x maximum useful magnification.',
+              1: 'About 300x is incorrect; 60 mm x 2 = 120x maximum useful magnification.',
+              3: 'About 60x is incorrect; 60 mm x 2 = 120x maximum useful magnification.',
+            },
           },
         ],
       },
@@ -5103,6 +5918,9 @@ export const spaceSection4: Unit[] = [
             question: "Reflectors give the most aperture per dollar, making them a popular beginner choice.",
             correctAnswer: true,
             explanation: "Mirrors are cheaper to manufacture than lenses at large sizes. A Dobsonian reflector gives you the most light-gathering power for your budget.",
+            distractorExplanations: {
+              1: 'Mirrors are cheaper to manufacture than lenses at large sizes.',
+            },
           },
           {
             id: "sp-s4-u11-L2-Q2",
@@ -5116,6 +5934,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Refractors provide crisp, high-contrast views ideal for bright objects like planets and the Moon. They need less aperture for these targets.",
+            distractorExplanations: {
+              0: 'A large Dobsonian reflector is incorrect; refractors provide crisp, high-contrast views ideal for bright objects like planets and the Moon.',
+              2: 'A radio telescope is incorrect; refractors provide crisp, high-contrast views ideal for bright objects like planets and the Moon.',
+              3: 'Binoculars only is incorrect; refractors provide crisp, high-contrast views ideal for bright objects like planets and the Moon.',
+            },
           },
           {
             id: "sp-s4-u11-L2-T2",
@@ -5154,6 +5977,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An 8-inch (200 mm) Dobsonian gives the most aperture and light-gathering power within budget. It's ideal for visual deep-sky observing.",
+            distractorExplanations: {
+              0: 'A 70 mm refractor for $200 is incorrect; an 8-inch (200 mm) Dobsonian gives the most aperture and light-gathering power within budget.',
+              2: 'This is incorrect; an 8-inch (200 mm) Dobsonian gives the most aperture and light-gathering power within budget.',
+              3: 'A high-end 4-inch refractor for $800 is incorrect; an 8-inch (200 mm) Dobsonian gives the most aperture and light-gathering power within budget.',
+            },
           },
           {
             id: "sp-s4-u11-L2-Q6",
@@ -5198,6 +6026,9 @@ export const spaceSection4: Unit[] = [
             question: "A shaky mount can ruin the experience of an otherwise good telescope.",
             correctAnswer: true,
             explanation: "Vibrations from a flimsy mount make it nearly impossible to focus or track objects. A stable mount is essential for enjoyable observing.",
+            distractorExplanations: {
+              1: 'Vibrations from a flimsy mount make it nearly impossible to focus or track objects.',
+            },
           },
           {
             id: "sp-s4-u11-L3-Q2",
@@ -5211,6 +6042,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An equatorial mount's polar axis aligns with Earth's rotation axis. Turning just that one axis keeps objects centered as the sky rotates.",
+            distractorExplanations: {
+              0: 'It\'s lighter and cheaper is incorrect; an equatorial mount\'s polar axis aligns with Earth\'s rotation axis.',
+              2: 'It doesn\'t need any alignment is incorrect; an equatorial mount\'s polar axis aligns with Earth\'s rotation axis.',
+              3: 'It works only during daytime is incorrect; an equatorial mount\'s polar axis aligns with Earth\'s rotation axis.',
+            },
           },
           {
             id: "sp-s4-u11-L3-T2",
@@ -5248,6 +6084,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Start with a low-power, wide-field eyepiece to find the target. Then switch to a higher-power eyepiece to zoom in once you've located it.",
+            distractorExplanations: {
+              0: '6 mm (high magnification, narrow field) is incorrect; start with a low-power, wide-field eyepiece to find the target.',
+              2: '4 mm (very high magnification) is incorrect; start with a low-power, wide-field eyepiece to find the target.',
+              3: 'This claim is incorrect; start with a low-power, wide-field eyepiece to find the target.',
+            },
           },
           {
             id: "sp-s4-u11-L3-Q6",
@@ -5271,6 +6112,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A 10 mm eyepiece would roughly double or triple the magnification compared to the 25 mm, making Jupiter appear larger and showing more detail.",
+            distractorExplanations: {
+              0: 'A new telescope with higher magnification is incorrect; a 10 mm eyepiece would roughly double or triple the magnification compared to the 25 mm, making.',
+              2: 'A bigger finder scope is incorrect; a 10 mm eyepiece would roughly double or triple the magnification compared to the 25 mm, making Jupiter appear.',
+              3: 'A Moon filter is incorrect; a 10 mm eyepiece would roughly double or triple the magnification compared to the 25 mm, making Jupiter appear.',
+            },
           },
         ],
       },
@@ -5295,6 +6141,9 @@ export const spaceSection4: Unit[] = [
             question: "A telescope advertising 1000x magnification is likely a good buy for beginners.",
             correctAnswer: false,
             explanation: "Extremely high magnification claims are a red flag. The image will be dim, blurry, and useless. Focus on aperture instead.",
+            distractorExplanations: {
+              0: 'Extremely high magnification claims are a red flag.',
+            },
           },
           {
             id: "sp-s4-u11-L4-Q2",
@@ -5308,6 +6157,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Learning to navigate the sky with your eyes and a star chart (or app) is the best foundation. You'll know what to point your telescope at when you get one.",
+            distractorExplanations: {
+              0: 'This approach is incorrect; learning to navigate the sky with your eyes and a star chart (or app) is the best foundation.',
+              2: 'This is incorrect; learning to navigate the sky with your eyes and a star chart (or app) is the best foundation.',
+              3: 'This approach is incorrect; learning to navigate the sky with your eyes and a star chart (or app) is the best foundation.',
+            },
           },
           {
             id: "sp-s4-u11-L4-T2",
@@ -5346,6 +6200,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Vibrations after touching the telescope are normal, especially with lighter mounts. Let the scope settle for a few seconds after adjusting. A lighter touch also helps.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; vibrations after touching the telescope are normal, especially with lighter mounts.',
+              1: 'They need a more expensive telescope is incorrect; vibrations after touching the telescope are normal, especially with lighter mounts.',
+              3: 'This claim is incorrect; vibrations after touching the telescope are normal, especially with lighter mounts.',
+            },
           },
           {
             id: "sp-s4-u11-L4-Q6",
@@ -5359,6 +6218,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Light pollution washes out faint objects like galaxies and nebulae. Bright targets like the Moon, planets, and double stars are much less affected.",
+            distractorExplanations: {
+              0: 'The Moon and planets is incorrect; light pollution washes out faint objects like galaxies and nebulae.',
+              2: 'The Sun during daytime is incorrect; light pollution washes out faint objects like galaxies and nebulae.',
+              3: 'Stars through binoculars only is incorrect; light pollution washes out faint objects like galaxies and nebulae.',
+            },
           },
           {
             id: "sp-s4-u11-L4-Q7",
@@ -5392,6 +6256,9 @@ export const spaceSection4: Unit[] = [
             question: "A red flashlight is preferred because it preserves your dark-adapted night vision.",
             correctAnswer: true,
             explanation: "Red light doesn't trigger the reset of your eyes' dark adaptation. White light can take 20 to 30 minutes to recover from.",
+            distractorExplanations: {
+              1: 'Red light doesn\'t trigger the reset of your eyes\' dark adaptation.',
+            },
           },
           {
             id: "sp-s4-u11-L5-Q2",
@@ -5405,6 +6272,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Full dark adaptation takes 20 to 30 minutes. During this time, avoid looking at white lights, phone screens (unless in red/night mode), or car headlights.",
+            distractorExplanations: {
+              0: 'About 2 minutes is incorrect; full dark adaptation takes 20 to 30 minutes.',
+              1: 'About 10 minutes is incorrect; full dark adaptation takes 20 to 30 minutes.',
+              3: 'About 2 hours is incorrect; full dark adaptation takes 20 to 30 minutes.',
+            },
           },
           {
             id: "sp-s4-u11-L5-T2",
@@ -5456,6 +6328,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If the telescope is warmer than the outside air, warm air currents rise through the tube and blur your view. Letting it reach ambient temperature (15 to 30 minutes) fixes this.",
+            distractorExplanations: {
+              0: 'The optics need time to focus is incorrect; if the telescope is warmer than the outside air, warm air currents rise through the tube and blur your view.',
+              2: 'Cold telescopes magnify more is incorrect; if the telescope is warmer than the outside air, warm air currents rise through the tube and blur your view.',
+              3: 'The mount becomes sturdier when cold is incorrect; if the telescope is warmer than the outside air, warm air currents rise through the tube and blur your view.',
+            },
           },
           {
             id: "sp-s4-u11-L5-Q7",
@@ -5470,6 +6347,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A full Moon washes out faint deep-sky objects. Save Andromeda for a moonless night and enjoy the Moon and planets instead. They look great in moonlight.",
+            distractorExplanations: {
+              0: 'This is incorrect; a full Moon washes out faint deep-sky objects.',
+              2: 'Give up and go inside is incorrect; a full Moon washes out faint deep-sky objects.',
+              3: 'This approach is incorrect; a full Moon washes out faint deep-sky objects.',
+            },
           },
         ],
       },
@@ -5512,6 +6394,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Light travels at approximately 300,000 km/s (3 x 10^8 m/s) in a vacuum. This is the universal speed limit.",
+            distractorExplanations: {
+              0: '30,000 km/s is incorrect; light travels at approximately 300,000 km/s (3 x 10^8 m/s) in a vacuum.',
+              2: '3,000,000 km/s is incorrect; light travels at approximately 300,000 km/s (3 x 10^8 m/s) in a vacuum.',
+              3: '300 km/s is incorrect; light travels at approximately 300,000 km/s (3 x 10^8 m/s) in a vacuum.',
+            },
           },
           {
             id: "sp-s4-u12-L1-Q2",
@@ -5536,6 +6423,9 @@ export const spaceSection4: Unit[] = [
             question: "Radio waves, visible light, and X-rays are all forms of electromagnetic radiation.",
             correctAnswer: true,
             explanation: "They're all EM radiation, differing only in wavelength and frequency. Radio waves are longest; gamma rays are shortest.",
+            distractorExplanations: {
+              1: 'They\'re all EM radiation, differing only in wavelength and frequency.',
+            },
           },
           {
             id: "sp-s4-u12-L1-Q5",
@@ -5558,6 +6448,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Radio waves have the longest wavelengths (millimeters to meters). Gamma rays have the shortest (smaller than atoms).",
+            distractorExplanations: {
+              0: 'Gamma rays is incorrect; radio waves have the longest wavelengths (millimeters to meters).',
+              1: 'Visible light is incorrect; radio waves have the longest wavelengths (millimeters to meters).',
+              2: 'Ultraviolet is incorrect; radio waves have the longest wavelengths (millimeters to meters).',
+            },
           },
           {
             id: "sp-s4-u12-L1-Q7",
@@ -5583,6 +6478,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A 200 mm Dobsonian gives the most aperture for the money. Its large mirror collects lots of light, perfect for faint deep-sky objects.",
+            distractorExplanations: {
+              0: 'A 70 mm refractor is incorrect; a 200 mm Dobsonian gives the most aperture for the money.',
+              2: 'A 90 mm compound telescope is incorrect; a 200 mm Dobsonian gives the most aperture for the money.',
+              3: 'A 50 mm finderscope is incorrect; a 200 mm Dobsonian gives the most aperture for the money.',
+            },
           },
         ],
       },
@@ -5613,6 +6513,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The star's hot interior produces continuous light. The cooler outer atmosphere absorbs specific wavelengths, creating dark absorption lines.",
+            distractorExplanations: {
+              0: 'The star\'s hot core emitting light is incorrect; the star\'s hot interior produces continuous light.',
+              2: 'The telescope\'s lens filtering out colors is incorrect; the star\'s hot interior produces continuous light.',
+              3: 'Dust between the star and Earth is incorrect; the star\'s hot interior produces continuous light.',
+            },
           },
           {
             id: "sp-s4-u12-L2-Q2",
@@ -5637,6 +6542,9 @@ export const spaceSection4: Unit[] = [
             question: "Hubble's law states that more distant galaxies have greater redshifts.",
             correctAnswer: true,
             explanation: "Hubble's law: recession velocity is proportional to distance. More distant galaxies are carried away faster by the expanding universe.",
+            distractorExplanations: {
+              1: 'Hubble\'s law: recession velocity is proportional to distance.',
+            },
           },
           {
             id: "sp-s4-u12-L2-Q5",
@@ -5651,6 +6559,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "For objects at cosmological distances, the dominant cause of redshift is the expansion of space itself, not the object's own motion through space.",
+            distractorExplanations: {
+              0: 'This is incorrect; for objects at cosmological distances, the dominant cause of redshift is the expansion of space itself, not the.',
+              2: 'This is incorrect; for objects at cosmological distances, the dominant cause of redshift is the expansion of space itself, not the.',
+              3: 'The quasar is simply very red in color is incorrect; for objects at cosmological distances, the dominant cause of redshift is the expansion of space.',
+            },
           },
           {
             id: "sp-s4-u12-L2-Q6",
@@ -5675,6 +6588,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "In 1868, unknown spectral lines in the Sun's spectrum during an eclipse led to the discovery of helium. It was found on Earth decades later.",
+            distractorExplanations: {
+              0: 'Color through a regular telescope is incorrect; in 1868, unknown spectral lines in the Sun\'s spectrum during an eclipse led to the discovery of helium.',
+              2: 'Temperature measured by a thermometer is incorrect; in 1868, unknown spectral lines in the Sun\'s spectrum during an eclipse led to the discovery of helium.',
+              3: 'Radio emission with a dish is incorrect; in 1868, unknown spectral lines in the Sun\'s spectrum during an eclipse led to the discovery of helium.',
+            },
           },
           {
             id: "sp-s4-u12-L2-Q8",
@@ -5719,6 +6637,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The EHT used VLBI to link 8 radio observatories worldwide, creating an Earth-sized virtual telescope with extreme angular resolution.",
+            distractorExplanations: {
+              0: 'It used a single very large dish is incorrect; the EHT used VLBI to link 8 radio observatories worldwide, creating an Earth-sized virtual telescope with.',
+              2: 'It orbited close to the black hole is incorrect; the EHT used VLBI to link 8 radio observatories worldwide, creating an Earth-sized virtual telescope with.',
+              3: 'It used X-ray detectors in space is incorrect; the EHT used VLBI to link 8 radio observatories worldwide, creating an Earth-sized virtual telescope with.',
+            },
           },
           {
             id: "sp-s4-u12-L3-Q2",
@@ -5743,6 +6666,9 @@ export const spaceSection4: Unit[] = [
             question: "Radio telescopes need to be large because radio wavelengths are very long.",
             correctAnswer: true,
             explanation: "Resolution depends on the ratio of wavelength to aperture. Long radio wavelengths require very large apertures for useful resolution.",
+            distractorExplanations: {
+              1: 'Resolution depends on the ratio of wavelength to aperture.',
+            },
           },
           {
             id: "sp-s4-u12-L3-Q5",
@@ -5765,6 +6691,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "AO systems use a deformable mirror that adjusts hundreds of times per second to counteract atmospheric turbulence, giving near-space-quality images.",
+            distractorExplanations: {
+              0: 'Increasing the telescope\'s aperture is incorrect; aO systems use a deformable mirror that adjusts hundreds of times per second to counteract atmospheric.',
+              2: 'This is incorrect; aO systems use a deformable mirror that adjusts hundreds of times per second to counteract atmospheric turbulence,.',
+              3: 'Filtering out all non-visible light is incorrect; aO systems use a deformable mirror that adjusts hundreds of times per second to counteract atmospheric.',
+            },
           },
           {
             id: "sp-s4-u12-L3-Q7",
@@ -5816,6 +6747,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cold hydrogen emits at 21 cm in the radio band. Only a radio telescope can detect it. Optical and infrared telescopes cannot see this emission.",
+            distractorExplanations: {
+              0: 'Use Hubble Space Telescope is incorrect; cold hydrogen emits at 21 cm in the radio band.',
+              2: 'Use a refractor with a hydrogen filter is incorrect; cold hydrogen emits at 21 cm in the radio band.',
+              3: 'Use JWST\'s infrared detectors is incorrect; cold hydrogen emits at 21 cm in the radio band.',
+            },
           },
           {
             id: "sp-s4-u12-L4-Q2",
@@ -5829,6 +6765,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Aperture determines how much light the telescope collects. Larger aperture means more photons captured, which reveals fainter objects.",
+            distractorExplanations: {
+              0: 'Maximum magnification is incorrect; aperture determines how much light the telescope collects.',
+              2: 'Length of the telescope tube is incorrect; aperture determines how much light the telescope collects.',
+              3: 'Color of the telescope body is incorrect; aperture determines how much light the telescope collects.',
+            },
           },
           {
             id: "sp-s4-u12-L4-Q3",
@@ -5864,6 +6805,9 @@ export const spaceSection4: Unit[] = [
             question: "Interferometry works by combining signals from multiple telescopes to achieve the resolution of a single much larger telescope.",
             correctAnswer: true,
             explanation: "Interferometry's resolution equals that of a telescope as wide as the distance between the farthest dishes in the array. This is why the EHT could image a black hole.",
+            distractorExplanations: {
+              1: 'Interferometry\'s resolution equals that of a telescope as wide as the distance between the farthest dishes in the array.',
+            },
           },
           {
             id: "sp-s4-u12-L4-Q7",
@@ -5892,6 +6836,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The line shifted from 656 nm to 652 nm, which is a shift to shorter wavelength (blueshift). This means the star is approaching Earth.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; the line shifted from 656 nm to 652 nm, which is a shift to shorter wavelength (blueshift).',
+              2: 'The star has no hydrogen is incorrect; the line shifted from 656 nm to 652 nm, which is a shift to shorter wavelength (blueshift).',
+              3: 'The measurement must be wrong is incorrect; the line shifted from 656 nm to 652 nm, which is a shift to shorter wavelength (blueshift).',
+            },
           },
           {
             id: "sp-s4-u12-L4-Q9",
@@ -5905,6 +6854,11 @@ export const spaceSection4: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Wien's law states that hotter objects peak at shorter wavelengths. That's why hot stars look blue and cool stars look red.",
+            distractorExplanations: {
+              0: 'Longer wavelengths (redder) is incorrect; wien\'s law states that hotter objects peak at shorter wavelengths.',
+              2: 'This claim is incorrect; wien\'s law states that hotter objects peak at shorter wavelengths.',
+              3: 'No predictable wavelength is incorrect; wien\'s law states that hotter objects peak at shorter wavelengths.',
+            },
           },
           {
             id: "sp-s4-u12-L4-Q10",

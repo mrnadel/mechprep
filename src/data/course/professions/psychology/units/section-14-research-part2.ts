@@ -34,6 +34,9 @@ export const psySection14Part2: Unit[] = [
             question: 'The mean is calculated by adding all values and dividing by the number of values.',
             correctAnswer: true,
             explanation: 'The mean is the sum of all values divided by the count. It is the most common measure of central tendency.',
+            distractorExplanations: {
+              1: 'The mean is the sum of all values divided by the count. It is the most common measure of central tendency.',
+            },
           },
           {
             id: 'psy-sec14-u6-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: '80 appears twice, more than any other value. The mode is the most frequent score.',
+            distractorExplanations: {
+              0: '"70" is incorrect; 80.',
+              2: '"84" is incorrect; 80.',
+              3: '"90" is incorrect; 80.',
+            },
           },
           {
             id: 'psy-sec14-u6-L1-T2',
@@ -100,6 +108,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The $5,000,000 mansion would pull the mean far above what most homes cost. The median better represents typical prices.',
+            distractorExplanations: {
+              0: '"The mean, because it includes all values" is incorrect; the median, because the mansion is an outlier that skews the mean.',
+              1: '"The mode, because homes are categorical" is incorrect; the median, because the mansion is an outlier that skews the mean.',
+              3: '"The range, because it shows the spread" is incorrect; the median, because the mansion is an outlier that skews the mean.',
+            },
           },
           {
             id: 'psy-sec14-u6-L1-Q6',
@@ -151,6 +164,9 @@ export const psySection14Part2: Unit[] = [
             question: 'A low standard deviation means data points are clustered close to the mean.',
             correctAnswer: true,
             explanation: 'Low SD means most values are near the average. High SD means they are spread far from it.',
+            distractorExplanations: {
+              1: 'Low SD means most values are near the average. High SD means they are spread far from it.',
+            },
           },
           {
             id: 'psy-sec14-u6-L2-Q2',
@@ -164,6 +180,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Class B\'s scores are far more spread out from the mean, giving it a much higher SD.',
+            distractorExplanations: {
+              0: '"Class A, because scores are consistent" is incorrect; class B, because scores are more spread out.',
+              2: 'These are distinct concepts with different characteristics, causes, or applications.',
+              3: '"Neither, because SD only applies to large samples" is incorrect; class B, because scores are more spread out.',
+            },
           },
           {
             id: 'psy-sec14-u6-L2-T2',
@@ -215,6 +236,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A score 2 SDs above the mean is higher than approximately 97.5% of scores in a normal distribution.',
+            distractorExplanations: {
+              0: '"They scored about average" is incorrect; they scored better than about 97.5% of students.',
+              2: '"They scored in the bottom half" is incorrect; they scored better than about 97.5% of students.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec14-u6-L2-Q6',
@@ -228,6 +254,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'An SD of 0 means there is no spread at all. Every value is exactly the same as the mean.',
+            distractorExplanations: {
+              0: '"The data set is empty" is incorrect; all values are identical.',
+              2: '"The mean is 0" is incorrect; all values are identical.',
+              3: '"The data is normally distributed" is incorrect; all values are identical.',
+            },
           },
           {
             id: 'psy-sec14-u6-L2-Q7',
@@ -264,6 +295,9 @@ export const psySection14Part2: Unit[] = [
             question: 'A correlation of -0.8 is weaker than a correlation of +0.3.',
             correctAnswer: false,
             explanation: 'Strength is determined by the absolute value. |-0.8| = 0.8 is stronger than |+0.3| = 0.3. The sign shows direction, not strength.',
+            distractorExplanations: {
+              0: 'Strength is determined by the absolute value. |-0.8| = 0.8 is stronger than |+0.3| = 0.3. The sign shows direction, not strength.',
+            },
           },
           {
             id: 'psy-sec14-u6-L3-Q2',
@@ -277,6 +311,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The absolute value of -0.90 is 0.90, which is closest to 1.0. Direction does not affect strength.',
+            distractorExplanations: {
+              0: '"r = +0.25" is incorrect; r = -0.90.',
+              2: '"r = +0.50" is incorrect; r = -0.90.',
+              3: '"r = -0.10" is incorrect; r = -0.90.',
+            },
           },
           {
             id: 'psy-sec14-u6-L3-T2',
@@ -330,6 +369,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'r = +0.85 is a strong positive correlation, but correlation alone cannot prove that studying causes higher scores.',
+            distractorExplanations: {
+              0: '"Studying definitely causes higher scores" does not accurately describe the concept asked about.',
+              2: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              3: '"Students should stop studying" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec14-u6-L3-Q6',
@@ -381,6 +425,9 @@ export const psySection14Part2: Unit[] = [
             question: 'A p-value of 0.03 means the result is statistically significant at the 0.05 level.',
             correctAnswer: true,
             explanation: 'Since 0.03 is less than 0.05, the result is considered statistically significant at that threshold.',
+            distractorExplanations: {
+              1: 'Since 0.03 is less than 0.05, the result is considered statistically significant at that threshold.',
+            },
           },
           {
             id: 'psy-sec14-u6-L4-Q2',
@@ -394,6 +441,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'p < 0.05 means the probability of getting this result by chance alone is less than 5%.',
+            distractorExplanations: {
+              0: 'This figure is inaccurate; the research-supported estimate is approximately 5%.',
+              2: 'The scope is broader than 5% of participants showed the effect alone.',
+              3: 'This figure is inaccurate; the research-supported estimate is approximately 5%.',
+            },
           },
           {
             id: 'psy-sec14-u6-L4-T2',
@@ -465,6 +517,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'When a result does not replicate, the original finding was likely a false positive (Type I error).',
+            distractorExplanations: {
+              1: '"Type II error: the other labs missed the effect" is incorrect; type I error: the original finding was likely a false positive.',
+              2: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+              3: '"The p-value was calculated incorrectly" is incorrect; type I error: the original finding was likely a false positive.',
+            },
           },
         ],
       },
@@ -608,6 +665,9 @@ export const psySection14Part2: Unit[] = [
             question: 'A control group receives the same treatment as the experimental group.',
             correctAnswer: false,
             explanation: 'The control group does NOT receive the treatment. It provides a baseline for comparing results.',
+            distractorExplanations: {
+              0: 'The control group does NOT receive the treatment. It provides a baseline for comparing results.',
+            },
           },
           {
             id: 'psy-sec14-u7-L1-Q2',
@@ -621,6 +681,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'People naturally improve over time, get better with practice, and extreme scores tend to move toward the average.',
+            distractorExplanations: {
+              0: '"The measurement tool is broken" is incorrect; natural recovery, practice effects, or regression to the mean.',
+              2: '"The control group secretly received treatment" is incorrect; natural recovery, practice effects, or regression to the mean.',
+              3: '"The researcher made an error" is incorrect; natural recovery, practice effects, or regression to the mean.',
+            },
           },
           {
             id: 'psy-sec14-u7-L1-T2',
@@ -672,6 +737,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Without a control group, the improvement could be due to practice effects, motivation, or regression to the mean.',
+            distractorExplanations: {
+              0: '"More supplements" is incorrect; a control group that receives no supplement for comparison.',
+              2: '"Longer testing sessions" is incorrect; a control group that receives no supplement for comparison.',
+              3: '"Older participants" is incorrect; a control group that receives no supplement for comparison.',
+            },
           },
           {
             id: 'psy-sec14-u7-L1-Q6',
@@ -685,6 +755,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Active controls compare new treatments to existing ones, showing whether the new option is actually better.',
+            distractorExplanations: {
+              0: '"When the study is too expensive" is incorrect; when you want to know if a new treatment outperforms an existing one.',
+              2: '"When no treatments currently exist" is incorrect; when you want to know if a new treatment outperforms an existing one.',
+              3: '"When participants do not want treatment" is incorrect; when you want to know if a new treatment outperforms an existing one.',
+            },
           },
         ],
       },
@@ -709,6 +784,9 @@ export const psySection14Part2: Unit[] = [
             question: 'Random assignment is the same as random sampling.',
             correctAnswer: false,
             explanation: 'Random sampling is about who enters the study. Random assignment is about which group participants join after entering.',
+            distractorExplanations: {
+              0: 'Random sampling is about who enters the study. Random assignment is about which group participants join after entering.',
+            },
           },
           {
             id: 'psy-sec14-u7-L2-Q2',
@@ -722,6 +800,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Random assignment makes groups equivalent on all variables so the IV is the only systematic difference.',
+            distractorExplanations: {
+              0: '"To make participants feel treated fairly" is incorrect; to ensure groups are equivalent before the treatment begins.',
+              2: '"To increase the sample size" is incorrect; to ensure groups are equivalent before the treatment begins.',
+              3: '"To let participants choose their preferred group" is incorrect; to ensure groups are equivalent before the treatment begins.',
+            },
           },
           {
             id: 'psy-sec14-u7-L2-T2',
@@ -743,6 +826,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Without random assignment, the groups differ in ability before the study even begins. That confounds the results.',
+            distractorExplanations: {
+              0: '"Nothing, the experimental group received the treatment" does not accurately describe the concept asked about.',
+              2: '"The control group was too small" does not accurately describe the concept asked about.',
+              3: '"The coach should have used a survey instead" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec14-u7-L2-Q4',
@@ -789,6 +877,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Without random assignment, pre-existing differences between groups may explain the results instead of the IV.',
+            distractorExplanations: {
+              0: '"They use fewer participants" is incorrect; they lack random assignment, so groups may differ in important ways.',
+              2: '"They take less time to complete" is incorrect; they lack random assignment, so groups may differ in important ways.',
+              3: 'Dependent PD involves excessive need for others to make decisions, not the pattern described here.',
+            },
           },
         ],
       },
@@ -813,6 +906,9 @@ export const psySection14Part2: Unit[] = [
             question: 'In a double-blind study, the researcher knows which participants receive the treatment.',
             correctAnswer: false,
             explanation: 'In a double-blind study, neither the participants nor the researchers know who receives the treatment.',
+            distractorExplanations: {
+              0: 'In a double-blind study, neither the participants nor the researchers know who receives the treatment.',
+            },
           },
           {
             id: 'psy-sec14-u7-L3-Q2',
@@ -826,6 +922,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Researcher bias can unconsciously influence how they measure or interpret results. Blinding prevents this.',
+            distractorExplanations: {
+              0: '"To save time during data collection" is incorrect; to prevent their own expectations from influencing measurements.',
+              2: '"Because they do not care about the results" is incorrect; to prevent their own expectations from influencing measurements.',
+              3: '"To make the study shorter" is incorrect; to prevent their own expectations from influencing measurements.',
+            },
           },
           {
             id: 'psy-sec14-u7-L3-T2',
@@ -877,6 +978,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Double-blinding prevents both the researcher\'s encouragement bias and the patients\' expectation effects.',
+            distractorExplanations: {
+              0: '"Single-blind: hide assignments from patients only" is incorrect; double-blind: hide assignments from both patients and the researcher.',
+              2: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+              3: '"Triple-blind: hide the study from everyone" is incorrect; double-blind: hide assignments from both patients and the researcher.',
+            },
           },
           {
             id: 'psy-sec14-u7-L3-Q6',
@@ -890,6 +996,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Some treatments are impossible to hide. Surgery, exercise programs, and psychotherapy are hard to blind because participants know what they received.',
+            distractorExplanations: {
+              0: '"When studying drug effects" is incorrect; when the treatment is obvious, like surgery vs. no surgery.',
+              2: '"When using large sample sizes" is incorrect; when the treatment is obvious, like surgery vs. no surgery.',
+              3: '"When the study takes more than a week" is incorrect; when the treatment is obvious, like surgery vs. no surgery.',
+            },
           },
         ],
       },
@@ -915,6 +1026,9 @@ export const psySection14Part2: Unit[] = [
             question: 'The placebo effect means improvement is caused by the actual treatment ingredients.',
             correctAnswer: false,
             explanation: 'The placebo effect is improvement caused by expectations, not by the treatment itself.',
+            distractorExplanations: {
+              0: 'The placebo effect is improvement caused by expectations, not by the treatment itself.',
+            },
           },
           {
             id: 'psy-sec14-u7-L4-Q2',
@@ -928,6 +1042,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Placebos let researchers separate the drug\'s actual effect from the effect of simply expecting to improve.',
+            distractorExplanations: {
+              0: '"Sugar pills are cheaper than real drugs" is incorrect; to control for the effect of believing you received treatment.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"To make the study take longer" is incorrect; to control for the effect of believing you received treatment.',
+            },
           },
           {
             id: 'psy-sec14-u7-L4-T2',
@@ -981,6 +1100,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Placebos can trigger genuine brain changes. The patients believed they received treatment, and their brains responded accordingly.',
+            distractorExplanations: {
+              0: '"The sugar pill contained hidden medication" is incorrect; the placebo effect produced real neurological changes.',
+              2: '"The brain scans were inaccurate" is incorrect; the placebo effect produced real neurological changes.',
+              3: '"The patients were lying about feeling better" is incorrect; the placebo effect produced real neurological changes.',
+            },
           },
           {
             id: 'psy-sec14-u7-L4-Q6',
@@ -1136,6 +1260,9 @@ export const psySection14Part2: Unit[] = [
             question: 'Informed consent means participants must be told about the study and agree to participate voluntarily.',
             correctAnswer: true,
             explanation: 'Informed consent requires that participants understand the study and freely choose to join.',
+            distractorExplanations: {
+              1: 'Informed consent requires that participants understand the study and freely choose to join.',
+            },
           },
           {
             id: 'psy-sec14-u8-L1-Q2',
@@ -1149,6 +1276,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Full disclosure of purpose, procedures, risks, and withdrawal rights is required for informed consent.',
+            distractorExplanations: {
+              0: 'The scope is broader than the parts of the study that make it sound interesting alone.',
+              2: '"Nothing, to avoid biasing the results" is incorrect; the purpose, procedures, risks, and their right to withdraw.',
+              3: 'The scope is broader than the expected results alone.',
+            },
           },
           {
             id: 'psy-sec14-u8-L1-T2',
@@ -1219,6 +1351,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Threatening grades coerces participation, and hiding the shock procedure violates informed consent requirements.',
+            distractorExplanations: {
+              0: '"There is no violation because students benefit from research experience" does not accurately describe the concept asked about.',
+              2: 'The scope is broader than one violation: the study should not use electric shocks alone.',
+              3: '"The violation is that the professor is running his own study" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1243,6 +1380,9 @@ export const psySection14Part2: Unit[] = [
             question: 'Deception in research is always unethical and should never be used.',
             correctAnswer: false,
             explanation: 'Deception is permitted when the study cannot work otherwise, the benefits outweigh risks, and participants are debriefed afterward.',
+            distractorExplanations: {
+              0: 'Deception is permitted when the study cannot work otherwise.',
+            },
           },
           {
             id: 'psy-sec14-u8-L2-Q2',
@@ -1256,6 +1396,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'If participants know they are being tested for conformity, they will consciously resist conforming, ruining the study.',
+            distractorExplanations: {
+              0: '"Because researchers enjoy misleading people" does not accurately describe the concept asked about.',
+              1: '"Because conformity is not a real phenomenon" does not accurately describe the concept asked about.',
+              3: '"Because the IRB requires all studies to use deception" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec14-u8-L2-T2',
@@ -1305,6 +1450,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The deception might be justified, but filming without consent or planned debriefing violates ethical standards.',
+            distractorExplanations: {
+              0: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: '"No, the study is fine because no one was harmed" is incorrect; yes, but the lack of consent and debriefing make it unethical.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
           {
             id: 'psy-sec14-u8-L2-Q6',
@@ -1345,6 +1495,9 @@ export const psySection14Part2: Unit[] = [
             question: 'Animal research in psychology has provided insights into learning and brain function.',
             correctAnswer: true,
             explanation: 'Classical and operant conditioning were largely discovered through animal research, benefiting both psychology and medicine.',
+            distractorExplanations: {
+              1: 'Classical and operant conditioning were largely discovered through animal research, benefiting both psychology and medicine.',
+            },
           },
           {
             id: 'psy-sec14-u8-L3-Q2',
@@ -1358,6 +1511,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Brain surgery, genetic manipulation, and some drug tests cannot ethically be done with human participants.',
+            distractorExplanations: {
+              0: '"Animals are cheaper and easier to house" is incorrect; some procedures would be unethical to perform on humans.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Human participants are too smart for experiments" is incorrect; some procedures would be unethical to perform on humans.',
+            },
           },
           {
             id: 'psy-sec14-u8-L3-T2',
@@ -1428,6 +1586,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The current consensus permits animal research with strict oversight, minimized suffering, and clear justification.',
+            distractorExplanations: {
+              0: '"Animal research should be completely banned" does not accurately describe the concept asked about.',
+              1: '"Animals can be used without any restrictions" does not accurately describe the concept asked about.',
+              3: 'The scope is broader than insects may be used in research alone.',
+            },
           },
         ],
       },
@@ -1570,6 +1733,9 @@ export const psySection14Part2: Unit[] = [
             question: 'The Method section of a research paper describes how the study was conducted.',
             correctAnswer: true,
             explanation: 'The Method section details participants, materials, and procedures so others can evaluate and replicate the study.',
+            distractorExplanations: {
+              1: 'The Method section details participants, materials, and procedures so others can evaluate and replicate the study.',
+            },
           },
           {
             id: 'psy-sec14-u9-L1-Q2',
@@ -1636,6 +1802,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The method section reveals whether the study used strong designs, appropriate samples, and valid measures.',
+            distractorExplanations: {
+              0: '"The abstract for a quick overview" is incorrect; the method section for design quality.',
+              1: '"The discussion for the big picture" is incorrect; the method section for design quality.',
+              3: '"The references for credibility" is incorrect; the method section for design quality.',
+            },
           },
           {
             id: 'psy-sec14-u9-L1-Q6',
@@ -1650,6 +1821,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Participant details and measurement procedures are always described in the method section.',
+            distractorExplanations: {
+              0: '"The introduction section" is incorrect; the method section.',
+              2: '"The results section" is incorrect; the method section.',
+              3: '"The discussion section" is incorrect; the method section.',
+            },
           },
         ],
       },
@@ -1674,6 +1850,9 @@ export const psySection14Part2: Unit[] = [
             question: 'If a study is published, its conclusions must be correct.',
             correctAnswer: false,
             explanation: 'Publication does not guarantee accuracy. Peer review catches many errors, but flawed studies still get published.',
+            distractorExplanations: {
+              0: 'Publication does not guarantee accuracy. Peer review catches many errors, but flawed studies still get published.',
+            },
           },
           {
             id: 'psy-sec14-u9-L2-Q2',
@@ -1687,6 +1866,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Eight participants cannot support a strong causal claim about curing depression. The sample is too small.',
+            distractorExplanations: {
+              0: '"The study used a supplement" is incorrect; the sample size is far too small to support such a strong claim.',
+              2: '"Depression is hard to study" is incorrect; the sample size is far too small to support such a strong claim.',
+              3: '"The study was published in a journal" is incorrect; the sample size is far too small to support such a strong claim.',
+            },
           },
           {
             id: 'psy-sec14-u9-L2-T2',
@@ -1749,6 +1933,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'When the company funding the research also pays the researchers, there is a strong risk of bias in favor of positive results.',
+            distractorExplanations: {
+              0: '"The sample size was too small" does not accurately describe the concept asked about.',
+              1: '"The study was not peer-reviewed" does not accurately describe the concept asked about.',
+              3: '"Diet drinks are too common to study" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec14-u9-L2-Q6',
@@ -1762,6 +1951,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'P-hacking means trying many statistical tests until one produces a significant result by chance. It inflates false positives.',
+            distractorExplanations: {
+              0: '"Using a p-value of exactly 0.05" does not accurately describe the concept asked about.',
+              2: '"Hacking into a research database" does not accurately describe the concept asked about.',
+              3: '"Publishing only studies with p < 0.01" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1786,6 +1980,9 @@ export const psySection14Part2: Unit[] = [
             question: 'The replication crisis refers to the finding that many published studies do not produce the same results when repeated.',
             correctAnswer: true,
             explanation: 'The replication crisis revealed that a large percentage of published findings fail to hold up under replication.',
+            distractorExplanations: {
+              1: 'The replication crisis revealed that a large percentage of published findings fail to hold up under replication.',
+            },
           },
           {
             id: 'psy-sec14-u9-L3-Q2',
@@ -1799,6 +1996,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Only about 36% of the 100 studies produced the same results when repeated, revealing widespread replication failure.',
+            distractorExplanations: {
+              0: '90% vastly overstates the replication success; the actual rate was only about 36%, revealing major issues.',
+              1: '70% overestimates the replication rate; the project found only about 36% of studies produced the same results.',
+              3: '10% underestimates the rate; about 36% of studies did replicate, though this is still alarmingly low.',
+            },
           },
           {
             id: 'psy-sec14-u9-L3-T2',
@@ -1849,6 +2051,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The crisis motivated reforms that make research more transparent, rigorous, and reproducible.',
+            distractorExplanations: {
+              0: '"Researchers stopped publishing entirely" is incorrect; it led to larger samples, pre-registration, and open data practices.',
+              2: '"It proved that psychology is not a real science" is incorrect; it led to larger samples, pre-registration, and open data practices.',
+              3: '"It eliminated all future replication failures" is incorrect; it led to larger samples, pre-registration, and open data practices.',
+            },
           },
           {
             id: 'psy-sec14-u9-L3-Q6',
@@ -1892,6 +2099,9 @@ export const psySection14Part2: Unit[] = [
             question: 'A statistically significant result always means the effect is large and important.',
             correctAnswer: false,
             explanation: 'Statistical significance only means the result is unlikely due to chance. The effect could be tiny and practically meaningless.',
+            distractorExplanations: {
+              0: 'Statistical significance only means the result is unlikely due to chance. The effect could be tiny and practically meaningless.',
+            },
           },
           {
             id: 'psy-sec14-u9-L4-Q2',
@@ -1905,6 +2115,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Effect size quantifies the magnitude of a difference or relationship, not just whether it exists.',
+            distractorExplanations: {
+              0: '"Whether the result is due to chance" is incorrect; how large or meaningful the difference between groups is.',
+              1: '"How many participants were in the study" is incorrect; how large or meaningful the difference between groups is.',
+              3: '"How long the study took" is incorrect; how large or meaningful the difference between groups is.',
+            },
           },
           {
             id: 'psy-sec14-u9-L4-T2',
@@ -1955,6 +2170,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Meta-analyses combine data from many studies to produce a more reliable overall effect size estimate.',
+            distractorExplanations: {
+              0: '"A study with a very large sample size" is incorrect; a statistical method that combines results from multiple studies.',
+              2: 'Dependent PD involves excessive need for others to make decisions, not the pattern described here.',
+              3: '"A study that is published in multiple journals" is incorrect; a statistical method that combines results from multiple studies.',
+            },
           },
           {
             id: 'psy-sec14-u9-L4-Q6',
@@ -1969,6 +2189,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Despite strong statistical significance, d = 0.03 is an extremely small effect. A 0.3-point drop on a 100-point scale is clinically meaningless.',
+            distractorExplanations: {
+              0: '"Yes, it is highly statistically significant" does not accurately describe the concept asked about.',
+              2: '"Yes, because 50,000 participants guarantees it works" does not accurately describe the concept asked about.',
+              3: '"No, because p < 0.001 is too small" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec14-u9-L4-Q7',
@@ -2124,6 +2349,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Only true experiments with random assignment and control groups can establish causation.',
+            distractorExplanations: {
+              0: '"Correlational study with a large sample" is incorrect; true experiment with random assignment and controls.',
+              2: '"Case study with detailed observations" is incorrect; true experiment with random assignment and controls.',
+              3: '"Naturalistic observation in a field setting" is incorrect; true experiment with random assignment and controls.',
+            },
           },
           {
             id: 'psy-sec14-u10-L1-Q2',
@@ -2208,6 +2438,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'This study has at least 5 problems: tiny sample, no control group, volunteer bias, near-zero effect size, and conflict of interest.',
+            distractorExplanations: {
+              0: '"One red flag: the sample is small" does not accurately describe the concept asked about.',
+              1: '"Two red flags: small sample and no control group" does not accurately describe the concept asked about.',
+              3: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+            },
           },
           {
             id: 'psy-sec14-u10-L1-Q7',
@@ -2221,6 +2456,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Meta-analyses pool data from multiple studies to produce the most reliable effect size estimates.',
+            distractorExplanations: {
+              0: '"A single well-designed experiment" is incorrect; a meta-analysis combining many studies.',
+              1: '"An expert\\\'s personal opinion" is incorrect; a meta-analysis combining many studies.',
+              3: '"A famous case study" is incorrect; a meta-analysis combining many studies.',
+            },
           },
         ],
       },
@@ -2252,6 +2492,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'To prove causation, she needs a true experiment with random assignment to groups.',
+            distractorExplanations: {
+              0: '"Correlational study comparing students who naturally use each technique" does not accurately describe the concept asked about.',
+              2: '"Case study of one excellent student" does not accurately describe the concept asked about.',
+              3: '"Naturalistic observation of students studying" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec14-u10-L2-Q2',
@@ -2266,6 +2511,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Failing to disclose risks violates informed consent. Not debriefing after a distressing experience violates ethical guidelines.',
+            distractorExplanations: {
+              0: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+              2: '"The only issue is the missing debriefing" is incorrect; violation of informed consent (no risk disclosure) and no debriefing.',
+              3: '"The only issue is the video content" is incorrect; violation of informed consent (no risk disclosure) and no debriefing.',
+            },
           },
           {
             id: 'psy-sec14-u10-L2-Q3',
@@ -2280,6 +2530,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Multiple problems make this study unreliable: tiny effect, small sample, no control, and conflict of interest.',
+            distractorExplanations: {
+              0: '"Yes, the result is statistically significant" does not accurately describe the concept asked about.',
+              2: '"Yes, if they include the p-value in their marketing" does not accurately describe the concept asked about.',
+              3: '"No, but only because the sample is small" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec14-u10-L2-T2',
@@ -2319,6 +2574,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A significant p-value alone is not enough. The method section reveals whether the study is actually rigorous.',
+            distractorExplanations: {
+              0: '"Accept it because the p-value is significant" is incorrect; check the method section for sample size, design, and effect size.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Ask the author to rewrite the abstract" is incorrect; check the method section for sample size, design, and effect size.',
+            },
           },
           {
             id: 'psy-sec14-u10-L2-T3',
@@ -2353,6 +2613,11 @@ export const psySection14Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The word "cause" requires an experiment. If it was correlational, the headline is misleading.',
+            distractorExplanations: {
+              0: '"How many copies did the game sell?" is incorrect; was the study an experiment with random assignment, or a correlation?.',
+              2: '"Was the study done in the United States?" is incorrect; was the study an experiment with random assignment, or a correlation?.',
+              3: '"Does the journalist play video games?" is incorrect; was the study an experiment with random assignment, or a correlation?.',
+            },
           },
         ],
       },

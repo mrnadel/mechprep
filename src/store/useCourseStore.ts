@@ -18,9 +18,11 @@ import { generatePlacementQuestions, getFirstIncompleteUnitIndex, getMaxMistakes
 import type { AnswerEvent } from '@/data/mastery';
 import type { TopicId } from '@/data/types';
 import { awardStreakMilestones } from '@/lib/streak-rewards';
+import { pickReviewQuestions } from '@/lib/review-engine';
 import { DOUBLE_XP_SHOP_DURATION_MS } from '@/data/engagement-types';
 import { getLevelForXp } from '@/data/levels';
 import { getLevelReward, type LevelReward } from '@/data/level-rewards';
+import { getEventXpMultiplier } from '@/lib/xp-events';
 import { DEBUG_ALL_TYPES_UNIT } from '@/data/debug-all-question-types';
 
 /** Check if a lesson's content is loaded (not just lightweight metadata). */
@@ -296,6 +298,18 @@ export const useCourseStore = create<CourseState>()(
           sessionQuestionIds = [...teachingIds, ...selectedQuestions];
         }
 
+        // Interleave 1-2 review questions from earlier units (spaced repetition)
+        let reviewQuestionIds: string[] = [];
+        if (lessonType === 'standard' && !isGolden && unitIndex > 0) {
+          const masteryEvents = useMasteryStore.getState().events;
+          reviewQuestionIds = pickReviewQuestions(masteryEvents, get().courseData, unitIndex, 2);
+          if (reviewQuestionIds.length > 0) {
+            // Insert review questions after teaching cards but before the last question
+            const insertAt = Math.max(teachingIds.length, sessionQuestionIds.length - 1);
+            sessionQuestionIds.splice(insertAt, 0, ...reviewQuestionIds);
+          }
+        }
+
         set({
           activeLesson: {
             unitIndex,
@@ -305,6 +319,7 @@ export const useCourseStore = create<CourseState>()(
             startTime: Date.now(),
             sessionQuestionIds,
             isGolden,
+            reviewQuestionIds,
           },
           lessonResult: null,
         });
@@ -406,21 +421,29 @@ export const useCourseStore = create<CourseState>()(
         // XP based on accuracy performance within this session
         const isFlawless = accuracy === 100 && totalQuestions >= 3;
         const accuracyMultiplier = isFlawless ? 4 : calculateStars(accuracy); // 4x flawless, 1-3 otherwise
-        // Double XP check with tamper validation
+        // Double XP check with tamper validation (shop-purchased boost)
         const engState = useEngagementStore.getState();
         const doubleXpExpiry = engState.doubleXpExpiry;
-        let isDoubleXp = false;
+        let shopDoubleXp = false;
         if (doubleXpExpiry) {
           const expiry = new Date(doubleXpExpiry).getTime();
           const now = Date.now();
           if (!isNaN(expiry) && expiry > now && expiry <= now + DOUBLE_XP_SHOP_DURATION_MS + DOUBLE_XP_BUFFER_MS) {
             const recentCutoff = now - (DOUBLE_XP_SHOP_DURATION_MS + DOUBLE_XP_RECENT_PURCHASE_WINDOW_MS);
-            isDoubleXp = engState.gems.transactions.some(
+            shopDoubleXp = engState.gems.transactions.some(
               (t) => t.source === 'shop_purchase' && t.amount < 0 && new Date(t.timestamp).getTime() > recentCutoff
             );
           }
         }
-        const xpEarned = lesson.xpReward * accuracyMultiplier * (isDoubleXp ? 2 : 1);
+        // Time-limited XP events (weekend 2x, power hour, league sprint)
+        const isPro = useSubscriptionStore.getState().tier === 'pro';
+        const eventMultiplier = getEventXpMultiplier(isPro);
+        const shopMultiplier = shopDoubleXp ? 2 : 1;
+        // Shop boost and event boost stack additively with each other
+        const totalBoostMultiplier = shopMultiplier === 1 && eventMultiplier === 1
+          ? 1
+          : 1 + (shopMultiplier - 1) + (eventMultiplier - 1);
+        const xpEarned = lesson.xpReward * accuracyMultiplier * totalBoostMultiplier;
 
         // Build updated lesson progress
         const updatedLessonProgress = {
@@ -1191,9 +1214,6 @@ export const useCourseStore = create<CourseState>()(
       },
 
       isLessonUnlocked: (unitIndex: number, lessonIndex: number) => {
-        // First lesson of every unit is always unlocked
-        if (lessonIndex === 0) return true;
-
         const { progress, courseData } = get();
 
         // Placement unlock: all lessons in units before placementUnitIndex are accessible,

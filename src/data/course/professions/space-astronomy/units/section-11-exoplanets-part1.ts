@@ -39,6 +39,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "An exoplanet orbits a star other than the Sun.",
             correctAnswer: true,
             explanation: "The prefix 'exo' means outside. Exoplanets are planets outside our solar system.",
+            distractorExplanations: {
+              1: 'This statement is correct because the prefix \'exo\' means outside. Exoplanets are planets outside our solar system.',
+            },
           },
           {
             id: "sp-sec11-u1-L1-Q2",
@@ -52,6 +55,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "As of the mid-2020s, over 5,000 exoplanets have been confirmed. New ones are discovered regularly.",
+            distractorExplanations: {
+              0: 'Fewer than 100 is incorrect; as of the mid-2020s, over 5,000 exoplanets have been confirmed. New ones are discovered regularly.',
+              1: 'About 500 is incorrect; as of the mid-2020s, over 5,000 exoplanets have been confirmed. New ones are discovered regularly.',
+              3: 'Exactly 1 million is incorrect; as of the mid-2020s, over 5,000 exoplanets have been confirmed. New ones are discovered regularly.',
+            },
           },
           {
             id: "sp-sec11-u1-L1-T2",
@@ -65,6 +73,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "Exoplanets are easy to see because they shine brightly like stars.",
             correctAnswer: false,
             explanation: "Planets don't produce their own light. They only reflect starlight, making them extremely faint compared to their host star.",
+            distractorExplanations: {
+              0: 'Planets don\'t produce their own light. They only reflect starlight, making them extremely faint compared to their host star.',
+            },
           },
           {
             id: "sp-sec11-u1-L1-Q4",
@@ -93,6 +104,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "51 Pegasi b was discovered in 1995 by Michel Mayor and Didier Queloz. It was a hot Jupiter orbiting very close to its star.",
+            distractorExplanations: {
+              0: '1980 is incorrect; 51 Pegasi b was discovered in 1995 by Michel Mayor and Didier Queloz. It was a hot Jupiter orbiting very close to its star.',
+              2: '2005 is incorrect; 51 Pegasi b was discovered in 1995 by Michel Mayor and Didier Queloz. It was a hot Jupiter orbiting very close to its star.',
+              3: '2015 is incorrect; 51 Pegasi b was discovered in 1995 by Michel Mayor and Didier Queloz. It was a hot Jupiter orbiting very close to its star.',
+            },
           },
           {
             id: "sp-sec11-u1-L1-Q6",
@@ -125,6 +141,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "All exoplanets are similar in size to planets in our solar system.",
             correctAnswer: false,
             explanation: "Many exoplanets have no match in our solar system. Super-Earths and mini-Neptunes are common types we don't have here.",
+            distractorExplanations: {
+              0: 'Many exoplanets have no match in our solar system. Super-Earths and mini-Neptunes are common types we don\'t have here.',
+            },
           },
           {
             id: "sp-sec11-u1-L2-Q2",
@@ -138,6 +157,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Hot Jupiters are massive gas giants that orbit extremely close to their stars. Surface temperatures can exceed 1,000 degrees Celsius.",
+            distractorExplanations: {
+              1: 'A rocky planet with active volcanoes is incorrect; hot Jupiters are massive gas giants that orbit extremely close to their stars. Surface temperatures can exceed 1,000 degrees Celsius.',
+              2: 'Jupiter during a solar flare is incorrect; hot Jupiters are massive gas giants that orbit extremely close to their stars. Surface temperatures can exceed 1,000 degrees Celsius.',
+              3: 'A small star that looks like Jupiter is incorrect; hot Jupiters are massive gas giants that orbit extremely close to their stars. Surface temperatures can exceed 1,000 degrees Celsius.',
+            },
           },
           {
             id: "sp-sec11-u1-L2-T2",
@@ -181,6 +205,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Rogue planets float freely through interstellar space with no star to orbit. Billions may exist in our galaxy.",
+            distractorExplanations: {
+              0: 'A planet in an unstable orbit is incorrect; rogue planets float freely through interstellar space with no star to orbit. Billions may exist in our galaxy.',
+              2: 'A planet with an extremely long year is incorrect; rogue planets float freely through interstellar space with no star to orbit. Billions may exist in our galaxy.',
+              3: 'A gas giant that lost its atmosphere is incorrect; rogue planets float freely through interstellar space with no star to orbit. Billions may exist in our galaxy.',
+            },
           },
           {
             id: "sp-sec11-u1-L2-Q6",
@@ -194,6 +223,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Super-Earths and mini-Neptunes are by far the most common. Our solar system doesn't have any, which makes it a bit unusual.",
+            distractorExplanations: {
+              0: 'Hot Jupiters is incorrect; super-Earths and mini-Neptunes are by far the most common. Our solar system doesn\'t have any, which makes it a bit unusual.',
+              1: 'Rogue planets is incorrect; super-Earths and mini-Neptunes are by far the most common. Our solar system doesn\'t have any, which makes it a bit unusual.',
+              3: 'Earth-sized rocky planets is incorrect; super-Earths and mini-Neptunes are by far the most common. Our solar system doesn\'t have any, which makes it a bit unusual.',
+            },
           },
         ],
       },
@@ -217,6 +251,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "Most stars in our galaxy likely have at least one planet.",
             correctAnswer: true,
             explanation: "Statistical analysis of Kepler data shows that planets are extremely common. On average, every star has more than one planet.",
+            distractorExplanations: {
+              1: 'This statement is correct because statistical analysis of Kepler data shows that planets are extremely common. On average, every star has more than one planet.',
+            },
           },
           {
             id: "sp-sec11-u1-L3-Q2",
@@ -230,6 +267,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "With over 100 billion stars in our galaxy and most having planets, the total exoplanet count likely exceeds 100 billion.",
+            distractorExplanations: {
+              0: 'A few thousand is incorrect; with over 100 billion stars in our galaxy and most having planets, the total exoplanet count likely exceeds 100 billion.',
+              1: 'About 1 million is incorrect; with over 100 billion stars in our galaxy and most having planets, the total exoplanet count likely exceeds 100 billion.',
+              3: 'Exactly 5,000 is incorrect; with over 100 billion stars in our galaxy and most having planets, the total exoplanet count likely exceeds 100 billion.',
+            },
           },
           {
             id: "sp-sec11-u1-L3-T2",
@@ -258,6 +300,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Kepler used the transit method. When a planet passes in front of its star, the starlight dims slightly.",
+            distractorExplanations: {
+              0: 'By photographing them directly is incorrect; kepler used the transit method. When a planet passes in front of its star, the starlight dims slightly.',
+              2: 'By measuring magnetic fields is incorrect; kepler used the transit method. When a planet passes in front of its star, the starlight dims slightly.',
+              3: 'By listening for radio signals is incorrect; kepler used the transit method. When a planet passes in front of its star, the starlight dims slightly.',
+            },
           },
           {
             id: "sp-sec11-u1-L3-T3",
@@ -540,6 +587,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "The transit method detects planets by measuring a dip in starlight.",
             correctAnswer: true,
             explanation: "When a planet passes between us and its star, the star's brightness drops slightly. That dip is the transit signal.",
+            distractorExplanations: {
+              1: 'This statement is correct because when a planet passes between us and its star, the star\'s brightness drops slightly. That dip is the transit signal.',
+            },
           },
           {
             id: "sp-sec11-u2-L1-Q2",
@@ -553,6 +603,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A bigger planet blocks more light, causing a deeper dip. The dip depth reveals the planet's size compared to its star.",
+            distractorExplanations: {
+              0: 'The planet\'s color is incorrect; a bigger planet blocks more light, causing a deeper dip. The dip depth reveals the planet\'s size compared to its star.',
+              2: 'The planet\'s temperature is incorrect; a bigger planet blocks more light, causing a deeper dip. The dip depth reveals the planet\'s size compared to its star.',
+              3: 'The planet\'s distance from Earth is incorrect; a bigger planet blocks more light, causing a deeper dip. The dip depth reveals the planet\'s size compared to its star.',
+            },
           },
           {
             id: "sp-sec11-u2-L1-T2",
@@ -566,6 +621,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "We can detect a transit from any viewing angle.",
             correctAnswer: false,
             explanation: "The orbit must be nearly edge-on from Earth's perspective. Most planetary systems are tilted and never show transits.",
+            distractorExplanations: {
+              0: 'The orbit must be nearly edge-on from Earth\'s perspective. Most planetary systems are tilted and never show transits.',
+            },
           },
           {
             id: "sp-sec11-u2-L1-Q4",
@@ -593,6 +651,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Regular, repeating dips are the hallmark of a transiting planet. Each dip represents one orbit.",
+            distractorExplanations: {
+              0: 'The star is pulsating is incorrect; regular, repeating dips are the hallmark of a transiting planet. Each dip represents one orbit.',
+              2: 'The star is binary is incorrect; regular, repeating dips are the hallmark of a transiting planet. Each dip represents one orbit.',
+              3: 'Equipment malfunction is incorrect; regular, repeating dips are the hallmark of a transiting planet. Each dip represents one orbit.',
+            },
           },
           {
             id: "sp-sec11-u2-L1-Q6",
@@ -635,6 +698,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "A planet's gravity causes its host star to wobble.",
             correctAnswer: true,
             explanation: "Both the star and planet orbit a shared center of mass. The star's wobble is tiny but detectable with precise instruments.",
+            distractorExplanations: {
+              1: 'This statement is correct because both the star and planet orbit a shared center of mass. The star\'s wobble is tiny but detectable with precise instruments.',
+            },
           },
           {
             id: "sp-sec11-u2-L2-Q2",
@@ -648,6 +714,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "As the star wobbles toward us, its light blueshifts. As it wobbles away, the light redshifts. This is the Doppler effect.",
+            distractorExplanations: {
+              0: 'Changes in the star\'s temperature is incorrect; as the star wobbles toward us, its light blueshifts. As it wobbles away, the light redshifts. This is the Doppler effect.',
+              2: 'The planet reflecting different colors is incorrect; as the star wobbles toward us, its light blueshifts. As it wobbles away, the light redshifts. This is the Doppler effect.',
+              3: 'Interstellar dust filtering the light is incorrect; as the star wobbles toward us, its light blueshifts. As it wobbles away, the light redshifts. This is the Doppler effect.',
+            },
           },
           {
             id: "sp-sec11-u2-L2-T2",
@@ -685,6 +756,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Massive planets close to their stars create the largest gravitational tugs, producing the biggest Doppler wobble in the star's light.",
+            distractorExplanations: {
+              0: 'A small rocky planet far from its star is incorrect; massive planets close to their stars create the largest gravitational tugs, producing the biggest Doppler wobble in the star\'s light.',
+              2: 'An ice giant at moderate distance is incorrect; massive planets close to their stars create the largest gravitational tugs, producing the biggest Doppler wobble in the star\'s light.',
+              3: 'A planet with many moons is incorrect; massive planets close to their stars create the largest gravitational tugs, producing the biggest Doppler wobble in the star\'s light.',
+            },
           },
           {
             id: "sp-sec11-u2-L2-T3",
@@ -704,6 +780,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Density equals mass divided by volume. Knowing both from different methods reveals whether the planet is rocky, gaseous, or icy.",
+            distractorExplanations: {
+              0: 'Its color is incorrect; density equals mass divided by volume. Knowing both from different methods reveals whether the planet is rocky, gaseous, or icy.',
+              1: 'Its age is incorrect; density equals mass divided by volume. Knowing both from different methods reveals whether the planet is rocky, gaseous, or icy.',
+              3: 'Its magnetic field is incorrect; density equals mass divided by volume. Knowing both from different methods reveals whether the planet is rocky, gaseous, or icy.',
+            },
           },
         ],
       },
@@ -728,6 +809,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "Direct imaging works best for small, old, cool planets close to their stars.",
             correctAnswer: false,
             explanation: "It's the opposite. Young, hot, massive planets far from their stars are brightest and easiest to photograph directly.",
+            distractorExplanations: {
+              0: 'It\'s the opposite. Young, hot, massive planets far from their stars are brightest and easiest to photograph directly.',
+            },
           },
           {
             id: "sp-sec11-u2-L3-Q2",
@@ -755,6 +839,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A planet's gravity acts like a small lens, briefly magnifying the background star's light and creating a detectable spike.",
+            distractorExplanations: {
+              0: 'The planet emitting light is incorrect; a planet\'s gravity acts like a small lens, briefly magnifying the background star\'s light and creating a detectable spike.',
+              2: 'The star\'s rotation speeding up is incorrect; a planet\'s gravity acts like a small lens, briefly magnifying the background star\'s light and creating a detectable spike.',
+              3: 'Solar flares from the host star is incorrect; a planet\'s gravity acts like a small lens, briefly magnifying the background star\'s light and creating a detectable spike.',
+            },
           },
           {
             id: "sp-sec11-u2-L3-Q4",
@@ -783,6 +872,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "ESA's Gaia satellite measures star positions with incredible precision, making it ideal for detecting the tiny shifts caused by orbiting planets.",
+            distractorExplanations: {
+              0: 'Kepler is incorrect; eSA\'s Gaia satellite measures star positions with incredible precision, making it ideal for detecting the tiny shifts caused by orbiting planets.',
+              1: 'TESS is incorrect; eSA\'s Gaia satellite measures star positions with incredible precision, making it ideal for detecting the tiny shifts caused by orbiting planets.',
+              3: 'Chandra is incorrect; eSA\'s Gaia satellite measures star positions with incredible precision, making it ideal for detecting the tiny shifts caused by orbiting planets.',
+            },
           },
           {
             id: "sp-sec11-u2-L3-Q6",
@@ -1051,6 +1145,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "TRAPPIST-1 has seven Earth-sized rocky planets.",
             correctAnswer: true,
             explanation: "All seven TRAPPIST-1 planets are roughly Earth-sized and rocky. It's the largest known system of Earth-sized worlds.",
+            distractorExplanations: {
+              1: 'This statement is correct because all seven TRAPPIST-1 planets are roughly Earth-sized and rocky. It\'s the largest known system of Earth-sized worlds.',
+            },
           },
           {
             id: "sp-sec11-u3-L1-Q2",
@@ -1064,6 +1161,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "TRAPPIST-1 is about 40 light-years away in the constellation Aquarius. That's relatively close by cosmic standards.",
+            distractorExplanations: {
+              0: '4 light-years is incorrect; tRAPPIST-1 is about 40 light-years away in the constellation Aquarius. That\'s relatively close by cosmic standards.',
+              2: '400 light-years is incorrect; tRAPPIST-1 is about 40 light-years away in the constellation Aquarius. That\'s relatively close by cosmic standards.',
+              3: '4,000 light-years is incorrect; tRAPPIST-1 is about 40 light-years away in the constellation Aquarius. That\'s relatively close by cosmic standards.',
+            },
           },
           {
             id: "sp-sec11-u3-L1-T2",
@@ -1077,6 +1179,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "The TRAPPIST-1 planets orbit farther from their star than Earth orbits the Sun.",
             correctAnswer: false,
             explanation: "The system is extremely compact. All seven planets orbit closer to TRAPPIST-1 than Mercury does to our Sun.",
+            distractorExplanations: {
+              0: 'The system is extremely compact. All seven planets orbit closer to TRAPPIST-1 than Mercury does to our Sun.',
+            },
           },
           {
             id: "sp-sec11-u3-L1-Q4",
@@ -1090,6 +1195,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "TRAPPIST-1 is an ultra-cool dwarf star. It's much dimmer than our Sun, so habitable conditions exist at closer distances.",
+            distractorExplanations: {
+              0: 'They have thick atmospheres that block heat is incorrect; tRAPPIST-1 is an ultra-cool dwarf star. It\'s much dimmer than our Sun, so habitable conditions exist at closer distances.',
+              2: 'Their orbits are perfectly circular is incorrect; tRAPPIST-1 is an ultra-cool dwarf star. It\'s much dimmer than our Sun, so habitable conditions exist at closer distances.',
+              3: 'They rotate very quickly to distribute heat is incorrect; tRAPPIST-1 is an ultra-cool dwarf star. It\'s much dimmer than our Sun, so habitable conditions exist at closer distances.',
+            },
           },
           {
             id: "sp-sec11-u3-L1-T3",
@@ -1135,6 +1245,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "Kepler-186f was the first Earth-sized planet found in a star's habitable zone.",
             correctAnswer: true,
             explanation: "Discovered in 2014, Kepler-186f proved that Earth-sized planets exist at the right distance for liquid water.",
+            distractorExplanations: {
+              1: 'This statement is correct because discovered in 2014, Kepler-186f proved that Earth-sized planets exist at the right distance for liquid water.',
+            },
           },
           {
             id: "sp-sec11-u3-L2-Q2",
@@ -1148,6 +1261,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Kepler-186f orbits an M-type red dwarf, which is smaller and cooler than our Sun.",
+            distractorExplanations: {
+              0: 'A Sun-like yellow star is incorrect; kepler-186f orbits an M-type red dwarf, which is smaller and cooler than our Sun.',
+              2: 'A blue supergiant is incorrect; kepler-186f orbits an M-type red dwarf, which is smaller and cooler than our Sun.',
+              3: 'A white dwarf is incorrect; kepler-186f orbits an M-type red dwarf, which is smaller and cooler than our Sun.',
+            },
           },
           {
             id: "sp-sec11-u3-L2-T2",
@@ -1191,6 +1309,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The habitable zone is necessary but not enough. A planet also needs an atmosphere to keep water liquid and protection from stellar radiation.",
+            distractorExplanations: {
+              0: 'The zone is too hot for water is incorrect; the habitable zone is necessary but not enough. A planet also needs an atmosphere to keep water liquid and protection from stellar radiation.',
+              1: 'Only gas giants exist in habitable zones is incorrect; the habitable zone is necessary but not enough. A planet also needs an atmosphere to keep water liquid and protection from stellar radiation.',
+              3: 'Water doesn\'t exist outside our solar system is incorrect; the habitable zone is necessary but not enough. A planet also needs an atmosphere to keep water liquid and protection from stellar radiation.',
+            },
           },
           {
             id: "sp-sec11-u3-L2-Q6",
@@ -1224,6 +1347,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "Before exoplanet discoveries, scientists expected gas giants to orbit far from their stars.",
             correctAnswer: true,
             explanation: "Our solar system suggested gas giants form in the outer regions. Hot Jupiters overturned this assumption.",
+            distractorExplanations: {
+              1: 'This statement is correct because our solar system suggested gas giants form in the outer regions. Hot Jupiters overturned this assumption.',
+            },
           },
           {
             id: "sp-sec11-u3-L3-Q2",
@@ -1237,6 +1363,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Hot Jupiters orbit so close that their years last only a few days. Some complete an orbit in under 24 hours.",
+            distractorExplanations: {
+              0: 'About 12 years like Jupiter is incorrect; hot Jupiters orbit so close that their years last only a few days. Some complete an orbit in under 24 hours.',
+              1: 'About 1 year like Earth is incorrect; hot Jupiters orbit so close that their years last only a few days. Some complete an orbit in under 24 hours.',
+              3: 'About 88 days like Mercury is incorrect; hot Jupiters orbit so close that their years last only a few days. Some complete an orbit in under 24 hours.',
+            },
           },
           {
             id: "sp-sec11-u3-L3-T2",
@@ -1256,6 +1387,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "HD 189733 b has silicate (glass) particles in its atmosphere. Wind-driven sideways rain of molten glass makes it one of the most extreme worlds known.",
+            distractorExplanations: {
+              0: 'Water is incorrect; hD 189733 b has silicate (glass) particles in its atmosphere. Wind-driven sideways rain of molten glass makes it one of the most extreme worlds known.',
+              1: 'Sulfuric acid is incorrect; hD 189733 b has silicate (glass) particles in its atmosphere. Wind-driven sideways rain of molten glass makes it one of the most extreme worlds known.',
+              3: 'Liquid nitrogen is incorrect; hD 189733 b has silicate (glass) particles in its atmosphere. Wind-driven sideways rain of molten glass makes it one of the most extreme worlds known.',
+            },
           },
           {
             id: "sp-sec11-u3-L3-Q4",
@@ -1277,6 +1413,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "Some exoplanets orbit two stars at once.",
             correctAnswer: true,
             explanation: "Circumbinary planets orbit a pair of stars. Kepler-16b was the first confirmed example, like Tatooine in Star Wars.",
+            distractorExplanations: {
+              1: 'This statement is correct because circumbinary planets orbit a pair of stars. Kepler-16b was the first confirmed example, like Tatooine in Star Wars.',
+            },
           },
           {
             id: "sp-sec11-u3-L3-Q6",
@@ -1559,6 +1698,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Super-Earths and mini-Neptunes are the most frequently detected type. Our solar system doesn't have any.",
+            distractorExplanations: {
+              0: 'Hot Jupiters is incorrect; super-Earths and mini-Neptunes are the most frequently detected type. Our solar system doesn\'t have any.',
+              1: 'Earth twins is incorrect; super-Earths and mini-Neptunes are the most frequently detected type. Our solar system doesn\'t have any.',
+              3: 'Rogue planets is incorrect; super-Earths and mini-Neptunes are the most frequently detected type. Our solar system doesn\'t have any.',
+            },
           },
           {
             id: "sp-sec11-u4-L1-Q3",
@@ -1566,6 +1710,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "A rogue planet orbits a star that we can't see.",
             correctAnswer: false,
             explanation: "A rogue planet doesn't orbit any star at all. It drifts freely through interstellar space.",
+            distractorExplanations: {
+              0: 'A rogue planet doesn\'t orbit any star at all. It drifts freely through interstellar space.',
+            },
           },
           {
             id: "sp-sec11-u4-L1-Q4",
@@ -1593,6 +1740,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "In our solar system, gas giants orbit far away. Finding massive planets just days from their stars was a total surprise.",
+            distractorExplanations: {
+              0: 'They were smaller than expected is incorrect; in our solar system, gas giants orbit far away. Finding massive planets just days from their stars was a total surprise.',
+              2: 'They had rings like Saturn is incorrect; in our solar system, gas giants orbit far away. Finding massive planets just days from their stars was a total surprise.',
+              3: 'They were colder than predicted is incorrect; in our solar system, gas giants orbit far away. Finding massive planets just days from their stars was a total surprise.',
+            },
           },
           {
             id: "sp-sec11-u4-L1-Q6",
@@ -1641,6 +1793,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With an edge-on orbit, the transit method is ideal. The brightness dip directly reveals the planet's size.",
+            distractorExplanations: {
+              1: 'Radial velocity to detect the star\'s wobble is incorrect; with an edge-on orbit, the transit method is ideal. The brightness dip directly reveals the planet\'s size.',
+              2: 'Direct imaging with a coronagraph is incorrect; with an edge-on orbit, the transit method is ideal. The brightness dip directly reveals the planet\'s size.',
+              3: 'Gravitational microlensing is incorrect; with an edge-on orbit, the transit method is ideal. The brightness dip directly reveals the planet\'s size.',
+            },
           },
           {
             id: "sp-sec11-u4-L2-Q3",
@@ -1648,6 +1805,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "Combining transit and radial velocity data lets us calculate a planet's density.",
             correctAnswer: true,
             explanation: "Transit gives size and radial velocity gives mass. Density equals mass divided by volume.",
+            distractorExplanations: {
+              1: 'This statement is correct because transit gives size and radial velocity gives mass. Density equals mass divided by volume.',
+            },
           },
           {
             id: "sp-sec11-u4-L2-Q4",
@@ -1669,6 +1829,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Larger planets block more light (deeper dip) and close-in planets transit more frequently (shorter orbital period), making both effects easier to detect.",
+            distractorExplanations: {
+              0: 'They orbit faster, giving more data points is incorrect; larger planets block more light (deeper dip) and close-in planets transit more frequently (shorter orbital period), making both effects easier to detect.',
+              2: 'They have stronger magnetic fields is incorrect; larger planets block more light (deeper dip) and close-in planets transit more frequently (shorter orbital period), making both effects easier to detect.',
+              3: 'They reflect more light toward Earth is incorrect; larger planets block more light (deeper dip) and close-in planets transit more frequently (shorter orbital period), making both effects easier to detect.',
+            },
           },
           {
             id: "sp-sec11-u4-L2-T2",
@@ -1714,6 +1879,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "TRAPPIST-1 has the most Earth-sized planets in the habitable zone, making it the best candidate for potential life.",
+            distractorExplanations: {
+              1: '51 Pegasi with its hot Jupiter is incorrect; tRAPPIST-1 has the most Earth-sized planets in the habitable zone, making it the best candidate for potential life.',
+              2: 'HD 189733 with its glass rain is incorrect; tRAPPIST-1 has the most Earth-sized planets in the habitable zone, making it the best candidate for potential life.',
+              3: 'Kepler-16 with its circumbinary planet is incorrect; tRAPPIST-1 has the most Earth-sized planets in the habitable zone, making it the best candidate for potential life.',
+            },
           },
           {
             id: "sp-sec11-u4-L3-Q2",
@@ -1730,6 +1900,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "All TRAPPIST-1 planets orbit farther from their star than Earth orbits the Sun.",
             correctAnswer: false,
             explanation: "All 7 TRAPPIST-1 planets orbit closer than Mercury orbits our Sun. The system is extremely compact.",
+            distractorExplanations: {
+              0: 'All 7 TRAPPIST-1 planets orbit closer than Mercury orbits our Sun. The system is extremely compact.',
+            },
           },
           {
             id: "sp-sec11-u4-L3-Q4",
@@ -1743,6 +1916,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Proxima Centauri is an active red dwarf. Frequent, powerful flares could damage or destroy any atmosphere on Proxima b.",
+            distractorExplanations: {
+              0: 'It\'s too far from its star for liquid water is incorrect; proxima Centauri is an active red dwarf. Frequent, powerful flares could damage or destroy any atmosphere on Proxima b.',
+              1: 'It orbits a pulsar, not a normal star is incorrect; proxima Centauri is an active red dwarf. Frequent, powerful flares could damage or destroy any atmosphere on Proxima b.',
+              3: 'It\'s a gas giant with no solid surface is incorrect; proxima Centauri is an active red dwarf. Frequent, powerful flares could damage or destroy any atmosphere on Proxima b.',
+            },
           },
           {
             id: "sp-sec11-u4-L3-Q5",
@@ -1770,6 +1948,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Finding habitable-zone rocky planets around other stars is a key step toward answering whether we're alone in the universe.",
+            distractorExplanations: {
+              0: 'How fast the universe is expanding is incorrect; finding habitable-zone rocky planets around other stars is a key step toward answering whether we\'re alone in the universe.',
+              2: 'How old the Sun is is incorrect; finding habitable-zone rocky planets around other stars is a key step toward answering whether we\'re alone in the universe.',
+              3: 'Why Pluto was reclassified is incorrect; finding habitable-zone rocky planets around other stars is a key step toward answering whether we\'re alone in the universe.',
+            },
           },
         ],
       },
@@ -1809,6 +1992,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "The habitable zone is the distance range where liquid water could exist on a planet's surface.",
             correctAnswer: true,
             explanation: "Liquid water is considered essential for life as we know it. The habitable zone is where surface temperatures allow it.",
+            distractorExplanations: {
+              1: 'This statement is correct because liquid water is considered essential for life as we know it. The habitable zone is where surface temperatures allow it.',
+            },
           },
           {
             id: "sp-sec11-u5-L1-Q2",
@@ -1836,6 +2022,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Red dwarfs are cooler and dimmer, so planets must orbit much closer to receive enough warmth for liquid water.",
+            distractorExplanations: {
+              0: 'Much farther from the star is incorrect; red dwarfs are cooler and dimmer, so planets must orbit much closer to receive enough warmth for liquid water.',
+              1: 'About the same distance is incorrect; red dwarfs are cooler and dimmer, so planets must orbit much closer to receive enough warmth for liquid water.',
+              3: 'There is no habitable zone is incorrect; red dwarfs are cooler and dimmer, so planets must orbit much closer to receive enough warmth for liquid water.',
+            },
           },
           {
             id: "sp-sec11-u5-L1-Q4",
@@ -1864,6 +2055,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Venus has a thick CO2 atmosphere that trapped heat in a runaway greenhouse effect. Surface temperatures reach about 465 degrees Celsius.",
+            distractorExplanations: {
+              0: 'It has no atmosphere is incorrect; venus has a thick CO2 atmosphere that trapped heat in a runaway greenhouse effect. Surface temperatures reach about 465 degrees Celsius.',
+              2: 'It\'s too far from the Sun is incorrect; venus has a thick CO2 atmosphere that trapped heat in a runaway greenhouse effect. Surface temperatures reach about 465 degrees Celsius.',
+              3: 'It rotates too quickly is incorrect; venus has a thick CO2 atmosphere that trapped heat in a runaway greenhouse effect. Surface temperatures reach about 465 degrees Celsius.',
+            },
           },
           {
             id: "sp-sec11-u5-L1-Q6",
@@ -1906,6 +2102,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "A tidally locked planet has one side in permanent daylight and one in permanent darkness.",
             correctAnswer: true,
             explanation: "Tidal locking stops the planet's rotation relative to its star. One face bakes while the other freezes.",
+            distractorExplanations: {
+              1: 'This statement is correct because tidal locking stops the planet\'s rotation relative to its star. One face bakes while the other freezes.',
+            },
           },
           {
             id: "sp-sec11-u5-L2-Q2",
@@ -1919,6 +2118,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Moon always shows the same face to Earth because it's tidally locked. The same principle applies to many exoplanets.",
+            distractorExplanations: {
+              0: 'The Sun is incorrect; the Moon always shows the same face to Earth because it\'s tidally locked. The same principle applies to many exoplanets.',
+              1: 'Earth is incorrect; the Moon always shows the same face to Earth because it\'s tidally locked. The same principle applies to many exoplanets.',
+              3: 'Jupiter is incorrect; the Moon always shows the same face to Earth because it\'s tidally locked. The same principle applies to many exoplanets.',
+            },
           },
           {
             id: "sp-sec11-u5-L2-T2",
@@ -1947,6 +2151,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The terminator (twilight zone) between the hot and cold sides could have moderate temperatures suitable for liquid water and life.",
+            distractorExplanations: {
+              0: 'Only on the dark side is incorrect; the terminator (twilight zone) between the hot and cold sides could have moderate temperatures suitable for liquid water and life.',
+              1: 'Only at the center of the bright side is incorrect; the terminator (twilight zone) between the hot and cold sides could have moderate temperatures suitable for liquid water and life.',
+              3: 'Life is impossible on tidally locked planets is incorrect; the terminator (twilight zone) between the hot and cold sides could have moderate temperatures suitable for liquid water and life.',
+            },
           },
           {
             id: "sp-sec11-u5-L2-T3",
@@ -1960,6 +2169,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "An atmosphere can help distribute heat on a tidally locked planet.",
             correctAnswer: true,
             explanation: "Winds can carry warm air from the day side to the night side, reducing the extreme temperature difference.",
+            distractorExplanations: {
+              1: 'This statement is correct because winds can carry warm air from the day side to the night side, reducing the extreme temperature difference.',
+            },
           },
           {
             id: "sp-sec11-u5-L2-Q6",
@@ -1992,6 +2204,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "Some exoplanets may be entirely covered by oceans with no dry land.",
             correctAnswer: true,
             explanation: "Water worlds could have oceans hundreds of kilometers deep. Their water fraction is much higher than Earth's.",
+            distractorExplanations: {
+              1: 'This statement is correct because water worlds could have oceans hundreds of kilometers deep. Their water fraction is much higher than Earth\'s.',
+            },
           },
           {
             id: "sp-sec11-u5-L3-Q2",
@@ -2005,6 +2220,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Despite 70% of Earth's surface being covered by water, water makes up less than 0.1% of Earth's total mass. Ocean worlds have far more.",
+            distractorExplanations: {
+              1: 'About 5% is incorrect; despite 70% of Earth\'s surface being covered by water, water makes up less than 0.1% of Earth\'s total mass. Ocean worlds have far more.',
+              2: 'About 25% is incorrect; despite 70% of Earth\'s surface being covered by water, water makes up less than 0.1% of Earth\'s total mass. Ocean worlds have far more.',
+              3: 'About 70% is incorrect; despite 70% of Earth\'s surface being covered by water, water makes up less than 0.1% of Earth\'s total mass. Ocean worlds have far more.',
+            },
           },
           {
             id: "sp-sec11-u5-L3-T2",
@@ -2048,6 +2268,11 @@ export const spaceSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At extreme depths, pressure creates a layer of ice between the water and rocky seafloor. This prevents the water-rock chemistry that many scientists think is needed for life.",
+            distractorExplanations: {
+              0: 'Water is toxic in large amounts is incorrect; at extreme depths, pressure creates a layer of ice between the water and rocky seafloor. This prevents the water-rock chemistry that many scientists think is needed for life.',
+              2: 'Deep oceans are always too cold for life is incorrect; at extreme depths, pressure creates a layer of ice between the water and rocky seafloor. This prevents the water-rock chemistry that many scientists think is needed for life.',
+              3: 'Fish can\'t survive in deep water is incorrect; at extreme depths, pressure creates a layer of ice between the water and rocky seafloor. This prevents the water-rock chemistry that many scientists think is needed for life.',
+            },
           },
           {
             id: "sp-sec11-u5-L3-Q6",
@@ -2055,6 +2280,9 @@ export const spaceSection11Part1: Unit[] = [
             question: "Subsurface oceans require a planet to be in the habitable zone.",
             correctAnswer: false,
             explanation: "Subsurface oceans can be heated by tidal forces, not starlight. They can exist far outside the traditional habitable zone.",
+            distractorExplanations: {
+              0: 'Subsurface oceans can be heated by tidal forces, not starlight. They can exist far outside the traditional habitable zone.',
+            },
           },
         ],
       },

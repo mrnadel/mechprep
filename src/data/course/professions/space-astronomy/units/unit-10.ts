@@ -29,6 +29,9 @@ export const unit10: Unit = {
           question: "The Artemis program aims to return humans to the Moon.",
           correctAnswer: true,
           explanation: "Artemis plans to land astronauts on the Moon, with the goal of establishing a long-term presence there.",
+          distractorExplanations: {
+            1: 'Artemis plans to land astronauts on the Moon, with the goal of establishing a long-term presence there',
+          },
         },
         {
           id: "sp-u10-L1-Q2",
@@ -42,6 +45,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Apollo 17 in December 1972 was the last crewed Moon mission. Over 50 years passed before Artemis began its missions.",
+          distractorExplanations: {
+            1: 'Apollo 17 in December 1972 was the last crewed Moon mission',
+            2: 'Apollo 17 in December 1972 was the last crewed Moon mission',
+            3: 'Apollo 17 in December 1972 was the last crewed Moon mission',
+          },
         },
         {
           id: "sp-u10-L1-T2",
@@ -78,6 +86,9 @@ export const unit10: Unit = {
           question: "Water ice has been found at the Moon's poles.",
           correctAnswer: true,
           explanation: "Multiple missions have confirmed water ice in permanently shadowed craters at the lunar poles. This resource could be game-changing for sustained presence.",
+          distractorExplanations: {
+            1: 'Multiple missions have confirmed water ice in permanently shadowed craters at the lunar poles',
+          },
         },
         {
           id: "sp-u10-L1-Q6",
@@ -94,6 +105,9 @@ export const unit10: Unit = {
           question: "Lunar water ice could potentially be used to produce rocket fuel.",
           correctAnswer: true,
           explanation: "Water can be split into hydrogen and oxygen, both of which are used as rocket propellant. Mining lunar ice would avoid the enormous cost of launching fuel from Earth.",
+          distractorExplanations: {
+            1: 'Water can be split into hydrogen and oxygen, both of which are used as rocket propellant',
+          },
         },
         {
           id: "sp-u10-L1-Q7",
@@ -107,6 +121,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "The SLS is NASA's new heavy-lift rocket designed specifically for deep-space missions including Artemis.",
+          distractorExplanations: {
+            1: 'The SLS is NASA\'s new heavy-lift rocket designed specifically for deep-space missions including Artemis',
+            2: 'The SLS is NASA\'s new heavy-lift rocket designed specifically for deep-space missions including Artemis',
+            3: 'The SLS is NASA\'s new heavy-lift rocket designed specifically for deep-space missions including Artemis',
+          },
         },
         {
           id: "sp-u10-L1-Q8",
@@ -114,6 +133,9 @@ export const unit10: Unit = {
           question: "The Artemis program is a solo NASA effort with no international partners.",
           correctAnswer: false,
           explanation: "Artemis includes international partners like ESA (providing the Orion service module), JAXA (life support for Gateway), and CSA (Canadarm3 robotic arm), as well as commercial partners like SpaceX (lunar lander). Over 30 countries have signed the Artemis Accords to participate.",
+          distractorExplanations: {
+            0: 'Artemis includes international partners like ESA (providing the Orion service module), JAXA (life support for Gateway), and CSA (Canadarm3 robotic ...',
+          },
         },
       ],
     },
@@ -138,6 +160,9 @@ export const unit10: Unit = {
           question: "Mars has a thick, breathable atmosphere.",
           correctAnswer: false,
           explanation: "Mars's atmosphere is about 1% as thick as Earth's and is 95% carbon dioxide. Humans can't breathe it.",
+          distractorExplanations: {
+            0: 'Mars\'s atmosphere is about 1% as thick as Earth\'s and is 95% carbon dioxide',
+          },
         },
         {
           id: "sp-u10-L2-Q2",
@@ -152,6 +177,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Mars is brutally hostile: extreme cold, unbreathable air, deadly radiation. A Mars habitat must address all these simultaneously with multiple layers of protection.",
+          distractorExplanations: {
+            1: 'Mars is brutally hostile: extreme cold, unbreathable air, deadly radiation',
+            2: 'Mars is brutally hostile: extreme cold, unbreathable air, deadly radiation',
+            3: 'Mars is brutally hostile: extreme cold, unbreathable air, deadly radiation',
+          },
         },
         {
           id: "sp-u10-L2-T2",
@@ -172,6 +202,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "Without a magnetic field or dense atmosphere, dangerous cosmic rays and solar radiation reach the Martian surface.",
+          distractorExplanations: {
+            0: 'Without a magnetic field or dense atmosphere, dangerous cosmic rays and solar radiation reach the Martian surface',
+            1: 'Without a magnetic field or dense atmosphere, dangerous cosmic rays and solar radiation reach the Martian surface',
+            3: 'Without a magnetic field or dense atmosphere, dangerous cosmic rays and solar radiation reach the Martian surface',
+          },
         },
         {
           id: "sp-u10-L2-Q4",
@@ -193,6 +228,9 @@ export const unit10: Unit = {
           question: "The MOXIE experiment successfully produced oxygen on Mars.",
           correctAnswer: true,
           explanation: "MOXIE, aboard the Perseverance rover, converted Martian carbon dioxide into oxygen, demonstrating a key technology for future colonization.",
+          distractorExplanations: {
+            1: 'MOXIE, aboard the Perseverance rover, converted Martian carbon dioxide into oxygen, demonstrating a key technology for future colonization',
+          },
         },
         {
           id: "sp-u10-L2-Q6",
@@ -224,6 +262,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Colonists would be millions of miles from home with communication delays of up to 24 minutes. Isolation and confinement are serious psychological risks.",
+          distractorExplanations: {
+            0: 'Colonists would be millions of miles from home with communication delays of up to 24 minutes',
+            2: 'Colonists would be millions of miles from home with communication delays of up to 24 minutes',
+            3: 'Colonists would be millions of miles from home with communication delays of up to 24 minutes',
+          },
         },
       ],
     },
@@ -248,6 +291,9 @@ export const unit10: Unit = {
           question: "Civilians have already traveled to space as tourists.",
           correctAnswer: true,
           explanation: "Multiple private citizens have flown to space on commercial vehicles since 2021.",
+          distractorExplanations: {
+            1: 'Multiple private citizens have flown to space on commercial vehicles since 2021',
+          },
         },
         {
           id: "sp-u10-L3-Q2",
@@ -262,6 +308,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Suborbital flights from Blue Origin and Virgin Galactic cost around $250,000 to $450,000, last a few hours, and provide the brief space experience this couple wants.",
+          distractorExplanations: {
+            1: 'Suborbital flights from Blue Origin and Virgin Galactic cost around $250,000 to $450,000, last a few hours, and provide the brief space experience ...',
+            2: 'Suborbital flights from Blue Origin and Virgin Galactic cost around $250,000 to $450,000, last a few hours, and provide the brief space experience ...',
+            3: 'Suborbital flights from Blue Origin and Virgin Galactic cost around $250,000 to $450,000, last a few hours, and provide the brief space experience ...',
+          },
         },
         {
           id: "sp-u10-L3-T2",
@@ -304,6 +355,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Reusable rockets dramatically cut launch costs, and more companies competing drives innovation and lower prices.",
+          distractorExplanations: {
+            0: 'Reusable rockets dramatically cut launch costs, and more companies competing drives innovation and lower prices',
+            2: 'Reusable rockets dramatically cut launch costs, and more companies competing drives innovation and lower prices',
+            3: 'Reusable rockets dramatically cut launch costs, and more companies competing drives innovation and lower prices',
+          },
         },
         {
           id: "sp-u10-L3-Q6",
@@ -311,6 +367,9 @@ export const unit10: Unit = {
           question: "Suborbital space tourists spend several days in orbit.",
           correctAnswer: false,
           explanation: "Suborbital flights last only minutes in space. They go up, experience brief weightlessness, and come back down.",
+          distractorExplanations: {
+            0: 'Suborbital flights last only minutes in space',
+          },
         },
         {
           id: "sp-u10-L3-Q7",
@@ -333,6 +392,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "The overview effect (seeing Earth from space) and weightlessness are the defining experiences of any spaceflight.",
+          distractorExplanations: {
+            0: 'The overview effect (seeing Earth from space) and weightlessness are the defining experiences of any spaceflight',
+            2: 'The overview effect (seeing Earth from space) and weightlessness are the defining experiences of any spaceflight',
+            3: 'The overview effect (seeing Earth from space) and weightlessness are the defining experiences of any spaceflight',
+          },
         },
       ],
     },
@@ -357,6 +421,9 @@ export const unit10: Unit = {
           question: "Some asteroids contain valuable metals like platinum and gold.",
           correctAnswer: true,
           explanation: "Metallic asteroids are rich in platinum-group metals and other valuable resources that are rare on Earth's surface.",
+          distractorExplanations: {
+            1: 'Metallic asteroids are rich in platinum-group metals and other valuable resources that are rare on Earth\'s surface',
+          },
         },
         {
           id: "sp-u10-L4-Q2",
@@ -370,6 +437,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "While Earth still has metals, some are increasingly scarce. Asteroids offer enormous quantities that could supply space industry and supplement Earth's resources.",
+          distractorExplanations: {
+            0: 'While Earth still has metals, some are increasingly scarce',
+            1: 'While Earth still has metals, some are increasingly scarce',
+            3: 'While Earth still has metals, some are increasingly scarce',
+          },
         },
         {
           id: "sp-u10-L4-T2",
@@ -384,6 +456,9 @@ export const unit10: Unit = {
           question: "Water is considered one of the most valuable resources in space.",
           correctAnswer: true,
           explanation: "Water provides drinking water, breathable oxygen, and rocket fuel. Finding it in space avoids the huge cost of launching it from Earth.",
+          distractorExplanations: {
+            1: 'Water provides drinking water, breathable oxygen, and rocket fuel',
+          },
         },
         {
           id: "sp-u10-L4-Q3",
@@ -413,6 +488,9 @@ export const unit10: Unit = {
           question: "Space mining faces legal questions about who owns resources mined in space.",
           correctAnswer: true,
           explanation: "No comprehensive international framework yet governs space resource ownership. Some countries have passed national laws, but the issue remains unresolved.",
+          distractorExplanations: {
+            1: 'Comprehensive international framework yet governs space resource ownership',
+          },
         },
         {
           id: "sp-u10-L4-Q5",
@@ -429,6 +507,9 @@ export const unit10: Unit = {
           question: "International law clearly defines who owns resources mined from asteroids.",
           correctAnswer: false,
           explanation: "Space resource rights are still debated. Some countries have passed national laws allowing it, but no comprehensive international framework exists yet.",
+          distractorExplanations: {
+            0: 'Space resource rights are still debated',
+          },
         },
         {
           id: "sp-u10-L4-Q7",
@@ -442,6 +523,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "NASA's OSIRIS-REx mission collected a sample from asteroid Bennu and returned it to Earth in 2023.",
+          distractorExplanations: {
+            0: 'NASA\'s OSIRIS-REx mission collected a sample from asteroid Bennu and returned it to Earth in 2023',
+            1: 'NASA\'s OSIRIS-REx mission collected a sample from asteroid Bennu and returned it to Earth in 2023',
+            3: 'NASA\'s OSIRIS-REx mission collected a sample from asteroid Bennu and returned it to Earth in 2023',
+          },
         },
         {
           id: "sp-u10-L4-Q8",
@@ -475,6 +561,9 @@ export const unit10: Unit = {
           question: "The nearest star to our Sun is about 4 light-years away.",
           correctAnswer: true,
           explanation: "Proxima Centauri, part of the Alpha Centauri system, is about 4.24 light-years from our Sun. Even light takes over 4 years to get there.",
+          distractorExplanations: {
+            1: 'Proxima Centauri, part of the Alpha Centauri system, is about 4.24 light-years from our Sun',
+          },
         },
         {
           id: "sp-u10-L5-Q2",
@@ -513,6 +602,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "A generation ship is a self-sustaining spacecraft so large that families would live on it for centuries, with descendants eventually arriving at the destination.",
+          distractorExplanations: {
+            0: 'A generation ship is a self-sustaining spacecraft so large that families would live on it for centuries, with descendants eventually arriving at th...',
+            1: 'A generation ship is a self-sustaining spacecraft so large that families would live on it for centuries, with descendants eventually arriving at th...',
+            3: 'A generation ship is a self-sustaining spacecraft so large that families would live on it for centuries, with descendants eventually arriving at th...',
+          },
         },
         {
           id: "sp-u10-L5-T3",
@@ -535,6 +629,9 @@ export const unit10: Unit = {
           question: "A warp drive has been built and tested by NASA.",
           correctAnswer: false,
           explanation: "Warp drives are purely theoretical. While physicists have studied the math, we don't have the exotic matter or energy needed to build one.",
+          distractorExplanations: {
+            0: 'Warp drives are purely theoretical',
+          },
         },
         {
           id: "sp-u10-L5-Q7",
@@ -557,6 +654,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "Even the nearest star is over 4 light-years away. At any realistic speed, the journey takes decades to millennia.",
+          distractorExplanations: {
+            0: 'Even the nearest star is over 4 light-years away',
+            1: 'Even the nearest star is over 4 light-years away',
+            3: 'Even the nearest star is over 4 light-years away',
+          },
         },
       ],
     },
@@ -581,6 +683,9 @@ export const unit10: Unit = {
           question: "The Fermi Paradox asks why we haven't found evidence of alien civilizations despite the universe's vast size.",
           correctAnswer: true,
           explanation: "Named after physicist Enrico Fermi, it highlights the contradiction between the high probability of alien life and the complete lack of evidence for it.",
+          distractorExplanations: {
+            1: 'Named after physicist Enrico Fermi, it highlights the contradiction between the high probability of alien life and the complete lack of evidence fo...',
+          },
         },
         {
           id: "sp-u10-L6-Q2",
@@ -594,6 +699,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Physicist Enrico Fermi famously asked 'Where is everybody?' during a lunch conversation in 1950.",
+          distractorExplanations: {
+            0: 'Physicist Enrico Fermi famously asked \'Where is everybody?\' during a lunch conversation in 1950',
+            2: 'Physicist Enrico Fermi famously asked \'Where is everybody?\' during a lunch conversation in 1950',
+            3: 'Physicist Enrico Fermi famously asked \'Where is everybody?\' during a lunch conversation in 1950',
+          },
         },
         {
           id: "sp-u10-L6-T2",
@@ -613,6 +723,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "One popular explanation is the 'Rare Earth' hypothesis: conditions for intelligent life may require such a specific combination of factors that it almost never happens.",
+          distractorExplanations: {
+            1: 'One popular explanation is the \'Rare Earth\' hypothesis: conditions for intelligent life may require such a specific combination of factors that it ...',
+            2: 'One popular explanation is the \'Rare Earth\' hypothesis: conditions for intelligent life may require such a specific combination of factors that it ...',
+            3: 'One popular explanation is the \'Rare Earth\' hypothesis: conditions for intelligent life may require such a specific combination of factors that it ...',
+          },
         },
         {
           id: "sp-u10-L6-Q4",
@@ -641,6 +756,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "The Great Filter is a hypothetical barrier that could explain why we don't see evidence of spacefaring civilizations. Something stops them.",
+          distractorExplanations: {
+            0: 'The Great Filter is a hypothetical barrier that could explain why we don\'t see evidence of spacefaring civilizations',
+            2: 'The Great Filter is a hypothetical barrier that could explain why we don\'t see evidence of spacefaring civilizations',
+            3: 'The Great Filter is a hypothetical barrier that could explain why we don\'t see evidence of spacefaring civilizations',
+          },
         },
         {
           id: "sp-u10-L6-Q6",
@@ -657,6 +777,9 @@ export const unit10: Unit = {
           question: "The Fermi Paradox has been definitively solved.",
           correctAnswer: false,
           explanation: "The paradox remains unsolved. We don't know why the universe appears empty of detectable civilizations. It's one of the biggest open questions in science.",
+          distractorExplanations: {
+            0: 'The paradox remains unsolved. We don\'t know why the universe appears empty of detectable civilizations',
+          },
         },
         {
           id: "sp-u10-L6-Q8",

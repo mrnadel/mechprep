@@ -39,6 +39,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Refinancing means replacing your current mortgage with a new one.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The new loan pays off the old loan, making this statement true.' },
             explanation: "The new loan pays off the old loan. You then make payments on the new loan's terms.",
           },
           {
@@ -52,6 +53,11 @@ export const finSection10Part2: Unit[] = [
               "To change the color of their home",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Most people refinance to reduce their interest rate.',
+              2: 'This is not the best answer; Most people refinance to reduce their interest rate.',
+              3: 'This is not the best answer; Most people refinance to reduce their interest rate.',
+            },
             explanation: "Most people refinance to reduce their interest rate, lower monthly payments, or shorten their loan term.",
           },
           {
@@ -66,6 +72,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Refinancing is free and has no closing costs.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Refinancing typically costs 2% to 5% of the loan amount.' },
             explanation: "Refinancing typically costs 2% to 5% of the loan amount. These fees must be weighed against potential savings.",
           },
           {
@@ -103,6 +110,11 @@ export const finSection10Part2: Unit[] = [
               "Reverse mortgage",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Rate-and-term refinance is not correct in this context; a cash-out refinance replaces your mortgage with a larger one.',
+              2: 'No-closing-cost refinance is not correct in this context; a cash-out refinance replaces your mortgage with a larger one.',
+              3: 'Reverse mortgage is not correct in this context; a cash-out refinance replaces your mortgage with a larger one.',
+            },
             explanation: "A cash-out refinance replaces your mortgage with a larger one. You receive the difference in cash.",
           },
         ],
@@ -128,6 +140,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "The break-even point tells you how many months until refinancing savings cover the closing costs.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Once you pass the break-even point, every month of savings is pure profit.' },
             explanation: "Once you pass the break-even point, every month of savings is pure profit.",
           },
           {
@@ -141,6 +154,11 @@ export const finSection10Part2: Unit[] = [
               "48 months",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This timeframe is incorrect based on the facts presented.',
+              2: 'This timeframe is incorrect based on the facts presented.',
+              3: 'This timeframe is incorrect based on the facts presented.',
+            },
             explanation: "$6,000 divided by $250 equals 24 months. You need to stay at least 24 months to break even.",
           },
           {
@@ -162,6 +180,11 @@ export const finSection10Part2: Unit[] = [
               "No, because refinancing costs are too high",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that because $150/month in savings is significant does not hold up against the correct analysis.',
+              2: 'The reasoning that because refinancing always saves money does not hold up against the correct analysis.',
+              3: 'The reasoning that because refinancing costs are too high does not hold up against the correct analysis.',
+            },
             explanation: "Selling in 24 months means Kim would pay $5,000 in costs but only save $3,600 (24 x $150). That's a net loss of $1,400.",
           },
           {
@@ -194,6 +217,11 @@ export const finSection10Part2: Unit[] = [
               "$32,000",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $16,000.',
+              2: 'This does not match the correct calculation; the right answer is $16,000.',
+              3: 'This does not match the correct calculation; the right answer is $16,000.',
+            },
             explanation: "60 months times $400 equals $24,000 in savings. Minus $8,000 in costs equals $16,000 net savings.",
           },
           {
@@ -208,6 +236,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Refinancing into a new 30-year mortgage after 10 years resets your payoff timeline to 30 years.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'You start a fresh 30-year clock, meaning you\'ve now committed to 40 total years of payments.' },
             explanation: "You start a fresh 30-year clock, meaning you've now committed to 40 total years of payments.",
           },
         ],
@@ -233,6 +262,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "A cash-out refinance lets you borrow against the equity in your home.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'You get a new, larger mortgage and receive the difference between your old balance and the new one as cash.' },
             explanation: "You get a new, larger mortgage and receive the difference between your old balance and the new one as cash.",
           },
           {
@@ -246,6 +276,11 @@ export const finSection10Part2: Unit[] = [
               "$280,000",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $80,000.',
+              2: 'This does not match the correct calculation; the right answer is $80,000.',
+              3: 'This does not match the correct calculation; the right answer is $80,000.',
+            },
             explanation: "80% of $350,000 is $280,000. Minus the $200,000 you owe leaves $80,000 available as cash.",
           },
           {
@@ -283,6 +318,11 @@ export const finSection10Part2: Unit[] = [
               "His interest rate automatically increases",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; If his $350,000 home drops 15% to $297,500, he now owes $250,000 on a home ba...',
+              2: 'The bank takes his cash back is not correct in this context; If his $350,000 home drops 15% to $297,500, he now owes $250,000 on a home ba...',
+              3: 'This is not the best answer; If his $350,000 home drops 15% to $297,500, he now owes $250,000 on a home ba...',
+            },
             explanation: "If his $350,000 home drops 15% to $297,500, he now owes $250,000 on a home barely worth more than his debt.",
           },
           {
@@ -311,6 +351,11 @@ export const finSection10Part2: Unit[] = [
               "It requires a higher credit score",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'This is not the best answer; A larger loan with less equity means more financial exposure if your income d...',
+              3: 'This is not the best answer; A larger loan with less equity means more financial exposure if your income d...',
+            },
             explanation: "A larger loan with less equity means more financial exposure if your income drops or home values fall.",
           },
         ],
@@ -336,6 +381,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "A rate drop of 0.25% usually justifies refinancing.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'A 0.25% drop produces small monthly savings that likely won\'t cover closing costs for many years..' },
             explanation: "A 0.25% drop produces small monthly savings that likely won't cover closing costs for many years.",
           },
           {
@@ -349,6 +395,11 @@ export const finSection10Part2: Unit[] = [
               "Rate drops 2%, moving next month",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; a large rate drop combined with a long stay gives maximum savings.',
+              1: 'This is not the best answer; a large rate drop combined with a long stay gives maximum savings.',
+              3: 'This is not the best answer; a large rate drop combined with a long stay gives maximum savings.',
+            },
             explanation: "A large rate drop combined with a long stay gives maximum savings. The break-even will be short relative to the remaining time.",
           },
           {
@@ -379,6 +430,11 @@ export const finSection10Part2: Unit[] = [
               "Wait for rates to drop even further",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'The reasoning that the closing costs are too high does not hold up against the correct analysis.',
+              2: 'This is not the best answer; a 2% rate drop on $280,000 saves roughly $370/month.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "A 2% rate drop on $280,000 saves roughly $370/month. Break-even is about 16 months, and Mel has 96 months. Net savings would be substantial.",
           },
           {
@@ -393,6 +449,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Refinancing multiple times in a short period can cost more in fees than it saves in interest.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Each refinance costs thousands in closing costs, making this statement true.' },
             explanation: "Each refinance costs thousands in closing costs. Serial refinancing erodes the savings from lower rates.",
           },
           {
@@ -469,6 +526,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Rental property income is completely passive and requires no ongoing work.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Landlords handle tenant issues, maintenance, rent collection, accounting, and legal compliance.' },
             explanation: "Landlords handle tenant issues, maintenance, rent collection, accounting, and legal compliance. It requires active management.",
           },
           {
@@ -482,6 +540,11 @@ export const finSection10Part2: Unit[] = [
               "Repairs and maintenance",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; the tenant\'s car insurance is their own responsibility.',
+              2: 'Property taxes and insurance is not correct in this context; the tenant\'s car insurance is their own responsibility.',
+              3: 'Repairs and maintenance is not correct in this context; the tenant\'s car insurance is their own responsibility.',
+            },
             explanation: "The tenant's car insurance is their own responsibility. Everything else is a normal landlord expense.",
           },
           {
@@ -519,6 +582,11 @@ export const finSection10Part2: Unit[] = [
               "Sell the property since $200/month isn't enough",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; $200 before maintenance.',
+              2: 'This is not the best answer; $200 before maintenance.',
+              3: 'This is not the best answer; $200 before maintenance.',
+            },
             explanation: "$200 before maintenance, vacancy, and management is probably break-even or negative. True profit needs all expenses included.",
           },
           {
@@ -539,6 +607,11 @@ export const finSection10Part2: Unit[] = [
               "The age of the property",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The color of nearby buildings is not correct in this context; Strong employment, good schools, and transit access drive tenant demand and k...',
+              2: 'How cheap the property is is not correct in this context; Strong employment, good schools, and transit access drive tenant demand and k...',
+              3: 'The age of the property is not correct in this context; Strong employment, good schools, and transit access drive tenant demand and k...',
+            },
             explanation: "Strong employment, good schools, and transit access drive tenant demand and keep vacancy low.",
           },
         ],
@@ -564,6 +637,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Positive cash flow means the rental income exceeds all expenses including maintenance and vacancy reserves.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Positive cash flow means money goes into your pocket each month after every cost is covered.' },
             explanation: "Positive cash flow means money goes into your pocket each month after every cost is covered.",
           },
           {
@@ -577,6 +651,11 @@ export const finSection10Part2: Unit[] = [
               "-$560",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is -$60.',
+              1: 'This does not match the correct calculation; the right answer is -$60.',
+              3: '-$560 is not correct in this context; $2,000 minus $1,200 minus $200 minus $100 minus $560 equals negative $60.',
+            },
             explanation: "$2,000 minus $1,200 minus $200 minus $100 minus $560 equals negative $60. This property loses money monthly.",
           },
           {
@@ -597,6 +676,11 @@ export const finSection10Part2: Unit[] = [
               "$15,000",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $1,500.',
+              1: 'This does not match the correct calculation; the right answer is $1,500.',
+              3: 'This does not match the correct calculation; the right answer is $1,500.',
+            },
             explanation: "1% of $150,000 equals $1,500 per month. This is the minimum target for the property to potentially cash flow.",
           },
           {
@@ -619,6 +703,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "New real estate investors should prioritize positive cash flow over speculative appreciation.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Positive cash flow keeps you solvent, making this statement true.' },
             explanation: "Positive cash flow keeps you solvent. Appreciation is uncertain and can take years to materialize.",
           },
           {
@@ -633,6 +718,11 @@ export const finSection10Part2: Unit[] = [
               "Neither, both are bad investments",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'The reasoning that it generates more total rent does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that more expensive homes appreciate faster does not accurately reflect the financial principle at work.',
+              3: 'This is not the best answer; property A cash flows +$300/month.',
+            },
             explanation: "Property A cash flows +$300/month. Property B loses $300/month. Positive cash flow wins for most investors.",
           },
         ],
@@ -658,6 +748,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Cap rate is calculated by dividing net operating income by the purchase price.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Cap rate = NOI / purchase price, making this statement true.' },
             explanation: "Cap rate = NOI / purchase price. It measures the return on the property itself, regardless of financing.",
           },
           {
@@ -671,6 +762,11 @@ export const finSection10Part2: Unit[] = [
               "15%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is 7%.',
+              2: 'This does not match the correct calculation; the right answer is 7%.',
+              3: 'This does not match the correct calculation; the right answer is 7%.',
+            },
             explanation: "$17,500 divided by $250,000 equals 0.07 or 7% cap rate.",
           },
           {
@@ -700,6 +796,11 @@ export const finSection10Part2: Unit[] = [
               "48%",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is 12%.',
+              1: 'This does not match the correct calculation; the right answer is 12%.',
+              3: 'This does not match the correct calculation; the right answer is 12%.',
+            },
             explanation: "$4,800 divided by $40,000 equals 0.12 or 12% ROI.",
           },
           {
@@ -740,6 +841,11 @@ export const finSection10Part2: Unit[] = [
               "Neither is good because cap rates should be 15%+",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that it earns more total income does not accurately reflect the financial principle at work.',
+              2: 'This is not the best answer; property B returns 8% per dollar invested versus 7% for Property A.',
+              3: 'The reasoning that cap rates should be 15%+ does not accurately reflect the financial principle at work.',
+            },
             explanation: "Property B returns 8% per dollar invested versus 7% for Property A. Higher cap rate means better return on the property's value.",
           },
         ],
@@ -765,6 +871,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "A good tenant screening process includes credit checks and income verification.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Credit checks reveal payment history, making this statement true.' },
             explanation: "Credit checks reveal payment history. Income verification (ideally 3x rent) confirms they can afford the property.",
           },
           {
@@ -778,6 +885,11 @@ export const finSection10Part2: Unit[] = [
               "Income is 5x rent",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Income equals rent is not correct in this context; Most landlords require tenants to earn at least 3 times the monthly rent to e...',
+              1: 'Income is 2x rent is not correct in this context; Most landlords require tenants to earn at least 3 times the monthly rent to e...',
+              3: 'Income is 5x rent is not correct in this context; Most landlords require tenants to earn at least 3 times the monthly rent to e...',
+            },
             explanation: "Most landlords require tenants to earn at least 3 times the monthly rent to ensure they can comfortably afford payments.",
           },
           {
@@ -815,6 +927,11 @@ export const finSection10Part2: Unit[] = [
               "Remove their belongings and post a notice on the door",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Self-help evictions (changing locks.',
+              2: 'This is not the best answer; Self-help evictions (changing locks.',
+              3: 'This is not the best answer; Self-help evictions (changing locks.',
+            },
             explanation: "Self-help evictions (changing locks, shutting utilities) are illegal in most places. You must follow the legal process.",
           },
           {
@@ -837,6 +954,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Self-help evictions like changing locks or shutting off utilities are legal shortcuts for landlords.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Self-help evictions are illegal in most jurisdictions.' },
             explanation: "Self-help evictions are illegal in most jurisdictions. Landlords must follow the formal legal eviction process.",
           },
         ],
@@ -988,6 +1106,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "A REIT lets you invest in real estate without owning physical property.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'REITs own the properties, making this statement true.' },
             explanation: "REITs own the properties. You own shares in the REIT and earn dividends from the rental income it collects.",
           },
           {
@@ -1001,6 +1120,11 @@ export const finSection10Part2: Unit[] = [
               "By managing the REIT's properties",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; rEITs must distribute at least 90% of taxable income as dividends.',
+              2: 'This is not the best answer; rEITs must distribute at least 90% of taxable income as dividends.',
+              3: 'This is not the best answer; rEITs must distribute at least 90% of taxable income as dividends.',
+            },
             explanation: "REITs must distribute at least 90% of taxable income as dividends. Investors earn from these regular payments.",
           },
           {
@@ -1015,6 +1139,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "REITs are required to distribute at least 90% of their taxable income as dividends.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'This legal requirement is what makes REITs appealing to income investors, making this statement true.' },
             explanation: "This legal requirement is what makes REITs appealing to income investors. It's also why REIT dividend yields tend to be high.",
           },
           {
@@ -1059,6 +1184,11 @@ export const finSection10Part2: Unit[] = [
               "You control which properties to buy",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Higher returns guaranteed is not correct in this context; REITs require no hands-on management and you can sell shares instantly, unlik...',
+              2: 'No taxes on dividends is not correct in this context; REITs require no hands-on management and you can sell shares instantly, unlik...',
+              3: 'This is not the best answer; REITs require no hands-on management and you can sell shares instantly, unlik...',
+            },
             explanation: "REITs require no hands-on management and you can sell shares instantly, unlike physical property.",
           },
         ],
@@ -1084,6 +1214,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Equity REITs own physical properties and earn income from rent.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Equity REITs are the most common type, making this statement true.' },
             explanation: "Equity REITs are the most common type. They own buildings and collect rent from tenants.",
           },
           {
@@ -1129,6 +1260,11 @@ export const finSection10Part2: Unit[] = [
               "Neither carries any risk",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Equity REITs is not correct in this context; Mortgage REITs use heavy leverage and are sensitive to interest rate changes,...',
+              2: 'They carry the same risk is not correct in this context; Mortgage REITs use heavy leverage and are sensitive to interest rate changes,...',
+              3: 'Neither carries any risk is not correct in this context; Mortgage REITs use heavy leverage and are sensitive to interest rate changes,...',
+            },
             explanation: "Mortgage REITs use heavy leverage and are sensitive to interest rate changes, making them more volatile.",
           },
           {
@@ -1143,6 +1279,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "A REIT ETF holds multiple REITs in one investment for diversification.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'REIT ETFs spread your investment across many REITs, reducing the risk of any single property sector underperforming.' },
             explanation: "REIT ETFs spread your investment across many REITs, reducing the risk of any single property sector underperforming.",
           },
           {
@@ -1157,6 +1294,11 @@ export const finSection10Part2: Unit[] = [
               "Skip real estate and buy only bonds",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Buy a single residential REIT is not correct in this context; A REIT ETF gives Nina instant diversification across many property types with...',
+              2: 'This is not the best answer; A REIT ETF gives Nina instant diversification across many property types with...',
+              3: 'This is not the best answer; A REIT ETF gives Nina instant diversification across many property types with...',
+            },
             explanation: "A REIT ETF gives Nina instant diversification across many property types with no research or management needed.",
           },
         ],
@@ -1182,6 +1324,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Real estate crowdfunding lets investors pool money to fund property deals with low minimums.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Platforms collect small contributions from many investors to fund larger real estate projects.' },
             explanation: "Platforms collect small contributions from many investors to fund larger real estate projects.",
           },
           {
@@ -1195,6 +1338,11 @@ export const finSection10Part2: Unit[] = [
               "Immediate access to your cash anytime",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Guaranteed higher returns is not correct in this context; Crowdfunding lets you invest small amounts without managing tenants or proper...',
+              2: 'No risk of losing money is not correct in this context; Crowdfunding lets you invest small amounts without managing tenants or proper...',
+              3: 'This is not the best answer; Crowdfunding lets you invest small amounts without managing tenants or proper...',
+            },
             explanation: "Crowdfunding lets you invest small amounts without managing tenants or properties. Returns and liquidity are not guaranteed.",
           },
           {
@@ -1247,6 +1395,11 @@ export const finSection10Part2: Unit[] = [
               "Only whether your friends have invested",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Due diligence on fees.',
+              2: 'This is not the best answer; Due diligence on fees.',
+              3: 'This is not the best answer; Due diligence on fees.',
+            },
             explanation: "Due diligence on fees, history, lockup terms, and regulation protects you from low-quality or fraudulent platforms.",
           },
           {
@@ -1261,6 +1414,11 @@ export const finSection10Part2: Unit[] = [
               "Keep the money in cash since real estate is too risky",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; If Talia needs access to her money.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; If Talia needs access to her money.',
+            },
             explanation: "If Talia needs access to her money, a liquid REIT or REIT ETF is better than a 5-year lockup.",
           },
         ],
@@ -1329,6 +1487,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Your monthly mortgage payment is determined by the loan amount, interest rate, and loan term.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'These 3 variables together determine your fixed monthly payment for the life of the loan.' },
             explanation: "These 3 variables together determine your fixed monthly payment for the life of the loan.",
           },
           {
@@ -1342,6 +1501,11 @@ export const finSection10Part2: Unit[] = [
               "Lower interest rate",
             ],
             correctIndex: 3,
+            distractorExplanations: {
+              0: 'Higher interest rate is not correct in this context; A lower interest rate means less of each payment goes to interest.',
+              1: 'Shorter loan term is not correct in this context; A lower interest rate means less of each payment goes to interest.',
+              2: 'Larger loan amount is not correct in this context; A lower interest rate means less of each payment goes to interest.',
+            },
             explanation: "A lower interest rate means less of each payment goes to interest, reducing the total monthly amount.",
           },
           {
@@ -1379,6 +1543,11 @@ export const finSection10Part2: Unit[] = [
               "15-year at 6.5%",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: '15-year at 6.0% is not correct in this context; the 30-year term spreads payments over more months, and 6.',
+              2: '30-year at 7.0% is not correct in this context; the 30-year term spreads payments over more months, and 6.',
+              3: '15-year at 6.5% is not correct in this context; the 30-year term spreads payments over more months, and 6.',
+            },
             explanation: "The 30-year term spreads payments over more months, and 6.5% is the lowest 30-year rate offered.",
           },
           {
@@ -1401,6 +1570,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "In the early years of a mortgage, more of each payment goes to principal than to interest.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'It\'s the opposite.' },
             explanation: "It's the opposite. Early payments are mostly interest. The principal portion grows over time.",
           },
         ],
@@ -1426,6 +1596,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "An amortization schedule shows how each mortgage payment splits between interest and principal.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'It breaks down every payment so you can see exactly where your money goes each month.' },
             explanation: "It breaks down every payment so you can see exactly where your money goes each month.",
           },
           {
@@ -1439,6 +1610,11 @@ export const finSection10Part2: Unit[] = [
               "It disappears after year 10",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'It stays the same every month is not correct in this context; as you pay down the balance, less interest accrues each month.',
+              1: 'It increases as the loan ages is not correct in this context; as you pay down the balance, less interest accrues each month.',
+              3: 'It disappears after year 10 is not correct in this context; as you pay down the balance, less interest accrues each month.',
+            },
             explanation: "As you pay down the balance, less interest accrues each month. More of each payment goes to principal.",
           },
           {
@@ -1453,6 +1629,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Extra mortgage payments go entirely toward reducing the principal balance.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Your required payment covers that month\'s interest, making this statement true.' },
             explanation: "Your required payment covers that month's interest. Any extra goes straight to principal, reducing the balance faster.",
           },
           {
@@ -1475,6 +1652,11 @@ export const finSection10Part2: Unit[] = [
               "Saves exactly $70 in interest",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; By eliminating $1,000 of principal early, you avoid $1,750 in interest that w...',
+              1: 'Saves $1,000 in interest is not correct in this context; By eliminating $1,000 of principal early, you avoid $1,750 in interest that w...',
+              3: 'Saves exactly $70 in interest is not correct in this context; By eliminating $1,000 of principal early, you avoid $1,750 in interest that w...',
+            },
             explanation: "By eliminating $1,000 of principal early, you avoid $1,750 in interest that would have accumulated over 25 years.",
           },
           {
@@ -1495,6 +1677,11 @@ export const finSection10Part2: Unit[] = [
               "The government offers a biweekly tax credit",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; 26 biweekly payments equal 13 monthly payments.',
+              2: 'This is not the best answer; 26 biweekly payments equal 13 monthly payments.',
+              3: 'This is not the best answer; 26 biweekly payments equal 13 monthly payments.',
+            },
             explanation: "26 biweekly payments equal 13 monthly payments. The extra payment each year goes to principal and shortens your loan.",
           },
         ],
@@ -1520,6 +1707,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Home equity equals your home's market value minus your remaining mortgage balance.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Equity is the portion of the home you truly own, making this statement true.' },
             explanation: "Equity is the portion of the home you truly own. It grows as you pay down debt and as the home appreciates.",
           },
           {
@@ -1533,6 +1721,11 @@ export const finSection10Part2: Unit[] = [
               "$400,000",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $120,000.',
+              2: 'This does not match the correct calculation; the right answer is $120,000.',
+              3: 'This does not match the correct calculation; the right answer is $120,000.',
+            },
             explanation: "$400,000 minus $280,000 equals $120,000 in equity. That's your ownership stake.",
           },
           {
@@ -1563,6 +1756,11 @@ export const finSection10Part2: Unit[] = [
               "$90,000",
             ],
             correctIndex: 3,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $90,000.',
+              1: 'This does not match the correct calculation; the right answer is $90,000.',
+              2: 'This does not match the correct calculation; the right answer is $90,000.',
+            },
             explanation: "Down payment ($30,000) plus principal paid ($20,000) plus appreciation ($40,000) equals $90,000 in equity.",
           },
           {
@@ -1585,6 +1783,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Home equity can be quickly and easily accessed like a savings account.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Accessing equity requires selling, refinancing, or a home equity loan.' },
             explanation: "Accessing equity requires selling, refinancing, or a home equity loan. All of these take time and cost money.",
           },
         ],
@@ -1610,6 +1809,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "Leverage in real estate means using borrowed money to control a larger asset.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'A mortgage lets you control a $300,000 asset with perhaps $60,000 of your own money, making this statement true.' },
             explanation: "A mortgage lets you control a $300,000 asset with perhaps $60,000 of your own money. The bank provides the rest.",
           },
           {
@@ -1623,6 +1823,11 @@ export const finSection10Part2: Unit[] = [
               "100%",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is 50%.',
+              1: 'This does not match the correct calculation; the right answer is 50%.',
+              3: 'This does not match the correct calculation; the right answer is 50%.',
+            },
             explanation: "You gained $20,000 on a $40,000 investment. That's a 50% return, even though the home only rose 10%.",
           },
           {
@@ -1660,6 +1865,11 @@ export const finSection10Part2: Unit[] = [
               "He gained money from the drop",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'He has $50,000 in equity is not correct in this context; home value ($200,000) minus mortgage ($200,000) equals $0 equity.',
+              2: 'He has $200,000 in equity is not correct in this context; home value ($200,000) minus mortgage ($200,000) equals $0 equity.',
+              3: 'He gained money from the drop is not correct in this context; home value ($200,000) minus mortgage ($200,000) equals $0 equity.',
+            },
             explanation: "Home value ($200,000) minus mortgage ($200,000) equals $0 equity. Marco's entire $50,000 investment is gone.",
           },
           {
@@ -1700,6 +1910,11 @@ export const finSection10Part2: Unit[] = [
               "Insurance costs more with lower down payments",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; with only 5% down, a 5% price drop erases all your equity.',
+              2: 'This is not the best answer; with only 5% down, a 5% price drop erases all your equity.',
+              3: 'This is not the best answer; with only 5% down, a 5% price drop erases all your equity.',
+            },
             explanation: "With only 5% down, a 5% price drop erases all your equity. With 20% down, you have more cushion before reaching zero.",
           },
         ],
@@ -1857,6 +2072,11 @@ export const finSection10Part2: Unit[] = [
               "$4,167",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $2,083.',
+              2: 'This does not match the correct calculation; the right answer is $2,083.',
+              3: 'This does not match the correct calculation; the right answer is $2,083.',
+            },
             explanation: "$500,000 times 0.05 equals $25,000 per year. Divide by 12 to get $2,083 per month.",
           },
           {
@@ -1864,6 +2084,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "A cap rate is calculated by dividing net operating income by the purchase price.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Cap rate = NOI / price, making this statement true.' },
             explanation: "Cap rate = NOI / price. It measures the property's return independent of how you finance it.",
           },
           {
@@ -1918,6 +2139,11 @@ export const finSection10Part2: Unit[] = [
               "Wait until you have $100,000 saved",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; pre-approval is always the first step.',
+              2: 'This is not the best answer; pre-approval is always the first step.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "Pre-approval is always the first step. It tells you your budget and shows sellers you're a serious buyer.",
           },
         ],
@@ -1950,6 +2176,11 @@ export const finSection10Part2: Unit[] = [
               "Wait for home prices to drop",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Rent ($2,400) exceeds breakeven ($2,000), they have 20% down (no PMI), and a ...',
+              2: 'This is not the best answer; Rent ($2,400) exceeds breakeven ($2,000), they have 20% down (no PMI), and a ...',
+              3: 'Wait for home prices to drop is not correct in this context; Rent ($2,400) exceeds breakeven ($2,000), they have 20% down (no PMI), and a ...',
+            },
             explanation: "Rent ($2,400) exceeds breakeven ($2,000), they have 20% down (no PMI), and a 10-year timeline. Buying makes strong financial sense.",
           },
           {
@@ -1964,6 +2195,11 @@ export const finSection10Part2: Unit[] = [
               "Wait for rates to drop below 4%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that the closing costs are too high does not hold up against the correct analysis.',
+              2: 'This is not the best answer; $8,000 divided by $350 equals about 23 months.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "$8,000 divided by $350 equals about 23 months. Dara stays 144 months, so the net savings would be about $42,400.",
           },
           {
@@ -1977,6 +2213,11 @@ export const finSection10Part2: Unit[] = [
               "12.5%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is 8%.',
+              2: 'This does not match the correct calculation; the right answer is 8%.',
+              3: 'This does not match the correct calculation; the right answer is 8%.',
+            },
             explanation: "$20,000 divided by $250,000 equals 0.08 or 8% cap rate.",
           },
           {
@@ -1991,6 +2232,11 @@ export const finSection10Part2: Unit[] = [
               "Cash-out refinances are always risk-free",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; reducing equity from 30% to 10% leaves very little cushion.',
+              2: 'This is not the best answer; reducing equity from 30% to 10% leaves very little cushion.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Reducing equity from 30% to 10% leaves very little cushion. A market drop could put Tomas underwater on his own home.",
           },
           {
@@ -1998,6 +2244,7 @@ export const finSection10Part2: Unit[] = [
             type: "true-false",
             question: "A REIT ETF is a good option for investors who want real estate exposure with liquidity and diversification.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'REIT ETFs trade on exchanges (liquidity) and hold many REITs across sectors (diversification).' },
             explanation: "REIT ETFs trade on exchanges (liquidity) and hold many REITs across sectors (diversification).",
           },
           {

@@ -98,7 +98,7 @@ export function LandingPage() {
 
           <AnimateIn delay={0.2}>
             <Link
-              href="/get-started"
+              href="/try"
               className="landing-btn-primary"
               style={{
                 display: 'inline-block', background: '#0D9488', color: '#fff',
@@ -108,13 +108,15 @@ export function LandingPage() {
                 transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
               }}
             >
-              Get started
+              Try a free lesson
             </Link>
           </AnimateIn>
 
           <AnimateIn delay={0.3}>
             <p style={{ marginTop: 16, fontSize: 13, fontWeight: 600, color: '#94A3B8' }}>
-              <Link href="/login" style={{ color: '#0D9488', fontWeight: 700, textDecoration: 'none' }}>I already have an account</Link>
+              <Link href="/get-started" style={{ color: '#0D9488', fontWeight: 700, textDecoration: 'none' }}>Create account</Link>
+              {' · '}
+              <Link href="/login" style={{ color: '#0D9488', fontWeight: 700, textDecoration: 'none' }}>Log in</Link>
             </p>
           </AnimateIn>
         </div>
@@ -150,7 +152,7 @@ export function LandingPage() {
 
           <AnimateIn delay={0.1}>
             <Link
-              href="/get-started"
+              href="/try"
               className="landing-btn-primary"
               style={{
                 display: 'inline-block', background: '#0D9488', color: '#fff',
@@ -160,7 +162,7 @@ export function LandingPage() {
                 transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
               }}
             >
-              Get started
+              Try a free lesson
             </Link>
           </AnimateIn>
         </div>
@@ -260,7 +262,7 @@ function InteractiveDemo() {
           Imagine this with {PROFESSIONS.reduce((sum, p) => sum + p.questionCount, 0).toLocaleString()}+ questions across {PROFESSIONS.length} professions
         </div>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/get-started" className="landing-btn-primary" style={{ display: 'inline-block', background: '#0D9488', color: '#fff', fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, padding: '14px 32px', border: 'none', borderRadius: 16, boxShadow: '0 5px 0 #0F766E', textDecoration: 'none' }}>Start learning free</Link>
+          <Link href="/try" className="landing-btn-primary" style={{ display: 'inline-block', background: '#0D9488', color: '#fff', fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, padding: '14px 32px', border: 'none', borderRadius: 16, boxShadow: '0 5px 0 #0F766E', textDecoration: 'none' }}>Try a free lesson</Link>
           <button onClick={restart} className="demo-restart-btn" style={{ background: 'none', border: '2px solid #E2E8F0', borderRadius: 16, padding: '12px 24px', fontSize: 14, fontWeight: 700, color: '#64748B', cursor: 'pointer' }}>Play again</button>
         </div>
       </div>

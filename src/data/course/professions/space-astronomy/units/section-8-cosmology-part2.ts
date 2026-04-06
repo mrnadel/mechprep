@@ -46,6 +46,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A flat universe has zero curvature, like an infinite flat sheet. Parallel lines stay parallel forever. This is what we actually observe.",
+            distractorExplanations: {
+              0: 'A sphere that curves back on itself is incorrect; a flat universe has zero curvature, like an infinite flat sheet.',
+              1: 'A saddle that curves outward is incorrect; a flat universe has zero curvature, like an infinite flat sheet.',
+              3: 'A cone narrowing to a point is incorrect; a flat universe has zero curvature, like an infinite flat sheet.',
+            },
           },
           {
             id: "sp-sec8-u6-L1-T2",
@@ -68,6 +73,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "In a closed universe, if you traveled far enough in one direction, you'd return to your starting point.",
             correctAnswer: true,
             explanation: "A closed universe wraps around itself like the surface of a sphere. Travel far enough in any direction and you'd come back to where you started.",
+            distractorExplanations: {
+              1: 'A closed universe wraps around itself like the surface of a sphere.',
+            },
           },
           {
             id: "sp-sec8-u6-L1-Q4",
@@ -104,6 +112,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The angular size of CMB fluctuations depends on geometry. In a flat universe, they appear at a specific size. WMAP and Planck confirmed flat geometry.",
+            distractorExplanations: {
+              0: 'This is incorrect; the angular size of CMB fluctuations depends on geometry.',
+              2: 'By counting the number of galaxies is incorrect; the angular size of CMB fluctuations depends on geometry.',
+              3: 'By measuring the speed of light is incorrect; the angular size of CMB fluctuations depends on geometry.',
+            },
           },
         ],
       },
@@ -134,6 +147,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Density above critical means more gravity, which curves space positively (closed). Eventually, gravity could halt expansion and cause a collapse.",
+            distractorExplanations: {
+              0: 'The universe is flat is incorrect; density above critical means more gravity, which curves space positively (closed).',
+              1: 'The universe is open and expands forever is incorrect; density above critical means more gravity, which curves space positively (closed).',
+              3: 'The universe stays the same size is incorrect; density above critical means more gravity, which curves space positively (closed).',
+            },
           },
           {
             id: "sp-sec8-u6-L2-T2",
@@ -164,6 +182,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "The actual density of our universe is very close to the critical density.",
             correctAnswer: true,
             explanation: "Our universe's density is within about 0.4% of the critical density. This near-perfect balance is one of the great puzzles of cosmology.",
+            distractorExplanations: {
+              1: 'Our universe\'s density is within about 0.4% of the critical density.',
+            },
           },
           {
             id: "sp-sec8-u6-L2-T3",
@@ -183,6 +204,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Inflation stretched the universe so enormously in its first fraction of a second that any initial curvature was flattened out, like stretching a wrinkled balloon until it appears smooth.",
+            distractorExplanations: {
+              0: 'String theory is incorrect; inflation stretched the universe so enormously in its first fraction of a second that any initial curvature was.',
+              1: 'Dark matter theory is incorrect; inflation stretched the universe so enormously in its first fraction of a second that any initial curvature was.',
+              3: 'Quantum gravity is incorrect; inflation stretched the universe so enormously in its first fraction of a second that any initial curvature was.',
+            },
           },
           {
             id: "sp-sec8-u6-L2-Q6",
@@ -196,6 +222,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Critical density is incredibly low: only about 6 hydrogen atoms per cubic meter. Space is overwhelmingly empty, yet this tiny density determines the universe's fate.",
+            distractorExplanations: {
+              1: 'About 6 million atoms per cubic meter is incorrect; critical density is incredibly low: only about 6 hydrogen atoms per cubic meter.',
+              2: 'About 6 billion atoms per cubic meter is incorrect; critical density is incredibly low: only about 6 hydrogen atoms per cubic meter.',
+              3: 'Zero atoms per cubic meter is incorrect; critical density is incredibly low: only about 6 hydrogen atoms per cubic meter.',
+            },
           },
         ],
       },
@@ -234,6 +265,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The discovery of accelerating expansion (driven by dark energy) makes the Big Crunch very unlikely. The expansion is speeding up, not slowing down.",
+            distractorExplanations: {
+              0: 'The universe is too small to collapse is incorrect; the discovery of accelerating expansion (driven by dark energy) makes the Big Crunch very unlikely.',
+              2: 'This is incorrect; the discovery of accelerating expansion (driven by dark energy) makes the Big Crunch very unlikely.',
+              3: 'This claim is incorrect; the discovery of accelerating expansion (driven by dark energy) makes the Big Crunch very unlikely.',
+            },
           },
           {
             id: "sp-sec8-u6-L3-T2",
@@ -259,6 +295,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "In the Big Crunch, the universe would eventually reach a state similar to the Big Bang.",
             correctAnswer: true,
             explanation: "If the Big Crunch happened, all matter and energy would compress back to extreme density and temperature, similar to the initial conditions of the Big Bang.",
+            distractorExplanations: {
+              1: 'If the Big Crunch happened, all matter and energy would compress back to extreme density and temperature, similar.',
+            },
           },
           {
             id: "sp-sec8-u6-L3-Q5",
@@ -272,6 +311,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "After stars die, their remnants (white dwarfs, neutron stars, black holes) persist. Eventually even black holes evaporate through Hawking radiation.",
+            distractorExplanations: {
+              0: 'Only bright nebulae is incorrect; after stars die, their remnants (white dwarfs, neutron stars, black holes) persist.',
+              1: 'New stars forming from fresh gas is incorrect; after stars die, their remnants (white dwarfs, neutron stars, black holes) persist.',
+              3: 'Nothing at all is incorrect; after stars die, their remnants (white dwarfs, neutron stars, black holes) persist.',
+            },
           },
           {
             id: "sp-sec8-u6-L3-T3",
@@ -315,6 +359,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The multiverse suggests many separate universes exist, possibly with different physical constants. Our universe is just one 'bubble' in a vast collection.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; the multiverse suggests many separate universes exist, possibly with different physical constants.',
+              2: 'This claim is incorrect; the multiverse suggests many separate universes exist, possibly with different physical constants.',
+              3: 'This is incorrect; the multiverse suggests many separate universes exist, possibly with different physical constants.',
+            },
           },
           {
             id: "sp-sec8-u6-L4-T2",
@@ -329,6 +378,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "The multiverse idea is a proven scientific fact.",
             correctAnswer: false,
             explanation: "The multiverse is a theoretical idea that arises from certain models of inflation and string theory. There's no direct observational evidence for it yet.",
+            distractorExplanations: {
+              0: 'The multiverse is a theoretical idea that arises from certain models of inflation and string theory.',
+            },
           },
           {
             id: "sp-sec8-u6-L4-Q3",
@@ -342,6 +394,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The biggest criticism is testability. If we can never observe or interact with other universes, the multiverse may be beyond scientific investigation.",
+            distractorExplanations: {
+              0: 'It requires too much math is incorrect; the biggest criticism is testability.',
+              1: 'It can\'t explain our own universe is incorrect; the biggest criticism is testability.',
+              3: 'It contradicts the Big Bang is incorrect; the biggest criticism is testability.',
+            },
           },
           {
             id: "sp-sec8-u6-L4-Q4",
@@ -372,6 +429,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "Eternal inflation predicts that new universes are constantly being created.",
             correctAnswer: true,
             explanation: "In eternal inflation, the inflationary field never stops in all regions simultaneously. New bubble universes keep forming in regions where inflation continues.",
+            distractorExplanations: {
+              1: 'In eternal inflation, the inflationary field never stops in all regions simultaneously.',
+            },
           },
         ],
       },
@@ -514,6 +574,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "During inflation, space expanded faster than the speed of light.",
             correctAnswer: true,
             explanation: "Nothing can travel through space faster than light. But space itself can expand at any rate. During inflation, space stretched far faster than light speed.",
+            distractorExplanations: {
+              1: 'Nothing can travel through space faster than light.',
+            },
           },
           {
             id: "sp-sec8-u7-L1-Q2",
@@ -527,6 +590,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Inflation happened incredibly early, around 10^-36 seconds after the Big Bang. It lasted only a fraction of a second but transformed the universe.",
+            distractorExplanations: {
+              0: 'About 1 million years after the Big Bang is incorrect; inflation happened incredibly early, around 10^-36 seconds after the Big Bang.',
+              1: 'About 380,000 years after the Big Bang is incorrect; inflation happened incredibly early, around 10^-36 seconds after the Big Bang.',
+              3: 'About 3 minutes after the Big Bang is incorrect; inflation happened incredibly early, around 10^-36 seconds after the Big Bang.',
+            },
           },
           {
             id: "sp-sec8-u7-L1-T2",
@@ -569,6 +637,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Inflation took tiny quantum fluctuations and stretched them to enormous scales. These became the density variations visible in the CMB that seeded galaxy formation.",
+            distractorExplanations: {
+              0: 'It destroyed them completely is incorrect; inflation took tiny quantum fluctuations and stretched them to enormous scales.',
+              1: 'It compressed them to smaller scales is incorrect; inflation took tiny quantum fluctuations and stretched them to enormous scales.',
+              3: 'It converted them into dark matter is incorrect; inflation took tiny quantum fluctuations and stretched them to enormous scales.',
+            },
           },
           {
             id: "sp-sec8-u7-L1-Q6",
@@ -582,6 +655,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Alan Guth proposed cosmic inflation in 1981. It elegantly solved several problems with the standard Big Bang model in one stroke.",
+            distractorExplanations: {
+              0: 'Albert Einstein is incorrect; alan Guth proposed cosmic inflation in 1981.',
+              1: 'Stephen Hawking is incorrect; alan Guth proposed cosmic inflation in 1981.',
+              3: 'Edwin Hubble is incorrect; alan Guth proposed cosmic inflation in 1981.',
+            },
           },
         ],
       },
@@ -612,6 +690,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "During recombination, free electrons combined with hydrogen and helium nuclei to form neutral atoms for the first time. This released the CMB.",
+            distractorExplanations: {
+              0: 'This is incorrect; during recombination, free electrons combined with hydrogen and helium nuclei to form neutral atoms for the first time.',
+              2: 'The first stars were born is incorrect; during recombination, free electrons combined with hydrogen and helium nuclei to form neutral atoms for the first time.',
+              3: 'Dark matter separated from normal matter is incorrect; during recombination, free electrons combined with hydrogen and helium nuclei to form neutral atoms.',
+            },
           },
           {
             id: "sp-sec8-u7-L2-T2",
@@ -625,6 +708,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "Before recombination, the universe was transparent to light.",
             correctAnswer: false,
             explanation: "Before recombination, free electrons constantly scattered photons, making the universe opaque like a thick fog. Only after atoms formed did light travel freely.",
+            distractorExplanations: {
+              0: 'Before recombination, free electrons constantly scattered photons, making the universe opaque like a thick fog.',
+            },
           },
           {
             id: "sp-sec8-u7-L2-Q3",
@@ -646,6 +732,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 're-' in recombination implies they'd been combined before. In reality, this was the first time electrons ever joined nuclei. The name stuck anyway.",
+            distractorExplanations: {
+              0: 'This is incorrect; the \'re-\' in recombination implies they\'d been combined before.',
+              2: 'This claim is incorrect; the \'re-\' in recombination implies they\'d been combined before.',
+              3: 'This claim is incorrect; the \'re-\' in recombination implies they\'d been combined before.',
+            },
           },
           {
             id: "sp-sec8-u7-L2-T3",
@@ -694,6 +785,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "During the cosmic dark ages, there were no sources of visible light in the universe.",
             correctAnswer: true,
             explanation: "No stars existed yet to produce light. The CMB had already redshifted to infrared. The universe was genuinely dark for the first time.",
+            distractorExplanations: {
+              1: 'No stars existed yet to produce light.',
+            },
           },
           {
             id: "sp-sec8-u7-L3-Q2",
@@ -707,6 +801,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The dark ages lasted from recombination (380,000 years) until the first stars formed (about 100 to 200 million years later). That's a very long time without starlight.",
+            distractorExplanations: {
+              0: 'About 3 minutes is incorrect; the dark ages lasted from recombination (380,000 years) until the first stars formed (about 100 to 200 million years later).',
+              1: 'About 380,000 years is incorrect; the dark ages lasted from recombination (380,000 years) until the first stars formed (about 100 to 200 million years later).',
+              3: 'About 5 billion years is incorrect; the dark ages lasted from recombination (380,000 years) until the first stars formed (about 100 to 200 million years later).',
+            },
           },
           {
             id: "sp-sec8-u7-L3-T2",
@@ -735,6 +834,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The universe contained hydrogen and helium (from Big Bang nucleosynthesis), dark matter, and the fading CMB. No heavy elements or stars existed yet.",
+            distractorExplanations: {
+              1: 'Mostly stars and planets is incorrect; the universe contained hydrogen and helium (from Big Bang nucleosynthesis), dark matter, and the fading CMB.',
+              2: 'Mostly heavy elements like iron and gold is incorrect; the universe contained hydrogen and helium (from Big Bang nucleosynthesis), dark matter, and the.',
+              3: 'Only dark energy is incorrect; the universe contained hydrogen and helium (from Big Bang nucleosynthesis), dark matter, and the fading CMB.',
+            },
           },
           {
             id: "sp-sec8-u7-L3-T3",
@@ -748,6 +852,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "The term 'cosmic dawn' refers to when the first stars began to shine.",
             correctAnswer: true,
             explanation: "Cosmic dawn marks the end of the dark ages. The first stars lit up about 100 to 200 million years after the Big Bang, ending the era of darkness.",
+            distractorExplanations: {
+              1: 'Cosmic dawn marks the end of the dark ages.',
+            },
           },
           {
             id: "sp-sec8-u7-L3-Q6",
@@ -786,6 +893,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Heavy elements help gas clouds cool and fragment into smaller pieces. Without them, only very large clumps of gas could collapse, producing massive stars.",
+            distractorExplanations: {
+              0: 'Dark energy compressed the gas is incorrect; heavy elements help gas clouds cool and fragment into smaller pieces.',
+              2: 'The Big Bang created giant stars directly is incorrect; heavy elements help gas clouds cool and fragment into smaller pieces.',
+              3: 'This is incorrect; heavy elements help gas clouds cool and fragment into smaller pieces.',
+            },
           },
           {
             id: "sp-sec8-u7-L4-T2",
@@ -808,6 +920,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "The first stars contained heavy elements like carbon and iron.",
             correctAnswer: false,
             explanation: "Population III stars formed from only hydrogen and helium, the elements made in the Big Bang. Heavy elements were created inside these stars and scattered when they died.",
+            distractorExplanations: {
+              0: 'Population III stars formed from only hydrogen and helium, the elements made in the Big Bang.',
+            },
           },
           {
             id: "sp-sec8-u7-L4-Q4",
@@ -821,6 +936,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The first supernovae spread newly forged heavy elements (carbon, oxygen, iron) into surrounding gas. This enriched material formed the next generation of stars.",
+            distractorExplanations: {
+              0: 'They faded away quietly is incorrect; the first supernovae spread newly forged heavy elements (carbon, oxygen, iron) into surrounding gas.',
+              1: 'They became white dwarfs is incorrect; the first supernovae spread newly forged heavy elements (carbon, oxygen, iron) into surrounding gas.',
+              3: 'They became dark matter is incorrect; the first supernovae spread newly forged heavy elements (carbon, oxygen, iron) into surrounding gas.',
+            },
           },
           {
             id: "sp-sec8-u7-L4-T3",
@@ -1020,6 +1140,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you know an object's true luminosity and measure how bright it appears, the difference tells you the distance. That's the standard candle method.",
+            distractorExplanations: {
+              0: 'A star that never changes brightness is incorrect; if you know an object\'s true luminosity and measure how bright it appears, the difference tells you the.',
+              2: 'This is incorrect; if you know an object\'s true luminosity and measure how bright it appears, the difference tells you the distance.',
+              3: 'The brightest star in any galaxy is incorrect; if you know an object\'s true luminosity and measure how bright it appears, the difference tells you the distance.',
+            },
           },
           {
             id: "sp-sec8-u8-L1-Q3",
@@ -1050,6 +1175,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "Parallax can measure distances to galaxies billions of light-years away.",
             correctAnswer: false,
             explanation: "Parallax only works for relatively nearby stars (up to a few thousand light-years). For greater distances, we need Cepheids, supernovae, or redshift.",
+            distractorExplanations: {
+              0: 'Parallax only works for relatively nearby stars (up to a few thousand light-years).',
+            },
           },
           {
             id: "sp-sec8-u8-L1-Q6",
@@ -1063,6 +1191,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "No single method spans all distances. Parallax fails for distant objects, and supernovae are too rare nearby. Each rung has a useful range and calibrates the next.",
+            distractorExplanations: {
+              0: 'Scientists prefer complicated methods is incorrect; no single method spans all distances.',
+              2: 'Only one method is actually accurate is incorrect; no single method spans all distances.',
+              3: 'This is incorrect; no single method spans all distances.',
+            },
           },
         ],
       },
@@ -1093,6 +1226,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Because they all explode at the Chandrasekhar limit (1.4 solar masses), Type Ia supernovae all reach about the same peak luminosity. This uniform brightness makes them excellent distance markers.",
+            distractorExplanations: {
+              0: 'They happen very frequently is incorrect; because they all explode at the Chandrasekhar limit (1.4 solar masses), Type Ia supernovae all reach about the same.',
+              2: 'They\'re the only type of supernova is incorrect; because they all explode at the Chandrasekhar limit (1.4 solar masses), Type Ia supernovae all reach about.',
+              3: 'They can be seen with the naked eye is incorrect; because they all explode at the Chandrasekhar limit (1.4 solar masses), Type Ia supernovae all reach.',
+            },
           },
           {
             id: "sp-sec8-u8-L2-T2",
@@ -1125,6 +1263,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "Type Ia supernovae were used to discover the accelerating expansion of the universe.",
             correctAnswer: true,
             explanation: "In 1998, two teams observed distant Type Ia supernovae that were dimmer than expected, proving they were farther away. This meant expansion was accelerating.",
+            distractorExplanations: {
+              1: 'In 1998, two teams observed distant Type Ia supernovae that were dimmer than expected, proving they were farther away.',
+            },
           },
           {
             id: "sp-sec8-u8-L2-Q5",
@@ -1138,6 +1279,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Type Ia: a white dwarf explodes by gaining too much mass. Core-collapse (Type II): a massive star's core collapses when it runs out of fuel. Very different mechanisms.",
+            distractorExplanations: {
+              1: 'Type Ia is dimmer than core-collapse is incorrect; type Ia: a white dwarf explodes by gaining too much mass.',
+              2: 'This is incorrect; type Ia: a white dwarf explodes by gaining too much mass.',
+              3: 'There\'s no real difference between them is incorrect; type Ia: a white dwarf explodes by gaining too much mass.',
+            },
           },
           {
             id: "sp-sec8-u8-L2-T3",
@@ -1182,6 +1328,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "BAO are the frozen imprints of sound waves that traveled through the early universe's plasma. They create a preferred spacing between galaxies that we can measure.",
+            distractorExplanations: {
+              0: 'Vibrations from colliding galaxies is incorrect; bAO are the frozen imprints of sound waves that traveled through the early universe\'s plasma.',
+              2: 'Radio signals from pulsars is incorrect; bAO are the frozen imprints of sound waves that traveled through the early universe\'s plasma.',
+              3: 'Gravitational waves from the Big Bang is incorrect; bAO are the frozen imprints of sound waves that traveled through the early universe\'s plasma.',
+            },
           },
           {
             id: "sp-sec8-u8-L3-T2",
@@ -1196,6 +1347,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "BAO provide a 'standard ruler' that works independently of standard candles.",
             correctAnswer: true,
             explanation: "BAO are a geometric measurement. They don't depend on brightness like standard candles. This independent method helps cross-check other distance measurements.",
+            distractorExplanations: {
+              1: 'BAO are a geometric measurement.',
+            },
           },
           {
             id: "sp-sec8-u8-L3-Q3",
@@ -1217,6 +1371,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "By mapping millions of galaxy positions, astronomers find a slight excess of galaxy pairs at the BAO distance. Large surveys like SDSS and DESI make this possible.",
+            distractorExplanations: {
+              0: 'By listening to sound waves from space is incorrect; by mapping millions of galaxy positions, astronomers find a slight excess of galaxy pairs at the BAO.',
+              2: 'This is incorrect; by mapping millions of galaxy positions, astronomers find a slight excess of galaxy pairs at the BAO distance.',
+              3: 'By detecting gravitational waves is incorrect; by mapping millions of galaxy positions, astronomers find a slight excess of galaxy pairs at the BAO distance.',
+            },
           },
           {
             id: "sp-sec8-u8-L3-T3",
@@ -1245,6 +1404,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Independent methods serve as cross-checks. If both agree, we have high confidence. If they disagree (like in the Hubble tension), it signals possible new physics.",
+            distractorExplanations: {
+              0: 'They always give the same answer is incorrect; independent methods serve as cross-checks.',
+              1: 'Standard rulers are always more accurate is incorrect; independent methods serve as cross-checks.',
+              3: 'This is incorrect; independent methods serve as cross-checks.',
+            },
           },
         ],
       },
@@ -1387,6 +1551,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "The Big Bang produced exactly equal amounts of matter and antimatter.",
             correctAnswer: false,
             explanation: "If it had, all matter and antimatter would have annihilated, leaving only photons. For every billion antimatter particles, there was one extra matter particle.",
+            distractorExplanations: {
+              0: 'If it had, all matter and antimatter would have annihilated, leaving only photons.',
+            },
           },
           {
             id: "sp-sec8-u9-L1-Q2",
@@ -1400,6 +1567,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "When a particle meets its antiparticle, they annihilate completely, converting their mass into energy (photons). This process is described by E = mc^2.",
+            distractorExplanations: {
+              0: 'They combine to form dark matter is incorrect; when a particle meets its antiparticle, they annihilate completely, converting their mass into energy (photons).',
+              1: 'Nothing happens is incorrect; when a particle meets its antiparticle, they annihilate completely, converting their mass into energy (photons).',
+              3: 'They merge into heavier elements is incorrect; when a particle meets its antiparticle, they annihilate completely, converting their mass into energy (photons).',
+            },
           },
           {
             id: "sp-sec8-u9-L1-T2",
@@ -1427,6 +1599,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "In 1967, Andrei Sakharov identified three necessary conditions for creating a matter-antimatter asymmetry. All three must be met, but the exact mechanism remains unknown.",
+            distractorExplanations: {
+              0: 'Only high temperatures is incorrect; in 1967, Andrei Sakharov identified three necessary conditions for creating a matter-antimatter asymmetry.',
+              2: 'This is incorrect; in 1967, Andrei Sakharov identified three necessary conditions for creating a matter-antimatter asymmetry.',
+              3: 'A perfectly symmetric Big Bang is incorrect; in 1967, Andrei Sakharov identified three necessary conditions for creating a matter-antimatter asymmetry.',
+            },
           },
           {
             id: "sp-sec8-u9-L1-T3",
@@ -1440,6 +1617,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "Scientists have fully explained why there's more matter than antimatter in the universe.",
             correctAnswer: false,
             explanation: "This remains one of the biggest unsolved problems in physics. Known CP violation is too small to account for the observed imbalance.",
+            distractorExplanations: {
+              0: 'This remains one of the biggest unsolved problems in physics.',
+            },
           },
           {
             id: "sp-sec8-u9-L1-Q6",
@@ -1480,6 +1660,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Hubble tension is the statistically significant disagreement between the expansion rate measured locally (73) and from the early universe (67).",
+            distractorExplanations: {
+              0: 'The Hubble telescope is running out of fuel is incorrect; the Hubble tension is the statistically significant disagreement between the expansion rate.',
+              2: 'This is incorrect; the Hubble tension is the statistically significant disagreement between the expansion rate measured locally (73).',
+              3: 'The expansion rate is changing direction is incorrect; the Hubble tension is the statistically significant disagreement between the expansion rate measured.',
+            },
           },
           {
             id: "sp-sec8-u9-L2-T2",
@@ -1503,6 +1688,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "The Hubble tension could indicate new physics beyond the standard model of cosmology.",
             correctAnswer: true,
             explanation: "If both measurements are correct, our model of the universe is incomplete. Something like early dark energy, new particles, or modified gravity might bridge the gap.",
+            distractorExplanations: {
+              1: 'If both measurements are correct, our model of the universe is incomplete.',
+            },
           },
           {
             id: "sp-sec8-u9-L2-Q4",
@@ -1516,6 +1704,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "5 sigma is the gold standard in physics. It means the probability of the disagreement being a statistical fluke is less than 1 in 3.5 million.",
+            distractorExplanations: {
+              0: 'There\'s a 50% chance it\'s a coincidence is incorrect; 5 sigma is the gold standard in physics.',
+              1: 'The measurements are somewhat reliable is incorrect; 5 sigma is the gold standard in physics.',
+              3: 'This claim is incorrect; 5 sigma is the gold standard in physics.',
+            },
           },
           {
             id: "sp-sec8-u9-L2-T3",
@@ -1562,6 +1755,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "Current physics can fully explain what happened at the exact moment of the Big Bang.",
             correctAnswer: false,
             explanation: "At time zero, density and temperature were infinite according to our equations. This 'singularity' means our physics breaks down. We need a theory of quantum gravity to go further.",
+            distractorExplanations: {
+              0: 'At time zero, density and temperature were infinite according to our equations.',
+            },
           },
           {
             id: "sp-sec8-u9-L3-Q2",
@@ -1575,6 +1771,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Planck time (about 10^-43 seconds) is where quantum mechanics and general relativity both become important. We need quantum gravity to describe what happened before this.",
+            distractorExplanations: {
+              0: 'The age of the universe is incorrect; the Planck time (about 10^-43 seconds) is where quantum mechanics and general relativity both become important.',
+              2: 'This claim is incorrect; the Planck time (about 10^-43 seconds) is where quantum mechanics and general relativity both become important.',
+              3: 'This claim is incorrect; the Planck time (about 10^-43 seconds) is where quantum mechanics and general relativity both become important.',
+            },
           },
           {
             id: "sp-sec8-u9-L3-T2",
@@ -1604,6 +1805,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "General relativity (gravity) and quantum mechanics are both needed at the Planck scale, but they're mathematically incompatible. A theory of quantum gravity would unify them.",
+            distractorExplanations: {
+              0: 'Scientists haven\'t tried hard enough is incorrect; general relativity (gravity) and quantum mechanics are both needed at the Planck scale, but they\'re.',
+              1: 'This claim is incorrect; general relativity (gravity) and quantum mechanics are both needed at the Planck scale, but they\'re mathematically incompatible.',
+              3: 'The Big Bang didn\'t actually happen is incorrect; general relativity (gravity) and quantum mechanics are both needed at the Planck scale, but they\'re.',
+            },
           },
           {
             id: "sp-sec8-u9-L3-T3",
@@ -1625,6 +1831,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "Hawking suggested that asking what caused the Big Bang might be a meaningless question if time itself began with it.",
             correctAnswer: true,
             explanation: "If time began at the Big Bang, there was no 'before' in which a cause could occur. The question of cause may not apply when time itself has a beginning.",
+            distractorExplanations: {
+              1: 'If time began at the Big Bang, there was no \'before\' in which a cause could occur.',
+            },
           },
         ],
       },
@@ -1654,6 +1863,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Fermi Paradox notes that billions of potentially habitable worlds exist, yet we've found no evidence of other civilizations. The silence is puzzling.",
+            distractorExplanations: {
+              0: 'Why can\'t we travel faster than light? is incorrect; the Fermi Paradox notes that billions of potentially habitable worlds exist, yet we\'ve found no.',
+              2: 'Why does dark matter exist? is incorrect; the Fermi Paradox notes that billions of potentially habitable worlds exist, yet we\'ve found no evidence of other.',
+              3: 'How did the Big Bang start? is incorrect; the Fermi Paradox notes that billions of potentially habitable worlds exist, yet we\'ve found no evidence of other.',
+            },
           },
           {
             id: "sp-sec8-u9-L4-T2",
@@ -1668,6 +1882,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "The fine-tuning of physical constants is a solved problem in cosmology.",
             correctAnswer: false,
             explanation: "Why constants have their specific values is deeply mysterious. The multiverse (many universes with different constants) and the anthropic principle are proposed answers, but neither is proven.",
+            distractorExplanations: {
+              0: 'Why constants have their specific values is deeply mysterious.',
+            },
           },
           {
             id: "sp-sec8-u9-L4-Q3",
@@ -1690,6 +1907,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The anthropic principle says we shouldn't be surprised by fine-tuning because we could only exist in a universe with constants that permit life. It's a selection effect.",
+            distractorExplanations: {
+              0: 'The universe was designed for us is incorrect; the anthropic principle says we shouldn\'t be surprised by fine-tuning because we could only exist in a universe.',
+              2: 'Physics changes over time is incorrect; the anthropic principle says we shouldn\'t be surprised by fine-tuning because we could only exist in a universe.',
+              3: 'Fine-tuning is an illusion is incorrect; the anthropic principle says we shouldn\'t be surprised by fine-tuning because we could only exist in a universe.',
+            },
           },
           {
             id: "sp-sec8-u9-L4-T3",
@@ -1717,6 +1939,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Biosignatures like oxygen and methane together in an exoplanet atmosphere would strongly suggest biological processes. JWST and future telescopes are searching for these.",
+            distractorExplanations: {
+              0: 'Detecting dark matter particles is incorrect; biosignatures like oxygen and methane together in an exoplanet atmosphere would strongly suggest biological.',
+              2: 'This is incorrect; biosignatures like oxygen and methane together in an exoplanet atmosphere would strongly suggest biological processes.',
+              3: 'Observing a new type of galaxy is incorrect; biosignatures like oxygen and methane together in an exoplanet atmosphere would strongly suggest biological.',
+            },
           },
         ],
       },
@@ -1896,6 +2123,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Ordinary (baryonic) matter, including all stars, planets, and people, makes up only about 5% of the universe. Dark energy (68%) and dark matter (27%) dominate.",
+            distractorExplanations: {
+              0: 'About 68% is incorrect; ordinary (baryonic) matter, including all stars, planets, and people, makes up only about 5% of the universe.',
+              1: 'About 27% is incorrect; ordinary (baryonic) matter, including all stars, planets, and people, makes up only about 5% of the universe.',
+              3: 'About 50% is incorrect; ordinary (baryonic) matter, including all stars, planets, and people, makes up only about 5% of the universe.',
+            },
           },
           {
             id: "sp-sec8-u10-L1-T2",
@@ -1923,6 +2155,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Inflation stretched the universe so enormously that any curvature was flattened. This explains why Omega is so close to 1.",
+            distractorExplanations: {
+              0: 'Dark matter theory is incorrect; inflation stretched the universe so enormously that any curvature was flattened.',
+              1: 'String theory is incorrect; inflation stretched the universe so enormously that any curvature was flattened.',
+              3: 'Quantum electrodynamics is incorrect; inflation stretched the universe so enormously that any curvature was flattened.',
+            },
           },
           {
             id: "sp-sec8-u10-L1-Q6",
@@ -1937,6 +2174,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Galaxies farther than expected for a constant expansion rate means acceleration. This is exactly what the 1998 supernova teams found, leading to the discovery of dark energy.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; galaxies farther than expected for a constant expansion rate means acceleration.',
+              2: 'This claim is incorrect; galaxies farther than expected for a constant expansion rate means acceleration.',
+              3: 'Hubble\'s Law is completely wrong is incorrect; galaxies farther than expected for a constant expansion rate means acceleration.',
+            },
           },
           {
             id: "sp-sec8-u10-L1-Q7",
@@ -1975,6 +2217,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "CMB fluctuation sizes matching flat-universe predictions, combined with total density equaling critical density, beautifully confirms the Lambda-CDM model.",
+            distractorExplanations: {
+              0: 'The universe will collapse in the future is incorrect; cMB fluctuation sizes matching flat-universe predictions, combined with total density equaling.',
+              2: 'Dark energy doesn\'t exist is incorrect; cMB fluctuation sizes matching flat-universe predictions, combined with total density equaling critical density,.',
+              3: 'The Big Bang theory is wrong is incorrect; cMB fluctuation sizes matching flat-universe predictions, combined with total density equaling critical density,.',
+            },
           },
           {
             id: "sp-sec8-u10-L2-Q2",
@@ -1989,6 +2236,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Population III stars were massive and short-lived. They could form, fuse heavy elements, and explode as supernovae within a few million years, enriching the gas before this galaxy formed.",
+            distractorExplanations: {
+              0: 'This is incorrect; population III stars were massive and short-lived.',
+              2: 'This claim is incorrect; population III stars were massive and short-lived.',
+              3: 'This claim is incorrect; population III stars were massive and short-lived.',
+            },
           },
           {
             id: "sp-sec8-u10-L2-Q3",
@@ -2011,6 +2263,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Both methods are well-tested and precise. The persistent disagreement (Hubble tension) likely means our cosmological model is incomplete, not that either team made an error.",
+            distractorExplanations: {
+              0: 'This is incorrect; both methods are well-tested and precise.',
+              1: 'Both teams are wrong is incorrect; both methods are well-tested and precise.',
+              3: 'The average of 70 is the true answer is incorrect; both methods are well-tested and precise.',
+            },
           },
           {
             id: "sp-sec8-u10-L2-Q5",
@@ -2025,6 +2282,11 @@ export const spaceSection8Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This is the Bullet Cluster observation. Dark matter only interacts gravitationally, so it passed through. Normal gas interacts electromagnetically and was slowed by the collision.",
+            distractorExplanations: {
+              0: 'This is incorrect; this is the Bullet Cluster observation.',
+              2: 'This is incorrect; this is the Bullet Cluster observation.',
+              3: 'This is incorrect; this is the Bullet Cluster observation.',
+            },
           },
           {
             id: "sp-sec8-u10-L2-Q6",
@@ -2032,6 +2294,9 @@ export const spaceSection8Part2: Unit[] = [
             question: "If dark energy stays constant, the universe will eventually collapse in a Big Crunch.",
             correctAnswer: false,
             explanation: "Constant dark energy means the expansion keeps accelerating forever, leading to the Big Freeze (heat death). A Big Crunch would require dark energy to weaken or disappear.",
+            distractorExplanations: {
+              0: 'Constant dark energy means the expansion keeps accelerating forever, leading to the Big Freeze (heat death).',
+            },
           },
           {
             id: "sp-sec8-u10-L2-Q7",

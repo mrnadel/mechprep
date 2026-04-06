@@ -36,6 +36,9 @@ export const unit11: Unit = {
           question: "Insurance protects you from paying the full cost of a disaster out of your own pocket.",
           correctAnswer: true,
           explanation: "That's the whole idea. You pay a small amount regularly so you don't get wiped out by one big surprise.",
+          distractorExplanations: {
+            1: 'That\'s the whole idea. You pay a small amount regularly so you don\'t get wiped out by one big surprise',
+          },
         },
         {
           id: "pf-u11-L1-Q1",
@@ -64,6 +67,9 @@ export const unit11: Unit = {
           question: "Insurance is only worth buying if you're likely to use it.",
           correctAnswer: false,
           explanation: "That's like saying a seatbelt is only worth wearing if you're planning to crash. Insurance protects against unpredictable events, and a single ER visit can cost $10,000+.",
+          distractorExplanations: {
+            0: 'That\'s like saying a seatbelt is only worth wearing if you\'re planning to crash',
+          },
         },
         {
           id: "pf-u11-L1-Q3",
@@ -77,6 +83,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "You pay your $1,500 deductible first, then insurance covers the rest. Without insurance, you'd owe the full $4,000, so the deductible saved you $2,500.",
+          distractorExplanations: {
+            1: 'You pay your $1,500 deductible first, then insurance covers the rest',
+            2: 'You pay your $1,500 deductible first, then insurance covers the rest',
+            3: 'You pay your $1,500 deductible first, then insurance covers the rest',
+          },
         },
         {
           id: "pf-u11-L1-Q4",
@@ -100,6 +111,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "A broken leg can cost $7,500, and an appendectomy can run $33,000. One bad bike accident could eat his entire savings and put him in debt.",
+          distractorExplanations: {
+            1: 'A broken leg can cost $7,500, and an appendectomy can run $33,000',
+            2: 'A broken leg can cost $7,500, and an appendectomy can run $33,000',
+            3: 'A broken leg can cost $7,500, and an appendectomy can run $33,000',
+          },
         },
         {
           id: "pf-u11-L1-Q6",
@@ -173,6 +189,9 @@ export const unit11: Unit = {
           question: "An HSA (Health Savings Account) has a triple tax advantage: money goes in tax-free, grows tax-free, and comes out tax-free for medical expenses.",
           correctAnswer: true,
           explanation: "That's what makes the HSA so powerful. No other account gives you tax benefits at all three stages.",
+          distractorExplanations: {
+            1: 'That\'s what makes the HSA so powerful',
+          },
         },
         {
           id: "pf-u11-L2-Q1",
@@ -189,6 +208,9 @@ export const unit11: Unit = {
           question: "With a PPO plan, you need a referral from your primary care doctor before seeing a specialist.",
           correctAnswer: false,
           explanation: "That's HMO, not PPO. PPO plans let you see any doctor, including specialists, without a referral, and that flexibility is why PPO premiums are higher.",
+          distractorExplanations: {
+            0: 'That\'s HMO, not PPO. PPO plans let you see any doctor, including specialists, without a referral, and that flexibility is why PPO premiums are higher',
+          },
         },
         {
           id: "pf-u11-L2-Q3",
@@ -202,6 +224,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "The HSA is the only account with a triple tax benefit: money goes in pre-tax, grows tax-free, and comes out tax-free for medical expenses. After 65, you can use it for anything.",
+          distractorExplanations: {
+            1: 'The HSA is the only account with a triple tax benefit: money goes in pre-tax, grows tax-free, and comes out tax-free for medical expenses',
+            2: 'The HSA is the only account with a triple tax benefit: money goes in pre-tax, grows tax-free, and comes out tax-free for medical expenses',
+            3: 'The HSA is the only account with a triple tax benefit: money goes in pre-tax, grows tax-free, and comes out tax-free for medical expenses',
+          },
         },
         {
           id: "pf-u11-L2-Q4",
@@ -216,6 +243,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "Priya is young, healthy, and only sees a doctor once a year. The HDHP saves her $60-200/month on premiums, and the HSA lets her save tax-free for future medical needs while paying the least now.",
+          distractorExplanations: {
+            1: 'Priya is young, healthy, and only sees a doctor once a year',
+            2: 'Priya is young, healthy, and only sees a doctor once a year',
+            3: 'Priya is young, healthy, and only sees a doctor once a year',
+          },
         },
         {
           id: "pf-u11-L2-Q5",
@@ -237,6 +269,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "All are good moves, but maxing your HSA is the biggest long-term play. That money grows tax-free forever, and over 30 years of consistent contributions it can grow to hundreds of thousands.",
+          distractorExplanations: {
+            1: 'All are good moves, but maxing your HSA is the biggest long-term play',
+            2: 'All are good moves, but maxing your HSA is the biggest long-term play',
+            3: 'All are good moves, but maxing your HSA is the biggest long-term play',
+          },
         },
         {
           id: "pf-u11-L2-Q7",
@@ -326,6 +363,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 1,
           explanation: "Plan A: 12 x $350 = $4,200 in premiums + $1,000 deductible = $5,200 total. Plan B: 12 x $200 = $2,400 in premiums + $2,000 out-of-pocket (deductible not fully met) = $4,400 total. Plan B saves $800 this year despite the higher deductible.",
+          distractorExplanations: {
+            0: 'Plan A: 12 x $350 = $4,200 in premiums + $1,000 deductible = $5,200 total',
+            2: 'Plan A: 12 x $350 = $4,200 in premiums + $1,000 deductible = $5,200 total',
+            3: 'Plan A: 12 x $350 = $4,200 in premiums + $1,000 deductible = $5,200 total',
+          },
         },
         {
           id: "pf-u11-L3-Q3",
@@ -341,6 +383,9 @@ export const unit11: Unit = {
           question: "Your out-of-pocket maximum is the most you'll ever pay for covered services in a single year. After that, insurance covers 100%.",
           correctAnswer: true,
           explanation: "The out-of-pocket maximum (OOP max) is your safety net: once your deductibles, copays, and coinsurance hit that number, insurance covers 100% for the rest of the year. In 2024, the ACA max is $9,450 for individuals.",
+          distractorExplanations: {
+            1: 'The out-of-pocket maximum (OOP max) is your safety net: once your deductibles, copays, and coinsurance hit that number, insurance covers 100% for t...',
+          },
         },
         {
           id: "pf-u11-L3-Q5",
@@ -364,6 +409,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "Miguel pays $2,000 (deductible), then 20% of the remaining $6,000 ($1,200). Total out-of-pocket: $3,200. Without insurance, he'd owe $8,000.",
+          distractorExplanations: {
+            1: 'Miguel pays $2,000 (deductible), then 20% of the remaining $6,000 ($1,200)',
+            2: 'Miguel pays $2,000 (deductible), then 20% of the remaining $6,000 ($1,200)',
+            3: 'Miguel pays $2,000 (deductible), then 20% of the remaining $6,000 ($1,200)',
+          },
         },
         {
           id: "pf-u11-L3-Q7",
@@ -377,6 +427,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 3,
           explanation: "All are smart moves, but comparing plans during open enrollment has the biggest impact because it sets ALL your costs for the entire year. Choosing the wrong plan can cost you thousands.",
+          distractorExplanations: {
+            0: 'All are smart moves, but comparing plans during open enrollment has the biggest impact because it sets ALL your costs for the entire year',
+            1: 'All are smart moves, but comparing plans during open enrollment has the biggest impact because it sets ALL your costs for the entire year',
+            2: 'All are smart moves, but comparing plans during open enrollment has the biggest impact because it sets ALL your costs for the entire year',
+          },
         },
         {
           id: "pf-u11-L3-Q8",
@@ -461,6 +516,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "Each person's bills are under the $50K per-person limit, but the total ($115K) exceeds the $100K per-accident limit. Insurance pays $100K, and you're personally liable for the remaining $15K.",
+          distractorExplanations: {
+            1: 'Each person\'s bills are under the $50K per-person limit, but the total ($115K) exceeds the $100K per-accident limit',
+            2: 'Each person\'s bills are under the $50K per-person limit, but the total ($115K) exceeds the $100K per-accident limit',
+            3: 'Each person\'s bills are under the $50K per-person limit, but the total ($115K) exceeds the $100K per-accident limit',
+          },
         },
         {
           id: "pf-u11-L4-Q3",
@@ -468,6 +528,9 @@ export const unit11: Unit = {
           question: "If your car is fully paid off and worth $3,000, it might make sense to drop collision coverage.",
           correctAnswer: true,
           explanation: "If collision coverage costs $400/year and your car is only worth $3,000, you're paying a lot for not much coverage. You could self-insure by saving that $400/year instead.",
+          distractorExplanations: {
+            1: 'If collision coverage costs $400/year and your car is only worth $3,000, you\'re paying a lot for not much coverage',
+          },
         },
         {
           id: "pf-u11-L4-Q4",
@@ -516,6 +579,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "Raising the deductible from $500 to $1,000 can save 15-30% on premiums. And with $8,000 in savings, she could absorb the cost of replacing a $5,500 car. Dropping collision while keeping liability and comprehensive is a reasonable middle ground.",
+          distractorExplanations: {
+            1: 'Raising the deductible from $500 to $1,000 can save 15-30% on premiums',
+            2: 'Raising the deductible from $500 to $1,000 can save 15-30% on premiums',
+            3: 'Raising the deductible from $500 to $1,000 can save 15-30% on premiums',
+          },
         },
         {
           id: "pf-u11-L4-Q8",
@@ -568,6 +636,9 @@ export const unit11: Unit = {
           question: "Renter's insurance is expensive. Most people pay over $100/month for basic coverage.",
           correctAnswer: false,
           explanation: "Renter's insurance is one of the best deals in insurance. Most people pay just $15-25/month for $30,000+ in personal property coverage, plus liability protection.",
+          distractorExplanations: {
+            0: 'Renter\'s insurance is one of the best deals in insurance',
+          },
         },
         {
           id: "pf-u11-L5-Q2",
@@ -601,6 +672,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "Replacement cost pays for a brand-new equivalent item. 'Actual cash value' accounts for depreciation, so your 3-year-old $1,200 laptop might only get you $400. Always choose replacement cost.",
+          distractorExplanations: {
+            1: 'Replacement cost pays for a brand-new equivalent item',
+            2: 'Replacement cost pays for a brand-new equivalent item',
+            3: 'Replacement cost pays for a brand-new equivalent item',
+          },
         },
         {
           id: "pf-u11-L5-Q5",
@@ -632,6 +708,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "Tom loses everything with zero reimbursement, because his landlord's insurance covers the building, not Tom's personal property. Renter's insurance at $20/month would have covered up to $25,000 to replace his stuff.",
+          distractorExplanations: {
+            1: 'Tom loses everything with zero reimbursement, because his landlord\'s insurance covers the building, not Tom\'s personal property',
+            2: 'Tom loses everything with zero reimbursement, because his landlord\'s insurance covers the building, not Tom\'s personal property',
+            3: 'Tom loses everything with zero reimbursement, because his landlord\'s insurance covers the building, not Tom\'s personal property',
+          },
         },
         {
           id: "pf-u11-L5-Q8",
@@ -690,6 +771,9 @@ export const unit11: Unit = {
           question: "A single 25-year-old with no dependents and no debt definitely needs life insurance.",
           correctAnswer: false,
           explanation: "If nobody depends on your income, life insurance has no one to protect. Your employer might offer a small free policy (1x salary), which is fine. But there's no reason to pay for a big policy until someone. A spouse, kids, or aging parents. Relies on your income.",
+          distractorExplanations: {
+            0: 'If nobody depends on your income, life insurance has no one to protect',
+          },
         },
         {
           id: "pf-u11-L6-Q2",
@@ -703,6 +787,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "$350 - $25 = $325/month saved. Over 30 years, that's $117,000 in premium savings alone, and even more if you put it in a HYSA. Whole life's cash value rarely beats simply saving the difference.",
+          distractorExplanations: {
+            1: '$350 - $25 = $325/month saved. Over 30 years, that\'s $117,000 in premium savings alone, and even more if you put it in a HYSA',
+            2: '$350 - $25 = $325/month saved. Over 30 years, that\'s $117,000 in premium savings alone, and even more if you put it in a HYSA',
+            3: '$350 - $25 = $325/month saved. Over 30 years, that\'s $117,000 in premium savings alone, and even more if you put it in a HYSA',
+          },
         },
         {
           id: "pf-u11-L6-Q3",
@@ -745,6 +834,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "Marcus absolutely needs life insurance NOW. A $750K 20-year term policy would cost about $30-35/month and cover his family through his child's college years. Waiting is the worst option. He's the sole income, and every day without coverage is a gamble with his family's future.",
+          distractorExplanations: {
+            1: 'Marcus absolutely needs life insurance NOW',
+            2: 'Marcus absolutely needs life insurance NOW',
+            3: 'Marcus absolutely needs life insurance NOW',
+          },
         },
         {
           id: "pf-u11-L6-Q7",
@@ -832,6 +926,9 @@ export const unit11: Unit = {
           question: "Most disabilities are caused by dramatic accidents like car crashes or falling off ladders.",
           correctAnswer: false,
           explanation: "The most common causes of long-term disability are illnesses: back problems, cancer, heart disease, and mental health conditions. These are far more likely to stop you from working than a dramatic accident.",
+          distractorExplanations: {
+            0: 'The most common causes of long-term disability are illnesses: back problems, cancer, heart disease, and mental health conditions',
+          },
         },
         {
           id: "pf-u11-L7-Q4",
@@ -845,6 +942,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "$70,000 x 60% = $42,000/year, or $3,500/month. It's less than your full salary, which is why having an emergency fund and low expenses matters.",
+          distractorExplanations: {
+            1: '$70,000 x 60% = $42,000/year, or $3,500/month',
+            2: '$70,000 x 60% = $42,000/year, or $3,500/month',
+            3: '$70,000 x 60% = $42,000/year, or $3,500/month',
+          },
         },
         {
           id: "pf-u11-L7-Q5",
@@ -866,6 +968,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "Having LTD coverage at all is the most important step. The other strategies are optimizations. Without LTD, a serious illness or injury could mean zero income for years. Everything else is secondary to simply having this safety net.",
+          distractorExplanations: {
+            1: 'Having LTD coverage at all is the most important step',
+            2: 'Having LTD coverage at all is the most important step',
+            3: 'Having LTD coverage at all is the most important step',
+          },
         },
         {
           id: "pf-u11-L7-Q7",
@@ -880,6 +987,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "Without disability insurance, Rachel's $5,000 covers maybe 1 month of expenses, and she faces 6+ months with no income. A $40/month LTD policy would have given her $4,750/month.",
+          distractorExplanations: {
+            1: 'Without disability insurance, Rachel\'s $5,000 covers maybe 1 month of expenses, and she faces 6+ months with no income',
+            2: 'Without disability insurance, Rachel\'s $5,000 covers maybe 1 month of expenses, and she faces 6+ months with no income',
+            3: 'Without disability insurance, Rachel\'s $5,000 covers maybe 1 month of expenses, and she faces 6+ months with no income',
+          },
         },
         {
           id: "pf-u11-L7-Q8",
@@ -936,6 +1048,9 @@ export const unit11: Unit = {
           question: "If an extended warranty costs 20% of the product price, it's usually a good deal.",
           correctAnswer: false,
           explanation: "Only about 5-10% of products actually need repair during the warranty period. You're paying $200 on a $1,000 TV for maybe a 5% chance of needing it.",
+          distractorExplanations: {
+            0: 'Only about 5-10% of products actually need repair during the warranty period',
+          },
         },
         {
           id: "pf-u11-L8-Q3",
@@ -949,6 +1064,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "Expected value: 8% chance x $200 average repair = $16 expected payout. You're paying $150 for $16 of expected value, so just save the $150 and self-insure.",
+          distractorExplanations: {
+            1: 'Expected value: 8% chance x $200 average repair = $16 expected payout',
+            2: 'Expected value: 8% chance x $200 average repair = $16 expected payout',
+            3: 'Expected value: 8% chance x $200 average repair = $16 expected payout',
+          },
         },
         {
           id: "pf-u11-L8-Q4",
@@ -963,6 +1083,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 3,
           explanation: "GAP insurance makes sense when you're underwater on a car loan (owe more than it's worth). But NEVER buy it from the dealer at $800. Your auto insurer offers the same thing for $20-50/year. The dealer marks it up 400-800%. Same product, fraction of the price.",
+          distractorExplanations: {
+            0: 'GAP insurance makes sense when you\'re underwater on a car loan (owe more than it\'s worth)',
+            1: 'GAP insurance makes sense when you\'re underwater on a car loan (owe more than it\'s worth)',
+            2: 'GAP insurance makes sense when you\'re underwater on a car loan (owe more than it\'s worth)',
+          },
         },
         {
           id: "pf-u11-L8-Q5",
@@ -1070,6 +1195,9 @@ export const unit11: Unit = {
           question: "A credit freeze prevents you from using your existing bank accounts.",
           correctAnswer: false,
           explanation: "A credit freeze only prevents NEW accounts from being opened in your name. Your existing accounts work normally, with no downside.",
+          distractorExplanations: {
+            0: 'A credit freeze only prevents NEW accounts from being opened in your name',
+          },
         },
         {
           id: "pf-u11-L9-Q4",
@@ -1083,6 +1211,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "NEVER give sensitive information to someone who calls YOU. Even if caller ID shows your bank's name, it can be spoofed. Always hang up and call your bank directly using the number on your card or their official website. A real bank will never ask for your full SSN over the phone.",
+          distractorExplanations: {
+            1: 'NEVER give sensitive information to someone who calls YOU',
+            2: 'NEVER give sensitive information to someone who calls YOU',
+            3: 'NEVER give sensitive information to someone who calls YOU',
+          },
         },
         {
           id: "pf-u11-L9-Q5",
@@ -1119,6 +1252,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "This is a classic smishing (SMS phishing) scam. The phone number and any links in the text lead to scammers, not Amazon. Never call numbers or click links from suspicious texts. Instead, open the Amazon app directly and check your actual orders. If nothing is there, it's confirmed fraud. Delete the text.",
+          distractorExplanations: {
+            1: 'This is a classic smishing (SMS phishing) scam',
+            2: 'This is a classic smishing (SMS phishing) scam',
+            3: 'This is a classic smishing (SMS phishing) scam',
+          },
         },
         {
           id: "pf-u11-L9-Q8",
@@ -1203,6 +1341,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "$1,800 - $200 loyalty discount = $1,600 with current insurer. Competitor = $1,350. You save $250/year by switching. Loyalty discounts are often just enough to keep you from shopping around. But not enough to actually match the market. Always do the math.",
+          distractorExplanations: {
+            1: '$1,800 - $200 loyalty discount = $1,600 with current insurer',
+            2: '$1,800 - $200 loyalty discount = $1,600 with current insurer',
+            3: '$1,800 - $200 loyalty discount = $1,600 with current insurer',
+          },
         },
         {
           id: "pf-u11-L10-Q3",
@@ -1238,6 +1381,9 @@ export const unit11: Unit = {
           question: "Filing a small $400 claim on your homeowner's insurance is always worth it since that's what insurance is for.",
           correctAnswer: false,
           explanation: "Filing a small claim can raise your premiums by 20-40% for 3-5 years. If your premium goes up $200/year for 3 years, that $400 claim just cost you $600 in higher premiums. Only file claims for significant losses that clearly exceed your deductible. Self-insure the small stuff.",
+          distractorExplanations: {
+            0: 'Filing a small claim can raise your premiums by 20-40% for 3-5 years',
+          },
         },
         {
           id: "pf-u11-L10-Q7",
@@ -1252,6 +1398,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "David should attack from every angle. Get competing quotes (5-year loyalty without shopping almost guarantees overpaying). Raise his deductible to $1,000 (his emergency fund can handle it). Ask about every discount. Then call his current insurer with the competing quotes. They'll often match or beat them to keep you.",
+          distractorExplanations: {
+            1: 'David should attack from every angle',
+            2: 'David should attack from every angle',
+            3: 'David should attack from every angle',
+          },
         },
         {
           id: "pf-u11-L10-Q8",
@@ -1265,6 +1416,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 0,
           explanation: "All four strategies save money, but regularly shopping rates has the biggest impact because insurance pricing is constantly changing. Companies adjust rates, offer promotions, and compete for customers. The person who compares rates every 1-2 years consistently pays less than someone who bundles or adjusts deductibles but never shops around.",
+          distractorExplanations: {
+            1: 'All four strategies save money, but regularly shopping rates has the biggest impact because insurance pricing is constantly changing',
+            2: 'All four strategies save money, but regularly shopping rates has the biggest impact because insurance pricing is constantly changing',
+            3: 'All four strategies save money, but regularly shopping rates has the biggest impact because insurance pricing is constantly changing',
+          },
         },
         {
           id: "pf-u11-L10-Q9",
@@ -1527,6 +1683,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 1,
           explanation: "Buying involves 2-5% closing costs upfront and 5-6% selling fees. You need to stay long enough for appreciation to cover those costs before buying 'wins.'",
+          distractorExplanations: {
+            0: 'Buying involves 2-5% closing costs upfront and 5-6% selling fees',
+            2: 'Buying involves 2-5% closing costs upfront and 5-6% selling fees',
+            3: 'Buying involves 2-5% closing costs upfront and 5-6% selling fees',
+          },
         },
         {
           id: "pf-u11-rev-Q2",
@@ -1534,6 +1695,9 @@ export const unit11: Unit = {
           question: "A fixed-rate mortgage keeps the same interest rate for the entire loan term.",
           correctAnswer: true,
           explanation: "Fixed-rate means your payment stays predictable. An adjustable-rate mortgage (ARM) can change after an initial period, making payments unpredictable.",
+          distractorExplanations: {
+            1: 'Fixed-rate means your payment stays predictable',
+          },
         },
         {
           id: "pf-u11-rev-Q3",
@@ -1549,6 +1713,9 @@ export const unit11: Unit = {
           question: "Term life insurance is typically cheaper than whole life insurance for the same coverage amount.",
           correctAnswer: true,
           explanation: "Term life covers you for a set period (10-30 years) and is much cheaper. Whole life covers you forever and includes a savings component, making it more expensive.",
+          distractorExplanations: {
+            1: 'Term life covers you for a set period (10-30 years) and is much cheaper',
+          },
         },
         {
           id: "pf-u11-rev-Q5",
@@ -1588,6 +1755,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 1,
           explanation: "A Real Estate Investment Trust (REIT) lets you own real estate without buying property. You invest in a fund that owns and operates properties, and you earn dividends.",
+          distractorExplanations: {
+            0: 'A Real Estate Investment Trust (REIT) lets you own real estate without buying property',
+            2: 'A Real Estate Investment Trust (REIT) lets you own real estate without buying property',
+            3: 'A Real Estate Investment Trust (REIT) lets you own real estate without buying property',
+          },
         },
         {
           id: "pf-u11-rev-Q9",
@@ -1601,6 +1773,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 1,
           explanation: "You pay your $2,000 deductible first. Insurance covers the remaining $3,000. Without insurance, the full $5,000 would be yours.",
+          distractorExplanations: {
+            0: 'The correct answer is $2,000, not $5,000',
+            2: 'The correct answer is $2,000, not $150',
+            3: 'The correct answer is $2,000, not $0',
+          },
         },
         {
           id: "pf-u11-rev-Q10",
@@ -1615,6 +1792,11 @@ export const unit11: Unit = {
           ],
           correctIndex: 1,
           explanation: "Health insurance is essential since a single ER visit can cost $10,000+. Auto insurance is legally required. As a renter with no dependents, life insurance is less urgent, and homeowner's insurance doesn't apply.",
+          distractorExplanations: {
+            0: 'Health insurance is essential since a single ER visit can cost $10,000+',
+            2: 'Health insurance is essential since a single ER visit can cost $10,000+',
+            3: 'Health insurance is essential since a single ER visit can cost $10,000+',
+          },
         },
       ],
     },

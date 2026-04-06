@@ -65,7 +65,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <main id="main-content" className="flex-1 pb-16 lg:pb-0">
             <ErrorBoundary>{children}</ErrorBoundary>
           </main>
-          <Footer />
         </div>
       </div>
 

@@ -15,6 +15,8 @@ interface FriendCardProps {
   totalXp: number;
   todayXp?: number;
   index: number;
+  /** Current user's streak — when both > 0, show shared streak badge */
+  userStreak?: number;
 }
 
 function getActivitySnippet(streak: number, todayXp: number, level: number): string {
@@ -32,8 +34,11 @@ export default function FriendCard({
   totalXp,
   todayXp = 0,
   index,
+  userStreak = 0,
 }: FriendCardProps) {
   const subtitle = getActivitySnippet(currentStreak, todayXp, level);
+  const hasSharedStreak = userStreak > 0 && currentStreak > 0;
+  const sharedStreakDays = Math.min(userStreak, currentStreak);
 
   return (
     <motion.div
@@ -48,7 +53,14 @@ export default function FriendCard({
         <UserAvatar image={image} name={displayName} size={44} />
 
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-bold text-surface-900 dark:text-surface-50 truncate">{displayName}</p>
+          <div className="flex items-center gap-1.5">
+            <p className="text-sm font-bold text-surface-900 dark:text-surface-50 truncate">{displayName}</p>
+            {hasSharedStreak && (
+              <span className="shrink-0 text-[10px] font-bold text-amber-600 bg-amber-100 dark:bg-amber-900/30 px-1.5 py-0.5 rounded-full">
+                🔥 {sharedStreakDays}d shared
+              </span>
+            )}
+          </div>
           <p className="text-xs text-surface-400 font-semibold">{subtitle}</p>
         </div>
 

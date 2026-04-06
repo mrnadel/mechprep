@@ -7,8 +7,11 @@ import { useCourseStore } from '@/store/useCourseStore';
 import { useIsDark } from '@/store/useThemeStore';
 import { courseMeta } from '@/data/course/course-meta';
 import { topics } from '@/data/topics';
-import { TrendingUp, AlertTriangle, Trophy } from 'lucide-react';
+import { TrendingUp, AlertTriangle, Trophy, Share2 } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { useStore } from '@/store/useStore';
+import { getProfession } from '@/data/professions';
+import { shareCertificate } from '@/lib/certificate';
 
 /* ── helpers ── */
 
@@ -35,6 +38,9 @@ function scoreToMastery(score: number): Mastery {
 export default function SkillMapPage() {
   const isDark = useIsDark();
   const completedLessons = useCourseStore((s) => s.progress.completedLessons);
+  const activeProfession = useCourseStore((s) => s.activeProfession);
+  const displayName = useStore((s) => s.progress.displayName);
+  const profession = activeProfession ? getProfession(activeProfession) : null;
 
   // Derive topic stats directly from completed course lessons
   const analyzed = useMemo(() => {
@@ -201,6 +207,26 @@ export default function SkillMapPage() {
               </div>
             ))}
           </div>
+          {/* Share Score button */}
+          {readiness > 0 && (
+            <button
+              onClick={() => shareCertificate({
+                name: displayName || 'Learner',
+                profession: profession?.name || 'Course',
+                professionIcon: profession?.icon || '🎓',
+                color: profession?.color || '#6366f1',
+                score: readiness,
+              })}
+              className="mt-4 flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-colors"
+              style={{
+                background: `${ringColor}15`,
+                color: ringColor,
+                border: `1.5px solid ${ringColor}30`,
+              }}
+            >
+              <Share2 style={{ width: 14, height: 14 }} /> Share Score
+            </button>
+          )}
         </motion.div>
 
         {/* ── Weaknesses (priority) ── */}

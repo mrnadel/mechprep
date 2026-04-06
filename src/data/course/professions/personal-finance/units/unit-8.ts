@@ -49,6 +49,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "The core difference is decentralization. Your bank dollars are controlled by banks and the Federal Reserve. Crypto runs on a distributed network that no single entity controls. That's both its superpower and its risk.",
+ distractorExplanations: {
+   1: 'The core difference is decentralization',
+   2: 'The core difference is decentralization',
+   3: 'The core difference is decentralization',
+ },
  },
  {
  id: "pf-u8-L1-Q2",
@@ -56,6 +61,9 @@ export const unit8: Unit = {
  question: "Cryptocurrency transactions are verified by banks and financial institutions.",
  correctAnswer: false,
  explanation: "Not quite. That's the whole point. Crypto transactions are verified by a network of computers running the blockchain protocol, not by banks. The network participants (called miners or validators) confirm transactions using cryptographic math.",
+ distractorExplanations: {
+   0: 'That\'s the whole point. Crypto transactions are verified by a network of computers running the blockchain protocol, not by banks',
+ },
  },
  {
  id: "pf-u8-L1-Q3",
@@ -87,6 +95,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "This is crypto at its most useful. Carlos can receive money cheaply and quickly from family abroad AND store value in an asset that isn't tied to his collapsing local currency. This is a real use case, not hype.",
+ distractorExplanations: {
+   1: 'This is crypto at its most useful. Carlos can receive money cheaply and quickly from family abroad AND store value in an asset that isn\'t tied to h...',
+   2: 'This is crypto at its most useful. Carlos can receive money cheaply and quickly from family abroad AND store value in an asset that isn\'t tied to h...',
+   3: 'This is crypto at its most useful. Carlos can receive money cheaply and quickly from family abroad AND store value in an asset that isn\'t tied to h...',
+ },
  },
  {
  id: "pf-u8-L1-Q6",
@@ -123,6 +136,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "While all four have some truth, 'digital money that removes the middleman using decentralized technology' captures the essence. It highlights what crypto IS (digital money), what it DOES (removes middlemen), and HOW it works (decentralized tech).",
+ distractorExplanations: {
+   1: 'While all four have some truth, \'digital money that removes the middleman using decentralized technology\' captures the essence',
+   2: 'While all four have some truth, \'digital money that removes the middleman using decentralized technology\' captures the essence',
+   3: 'While all four have some truth, \'digital money that removes the middleman using decentralized technology\' captures the essence',
+ },
  },
  ],
  },
@@ -155,6 +173,9 @@ export const unit8: Unit = {
  question: "On a blockchain, transactions are verified by a network of computers instead of a single bank.",
  correctAnswer: true,
  explanation: "Exactly. Instead of one bank deciding what's valid, thousands of computers around the world do the job together.",
+ distractorExplanations: {
+   1: 'Instead of one bank deciding what\'s valid, thousands of computers around the world do the job together',
+ },
  },
  {
  id: "pf-u8-L2-Q1",
@@ -176,6 +197,9 @@ export const unit8: Unit = {
  question: "Once a transaction is added to the blockchain, it can be edited or deleted by the network administrators.",
  correctAnswer: false,
  explanation: "There ARE no network administrators, that's the point. Once a transaction is confirmed and added to the blockchain, it's permanent. This immutability is one of blockchain's key features (and also why sending crypto to the wrong address is such a nightmare).",
+ distractorExplanations: {
+   0: 'There ARE no network administrators, that\'s the point',
+ },
  },
  {
  id: "pf-u8-L2-Q3",
@@ -198,6 +222,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Each block's hash depends on the previous block. Change one block and every block after it becomes invalid. Plus, thousands of computers hold identical copies, you'd have to hack the majority simultaneously. That's practically impossible.",
+ distractorExplanations: {
+   1: 'Each block\'s hash depends on the previous block',
+   2: 'Each block\'s hash depends on the previous block',
+   3: 'Each block\'s hash depends on the previous block',
+ },
  },
  {
  id: "pf-u8-L2-Q5",
@@ -240,6 +269,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Attacking Bitcoin would require more computing power than all the world's supercomputers combined, costing billions in hardware and electricity. And you'd gain almost nothing because everyone would see the attack and the network would reject it. The economics make it pointless.",
+ distractorExplanations: {
+   1: 'Attacking Bitcoin would require more computing power than all the world\'s supercomputers combined, costing billions in hardware and electricity',
+   2: 'Attacking Bitcoin would require more computing power than all the world\'s supercomputers combined, costing billions in hardware and electricity',
+   3: 'Attacking Bitcoin would require more computing power than all the world\'s supercomputers combined, costing billions in hardware and electricity',
+ },
  },
  {
  id: "pf-u8-L2-Q9",
@@ -281,6 +315,9 @@ export const unit8: Unit = {
  question: "Bitcoin was the first cryptocurrency ever created.",
  correctAnswer: true,
  explanation: "Yes. Bitcoin launched in January 2009 and was the first successful implementation of a decentralized digital currency.",
+ distractorExplanations: {
+   1: 'Bitcoin launched in January 2009 and was the first successful implementation of a decentralized digital currency',
+ },
  },
  {
  id: "pf-u8-L3-Q1",
@@ -294,6 +331,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Exactly 21 million Bitcoin will ever exist. This hard cap is written into Bitcoin's code and cannot be changed. As of now, about 19.5 million have already been mined. The last Bitcoin will be mined around the year 2140.",
+ distractorExplanations: {
+   1: '21 million Bitcoin will ever exist',
+   2: '21 million Bitcoin will ever exist',
+   3: '21 million Bitcoin will ever exist',
+ },
  },
  {
  id: "pf-u8-L3-Q2",
@@ -301,6 +343,9 @@ export const unit8: Unit = {
  question: "The identity of Bitcoin's creator, Satoshi Nakamoto, has been confirmed and publicly known since 2010.",
  correctAnswer: false,
  explanation: "Nobody knows who Satoshi Nakamoto is. It could be one person, a group, or even a government project. Satoshi disappeared from public communication in 2011 and has never been definitively identified. It remains one of the greatest mysteries in tech.",
+ distractorExplanations: {
+   0: 'Nobody knows who Satoshi Nakamoto is',
+ },
  },
  {
  id: "pf-u8-L3-Q3",
@@ -352,6 +397,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Bitcoin is divisible to 8 decimal places. You can buy $5, $10, or $50 worth, you don't need a whole coin. 1 BTC = 100,000,000 satoshis. This is one of the biggest misconceptions keeping people from getting started.",
+ distractorExplanations: {
+   1: 'Bitcoin is divisible to 8 decimal places',
+   2: 'Bitcoin is divisible to 8 decimal places',
+   3: 'Bitcoin is divisible to 8 decimal places',
+ },
  },
  {
  id: "pf-u8-L3-Q8",
@@ -365,6 +415,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "The scarcity argument is the most direct comparison. Gold can't be manufactured, there's a fixed amount on Earth. Bitcoin can't be created beyond 21 million, it's hardcoded. This supply cap is the foundation of the 'digital gold' thesis.",
+ distractorExplanations: {
+   1: 'The scarcity argument is the most direct comparison',
+   2: 'The scarcity argument is the most direct comparison',
+   3: 'The scarcity argument is the most direct comparison',
+ },
  },
  ],
  },
@@ -403,6 +458,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Bitcoin was designed as peer-to-peer money. Period. Ethereum was designed as a platform where anyone can build decentralized applications using smart contracts. Both use blockchain, both are decentralized, but Ethereum's programmability opens up way more use cases.",
+ distractorExplanations: {
+   1: 'Bitcoin was designed as peer-to-peer money',
+   2: 'Bitcoin was designed as peer-to-peer money',
+   3: 'Bitcoin was designed as peer-to-peer money',
+ },
  },
  {
  id: "pf-u8-L4-Q2",
@@ -427,6 +487,9 @@ export const unit8: Unit = {
  question: "Ethereum switched from Proof of Work to Proof of Stake in 2022, reducing its energy consumption by over 99%.",
  correctAnswer: true,
  explanation: "The 'Merge' in September 2022 was one of the biggest upgrades in crypto history. Ethereum went from energy-hungry mining (like Bitcoin) to Proof of Stake, cutting energy use by about 99.95%. Validators now stake ETH instead of running power-hungry computers.",
+ distractorExplanations: {
+   1: 'The \'Merge\' in September 2022 was one of the biggest upgrades in crypto history',
+ },
  },
  {
  id: "pf-u8-L4-Q5",
@@ -441,6 +504,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Layer 2 networks like Arbitrum or Optimism process transactions off the main Ethereum chain, then batch them together. Same security, same result, 99%+ lower fees. Smart users always check Layer 2 options first.",
+ distractorExplanations: {
+   1: 'Layer 2 networks like Arbitrum or Optimism process transactions off the main Ethereum chain, then batch them together',
+   2: 'Layer 2 networks like Arbitrum or Optimism process transactions off the main Ethereum chain, then batch them together',
+   3: 'Layer 2 networks like Arbitrum or Optimism process transactions off the main Ethereum chain, then batch them together',
+ },
  },
  {
  id: "pf-u8-L4-Q6",
@@ -525,6 +593,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "DYOR = Do Your Own Research. It's the crypto community's way of saying 'don't just trust what some random person on Twitter says, look into it yourself.' It's great advice, but many people say 'DYOR' right after shilling their own bags.",
+ distractorExplanations: {
+   1: 'DYOR = Do Your Own Research. It\'s the crypto community\'s way of saying \'don\'t just trust what some random person on Twitter says, look into it your...',
+   2: 'DYOR = Do Your Own Research. It\'s the crypto community\'s way of saying \'don\'t just trust what some random person on Twitter says, look into it your...',
+   3: 'DYOR = Do Your Own Research. It\'s the crypto community\'s way of saying \'don\'t just trust what some random person on Twitter says, look into it your...',
+ },
  },
  {
  id: "pf-u8-L5-Q3",
@@ -541,6 +614,9 @@ export const unit8: Unit = {
  question: "Most of the 20,000+ altcoins currently in existence will still be around and active in 10 years.",
  correctAnswer: false,
  explanation: "History suggests over 90% of altcoins will fail or become worthless. In previous market cycles, thousands of coins launched during the hype, and the vast majority are now dead. Only projects solving real problems with strong teams tend to survive.",
+ distractorExplanations: {
+   0: 'History suggests over 90% of altcoins will fail or become worthless',
+ },
  },
  {
  id: "pf-u8-L5-Q5",
@@ -555,6 +631,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Red flags everywhere: (1) Influencer pump. (2) Anonymous team. (3) No working product. (4) Low price per coin means nothing (you need to look at market cap, not coin price). This has 'rug pull' written all over it.",
+ distractorExplanations: {
+   1: 'Red flags everywhere: (1) Influencer pump',
+   2: 'Red flags everywhere: (1) Influencer pump',
+   3: 'Red flags everywhere: (1) Influencer pump',
+ },
  },
  {
  id: "pf-u8-L5-Q6",
@@ -585,6 +666,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Start with the most established assets (Bitcoin, Ethereum), do deep research on any altcoin before buying, and only risk a small portion of your portfolio. The 'cheap price = more upside' myth has cost people billions, price per coin means nothing without context.",
+ distractorExplanations: {
+   1: 'Start with the most established assets (Bitcoin, Ethereum), do deep research on any altcoin before buying, and only risk a small portion of your po...',
+   2: 'Start with the most established assets (Bitcoin, Ethereum), do deep research on any altcoin before buying, and only risk a small portion of your po...',
+   3: 'Start with the most established assets (Bitcoin, Ethereum), do deep research on any altcoin before buying, and only risk a small portion of your po...',
+ },
  },
  ],
  },
@@ -626,6 +712,9 @@ export const unit8: Unit = {
  question: "If you lose your private key and don't have your seed phrase backup, your crypto is gone forever, no customer support can help.",
  correctAnswer: true,
  explanation: "This is one of crypto's harshest realities. There's no 'forgot password' button, no customer support, no bank to call. If you lose your private key AND your seed phrase, your crypto is permanently inaccessible. An estimated 3-4 million Bitcoin (worth hundreds of billions) are lost forever for this reason.",
+ distractorExplanations: {
+   1: 'This is one of crypto\'s harshest realities',
+ },
  },
  {
  id: "pf-u8-L6-Q3",
@@ -657,6 +746,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Large holdings belong in cold storage (virtually unhackable). The smaller amount you actively use for DeFi stays in a hot wallet for convenience. This split mirrors real life: savings in a safe, spending money in your pocket.",
+ distractorExplanations: {
+   1: 'Large holdings belong in cold storage (virtually unhackable)',
+   2: 'Large holdings belong in cold storage (virtually unhackable)',
+   3: 'Large holdings belong in cold storage (virtually unhackable)',
+ },
  },
  {
  id: "pf-u8-L6-Q6",
@@ -684,6 +778,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "The vast majority of lost Bitcoin comes from people who lost their private keys, early adopters who threw away hard drives, forgot passwords, or died without sharing access. It's estimated that 20% of all Bitcoin ever mined is permanently inaccessible.",
+ distractorExplanations: {
+   1: 'The vast majority of lost Bitcoin comes from people who lost their private keys, early adopters who threw away hard drives, forgot passwords, or di...',
+   2: 'The vast majority of lost Bitcoin comes from people who lost their private keys, early adopters who threw away hard drives, forgot passwords, or di...',
+   3: 'The vast majority of lost Bitcoin comes from people who lost their private keys, early adopters who threw away hard drives, forgot passwords, or di...',
+ },
  },
  {
  id: "pf-u8-L6-Q8",
@@ -751,6 +850,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "1% of $10,000 = $100 in fees. 0.1% of $10,000 = $10 in fees. You save $90 on a single trade. Do that monthly and you're saving $1,080/year just by picking the right exchange.",
+ distractorExplanations: {
+   1: '1% of $10,000 = $100 in fees. 0.1% of $10,000 = $10 in fees',
+   2: '1% of $10,000 = $100 in fees. 0.1% of $10,000 = $10 in fees',
+   3: '1% of $10,000 = $100 in fees. 0.1% of $10,000 = $10 in fees',
+ },
  },
  {
  id: "pf-u8-L7-Q4",
@@ -782,6 +886,9 @@ export const unit8: Unit = {
  question: "Depositing money to a crypto exchange via debit card is usually cheaper than a bank transfer.",
  correctAnswer: false,
  explanation: "It's the opposite. Debit/credit card deposits typically charge 3-5% in fees, while bank transfers (ACH) are usually free or very low cost. On a $1,000 deposit, that's the difference between $0-$5 (bank) and $30-$50 (card).",
+ distractorExplanations: {
+   0: 'It\'s the opposite. Debit/credit card deposits typically charge 3-5% in fees, while bank transfers (ACH) are usually free or very low cost',
+ },
  },
  {
  id: "pf-u8-L7-Q7",
@@ -804,6 +911,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "For beginners, a regulated CEX like Coinbase is safest, but use the Advanced interface to save on fees (0.6% vs 1.5%). DEXs require more knowledge, and random exchanges could be scams. Start safe, optimize later.",
+ distractorExplanations: {
+   1: 'For beginners, a regulated CEX like Coinbase is safest, but use the Advanced interface to save on fees (0.6% vs 1.5%)',
+   2: 'For beginners, a regulated CEX like Coinbase is safest, but use the Advanced interface to save on fees (0.6% vs 1.5%)',
+   3: 'For beginners, a regulated CEX like Coinbase is safest, but use the Advanced interface to save on fees (0.6% vs 1.5%)',
+ },
  },
  ],
  },
@@ -842,6 +954,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "DeFi = Decentralized Finance. It's the umbrella term for all financial services (lending, borrowing, trading, insurance) built on blockchain without traditional intermediaries like banks.",
+ distractorExplanations: {
+   1: 'DeFi = Decentralized Finance. It\'s the umbrella term for all financial services (lending, borrowing, trading, insurance) built on blockchain withou...',
+   2: 'DeFi = Decentralized Finance. It\'s the umbrella term for all financial services (lending, borrowing, trading, insurance) built on blockchain withou...',
+   3: 'DeFi = Decentralized Finance. It\'s the umbrella term for all financial services (lending, borrowing, trading, insurance) built on blockchain withou...',
+ },
  },
  {
  id: "pf-u8-L8-Q2",
@@ -867,6 +984,9 @@ export const unit8: Unit = {
  question: "DeFi protocols are covered by FDIC insurance just like regular bank accounts.",
  correctAnswer: false,
  explanation: "Absolutely not. FDIC insurance covers traditional bank deposits up to $250,000. DeFi has zero government protection. If a protocol gets hacked or fails, there's no one to call and no insurance payout. This is the trade-off for operating outside the banking system.",
+ distractorExplanations: {
+   0: 'Not. FDIC insurance covers traditional bank deposits up to $250,000',
+ },
  },
  {
  id: "pf-u8-L8-Q5",
@@ -892,6 +1012,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Red flag bingo: brand new protocol, anonymous team, no audit, impossibly high APY. Early investors making money is how Ponzi schemes work, early in, early out. The anonymous team will likely drain the pool once enough money is in. Don't be the exit liquidity.",
+ distractorExplanations: {
+   1: 'Red flag bingo: brand new protocol, anonymous team, no audit, impossibly high APY',
+   2: 'Red flag bingo: brand new protocol, anonymous team, no audit, impossibly high APY',
+   3: 'Red flag bingo: brand new protocol, anonymous team, no audit, impossibly high APY',
+ },
  },
  {
  id: "pf-u8-L8-Q7",
@@ -927,6 +1052,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "While all are valid use cases, giving financial access to 1.4 billion unbanked people worldwide is DeFi's most transformative potential. Anyone with a smartphone and internet can access lending, savings, and trading, no bank account, no credit history, no government ID required.",
+ distractorExplanations: {
+   1: 'While all are valid use cases, giving financial access to 1.4 billion unbanked people worldwide is DeFi\'s most transformative potential',
+   2: 'While all are valid use cases, giving financial access to 1.4 billion unbanked people worldwide is DeFi\'s most transformative potential',
+   3: 'While all are valid use cases, giving financial access to 1.4 billion unbanked people worldwide is DeFi\'s most transformative potential',
+ },
  },
  ],
  },
@@ -976,6 +1106,9 @@ export const unit8: Unit = {
  question: "When you buy an NFT of a digital artwork, you automatically own the copyright to that artwork.",
  correctAnswer: false,
  explanation: "This is a huge misconception. Buying an NFT typically gives you ownership of that specific token, not the copyright, not the reproduction rights, not the intellectual property. It's like buying a print of a painting. You own the print, not the right to make more prints. Unless the creator explicitly transfers copyright (rare), you just own the token.",
+ distractorExplanations: {
+   0: 'This is a huge misconception. Buying an NFT typically gives you ownership of that specific token, not the copyright, not the reproduction rights, n...',
+ },
  },
  {
  id: "pf-u8-L9-Q4",
@@ -989,6 +1122,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "The NFT art boom was a classic speculative bubble. People bought not because the art was worth millions, but because they believed someone would pay even more (the 'greater fool' theory). When new buyers stopped coming, prices collapsed. The tech still works fine.",
+ distractorExplanations: {
+   1: 'The NFT art boom was a classic speculative bubble',
+   2: 'The NFT art boom was a classic speculative bubble',
+   3: 'The NFT art boom was a classic speculative bubble',
+ },
  },
  {
  id: "pf-u8-L9-Q5",
@@ -1012,6 +1150,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Every red flag is waving: anonymous team, AI-generated art, artificial hype from bots, and guaranteed price promises. This has rug pull written all over it. The $1,500 mint price is exactly what they're trying to extract from people like your friend.",
+ distractorExplanations: {
+   1: 'Every red flag is waving: anonymous team, AI-generated art, artificial hype from bots, and guaranteed price promises',
+   2: 'Every red flag is waving: anonymous team, AI-generated art, artificial hype from bots, and guaranteed price promises',
+   3: 'Every red flag is waving: anonymous team, AI-generated art, artificial hype from bots, and guaranteed price promises',
+ },
  },
  {
  id: "pf-u8-L9-Q7",
@@ -1079,6 +1222,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "You held for 8 months (less than 1 year), so it's short-term capital gains, taxed at your regular income rate. If you're in the 24% bracket, you'd owe $480. Had you waited 4 more months (past the 1-year mark), you'd pay the lower long-term rate.",
+ distractorExplanations: {
+   1: 'You held for 8 months (less than 1 year), so it\'s short-term capital gains, taxed at your regular income rate',
+   2: 'You held for 8 months (less than 1 year), so it\'s short-term capital gains, taxed at your regular income rate',
+   3: 'You held for 8 months (less than 1 year), so it\'s short-term capital gains, taxed at your regular income rate',
+ },
  },
  {
  id: "pf-u8-L10-Q3",
@@ -1101,6 +1249,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Your $8,000 loss first offsets your $5,000 gain (net: -$3,000). Then you can deduct the remaining $3,000 against your regular income (saving $660 at the 22% bracket). Tax-loss harvesting turned a bad investment into a tax benefit.",
+ distractorExplanations: {
+   1: 'Your $8,000 loss first offsets your $5,000 gain (net: -$3,000)',
+   2: 'Your $8,000 loss first offsets your $5,000 gain (net: -$3,000)',
+   3: 'Your $8,000 loss first offsets your $5,000 gain (net: -$3,000)',
+ },
  },
  {
  id: "pf-u8-L10-Q5",
@@ -1108,6 +1261,9 @@ export const unit8: Unit = {
  question: "If you trade one cryptocurrency for another (like ETH for SOL) without ever converting to USD, you don't owe any taxes.",
  correctAnswer: false,
  explanation: "This is one of the most common (and costly) mistakes. The IRS treats crypto-to-crypto trades as a sale of the first asset. If your ETH gained value since you bought it, you owe capital gains tax on that profit, even though you never touched dollars.",
+ distractorExplanations: {
+   0: 'This is one of the most common (and costly) mistakes',
+ },
  },
  {
  id: "pf-u8-L10-Q6",
@@ -1144,6 +1300,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "For most people, simply holding longer than one year is the biggest tax saver. It can cut your rate from 22-37% (short-term) to 0-20% (long-term). On a $10,000 gain, that's saving $1,000-$2,000+ just by being patient. The other strategies are great too, but this one applies to everyone.",
+ distractorExplanations: {
+   1: 'For most people, simply holding longer than one year is the biggest tax saver',
+   2: 'For most people, simply holding longer than one year is the biggest tax saver',
+   3: 'For most people, simply holding longer than one year is the biggest tax saver',
+ },
  },
  ],
  },
@@ -1202,6 +1363,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "'HODL' originated from a famous 2013 Bitcoin forum post where a drunk investor misspelled 'hold.' It became a rallying cry: don't panic sell during crashes. While it's become a meme, the core idea (don't let emotions drive selling decisions) is sound investing psychology.",
+ distractorExplanations: {
+   1: '\'HODL\' originated from a famous 2013 Bitcoin forum post where a drunk investor misspelled \'hold.\' It became a rallying cry: don\'t panic sell during...',
+   2: '\'HODL\' originated from a famous 2013 Bitcoin forum post where a drunk investor misspelled \'hold.\' It became a rallying cry: don\'t panic sell during...',
+   3: '\'HODL\' originated from a famous 2013 Bitcoin forum post where a drunk investor misspelled \'hold.\' It became a rallying cry: don\'t panic sell during...',
+ },
  },
  {
  id: "pf-u8-L11-Q4",
@@ -1216,6 +1382,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "If you invested money you can afford to lose and have a 10+ year time horizon, a 25% dip is noise. Bitcoin has dropped 50-80% multiple times and recovered. The worst thing you can do is sell at a loss based on fear. The second worst is throwing in money you can't afford to lose.",
+ distractorExplanations: {
+   1: 'If you invested money you can afford to lose and have a 10+ year time horizon, a 25% dip is noise',
+   2: 'If you invested money you can afford to lose and have a 10+ year time horizon, a 25% dip is noise',
+   3: 'If you invested money you can afford to lose and have a 10+ year time horizon, a 25% dip is noise',
+ },
  },
  {
  id: "pf-u8-L11-Q5",
@@ -1232,6 +1403,9 @@ export const unit8: Unit = {
  question: "Dollar-cost averaging (investing a fixed amount regularly regardless of price) has historically been an effective strategy for volatile assets like Bitcoin.",
  correctAnswer: true,
  explanation: "DCA removes the impossible task of timing the market. By investing the same amount every week or month, you automatically buy more when prices are low and less when prices are high. Studies show DCA Bitcoin investors who stuck with it for 3+ years have been profitable regardless of when they started.",
+ distractorExplanations: {
+   1: 'DCA removes the impossible task of timing the market',
+ },
  },
  {
  id: "pf-u8-L11-Q7",
@@ -1327,6 +1501,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Jamie has good financial fundamentals, so crypto makes sense, but 25% is way too aggressive, and unresearched altcoins are high-risk. Starting with 5% ($2,000) in BTC/ETH via DCA lets them learn the market without jeopardizing their financial health.",
+ distractorExplanations: {
+   1: 'Jamie has good financial fundamentals, so crypto makes sense, but 25% is way too aggressive, and unresearched altcoins are high-risk',
+   2: 'Jamie has good financial fundamentals, so crypto makes sense, but 25% is way too aggressive, and unresearched altcoins are high-risk',
+   3: 'Jamie has good financial fundamentals, so crypto makes sense, but 25% is way too aggressive, and unresearched altcoins are high-risk',
+ },
  },
  {
  id: "pf-u8-L12-Q4",
@@ -1349,6 +1528,11 @@ export const unit8: Unit = {
  ],
  correctIndex: 0,
  explanation: "Rebalancing is a disciplined strategy: sell the winners, buy the underperformers, maintain your target allocation. If crypto tripled to 15%, sell enough to get back to 5% and reinvest in stocks/bonds. This locks in gains and manages risk. It feels wrong (selling winners), but it works.",
+ distractorExplanations: {
+   1: 'Rebalancing is a disciplined strategy: sell the winners, buy the underperformers, maintain your target allocation',
+   2: 'Rebalancing is a disciplined strategy: sell the winners, buy the underperformers, maintain your target allocation',
+   3: 'Rebalancing is a disciplined strategy: sell the winners, buy the underperformers, maintain your target allocation',
+ },
  },
  {
  id: "pf-u8-L12-Q6",
@@ -1365,6 +1549,9 @@ export const unit8: Unit = {
  question: "You should invest in crypto before building an emergency fund because crypto could double and help you build the fund faster.",
  correctAnswer: false,
  explanation: "This is backwards thinking. An emergency fund is for guaranteed safety, crypto is for speculative growth. If you invest your emergency fund in crypto and it drops 50% right when you lose your job, you're in serious trouble. Always build the safety net first, invest with extra money.",
+ distractorExplanations: {
+   0: 'This is backwards thinking. An emergency fund is for guaranteed safety, crypto is for speculative growth',
+ },
  },
  {
  id: "pf-u8-L12-Q8",

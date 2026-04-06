@@ -30,6 +30,9 @@ export const unit5: Unit = {
           question: 'Heat conduction requires direct contact between materials or within a single material.',
           correctAnswer: true,
           explanation: 'Conduction transfers energy through molecular vibrations and free electrons. It needs a material medium, unlike radiation.',
+          distractorExplanations: {
+            1: 'Conduction transfers energy through molecular vibrations and free electrons.',
+          },
           hint: 'Think about what carries the energy in conduction.',
         },
         {
@@ -44,6 +47,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'The negative sign ensures heat flows in the direction of decreasing temperature, from hot to cold.',
+          distractorExplanations: {
+            1: 'Regarding flows: The negative sign ensures heat flows in the direction of decreasing temperature, from hot to cold.',
+            2: 'This focuses on material/losing, which is not the correct mechanism or principle for this problem.',
+            3: 'Temperature is not the primary factor in this problem; the correct analysis uses a different variable.',
+          },
           hint: 'Which direction does heat naturally flow?',
         },
         {
@@ -84,6 +92,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Foam: R = 0.05/0.035 = 1.43. Brick: R = 0.2/0.7 = 0.29. The foam has about 5x more thermal resistance despite being 4x thinner.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than climates suggests.',
+            1: 'This focuses on brick,, which is not the correct mechanism or principle for this problem.',
+            2: 'Foam: R = 0.05/0.035 = 1.43.',
+          },
           hint: 'Compare R = L/k for each material.',
         },
         {
@@ -115,6 +128,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Diamond has an extremely regular crystal lattice that conducts phonons very efficiently. It\'s the best thermal conductor known.',
+          distractorExplanations: {
+            1: 'This focuses on copper/(~385, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on silver/(~429, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on aluminum/(~237, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'It\'s not a metal.',
         },
         {
@@ -129,6 +147,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Thermal diffusivity appears in the transient heat equation. High alpha means the material responds quickly to temperature changes.',
+          distractorExplanations: {
+            0: 'This focuses on material/store, which is not the correct mechanism or principle for this problem.',
+            2: 'Temperature is not the primary factor in this problem; the correct analysis uses a different variable.',
+            3: 'This focuses on material/conducts, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'This property matters most for transient (time-dependent) problems.',
         },
         {
@@ -170,6 +193,9 @@ export const unit5: Unit = {
           question: 'For layers of a wall in series, the total thermal resistance is the sum of individual resistances.',
           correctAnswer: true,
           explanation: 'Just like series electrical resistors, R_total = R1 + R2 + R3. The same heat flux passes through each layer.',
+          distractorExplanations: {
+            1: 'Just like series electrical resistors, R_total = R1 + R2 + R3.',
+          },
           hint: 'Think of the electrical analogy.',
         },
         {
@@ -184,6 +210,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Series layers carry the same heat flux, so resistances add directly.',
+          distractorExplanations: {
+            0: 'This focuses on multiply/resistances, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on average/resistances, which is not the correct mechanism or principle for this problem.',
+            2: '"Use the parallel formula" is incorrect; the reasoning does not follow from the governing equations.',
+          },
           hint: 'Does heat split or pass through all layers?',
         },
         {
@@ -215,6 +246,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Even smooth surfaces have microscopic roughness. The trapped air (k = 0.026) in those tiny gaps creates significant resistance.',
+          distractorExplanations: {
+            0: 'This focuses on radiation/between, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on mismatched/thermal, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on chemical/reactions, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What fills the space between the microscopic contact points?',
         },
         {
@@ -229,6 +265,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Thermal paste (k ~ 1-10 W/(m*K)) fills the microscopic air gaps, replacing air (k = 0.026) with a much better conductor.',
+          distractorExplanations: {
+            0: 'This focuses on copper/between, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on polish/surfaces, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on increase/heatsink, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What would fill the gaps more effectively than air?',
         },
         {
@@ -260,6 +301,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The wall and bolt are parallel heat paths. Use 1/R_total = 1/R_wall + 1/R_bolt. The bolt can dominate even with a small cross-section.',
+          distractorExplanations: {
+            0: 'This focuses on resistances, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on ignore/bolt,, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on average/resistances, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Does heat have one path or two through the wall?',
         },
         {
@@ -268,6 +314,9 @@ export const unit5: Unit = {
           question: 'Increasing contact pressure always decreases thermal contact resistance.',
           correctAnswer: true,
           explanation: 'Higher pressure deforms the microscopic peaks, increasing the real contact area and reducing the air gap volume.',
+          distractorExplanations: {
+            1: 'Higher pressure deforms the microscopic peaks, increasing the real contact area and reducing the air gap volume.',
+          },
           hint: 'What happens to the microscopic contact points under more force?',
         },
         {
@@ -309,6 +358,9 @@ export const unit5: Unit = {
           question: 'A hollow cylinder uses a logarithmic resistance formula because the heat transfer area changes with radius.',
           correctAnswer: true,
           explanation: 'In a cylinder, A = 2*pi*r*L grows with radius r. Integrating Fourier\'s law over this changing area gives the ln form.',
+          distractorExplanations: {
+            1: 'In a cylinder, A = 2*pi*r*L grows with radius r.',
+          },
           hint: 'How does the cross-sectional area change as you move outward?',
         },
         {
@@ -323,6 +375,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'The area A = 2*pi*r*L increases with r. When you integrate q = -k(dT/dr) over this varying area, you get the logarithmic form.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than applies thin-walled suggests.',
+            1: 'This "always" claim is too broad; cylinders higher the principle has important exceptions.',
+            2: 'The area A = 2*pi*r*L increases with r.',
+          },
           hint: 'What happens to the area as heat moves outward?',
         },
         {
@@ -344,6 +401,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Below r_cr = k/h, the increase in outer surface area for convection outweighs the added conduction resistance.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; insulation reduces the principle has important exceptions.',
+            2: 'This is too restrictive; the principle applies more broadly than insulation metallic suggests.',
+            3: 'This is too restrictive; the principle applies more broadly than vacuum conditions suggests.',
+          },
           hint: 'What two competing effects does insulation create on a cylinder?',
         },
         {
@@ -384,6 +446,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'A sphere\'s area grows as r^2, so the critical radius is twice the cylindrical value: r_cr = 2k/h.',
+          distractorExplanations: {
+            0: 'This option reflects a common misconception; the correct analysis follows different principles.',
+            1: 'This option reflects a common misconception; the correct analysis follows different principles.',
+            2: 'This focuses on k/(2h), which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The sphere\'s area grows faster with radius than a cylinder\'s.',
         },
         {
@@ -405,6 +472,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'With generation, d^2T/dx^2 = -q_gen/k, which integrates to a parabolic profile: T(x) = -(q_gen/(2k))*x^2 + C1*x + C2.',
+          distractorExplanations: {
+            0: 'This incorrectly denies an effect that is relevant to effect steady and significant in this context.',
+            1: 'This focuses on stays/steeper, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on exponential, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What shape comes from integrating a constant twice?',
         },
         {
@@ -413,6 +485,9 @@ export const unit5: Unit = {
           question: 'In steady-state conduction through a flat wall without heat generation, the temperature profile is linear.',
           correctAnswer: true,
           explanation: 'Without generation, d^2T/dx^2 = 0 integrates to T(x) = C1*x + C2, which is a straight line.',
+          distractorExplanations: {
+            1: 'Without generation, d^2T/dx^2 = 0 integrates to T(x) = C1*x + C2, which is a straight line.',
+          },
           hint: 'What does d^2T/dx^2 = 0 integrate to?',
         },
         {
@@ -450,6 +525,9 @@ export const unit5: Unit = {
           question: 'The convection coefficient h is a material property, like thermal conductivity k.',
           correctAnswer: false,
           explanation: 'h depends on the fluid, flow speed, geometry, and surface conditions. It\'s not a material property.',
+          distractorExplanations: {
+            0: 'h depends on the fluid, flow speed, geometry, and surface conditions.',
+          },
           hint: 'Does h change when you blow air faster over a surface?',
         },
         {
@@ -464,6 +542,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'h is determined by the flow conditions: the fluid properties, how fast it moves, and the shape of the surface.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than fluid suggests.',
+            2: 'This is too restrictive; the principle applies more broadly than temperature difference suggests.',
+            3: 'This is too restrictive; the principle applies more broadly than surface suggests.',
+          },
           hint: 'Blowing air faster over your hand cools it more. What changed?',
         },
         {
@@ -502,6 +585,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Water\'s thermal conductivity is about 25x higher than air\'s, and its higher density gives more thermal mass per volume.',
+          distractorExplanations: {
+            1: 'This focuses on molecules/smaller, which is not the correct mechanism or principle for this problem.',
+            2: 'This "always" claim is too broad; water lower the principle has important exceptions.',
+            3: 'This focuses on viscosity, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Compare the thermal properties of water and air.',
         },
         {
@@ -541,6 +629,9 @@ export const unit5: Unit = {
           question: 'Turbulent flow gives higher convection coefficients than laminar flow.',
           correctAnswer: true,
           explanation: 'Turbulent mixing continuously brings fresh fluid to the surface, which dramatically increases heat transfer.',
+          distractorExplanations: {
+            1: 'Turbulent mixing continuously brings fresh fluid to the surface, which dramatically increases heat transfer.',
+          },
           hint: 'Does mixing help or hurt heat transfer?',
         },
         {
@@ -555,6 +646,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Turbulent flow dramatically increases h, which means you need less surface area. The trade-off is higher pumping power.',
+          distractorExplanations: {
+            0: 'This focuses on turbulent/pumping, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on laminar/causes, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on turbulent/prevents, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What happens to the required heat exchanger size when h increases?',
         },
       ],
@@ -582,6 +678,9 @@ export const unit5: Unit = {
           question: 'The Nusselt number represents the ratio of convective to conductive heat transfer.',
           correctAnswer: true,
           explanation: 'Nu = hL/k. A higher Nu means convection dominates over conduction through the boundary layer.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'What does hL/k compare?',
         },
         {
@@ -606,6 +705,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Pr depends only on fluid properties (viscosity, specific heat, conductivity). It doesn\'t depend on flow speed or geometry.',
+          distractorExplanations: {
+            0: 'This focuses on surface, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on surface, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on regime, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Look at what\'s in the formula. Are any geometric quantities there?',
         },
         {
@@ -637,6 +741,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'For a flat plate, the critical Re is about 5 x 10^5. For pipe flow, it\'s about 2,300.',
+          distractorExplanations: {
+            1: '2,300 is far too low, indicating important terms were omitted from the calculation.',
+            2: '50,000 is an order of magnitude too small, likely from a unit conversion error.',
+            3: '5,000,000 is an order of magnitude too large, likely from a unit conversion error.',
+          },
           hint: 'This is different from the pipe flow transition value.',
         },
         {
@@ -681,6 +790,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Gr = g*beta*deltaT*L^3/nu^2 measures buoyancy-driven flow strength. It\'s the natural convection equivalent of Re.',
+          distractorExplanations: {
+            1: 'This focuses on forced, which is not the correct mechanism or principle for this problem.',
+            2: 'Regarding radiation: Gr = g*beta*deltaT*L^3/nu^2 measures buoyancy-driven flow strength.',
+            3: 'This focuses on conduction/through, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What drives natural convection? Buoyancy.',
         },
         {
@@ -689,6 +803,9 @@ export const unit5: Unit = {
           question: 'A higher Reynolds number always means higher heat transfer coefficient.',
           correctAnswer: false,
           explanation: 'Generally, higher Re gives higher h. But Re alone isn\'t enough. The fluid\'s Pr, the geometry, and whether the flow is developing also matter.',
+          distractorExplanations: {
+            0: 'Generally, higher Re gives higher h.',
+          },
           hint: 'Is Re the only factor in a Nu correlation?',
         },
       ],
@@ -716,6 +833,9 @@ export const unit5: Unit = {
           question: 'For laminar flow over a flat plate, the local h decreases along the plate length.',
           correctAnswer: true,
           explanation: 'The boundary layer grows along the plate, increasing the resistance. Local h is highest at the leading edge where the BL is thinnest.',
+          distractorExplanations: {
+            1: 'The boundary layer grows along the plate, increasing the resistance.',
+          },
           hint: 'What happens to the boundary layer thickness downstream?',
         },
         {
@@ -730,6 +850,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Dittus-Boelter is the most common pipe flow correlation. n = 0.4 for heating, n = 0.3 for cooling.',
+          distractorExplanations: {
+            1: 'This focuses on 0.664/re^0.5, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on re^0.5/pr^(1/3), which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on re^0.5/pr^(1/3), which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'This is the "go-to" correlation for turbulent pipe flow.',
         },
         {
@@ -761,6 +886,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'For constant T_wall: Nu = 3.66. For constant heat flux: Nu = 4.36. Both are independent of Re and Pr.',
+          distractorExplanations: {
+            0: '0.023 is far too low, indicating important terms were omitted from the calculation.',
+            1: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: 'Regarding depends: For constant T_wall: Nu = 3.66.',
+          },
           hint: 'Fully developed laminar pipe flow gives a constant Nu value.',
         },
         {
@@ -769,6 +899,9 @@ export const unit5: Unit = {
           question: 'The entry region of a pipe has lower h than the fully developed region.',
           correctAnswer: false,
           explanation: 'The entry region has higher h because the boundary layers are thin and still developing.',
+          distractorExplanations: {
+            0: 'The entry region has higher h because the boundary layers are thin and still developing.',
+          },
           hint: 'Where is the boundary layer thinnest?',
         },
         {
@@ -807,6 +940,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Ra = Gr*Pr combines buoyancy effects (Gr) with fluid thermal properties (Pr). It determines natural convection strength.',
+          distractorExplanations: {
+            0: 'This focuses on peclet, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on stanton, which is not the correct mechanism or principle for this problem.',
+            3: 'Regarding number: Ra = Gr*Pr combines buoyancy effects (Gr) with fluid thermal properties (Pr).',
+          },
           hint: 'Natural convection is driven by buoyancy, not forced flow.',
         },
         {
@@ -857,6 +995,9 @@ export const unit5: Unit = {
           question: 'Thermal radiation can travel through a vacuum.',
           correctAnswer: true,
           explanation: 'Radiation is electromagnetic waves. It doesn\'t need a material medium, unlike conduction and convection.',
+          distractorExplanations: {
+            1: 'Radiation is electromagnetic waves.',
+          },
           hint: 'How does heat from the sun reach the earth?',
         },
         {
@@ -871,6 +1012,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'A blackbody emits Q = sigma*A*T^4, where sigma = 5.67 x 10^-8 W/(m^2*K^4). The T^4 dependence makes radiation dominant at high temperatures.',
+          distractorExplanations: {
+            0: 'This focuses on deltat, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on deltat, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on epsilon/deltat, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Radiation depends on temperature to what power?',
         },
         {
@@ -892,6 +1038,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'A blackbody absorbs and emits all radiation perfectly. Epsilon = 1 means maximum emission at every wavelength.',
+          distractorExplanations: {
+            0: 'Regarding perfect reflector: A blackbody absorbs and emits all radiation perfectly.',
+            1: 'Regarding whitebody: A blackbody absorbs and emits all radiation perfectly.',
+            2: 'Regarding graybody: A blackbody absorbs and emits all radiation perfectly.',
+          },
           hint: 'The name comes from how it absorbs visible light.',
         },
         {
@@ -936,6 +1087,9 @@ export const unit5: Unit = {
           question: 'A good absorber of radiation is also a good emitter.',
           correctAnswer: true,
           explanation: 'Kirchhoff\'s law: epsilon = alpha at thermal equilibrium. High absorptivity means high emissivity.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Think about Kirchhoff\'s law.',
         },
         {
@@ -950,6 +1104,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The T^4 dependence means doubling the temperature increases radiation 16x, while convection only roughly doubles.',
+          distractorExplanations: {
+            0: 'This focuses on stops/working, which is not the correct mechanism or principle for this problem.',
+            2: 'Temperature is not the primary factor in this problem; the correct analysis uses a different variable.',
+            3: 'Temperature is not the primary factor in this problem; the correct analysis uses a different variable.',
+          },
           hint: 'Compare the temperature exponents in radiation vs. convection equations.',
         },
         {
@@ -990,6 +1149,9 @@ export const unit5: Unit = {
           question: 'The view factor between two surfaces depends on their temperatures.',
           correctAnswer: false,
           explanation: 'View factors are purely geometric. They depend on size, shape, distance, and orientation, but not temperature or surface properties.',
+          distractorExplanations: {
+            0: 'View factors are purely geometric.',
+          },
           hint: 'View factors only describe "how much can surface 1 see surface 2?"',
         },
         {
@@ -1004,6 +1166,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Infinite parallel plates can only "see" each other. All radiation leaving plate 1 hits plate 2, so F_12 = 1.',
+          distractorExplanations: {
+            0: 'Regarding depends distance: Infinite parallel plates can only .',
+            1: '0.5 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            2: '0 is far too low, indicating important terms were omitted from the calculation.',
+          },
           hint: 'Can plate 1 see anything other than plate 2?',
         },
         {
@@ -1035,6 +1202,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'When T1 = T2, both surfaces emit equally and absorb equally. Net exchange is zero, as required by thermodynamics.',
+          distractorExplanations: {
+            0: 'Regarding sigmaaft: When T1 = T2, both surfaces emit equally and absorb equally.',
+            1: 'Regarding sigmaaft: When T1 = T2, both surfaces emit equally and absorb equally.',
+            3: 'Regarding undefined: When T1 = T2, both surfaces emit equally and absorb equally.',
+          },
           hint: 'What does the second law say about heat transfer between equal temperatures?',
         },
         {
@@ -1052,6 +1224,9 @@ export const unit5: Unit = {
           question: 'A flat surface has a view factor to itself (F_ii) of zero.',
           correctAnswer: true,
           explanation: 'A flat or convex surface cannot "see" itself. Only concave surfaces can have F_ii > 0.',
+          distractorExplanations: {
+            1: 'A flat or convex surface cannot .',
+          },
           hint: 'Can a flat plate send radiation to itself?',
         },
         {
@@ -1073,6 +1248,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Surface resistance accounts for the fact that real surfaces don\'t emit or absorb as well as blackbodies. It vanishes when epsilon = 1.',
+          distractorExplanations: {
+            1: 'This focuses on conduction/through, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on geometric/orientation, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on convection/surface, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What happens to this resistance when epsilon = 1 (blackbody)?',
         },
         {
@@ -1130,6 +1310,9 @@ export const unit5: Unit = {
           question: 'A single radiation shield between two parallel plates can reduce radiation by roughly half.',
           correctAnswer: true,
           explanation: 'Each shield with emissivity similar to the original surfaces roughly halves the net radiation by adding two surface resistances.',
+          distractorExplanations: {
+            1: 'Each shield with emissivity similar to the original surfaces roughly halves the net radiation by adding two surface resistances.',
+          },
           hint: 'How many extra resistances does one shield add?',
         },
         {
@@ -1144,6 +1327,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Shields work by adding surface resistances. They reflect most radiation back, reducing net exchange. Thickness doesn\'t matter.',
+          distractorExplanations: {
+            0: 'This focuses on absorb/convert, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on block/blocks, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on their/thickness, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What property of the shield surface matters most?',
         },
         {
@@ -1174,6 +1362,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'lambda_max = 2898/300 = 9.66 micrometers, which is in the mid-infrared range.',
+          distractorExplanations: {
+            0: '0.01 is far too low, indicating important terms were omitted from the calculation.',
+            1: '0.5 is far too low, indicating important terms were omitted from the calculation.',
+            2: '100 is an order of magnitude too large, likely from a unit conversion error.',
+          },
           hint: 'Use Wien\'s law: lambda_max = 2898/T.',
         },
         {
@@ -1222,6 +1415,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Convection and radiation act simultaneously (in parallel) from the same surface. Heat can escape through either path.',
+          distractorExplanations: {
+            0: '"As series resistances" is incorrect; the reasoning does not follow from the governing equations.',
+            2: 'This is too restrictive; the principle applies more broadly than larger matters suggests.',
+            3: 'This focuses on cancel/other, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Does heat choose one path or can it take both?',
         },
         {
@@ -1230,6 +1428,9 @@ export const unit5: Unit = {
           question: 'For a surface at room temperature surrounded by room-temperature air, radiation and convection contribute roughly equally to heat loss.',
           correctAnswer: true,
           explanation: 'At moderate temperature differences near room temperature, h_rad is often similar in magnitude to h_conv for natural convection in air.',
+          distractorExplanations: {
+            1: 'At moderate temperature differences near room temperature, h_rad is often similar in magnitude to h_conv for natural convection in air.',
+          },
           hint: 'h_rad at room temperature is about 5-6 W/(m^2*K), similar to natural convection in air.',
         },
         {
@@ -1270,6 +1471,9 @@ export const unit5: Unit = {
           question: 'In a heat exchanger, the two fluids are typically in direct contact.',
           correctAnswer: false,
           explanation: 'Most heat exchangers keep the fluids separated by a wall. Heat conducts through the wall from the hot fluid to the cold fluid.',
+          distractorExplanations: {
+            0: 'Most heat exchangers keep the fluids separated by a wall.',
+          },
           hint: 'What separates the hot and cold fluids?',
         },
         {
@@ -1294,6 +1498,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: '1/U = 1/h_hot + wall resistance + 1/h_cold. U combines all thermal resistances into one coefficient.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than convection suggests.',
+            1: 'This is too restrictive; the principle applies more broadly than conduction suggests.',
+            3: 'This focuses on radiation/between, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What resistances does heat encounter going from hot fluid to cold fluid?',
         },
         {
@@ -1332,6 +1541,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Counter flow keeps a relatively uniform deltaT along the exchanger. Parallel flow starts with a large deltaT that shrinks to nearly zero.',
+          distractorExplanations: {
+            0: 'This focuses on fluids/better, which is not the correct mechanism or principle for this problem.',
+            1: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+            2: 'This focuses on material, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What drives heat transfer at each point along the exchanger?',
         },
         {
@@ -1356,6 +1570,9 @@ export const unit5: Unit = {
           question: 'Fouling in heat exchangers reduces the overall heat transfer coefficient U.',
           correctAnswer: true,
           explanation: 'Fouling adds thermal resistance, which decreases U. Designers account for this by oversizing heat exchangers.',
+          distractorExplanations: {
+            1: 'Fouling adds thermal resistance, which decreases U.',
+          },
           hint: 'Does adding resistance increase or decrease U?',
         },
         {
@@ -1370,6 +1587,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'The fouling factor adds extra resistance to account for deposits (scale, biofilm, corrosion products) that will accumulate during operation.',
+          distractorExplanations: {
+            0: 'This focuses on manufacturing/imperfections, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on thermal/expansion, which is not the correct mechanism or principle for this problem.',
+            3: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+          },
           hint: 'What happens to heat exchanger surfaces over months or years of service?',
         },
         {
@@ -1412,6 +1634,9 @@ export const unit5: Unit = {
           question: 'The arithmetic average of the two end temperature differences is the correct driving force for a heat exchanger.',
           correctAnswer: false,
           explanation: 'The temperature difference varies along the exchanger. The correct average is the log mean (LMTD), not the arithmetic mean.',
+          distractorExplanations: {
+            0: 'The temperature difference varies along the exchanger.',
+          },
           hint: 'Does deltaT change linearly or logarithmically along the exchanger?',
         },
         {
@@ -1426,6 +1651,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'When deltaT1 = deltaT2, the LMTD formula gives 0/0. L\'Hopital\'s rule shows LMTD = deltaT1 = deltaT2 in this limit.',
+          distractorExplanations: {
+            0: 'This incorrectly denies an effect that is significant in this context.',
+            2: 'This is too restrictive; the principle applies more broadly than counter-flow suggests.',
+            3: 'This is too restrictive; the principle applies more broadly than parallel suggests.',
+          },
           hint: 'What happens to the LMTD formula when both ends have the same deltaT?',
         },
         {
@@ -1456,6 +1686,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'F accounts for the fact that non-counter-flow arrangements are less efficient. F = 1 only for pure counter-flow.',
+          distractorExplanations: {
+            0: 'This focuses on positive/value, which is not the correct mechanism or principle for this problem.',
+            1: 'This "always" claim is too broad; greater the principle has important exceptions.',
+            2: 'This "always" claim is too broad; exactly the principle has important exceptions.',
+          },
           hint: 'Is any arrangement more efficient than counter-flow?',
         },
         {
@@ -1487,6 +1722,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Counter-flow: deltaT1 = T_h,in - T_c,out = 200-150 = 50. deltaT2 = T_h,out - T_c,in = 100-50 = 50. Equal deltaTs give LMTD = 50 C.',
+          distractorExplanations: {
+            0: 'Regarding deltat deltat: Counter-flow: deltaT1 = T_h,in - T_c,out = 200-150 = 50.',
+            1: 'Regarding deltat deltat: Counter-flow: deltaT1 = T_h,in - T_c,out = 200-150 = 50.',
+            3: 'Regarding deltat deltat: Counter-flow: deltaT1 = T_h,in - T_c,out = 200-150 = 50.',
+          },
           hint: 'In counter-flow, compare hot inlet with cold outlet at each end.',
         },
         {
@@ -1502,6 +1742,9 @@ export const unit5: Unit = {
           question: 'In a heat exchanger with no losses, the heat lost by the hot fluid equals the heat gained by the cold fluid.',
           correctAnswer: true,
           explanation: 'Energy conservation: Q_hot = Q_cold. This is the starting point for all heat exchanger calculations.',
+          distractorExplanations: {
+            1: 'Energy conservation: Q_hot = Q_cold.',
+          },
           hint: 'Where else could the energy go?',
         },
         {
@@ -1553,6 +1796,9 @@ export const unit5: Unit = {
           question: 'The effectiveness of a heat exchanger can exceed 1.0 (100%).',
           correctAnswer: false,
           explanation: 'Effectiveness is Q_actual/Q_max. The actual heat transfer can never exceed Q_max = C_min*(T_h,in - T_c,in).',
+          distractorExplanations: {
+            0: 'Effectiveness is Q_actual/Q_max.',
+          },
           hint: 'Can you transfer more heat than the maximum possible?',
         },
         {
@@ -1567,6 +1813,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Q_max occurs when the fluid with smaller capacity rate (C_min) changes temperature by the maximum possible amount (T_h,in - T_c,in).',
+          distractorExplanations: {
+            0: 'This focuses on c_max, which is not the correct mechanism or principle for this problem.',
+            2: 'This option reflects a common misconception; the correct analysis follows different principles.',
+            3: 'This focuses on (c_hot/c_cold), which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Which fluid limits the maximum heat transfer?',
         },
         {
@@ -1597,6 +1848,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'With infinite NTU (infinite area), the exchanger reaches thermodynamic equilibrium. Effectiveness approaches 1 for counter-flow with any Cr.',
+          distractorExplanations: {
+            0: '0.5 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            2: 'Regarding infinity: With infinite NTU (infinite area), the exchanger reaches thermodynamic equilibrium.',
+            3: 'Regarding depends: With infinite NTU (infinite area), the exchanger reaches thermodynamic equilibrium.',
+          },
           hint: 'What happens if you make the heat exchanger infinitely large?',
         },
         {
@@ -1639,6 +1895,9 @@ export const unit5: Unit = {
           question: 'The NTU method and LMTD method are equivalent and give the same result.',
           correctAnswer: true,
           explanation: 'Both methods solve the same physics. LMTD is easier for sizing. NTU is easier for rating. The results are identical.',
+          distractorExplanations: {
+            1: 'Both methods solve the same physics.',
+          },
           hint: 'They\'re different approaches to the same problem.',
         },
         {
@@ -1653,6 +1912,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'When Cr = 0 (phase change on one side), the formula simplifies to epsilon = 1 - exp(-NTU), regardless of flow arrangement.',
+          distractorExplanations: {
+            0: 'Regarding epsilon: When Cr = 0 (phase change on one side), the formula simplifies to epsilon = 1 - exp(-NTU), regardless of flow arrangement.',
+            1: 'Regarding epsilon: When Cr = 0 (phase change on one side), the formula simplifies to epsilon = 1 - exp(-NTU), regardless of flow arrangement.',
+            3: 'This focuses on exp(-2*ntu), which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'This is the simplest effectiveness formula.',
         },
         {
@@ -1694,6 +1958,9 @@ export const unit5: Unit = {
           question: 'Fins increase heat transfer by increasing the surface area available for convection.',
           correctAnswer: true,
           explanation: 'More area means more Q = h*A*deltaT. Fins are most effective when h is low and the fin material has high k.',
+          distractorExplanations: {
+            1: 'More area means more Q = h*A*deltaT.',
+          },
           hint: 'What does Newton\'s cooling law say about area?',
         },
         {
@@ -1708,6 +1975,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Low h means the surface is the bottleneck, so adding area helps most. High k_fin keeps the fin at a uniform temperature close to the base.',
+          distractorExplanations: {
+            0: 'Low h means the surface is the bottleneck, so adding area helps most.',
+            1: 'Low h means the surface is the bottleneck, so adding area helps most.',
+            2: 'Low h means the surface is the bottleneck, so adding area helps most.',
+          },
           hint: 'Which resistance is the bottleneck that fins address?',
         },
         {
@@ -1746,6 +2018,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Heat conducts through the fin and is lost by convection along the way. Each point along the fin is cooler than the point before it.',
+          distractorExplanations: {
+            1: 'This focuses on increases, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on uniform/along, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on increases/radiation, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Where does the fin lose heat, and how does that affect temperature?',
         },
         {
@@ -1780,6 +2057,9 @@ export const unit5: Unit = {
           question: 'Making a fin longer always increases the total heat dissipation from the fin.',
           correctAnswer: true,
           explanation: 'A longer fin always adds some area and heat transfer, but with diminishing returns. Beyond about 2.5/m, the added heat transfer is negligible.',
+          distractorExplanations: {
+            1: 'A longer fin always adds some area and heat transfer, but with diminishing returns.',
+          },
           hint: 'Does more length add more surface area?',
         },
         {
@@ -1794,6 +2074,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'When mL is large (> 2.5), the fin tip temperature is close to the fluid temperature. The outer portion of the fin contributes little to heat transfer.',
+          distractorExplanations: {
+            0: 'This focuses on short, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on effective, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on material/conductivity, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What happens to a fin that\'s much longer than 1/m?',
         },
         {
@@ -1835,6 +2120,9 @@ export const unit5: Unit = {
           question: 'Fin efficiency is always less than or equal to 1.',
           correctAnswer: true,
           explanation: 'The ideal case (entire fin at base temperature) is the maximum possible. Real fins are cooler toward the tip, so eta <= 1.',
+          distractorExplanations: {
+            1: 'The ideal case (entire fin at base temperature) is the maximum possible.',
+          },
           hint: 'Can the actual heat transfer exceed the ideal case?',
         },
         {
@@ -1849,6 +2137,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'The "ideal" fin has uniform temperature equal to T_base everywhere. This gives the maximum possible convection from the fin surface.',
+          distractorExplanations: {
+            1: 'This focuses on surface/without, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on infinitely, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on radiation/alone, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What temperature distribution would give maximum heat transfer?',
         },
         {
@@ -1880,6 +2173,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Effectiveness = Q_with_fin / Q_without_fin. A value of 3 means the fin transfers 3 times more heat than the bare surface area it replaced.',
+          distractorExplanations: {
+            0: 'This focuses on efficiency, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on times/longer, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on needed, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Effectiveness compares "with fin" to "without fin."',
         },
         {
@@ -1921,6 +2219,9 @@ export const unit5: Unit = {
           question: 'A fin with effectiveness less than 1 actually reduces heat transfer compared to the bare surface.',
           correctAnswer: true,
           explanation: 'If epsilon_fin < 1, the fin transfers less heat than the bare surface it replaced. This can happen with low-k fin material or extremely high h.',
+          distractorExplanations: {
+            1: 'If epsilon_fin < 1, the fin transfers less heat than the bare surface it replaced.',
+          },
           hint: 'When would adding material between the surface and fluid make things worse?',
         },
         {
@@ -1935,6 +2236,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'A very short fin has nearly uniform temperature (equal to base temperature), so it approaches 100% efficiency.',
+          distractorExplanations: {
+            0: 'A very short fin has nearly uniform temperature (equal to base temperature), so it approaches 100% efficiency.',
+            1: '0 is far too low, indicating important terms were omitted from the calculation.',
+            2: '0.5 is approximately half the correct answer, likely from omitting a required factor of 2.',
+          },
           hint: 'What happens to the temperature distribution when the fin is extremely short?',
         },
         {
@@ -1976,6 +2282,9 @@ export const unit5: Unit = {
           question: 'A triangular fin is more efficient (per unit mass) than a rectangular fin of the same base thickness and length.',
           correctAnswer: true,
           explanation: 'Triangular fins remove material from the tip where the temperature is closest to T_fluid anyway. Less mass, nearly the same heat transfer.',
+          distractorExplanations: {
+            1: 'Triangular fins remove material from the tip where the temperature is closest to T_fluid anyway.',
+          },
           hint: 'Where along the fin is material least useful?',
         },
         {
@@ -2000,6 +2309,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'High k means low mL for a given geometry, which gives high fin efficiency. The fin stays hot along its length.',
+          distractorExplanations: {
+            0: 'High k means low mL for a given geometry, which gives high fin efficiency.',
+            2: 'This focuses on lowest/density, which is not the correct mechanism or principle for this problem.',
+            3: 'High k means low mL for a given geometry, which gives high fin efficiency.',
+          },
           hint: 'What fin property makes the biggest difference in efficiency?',
         },
         {
@@ -2038,6 +2352,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Closely spaced fins restrict the buoyancy-driven flow between them. The reduced h can more than offset the increased area.',
+          distractorExplanations: {
+            0: 'This focuses on efficiency/increases, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on increases/because, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on radiation/between, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Can air flow freely between fins that are very close together?',
         },
         {
@@ -2068,6 +2387,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'h_air ~ 50 W/(m^2*K) while h_coolant ~ 3,000. The air side is the bottleneck, so that\'s where fins help most.',
+          distractorExplanations: {
+            0: 'This focuses on flows/faster, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on already/efficient, which is not the correct mechanism or principle for this problem.',
+            2: 'h_air ~ 50 W/(m^2*K) while h_coolant ~ 3,000.',
+          },
           hint: 'Fins go where the resistance is highest.',
         },
         {
@@ -2076,6 +2400,9 @@ export const unit5: Unit = {
           question: 'Adding fins to the water side of a water-to-air heat exchanger would significantly improve performance.',
           correctAnswer: false,
           explanation: 'The air side has much higher resistance (lower h). Adding fins to the already-efficient water side has minimal impact on overall performance.',
+          distractorExplanations: {
+            0: 'The air side has much higher resistance (lower h).',
+          },
           hint: 'Which side is the bottleneck?',
         },
         {
@@ -2118,6 +2445,9 @@ export const unit5: Unit = {
           question: 'In transient heat transfer, the temperature at a point changes with time.',
           correctAnswer: true,
           explanation: 'Transient means time-dependent. Steady-state means temperatures don\'t change with time.',
+          distractorExplanations: {
+            1: 'Transient means time-dependent.',
+          },
           hint: 'The word "transient" means temporary or changing.',
         },
         {
@@ -2132,6 +2462,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Bi = (L_c/k) / (1/h) = R_conduction / R_convection. Small Bi means conduction is fast relative to convection.',
+          distractorExplanations: {
+            0: 'This focuses on radiation, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on generation, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on thermal/diffusivity, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What does the ratio of these two resistances tell you?',
         },
         {
@@ -2162,6 +2497,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Copper has very high k and air has low h. Bi = hL_c/k will be very small. The sphere\'s internal temperature is essentially uniform.',
+          distractorExplanations: {
+            0: 'This focuses on exactly, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on greater/fails, which is not the correct mechanism or principle for this problem.',
+            3: 'This incorrectly claims impossibility; the described outcome is achievable under proper conditions.',
+          },
           hint: 'High k and low h both make Bi small.',
         },
         {
@@ -2204,6 +2544,9 @@ export const unit5: Unit = {
           question: 'After 3 time constants, the temperature difference between the object and surroundings has dropped to about 5% of the initial value.',
           correctAnswer: true,
           explanation: 'exp(-3) = 0.05, so about 5% of the initial temperature difference remains. After 5*tau, only 0.7% remains.',
+          distractorExplanations: {
+            1: 'exp(-3) = 0.05, so about 5% of the initial temperature difference remains.',
+          },
           hint: 'Calculate exp(-3).',
         },
         {
@@ -2218,6 +2561,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'tau = rho*V*cp/(h*A_s). Increasing h decreases tau, making the response faster.',
+          distractorExplanations: {
+            1: 'Regarding increase: tau = rho*V*cp/(h*A_s).',
+            2: 'This focuses on insulation, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on material/lower, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What in the time constant formula can you change to make cooling faster?',
         },
         {
@@ -2259,6 +2607,9 @@ export const unit5: Unit = {
           question: 'When Bi > 0.1, the temperature inside an object varies with position.',
           correctAnswer: true,
           explanation: 'Large Bi means internal conduction resistance is significant. The surface responds quickly, but the center lags behind.',
+          distractorExplanations: {
+            1: 'Large Bi means internal conduction resistance is significant.',
+          },
           hint: 'What does Bi > 0.1 tell you about internal resistance?',
         },
         {
@@ -2273,6 +2624,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Fo measures how much time has passed relative to the characteristic conduction time. Large Fo means the process is near completion.',
+          distractorExplanations: {
+            0: 'This focuses on reynolds/number, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on ratio/convection, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on thermal/efficiency, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Alpha*t has units of m^2. Dividing by L^2 makes it dimensionless.',
         },
         {
@@ -2304,6 +2660,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: 'When Fo > 0.2, the higher-order terms in the series solution have decayed to negligible values. Only the first term matters.',
+          distractorExplanations: {
+            1: 'When Fo > 0.2, the higher-order terms in the series solution have decayed to negligible values.',
+            2: 'When Fo > 0.2, the higher-order terms in the series solution have decayed to negligible values.',
+            3: 'When Fo > 0.2, the higher-order terms in the series solution have decayed to negligible values.',
+          },
           hint: 'This is about how much time has passed, not about Bi.',
         },
         {
@@ -2351,6 +2712,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Contact temperature depends on the product k*rho*cp (thermal effusivity). Metal\'s high thermal effusivity draws heat rapidly from your skin.',
+          distractorExplanations: {
+            0: 'This focuses on lower/emissivity, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on actually/colder, which is not the correct mechanism or principle for this problem.',
+            3: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+          },
           hint: 'Both are at the same temperature. What property determines how fast heat transfers?',
         },
         {
@@ -2359,6 +2725,9 @@ export const unit5: Unit = {
           question: 'In a semi-infinite solid, the thermal penetration depth increases proportionally to the square root of time.',
           correctAnswer: true,
           explanation: 'Penetration depth ~ sqrt(alpha*t). Doubling the time increases the depth by a factor of sqrt(2), about 1.41.',
+          distractorExplanations: {
+            1: 'Penetration depth ~ sqrt(alpha*t).',
+          },
           hint: 'This comes from the error function solution of the heat equation.',
         },
         {
@@ -2400,6 +2769,9 @@ export const unit5: Unit = {
           question: 'The 2D transient solution for a rectangular bar is the product of two 1D plane wall solutions.',
           correctAnswer: true,
           explanation: 'This product rule works when the boundary conditions are independent in each direction. It\'s extremely convenient.',
+          distractorExplanations: {
+            1: 'This product rule works when the boundary conditions are independent in each direction.',
+          },
           hint: 'This is why the 1D solutions for walls, cylinders, and spheres are so important.',
         },
         {
@@ -2414,6 +2786,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'A short cylinder is the product of a radial solution (infinite cylinder) and an axial solution (plane wall). theta* = theta*_cyl * theta*_wall.',
+          distractorExplanations: {
+            0: 'This focuses on three/walls, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on walls, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on sphere, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What basic shapes combine to make a finite-length cylinder?',
         },
         {
@@ -2462,6 +2839,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Large temperature gradients create thermal stresses. The cooler surface contracts while the hot center resists, potentially causing cracks.',
+          distractorExplanations: {
+            0: 'This focuses on becomes/magnetic, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on center/stays, which is not the correct mechanism or principle for this problem.',
+            3: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+          },
           hint: 'What happens when the outside shrinks but the inside doesn\'t?',
         },
         {
@@ -2492,6 +2874,11 @@ export const unit5: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Seasonal temperature waves penetrate into the ground but are delayed and dampened. At 2m, the swing might be shifted by 1-2 months.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; constant year-round the principle has important exceptions.',
+            1: 'Temperature is not the primary factor in this problem; the correct analysis uses a different variable.',
+            3: 'This "always" claim is too broad; warmer surface the principle has important exceptions.',
+          },
           hint: 'The ground acts like a thermal low-pass filter.',
         },
         {
@@ -2500,6 +2887,9 @@ export const unit5: Unit = {
           question: 'The depth to which daily temperature fluctuations penetrate into soil is much less than the depth for seasonal fluctuations.',
           correctAnswer: true,
           explanation: 'Penetration depth ~ sqrt(alpha/omega). Daily omega is 365x larger than seasonal omega, giving much shallower penetration.',
+          distractorExplanations: {
+            1: 'Penetration depth ~ sqrt(alpha/omega).',
+          },
           hint: 'Higher frequency means less penetration depth.',
         },
         {

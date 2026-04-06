@@ -49,6 +49,9 @@ export const unit10: Unit = {
           question: "When you retire, your living expenses drop to zero.",
           correctAnswer: false,
           explanation: "Housing, food, healthcare, transportation, and entertainment costs all continue. Healthcare costs often increase in retirement. Your paycheck stops but your bills don't.",
+          distractorExplanations: {
+            0: 'Housing, food, healthcare, transportation, and entertainment costs all continue',
+          },
         },
         {
           id: "pf-u10-L1-Q2",
@@ -62,6 +65,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "$50,000 x 25 = $1,250,000. That's your target nest egg. Sounds huge, but with compound interest and decades of saving, it's achievable.",
+          distractorExplanations: {
+            0: 'The correct answer is $1,250,000, not $500,000',
+            1: 'The correct answer is $1,250,000, not $750,000',
+            3: 'The correct answer is $1,250,000, not $2,500,000',
+          },
         },
         {
           id: "pf-u10-L1-Q3",
@@ -95,6 +103,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Those first 10 years of compound growth are incredibly powerful. Starting at 25 instead of 35 means your money has an extra decade to grow exponentially. Alex would need to save roughly twice as much per month to catch up.",
+          distractorExplanations: {
+            1: 'Those first 10 years of compound growth are incredibly powerful',
+            2: 'Those first 10 years of compound growth are incredibly powerful',
+            3: 'Those first 10 years of compound growth are incredibly powerful',
+          },
         },
         {
           id: "pf-u10-L1-Q6",
@@ -117,6 +130,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "All have some merit, but starting NOW. Even with a small amount. Is the single most powerful move. Time is the biggest multiplier in retirement math. You can optimize later, but you can never get those early years back.",
+          distractorExplanations: {
+            1: 'All have some merit, but starting NOW',
+            2: 'All have some merit, but starting NOW',
+            3: 'All have some merit, but starting NOW',
+          },
         },
         {
           id: "pf-u10-L1-Q8",
@@ -174,6 +192,9 @@ export const unit10: Unit = {
           question: "Money you put into a traditional 401(k) is taxed before it goes in.",
           correctAnswer: false,
           explanation: "The whole point of a traditional 401(k) is that money goes in PRE-TAX. You skip paying taxes now and pay them later when you withdraw in retirement. This lowers your taxable income today.",
+          distractorExplanations: {
+            0: 'The whole point of a traditional 401(k) is that money goes in PRE-TAX',
+          },
         },
         {
           id: "pf-u10-L2-Q2",
@@ -187,6 +208,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "$70,000 - $7,000 = $63,000 of taxable income. Your 401(k) contribution reduced your tax bill right away. If you're in the 22% tax bracket, that $7,000 contribution saves you $1,540 in taxes this year.",
+          distractorExplanations: {
+            0: 'The correct answer is $63,000, not $70,000',
+            2: 'The correct answer is $63,000, not $77,000',
+            3: 'The correct answer is $63,000, not $7,000',
+          },
         },
         {
           id: "pf-u10-L2-Q3",
@@ -227,6 +253,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "At MINIMUM, contribute enough to get the full employer match. If the employer matches 4%, contribute at least 4%. Otherwise Taylor is literally leaving free money on the table. On a $55,000 salary, that's $2,200/year in free money from the employer.",
+          distractorExplanations: {
+            0: 'At MINIMUM, contribute enough to get the full employer match',
+            1: 'At MINIMUM, contribute enough to get the full employer match',
+            3: 'At MINIMUM, contribute enough to get the full employer match',
+          },
         },
         {
           id: "pf-u10-L2-Q7",
@@ -254,6 +285,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Early withdrawal from a 401(k) triggers income tax on the full amount PLUS a 10% penalty. Withdraw $10,000 early? You could lose $3,000-4,000 to taxes and penalties. There are a few exceptions (hardship, certain medical expenses), but in general. Don't touch it.",
+          distractorExplanations: {
+            0: 'Early withdrawal from a 401(k) triggers income tax on the full amount PLUS a 10% penalty',
+            2: 'Early withdrawal from a 401(k) triggers income tax on the full amount PLUS a 10% penalty',
+            3: 'Early withdrawal from a 401(k) triggers income tax on the full amount PLUS a 10% penalty',
+          },
         },
       ],
     },
@@ -298,6 +334,9 @@ export const unit10: Unit = {
           question: "With a Roth IRA, you pay taxes when you withdraw money in retirement.",
           correctAnswer: false,
           explanation: "That's the beauty of a Roth. You pay taxes upfront when you contribute. In retirement, withdrawals are completely tax-free. All that growth over decades? Tax-free. It's like paying the cover charge to get into a club where everything inside is free.",
+          distractorExplanations: {
+            0: 'That\'s the beauty of a Roth. You pay taxes upfront when you contribute',
+          },
         },
         {
           id: "pf-u10-L3-Q2",
@@ -320,6 +359,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Zero. Nada. Nothing. That's the power of a Roth IRA. You already paid taxes on the $210,000 you put in. The $490,000 in growth comes out completely tax-free. This is why people love the Roth.",
+          distractorExplanations: {
+            1: 'Zero. Nada',
+            2: 'Zero. Nada',
+            3: 'Zero. Nada',
+          },
         },
         {
           id: "pf-u10-L3-Q4",
@@ -343,6 +387,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Jamie is in a LOW tax bracket now (12%) and expects to be in a HIGHER bracket later (22%+). That's a textbook Roth IRA situation. Pay the low 12% rate now, and all future growth and withdrawals are tax-free. Jamie would lose money choosing Traditional because withdrawals would be taxed at the higher future rate.",
+          distractorExplanations: {
+            1: 'Jamie is in a LOW tax bracket now (12%) and expects to be in a HIGHER bracket later (22%+)',
+            2: 'Jamie is in a LOW tax bracket now (12%) and expects to be in a HIGHER bracket later (22%+)',
+            3: 'Jamie is in a LOW tax bracket now (12%) and expects to be in a HIGHER bracket later (22%+)',
+          },
         },
         {
           id: "pf-u10-L3-Q6",
@@ -373,6 +422,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "All are great perks, but tax-free growth and withdrawals is THE headline benefit. Decades of compound growth, dividends, and gains. All coming out at $0 tax. That single feature can save you tens or hundreds of thousands of dollars in retirement.",
+          distractorExplanations: {
+            0: 'All are great perks, but tax-free growth and withdrawals is THE headline benefit',
+            2: 'All are great perks, but tax-free growth and withdrawals is THE headline benefit',
+            3: 'All are great perks, but tax-free growth and withdrawals is THE headline benefit',
+          },
         },
         {
           id: "pf-u10-L3-Q9",
@@ -380,6 +434,9 @@ export const unit10: Unit = {
           question: "You can have both a 401(k) and a Roth IRA at the same time.",
           correctAnswer: true,
           explanation: "Yes. They're separate accounts with separate limits. You can contribute $23,000 to a 401(k) AND $7,000 to a Roth IRA in the same year. Many financial advisors recommend doing exactly this for maximum tax diversification.",
+          distractorExplanations: {
+            1: 'They\'re separate accounts with separate limits',
+          },
         },
       ],
     },
@@ -430,6 +487,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "4% of $75,000 = $3,000. A 100% match means your employer adds the same amount: $3,000. That's $3,000 of free money every year just for participating. Over 30 years with investment growth, that match could turn into $300,000+.",
+          distractorExplanations: {
+            0: 'The correct answer is $3,000, not $750',
+            1: 'The correct answer is $3,000, not $1,500',
+            3: 'The correct answer is $3,000, not $7,500',
+          },
         },
         {
           id: "pf-u10-L4-Q2",
@@ -448,6 +510,9 @@ export const unit10: Unit = {
           question: "If you don't contribute to your 401(k), your employer still adds match money to your account.",
           correctAnswer: false,
           explanation: "Not quite. The match only activates when you contribute. If you put in 0%, your employer puts in 0%. The match is conditional. It's 'we'll match what you do.' Not contributing is the same as declining a bonus.",
+          distractorExplanations: {
+            0: 'The match only activates when you contribute',
+          },
         },
         {
           id: "pf-u10-L4-Q4",
@@ -470,6 +535,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Sam gets $1,950/year in match (50% of 6% of $65K). Pat gets $650/year in match (50% of 2% of $65K). The $1,300/year difference, invested at 8% for 30 years, grows to roughly $130,000. Pat left over $100K of free money on the table.",
+          distractorExplanations: {
+            0: 'Sam gets $1,950/year in match (50% of 6% of $65K)',
+            2: 'Sam gets $1,950/year in match (50% of 6% of $65K)',
+            3: 'Sam gets $1,950/year in match (50% of 6% of $65K)',
+          },
         },
         {
           id: "pf-u10-L4-Q6",
@@ -504,6 +574,9 @@ export const unit10: Unit = {
           question: "Employer match is essentially a guaranteed 50-100% return on your money.",
           correctAnswer: true,
           explanation: "If your employer matches 50 cents for every dollar you contribute, that's a guaranteed 50% return instantly. Dollar-for-dollar match? That's a 100% return. No investment in history consistently beats free money from your employer.",
+          distractorExplanations: {
+            1: 'If your employer matches 50 cents for every dollar you contribute, that\'s a guaranteed 50% return instantly',
+          },
         },
       ],
     },
@@ -660,6 +733,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "You're 28, planning to retire at 67, so you'll retire around 2060 (67 - 28 = 39 years from now). Pick the fund closest to that year: Target 2060. Don't pick the one closest to today. Pick the one closest to your RETIREMENT date.",
+          distractorExplanations: {
+            0: 'You\'re 28, planning to retire at 67, so you\'ll retire around 2060 (67 - 28 = 39 years from now)',
+            1: 'You\'re 28, planning to retire at 67, so you\'ll retire around 2060 (67 - 28 = 39 years from now)',
+            3: 'You\'re 28, planning to retire at 67, so you\'ll retire around 2060 (67 - 28 = 39 years from now)',
+          },
         },
         {
           id: "pf-u10-L5-Q2",
@@ -684,6 +762,9 @@ export const unit10: Unit = {
           question: "A Target 2060 fund will hold more stocks than a Target 2030 fund today.",
           correctAnswer: true,
           explanation: "The 2060 fund has 30+ years before retirement. Plenty of time to ride out market drops. So it holds more stocks (higher growth). The 2030 fund is almost at its retirement date, so it's already shifted heavily into bonds (safer).",
+          distractorExplanations: {
+            1: 'The 2060 fund has 30+ years before retirement',
+          },
         },
         {
           id: "pf-u10-L5-Q5",
@@ -717,6 +798,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Target-date funds are designed for people who want simplicity. Active traders don't want them. Retirees need different strategies. But for a beginner who just wants to invest and forget about it. Target-date funds are nearly perfect.",
+          distractorExplanations: {
+            0: 'Target-date funds are designed for people who want simplicity',
+            2: 'Target-date funds are designed for people who want simplicity',
+            3: 'Target-date funds are designed for people who want simplicity',
+          },
         },
         {
           id: "pf-u10-L5-Q8",
@@ -730,6 +816,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Major providers like Vanguard and Fidelity offer target-date funds with expense ratios around 0.10-0.15%. That's $10-$15/year per $10,000 invested. Very affordable. Avoid funds charging 1%+. The high fees eat your returns.",
+          distractorExplanations: {
+            1: 'Major providers like Vanguard and Fidelity offer target-date funds with expense ratios around 0.10-0.15%',
+            2: 'Major providers like Vanguard and Fidelity offer target-date funds with expense ratios around 0.10-0.15%',
+            3: 'Major providers like Vanguard and Fidelity offer target-date funds with expense ratios around 0.10-0.15%',
+          },
         },
       ],
     },
@@ -774,6 +865,9 @@ export const unit10: Unit = {
           question: "Social Security is designed to fully replace your working income in retirement.",
           correctAnswer: false,
           explanation: "It was never designed for that. Social Security replaces about 40% of average pre-retirement income. You're expected to have personal savings, pensions, or other income sources for the rest. Relying solely on Social Security means a significant lifestyle downgrade.",
+          distractorExplanations: {
+            0: 'It was never designed for that. Social Security replaces about 40% of average pre-retirement income',
+          },
         },
         {
           id: "pf-u10-L6-Q2",
@@ -787,6 +881,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Claiming at 62 reduces your benefit by about 30%. $2,200 x 0.70 = $1,540/month. That's $660/month less. Or $7,920/year less. For the rest of your life. Claiming early costs you big.",
+          distractorExplanations: {
+            0: 'Claiming at 62 reduces your benefit by about 30%',
+            2: 'Claiming at 62 reduces your benefit by about 30%',
+            3: 'Claiming at 62 reduces your benefit by about 30%',
+          },
         },
         {
           id: "pf-u10-L6-Q3",
@@ -829,6 +928,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "If Maria claims at 62 while earning $70K, her benefit gets reduced by 30% permanently AND a portion gets temporarily withheld because her earnings exceed the limit. Waiting until 67 gives her the full $2,400/month. Waiting until 70 would give her about $2,976/month. Patience pays.",
+          distractorExplanations: {
+            1: 'If Maria claims at 62 while earning $70K, her benefit gets reduced by 30% permanently AND a portion gets temporarily withheld because her earnings ...',
+            2: 'If Maria claims at 62 while earning $70K, her benefit gets reduced by 30% permanently AND a portion gets temporarily withheld because her earnings ...',
+            3: 'If Maria claims at 62 while earning $70K, her benefit gets reduced by 30% permanently AND a portion gets temporarily withheld because her earnings ...',
+          },
         },
         {
           id: "pf-u10-L6-Q7",
@@ -889,6 +993,9 @@ export const unit10: Unit = {
           question: "If you haven't saved anything by age 40, it's too late to build meaningful retirement savings.",
           correctAnswer: false,
           explanation: "Far from it. A 40-year-old has 25+ years until traditional retirement. Saving $1,000/month at 8% returns from age 40 to 65 grows to about $950,000. That's nearly $1 million. Is it harder than starting at 25? Yes. Is it impossible? Far from it.",
+          distractorExplanations: {
+            0: 'A 40-year-old has 25+ years until traditional retirement',
+          },
         },
         {
           id: "pf-u10-L7-Q2",
@@ -902,6 +1009,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "The standard 10-15% recommendation assumes you started in your 20s. If you're starting at 45 with limited savings, you need to save more aggressively. 20-25% or more. It's intense, but it's the trade-off for a late start.",
+          distractorExplanations: {
+            0: 'The standard 10-15% recommendation assumes you started in your 20s',
+            1: 'The standard 10-15% recommendation assumes you started in your 20s',
+            3: 'The standard 10-15% recommendation assumes you started in your 20s',
+          },
         },
         {
           id: "pf-u10-L7-Q3",
@@ -941,6 +1053,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "David should get the full match (instant 50% return. Can't beat it) and then use catch-up contributions (he can contribute up to $30,500/year at 50+). With the match, aggressive saving, and 15 years of growth, David can still build a meaningful nest egg. $50K + $30K/year + match + growth = potentially $800K+ by 67.",
+          distractorExplanations: {
+            1: 'David should get the full match (instant 50% return',
+            2: 'David should get the full match (instant 50% return',
+            3: 'David should get the full match (instant 50% return',
+          },
         },
         {
           id: "pf-u10-L7-Q6",
@@ -971,6 +1088,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "All are helpful habits, but dramatically increasing your savings rate is the single biggest lever when you're behind. Going from saving 5% to 25% of a $70,000 income means saving an extra $14,000/year. That dwarfs the impact of a cheaper phone plan or a slightly better savings rate.",
+          distractorExplanations: {
+            0: 'All are helpful habits, but dramatically increasing your savings rate is the single biggest lever when you\'re behind',
+            2: 'All are helpful habits, but dramatically increasing your savings rate is the single biggest lever when you\'re behind',
+            3: 'All are helpful habits, but dramatically increasing your savings rate is the single biggest lever when you\'re behind',
+          },
         },
       ],
     },
@@ -1009,6 +1131,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "$60,000 / 0.04 = $1,500,000. Or you can think of it as $60,000 x 25 = $1,500,000 (the Rule of 25). With $1.5 million, you can safely withdraw $60,000 in your first year of retirement.",
+          distractorExplanations: {
+            0: 'The correct answer is $1,500,000, not $600,000',
+            1: 'The correct answer is $1,500,000, not $1,000,000',
+            3: 'The correct answer is $1,500,000, not $2,400,000',
+          },
         },
         {
           id: "pf-u10-L8-Q2",
@@ -1024,6 +1151,9 @@ export const unit10: Unit = {
           question: "The 4% Rule guarantees your money will last exactly 30 years.",
           correctAnswer: false,
           explanation: "It doesn't guarantee anything. It's based on historical data showing a 4% withdrawal rate survived most 30-year periods since 1926. But markets are unpredictable. That's why flexibility matters. Being willing to adjust your spending based on market conditions adds a big safety margin.",
+          distractorExplanations: {
+            0: 'It doesn\'t guarantee anything. It\'s based on historical data showing a 4% withdrawal rate survived most 30-year periods since 1926',
+          },
         },
         {
           id: "pf-u10-L8-Q4",
@@ -1058,6 +1188,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Flexibility is key. After a big market drop, temporarily reducing withdrawal to 3-3.5% gives her portfolio room to recover. Rigidly sticking to 4% after a crash depletes savings faster. Adapting to conditions is what separates a good plan from a brittle one.",
+          distractorExplanations: {
+            1: 'Flexibility is key. After a big market drop, temporarily reducing withdrawal to 3-3.5% gives her portfolio room to recover',
+            2: 'Flexibility is key. After a big market drop, temporarily reducing withdrawal to 3-3.5% gives her portfolio room to recover',
+            3: 'Flexibility is key. After a big market drop, temporarily reducing withdrawal to 3-3.5% gives her portfolio room to recover',
+          },
         },
         {
           id: "pf-u10-L8-Q7",
@@ -1130,6 +1265,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "$23,000 (standard limit) + $7,500 (catch-up) = $30,500 total. That's the max you can put into your 401(k) each year starting at age 50.",
+          distractorExplanations: {
+            0: 'The correct answer is $30,500, not $23,000',
+            2: 'The correct answer is $30,500, not $7,500',
+            3: 'The correct answer is $30,500, not $38,500',
+          },
         },
         {
           id: "pf-u10-L9-Q2",
@@ -1145,6 +1285,9 @@ export const unit10: Unit = {
           question: "Catch-up contributions are available starting at age 55.",
           correctAnswer: false,
           explanation: "Catch-up contributions kick in at age 50, not 55. You become eligible in the calendar year you turn 50. Don't wait. Start using this benefit as soon as you qualify.",
+          distractorExplanations: {
+            0: 'Catch-up contributions kick in at age 50, not 55',
+          },
         },
         {
           id: "pf-u10-L9-Q4",
@@ -1179,6 +1322,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Karen can afford to max out. Contributing $30,500/year to her 401(k) (including catch-up) plus $8,000 to a Roth IRA = $38,500/year. With her $200K head start, 15 years of maxed contributions at 8% could grow to well over $1.5 million by 66.",
+          distractorExplanations: {
+            1: 'Karen can afford to max out. Contributing $30,500/year to her 401(k) (including catch-up) plus $8,000 to a Roth IRA = $38,500/year',
+            2: 'Karen can afford to max out. Contributing $30,500/year to her 401(k) (including catch-up) plus $8,000 to a Roth IRA = $38,500/year',
+            3: 'Karen can afford to max out. Contributing $30,500/year to her 401(k) (including catch-up) plus $8,000 to a Roth IRA = $38,500/year',
+          },
         },
         {
           id: "pf-u10-L9-Q7",
@@ -1205,6 +1353,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 3,
           explanation: "It's all of them working together. Higher income means you can afford it. 15+ years means growth is significant. Employer match adds free money. Tax advantages lower your bill. Your 50s are the final push. And catch-up contributions are the turbo button.",
+          distractorExplanations: {
+            0: 'It\'s all of them working together. Higher income means you can afford it',
+            1: 'It\'s all of them working together. Higher income means you can afford it',
+            2: 'It\'s all of them working together. Higher income means you can afford it',
+          },
         },
       ],
     },
@@ -1255,6 +1408,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "You'll pay 22% income tax ($5,500) plus 10% early withdrawal penalty ($2,500) = $8,000 total. You keep about $17,000 of your $25,000. And that's just the immediate hit. You also lose decades of compound growth on the full $25,000.",
+          distractorExplanations: {
+            0: 'You\'ll pay 22% income tax ($5,500) plus 10% early withdrawal penalty ($2,500) = $8,000 total',
+            1: 'You\'ll pay 22% income tax ($5,500) plus 10% early withdrawal penalty ($2,500) = $8,000 total',
+            3: 'You\'ll pay 22% income tax ($5,500) plus 10% early withdrawal penalty ($2,500) = $8,000 total',
+          },
         },
         {
           id: "pf-u10-L10-Q2",
@@ -1271,6 +1429,9 @@ export const unit10: Unit = {
           question: "If you have money in your 401(k) but never chose investments, it's automatically invested in stocks.",
           correctAnswer: false,
           explanation: "Most 401(k) plans default new contributions to a money market or stable value fund. Basically cash earning almost nothing. Many people contribute for YEARS without realizing their money is sitting in cash, missing out on stock market growth. Always check that your 401(k) money is actually invested in real funds.",
+          distractorExplanations: {
+            0: 'Most 401(k) plans default new contributions to a money market or stable value fund',
+          },
         },
         {
           id: "pf-u10-L10-Q4",
@@ -1307,6 +1468,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "Three mistakes: (1) Contributing 3% instead of 6% means she's leaving half the match on the table. (2) Stable Value Fund at 2% is way too conservative for a 28-year-old with 37 years to retirement. (3) A 401(k) loan for a vacation removes money from the market when it could be growing. Fix all three.",
+          distractorExplanations: {
+            0: 'Three mistakes: (1) Contributing 3% instead of 6% means she\'s leaving half the match on the table',
+            1: 'Three mistakes: (1) Contributing 3% instead of 6% means she\'s leaving half the match on the table',
+            3: 'Three mistakes: (1) Contributing 3% instead of 6% means she\'s leaving half the match on the table',
+          },
         },
         {
           id: "pf-u10-L10-Q7",
@@ -1389,6 +1555,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "First get the full match: 6% of $65,000 = $3,900/year = $325/month to 401(k). That gets you $1,950 in free employer match. The remaining $475/month goes to a Roth IRA ($5,700/year) for tax-free growth. This combo maximizes both the match and tax diversification.",
+          distractorExplanations: {
+            1: 'First get the full match: 6% of $65,000 = $3,900/year = $325/month to 401(k)',
+            2: 'First get the full match: 6% of $65,000 = $3,900/year = $325/month to 401(k)',
+            3: 'First get the full match: 6% of $65,000 = $3,900/year = $325/month to 401(k)',
+          },
         },
         {
           id: "pf-u10-L11-Q3",
@@ -1436,6 +1607,9 @@ export const unit10: Unit = {
           question: "You should review and potentially increase your retirement contributions at least once per year.",
           correctAnswer: true,
           explanation: "Annual reviews keep you on track. The best time to increase contributions is when you get a raise. Put at least half of every raise toward retirement. You won't miss money you never got used to spending.",
+          distractorExplanations: {
+            1: 'Annual reviews keep you on track. The best time to increase contributions is when you get a raise',
+          },
         },
         {
           id: "pf-u10-L11-Q8",
@@ -1461,6 +1635,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "The #1 wealth-building habit: when you get a raise, save at least half of it. Going from 10% to 13-14% means saving an extra $2,000-$2,600/year. You'll never miss money you never started spending. This single habit, repeated over a career, can add hundreds of thousands to your retirement.",
+          distractorExplanations: {
+            1: 'The #1 wealth-building habit: when you get a raise, save at least half of it',
+            2: 'The #1 wealth-building habit: when you get a raise, save at least half of it',
+            3: 'The #1 wealth-building habit: when you get a raise, save at least half of it',
+          },
         },
         {
           id: "pf-u10-L11-Q10",
@@ -1474,6 +1653,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Start now, automate, increase with raises. That's the entire retirement playbook in 7 words. Perfect investment picks matter less than consistency. Waiting for 'the right time' costs you the most valuable thing in investing: time. Future you will thank present you. Start today.",
+          distractorExplanations: {
+            1: 'Start now, automate, increase with raises',
+            2: 'Start now, automate, increase with raises',
+            3: 'Start now, automate, increase with raises',
+          },
         },
       ],
     },
@@ -1499,6 +1683,11 @@ export const unit10: Unit = {
             options: ["Emma: 45, Marcus: 32, Jordan: 22", "Emma: 40, Marcus: 30, Jordan: 20", "Emma: 50, Marcus: 35, Jordan: 25", "Emma: 35, Marcus: 25, Jordan: 15"],
             correctIndex: 0,
             explanation: "Emma: 67-22 = 45 years. Marcus: 67-35 = 32 years. Jordan: 67-45 = 22 years. Those extra years make a MASSIVE difference due to compound growth.",
+            distractorExplanations: {
+              1: 'Emma: 67-22 = 45 years. Marcus: 67-35 = 32 years',
+              2: 'Emma: 67-22 = 45 years. Marcus: 67-35 = 32 years',
+              3: 'Emma: 67-22 = 45 years. Marcus: 67-35 = 32 years',
+            },
           },
         },
         {
@@ -1525,6 +1714,9 @@ export const unit10: Unit = {
             question: "Marcus invested more of his own money than Emma but ended up with less at retirement.",
             correctAnswer: true,
             explanation: "Marcus invested $230,400 (vs Emma's $162,000) but ended with $1,425,000 (vs Emma's $2,574,000). The 13 extra years of compound growth were worth more than the extra $68,400 Marcus contributed. Time beats money.",
+            distractorExplanations: {
+              1: 'Marcus invested $230,400 (vs Emma\'s $162,000) but ended with $1,425,000 (vs Emma\'s $2,574,000)',
+            },
           },
         },
         {
@@ -1538,6 +1730,11 @@ export const unit10: Unit = {
             options: ["Option B. $500/month is much more money", "Option A. Starting 10 years earlier wins due to compounding", "They're about the same", "Neither. $200 and $500 are both too little"],
             correctIndex: 1,
             explanation: "Option A ($200/month for 42 years) = ~$1,770,000. Option B ($500/month for 32 years) = ~$1,188,000. Starting early with LESS money beats starting late with MORE money. Compound interest rewards time, not amount.",
+            distractorExplanations: {
+              0: 'Option A ($200/month for 42 years) = ~$1,770,000',
+              2: 'Option A ($200/month for 42 years) = ~$1,770,000',
+              3: 'Option A ($200/month for 42 years) = ~$1,770,000',
+            },
           },
         },
         {

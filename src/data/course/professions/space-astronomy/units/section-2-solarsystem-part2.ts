@@ -33,6 +33,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "Uranus rotates with an axial tilt of about 98 degrees.",
             correctAnswer: true,
             explanation: "Uranus is tilted so far that its poles take turns pointing almost directly at the Sun. No other planet has such an extreme tilt.",
+            distractorExplanations: {
+              1: 'Uranus is tilted so far that its poles take turns pointing almost directly at the Sun.',
+            },
           },
           {
             id: "sp-sec2-u6-L1-Q2",
@@ -46,6 +49,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The most accepted theory is that an Earth-sized object crashed into Uranus early in its history, knocking it onto its side.",
+            distractorExplanations: {
+              0: 'The Sun\'s gravity slowly pushed it over is incorrect; the most accepted theory is that an Earth-sized object crashed into Uranus early in its history,.',
+              2: 'Its rings pulled it sideways is incorrect; the most accepted theory is that an Earth-sized object crashed into Uranus early in its history, knocking it.',
+              3: 'It formed that way from the start is incorrect; the most accepted theory is that an Earth-sized object crashed into Uranus early in its history, knocking.',
+            },
           },
           {
             id: "sp-sec2-u6-L1-T2",
@@ -65,6 +73,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Uranus orbits at about 19.2 AU from the Sun. It takes 84 Earth years to complete one orbit.",
+            distractorExplanations: {
+              0: 'About 5 AU is incorrect; uranus orbits at about 19.2 AU from the Sun.',
+              1: 'About 10 AU is incorrect; uranus orbits at about 19.2 AU from the Sun.',
+              3: 'About 30 AU is incorrect; uranus orbits at about 19.2 AU from the Sun.',
+            },
           },
           {
             id: "sp-sec2-u6-L1-Q4",
@@ -102,6 +115,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The extreme tilt creates the most extreme seasons in the solar system. Each pole alternates between decades of sunlight and decades of darkness.",
+            distractorExplanations: {
+              0: 'Uranus has no seasons at all is incorrect; the extreme tilt creates the most extreme seasons in the solar system.',
+              2: 'This is incorrect; the extreme tilt creates the most extreme seasons in the solar system.',
+              3: 'Only the equator receives sunlight is incorrect; the extreme tilt creates the most extreme seasons in the solar system.',
+            },
           },
           {
             id: "sp-sec2-u6-L1-Q7",
@@ -136,6 +154,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "Neptune has been visited by multiple spacecraft.",
             correctAnswer: false,
             explanation: "Only Voyager 2 has visited Neptune, flying by in 1989. No orbiter or lander has ever been sent there.",
+            distractorExplanations: {
+              0: 'Only Voyager 2 has visited Neptune, flying by in 1989.',
+            },
           },
           {
             id: "sp-sec2-u6-L2-Q2",
@@ -149,6 +170,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Neptune's winds can reach an astonishing 2,100 km/h, faster than the speed of sound on Earth. Scientists aren't fully sure what drives them.",
+            distractorExplanations: {
+              0: 'About 200 km/h is incorrect; neptune\'s winds can reach an astonishing 2,100 km/h, faster than the speed of sound on Earth.',
+              1: 'About 600 km/h is incorrect; neptune\'s winds can reach an astonishing 2,100 km/h, faster than the speed of sound on Earth.',
+              3: 'About 100 km/h is incorrect; neptune\'s winds can reach an astonishing 2,100 km/h, faster than the speed of sound on Earth.',
+            },
           },
           {
             id: "sp-sec2-u6-L2-T2",
@@ -193,6 +219,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Neptune radiates 2.6 times the energy it receives from the Sun. This internal heat likely comes from slow gravitational contraction.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; neptune radiates 2.6 times the energy it receives from the Sun.',
+              2: 'It has no internal heat at all is incorrect; neptune radiates 2.6 times the energy it receives from the Sun.',
+              3: 'It\'s the same temperature as Uranus is incorrect; neptune radiates 2.6 times the energy it receives from the Sun.',
+            },
           },
           {
             id: "sp-sec2-u6-L2-Q6",
@@ -216,6 +247,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With very little solar energy input, Neptune's extreme winds must be powered mostly by internal heat. Understanding this energy source is an active area of research.",
+            distractorExplanations: {
+              0: 'How Neptune formed so far from the Sun is incorrect; with very little solar energy input, Neptune\'s extreme winds must be powered mostly by internal heat.',
+              2: 'Why Neptune is blue instead of green is incorrect; with very little solar energy input, Neptune\'s extreme winds must be powered mostly by internal heat.',
+              3: 'How Neptune keeps its moons in orbit is incorrect; with very little solar energy input, Neptune\'s extreme winds must be powered mostly by internal heat.',
+            },
           },
         ],
       },
@@ -240,6 +276,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "Uranus and Neptune are classified as gas giants like Jupiter and Saturn.",
             correctAnswer: false,
             explanation: "Uranus and Neptune are ice giants. They contain significantly more heavy elements like water, methane, and ammonia compared to the hydrogen-dominated gas giants.",
+            distractorExplanations: {
+              0: 'Uranus and Neptune are ice giants.',
+            },
           },
           {
             id: "sp-sec2-u6-L3-Q2",
@@ -268,6 +307,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "In planetary science, 'ices' refers to compounds like water, methane, and ammonia. Inside ice giants, these exist as hot compressed fluids, not frozen ice.",
+            distractorExplanations: {
+              0: 'The planets are covered in frozen ice is incorrect; in planetary science, \'ices\' refers to compounds like water, methane, and ammonia.',
+              2: 'The planets are the coldest objects in space is incorrect; in planetary science, \'ices\' refers to compounds like water, methane, and ammonia.',
+              3: 'This is incorrect; in planetary science, \'ices\' refers to compounds like water, methane, and ammonia.',
+            },
           },
           {
             id: "sp-sec2-u6-L3-Q4",
@@ -295,6 +339,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Extreme pressure can compress carbon into diamond crystals. Lab experiments have confirmed this process is possible under ice giant conditions.",
+            distractorExplanations: {
+              0: 'It burns away completely is incorrect; extreme pressure can compress carbon into diamond crystals.',
+              2: 'It floats to the surface as graphite is incorrect; extreme pressure can compress carbon into diamond crystals.',
+              3: 'It combines with hydrogen to form fuel is incorrect; extreme pressure can compress carbon into diamond crystals.',
+            },
           },
           {
             id: "sp-sec2-u6-L3-Q6",
@@ -326,6 +375,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "While all four have gaseous atmospheres, the bulk composition matters. Jupiter and Saturn are dominated by hydrogen. Uranus and Neptune are dominated by heavier 'icy' compounds.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; while all four have gaseous atmospheres, the bulk composition matters.',
+              2: 'They\'re too small to be gas giants is incorrect; while all four have gaseous atmospheres, the bulk composition matters.',
+              3: 'This claim is incorrect; while all four have gaseous atmospheres, the bulk composition matters.',
+            },
           },
         ],
       },
@@ -350,6 +404,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "Uranus's moons are named after characters from Shakespeare and Alexander Pope.",
             correctAnswer: true,
             explanation: "Unlike other planets whose moons are named from Greek and Roman mythology, Uranus's moons bear literary names like Miranda, Ariel, and Titania.",
+            distractorExplanations: {
+              1: 'Unlike other planets whose moons are named from Greek and Roman mythology, Uranus\'s moons bear literary names like.',
+            },
           },
           {
             id: "sp-sec2-u6-L4-Q2",
@@ -363,6 +420,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Triton has a retrograde orbit, meaning it orbits backward. This strongly suggests it was captured from the Kuiper Belt rather than forming alongside Neptune.",
+            distractorExplanations: {
+              0: 'This is incorrect; triton has a retrograde orbit, meaning it orbits backward.',
+              2: 'It has a thick oxygen atmosphere is incorrect; triton has a retrograde orbit, meaning it orbits backward.',
+              3: 'It\'s made entirely of iron is incorrect; triton has a retrograde orbit, meaning it orbits backward.',
+            },
           },
           {
             id: "sp-sec2-u6-L4-T2",
@@ -390,6 +452,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Triton has active nitrogen geysers. Sunlight heats dark material beneath the surface, building pressure until nitrogen gas erupts through the icy crust.",
+            distractorExplanations: {
+              0: 'Water vapor is incorrect; triton has active nitrogen geysers.',
+              1: 'Liquid methane is incorrect; triton has active nitrogen geysers.',
+              3: 'Sulfuric acid is incorrect; triton has active nitrogen geysers.',
+            },
           },
           {
             id: "sp-sec2-u6-L4-T3",
@@ -428,6 +495,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Moons that form with their planet orbit in the same direction. A backward orbit is strong evidence that Triton was captured from an independent orbit.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; moons that form with their planet orbit in the same direction.',
+              2: 'Neptune\'s rotation recently reversed is incorrect; moons that form with their planet orbit in the same direction.',
+              3: 'This claim is incorrect; moons that form with their planet orbit in the same direction.',
+            },
           },
         ],
       },
@@ -569,6 +641,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "A dwarf planet has enough gravity to be round but hasn't cleared its orbit of other objects.",
             correctAnswer: true,
             explanation: "That's the key difference. Planets dominate their orbital zones. Dwarf planets share their orbits with many other small bodies.",
+            distractorExplanations: {
+              1: 'That\'s the key difference.',
+            },
           },
           {
             id: "sp-sec2-u7-L1-Q2",
@@ -582,6 +657,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The defining difference is orbital dominance. A planet has cleared the area around its orbit. A dwarf planet hasn't.",
+            distractorExplanations: {
+              0: 'A planet is always larger is incorrect; the defining difference is orbital dominance.',
+              2: 'A planet must have moons is incorrect; the defining difference is orbital dominance.',
+              3: 'A planet must have an atmosphere is incorrect; the defining difference is orbital dominance.',
+            },
           },
           {
             id: "sp-sec2-u7-L1-T2",
@@ -624,6 +704,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "There are five officially recognized dwarf planets: Pluto, Eris, Haumea, Makemake, and Ceres. Many more candidates await confirmation.",
+            distractorExplanations: {
+              0: 'Three is incorrect; there are five officially recognized dwarf planets: Pluto, Eris, Haumea, Makemake, and Ceres.',
+              2: 'Eight is incorrect; there are five officially recognized dwarf planets: Pluto, Eris, Haumea, Makemake, and Ceres.',
+              3: 'Twelve is incorrect; there are five officially recognized dwarf planets: Pluto, Eris, Haumea, Makemake, and Ceres.',
+            },
           },
           {
             id: "sp-sec2-u7-L1-Q6",
@@ -647,6 +732,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Pluto itself didn't change. We discovered that many similar objects share its region of space. The dwarf planet category more accurately describes what Pluto is.",
+            distractorExplanations: {
+              0: 'This is incorrect; pluto itself didn\'t change.',
+              2: 'This is incorrect; pluto itself didn\'t change.',
+              3: 'This claim is incorrect; pluto itself didn\'t change.',
+            },
           },
         ],
       },
@@ -672,6 +762,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "Pluto was considered a planet for 76 years before being reclassified.",
             correctAnswer: true,
             explanation: "Pluto was discovered in 1930 and classified as a planet until 2006, when the IAU created the dwarf planet category.",
+            distractorExplanations: {
+              1: 'Pluto was discovered in 1930 and classified as a planet until 2006, when the IAU created the dwarf planet category.',
+            },
           },
           {
             id: "sp-sec2-u7-L2-Q2",
@@ -685,6 +778,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "New Horizons launched in 2006 and reached Pluto in July 2015, giving us our first close-up images of this distant world.",
+            distractorExplanations: {
+              0: 'Voyager 2 is incorrect; new Horizons launched in 2006 and reached Pluto in July 2015, giving us our first close-up images of this distant world.',
+              1: 'Cassini is incorrect; new Horizons launched in 2006 and reached Pluto in July 2015, giving us our first close-up images of this distant world.',
+              3: 'Juno is incorrect; new Horizons launched in 2006 and reached Pluto in July 2015, giving us our first close-up images of this distant world.',
+            },
           },
           {
             id: "sp-sec2-u7-L2-T2",
@@ -712,6 +810,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Pluto has five known moons: Charon (by far the largest), Nix, Hydra, Kerberos, and Styx.",
+            distractorExplanations: {
+              0: 'Zero is incorrect; pluto has five known moons: Charon (by far the largest), Nix, Hydra, Kerberos, and Styx.',
+              1: 'One is incorrect; pluto has five known moons: Charon (by far the largest), Nix, Hydra, Kerberos, and Styx.',
+              2: 'Three is incorrect; pluto has five known moons: Charon (by far the largest), Nix, Hydra, Kerberos, and Styx.',
+            },
           },
           {
             id: "sp-sec2-u7-L2-T3",
@@ -750,6 +853,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "New Horizons revealed that Pluto is geologically active and far more complex than anticipated. It has ice mountains, nitrogen glaciers, and a thin haze-layered atmosphere.",
+            distractorExplanations: {
+              0: 'This is incorrect; new Horizons revealed that Pluto is geologically active and far more complex than anticipated.',
+              2: 'A world covered in liquid methane seas is incorrect; new Horizons revealed that Pluto is geologically active and far more complex than anticipated.',
+              3: 'This is incorrect; new Horizons revealed that Pluto is geologically active and far more complex than anticipated.',
+            },
           },
         ],
       },
@@ -773,6 +881,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "Eris is slightly more massive than Pluto.",
             correctAnswer: true,
             explanation: "Eris has about 27% more mass than Pluto. This discovery was the main reason the IAU created the dwarf planet category.",
+            distractorExplanations: {
+              1: 'Eris has about 27% more mass than Pluto.',
+            },
           },
           {
             id: "sp-sec2-u7-L3-Q2",
@@ -786,6 +897,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With Eris being more massive than Pluto, astronomers faced a choice: keep adding planets or redefine the category. They chose to redefine it.",
+            distractorExplanations: {
+              0: 'Eris was too bright to ignore is incorrect; with Eris being more massive than Pluto, astronomers faced a choice: keep adding planets or redefine the category.',
+              2: 'Eris crashed into Pluto and broke it is incorrect; with Eris being more massive than Pluto, astronomers faced a choice: keep adding planets or redefine the.',
+              3: 'Scientists wanted exactly eight planets is incorrect; with Eris being more massive than Pluto, astronomers faced a choice: keep adding planets or redefine.',
+            },
           },
           {
             id: "sp-sec2-u7-L3-T2",
@@ -814,6 +930,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Eris orbits in the scattered disc, a region beyond the main Kuiper Belt. At its farthest, it's about 97 AU from the Sun.",
+            distractorExplanations: {
+              0: 'Between Mars and Jupiter is incorrect; eris orbits in the scattered disc, a region beyond the main Kuiper Belt.',
+              2: 'Inside Saturn\'s rings is incorrect; eris orbits in the scattered disc, a region beyond the main Kuiper Belt.',
+              3: 'Between Earth and Mars is incorrect; eris orbits in the scattered disc, a region beyond the main Kuiper Belt.',
+            },
           },
           {
             id: "sp-sec2-u7-L3-T3",
@@ -852,6 +973,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Being round and orbiting the Sun are necessary but not sufficient for planet status. It must also have cleared its orbital neighborhood.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because being round and orbiting the Sun are necessary but not sufficient for planet status.',
+              2: 'This reasoning is wrong because being round and orbiting the Sun are necessary but not sufficient for planet status.',
+              3: 'This reasoning is wrong because being round and orbiting the Sun are necessary but not sufficient for planet status.',
+            },
           },
         ],
       },
@@ -876,6 +1002,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "The Kuiper Belt is located between Mars and Jupiter.",
             correctAnswer: false,
             explanation: "The Kuiper Belt lies beyond Neptune, from about 30 to 55 AU from the Sun. The asteroid belt is the one between Mars and Jupiter.",
+            distractorExplanations: {
+              0: 'The Kuiper Belt lies beyond Neptune, from about 30 to 55 AU from the Sun.',
+            },
           },
           {
             id: "sp-sec2-u7-L4-Q2",
@@ -889,6 +1018,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Kuiper Belt objects are composed of frozen water, methane, ammonia, and rock. They're leftovers from the solar system's formation.",
+            distractorExplanations: {
+              0: 'Rock and iron like asteroids is incorrect; kuiper Belt objects are composed of frozen water, methane, ammonia, and rock.',
+              2: 'Liquid methane is incorrect; kuiper Belt objects are composed of frozen water, methane, ammonia, and rock.',
+              3: 'Pure hydrogen is incorrect; kuiper Belt objects are composed of frozen water, methane, ammonia, and rock.',
+            },
           },
           {
             id: "sp-sec2-u7-L4-T2",
@@ -916,6 +1050,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Kuiper Belt is about 20 times wider than the asteroid belt and its objects are primarily icy, while asteroids are mostly rocky.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; the Kuiper Belt is about 20 times wider than the asteroid belt and its objects are primarily icy, while asteroids.',
+              2: 'The asteroid belt has more objects is incorrect; the Kuiper Belt is about 20 times wider than the asteroid belt and its objects are primarily icy, while.',
+              3: 'There is no real difference between them is incorrect; the Kuiper Belt is about 20 times wider than the asteroid belt and its objects are primarily icy,.',
+            },
           },
           {
             id: "sp-sec2-u7-L4-T3",
@@ -954,6 +1093,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Neptune's gravitational influence disrupted the orbital paths of Kuiper Belt objects, preventing them from accumulating into a single large body.",
+            distractorExplanations: {
+              0: 'There wasn\'t enough material out there is incorrect; neptune\'s gravitational influence disrupted the orbital paths of Kuiper Belt objects, preventing them from.',
+              1: 'The objects are too cold to stick together is incorrect; neptune\'s gravitational influence disrupted the orbital paths of Kuiper Belt objects, preventing.',
+              3: 'This claim is incorrect; neptune\'s gravitational influence disrupted the orbital paths of Kuiper Belt objects, preventing them from.',
+            },
           },
         ],
       },
@@ -1109,6 +1253,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "The asteroid belt is so packed with rocks that spacecraft can't pass through safely.",
             correctAnswer: false,
             explanation: "Despite how movies show it, the asteroid belt is mostly empty space. Spacecraft have passed through many times without hitting anything.",
+            distractorExplanations: {
+              0: 'Despite how movies show it, the asteroid belt is mostly empty space.',
+            },
           },
           {
             id: "sp-sec2-u8-L1-Q2",
@@ -1122,6 +1269,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The asteroid belt occupies a region between the orbits of Mars (1.5 AU) and Jupiter (5.2 AU).",
+            distractorExplanations: {
+              0: 'Between Earth and Mars is incorrect; the asteroid belt occupies a region between the orbits of Mars (1.5 AU) and Jupiter (5.2 AU).',
+              2: 'Between Jupiter and Saturn is incorrect; the asteroid belt occupies a region between the orbits of Mars (1.5 AU) and Jupiter (5.2 AU).',
+              3: 'Beyond Neptune is incorrect; the asteroid belt occupies a region between the orbits of Mars (1.5 AU) and Jupiter (5.2 AU).',
+            },
           },
           {
             id: "sp-sec2-u8-L1-T2",
@@ -1149,6 +1301,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jupiter's massive gravity stirred up the asteroids, preventing them from clumping together. Without Jupiter, a small planet might have formed there.",
+            distractorExplanations: {
+              0: 'They\'re too hot to stick together is incorrect; jupiter\'s massive gravity stirred up the asteroids, preventing them from clumping together.',
+              2: 'The Sun pushed them apart with solar wind is incorrect; jupiter\'s massive gravity stirred up the asteroids, preventing them from clumping together.',
+              3: 'This is incorrect; jupiter\'s massive gravity stirred up the asteroids, preventing them from clumping together.',
+            },
           },
           {
             id: "sp-sec2-u8-L1-T3",
@@ -1187,6 +1344,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The average distance between asteroids is about 1 million km. Multiple spacecraft have passed through the belt without any close encounters.",
+            distractorExplanations: {
+              0: 'This answer is wrong; the average distance between asteroids is about 1 million km.',
+              2: 'This is incorrect; the average distance between asteroids is about 1 million km.',
+              3: 'The belt doesn\'t actually exist is incorrect; the average distance between asteroids is about 1 million km.',
+            },
           },
         ],
       },
@@ -1212,6 +1374,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "A comet's tail always points away from the Sun, not behind the comet.",
             correctAnswer: true,
             explanation: "Solar wind and radiation pressure push the tail away from the Sun. When a comet is moving away from the Sun, its tail actually leads it.",
+            distractorExplanations: {
+              1: 'Solar wind and radiation pressure push the tail away from the Sun.',
+            },
           },
           {
             id: "sp-sec2-u8-L2-Q2",
@@ -1225,6 +1390,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "As a comet nears the Sun, solar heat sublimates its ice (turns it directly from solid to gas). This gas and released dust form the visible tail.",
+            distractorExplanations: {
+              0: 'Friction from flying through space dust is incorrect; as a comet nears the Sun, solar heat sublimates its ice (turns it directly from solid to gas).',
+              2: 'The comet\'s engine fires exhaust is incorrect; as a comet nears the Sun, solar heat sublimates its ice (turns it directly from solid to gas).',
+              3: 'Gravity from planets pulls material off is incorrect; as a comet nears the Sun, solar heat sublimates its ice (turns it directly from solid to gas).',
+            },
           },
           {
             id: "sp-sec2-u8-L2-T2",
@@ -1267,6 +1437,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Halley's Comet has a 75-76 year orbital period. It's been documented by humans for over 2,000 years.",
+            distractorExplanations: {
+              0: 'Every year is incorrect; halley\'s Comet has a 75-76 year orbital period.',
+              1: 'Every 10 years is incorrect; halley\'s Comet has a 75-76 year orbital period.',
+              3: 'Once and never again is incorrect; halley\'s Comet has a 75-76 year orbital period.',
+            },
           },
           {
             id: "sp-sec2-u8-L2-Q6",
@@ -1290,6 +1465,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A comet's tail always points away from the Sun. When the comet moves away from the Sun, the tail leads it. The tail gradually fades as the comet moves farther from solar heat.",
+            distractorExplanations: {
+              0: 'This is incorrect; a comet\'s tail always points away from the Sun.',
+              1: 'Toward the Sun is incorrect; a comet\'s tail always points away from the Sun.',
+              3: 'This claim is incorrect; a comet\'s tail always points away from the Sun.',
+            },
           },
         ],
       },
@@ -1314,6 +1494,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "A meteor is the streak of light, not the rock itself.",
             correctAnswer: true,
             explanation: "The word 'meteor' refers to the visible streak of light caused by a space rock burning up in Earth's atmosphere, not the physical object.",
+            distractorExplanations: {
+              1: 'The word \'meteor\' refers to the visible streak of light caused by a space rock burning up in Earth\'s atmosphere,.',
+            },
           },
           {
             id: "sp-sec2-u8-L3-Q2",
@@ -1341,6 +1524,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Comets leave trails of dust and debris along their orbits. When Earth crosses these trails, the particles burn up in our atmosphere as meteors.",
+            distractorExplanations: {
+              0: 'Asteroids breaking apart near Earth is incorrect; comets leave trails of dust and debris along their orbits.',
+              2: 'The Moon deflecting space rocks toward Earth is incorrect; comets leave trails of dust and debris along their orbits.',
+              3: 'Solar flares pushing rocks toward us is incorrect; comets leave trails of dust and debris along their orbits.',
+            },
           },
           {
             id: "sp-sec2-u8-L3-Q4",
@@ -1387,6 +1575,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Shooting stars are meteors. They're caused by tiny particles (usually from comets) burning up in Earth's atmosphere at high speed.",
+            distractorExplanations: {
+              0: 'A star falling from the sky is incorrect; shooting stars are meteors.',
+              1: 'A small satellite burning up is incorrect; shooting stars are meteors.',
+              3: 'A comet passing nearby is incorrect; shooting stars are meteors.',
+            },
           },
         ],
       },
@@ -1411,6 +1604,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "A large asteroid impact contributed to the extinction of the dinosaurs.",
             correctAnswer: true,
             explanation: "The Chicxulub impact 66 million years ago caused massive fires, a global dust cloud, and drastic climate change that killed about 75% of all species.",
+            distractorExplanations: {
+              1: 'The Chicxulub impact 66 million years ago caused massive fires, a global dust cloud, and drastic climate change.',
+            },
           },
           {
             id: "sp-sec2-u8-L4-Q2",
@@ -1424,6 +1620,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "In 2022, NASA's DART spacecraft intentionally crashed into the asteroid moon Dimorphos to test whether we can change an asteroid's orbit. It worked.",
+            distractorExplanations: {
+              0: 'A rover on Mars is incorrect; in 2022, NASA\'s DART spacecraft intentionally crashed into the asteroid moon Dimorphos to test whether we can.',
+              2: 'A telescope searching for exoplanets is incorrect; in 2022, NASA\'s DART spacecraft intentionally crashed into the asteroid moon Dimorphos to test whether.',
+              3: 'A mission to land on the Moon is incorrect; in 2022, NASA\'s DART spacecraft intentionally crashed into the asteroid moon Dimorphos to test whether we can.',
+            },
           },
           {
             id: "sp-sec2-u8-L4-T2",
@@ -1451,6 +1652,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Ground and space-based telescopes continuously scan the sky. Computers calculate each object's orbit to predict any future close approaches to Earth.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; ground and space-based telescopes continuously scan the sky.',
+              2: 'This is incorrect; ground and space-based telescopes continuously scan the sky.',
+              3: 'This is incorrect; ground and space-based telescopes continuously scan the sky.',
+            },
           },
           {
             id: "sp-sec2-u8-L4-T3",
@@ -1488,6 +1694,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "With 30 years of warning, scientists would refine the orbit prediction and plan a measured deflection. Early detection provides the most options.",
+            distractorExplanations: {
+              0: 'Ignore it since the chance is small is incorrect; with 30 years of warning, scientists would refine the orbit prediction and plan a measured deflection.',
+              1: 'Evacuate the planet immediately is incorrect; with 30 years of warning, scientists would refine the orbit prediction and plan a measured deflection.',
+              3: 'Launch nuclear weapons at it right away is incorrect; with 30 years of warning, scientists would refine the orbit prediction and plan a measured deflection.',
+            },
           },
           {
             id: "sp-sec2-u8-L4-Q8",
@@ -1495,6 +1706,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "There is currently a known asteroid that will definitely hit Earth in the next 100 years.",
             correctAnswer: false,
             explanation: "As of now, no known asteroid poses a significant impact threat within the next century. Scientists continue scanning for undiscovered objects.",
+            distractorExplanations: {
+              0: 'As of now, no known asteroid poses a significant impact threat within the next century.',
+            },
           },
         ],
       },
@@ -1636,6 +1850,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "The Moon is the only celestial body that humans have walked on besides Earth.",
             correctAnswer: true,
             explanation: "Twelve astronauts walked on the Moon during the Apollo program (1969-1972). No humans have visited any other celestial body.",
+            distractorExplanations: {
+              1: 'Twelve astronauts walked on the Moon during the Apollo program (1969-1972).',
+            },
           },
           {
             id: "sp-sec2-u9-L1-Q2",
@@ -1649,6 +1866,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Giant Impact Theory says a Mars-sized body (called Theia) struck Earth about 4.5 billion years ago. The debris eventually coalesced into the Moon.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; the Giant Impact Theory says a Mars-sized body (called Theia) struck Earth about 4.5 billion years ago.',
+              2: 'This claim is incorrect; the Giant Impact Theory says a Mars-sized body (called Theia) struck Earth about 4.5 billion years ago.',
+              3: 'This reasoning is wrong because the Giant Impact Theory says a Mars-sized body (called Theia) struck Earth about 4.5 billion years ago.',
+            },
           },
           {
             id: "sp-sec2-u9-L1-T2",
@@ -1699,6 +1921,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Moon orbits about 384,000 km from Earth. Light takes about 1.3 seconds to travel that distance.",
+            distractorExplanations: {
+              0: '38,400 km is incorrect; the Moon orbits about 384,000 km from Earth.',
+              2: '3,840,000 km is incorrect; the Moon orbits about 384,000 km from Earth.',
+              3: '38,400,000 km is incorrect; the Moon orbits about 384,000 km from Earth.',
+            },
           },
           {
             id: "sp-sec2-u9-L1-Q7",
@@ -1713,6 +1940,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Moon stabilizes Earth's axial tilt. Without it, Earth's tilt could swing wildly between 0 and 85 degrees, making stable seasons and climate impossible.",
+            distractorExplanations: {
+              0: 'We wouldn\'t have moonlight at night is incorrect; the Moon stabilizes Earth\'s axial tilt.',
+              2: 'Nothing would change at all is incorrect; the Moon stabilizes Earth\'s axial tilt.',
+              3: 'The Sun would appear brighter is incorrect; the Moon stabilizes Earth\'s axial tilt.',
+            },
           },
         ],
       },
@@ -1737,6 +1969,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "Europa's ocean is on top of its icy surface.",
             correctAnswer: false,
             explanation: "Europa's ocean is beneath a thick ice shell, possibly 15-25 km deep. The ocean itself may be 60-150 km deep.",
+            distractorExplanations: {
+              0: 'Europa\'s ocean is beneath a thick ice shell, possibly 15-25 km deep.',
+            },
           },
           {
             id: "sp-sec2-u9-L2-Q2",
@@ -1750,6 +1985,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jupiter's enormous gravity stretches and compresses Europa as it orbits. This tidal flexing generates friction and heat inside the moon, keeping the ocean liquid.",
+            distractorExplanations: {
+              0: 'Radioactive decay in its core is incorrect; jupiter\'s enormous gravity stretches and compresses Europa as it orbits.',
+              2: 'Leftover heat from formation is incorrect; jupiter\'s enormous gravity stretches and compresses Europa as it orbits.',
+              3: 'Chemical reactions in the water is incorrect; jupiter\'s enormous gravity stretches and compresses Europa as it orbits.',
+            },
           },
           {
             id: "sp-sec2-u9-L2-T2",
@@ -1777,6 +2017,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cassini detected salty water, organic molecules, silica particles, and molecular hydrogen. These ingredients suggest hydrothermal vents on the ocean floor.",
+            distractorExplanations: {
+              0: 'Pure nitrogen gas is incorrect; cassini detected salty water, organic molecules, silica particles, and molecular hydrogen.',
+              2: 'Volcanic ash and sulfur is incorrect; cassini detected salty water, organic molecules, silica particles, and molecular hydrogen.',
+              3: 'Liquid methane only is incorrect; cassini detected salty water, organic molecules, silica particles, and molecular hydrogen.',
+            },
           },
           {
             id: "sp-sec2-u9-L2-T3",
@@ -1815,6 +2060,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Europa and Enceladus have the three key ingredients for life: liquid water, an energy source, and the right chemistry. They're the top priorities in astrobiology.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because europa and Enceladus have the three key ingredients for life: liquid water, an energy source, and the right chemistry.',
+              2: 'This reasoning is wrong because europa and Enceladus have the three key ingredients for life: liquid water, an energy source, and the right chemistry.',
+              3: 'This reasoning is wrong because europa and Enceladus have the three key ingredients for life: liquid water, an energy source, and the right chemistry.',
+            },
           },
         ],
       },
@@ -1839,6 +2089,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "Titan's lakes and seas are filled with liquid water.",
             correctAnswer: false,
             explanation: "Titan's surface liquids are methane and ethane, not water. At Titan's surface temperature of minus 179 degrees Celsius, water is frozen solid as rock.",
+            distractorExplanations: {
+              0: 'Titan\'s surface liquids are methane and ethane, not water.',
+            },
           },
           {
             id: "sp-sec2-u9-L3-Q2",
@@ -1852,6 +2105,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Titan is the only moon with a dense atmosphere (thicker than Earth's) and the only body besides Earth with stable liquid on its surface.",
+            distractorExplanations: {
+              0: 'It\'s the largest moon is incorrect; titan is the only moon with a dense atmosphere (thicker than Earth\'s) and the only body besides Earth with stable.',
+              2: 'It has active volcanoes is incorrect; titan is the only moon with a dense atmosphere (thicker than Earth\'s) and the only body besides Earth with stable.',
+              3: 'It orbits backward is incorrect; titan is the only moon with a dense atmosphere (thicker than Earth\'s) and the only body besides Earth with stable.',
+            },
           },
           {
             id: "sp-sec2-u9-L3-T2",
@@ -1879,6 +2137,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Huygens revealed a cold landscape with rounded ice pebbles (smoothed by flowing methane), river channels, and a hazy orange sky.",
+            distractorExplanations: {
+              0: 'A hot volcanic surface is incorrect; huygens revealed a cold landscape with rounded ice pebbles (smoothed by flowing methane), river channels, and a hazy.',
+              2: 'An ocean of liquid water is incorrect; huygens revealed a cold landscape with rounded ice pebbles (smoothed by flowing methane), river channels, and a hazy.',
+              3: 'This is incorrect; huygens revealed a cold landscape with rounded ice pebbles (smoothed by flowing methane), river channels, and a hazy orange sky.',
+            },
           },
           {
             id: "sp-sec2-u9-L3-T3",
@@ -1917,6 +2180,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Titan's atmosphere is 1.5 times denser than Earth's, and its gravity is only 14% of Earth's. These conditions make powered flight much easier than on Earth.",
+            distractorExplanations: {
+              0: 'This is incorrect; titan\'s atmosphere is 1.5 times denser than Earth\'s, and its gravity is only 14% of Earth\'s.',
+              2: 'This is incorrect; titan\'s atmosphere is 1.5 times denser than Earth\'s, and its gravity is only 14% of Earth\'s.',
+              3: 'This is incorrect; titan\'s atmosphere is 1.5 times denser than Earth\'s, and its gravity is only 14% of Earth\'s.',
+            },
           },
         ],
       },
@@ -1941,6 +2209,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "Io has more volcanic activity than any other body in the solar system.",
             correctAnswer: true,
             explanation: "Io has over 400 active volcanoes, making it far more volcanically active than Earth or any other known body.",
+            distractorExplanations: {
+              1: 'Io has over 400 active volcanoes, making it far more volcanically active than Earth or any other known body.',
+            },
           },
           {
             id: "sp-sec2-u9-L4-Q2",
@@ -1954,6 +2225,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jupiter's immense gravity, combined with gravitational pulls from Europa and Ganymede, constantly flexes Io's interior. This tidal heating generates enormous amounts of energy.",
+            distractorExplanations: {
+              0: 'Radioactive decay in its core is incorrect; jupiter\'s immense gravity, combined with gravitational pulls from Europa and Ganymede, constantly flexes Io\'s.',
+              2: 'Heat from the Sun is incorrect; jupiter\'s immense gravity, combined with gravitational pulls from Europa and Ganymede, constantly flexes Io\'s interior.',
+              3: 'Chemical reactions on its surface is incorrect; jupiter\'s immense gravity, combined with gravitational pulls from Europa and Ganymede, constantly flexes.',
+            },
           },
           {
             id: "sp-sec2-u9-L4-T2",
@@ -1981,6 +2257,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Volcanic eruptions coat Io's surface with sulfur compounds. Different forms of sulfur create the yellow, orange, red, and white patches visible from orbit.",
+            distractorExplanations: {
+              0: 'Iron oxide like Mars is incorrect; volcanic eruptions coat Io\'s surface with sulfur compounds.',
+              2: 'Reflected light from Jupiter is incorrect; volcanic eruptions coat Io\'s surface with sulfur compounds.',
+              3: 'Clouds of methane gas is incorrect; volcanic eruptions coat Io\'s surface with sulfur compounds.',
+            },
           },
           {
             id: "sp-sec2-u9-L4-T3",
@@ -2019,6 +2300,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Tidal heating is the engine driving Io's volcanism. Without Jupiter's gravitational flexing, the internal heat source would diminish and volcanoes would quiet down.",
+            distractorExplanations: {
+              0: 'Nothing would change is incorrect; tidal heating is the engine driving Io\'s volcanism.',
+              1: 'Volcanic activity would increase is incorrect; tidal heating is the engine driving Io\'s volcanism.',
+              3: 'Io would explode is incorrect; tidal heating is the engine driving Io\'s volcanism.',
+            },
           },
         ],
       },
@@ -2195,6 +2481,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Venus's thick CO2 atmosphere creates a runaway greenhouse effect, making it hotter than Mercury at 465 degrees Celsius.",
+            distractorExplanations: {
+              0: 'Mercury is incorrect; venus\'s thick CO2 atmosphere creates a runaway greenhouse effect, making it hotter than Mercury at 465 degrees Celsius.',
+              1: 'Jupiter is incorrect; venus\'s thick CO2 atmosphere creates a runaway greenhouse effect, making it hotter than Mercury at 465 degrees Celsius.',
+              3: 'Mars is incorrect; venus\'s thick CO2 atmosphere creates a runaway greenhouse effect, making it hotter than Mercury at 465 degrees Celsius.',
+            },
           },
           {
             id: "sp-sec2-u10-L1-Q4",
@@ -2202,6 +2493,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "The Sun contains about 99.86% of the solar system's total mass.",
             correctAnswer: true,
             explanation: "The Sun dominates the solar system. All planets, moons, asteroids, and comets combined make up less than 0.2%.",
+            distractorExplanations: {
+              1: 'The Sun dominates the solar system.',
+            },
           },
           {
             id: "sp-sec2-u10-L1-Q5",
@@ -2232,6 +2526,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Europa has a saltwater ocean beneath its ice, heated by tidal forces. It has liquid water, an energy source, and the right chemistry for potential life.",
+            distractorExplanations: {
+              0: 'Our Moon is incorrect; europa has a saltwater ocean beneath its ice, heated by tidal forces.',
+              1: 'Io is incorrect; europa has a saltwater ocean beneath its ice, heated by tidal forces.',
+              3: 'Titan is incorrect; europa has a saltwater ocean beneath its ice, heated by tidal forces.',
+            },
           },
           {
             id: "sp-sec2-u10-L1-Q8",
@@ -2273,6 +2572,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Retrograde orbits strongly suggest capture. Moons that form with their planet orbit in the same direction. Triton around Neptune is the classic example.",
+            distractorExplanations: {
+              0: 'The moon formed alongside the planet is incorrect; retrograde orbits strongly suggest capture.',
+              2: 'The planet recently reversed its rotation is incorrect; retrograde orbits strongly suggest capture.',
+              3: 'All moons orbit backward is incorrect; retrograde orbits strongly suggest capture.',
+            },
           },
           {
             id: "sp-sec2-u10-L2-Q2",
@@ -2287,6 +2591,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Enceladus has confirmed salty water, organic molecules, hydrogen, and an energy source from tidal heating. It checks every box for potential habitability.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because enceladus has confirmed salty water, organic molecules, hydrogen, and an energy source from tidal heating.',
+              1: 'This reasoning is wrong because enceladus has confirmed salty water, organic molecules, hydrogen, and an energy source from tidal heating.',
+              3: 'This reasoning is wrong because enceladus has confirmed salty water, organic molecules, hydrogen, and an energy source from tidal heating.',
+            },
           },
           {
             id: "sp-sec2-u10-L2-Q3",
@@ -2301,6 +2610,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The discovery of Eris and other similar objects led to a clear definition of planet that Pluto doesn't meet. It's now one of five recognized dwarf planets.",
+            distractorExplanations: {
+              0: 'This is incorrect; the discovery of Eris and other similar objects led to a clear definition of planet that Pluto doesn\'t meet.',
+              2: 'This is incorrect; the discovery of Eris and other similar objects led to a clear definition of planet that Pluto doesn\'t meet.',
+              3: 'Pluto exploded and no longer exists is incorrect; the discovery of Eris and other similar objects led to a clear definition of planet that Pluto doesn\'t meet.',
+            },
           },
           {
             id: "sp-sec2-u10-L2-Q4",
@@ -2315,6 +2629,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Neptune has the most extreme winds ever measured. Combined with its internal heat mystery, it offers the most compelling weather study in the solar system.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because neptune has the most extreme winds ever measured.',
+              1: 'This reasoning is wrong because neptune has the most extreme winds ever measured.',
+              3: 'This reasoning is wrong because neptune has the most extreme winds ever measured.',
+            },
           },
           {
             id: "sp-sec2-u10-L2-Q5",
@@ -2328,6 +2647,11 @@ export const spaceSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Far from the Sun, comets are frozen and inactive. As they approach, solar heat turns ice directly into gas, and solar wind blows this material into visible tails.",
+            distractorExplanations: {
+              0: 'Solar gravity pulls material off them is incorrect; far from the Sun, comets are frozen and inactive.',
+              1: 'They collide with asteroids near the Sun is incorrect; far from the Sun, comets are frozen and inactive.',
+              3: 'The Sun\'s light reflects off their surface is incorrect; far from the Sun, comets are frozen and inactive.',
+            },
           },
           {
             id: "sp-sec2-u10-L2-Q6",
@@ -2353,6 +2677,9 @@ export const spaceSection2Part2: Unit[] = [
             question: "NASA's DART mission successfully changed an asteroid's orbit in 2022.",
             correctAnswer: true,
             explanation: "DART crashed into asteroid moon Dimorphos and shortened its orbital period by 33 minutes. It proved that kinetic impact can deflect asteroids.",
+            distractorExplanations: {
+              1: 'DART crashed into asteroid moon Dimorphos and shortened its orbital period by 33 minutes.',
+            },
           },
         ],
       },

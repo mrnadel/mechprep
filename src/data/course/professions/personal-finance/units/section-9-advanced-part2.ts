@@ -39,6 +39,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "The stock market is divided into 11 major sectors based on the type of business each company operates.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The Global Industry Classification Standard (GICS) defines 11 sectors that cover every part of the economy.' },
             explanation: "The Global Industry Classification Standard (GICS) defines 11 sectors that cover every part of the economy.",
           },
           {
@@ -73,6 +74,11 @@ export const finSection9Part2: Unit[] = [
               "Sector performance is completely random",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; each sector responds differently to economic changes.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; each sector responds differently to economic changes.',
+            },
             explanation: "Each sector responds differently to economic changes. Rising oil prices help energy but hurt transportation, for example.",
           },
           {
@@ -109,6 +115,11 @@ export const finSection9Part2: Unit[] = [
               "A tax-free investment in technology companies",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; A sector ETF is a fund that owns a diversified basket of stocks from a single...',
+              2: 'This is not the best answer; A sector ETF is a fund that owns a diversified basket of stocks from a single...',
+              3: 'This is not the best answer; A sector ETF is a fund that owns a diversified basket of stocks from a single...',
+            },
             explanation: "A sector ETF is a fund that owns a diversified basket of stocks from a single market sector.",
           },
           {
@@ -142,6 +153,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "The economy moves through repeating cycles of expansion and contraction.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Economic cycles are a natural pattern, making this statement true.' },
             explanation: "Economic cycles are a natural pattern. Growth eventually slows, then recovers and grows again.",
           },
           {
@@ -175,6 +187,11 @@ export const finSection9Part2: Unit[] = [
               "All sectors perform equally well",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; During expansion, people spend more on tech and luxury items, boosting those ...',
+              2: 'This is not the best answer; During expansion, people spend more on tech and luxury items, boosting those ...',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "During expansion, people spend more on tech and luxury items, boosting those sectors.",
           },
           {
@@ -219,6 +236,11 @@ export const finSection9Part2: Unit[] = [
               "A complete reset of the stock market to zero",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; every recession has ended with a recovery.',
+              1: 'This is not the best answer; every recession has ended with a recovery.',
+              3: 'This is not the best answer; every recession has ended with a recovery.',
+            },
             explanation: "Every recession has ended with a recovery. The economy is cyclical, not a one-way street.",
           },
         ],
@@ -244,6 +266,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Sector rotation involves shifting investments between sectors based on the economic cycle.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The strategy aims to own sectors that perform best during each phase of the economic cycle.' },
             explanation: "The strategy aims to own sectors that perform best during each phase of the economic cycle.",
           },
           {
@@ -257,6 +280,11 @@ export const finSection9Part2: Unit[] = [
               "Gold, because uncertainty is still high",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'The reasoning that oil prices peak during recoveries does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that uncertainty is still high does not accurately reflect the financial principle at work.',
+            },
             explanation: "As the economy recovers, consumers start spending again on non-essentials, boosting the consumer discretionary sector.",
           },
           {
@@ -278,6 +306,11 @@ export const finSection9Part2: Unit[] = [
               "Tech stocks are immune to recessions",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              1: 'This is not the best answer; the biggest risk is mistiming the switch.',
+              3: 'This is not the best answer; the biggest risk is mistiming the switch.',
+            },
             explanation: "The biggest risk is mistiming the switch. If the recession doesn't happen, or you switch back too late, you lose money.",
           },
           {
@@ -312,6 +345,11 @@ export const finSection9Part2: Unit[] = [
               "Switch sectors every month based on the news",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Broad diversification across sectors reduces risk and removes the need to tim...',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; Broad diversification across sectors reduces risk and removes the need to tim...',
+            },
             explanation: "Broad diversification across sectors reduces risk and removes the need to time sector rotations.",
           },
           {
@@ -345,6 +383,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Defensive stocks sell products that people need regardless of economic conditions.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Essentials like food, utilities, and healthcare are bought in good times and bad, making those stocks defensive.' },
             explanation: "Essentials like food, utilities, and healthcare are bought in good times and bad, making those stocks defensive.",
           },
           {
@@ -358,6 +397,11 @@ export const finSection9Part2: Unit[] = [
               "A high-end fashion retailer",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'A luxury cruise line operator is not correct in this context; grocery stores sell essentials that people buy no matter what the economy does.',
+              2: 'An electric vehicle startup is not correct in this context; grocery stores sell essentials that people buy no matter what the economy does.',
+              3: 'A high-end fashion retailer is not correct in this context; grocery stores sell essentials that people buy no matter what the economy does.',
+            },
             explanation: "Grocery stores sell essentials that people buy no matter what the economy does. That makes them defensive.",
           },
           {
@@ -410,6 +454,11 @@ export const finSection9Part2: Unit[] = [
               "Do nothing, because predictions are always wrong",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; shifting toward defensive stocks before a recession can protect your portfolio.',
+              2: 'The reasoning that they\'ll bounce back eventually does not accurately reflect the financial principle at work.',
+              3: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+            },
             explanation: "Shifting toward defensive stocks before a recession can protect your portfolio. But don't abandon your strategy entirely.",
           },
           {
@@ -569,6 +618,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "A stock option gives you the right, but not the obligation, to buy or sell a stock at a set price.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'That\'s the key difference between options and stocks, making this statement true.' },
             explanation: "That's the key difference between options and stocks. You choose whether to exercise the option.",
           },
           {
@@ -582,6 +632,11 @@ export const finSection9Part2: Unit[] = [
               "Options guarantee a profit on every trade",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; when you buy stock, you own it.',
+              2: 'This is not the best answer; when you buy stock, you own it.',
+              3: 'This is not the best answer; when you buy stock, you own it.',
+            },
             explanation: "When you buy stock, you own it. With an option, you have the right to buy or sell at a fixed price, but you can walk away.",
           },
           {
@@ -610,6 +665,11 @@ export const finSection9Part2: Unit[] = [
               "The broker charges you a penalty fee",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; if an option expires without being exercised, you lose the premium you paid.',
+              1: 'This is not the best answer; if an option expires without being exercised, you lose the premium you paid.',
+              3: 'This is not the best answer; if an option expires without being exercised, you lose the premium you paid.',
+            },
             explanation: "If an option expires without being exercised, you lose the premium you paid. That's the maximum loss for an option buyer.",
           },
           {
@@ -631,6 +691,11 @@ export const finSection9Part2: Unit[] = [
               "$4,000 because options use 10x leverage",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The reasoning that that\'s the premium per share does not accurately reflect the financial principle at work.',
+              1: 'The reasoning that contracts cover 10 shares does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that options use 10x leverage does not accurately reflect the financial principle at work.',
+            },
             explanation: "One contract covers 100 shares, so $4 per share times 100 shares equals $400 total.",
           },
           {
@@ -672,6 +737,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "A call option gives you the right to buy a stock at a predetermined price.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Calls are for buyers who expect the stock price to rise above the strike price.' },
             explanation: "Calls are for buyers who expect the stock price to rise above the strike price.",
           },
           {
@@ -685,6 +751,11 @@ export const finSection9Part2: Unit[] = [
               "When you want to avoid all risk",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; you buy calls when you\'re bullish.',
+              2: 'This is not the best answer; you buy calls when you\'re bullish.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "You buy calls when you're bullish. If the price rises above your strike price, the call gains value.",
           },
           {
@@ -751,6 +822,11 @@ export const finSection9Part2: Unit[] = [
               "Paying taxes on any gains from the stock",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'This is not the best answer; the put lets you sell at $55 no matter how far the stock drops.',
+              3: 'This is not the best answer; the put lets you sell at $55 no matter how far the stock drops.',
+            },
             explanation: "The put lets you sell at $55 no matter how far the stock drops. Your total cost is the $2 premium per share.",
           },
         ],
@@ -776,6 +852,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "The strike price is the price at which an option holder can buy or sell the underlying stock.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The strike price is fixed when you buy the option, making this statement true.' },
             explanation: "The strike price is fixed when you buy the option. It stays the same regardless of where the stock price moves.",
           },
           {
@@ -789,6 +866,11 @@ export const finSection9Part2: Unit[] = [
               "Nothing, because the option has expired",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Your call gives you the right to buy at the $40 strike price.',
+              2: 'This is not the best answer; Your call gives you the right to buy at the $40 strike price.',
+              3: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+            },
             explanation: "Your call gives you the right to buy at the $40 strike price, even though the stock is worth $55. That's a $15 gain per share.",
           },
           {
@@ -840,6 +922,11 @@ export const finSection9Part2: Unit[] = [
               "No, because calls can never be in the money",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The reasoning that because the stock is trading actively does not hold up against the correct analysis.',
+              1: 'The reasoning that because $45 is close to $50 does not hold up against the correct analysis.',
+              3: 'The reasoning that because calls can never be in the money does not hold up against the correct analysis.',
+            },
             explanation: "A call is in the money only when the stock price is above the strike. At $45 vs. a $50 strike, it's out of the money.",
           },
           {
@@ -879,6 +966,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Options provide leverage because they control many shares for a fraction of the stock's full price.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'One contract controls 100 shares, so your investment is leveraged, making this statement true.' },
             explanation: "One contract controls 100 shares, so your investment is leveraged. A small move in the stock creates a larger percentage move in the option.",
           },
           {
@@ -892,6 +980,11 @@ export const finSection9Part2: Unit[] = [
               "It requires a special brokerage license",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; leverage magnifies returns in both directions.',
+              2: 'This is not the best answer; leverage magnifies returns in both directions.',
+              3: 'This is not the best answer; leverage magnifies returns in both directions.',
+            },
             explanation: "Leverage magnifies returns in both directions. You can gain big, but you can also lose your entire premium if the trade goes against you.",
           },
           {
@@ -942,6 +1035,11 @@ export const finSection9Part2: Unit[] = [
               "Use all the money on one option for maximum leverage",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; options can expire worthless, losing everything.',
+              2: 'The reasoning that they\'re safer does not accurately reflect the financial principle at work.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Options can expire worthless, losing everything. Beginners should build a diversified foundation first and only use small amounts for options.",
           },
           {
@@ -966,6 +1064,11 @@ export const finSection9Part2: Unit[] = [
               "Double the premium paid",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that the stock could crash does not accurately reflect the financial principle at work.',
+              2: '100% of the stock\'s value is not correct in this context; when you buy an option, your maximum loss is the premium you paid.',
+              3: 'Double the premium paid is not correct in this context; when you buy an option, your maximum loss is the premium you paid.',
+            },
             explanation: "When you buy an option, your maximum loss is the premium you paid. The option simply expires worthless.",
           },
         ],
@@ -1034,6 +1137,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Dollar-cost averaging means investing the same amount at regular intervals regardless of the stock price.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'DCA removes the stress of timing the market, making this statement true.' },
             explanation: "DCA removes the stress of timing the market. You invest consistently and let the schedule handle the rest.",
           },
           {
@@ -1047,6 +1151,11 @@ export const finSection9Part2: Unit[] = [
               "You sell your existing shares to cut losses",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; with a fixed dollar amount, lower prices mean you can buy more shares.',
+              1: 'The reasoning that you\'re losing money does not accurately reflect the financial principle at work.',
+              3: 'This is not the best answer; with a fixed dollar amount, lower prices mean you can buy more shares.',
+            },
             explanation: "With a fixed dollar amount, lower prices mean you can buy more shares. This lowers your average cost over time.",
           },
           {
@@ -1068,6 +1177,11 @@ export const finSection9Part2: Unit[] = [
               "$15 because that was the lowest price",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The reasoning that the start and end prices are the same does not accurately reflect the financial principle at work.',
+              1: 'The reasoning that you own the most shares from the cheapest month does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that that was the lowest price does not accurately reflect the financial principle at work.',
+            },
             explanation: "You invested $900 total and bought 40 shares. That's $22.50 per share, less than the average stock price of $25.",
           },
           {
@@ -1123,6 +1237,11 @@ export const finSection9Part2: Unit[] = [
               "It eliminates all investment risk",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "DCA's biggest benefit is removing the anxiety of when to invest. You follow the plan regardless of market conditions.",
           },
         ],
@@ -1148,6 +1267,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Historically, lump sum investing has outperformed DCA about two-thirds of the time.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Since markets rise more often than they fall, getting money in sooner tends to produce better returns.' },
             explanation: "Since markets rise more often than they fall, getting money in sooner tends to produce better returns.",
           },
           {
@@ -1161,6 +1281,11 @@ export const finSection9Part2: Unit[] = [
               "Because brokerages reward lump sum investors",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; markets have a long-term upward bias.',
+              2: 'This is not the best answer; markets have a long-term upward bias.',
+              3: 'This is not the best answer; markets have a long-term upward bias.',
+            },
             explanation: "Markets have a long-term upward bias. Money invested earlier has more time in the market, which usually means higher returns.",
           },
           {
@@ -1198,6 +1323,11 @@ export const finSection9Part2: Unit[] = [
               "Spend the bonus instead of investing because markets are scary",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; with a 20-year horizon, both approaches will likely work well.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'The reasoning that markets are scary does not accurately reflect the financial principle at work.',
+            },
             explanation: "With a 20-year horizon, both approaches will likely work well. DCA helps manage anxiety while getting money into the market.",
           },
           {
@@ -1226,6 +1356,11 @@ export const finSection9Part2: Unit[] = [
               "Sector rotation",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Lump sum investing is not correct in this context; Investing a fixed amount from each paycheck at regular intervals is the defin...',
+              1: 'Market timing is not correct in this context; Investing a fixed amount from each paycheck at regular intervals is the defin...',
+              3: 'Sector rotation is not correct in this context; Investing a fixed amount from each paycheck at regular intervals is the defin...',
+            },
             explanation: "Investing a fixed amount from each paycheck at regular intervals is the definition of dollar-cost averaging.",
           },
         ],
@@ -1251,6 +1386,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Portfolio drift happens when market movements change your original asset allocation.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'As different assets grow at different rates, your portfolio\'s balance shifts away from your target allocation.' },
             explanation: "As different assets grow at different rates, your portfolio's balance shifts away from your target allocation.",
           },
           {
@@ -1264,6 +1400,11 @@ export const finSection9Part2: Unit[] = [
               "The broker rebalanced without your permission",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; when stocks rise faster than bonds, their share of the portfolio grows.',
+              2: 'This is not the best answer; when stocks rise faster than bonds, their share of the portfolio grows.',
+              3: 'This is not the best answer; when stocks rise faster than bonds, their share of the portfolio grows.',
+            },
             explanation: "When stocks rise faster than bonds, their share of the portfolio grows. Your allocation drifted from 60/40 to 75/25.",
           },
           {
@@ -1285,6 +1426,11 @@ export const finSection9Part2: Unit[] = [
               "Nothing, because bonds always offset stock losses completely",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that your total balance hasn\'t changed does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that the stocks grew before the crash happened does not accurately reflect the financial principle at work.',
+              3: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+            },
             explanation: "At 80% stocks instead of 60%, a 30% crash hits 24% of your portfolio instead of 18%. Drift increased your risk.",
           },
           {
@@ -1337,6 +1483,11 @@ export const finSection9Part2: Unit[] = [
               "Close your account and open a new one",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Rebalancing sells overweight (outperforming) assets and buys underweight (und...',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'Closing accounts can reduce available credit and shorten credit history, both of which can hurt your score.',
+            },
             explanation: "Rebalancing sells overweight (outperforming) assets and buys underweight (underperforming) ones. It's a disciplined buy-low, sell-high approach.",
           },
         ],
@@ -1362,6 +1513,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Calendar rebalancing means checking your allocation at regular time intervals like quarterly or annually.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Calendar rebalancing uses a fixed schedule, making this statement true.' },
             explanation: "Calendar rebalancing uses a fixed schedule. You check and adjust at the same time each period.",
           },
           {
@@ -1396,6 +1548,11 @@ export const finSection9Part2: Unit[] = [
               "Because selling triggers a mandatory waiting period",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; selling can trigger capital gains taxes and trading fees.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "Selling can trigger capital gains taxes and trading fees. Directing new money to underweight assets achieves rebalancing without those costs.",
           },
           {
@@ -1432,6 +1589,11 @@ export const finSection9Part2: Unit[] = [
               "Never, because the market will balance itself",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Annual rebalancing or threshold-based adjustments provide the discipline with...',
+              2: 'This is not the best answer; Annual rebalancing or threshold-based adjustments provide the discipline with...',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Annual rebalancing or threshold-based adjustments provide the discipline without excessive costs.",
           },
           {
@@ -1585,6 +1747,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Research shows that people feel losses roughly twice as strongly as equivalent gains.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'This asymmetry is called loss aversion, making this statement true.' },
             explanation: "This asymmetry is called loss aversion. It's one of the most well-documented findings in behavioral economics.",
           },
           {
@@ -1598,6 +1761,11 @@ export const finSection9Part2: Unit[] = [
               "It doesn't affect investment decisions at all",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; loss aversion causes both behaviors.',
+              1: 'This is not the best answer; loss aversion causes both behaviors.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Loss aversion causes both behaviors. Investors sell winners to secure gains and hold losers to avoid realizing a painful loss.",
           },
           {
@@ -1627,6 +1795,11 @@ export const finSection9Part2: Unit[] = [
               "Neither, they'd borrow money instead",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that selling at a loss feels productive does not accurately reflect the financial principle at work.',
+              2: 'This is not the best answer; most investors sell winners (Stock A) because it feels good to lock in a gain.',
+              3: 'This is not the best answer; most investors sell winners (Stock A) because it feels good to lock in a gain.',
+            },
             explanation: "Most investors sell winners (Stock A) because it feels good to lock in a gain. Selling the loser would mean admitting a mistake.",
           },
           {
@@ -1663,6 +1836,11 @@ export const finSection9Part2: Unit[] = [
               "Always sell immediately when a stock drops even 1%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Pre-set rules remove emotion from the decision. When the rule triggers, you act regardless of how it feels.",
           },
         ],
@@ -1688,6 +1866,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Recency bias causes investors to assume recent market trends will continue indefinitely.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'After a period of gains, investors expect more gains, making this statement true.' },
             explanation: "After a period of gains, investors expect more gains. After losses, they expect more losses. Both assumptions ignore the full picture.",
           },
           {
@@ -1701,6 +1880,11 @@ export const finSection9Part2: Unit[] = [
               "Rebalance their portfolio calmly",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that the market is on sale does not accurately reflect the financial principle at work.',
+              2: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              3: 'This is not the best answer; recency bias makes the recent decline feel permanent.',
+            },
             explanation: "Recency bias makes the recent decline feel permanent. Investors panic and sell, expecting even more losses ahead.",
           },
           {
@@ -1722,6 +1906,11 @@ export const finSection9Part2: Unit[] = [
               "Herd mentality, because everyone else is buying tech",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that he\'s afraid of losing money elsewhere does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that he only reads tech news does not accurately reflect the financial principle at work.',
+              3: 'The reasoning that everyone else is buying tech does not accurately reflect the financial principle at work.',
+            },
             explanation: "He's assuming recent performance will continue. That's classic recency bias. Tech stocks don't always go up.",
           },
           {
@@ -1750,6 +1939,11 @@ export const finSection9Part2: Unit[] = [
               "Change your strategy every time the market shifts",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; long-term data shows that markets recover and grow.',
+              2: 'This is not the best answer; long-term data shows that markets recover and grow.',
+              3: 'This is not the best answer; long-term data shows that markets recover and grow.',
+            },
             explanation: "Long-term data shows that markets recover and grow. Keeping this perspective prevents knee-jerk reactions.",
           },
           {
@@ -1791,6 +1985,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Herd mentality often leads investors to buy high and sell low.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'By the time everyone is excited about an investment, prices are usually already high, making this statement true.' },
             explanation: "By the time everyone is excited about an investment, prices are usually already high. When everyone panics, prices have already dropped.",
           },
           {
@@ -1804,6 +1999,11 @@ export const finSection9Part2: Unit[] = [
               "Anchoring bias",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Loss aversion is not correct in this context; Social pressure to buy what everyone else is buying is classic herd mentality...',
+              1: 'Recency bias is not correct in this context; Social pressure to buy what everyone else is buying is classic herd mentality...',
+              3: 'Anchoring bias is not correct in this context; Social pressure to buy what everyone else is buying is classic herd mentality...',
+            },
             explanation: "Social pressure to buy what everyone else is buying is classic herd mentality, amplified by FOMO.",
           },
           {
@@ -1854,6 +2054,11 @@ export const finSection9Part2: Unit[] = [
               "Close all financial news and never check your portfolio again",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that the neighbors know something does not accurately reflect the financial principle at work.',
+              2: 'The reasoning that it must bounce back does not accurately reflect the financial principle at work.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "A written plan created during calm times is your best guide during chaos. Following the herd usually means selling at the worst time.",
           },
           {
@@ -1867,6 +2072,11 @@ export const finSection9Part2: Unit[] = [
               "Checking the news every hour for market updates",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; A pre-written plan gives you rules to follow when emotions or social pressure...',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; A pre-written plan gives you rules to follow when emotions or social pressure...',
+            },
             explanation: "A pre-written plan gives you rules to follow when emotions or social pressure try to push you off course.",
           },
         ],
@@ -1892,6 +2102,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Confirmation bias leads investors to ignore information that contradicts their existing beliefs.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'We naturally gravitate toward evidence that supports our views and dismiss or avoid evidence that challenges them.' },
             explanation: "We naturally gravitate toward evidence that supports our views and dismiss or avoid evidence that challenges them.",
           },
           {
@@ -1905,6 +2116,11 @@ export const finSection9Part2: Unit[] = [
               "Herd mentality",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Loss aversion is not correct in this context; Seeking only positive information about a stock you already own is textbook c...',
+              1: 'Recency bias is not correct in this context; Seeking only positive information about a stock you already own is textbook c...',
+              3: 'Herd mentality is not correct in this context; Seeking only positive information about a stock you already own is textbook c...',
+            },
             explanation: "Seeking only positive information about a stock you already own is textbook confirmation bias.",
           },
           {
@@ -1957,6 +2173,11 @@ export const finSection9Part2: Unit[] = [
               "Block your friend so they can't give you more negative opinions",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              2: 'The reasoning that your friend is probably right does not accurately reflect the financial principle at work.',
+              3: 'This is not the best answer; taking opposing views seriously and investigating them strengthens your analysis.',
+            },
             explanation: "Taking opposing views seriously and investigating them strengthens your analysis. You might still buy, but you'll do so with better understanding.",
           },
           {
@@ -1970,6 +2191,11 @@ export const finSection9Part2: Unit[] = [
               "Only investing in companies you personally use",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; A checklist that forces you to consider the downsides ensures you don\'t skip ...',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; A checklist that forces you to consider the downsides ensures you don\'t skip ...',
+            },
             explanation: "A checklist that forces you to consider the downsides ensures you don't skip the uncomfortable analysis.",
           },
         ],
@@ -2038,6 +2264,7 @@ export const finSection9Part2: Unit[] = [
             type: "true-false",
             question: "Dollar-cost averaging means investing different amounts at random intervals.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'DCA means investing the same fixed amount at regular intervals, not random amounts or timing..' },
             explanation: "DCA means investing the same fixed amount at regular intervals, not random amounts or timing.",
           },
           {
@@ -2051,6 +2278,11 @@ export const finSection9Part2: Unit[] = [
               "Premium / Expiration date",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Profit / Expenses is not correct in this context; p/E = Price divided by Earnings per share.',
+              2: 'Portfolio / Equity value is not correct in this context; p/E = Price divided by Earnings per share.',
+              3: 'Premium / Expiration date is not correct in this context; p/E = Price divided by Earnings per share.',
+            },
             explanation: "P/E = Price divided by Earnings per share. It's the most common stock valuation metric.",
           },
           {
@@ -2109,6 +2341,11 @@ export const finSection9Part2: Unit[] = [
               "Only trade on the NYSE, not Nasdaq",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Use military technology is not correct in this context; Defensive stocks sell necessities like food.',
+              1: 'This is not the best answer; Defensive stocks sell necessities like food.',
+              3: 'This is not the best answer; Defensive stocks sell necessities like food.',
+            },
             explanation: "Defensive stocks sell necessities like food, medicine, and electricity that people buy regardless of economic conditions.",
           },
         ],
@@ -2141,6 +2378,11 @@ export const finSection9Part2: Unit[] = [
               "No biases, because AI is genuinely revolutionary",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Social pressure (herd).',
+              2: 'This is not the best answer; Social pressure (herd).',
+              3: 'The reasoning that AI is genuinely revolutionary does not accurately reflect the financial principle at work.',
+            },
             explanation: "Social pressure (herd), projecting recent gains (recency), and fear of missing out (FOMO) are all at play.",
           },
           {
@@ -2155,6 +2397,11 @@ export const finSection9Part2: Unit[] = [
               "Close the account and open a new one with the right allocation",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Directing new contributions to bonds rebalances without selling.',
+              2: 'This is not the best answer; Directing new contributions to bonds rebalances without selling.',
+              3: 'Closing accounts can reduce available credit and shorten credit history, both of which can hurt your score.',
+            },
             explanation: "Directing new contributions to bonds rebalances without selling, which avoids triggering capital gains taxes.",
           },
           {
@@ -2168,6 +2415,11 @@ export const finSection9Part2: Unit[] = [
               "Wait for the P/E to rise to 18 before buying",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that it\'s clearly undervalued does not accurately reflect the financial principle at work.',
+              2: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "A low P/E could mean undervaluation or real problems. Research the fundamentals before assuming it's a bargain.",
           },
           {
@@ -2218,6 +2470,11 @@ export const finSection9Part2: Unit[] = [
               "Sector rotation",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Speculation is not correct in this context; buying puts on stocks you own protects against declines.',
+              1: 'Dollar-cost averaging is not correct in this context; buying puts on stocks you own protects against declines.',
+              3: 'Sector rotation is not correct in this context; buying puts on stocks you own protects against declines.',
+            },
             explanation: "Buying puts on stocks you own protects against declines. This protective strategy is called hedging.",
           },
         ],

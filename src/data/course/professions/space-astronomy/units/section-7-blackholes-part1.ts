@@ -32,6 +32,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "A black hole is a region where gravity is so strong that light cannot escape.",
             correctAnswer: true,
             explanation: "The gravity near a black hole is so intense that even light, the fastest thing in the universe, gets trapped.",
+            distractorExplanations: {
+              1: 'The gravity near a black hole is so intense that even light, the fastest thing in the universe, gets trapped.',
+            },
           },
           {
             id: "sp-sec7-u1-L1-Q2",
@@ -45,6 +48,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A black hole is black because its gravity traps all light. No photons escape for us to see.",
+            distractorExplanations: {
+              1: 'It\'s made of dark matter is incorrect; a black hole is black because its gravity traps all light.',
+              2: 'It\'s very far away from Earth is incorrect; a black hole is black because its gravity traps all light.',
+              3: 'It absorbs all colors except black is incorrect; a black hole is black because its gravity traps all light.',
+            },
           },
           {
             id: "sp-sec7-u1-L1-T2",
@@ -58,6 +66,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "If the Sun became a black hole of the same mass, Earth would be pulled in.",
             correctAnswer: false,
             explanation: "At the same mass and distance, gravity stays the same. Earth would keep orbiting normally. Only objects very close to a black hole get trapped.",
+            distractorExplanations: {
+              0: 'At the same mass and distance, gravity stays the same.',
+            },
           },
           {
             id: "sp-sec7-u1-L1-Q4",
@@ -85,6 +96,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Earth's Schwarzschild radius is about 9 mm. You'd need to compress all of Earth's mass to smaller than a marble.",
+            distractorExplanations: {
+              0: 'The size of the Moon is incorrect; earth\'s Schwarzschild radius is about 9 mm.',
+              1: 'The size of a basketball is incorrect; earth\'s Schwarzschild radius is about 9 mm.',
+              3: 'The size of a grain of sand is incorrect; earth\'s Schwarzschild radius is about 9 mm.',
+            },
           },
           {
             id: "sp-sec7-u1-L1-Q6",
@@ -119,6 +135,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "A star stays stable because nuclear fusion pushes outward against gravity.",
             correctAnswer: true,
             explanation: "This balance between fusion pressure and gravitational collapse is called hydrostatic equilibrium. It lasts as long as fuel does.",
+            distractorExplanations: {
+              1: 'This balance between fusion pressure and gravitational collapse is called hydrostatic equilibrium.',
+            },
           },
           {
             id: "sp-sec7-u1-L2-Q2",
@@ -132,6 +151,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Without fusion pressure to resist gravity, the core collapses in seconds. The outer layers explode as a supernova.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; without fusion pressure to resist gravity, the core collapses in seconds.',
+              1: 'It starts orbiting another star is incorrect; without fusion pressure to resist gravity, the core collapses in seconds.',
+              2: 'It splits into two smaller stars is incorrect; without fusion pressure to resist gravity, the core collapses in seconds.',
+            },
           },
           {
             id: "sp-sec7-u1-L2-T2",
@@ -160,6 +184,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "At peak brightness, a supernova can outshine its entire host galaxy. That's over 100 billion stars.",
+            distractorExplanations: {
+              0: 'As bright as 100 stars is incorrect; at peak brightness, a supernova can outshine its entire host galaxy.',
+              1: 'This is incorrect; at peak brightness, a supernova can outshine its entire host galaxy.',
+              2: 'Brighter than a million stars is incorrect; at peak brightness, a supernova can outshine its entire host galaxy.',
+            },
           },
           {
             id: "sp-sec7-u1-L2-T3",
@@ -209,6 +238,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "All black holes are roughly the same size.",
             correctAnswer: false,
             explanation: "Black holes range from a few solar masses (stellar) to billions of solar masses (supermassive). The size difference is enormous.",
+            distractorExplanations: {
+              0: 'Black holes range from a few solar masses (stellar) to billions of solar masses (supermassive).',
+            },
           },
           {
             id: "sp-sec7-u1-L3-Q2",
@@ -238,6 +270,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Nearly every large galaxy has a supermassive black hole at its center. The Milky Way has one called Sagittarius A*.",
+            distractorExplanations: {
+              0: 'Only in the space between galaxies is incorrect; nearly every large galaxy has a supermassive black hole at its center.',
+              1: 'Inside nebulae where stars are born is incorrect; nearly every large galaxy has a supermassive black hole at its center.',
+              2: 'Scattered randomly throughout a galaxy is incorrect; nearly every large galaxy has a supermassive black hole at its center.',
+            },
           },
           {
             id: "sp-sec7-u1-L3-Q4",
@@ -251,6 +288,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Stellar black holes form when individual massive stars collapse. Supermassive black holes formed through different processes over billions of years.",
+            distractorExplanations: {
+              0: 'Supermassive black hole is incorrect; stellar black holes form when individual massive stars collapse.',
+              1: 'Intermediate black hole is incorrect; stellar black holes form when individual massive stars collapse.',
+              3: 'Primordial black hole is incorrect; stellar black holes form when individual massive stars collapse.',
+            },
           },
           {
             id: "sp-sec7-u1-L3-T3",
@@ -271,6 +313,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At 10,000 solar masses, this falls squarely in the intermediate range (100-100,000 solar masses). Star clusters are a likely home for these rare objects.",
+            distractorExplanations: {
+              0: 'A stellar black hole is incorrect; at 10,000 solar masses, this falls squarely in the intermediate range (100-100,000 solar masses).',
+              2: 'A supermassive black hole is incorrect; at 10,000 solar masses, this falls squarely in the intermediate range (100-100,000 solar masses).',
+              3: 'A white dwarf is incorrect; at 10,000 solar masses, this falls squarely in the intermediate range (100-100,000 solar masses).',
+            },
           },
           {
             id: "sp-sec7-u1-L3-Q6",
@@ -305,6 +352,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "Astronomers can see black holes directly through telescopes.",
             correctAnswer: false,
             explanation: "Black holes emit no light of their own. We detect them through their gravitational effects on nearby matter and light.",
+            distractorExplanations: {
+              0: 'Black holes emit no light of their own.',
+            },
           },
           {
             id: "sp-sec7-u1-L4-Q2",
@@ -318,6 +368,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "In a binary system, the visible star orbits an invisible companion. Its wobbling motion reveals the hidden black hole's mass.",
+            distractorExplanations: {
+              1: 'They see the black hole glowing is incorrect; in a binary system, the visible star orbits an invisible companion.',
+              2: 'The black hole blocks out other galaxies is incorrect; in a binary system, the visible star orbits an invisible companion.',
+              3: 'The black hole emits radio signals is incorrect; in a binary system, the visible star orbits an invisible companion.',
+            },
           },
           {
             id: "sp-sec7-u1-L4-T2",
@@ -346,6 +401,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The extreme temperatures in accretion disks produce intense X-ray radiation. X-ray telescopes in space are key tools for finding black holes.",
+            distractorExplanations: {
+              0: 'Visible light only is incorrect; the extreme temperatures in accretion disks produce intense X-ray radiation.',
+              1: 'Radio waves only is incorrect; the extreme temperatures in accretion disks produce intense X-ray radiation.',
+              3: 'Sound waves is incorrect; the extreme temperatures in accretion disks produce intense X-ray radiation.',
+            },
           },
           {
             id: "sp-sec7-u1-L4-T3",
@@ -375,6 +435,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "At 15 solar masses and invisible in optical light with strong X-ray emissions, this is a stellar black hole candidate. Neutron stars max out around 2-3 solar masses.",
+            distractorExplanations: {
+              0: 'The companion is a white dwarf is incorrect; at 15 solar masses and invisible in optical light with strong X-ray emissions, this is a stellar black hole.',
+              1: 'The companion is a neutron star is incorrect; at 15 solar masses and invisible in optical light with strong X-ray emissions, this is a stellar black hole.',
+              3: 'The companion is a planet is incorrect; at 15 solar masses and invisible in optical light with strong X-ray emissions, this is a stellar black hole candidate.',
+            },
           },
         ],
       },
@@ -398,6 +463,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "A black hole on the other side of the galaxy could pull Earth into it.",
             correctAnswer: false,
             explanation: "Gravity decreases rapidly with distance. A distant black hole has no more effect on Earth than a distant star of the same mass.",
+            distractorExplanations: {
+              0: 'Gravity decreases rapidly with distance.',
+            },
           },
           {
             id: "sp-sec7-u1-L5-Q2",
@@ -427,6 +495,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Time dilation near a massive object is a real prediction of general relativity. The closer you are, the slower your clock runs compared to someone far away.",
+            distractorExplanations: {
+              0: 'Sound travels faster near a black hole is incorrect; time dilation near a massive object is a real prediction of general relativity.',
+              1: 'Black holes are bright blue is incorrect; time dilation near a massive object is a real prediction of general relativity.',
+              2: 'Objects grow larger near a black hole is incorrect; time dilation near a massive object is a real prediction of general relativity.',
+            },
           },
           {
             id: "sp-sec7-u1-L5-Q4",
@@ -440,6 +513,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "From outside, time dilation makes the falling person appear to slow down and freeze at the event horizon. Their light gradually redshifts until they fade from view.",
+            distractorExplanations: {
+              0: 'You\'d disappear instantly is incorrect; from outside, time dilation makes the falling person appear to slow down and freeze at the event horizon.',
+              1: 'You\'d bounce back out is incorrect; from outside, time dilation makes the falling person appear to slow down and freeze at the event horizon.',
+              3: 'You\'d orbit the black hole forever is incorrect; from outside, time dilation makes the falling person appear to slow down and freeze at the event horizon.',
+            },
           },
           {
             id: "sp-sec7-u1-L5-T3",
@@ -470,6 +548,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Black holes are governed by the same physics as everything else. They're extreme, but they follow the rules of gravity and only threaten objects in their immediate vicinity.",
+            distractorExplanations: {
+              0: 'This is incorrect; black holes are governed by the same physics as everything else.',
+              2: 'This is incorrect; black holes are governed by the same physics as everything else.',
+              3: 'This is incorrect; black holes are governed by the same physics as everything else.',
+            },
           },
         ],
       },
@@ -507,6 +590,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "The event horizon is a physical surface you could touch.",
             correctAnswer: false,
             explanation: "The event horizon is an invisible boundary, not a solid surface. You wouldn't feel anything special as you crossed it.",
+            distractorExplanations: {
+              0: 'The event horizon is an invisible boundary, not a solid surface.',
+            },
           },
           {
             id: "sp-sec7-u2-L1-Q2",
@@ -534,6 +620,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The Schwarzschild radius defines the size of the event horizon. It depends only on the black hole's mass.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; the Schwarzschild radius defines the size of the event horizon.',
+              1: 'The size of the singularity is incorrect; the Schwarzschild radius defines the size of the event horizon.',
+              2: 'The diameter of the accretion disk is incorrect; the Schwarzschild radius defines the size of the event horizon.',
+            },
           },
           {
             id: "sp-sec7-u2-L1-Q4",
@@ -558,6 +649,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Schwarzschild radius is directly proportional to mass. Double the mass means double the radius of the event horizon.",
+            distractorExplanations: {
+              0: 'The event horizon shrinks by half is incorrect; the Schwarzschild radius is directly proportional to mass.',
+              1: 'The event horizon stays the same size is incorrect; the Schwarzschild radius is directly proportional to mass.',
+              3: 'The event horizon disappears is incorrect; the Schwarzschild radius is directly proportional to mass.',
+            },
           },
           {
             id: "sp-sec7-u2-L1-Q6",
@@ -572,6 +668,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Closer to the event horizon, gravity is stronger and time slows down more. This is gravitational time dilation, predicted by general relativity.",
+            distractorExplanations: {
+              1: 'Astronaut B\'s clock runs slower is incorrect; closer to the event horizon, gravity is stronger and time slows down more.',
+              2: 'Both clocks run at the same speed is incorrect; closer to the event horizon, gravity is stronger and time slows down more.',
+              3: 'Clocks don\'t work near black holes is incorrect; closer to the event horizon, gravity is stronger and time slows down more.',
+            },
           },
         ],
       },
@@ -595,6 +696,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "A person falling into a very large black hole would feel a sudden jolt at the event horizon.",
             correctAnswer: false,
             explanation: "For a supermassive black hole, tidal forces at the event horizon are gentle. You'd cross without noticing anything unusual at that exact moment.",
+            distractorExplanations: {
+              0: 'For a supermassive black hole, tidal forces at the event horizon are gentle.',
+            },
           },
           {
             id: "sp-sec7-u2-L2-Q2",
@@ -608,6 +712,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Larger black holes have gentler tidal forces at the horizon. The stretching effect is spread over a greater distance.",
+            distractorExplanations: {
+              1: 'There\'s no gravity at the event horizon is incorrect; larger black holes have gentler tidal forces at the horizon.',
+              2: 'The event horizon is made of soft material is incorrect; larger black holes have gentler tidal forces at the horizon.',
+              3: 'This is incorrect; larger black holes have gentler tidal forces at the horizon.',
+            },
           },
           {
             id: "sp-sec7-u2-L2-T2",
@@ -627,6 +736,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Inside the event horizon, spacetime is curved so severely that all future paths lead to the singularity. It's a property of space itself, not just a strong pull.",
+            distractorExplanations: {
+              0: 'The gravity pulls you back like a magnet is incorrect; inside the event horizon, spacetime is curved so severely that all future paths lead to the singularity.',
+              1: 'The event horizon is a solid wall is incorrect; inside the event horizon, spacetime is curved so severely that all future paths lead to the singularity.',
+              2: 'Light doesn\'t exist inside a black hole is incorrect; inside the event horizon, spacetime is curved so severely that all future paths lead to the singularity.',
+            },
           },
           {
             id: "sp-sec7-u2-L2-Q4",
@@ -634,6 +748,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "If you had a powerful enough rocket, you could escape from inside a black hole.",
             correctAnswer: false,
             explanation: "No amount of thrust can save you. Inside the event horizon, moving 'outward' is like trying to move backward in time. The geometry of spacetime forbids it.",
+            distractorExplanations: {
+              0: 'No amount of thrust can save you.',
+            },
           },
           {
             id: "sp-sec7-u2-L2-T3",
@@ -679,6 +796,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "The singularity is the point at the center of a black hole where density is thought to become infinite.",
             correctAnswer: true,
             explanation: "According to general relativity, all the black hole's mass is concentrated in a single point of zero volume and infinite density.",
+            distractorExplanations: {
+              1: 'According to general relativity, all the black hole\'s mass is concentrated in a single point of zero volume and infinite density.',
+            },
           },
           {
             id: "sp-sec7-u2-L3-Q2",
@@ -692,6 +812,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "When equations produce infinities, it usually means the theory is incomplete. A better theory of quantum gravity is needed to describe singularities.",
+            distractorExplanations: {
+              1: 'Telescopes can\'t see that far is incorrect; when equations produce infinities, it usually means the theory is incomplete.',
+              2: 'There is no gravity at the singularity is incorrect; when equations produce infinities, it usually means the theory is incomplete.',
+              3: 'The singularity exists outside the universe is incorrect; when equations produce infinities, it usually means the theory is incomplete.',
+            },
           },
           {
             id: "sp-sec7-u2-L3-T2",
@@ -720,6 +845,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Einstein's general relativity predicts that collapsing matter forms a singularity. The Penrose singularity theorem proved this rigorously in 1965.",
+            distractorExplanations: {
+              0: 'Newton\'s law of gravitation is incorrect; einstein\'s general relativity predicts that collapsing matter forms a singularity.',
+              1: 'Quantum mechanics is incorrect; einstein\'s general relativity predicts that collapsing matter forms a singularity.',
+              3: 'Thermodynamics is incorrect; einstein\'s general relativity predicts that collapsing matter forms a singularity.',
+            },
           },
           {
             id: "sp-sec7-u2-L3-T3",
@@ -739,6 +869,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Penrose proposed that singularities are always clothed by event horizons, preventing the chaotic physics of a singularity from affecting the wider universe.",
+            distractorExplanations: {
+              0: 'Black holes cannot form in nature is incorrect; penrose proposed that singularities are always clothed by event horizons, preventing the chaotic physics of a.',
+              1: 'This claim is incorrect; penrose proposed that singularities are always clothed by event horizons, preventing the chaotic physics of a.',
+              2: 'Light always escapes from singularities is incorrect; penrose proposed that singularities are always clothed by event horizons, preventing the chaotic.',
+            },
           },
           {
             id: "sp-sec7-u2-L3-Q6",
@@ -771,6 +906,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "According to Einstein, gravity is caused by the curvature of spacetime.",
             correctAnswer: true,
             explanation: "In general relativity, massive objects warp spacetime. Other objects move along these curves, creating what we feel as gravity.",
+            distractorExplanations: {
+              1: 'In general relativity, massive objects warp spacetime.',
+            },
           },
           {
             id: "sp-sec7-u2-L4-Q2",
@@ -784,6 +922,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Mass and energy tell spacetime how to curve. Spacetime then tells matter how to move. This is the essence of general relativity.",
+            distractorExplanations: {
+              0: 'Light from distant stars is incorrect; mass and energy tell spacetime how to curve.',
+              1: 'The rotation of the Earth is incorrect; mass and energy tell spacetime how to curve.',
+              3: 'Magnetic fields in space is incorrect; mass and energy tell spacetime how to curve.',
+            },
           },
           {
             id: "sp-sec7-u2-L4-T2",
@@ -813,6 +956,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Light follows the curvature of spacetime. Near a black hole, spacetime is so curved that light bends significantly toward the black hole.",
+            distractorExplanations: {
+              1: 'It speeds up and flies past is incorrect; light follows the curvature of spacetime.',
+              2: 'It stops completely is incorrect; light follows the curvature of spacetime.',
+              3: 'It turns into radio waves is incorrect; light follows the curvature of spacetime.',
+            },
           },
           {
             id: "sp-sec7-u2-L4-T3",
@@ -844,6 +992,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The black hole's gravity bends light from the background galaxy. This gravitational lensing can create arcs, rings, or multiple images of the same galaxy.",
+            distractorExplanations: {
+              0: 'The galaxy disappears completely is incorrect; the black hole\'s gravity bends light from the background galaxy.',
+              2: 'The galaxy looks completely normal is incorrect; the black hole\'s gravity bends light from the background galaxy.',
+              3: 'The galaxy appears smaller than usual is incorrect; the black hole\'s gravity bends light from the background galaxy.',
+            },
           },
         ],
       },
@@ -867,6 +1020,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "A black hole's shadow appears the same size as its event horizon.",
             correctAnswer: false,
             explanation: "The shadow is about 2.6 times the size of the event horizon. Light near the edge gets pulled in, making the dark region appear larger.",
+            distractorExplanations: {
+              0: 'The shadow is about 2.6 times the size of the event horizon.',
+            },
           },
           {
             id: "sp-sec7-u2-L5-Q2",
@@ -880,6 +1036,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The bright ring comes from superheated gas in the accretion disk and photons that orbit the black hole before reaching us.",
+            distractorExplanations: {
+              0: 'Light from the black hole itself is incorrect; the bright ring comes from superheated gas in the accretion disk and photons that orbit the black hole.',
+              1: 'This is incorrect; the bright ring comes from superheated gas in the accretion disk and photons that orbit the black hole before reaching us.',
+              2: 'Stars being created near the black hole is incorrect; the bright ring comes from superheated gas in the accretion disk and photons that orbit the black.',
+            },
           },
           {
             id: "sp-sec7-u2-L5-T2",
@@ -907,6 +1068,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "M87*, the supermassive black hole at the center of galaxy M87, was the first black hole ever imaged. Sagittarius A* was imaged later in 2022.",
+            distractorExplanations: {
+              0: 'Sagittarius A* in the Milky Way is incorrect; m87*, the supermassive black hole at the center of galaxy M87, was the first black hole ever imaged.',
+              2: 'Cygnus X-1 in the Milky Way is incorrect; m87*, the supermassive black hole at the center of galaxy M87, was the first black hole ever imaged.',
+              3: 'TON 618 in Canes Venatici is incorrect; m87*, the supermassive black hole at the center of galaxy M87, was the first black hole ever imaged.',
+            },
           },
           {
             id: "sp-sec7-u2-L5-T3",
@@ -956,6 +1122,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "Time passes at the same rate everywhere in the universe.",
             correctAnswer: false,
             explanation: "Time is not universal. Strong gravity or high speed causes time to pass more slowly. This has been confirmed by experiments with atomic clocks.",
+            distractorExplanations: {
+              0: 'Time is not universal.',
+            },
           },
           {
             id: "sp-sec7-u2-L6-Q2",
@@ -969,6 +1138,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The stronger the gravitational field, the slower time passes. The event horizon has the most extreme time dilation possible.",
+            distractorExplanations: {
+              0: 'In empty space far from any mass is incorrect; the stronger the gravitational field, the slower time passes.',
+              2: 'On Earth\'s surface is incorrect; the stronger the gravitational field, the slower time passes.',
+              3: 'Near a neutron star is incorrect; the stronger the gravitational field, the slower time passes.',
+            },
           },
           {
             id: "sp-sec7-u2-L6-T2",
@@ -990,6 +1164,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The traveling twin aged only 2 years because time slowed down for them near the black hole. They'd return to find their sibling 20 years older.",
+            distractorExplanations: {
+              0: '20 years older than when they left is incorrect; the traveling twin aged only 2 years because time slowed down for them near the black hole.',
+              2: 'The same age as the Earth twin is incorrect; the traveling twin aged only 2 years because time slowed down for them near the black hole.',
+              3: 'Younger than when they left is incorrect; the traveling twin aged only 2 years because time slowed down for them near the black hole.',
+            },
           },
           {
             id: "sp-sec7-u2-L6-Q4",
@@ -1003,6 +1182,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Atomic clocks at different altitudes tick at measurably different rates. GPS satellites must correct for this effect every day.",
+            distractorExplanations: {
+              0: 'It\'s only a theoretical prediction is incorrect; atomic clocks at different altitudes tick at measurably different rates.',
+              1: 'It only occurs inside black holes is incorrect; atomic clocks at different altitudes tick at measurably different rates.',
+              3: 'It was disproven in 2010 is incorrect; atomic clocks at different altitudes tick at measurably different rates.',
+            },
           },
           {
             id: "sp-sec7-u2-L6-T3",
@@ -1031,6 +1215,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Time dilation isn't about broken clocks or illusions. Mass curves spacetime, and time is part of spacetime. In curved spacetime, time literally passes at different rates.",
+            distractorExplanations: {
+              0: 'This is incorrect; time dilation isn\'t about broken clocks or illusions.',
+              1: 'This is incorrect; time dilation isn\'t about broken clocks or illusions.',
+              3: 'This is incorrect; time dilation isn\'t about broken clocks or illusions.',
+            },
           },
         ],
       },
@@ -1068,6 +1257,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "Tidal forces are caused by a difference in gravitational pull across an object.",
             correctAnswer: true,
             explanation: "When gravity is stronger at one end than the other, the difference creates a stretching force. Closer to the source, the difference grows rapidly.",
+            distractorExplanations: {
+              1: 'When gravity is stronger at one end than the other, the difference creates a stretching force.',
+            },
           },
           {
             id: "sp-sec7-u3-L1-Q2",
@@ -1081,6 +1273,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Near a small black hole, the distance from the event horizon to the singularity is tiny. Gravity changes dramatically over a very short span, creating extreme tidal forces.",
+            distractorExplanations: {
+              0: 'Small black holes spin faster is incorrect; near a small black hole, the distance from the event horizon to the singularity is tiny.',
+              1: 'This is incorrect; near a small black hole, the distance from the event horizon to the singularity is tiny.',
+              2: 'Small black holes are hotter is incorrect; near a small black hole, the distance from the event horizon to the singularity is tiny.',
+            },
           },
           {
             id: "sp-sec7-u3-L1-T2",
@@ -1108,6 +1305,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Stellar black holes are small enough that tidal forces become lethal well outside the event horizon. Supermassive black holes have gentler tides at their horizon.",
+            distractorExplanations: {
+              1: 'Only supermassive black holes is incorrect; stellar black holes are small enough that tidal forces become lethal well outside the event horizon.',
+              2: 'Only intermediate black holes is incorrect; stellar black holes are small enough that tidal forces become lethal well outside the event horizon.',
+              3: 'No black holes cause spaghettification is incorrect; stellar black holes are small enough that tidal forces become lethal well outside the event horizon.',
+            },
           },
           {
             id: "sp-sec7-u3-L1-T3",
@@ -1137,6 +1339,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A 10-solar-mass black hole has such a small event horizon that tidal forces become extreme well before the probe arrives. It would be spaghettified.",
+            distractorExplanations: {
+              0: 'It orbits the black hole safely is incorrect; a 10-solar-mass black hole has such a small event horizon that tidal forces become extreme well before the.',
+              2: 'This claim is incorrect; a 10-solar-mass black hole has such a small event horizon that tidal forces become extreme well before the probe arrives.',
+              3: 'It bounces off the event horizon is incorrect; a 10-solar-mass black hole has such a small event horizon that tidal forces become extreme well before the.',
+            },
           },
         ],
       },
@@ -1160,6 +1367,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "Stephen Hawking showed that black holes emit a faint radiation.",
             correctAnswer: true,
             explanation: "Hawking radiation was a revolutionary discovery. It connected quantum mechanics, gravity, and thermodynamics in a way no one expected.",
+            distractorExplanations: {
+              1: 'Hawking radiation was a revolutionary discovery.',
+            },
           },
           {
             id: "sp-sec7-u3-L2-Q2",
@@ -1188,6 +1398,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "When a virtual particle pair is separated by the event horizon, the escaping particle takes energy away. The infalling one effectively reduces the black hole's mass.",
+            distractorExplanations: {
+              0: 'The black hole\'s matter leaks out slowly is incorrect; when a virtual particle pair is separated by the event horizon, the escaping particle takes energy away.',
+              1: 'Light slowly erodes the event horizon is incorrect; when a virtual particle pair is separated by the event horizon, the escaping particle takes energy away.',
+              2: 'Gravity naturally weakens over time is incorrect; when a virtual particle pair is separated by the event horizon, the escaping particle takes energy away.',
+            },
           },
           {
             id: "sp-sec7-u3-L2-Q4",
@@ -1201,6 +1416,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Hawking radiation from stellar black holes is unimaginably faint. Its temperature is billions of times lower than the cosmic microwave background.",
+            distractorExplanations: {
+              0: 'It doesn\'t actually exist is incorrect; hawking radiation from stellar black holes is unimaginably faint.',
+              1: 'It only happens inside the event horizon is incorrect; hawking radiation from stellar black holes is unimaginably faint.',
+              3: 'This is incorrect; hawking radiation from stellar black holes is unimaginably faint.',
+            },
           },
           {
             id: "sp-sec7-u3-L2-T3",
@@ -1220,6 +1440,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Hawking radiation is inversely related to mass. Smaller black holes are hotter and radiate much more intensely.",
+            distractorExplanations: {
+              1: 'This is incorrect; hawking radiation is inversely related to mass.',
+              2: 'A stellar black hole of 10 solar masses is incorrect; hawking radiation is inversely related to mass.',
+              3: 'All black holes emit equal amounts is incorrect; hawking radiation is inversely related to mass.',
+            },
           },
           {
             id: "sp-sec7-u3-L2-Q6",
@@ -1251,6 +1476,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "Given enough time, a black hole can evaporate completely through Hawking radiation.",
             correctAnswer: true,
             explanation: "Every black hole eventually evaporates. But for stellar and supermassive black holes, this takes far longer than the current age of the universe.",
+            distractorExplanations: {
+              1: 'Every black hole eventually evaporates.',
+            },
           },
           {
             id: "sp-sec7-u3-L3-Q2",
@@ -1264,6 +1492,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A 10-solar-mass black hole would take about 10^67 years to evaporate. The universe is only about 1.4 x 10^10 years old.",
+            distractorExplanations: {
+              0: 'A few million years is incorrect; a 10-solar-mass black hole would take about 10^67 years to evaporate.',
+              1: 'A few billion years is incorrect; a 10-solar-mass black hole would take about 10^67 years to evaporate.',
+              2: 'It happens within a human lifetime is incorrect; a 10-solar-mass black hole would take about 10^67 years to evaporate.',
+            },
           },
           {
             id: "sp-sec7-u3-L3-T2",
@@ -1283,6 +1516,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Smaller means hotter means more radiation. The process accelerates as the black hole shrinks, ending in a final explosive burst.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; smaller means hotter means more radiation.',
+              2: 'It stays constant throughout is incorrect; smaller means hotter means more radiation.',
+              3: 'This claim is incorrect; smaller means hotter means more radiation.',
+            },
           },
           {
             id: "sp-sec7-u3-L3-Q4",
@@ -1340,6 +1578,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "According to quantum mechanics, information can be permanently destroyed.",
             correctAnswer: false,
             explanation: "Quantum mechanics requires that information is conserved. You can scramble it, hide it, but never truly destroy it. This creates a conflict with black hole evaporation.",
+            distractorExplanations: {
+              0: 'Quantum mechanics requires that information is conserved.',
+            },
           },
           {
             id: "sp-sec7-u3-L4-Q2",
@@ -1353,6 +1594,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "If a black hole evaporates into random Hawking radiation, the specific information about what fell in appears lost. This violates a fundamental rule of quantum mechanics.",
+            distractorExplanations: {
+              0: 'This is incorrect; if a black hole evaporates into random Hawking radiation, the specific information about what fell in appears lost.',
+              1: 'This is incorrect; if a black hole evaporates into random Hawking radiation, the specific information about what fell in appears lost.',
+              2: 'This is incorrect; if a black hole evaporates into random Hawking radiation, the specific information about what fell in appears lost.',
+            },
           },
           {
             id: "sp-sec7-u3-L4-T2",
@@ -1373,6 +1619,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Hawking initially argued that black hole evaporation genuinely destroyed information. He later changed his position, accepting that information is likely preserved.",
+            distractorExplanations: {
+              0: 'This is incorrect; hawking initially argued that black hole evaporation genuinely destroyed information.',
+              1: 'Information escaped through wormholes is incorrect; hawking initially argued that black hole evaporation genuinely destroyed information.',
+              3: 'This is incorrect; hawking initially argued that black hole evaporation genuinely destroyed information.',
+            },
           },
           {
             id: "sp-sec7-u3-L4-Q4",
@@ -1401,6 +1652,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The paradox pits general relativity against quantum mechanics. Resolving it would bring us closer to a unified theory of everything.",
+            distractorExplanations: {
+              1: 'It proves black holes don\'t exist is incorrect; the paradox pits general relativity against quantum mechanics.',
+              2: 'It shows that quantum mechanics is wrong is incorrect; the paradox pits general relativity against quantum mechanics.',
+              3: 'It proves the universe is a simulation is incorrect; the paradox pits general relativity against quantum mechanics.',
+            },
           },
           {
             id: "sp-sec7-u3-L4-Q6",
@@ -1414,6 +1670,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The majority view is that information survives, but exactly how it escapes remains one of physics' greatest open questions.",
+            distractorExplanations: {
+              0: 'This is incorrect; the majority view is that information survives, but exactly how it escapes remains one of physics\' greatest open questions.',
+              2: 'The paradox has been completely solved is incorrect; the majority view is that information survives, but exactly how it escapes remains one of physics\'.',
+              3: 'This is incorrect; the majority view is that information survives, but exactly how it escapes remains one of physics\' greatest open questions.',
+            },
           },
         ],
       },
@@ -1437,6 +1698,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "A black hole's entropy is related to the surface area of its event horizon.",
             correctAnswer: true,
             explanation: "The Bekenstein-Hawking entropy formula shows that entropy equals the event horizon area divided by 4, in Planck units. Larger area means more entropy.",
+            distractorExplanations: {
+              1: 'The Bekenstein-Hawking entropy formula shows that entropy equals the event horizon area divided by 4, in Planck units.',
+            },
           },
           {
             id: "sp-sec7-u3-L5-Q2",
@@ -1474,6 +1738,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The area theorem, proved by Hawking in 1971, states that the total event horizon area can only increase or stay the same. This mirrors the second law of thermodynamics.",
+            distractorExplanations: {
+              0: 'The black hole\'s mass is incorrect; the area theorem, proved by Hawking in 1971, states that the total event horizon area can only increase or stay the same.',
+              1: 'The black hole\'s spin is incorrect; the area theorem, proved by Hawking in 1971, states that the total event horizon area can only increase or stay the same.',
+              3: 'The number of black holes in a galaxy is incorrect; the area theorem, proved by Hawking in 1971, states that the total event horizon area can only increase.',
+            },
           },
           {
             id: "sp-sec7-u3-L5-T3",
@@ -1493,6 +1762,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The holographic principle, inspired by black hole thermodynamics, proposes that the information in any region of space is encoded on the surrounding surface.",
+            distractorExplanations: {
+              0: 'Black holes project holograms into space is incorrect; the holographic principle, inspired by black hole thermodynamics, proposes that the information in.',
+              2: 'The universe is a holographic TV show is incorrect; the holographic principle, inspired by black hole thermodynamics, proposes that the information in any.',
+              3: 'This is incorrect; the holographic principle, inspired by black hole thermodynamics, proposes that the information in any region of.',
+            },
           },
           {
             id: "sp-sec7-u3-L5-Q6",
@@ -1543,6 +1817,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Nuclear fusion creates an outward pressure that balances gravity. When fusion stops, gravity wins and the core collapses.",
+            distractorExplanations: {
+              0: 'Its magnetic field is incorrect; nuclear fusion creates an outward pressure that balances gravity.',
+              1: 'The rotation of the star is incorrect; nuclear fusion creates an outward pressure that balances gravity.',
+              2: 'Light pressure from nearby stars is incorrect; nuclear fusion creates an outward pressure that balances gravity.',
+            },
           },
           {
             id: "sp-sec7-u4-L1-Q2",
@@ -1582,6 +1861,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "At 50,000 solar masses, this falls in the intermediate range (100-100,000). These are the rarest and hardest to confirm.",
+            distractorExplanations: {
+              0: 'Stellar black hole is incorrect; at 50,000 solar masses, this falls in the intermediate range (100-100,000).',
+              1: 'Supermassive black hole is incorrect; at 50,000 solar masses, this falls in the intermediate range (100-100,000).',
+              3: 'Primordial black hole is incorrect; at 50,000 solar masses, this falls in the intermediate range (100-100,000).',
+            },
           },
           {
             id: "sp-sec7-u4-L1-Q6",
@@ -1596,6 +1880,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A supernova can outshine its host galaxy for weeks and scatters heavy elements. The collapsed core may become a black hole or neutron star.",
+            distractorExplanations: {
+              0: 'A planet exploded is incorrect; a supernova can outshine its host galaxy for weeks and scatters heavy elements.',
+              2: 'A black hole evaporated is incorrect; a supernova can outshine its host galaxy for weeks and scatters heavy elements.',
+              3: 'Two galaxies collided is incorrect; a supernova can outshine its host galaxy for weeks and scatters heavy elements.',
+            },
           },
           {
             id: "sp-sec7-u4-L1-Q7",
@@ -1630,6 +1919,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "The event horizon is a physical surface you could stand on.",
             correctAnswer: false,
             explanation: "The event horizon is an invisible boundary in spacetime, not a solid surface. You'd pass through it without feeling anything special.",
+            distractorExplanations: {
+              0: 'The event horizon is an invisible boundary in spacetime, not a solid surface.',
+            },
           },
           {
             id: "sp-sec7-u4-L2-Q2",
@@ -1643,6 +1935,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The photon sphere exists at 1.5 times the Schwarzschild radius. Photons there follow unstable circular orbits.",
+            distractorExplanations: {
+              1: 'At the event horizon is incorrect; the photon sphere exists at 1.5 times the Schwarzschild radius.',
+              2: 'At 10 times the Schwarzschild radius is incorrect; the photon sphere exists at 1.5 times the Schwarzschild radius.',
+              3: 'Light cannot orbit a black hole is incorrect; the photon sphere exists at 1.5 times the Schwarzschild radius.',
+            },
           },
           {
             id: "sp-sec7-u4-L2-Q3",
@@ -1673,6 +1970,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Event Horizon Telescope, a global network of radio dishes, captured the first image of M87* in 2019.",
+            distractorExplanations: {
+              0: 'The Very Large Array is incorrect; the Event Horizon Telescope, a global network of radio dishes, captured the first image of M87* in 2019.',
+              1: 'The Hubble Space Telescope is incorrect; the Event Horizon Telescope, a global network of radio dishes, captured the first image of M87* in 2019.',
+              3: 'The James Webb Space Telescope is incorrect; the Event Horizon Telescope, a global network of radio dishes, captured the first image of M87* in 2019.',
+            },
           },
           {
             id: "sp-sec7-u4-L2-Q6",
@@ -1687,6 +1989,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "1,000 hours equals about 42 days. The astronaut returns after what felt like 1 hour to find 42 days have passed on Earth.",
+            distractorExplanations: {
+              0: '1 hour is incorrect; 1,000 hours equals about 42 days.',
+              2: 'About 1,000 hours is incorrect; 1,000 hours equals about 42 days.',
+              3: 'About 1 year is incorrect; 1,000 hours equals about 42 days.',
+            },
           },
           {
             id: "sp-sec7-u4-L2-Q7",
@@ -1700,6 +2007,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Light passing near the event horizon gets deflected inward. This makes the shadow about 2.6 times larger than the event horizon itself.",
+            distractorExplanations: {
+              0: 'The shadow is an optical illusion is incorrect; light passing near the event horizon gets deflected inward.',
+              1: 'The event horizon expands when observed is incorrect; light passing near the event horizon gets deflected inward.',
+              2: 'This is incorrect; light passing near the event horizon gets deflected inward.',
+            },
           },
         ],
       },
@@ -1729,6 +2041,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Stellar black holes are small enough that tidal forces become lethal well outside the event horizon. Supermassive black holes have gentler tides at their horizon.",
+            distractorExplanations: {
+              0: 'Supermassive black holes is incorrect; stellar black holes are small enough that tidal forces become lethal well outside the event horizon.',
+              2: 'Intermediate black holes is incorrect; stellar black holes are small enough that tidal forces become lethal well outside the event horizon.',
+              3: 'This claim is incorrect; stellar black holes are small enough that tidal forces become lethal well outside the event horizon.',
+            },
           },
           {
             id: "sp-sec7-u4-L3-Q2",
@@ -1744,6 +2061,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "A smaller black hole is cooler and radiates less than a larger one.",
             correctAnswer: false,
             explanation: "It's the opposite. Smaller black holes have higher Hawking temperatures and radiate more intensely. They evaporate faster.",
+            distractorExplanations: {
+              0: 'It\'s the opposite.',
+            },
           },
           {
             id: "sp-sec7-u4-L3-Q4",
@@ -1766,6 +2086,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Quantum mechanics forbids information destruction, but Hawking radiation appears to carry no information about what fell in. This conflict is the paradox.",
+            distractorExplanations: {
+              1: 'This is incorrect; quantum mechanics forbids information destruction, but Hawking radiation appears to carry no information about what fell in.',
+              2: 'This is incorrect; quantum mechanics forbids information destruction, but Hawking radiation appears to carry no information about what fell in.',
+              3: 'This is incorrect; quantum mechanics forbids information destruction, but Hawking radiation appears to carry no information about what fell in.',
+            },
           },
           {
             id: "sp-sec7-u4-L3-Q6",
@@ -1787,6 +2112,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The consensus leans toward information being preserved, likely encoded in Hawking radiation. But the precise mechanism is still one of physics' greatest open questions.",
+            distractorExplanations: {
+              0: 'Completely solved by Hawking in 2004 is incorrect; the consensus leans toward information being preserved, likely encoded in Hawking radiation.',
+              2: 'This is incorrect; the consensus leans toward information being preserved, likely encoded in Hawking radiation.',
+              3: 'This claim is incorrect; the consensus leans toward information being preserved, likely encoded in Hawking radiation.',
+            },
           },
         ],
       },
@@ -1824,6 +2154,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "Most large galaxies have a supermassive black hole at their center.",
             correctAnswer: true,
             explanation: "Observations show that virtually every large galaxy harbors a supermassive black hole. They appear to be a fundamental part of galaxy structure.",
+            distractorExplanations: {
+              1: 'Observations show that virtually every large galaxy harbors a supermassive black hole.',
+            },
           },
           {
             id: "sp-sec7-u5-L1-Q2",
@@ -1837,6 +2170,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Sagittarius A* (pronounced 'A-star') sits at the center of the Milky Way, about 26,000 light-years from Earth.",
+            distractorExplanations: {
+              0: 'M87* is incorrect; sagittarius A* (pronounced \'A-star\') sits at the center of the Milky Way, about 26,000 light-years from Earth.',
+              2: 'Cygnus X-1 is incorrect; sagittarius A* (pronounced \'A-star\') sits at the center of the Milky Way, about 26,000 light-years from Earth.',
+              3: 'TON 618 is incorrect; sagittarius A* (pronounced \'A-star\') sits at the center of the Milky Way, about 26,000 light-years from Earth.',
+            },
           },
           {
             id: "sp-sec7-u5-L1-T2",
@@ -1864,6 +2202,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Some supermassive black holes existed when the universe was less than a billion years old. Growing that fast is hard to explain with standard models.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; some supermassive black holes existed when the universe was less than a billion years old.',
+              1: 'Stars didn\'t exist in the early universe is incorrect; some supermassive black holes existed when the universe was less than a billion years old.',
+              2: 'Gravity was weaker in the early universe is incorrect; some supermassive black holes existed when the universe was less than a billion years old.',
+            },
           },
           {
             id: "sp-sec7-u5-L1-T3",
@@ -1883,6 +2226,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The M-sigma relation reveals that black holes and their host galaxies evolved together. A galaxy's stars know about the black hole, and vice versa.",
+            distractorExplanations: {
+              1: 'This is incorrect; the M-sigma relation reveals that black holes and their host galaxies evolved together.',
+              2: 'All galaxies are the same size is incorrect; the M-sigma relation reveals that black holes and their host galaxies evolved together.',
+              3: 'This is incorrect; the M-sigma relation reveals that black holes and their host galaxies evolved together.',
+            },
           },
           {
             id: "sp-sec7-u5-L1-Q6",
@@ -1917,6 +2265,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "A quasar is powered by a supermassive black hole actively consuming gas.",
             correctAnswer: true,
             explanation: "Quasars are the most luminous type of active galactic nucleus. Their energy comes from matter falling into a supermassive black hole.",
+            distractorExplanations: {
+              1: 'Quasars are the most luminous type of active galactic nucleus.',
+            },
           },
           {
             id: "sp-sec7-u5-L2-Q2",
@@ -1945,6 +2296,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The early universe had abundant gas that hadn't yet formed into stars. Supermassive black holes feasted on this gas, powering quasars.",
+            distractorExplanations: {
+              0: 'Gravity was stronger back then is incorrect; the early universe had abundant gas that hadn\'t yet formed into stars.',
+              1: 'This claim is incorrect; the early universe had abundant gas that hadn\'t yet formed into stars.',
+              3: 'Stars were hotter in the early universe is incorrect; the early universe had abundant gas that hadn\'t yet formed into stars.',
+            },
           },
           {
             id: "sp-sec7-u5-L2-Q4",
@@ -1958,6 +2314,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Quasars can be 100 or more times brighter than all the stars in their host galaxy. Their incredible luminosity makes them visible across the observable universe.",
+            distractorExplanations: {
+              0: 'About the same brightness is incorrect; quasars can be 100 or more times brighter than all the stars in their host galaxy.',
+              2: 'About 10 times brighter is incorrect; quasars can be 100 or more times brighter than all the stars in their host galaxy.',
+              3: 'Always dimmer than the galaxy is incorrect; quasars can be 100 or more times brighter than all the stars in their host galaxy.',
+            },
           },
           {
             id: "sp-sec7-u5-L2-T3",
@@ -1978,6 +2339,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An extremely bright core with opposing jets is the signature of a quasar or active galactic nucleus. The jets are powered by the supermassive black hole.",
+            distractorExplanations: {
+              0: 'The galaxy is exploding is incorrect; an extremely bright core with opposing jets is the signature of a quasar or active galactic nucleus.',
+              2: 'Two galaxies pulling apart is incorrect; an extremely bright core with opposing jets is the signature of a quasar or active galactic nucleus.',
+              3: 'A massive star cluster forming is incorrect; an extremely bright core with opposing jets is the signature of a quasar or active galactic nucleus.',
+            },
           },
           {
             id: "sp-sec7-u5-L2-Q6",
@@ -2010,6 +2376,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "An actively feeding supermassive black hole can slow down star formation in its galaxy.",
             correctAnswer: true,
             explanation: "The energy from AGN activity heats gas and drives powerful outflows. Without cool, dense gas, new stars can't form. This is called AGN feedback.",
+            distractorExplanations: {
+              1: 'The energy from AGN activity heats gas and drives powerful outflows.',
+            },
           },
           {
             id: "sp-sec7-u5-L3-Q2",
@@ -2023,6 +2392,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Energy from the black hole's accretion and jets heats surrounding gas. Hot gas can't collapse under gravity to form stars.",
+            distractorExplanations: {
+              0: 'It pulls all stars into itself is incorrect; energy from the black hole\'s accretion and jets heats surrounding gas.',
+              1: 'It blocks light from reaching gas clouds is incorrect; energy from the black hole\'s accretion and jets heats surrounding gas.',
+              3: 'It slows the galaxy\'s rotation is incorrect; energy from the black hole\'s accretion and jets heats surrounding gas.',
+            },
           },
           {
             id: "sp-sec7-u5-L3-T2",
@@ -2051,6 +2425,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without AGN feedback, simulated galaxies form far more stars than real galaxies have. This proved that black holes play a crucial role in galaxy evolution.",
+            distractorExplanations: {
+              1: 'Galaxies don\'t form at all is incorrect; without AGN feedback, simulated galaxies form far more stars than real galaxies have.',
+              2: 'Black holes don\'t grow is incorrect; without AGN feedback, simulated galaxies form far more stars than real galaxies have.',
+              3: 'This claim is incorrect; without AGN feedback, simulated galaxies form far more stars than real galaxies have.',
+            },
           },
           {
             id: "sp-sec7-u5-L3-T3",
@@ -2070,6 +2449,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The M-sigma relation and simulations show galaxies and their central black holes grew together. Their evolution is deeply intertwined.",
+            distractorExplanations: {
+              0: 'This is incorrect; the M-sigma relation and simulations show galaxies and their central black holes grew together.',
+              2: 'This is incorrect; the M-sigma relation and simulations show galaxies and their central black holes grew together.',
+              3: 'This is incorrect; the M-sigma relation and simulations show galaxies and their central black holes grew together.',
+            },
           },
           {
             id: "sp-sec7-u5-L3-Q6",
@@ -2084,6 +2468,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The active quasar heats surrounding gas through AGN feedback, suppressing new star formation. The dormant black hole isn't currently affecting its galaxy's star formation.",
+            distractorExplanations: {
+              0: 'The quasar galaxy is forming stars faster is incorrect; the active quasar heats surrounding gas through AGN feedback, suppressing new star formation.',
+              2: 'This claim is incorrect; the active quasar heats surrounding gas through AGN feedback, suppressing new star formation.',
+              3: 'The dormant black hole\'s galaxy has no stars is incorrect; the active quasar heats surrounding gas through AGN feedback, suppressing new star formation.',
+            },
           },
         ],
       },
@@ -2107,6 +2496,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "When two galaxies merge, their central black holes will eventually merge too.",
             correctAnswer: true,
             explanation: "After galaxies collide, the two supermassive black holes sink toward the center through gravitational friction and eventually merge.",
+            distractorExplanations: {
+              1: 'After galaxies collide, the two supermassive black holes sink toward the center through gravitational friction and eventually merge.',
+            },
           },
           {
             id: "sp-sec7-u5-L4-Q2",
@@ -2138,6 +2530,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Stars provide friction to bring black holes closer, but this mechanism weakens at small separations. How the gap is bridged to allow gravitational wave-driven merger is an active research area.",
+            distractorExplanations: {
+              0: 'This is incorrect; stars provide friction to bring black holes closer, but this mechanism weakens at small separations.',
+              1: 'This is incorrect; stars provide friction to bring black holes closer, but this mechanism weakens at small separations.',
+              3: 'This is incorrect; stars provide friction to bring black holes closer, but this mechanism weakens at small separations.',
+            },
           },
           {
             id: "sp-sec7-u5-L4-Q4",
@@ -2151,6 +2548,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Once close enough, gravitational wave emission rapidly removes orbital energy. The black holes spiral together and merge in an event detectable across the universe.",
+            distractorExplanations: {
+              0: 'Magnetic attraction between them is incorrect; once close enough, gravitational wave emission rapidly removes orbital energy.',
+              1: 'Dark matter pushes them together is incorrect; once close enough, gravitational wave emission rapidly removes orbital energy.',
+              2: 'Nearby stars push them closer is incorrect; once close enough, gravitational wave emission rapidly removes orbital energy.',
+            },
           },
           {
             id: "sp-sec7-u5-L4-T3",
@@ -2179,6 +2581,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An offset, high-velocity supermassive black hole is a predicted signature of a gravitational wave recoil kick from an asymmetric merger.",
+            distractorExplanations: {
+              0: 'The galaxy is still forming is incorrect; an offset, high-velocity supermassive black hole is a predicted signature of a gravitational wave recoil kick from.',
+              2: 'This claim is incorrect; an offset, high-velocity supermassive black hole is a predicted signature of a gravitational wave recoil kick from.',
+              3: 'This claim is incorrect; an offset, high-velocity supermassive black hole is a predicted signature of a gravitational wave recoil kick from.',
+            },
           },
         ],
       },
@@ -2203,6 +2610,9 @@ export const spaceSection7Part1: Unit[] = [
             question: "Sagittarius A* is currently a very active quasar.",
             correctAnswer: false,
             explanation: "Sagittarius A* is remarkably quiet right now. It consumes only a tiny amount of gas compared to what an active quasar devours.",
+            distractorExplanations: {
+              0: 'Sagittarius A* is remarkably quiet right now.',
+            },
           },
           {
             id: "sp-sec7-u5-L5-Q2",
@@ -2216,6 +2626,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Andrea Ghez and Reinhard Genzel independently tracked stars orbiting Sagittarius A* for decades. Their orbits proved a 4-million-solar-mass object existed there.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; andrea Ghez and Reinhard Genzel independently tracked stars orbiting Sagittarius A* for decades.',
+              1: 'They detected Hawking radiation from it is incorrect; andrea Ghez and Reinhard Genzel independently tracked stars orbiting Sagittarius A* for decades.',
+              2: 'They measured its magnetic field is incorrect; andrea Ghez and Reinhard Genzel independently tracked stars orbiting Sagittarius A* for decades.',
+            },
           },
           {
             id: "sp-sec7-u5-L5-T2",
@@ -2243,6 +2658,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Sagittarius A* is hidden behind dust in the galactic plane and is much smaller than M87*. Its appearance changes minute by minute, making image processing extremely difficult.",
+            distractorExplanations: {
+              1: 'It\'s too bright to photograph is incorrect; sagittarius A* is hidden behind dust in the galactic plane and is much smaller than M87*.',
+              2: 'It\'s too far away to detect is incorrect; sagittarius A* is hidden behind dust in the galactic plane and is much smaller than M87*.',
+              3: 'It doesn\'t emit any radiation at all is incorrect; sagittarius A* is hidden behind dust in the galactic plane and is much smaller than M87*.',
+            },
           },
           {
             id: "sp-sec7-u5-L5-T3",
@@ -2262,6 +2682,11 @@ export const spaceSection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Fermi bubbles extend 25,000 light-years above and below the galactic center. They may be evidence that Sagittarius A* had an active phase millions of years ago.",
+            distractorExplanations: {
+              0: 'Stars forming near the galactic center is incorrect; the Fermi bubbles extend 25,000 light-years above and below the galactic center.',
+              1: 'Planets orbiting Sagittarius A* is incorrect; the Fermi bubbles extend 25,000 light-years above and below the galactic center.',
+              3: 'This is incorrect; the Fermi bubbles extend 25,000 light-years above and below the galactic center.',
+            },
           },
           {
             id: "sp-sec7-u5-L5-Q6",

@@ -40,6 +40,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "The Milky Way is the only galaxy in the Local Group.",
             correctAnswer: false,
             explanation: "The Local Group contains more than 80 known galaxies. The Milky Way is one of the three largest members.",
+            distractorExplanations: {
+              0: 'The Local Group contains more than 80 known galaxies.',
+            },
           },
           {
             id: "sp-sec6-u6-L1-Q2",
@@ -53,6 +56,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Gravity binds galaxies within a group. Each member orbits the group's common center of mass.",
+            distractorExplanations: {
+              0: 'Magnetic fields between galaxies is incorrect; gravity binds galaxies within a group.',
+              1: 'Dark energy pushing them inward is incorrect; gravity binds galaxies within a group.',
+              2: 'Radiation pressure from quasars is incorrect; gravity binds galaxies within a group.',
+            },
           },
           {
             id: "sp-sec6-u6-L1-T2",
@@ -98,6 +106,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dwarf galaxies vastly outnumber large galaxies in the Local Group. Most are tiny, faint, and hard to detect.",
+            distractorExplanations: {
+              0: 'Giant spirals like the Milky Way is incorrect; dwarf galaxies vastly outnumber large galaxies in the Local Group.',
+              1: 'Large elliptical galaxies is incorrect; dwarf galaxies vastly outnumber large galaxies in the Local Group.',
+              3: 'Active galaxies with jets is incorrect; dwarf galaxies vastly outnumber large galaxies in the Local Group.',
+            },
           },
           {
             id: "sp-sec6-u6-L1-Q6",
@@ -129,6 +142,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "A galaxy cluster contains more galaxies than a galaxy group.",
             correctAnswer: true,
             explanation: "Groups contain fewer than about 50 galaxies. Clusters contain hundreds to thousands, all held together by gravity.",
+            distractorExplanations: {
+              1: 'Groups contain fewer than about 50 galaxies.',
+            },
           },
           {
             id: "sp-sec6-u6-L2-Q2",
@@ -158,6 +174,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The intracluster medium is gas heated to millions of degrees. It emits X-rays and is detectable by space-based X-ray telescopes.",
+            distractorExplanations: {
+              0: 'Complete vacuum with nothing at all is incorrect; the intracluster medium is gas heated to millions of degrees.',
+              1: 'Cool dust clouds similar to nebulae is incorrect; the intracluster medium is gas heated to millions of degrees.',
+              3: 'Streams of visible starlight is incorrect; the intracluster medium is gas heated to millions of degrees.',
+            },
           },
           {
             id: "sp-sec6-u6-L2-Q4",
@@ -171,6 +192,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dark matter makes up about 80% of a cluster's total mass. Without it, galaxies would fly apart at their observed speeds.",
+            distractorExplanations: {
+              0: 'The visible stars in each galaxy is incorrect; dark matter makes up about 80% of a cluster\'s total mass.',
+              1: 'The hot intracluster gas is incorrect; dark matter makes up about 80% of a cluster\'s total mass.',
+              3: 'The central supermassive black hole is incorrect; dark matter makes up about 80% of a cluster\'s total mass.',
+            },
           },
           {
             id: "sp-sec6-u6-L2-T3",
@@ -216,6 +242,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "Andromeda is currently moving away from the Milky Way.",
             correctAnswer: false,
             explanation: "Andromeda is approaching at about 110 km/s. It's one of the few galaxies that is blueshifted rather than redshifted.",
+            distractorExplanations: {
+              0: 'Andromeda is approaching at about 110 km/s.',
+            },
           },
           {
             id: "sp-sec6-u6-L3-Q2",
@@ -247,6 +276,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Stars are so widely spaced that direct collisions are extremely unlikely. Gravity reshuffles their orbits, but individual stars survive.",
+            distractorExplanations: {
+              1: 'Most stars collide and are destroyed is incorrect; stars are so widely spaced that direct collisions are extremely unlikely.',
+              2: 'This is incorrect; stars are so widely spaced that direct collisions are extremely unlikely.',
+              3: 'This claim is incorrect; stars are so widely spaced that direct collisions are extremely unlikely.',
+            },
           },
           {
             id: "sp-sec6-u6-L3-Q4",
@@ -260,6 +294,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Mergers of large spiral galaxies typically produce elliptical galaxies. The resulting galaxy is informally called Milkomeda.",
+            distractorExplanations: {
+              0: 'A larger spiral galaxy is incorrect; mergers of large spiral galaxies typically produce elliptical galaxies.',
+              1: 'A ring galaxy is incorrect; mergers of large spiral galaxies typically produce elliptical galaxies.',
+              2: 'An irregular galaxy is incorrect; mergers of large spiral galaxies typically produce elliptical galaxies.',
+            },
           },
           {
             id: "sp-sec6-u6-L3-T3",
@@ -280,6 +319,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Galaxy mergers compress gas and ignite massive bursts of star formation. The new galaxy would contain many young star clusters alongside older stars from both parent galaxies.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; galaxy mergers compress gas and ignite massive bursts of star formation.',
+              2: 'This claim is incorrect; galaxy mergers compress gas and ignite massive bursts of star formation.',
+              3: 'The galaxy would split back into two spirals is incorrect; galaxy mergers compress gas and ignite massive bursts of star formation.',
+            },
           },
           {
             id: "sp-sec6-u6-L3-Q6",
@@ -548,6 +592,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "An active galactic nucleus is powered by a supermassive black hole.",
             correctAnswer: true,
             explanation: "The AGN's enormous energy output comes from matter spiraling into the central supermassive black hole, not from stars.",
+            distractorExplanations: {
+              1: 'The AGN\'s enormous energy output comes from matter spiraling into the central supermassive black hole, not from stars.',
+            },
           },
           {
             id: "sp-sec6-u7-L1-Q2",
@@ -561,6 +608,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An AGN shines because the central supermassive black hole is actively accreting material. The infalling matter heats up and radiates intensely.",
+            distractorExplanations: {
+              0: 'It has an unusually high number of stars is incorrect; an AGN shines because the central supermassive black hole is actively accreting material.',
+              2: 'It is moving faster than other galaxies is incorrect; an AGN shines because the central supermassive black hole is actively accreting material.',
+              3: 'It was recently formed from a gas cloud is incorrect; an AGN shines because the central supermassive black hole is actively accreting material.',
+            },
           },
           {
             id: "sp-sec6-u7-L1-T2",
@@ -588,6 +640,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Friction and gravitational compression heat the swirling gas to extreme temperatures, producing radiation from radio waves to X-rays.",
+            distractorExplanations: {
+              0: 'Nuclear fusion inside the disk is incorrect; friction and gravitational compression heat the swirling gas to extreme temperatures, producing radiation from.',
+              1: 'Reflection of nearby starlight is incorrect; friction and gravitational compression heat the swirling gas to extreme temperatures, producing radiation from.',
+              2: 'Chemical reactions in the gas is incorrect; friction and gravitational compression heat the swirling gas to extreme temperatures, producing radiation from.',
+            },
           },
           {
             id: "sp-sec6-u7-L1-T3",
@@ -601,6 +658,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "An AGN can be brighter than all the stars in its host galaxy combined.",
             correctAnswer: true,
             explanation: "The most powerful AGNs easily outshine their entire host galaxy, which is why distant quasars were initially mistaken for stars.",
+            distractorExplanations: {
+              1: 'The most powerful AGNs easily outshine their entire host galaxy, which is why distant quasars were initially mistaken for stars.',
+            },
           },
           {
             id: "sp-sec6-u7-L1-Q6",
@@ -633,6 +693,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "Different types of active galaxies are caused by completely different physical mechanisms.",
             correctAnswer: false,
             explanation: "Most AGN types share the same engine: an accreting supermassive black hole. The differences arise mainly from viewing angle and jet power.",
+            distractorExplanations: {
+              0: 'Most AGN types share the same engine: an accreting supermassive black hole.',
+            },
           },
           {
             id: "sp-sec6-u7-L2-Q2",
@@ -662,6 +725,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The unified model explains AGN diversity through viewing angle. The same object looks like a Seyfert, radio galaxy, blazar, or quasar depending on orientation.",
+            distractorExplanations: {
+              0: 'The mass of the host galaxy is incorrect; the unified model explains AGN diversity through viewing angle.',
+              2: 'The age of the black hole is incorrect; the unified model explains AGN diversity through viewing angle.',
+              3: 'The number of stars in the galaxy is incorrect; the unified model explains AGN diversity through viewing angle.',
+            },
           },
           {
             id: "sp-sec6-u7-L2-Q4",
@@ -675,6 +743,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A blazar is an AGN with its jet aimed almost exactly at us. The jet's emission is boosted enormously by relativistic effects, making blazars extremely bright and variable.",
+            distractorExplanations: {
+              0: 'Seyfert galaxy is incorrect; a blazar is an AGN with its jet aimed almost exactly at us.',
+              1: 'Radio galaxy is incorrect; a blazar is an AGN with its jet aimed almost exactly at us.',
+              3: 'Normal spiral galaxy is incorrect; a blazar is an AGN with its jet aimed almost exactly at us.',
+            },
           },
           {
             id: "sp-sec6-u7-L2-T3",
@@ -695,6 +768,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Rapid variability, extreme brightness, and a jet pointed at Earth are the signatures of a blazar. Relativistic beaming amplifies the jet's emission enormously.",
+            distractorExplanations: {
+              0: 'A Seyfert galaxy seen edge-on is incorrect; rapid variability, extreme brightness, and a jet pointed at Earth are the signatures of a blazar.',
+              1: 'A normal elliptical galaxy is incorrect; rapid variability, extreme brightness, and a jet pointed at Earth are the signatures of a blazar.',
+              3: 'A radio-quiet quasar is incorrect; rapid variability, extreme brightness, and a jet pointed at Earth are the signatures of a blazar.',
+            },
           },
           {
             id: "sp-sec6-u7-L2-Q6",
@@ -726,6 +804,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "Quasars were originally named because they looked like stars in photographs.",
             correctAnswer: true,
             explanation: "'Quasi-stellar' means star-like. Their enormous distances and compact size made them appear as point sources, just like stars.",
+            distractorExplanations: {
+              1: '\'Quasi-stellar\' means star-like.',
+            },
           },
           {
             id: "sp-sec6-u7-L3-Q2",
@@ -739,6 +820,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The extreme redshifts of quasar spectra revealed they were billions of light-years away, far too distant to be ordinary stars.",
+            distractorExplanations: {
+              0: 'They were visibly larger than stars is incorrect; the extreme redshifts of quasar spectra revealed they were billions of light-years away, far too distant.',
+              1: 'They changed color every night is incorrect; the extreme redshifts of quasar spectra revealed they were billions of light-years away, far too distant to be.',
+              2: 'They moved across the sky quickly is incorrect; the extreme redshifts of quasar spectra revealed they were billions of light-years away, far too distant to.',
+            },
           },
           {
             id: "sp-sec6-u7-L3-T2",
@@ -769,6 +855,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Young galaxies had abundant gas supplies. As galaxies consumed or expelled their gas over billions of years, fewer black holes could sustain quasar-level activity.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; young galaxies had abundant gas supplies.',
+              2: 'This is incorrect; young galaxies had abundant gas supplies.',
+              3: 'Dark energy hadn\'t formed yet is incorrect; young galaxies had abundant gas supplies.',
+            },
           },
           {
             id: "sp-sec6-u7-L3-T3",
@@ -815,6 +906,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "Relativistic jets from AGNs can extend millions of light-years from the galaxy.",
             correctAnswer: true,
             explanation: "The longest jets stretch several million light-years, far beyond the host galaxy itself. They are among the largest structures produced by single objects.",
+            distractorExplanations: {
+              1: 'The longest jets stretch several million light-years, far beyond the host galaxy itself.',
+            },
           },
           {
             id: "sp-sec6-u7-L4-Q2",
@@ -828,6 +922,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jets are launched perpendicular to the accretion disk, along the rotational axis of the black hole. Magnetic fields help collimate them into narrow beams.",
+            distractorExplanations: {
+              0: 'From the outer edge of the galaxy\'s disk is incorrect; jets are launched perpendicular to the accretion disk, along the rotational axis of the black hole.',
+              2: 'From individual stars near the center is incorrect; jets are launched perpendicular to the accretion disk, along the rotational axis of the black hole.',
+              3: 'From dark matter halos is incorrect; jets are launched perpendicular to the accretion disk, along the rotational axis of the black hole.',
+            },
           },
           {
             id: "sp-sec6-u7-L4-T2",
@@ -873,6 +972,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "When jets slam into the surrounding intergalactic medium, they slow down and inflate large lobes of hot, radio-emitting plasma.",
+            distractorExplanations: {
+              0: 'Stars exploding in the galaxy\'s halo is incorrect; when jets slam into the surrounding intergalactic medium, they slow down and inflate large lobes of hot,.',
+              1: 'Magnetic storms on the galaxy\'s surface is incorrect; when jets slam into the surrounding intergalactic medium, they slow down and inflate large lobes of.',
+              2: 'Gravitational waves from the black hole is incorrect; when jets slam into the surrounding intergalactic medium, they slow down and inflate large lobes of.',
+            },
           },
           {
             id: "sp-sec6-u7-L4-Q6",
@@ -887,6 +991,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Symmetric radio lobes connected to a central galaxy by narrow bridges are the classic signature of relativistic jets from an AGN.",
+            distractorExplanations: {
+              1: 'This is incorrect; symmetric radio lobes connected to a central galaxy by narrow bridges are the classic signature of relativistic jets from an AGN.',
+              2: 'This is incorrect; symmetric radio lobes connected to a central galaxy by narrow bridges are the classic signature of relativistic jets from an AGN.',
+              3: 'This is incorrect; symmetric radio lobes connected to a central galaxy by narrow bridges are the classic signature of relativistic jets from an AGN.',
+            },
           },
         ],
       },
@@ -910,6 +1019,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "AGN feedback can reduce star formation in the host galaxy.",
             correctAnswer: true,
             explanation: "By heating or expelling gas, AGN feedback removes the raw material needed to form stars. This is one reason massive galaxies stop making new stars.",
+            distractorExplanations: {
+              1: 'By heating or expelling gas, AGN feedback removes the raw material needed to form stars.',
+            },
           },
           {
             id: "sp-sec6-u7-L5-Q2",
@@ -923,6 +1035,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "AGN jets and radiation heat gas to temperatures where it can't collapse into stars, or blow it out of the galaxy entirely.",
+            distractorExplanations: {
+              0: 'It converts all stars into black holes is incorrect; aGN jets and radiation heat gas to temperatures where it can\'t collapse into stars, or blow it out of.',
+              2: 'It increases the galaxy\'s rotation speed is incorrect; aGN jets and radiation heat gas to temperatures where it can\'t collapse into stars, or blow it out.',
+              3: 'This claim is incorrect; aGN jets and radiation heat gas to temperatures where it can\'t collapse into stars, or blow it out of the galaxy entirely.',
+            },
           },
           {
             id: "sp-sec6-u7-L5-T2",
@@ -943,6 +1060,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The M-sigma relation shows that bigger black holes live in galaxies with faster-moving central stars. This tight correlation implies the two evolve together through feedback.",
+            distractorExplanations: {
+              0: 'All black holes have the same mass is incorrect; the M-sigma relation shows that bigger black holes live in galaxies with faster-moving central stars.',
+              2: 'This is incorrect; the M-sigma relation shows that bigger black holes live in galaxies with faster-moving central stars.',
+              3: 'This is incorrect; the M-sigma relation shows that bigger black holes live in galaxies with faster-moving central stars.',
+            },
           },
           {
             id: "sp-sec6-u7-L5-Q4",
@@ -980,6 +1102,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Hot X-ray bubbles inflated by jets are direct evidence of AGN feedback. The jets are keeping the gas too hot to collapse and form new stars.",
+            distractorExplanations: {
+              0: 'The galaxy is too young for star formation is incorrect; hot X-ray bubbles inflated by jets are direct evidence of AGN feedback.',
+              1: 'A nearby galaxy is stealing all its stars is incorrect; hot X-ray bubbles inflated by jets are direct evidence of AGN feedback.',
+              2: 'The galaxy has no gas at all is incorrect; hot X-ray bubbles inflated by jets are direct evidence of AGN feedback.',
+            },
           },
         ],
       },
@@ -1122,6 +1249,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "Deep sky objects include nebulae, star clusters, and galaxies.",
             correctAnswer: true,
             explanation: "DSOs is a catch-all term for extended astronomical objects beyond our solar system. Individual stars and planets are not considered deep sky objects.",
+            distractorExplanations: {
+              1: 'DSOs is a catch-all term for extended astronomical objects beyond our solar system.',
+            },
           },
           {
             id: "sp-sec6-u8-L1-Q2",
@@ -1135,6 +1265,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Charles Messier compiled his catalog to avoid confusing fuzzy deep sky objects with comets, which were his main interest.",
+            distractorExplanations: {
+              0: 'Galileo Galilei is incorrect; charles Messier compiled his catalog to avoid confusing fuzzy deep sky objects with comets, which were his main interest.',
+              1: 'Isaac Newton is incorrect; charles Messier compiled his catalog to avoid confusing fuzzy deep sky objects with comets, which were his main interest.',
+              2: 'Edwin Hubble is incorrect; charles Messier compiled his catalog to avoid confusing fuzzy deep sky objects with comets, which were his main interest.',
+            },
           },
           {
             id: "sp-sec6-u8-L1-T2",
@@ -1177,6 +1312,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The New General Catalogue, compiled by John Louis Emil Dreyer in 1888, remains one of the most widely used catalogs of deep sky objects.",
+            distractorExplanations: {
+              0: 'National Galaxy Commission is incorrect; the New General Catalogue, compiled by John Louis Emil Dreyer in 1888, remains one of the most widely used catalogs.',
+              2: 'Northern Galactic Center is incorrect; the New General Catalogue, compiled by John Louis Emil Dreyer in 1888, remains one of the most widely used catalogs.',
+              3: 'Nebula and Galaxy Census is incorrect; the New General Catalogue, compiled by John Louis Emil Dreyer in 1888, remains one of the most widely used catalogs.',
+            },
           },
           {
             id: "sp-sec6-u8-L1-Q6",
@@ -1209,6 +1349,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "Reflection nebulae produce their own light through nuclear fusion.",
             correctAnswer: false,
             explanation: "Reflection nebulae don't produce their own light. They shine by reflecting and scattering light from nearby stars, similar to how fog glows around a streetlight.",
+            distractorExplanations: {
+              0: 'Reflection nebulae don\'t produce their own light.',
+            },
           },
           {
             id: "sp-sec6-u8-L2-Q2",
@@ -1237,6 +1380,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Dark nebulae are dense clouds that absorb and block visible light from stars and nebulae behind them. They can be detected in infrared, which passes through dust.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; dark nebulae are dense clouds that absorb and block visible light from stars and nebulae behind them.',
+              2: 'This claim is incorrect; dark nebulae are dense clouds that absorb and block visible light from stars and nebulae behind them.',
+              3: 'This claim is incorrect; dark nebulae are dense clouds that absorb and block visible light from stars and nebulae behind them.',
+            },
           },
           {
             id: "sp-sec6-u8-L2-Q4",
@@ -1250,6 +1398,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Despite the name, planetary nebulae have nothing to do with planets. They're shells of gas shed by low-mass stars at the end of their lives.",
+            distractorExplanations: {
+              0: 'A nebula where planets are forming is incorrect; despite the name, planetary nebulae have nothing to do with planets.',
+              1: 'Debris from a supernova explosion is incorrect; despite the name, planetary nebulae have nothing to do with planets.',
+              2: 'A gas giant planet\'s atmosphere is incorrect; despite the name, planetary nebulae have nothing to do with planets.',
+            },
           },
           {
             id: "sp-sec6-u8-L2-T3",
@@ -1296,6 +1449,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "Open clusters are typically found in the spiral arms of galaxies.",
             correctAnswer: true,
             explanation: "Spiral arms are rich in gas and dust where new stars form. Open clusters are young stellar groups born from these star-forming regions.",
+            distractorExplanations: {
+              1: 'Spiral arms are rich in gas and dust where new stars form.',
+            },
           },
           {
             id: "sp-sec6-u8-L3-Q2",
@@ -1309,6 +1465,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Open clusters are relatively small, containing hundreds to thousands of young stars. They gradually disperse over millions of years as gravity from the galaxy pulls them apart.",
+            distractorExplanations: {
+              0: 'About 5 to 10 stars is incorrect; open clusters are relatively small, containing hundreds to thousands of young stars.',
+              2: 'Over a million stars is incorrect; open clusters are relatively small, containing hundreds to thousands of young stars.',
+              3: 'Billions of stars is incorrect; open clusters are relatively small, containing hundreds to thousands of young stars.',
+            },
           },
           {
             id: "sp-sec6-u8-L3-T2",
@@ -1355,6 +1516,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cluster stars formed from the same gas cloud at the same time. Comparing stars of different masses but the same age reveals exactly how mass determines a star's life cycle.",
+            distractorExplanations: {
+              0: 'Their stars are all different ages is incorrect; cluster stars formed from the same gas cloud at the same time.',
+              2: 'They contain only one type of star is incorrect; cluster stars formed from the same gas cloud at the same time.',
+              3: 'They\'re the only place stars exist is incorrect; cluster stars formed from the same gas cloud at the same time.',
+            },
           },
           {
             id: "sp-sec6-u8-L3-Q6",
@@ -1387,6 +1553,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "The Orion Nebula is visible to the naked eye.",
             correctAnswer: true,
             explanation: "The Orion Nebula (M42) appears as a fuzzy patch in Orion's sword. At about 1,344 light-years away, it's the nearest large star-forming region visible without a telescope.",
+            distractorExplanations: {
+              1: 'The Orion Nebula (M42) appears as a fuzzy patch in Orion\'s sword.',
+            },
           },
           {
             id: "sp-sec6-u8-L4-Q2",
@@ -1416,6 +1585,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The Hubble Deep Fields showed that even seemingly empty sky is packed with distant galaxies, revealing the universe's incredible richness.",
+            distractorExplanations: {
+              0: 'Large empty regions between galaxies is incorrect; the Hubble Deep Fields showed that even seemingly empty sky is packed with distant galaxies, revealing the.',
+              1: 'That stars exist outside of galaxies is incorrect; the Hubble Deep Fields showed that even seemingly empty sky is packed with distant galaxies, revealing the.',
+              2: 'That the universe is shrinking is incorrect; the Hubble Deep Fields showed that even seemingly empty sky is packed with distant galaxies, revealing the.',
+            },
           },
           {
             id: "sp-sec6-u8-L4-Q4",
@@ -1446,6 +1620,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The most distant galaxies have their light stretched into infrared by cosmic expansion. JWST's infrared instruments can detect this light, revealing galaxies Hubble could not see.",
+            distractorExplanations: {
+              1: 'JWST is much closer to those galaxies is incorrect; the most distant galaxies have their light stretched into infrared by cosmic expansion.',
+              2: 'This is incorrect; the most distant galaxies have their light stretched into infrared by cosmic expansion.',
+              3: 'JWST uses radar instead of light is incorrect; the most distant galaxies have their light stretched into infrared by cosmic expansion.',
+            },
           },
           {
             id: "sp-sec6-u8-L4-Q6",
@@ -1596,6 +1775,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "The cosmic distance ladder uses a single method to measure all distances.",
             correctAnswer: false,
             explanation: "No single method works at all distances. The ladder uses overlapping techniques, each calibrated against the one that works at shorter ranges.",
+            distractorExplanations: {
+              0: 'No single method works at all distances.',
+            },
           },
           {
             id: "sp-sec6-u9-L1-Q2",
@@ -1609,6 +1791,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Parallax works for nearby stars, Cepheids for nearby galaxies, and supernovae for distant galaxies. Each method has a range beyond which it fails.",
+            distractorExplanations: {
+              1: 'This is incorrect; parallax works for nearby stars, Cepheids for nearby galaxies, and supernovae for distant galaxies.',
+              2: 'This is incorrect; parallax works for nearby stars, Cepheids for nearby galaxies, and supernovae for distant galaxies.',
+              3: 'This is incorrect; parallax works for nearby stars, Cepheids for nearby galaxies, and supernovae for distant galaxies.',
+            },
           },
           {
             id: "sp-sec6-u9-L1-T2",
@@ -1636,6 +1823,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Each rung depends on the one below it. An error in parallax distances propagates upward through Cepheids, supernovae, and beyond, affecting all cosmic distance estimates.",
+            distractorExplanations: {
+              0: 'Only the nearest stars are affected is incorrect; each rung depends on the one below it.',
+              2: 'Other methods automatically correct it is incorrect; each rung depends on the one below it.',
+              3: 'This is incorrect; each rung depends on the one below it.',
+            },
           },
           {
             id: "sp-sec6-u9-L1-T3",
@@ -1682,6 +1874,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "Parallax works by observing a star from two different positions in Earth's orbit.",
             correctAnswer: true,
             explanation: "Earth's orbital diameter (about 300 million km) serves as the baseline. Stars observed 6 months apart show a tiny angular shift that reveals their distance.",
+            distractorExplanations: {
+              1: 'Earth\'s orbital diameter (about 300 million km) serves as the baseline.',
+            },
           },
           {
             id: "sp-sec6-u9-L2-Q2",
@@ -1695,6 +1890,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The baseline is the diameter of Earth's orbit, about 2 AU (300 million km). Observations taken 6 months apart use the full baseline.",
+            distractorExplanations: {
+              0: 'Earth\'s diameter is incorrect; the baseline is the diameter of Earth\'s orbit, about 2 AU (300 million km).',
+              1: 'The distance between two telescopes on Earth is incorrect; the baseline is the diameter of Earth\'s orbit, about 2 AU (300 million km).',
+              2: 'The Moon\'s distance from Earth is incorrect; the baseline is the diameter of Earth\'s orbit, about 2 AU (300 million km).',
+            },
           },
           {
             id: "sp-sec6-u9-L2-T2",
@@ -1739,6 +1939,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's atmosphere blurs stellar positions, making it impossible to measure the tiny parallax angles of very distant stars. Space telescopes like Gaia avoid this problem.",
+            distractorExplanations: {
+              1: 'Earth\'s gravity distorts the telescope is incorrect; earth\'s atmosphere blurs stellar positions, making it impossible to measure the tiny parallax angles.',
+              2: 'This is incorrect; earth\'s atmosphere blurs stellar positions, making it impossible to measure the tiny parallax angles of very distant stars.',
+              3: 'This is incorrect; earth\'s atmosphere blurs stellar positions, making it impossible to measure the tiny parallax angles of very distant stars.',
+            },
           },
           {
             id: "sp-sec6-u9-L2-Q6",
@@ -1752,6 +1957,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Gaia measures parallax from space with extraordinary precision, providing accurate distances for over a billion stars and calibrating higher rungs of the distance ladder.",
+            distractorExplanations: {
+              1: 'It can see in all wavelengths of light is incorrect; gaia measures parallax from space with extraordinary precision, providing accurate distances for over.',
+              2: 'This claim is incorrect; gaia measures parallax from space with extraordinary precision, providing accurate distances for over a billion.',
+              3: 'This claim is incorrect; gaia measures parallax from space with extraordinary precision, providing accurate distances for over a billion.',
+            },
           },
         ],
       },
@@ -1776,6 +1986,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "A standard candle has a known intrinsic brightness.",
             correctAnswer: true,
             explanation: "If you know how bright something truly is (intrinsic brightness) and measure how bright it appears, the difference tells you the distance.",
+            distractorExplanations: {
+              1: 'If you know how bright something truly is (intrinsic brightness) and measure how bright it appears, the difference.',
+            },
           },
           {
             id: "sp-sec6-u9-L3-Q2",
@@ -1789,6 +2002,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The dimmer a standard candle appears compared to its known luminosity, the farther away it must be. This relationship follows the inverse-square law of light.",
+            distractorExplanations: {
+              0: 'This is incorrect; the dimmer a standard candle appears compared to its known luminosity, the farther away it must be.',
+              2: 'This is incorrect; the dimmer a standard candle appears compared to its known luminosity, the farther away it must be.',
+              3: 'By analyzing its color temperature is incorrect; the dimmer a standard candle appears compared to its known luminosity, the farther away it must be.',
+            },
           },
           {
             id: "sp-sec6-u9-L3-T2",
@@ -1816,6 +2034,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Henrietta Leavitt discovered in 1912 that Cepheid periods correlate with luminosity. This breakthrough allowed Hubble to later prove galaxies exist beyond the Milky Way.",
+            distractorExplanations: {
+              0: 'Edwin Hubble is incorrect; henrietta Leavitt discovered in 1912 that Cepheid periods correlate with luminosity.',
+              1: 'Albert Einstein is incorrect; henrietta Leavitt discovered in 1912 that Cepheid periods correlate with luminosity.',
+              3: 'Cecilia Payne-Gaposchkin is incorrect; henrietta Leavitt discovered in 1912 that Cepheid periods correlate with luminosity.',
+            },
           },
           {
             id: "sp-sec6-u9-L3-T3",
@@ -1836,6 +2059,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If a Cepheid's true luminosity is high but its apparent brightness is very low, the inverse-square law tells us the galaxy must be at a great distance.",
+            distractorExplanations: {
+              0: 'This claim is incorrect; if a Cepheid\'s true luminosity is high but its apparent brightness is very low, the inverse-square law tells us the.',
+              2: 'This reasoning is wrong because if a Cepheid\'s true luminosity is high but its apparent brightness is very low, the inverse-square law tells us the.',
+              3: 'This claim is incorrect; if a Cepheid\'s true luminosity is high but its apparent brightness is very low, the inverse-square law tells us the.',
+            },
           },
           {
             id: "sp-sec6-u9-L3-Q6",
@@ -1870,6 +2098,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "Type Ia supernovae are useful because they all reach approximately the same peak brightness.",
             correctAnswer: true,
             explanation: "Because Type Ia supernovae explode at a consistent mass limit (the Chandrasekhar limit), their peak luminosities are remarkably uniform after corrections for light-curve shape.",
+            distractorExplanations: {
+              1: 'Because Type Ia supernovae explode at a consistent mass limit (the Chandrasekhar limit), their peak luminosities.',
+            },
           },
           {
             id: "sp-sec6-u9-L4-Q2",
@@ -1883,6 +2114,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A single Type Ia supernova can briefly outshine its entire host galaxy. This extreme brightness makes them detectable across billions of light-years, far beyond the reach of Cepheids.",
+            distractorExplanations: {
+              1: 'They occur more frequently is incorrect; a single Type Ia supernova can briefly outshine its entire host galaxy.',
+              2: 'They have a longer pulsation period is incorrect; a single Type Ia supernova can briefly outshine its entire host galaxy.',
+              3: 'They exist only in nearby galaxies is incorrect; a single Type Ia supernova can briefly outshine its entire host galaxy.',
+            },
           },
           {
             id: "sp-sec6-u9-L4-T2",
@@ -1910,6 +2146,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Hubble's law (v = H0 x d) says more distant galaxies recede faster. This relationship lets astronomers estimate distance from redshift alone.",
+            distractorExplanations: {
+              0: 'Brighter galaxies are always closer is incorrect; hubble\'s law (v = H0 x d) says more distant galaxies recede faster.',
+              1: 'Redshift is caused by galaxy rotation is incorrect; hubble\'s law (v = H0 x d) says more distant galaxies recede faster.',
+              2: 'All galaxies are the same age is incorrect; hubble\'s law (v = H0 x d) says more distant galaxies recede faster.',
+            },
           },
           {
             id: "sp-sec6-u9-L4-T3",
@@ -2206,6 +2447,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Andromeda (M31) is the largest and most massive galaxy in the Local Group, containing roughly a trillion stars.",
+            distractorExplanations: {
+              0: 'The Milky Way is incorrect; andromeda (M31) is the largest and most massive galaxy in the Local Group, containing roughly a trillion stars.',
+              1: 'The Triangulum Galaxy is incorrect; andromeda (M31) is the largest and most massive galaxy in the Local Group, containing roughly a trillion stars.',
+              2: 'The Large Magellanic Cloud is incorrect; andromeda (M31) is the largest and most massive galaxy in the Local Group, containing roughly a trillion stars.',
+            },
           },
           {
             id: "sp-sec6-u10-L1-Q3",
@@ -2234,6 +2480,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Major mergers disrupt spiral structure. The gravitational chaos randomizes stellar orbits, producing a smooth elliptical galaxy.",
+            distractorExplanations: {
+              1: 'Larger spiral galaxy is incorrect; major mergers disrupt spiral structure.',
+              2: 'Dwarf irregular galaxy is incorrect; major mergers disrupt spiral structure.',
+              3: 'Ring galaxy is incorrect; major mergers disrupt spiral structure.',
+            },
           },
           {
             id: "sp-sec6-u10-L1-Q5",
@@ -2256,6 +2507,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Smooth shape, no gas, and old red stars are the hallmarks of an elliptical galaxy. These galaxies have likely exhausted or lost their star-forming material.",
+            distractorExplanations: {
+              0: 'An active spiral galaxy is incorrect; smooth shape, no gas, and old red stars are the hallmarks of an elliptical galaxy.',
+              1: 'An irregular galaxy forming new stars is incorrect; smooth shape, no gas, and old red stars are the hallmarks of an elliptical galaxy.',
+              3: 'A young galaxy still forming its disk is incorrect; smooth shape, no gas, and old red stars are the hallmarks of an elliptical galaxy.',
+            },
           },
           {
             id: "sp-sec6-u10-L1-Q7",
@@ -2263,6 +2519,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "The cosmic web describes how galaxy clusters and superclusters connect along filaments of matter.",
             correctAnswer: true,
             explanation: "The cosmic web is the large-scale structure of the universe, with galaxies concentrated along filaments and vast voids between them.",
+            distractorExplanations: {
+              1: 'The cosmic web is the large-scale structure of the universe, with galaxies concentrated along filaments and vast.',
+            },
           },
         ],
       },
@@ -2301,6 +2560,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "AGN feedback is when jets and radiation from the central black hole heat or expel gas, regulating star formation throughout the galaxy.",
+            distractorExplanations: {
+              0: 'This is incorrect; aGN feedback is when jets and radiation from the central black hole heat or expel gas, regulating star formation.',
+              2: 'This is incorrect; aGN feedback is when jets and radiation from the central black hole heat or expel gas, regulating star formation.',
+              3: 'Dark matter pushing galaxies apart is incorrect; aGN feedback is when jets and radiation from the central black hole heat or expel gas, regulating star.',
+            },
           },
           {
             id: "sp-sec6-u10-L2-Q3",
@@ -2337,6 +2601,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Globular clusters are tightly packed spheres of hundreds of thousands of old stars. Open clusters are loose groups of young stars in spiral arms.",
+            distractorExplanations: {
+              0: 'Globular clusters are young and loose is incorrect; globular clusters are tightly packed spheres of hundreds of thousands of old stars.',
+              1: 'This is incorrect; globular clusters are tightly packed spheres of hundreds of thousands of old stars.',
+              3: 'Open clusters orbit in galaxy halos is incorrect; globular clusters are tightly packed spheres of hundreds of thousands of old stars.',
+            },
           },
           {
             id: "sp-sec6-u10-L2-Q6",
@@ -2351,6 +2620,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Extreme luminosity, huge redshift, broad emission lines, and outshining the host galaxy are all signatures of a quasar: a powerful AGN at great distance.",
+            distractorExplanations: {
+              0: 'A nearby supernova is incorrect; extreme luminosity, huge redshift, broad emission lines, and outshining the host galaxy are all signatures of a.',
+              1: 'A planetary nebula is incorrect; extreme luminosity, huge redshift, broad emission lines, and outshining the host galaxy are all signatures of a.',
+              2: 'An open star cluster is incorrect; extreme luminosity, huge redshift, broad emission lines, and outshining the host galaxy are all signatures of a.',
+            },
           },
           {
             id: "sp-sec6-u10-L2-Q7",
@@ -2358,6 +2632,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "The Hubble Deep Field showed that even seemingly empty patches of sky contain thousands of galaxies.",
             correctAnswer: true,
             explanation: "The Hubble Deep Field revealed about 3,000 galaxies in a tiny patch of sky, demonstrating that galaxies fill the observable universe in every direction.",
+            distractorExplanations: {
+              1: 'The Hubble Deep Field revealed about 3,000 galaxies in a tiny patch of sky, demonstrating that galaxies fill the.',
+            },
           },
         ],
       },
@@ -2395,6 +2672,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Type Ia supernovae occur at the Chandrasekhar mass limit, giving them a consistent peak brightness. This uniformity makes them excellent distance indicators.",
+            distractorExplanations: {
+              0: 'They explode at random brightnesses is incorrect; type Ia supernovae occur at the Chandrasekhar mass limit, giving them a consistent peak brightness.',
+              1: 'They always occur in the same galaxy is incorrect; type Ia supernovae occur at the Chandrasekhar mass limit, giving them a consistent peak brightness.',
+              3: 'They pulse with a known period is incorrect; type Ia supernovae occur at the Chandrasekhar mass limit, giving them a consistent peak brightness.',
+            },
           },
           {
             id: "sp-sec6-u10-L3-Q3",
@@ -2443,6 +2725,11 @@ export const spaceSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "If you can identify Cepheids, use them. Their pulsation periods reveal their true brightness, giving a reliable distance measurement without waiting for a rare supernova.",
+            distractorExplanations: {
+              0: 'This approach is incorrect; if you can identify Cepheids, use them.',
+              1: 'This approach is incorrect; if you can identify Cepheids, use them.',
+              3: 'This approach is incorrect; if you can identify Cepheids, use them.',
+            },
           },
           {
             id: "sp-sec6-u10-L3-Q7",
@@ -2450,6 +2737,9 @@ export const spaceSection6Part2: Unit[] = [
             question: "An error in parallax calibration would affect all higher rungs of the distance ladder.",
             correctAnswer: true,
             explanation: "Each rung is calibrated by the one below it. If parallax distances are off, Cepheid calibrations inherit the error, which then propagates to supernovae and beyond.",
+            distractorExplanations: {
+              1: 'Each rung is calibrated by the one below it.',
+            },
           },
         ],
       },

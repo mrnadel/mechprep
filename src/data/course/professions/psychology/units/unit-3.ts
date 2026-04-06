@@ -29,6 +29,9 @@ export const unit3: Unit = {
           question: "Your brain creates memories by storing information in different stages.",
           correctAnswer: true,
           explanation: "Yes! Information moves through stages: sensory input, short-term storage, and then (sometimes) long-term storage.",
+          distractorExplanations: {
+            1: 'Information moves through stages: sensory input, short-term storage, and then (sometimes) long-term storage',
+          },
         },
         {
           id: "psy-u3-L1-Q2",
@@ -42,6 +45,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "Memory starts with sensory input. Your eyes, ears, nose, and skin pick up information before your brain processes it.",
+          distractorExplanations: {
+            0: 'Memory starts with sensory input. Your eyes, ears, nose, and skin pick up information before your brain processes it',
+            1: 'Memory starts with sensory input. Your eyes, ears, nose, and skin pick up information before your brain processes it',
+            3: 'Memory starts with sensory input. Your eyes, ears, nose, and skin pick up information before your brain processes it',
+          },
         },
         {
           id: "psy-u3-L1-T2",
@@ -70,6 +78,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 1,
           explanation: "The memory was stored, but you couldn't pull it back out. That's a retrieval failure, the most frustrating kind.",
+          distractorExplanations: {
+            0: 'The memory was stored, but you couldn\'t pull it back out',
+            2: 'The memory was stored, but you couldn\'t pull it back out',
+            3: 'The memory was stored, but you couldn\'t pull it back out',
+          },
         },
         {
           id: "psy-u3-L1-T3",
@@ -91,6 +104,9 @@ export const unit3: Unit = {
           question: "You remember emotional events better because your brain tags them as high priority.",
           correctAnswer: true,
           explanation: "The amygdala flags emotional events during encoding, giving them a 'VIP pass' into long-term memory.",
+          distractorExplanations: {
+            1: 'The amygdala flags emotional events during encoding, giving them a \'VIP pass\' into long-term memory',
+          },
         },
         {
           id: "psy-u3-L1-Q7",
@@ -104,6 +120,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "If you weren't paying attention, the information never got encoded in the first place. You can't retrieve what was never stored.",
+          distractorExplanations: {
+            0: 'If you weren\'t paying attention, the information never got encoded in the first place',
+            1: 'If you weren\'t paying attention, the information never got encoded in the first place',
+            3: 'If you weren\'t paying attention, the information never got encoded in the first place',
+          },
         },
         {
           id: "psy-u3-L1-Q8",
@@ -137,6 +158,9 @@ export const unit3: Unit = {
           question: "Short-term memory can hold about 7 items at once.",
           correctAnswer: true,
           explanation: "Psychologist George Miller called it 'the magical number 7, plus or minus 2.' That's why phone numbers are 7 digits.",
+          distractorExplanations: {
+            1: 'Psychologist George Miller called it \'the magical number 7, plus or minus 2.\' That\'s why phone numbers are 7 digits',
+          },
         },
         {
           id: "psy-u3-L2-Q2",
@@ -150,6 +174,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "Without actively thinking about it, short-term memories fade in about 20-30 seconds. That's it.",
+          distractorExplanations: {
+            0: 'Without actively thinking about it, short-term memories fade in about 20-30 seconds',
+            1: 'Without actively thinking about it, short-term memories fade in about 20-30 seconds',
+            3: 'Without actively thinking about it, short-term memories fade in about 20-30 seconds',
+          },
         },
         {
           id: "psy-u3-L2-T2",
@@ -187,6 +216,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 3,
           explanation: "Rehearsal (repetition) and connecting new info to existing knowledge are the two best ways to form long-term memories.",
+          distractorExplanations: {
+            0: 'Rehearsal (repetition) and connecting new info to existing knowledge are the two best ways to form long-term memories',
+            1: 'Rehearsal (repetition) and connecting new info to existing knowledge are the two best ways to form long-term memories',
+            2: 'Rehearsal (repetition) and connecting new info to existing knowledge are the two best ways to form long-term memories',
+          },
         },
         {
           id: "psy-u3-L2-T3",
@@ -215,6 +249,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "This is exactly what happened with patient H.M. It proved that explicit and implicit memories are processed by different brain regions.",
+          distractorExplanations: {
+            1: 'This is exactly what happened with patient H.M',
+            2: 'This is exactly what happened with patient H.M',
+            3: 'This is exactly what happened with patient H.M',
+          },
         },
         {
           id: "psy-u3-L2-Q8",
@@ -222,6 +261,9 @@ export const unit3: Unit = {
           question: "Long-term memory has a limited storage capacity, just like short-term memory.",
           correctAnswer: false,
           explanation: "Short-term memory is very limited (about 7 items). Long-term memory has no known limit. Your brain never 'runs out of space.'",
+          distractorExplanations: {
+            0: 'Short-term memory is very limited (about 7 items)',
+          },
         },
       ],
     },
@@ -246,6 +288,9 @@ export const unit3: Unit = {
           question: "You lose about half of newly learned information within one hour.",
           correctAnswer: true,
           explanation: "Ebbinghaus showed that forgetting is steepest right after learning. After that first hour, the rate of forgetting slows down.",
+          distractorExplanations: {
+            1: 'Ebbinghaus showed that forgetting is steepest right after learning',
+          },
         },
         {
           id: "psy-u3-L3-Q2",
@@ -259,6 +304,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "Ebbinghaus memorized nonsense syllables and tested himself over time, creating one of psychology's most famous findings.",
+          distractorExplanations: {
+            0: 'Ebbinghaus memorized nonsense syllables and tested himself over time, creating one of psychology\'s most famous findings',
+            1: 'Ebbinghaus memorized nonsense syllables and tested himself over time, creating one of psychology\'s most famous findings',
+            3: 'Ebbinghaus memorized nonsense syllables and tested himself over time, creating one of psychology\'s most famous findings',
+          },
         },
         {
           id: "psy-u3-L3-T2",
@@ -279,6 +329,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Without review, about 70% is gone within 24 hours. Only around 30% sticks, and it keeps fading from there.",
+          distractorExplanations: {
+            1: 'The correct answer is About 30%, not About 70%',
+            2: 'The correct answer is About 30%, not About 90%',
+            3: 'The correct answer is About 30%, not About 50%',
+          },
         },
         {
           id: "psy-u3-L3-Q4",
@@ -309,6 +364,9 @@ export const unit3: Unit = {
           question: "Each time you review something, it takes longer before you forget it again.",
           correctAnswer: true,
           explanation: "Review resets the curve and makes it flatter. After enough reviews, the memory becomes nearly permanent.",
+          distractorExplanations: {
+            1: 'Review resets the curve and makes it flatter',
+          },
         },
         {
           id: "psy-u3-L3-Q7",
@@ -322,6 +380,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 1,
           explanation: "Spaced reviews are the best weapon against forgetting. Each review session makes the memory stronger and longer-lasting.",
+          distractorExplanations: {
+            0: 'Spaced reviews are the best weapon against forgetting',
+            2: 'Spaced reviews are the best weapon against forgetting',
+            3: 'Spaced reviews are the best weapon against forgetting',
+          },
         },
         {
           id: "psy-u3-L3-Q8",
@@ -362,6 +425,9 @@ export const unit3: Unit = {
           question: "Re-reading your notes is one of the most effective study techniques.",
           correctAnswer: false,
           explanation: "Re-reading feels productive but creates an illusion of knowledge. Active recall, where you test yourself without looking, is far more effective.",
+          distractorExplanations: {
+            0: 'Re-reading feels productive but creates an illusion of knowledge',
+          },
         },
         {
           id: "psy-u3-L4-Q2",
@@ -375,6 +441,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "Spaced repetition means reviewing after 1 day, then 3 days, then a week, then a month. Each interval gets longer as the memory gets stronger.",
+          distractorExplanations: {
+            0: 'Spaced repetition means reviewing after 1 day, then 3 days, then a week, then a month',
+            1: 'Spaced repetition means reviewing after 1 day, then 3 days, then a week, then a month',
+            3: 'Spaced repetition means reviewing after 1 day, then 3 days, then a week, then a month',
+          },
         },
         {
           id: "psy-u3-L4-T2",
@@ -412,6 +483,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 1,
           explanation: "Spacing wins every time. The same total time spread across multiple sessions produces far stronger long-term memory.",
+          distractorExplanations: {
+            0: 'Spacing wins every time. The same total time spread across multiple sessions produces far stronger long-term memory',
+            2: 'Spacing wins every time. The same total time spread across multiple sessions produces far stronger long-term memory',
+            3: 'Spacing wins every time. The same total time spread across multiple sessions produces far stronger long-term memory',
+          },
         },
         {
           id: "psy-u3-L4-T3",
@@ -425,6 +501,9 @@ export const unit3: Unit = {
           question: "If recalling something feels easy, it means you've learned it very well.",
           correctAnswer: false,
           explanation: "Easy recall can be a trap. It often means the memory is fresh but shallow. Effortful retrieval builds deeper, longer-lasting memories.",
+          distractorExplanations: {
+            0: 'Easy recall can be a trap. It often means the memory is fresh but shallow',
+          },
         },
         {
           id: "psy-u3-L4-Q7",
@@ -438,6 +517,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 1,
           explanation: "Anki and similar flashcard apps show cards at increasing intervals and require you to recall the answer before flipping. That's both techniques combined.",
+          distractorExplanations: {
+            0: 'Anki and similar flashcard apps show cards at increasing intervals and require you to recall the answer before flipping',
+            2: 'Anki and similar flashcard apps show cards at increasing intervals and require you to recall the answer before flipping',
+            3: 'Anki and similar flashcard apps show cards at increasing intervals and require you to recall the answer before flipping',
+          },
         },
         {
           id: "psy-u3-L4-Q8",
@@ -470,6 +554,9 @@ export const unit3: Unit = {
           question: "Human memory works like a video recording that replays events exactly as they happened.",
           correctAnswer: false,
           explanation: "Memory is reconstructive, not reproductive. Each recall is more like rewriting a story from notes than replaying a tape.",
+          distractorExplanations: {
+            0: 'Memory is reconstructive, not reproductive',
+          },
         },
         {
           id: "psy-u3-L5-Q2",
@@ -483,6 +570,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 3,
           explanation: "Loftus showed that memories can be implanted and distorted through suggestion, changing how courts use eyewitness testimony.",
+          distractorExplanations: {
+            0: 'Loftus showed that memories can be implanted and distorted through suggestion, changing how courts use eyewitness testimony',
+            1: 'Loftus showed that memories can be implanted and distorted through suggestion, changing how courts use eyewitness testimony',
+            2: 'Loftus showed that memories can be implanted and distorted through suggestion, changing how courts use eyewitness testimony',
+          },
         },
         {
           id: "psy-u3-L5-T2",
@@ -503,6 +595,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Just one word changed both speed estimates and created a completely false memory of broken glass. Words shape memories.",
+          distractorExplanations: {
+            1: 'Just one word changed both speed estimates and created a completely false memory of broken glass',
+            2: 'Just one word changed both speed estimates and created a completely false memory of broken glass',
+            3: 'Just one word changed both speed estimates and created a completely false memory of broken glass',
+          },
         },
         {
           id: "psy-u3-L5-Q4",
@@ -533,6 +630,9 @@ export const unit3: Unit = {
           question: "Eyewitness testimony is considered highly reliable by memory researchers.",
           correctAnswer: false,
           explanation: "Despite being persuasive in court, eyewitness testimony is one of the least reliable forms of evidence. Roughly 70% of DNA exonerations involved faulty eyewitness ID.",
+          distractorExplanations: {
+            0: 'Despite being persuasive in court, eyewitness testimony is one of the least reliable forms of evidence',
+          },
         },
         {
           id: "psy-u3-L5-Q7",
@@ -546,6 +646,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 3,
           explanation: "Research shows that witness confidence has a surprisingly weak relationship with accuracy. People can be very confident about completely wrong memories.",
+          distractorExplanations: {
+            0: 'Research shows that witness confidence has a surprisingly weak relationship with accuracy',
+            1: 'Research shows that witness confidence has a surprisingly weak relationship with accuracy',
+            2: 'Research shows that witness confidence has a surprisingly weak relationship with accuracy',
+          },
         },
         {
           id: "psy-u3-L5-Q8",
@@ -559,6 +664,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "Immediate, separate interviews prevent witnesses from contaminating each other's memories with the misinformation effect.",
+          distractorExplanations: {
+            1: 'Immediate, separate interviews prevent witnesses from contaminating each other\'s memories with the misinformation effect',
+            2: 'Immediate, separate interviews prevent witnesses from contaminating each other\'s memories with the misinformation effect',
+            3: 'Immediate, separate interviews prevent witnesses from contaminating each other\'s memories with the misinformation effect',
+          },
         },
       ],
     },
@@ -583,6 +693,9 @@ export const unit3: Unit = {
           question: "Sleep plays an important role in forming long-term memories.",
           correctAnswer: true,
           explanation: "During deep sleep, the brain consolidates memories by transferring them from the hippocampus to the cortex for long-term storage.",
+          distractorExplanations: {
+            1: 'During deep sleep, the brain consolidates memories by transferring them from the hippocampus to the cortex for long-term storage',
+          },
         },
         {
           id: "psy-u3-L6-Q2",
@@ -596,6 +709,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "Deep sleep is when memory consolidation happens. Your brain replays and strengthens the neural connections formed during the day.",
+          distractorExplanations: {
+            0: 'Deep sleep is when memory consolidation happens',
+            1: 'Deep sleep is when memory consolidation happens',
+            3: 'Deep sleep is when memory consolidation happens',
+          },
         },
         {
           id: "psy-u3-L6-T2",
@@ -633,6 +751,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "Sleep consolidates the studied material into long-term memory. The all-nighter student loses most of what they learned.",
+          distractorExplanations: {
+            0: 'Sleep consolidates the studied material into long-term memory',
+            1: 'Sleep consolidates the studied material into long-term memory',
+            3: 'Sleep consolidates the studied material into long-term memory',
+          },
         },
         {
           id: "psy-u3-L6-T3",
@@ -646,6 +769,9 @@ export const unit3: Unit = {
           question: "A little bit of stress always hurts your ability to learn.",
           correctAnswer: false,
           explanation: "Mild stress actually improves focus and encoding. It's chronic or extreme stress that damages memory. Think of it as a performance curve: some is good, too much is harmful.",
+          distractorExplanations: {
+            0: 'Mild stress actually improves focus and encoding',
+          },
         },
         {
           id: "psy-u3-L6-Q7",
@@ -660,6 +786,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "All-nighters prevent the sleep-based memory consolidation that locks in what you studied. High stress raises cortisol, which blocks both encoding and retrieval. Tom would learn more by studying 1 hour, sleeping well, and reviewing the next day.",
+          distractorExplanations: {
+            1: 'All-nighters prevent the sleep-based memory consolidation that locks in what you studied',
+            2: 'All-nighters prevent the sleep-based memory consolidation that locks in what you studied',
+            3: 'All-nighters prevent the sleep-based memory consolidation that locks in what you studied',
+          },
         },
         {
           id: "psy-u3-L6-Q8",
@@ -673,6 +804,11 @@ export const unit3: Unit = {
           ],
           correctIndex: 2,
           explanation: "Sleep is the foundation of memory. No technique, supplement, or hack can replace what your brain does during a good night's rest.",
+          distractorExplanations: {
+            0: 'Sleep is the foundation of memory. No technique, supplement, or hack can replace what your brain does during a good night\'s rest',
+            1: 'Sleep is the foundation of memory. No technique, supplement, or hack can replace what your brain does during a good night\'s rest',
+            3: 'Sleep is the foundation of memory. No technique, supplement, or hack can replace what your brain does during a good night\'s rest',
+          },
         },
       ],
     },

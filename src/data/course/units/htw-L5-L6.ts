@@ -22,6 +22,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'Gear ratio = chainring teeth / cog teeth = 48/16 = 3. Each pedal revolution turns the rear wheel 3 times. This trades pedal force for wheel speed — you push harder but go faster.',
+      distractorExplanations: {
+        1: '1 is one-third of the correct value, from using an incorrect formula or coefficient.',
+        2: 'This value results from an incorrect approach; :1 — the pedal force is tripled at the rear wheel contact.',
+        3: '48 significantly exceeds the correct answer due to a fundamental formula or calculation error.',
+      },
       hint: 'Think about how many times the smaller gear spins when the larger gear completes one revolution.',
     },
     {
@@ -37,6 +42,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'Spokes can only carry tension (they are thin wires that buckle in compression). Pretension ensures that when the rider\'s weight pushes the hub down, bottom spokes lose tension but remain taut. Without pretension, they would go slack and the wheel would fail. The wheel acts like a pretensioned truss.',
+      distractorExplanations: {
+        1: 'This focuses on pretension/strengthens, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on prevents/expanding, which is not the correct mechanism or principle for this problem.',
+        3: 'This is too restrictive; the principle applies more broadly than pretension cosmetic suggests.',
+      },
       hint: 'A thin wire cannot push — it can only pull.',
     },
     {
@@ -46,6 +56,9 @@ export const lesson5: Lesson = {
       question: 'On a bicycle, shifting to a smaller rear cog (fewer teeth) makes pedaling easier because the gear ratio decreases.',
       correctAnswer: false,
       explanation: 'A smaller rear cog increases the gear ratio (chainring/cog), meaning the wheel turns more per pedal revolution. This makes pedaling harder, not easier — it is a higher gear for faster speeds. Shifting to a larger rear cog decreases the ratio and makes pedaling easier (lower gear).',
+      distractorExplanations: {
+        0: 'A smaller rear cog increases the gear ratio (chainring/cog), meaning the wheel turns more per pedal revolution.',
+      },
     },
     {
       id: 'htw-L5-Q4',
@@ -70,6 +83,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'A racket vibrates in modes like a beam. The sweet spot coincides with a vibration node — a point that remains stationary during oscillation. Hitting at the node excites minimal handle vibration, reducing sting and energy loss. This is the same principle as nodes on a vibrating string.',
+      distractorExplanations: {
+        1: 'This focuses on where/frame, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on where/string, which is not the correct mechanism or principle for this problem.',
+        3: 'This focuses on psychological/points, which is not the correct mechanism or principle for this problem.',
+      },
       hint: 'Think of a vibrating guitar string — where are the points that do not move?',
     },
     {
@@ -85,6 +103,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'Carbon fiber composites have an extremely high modulus-to-density ratio (specific stiffness). This lets designers make frames that are both lighter and stiffer than wood, improving swing speed and energy transfer. The anisotropic layup can also be tailored to control flex in specific directions.',
+      distractorExplanations: {
+        1: 'This focuses on carbon/fiber, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on carbon/fiber, which is not the correct mechanism or principle for this problem.',
+        3: 'This incorrectly claims impossibility; the described outcome is achievable under proper conditions.',
+      },
     },
     // ── SKATEBOARD / ROLLER COASTER ──
     {
@@ -100,6 +123,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'At the top of the loop, both gravity and the normal force point toward the center. The minimum case is when the normal force equals zero: mg = mv²/r, so v² = gr. If v is less than sqrt(gr), the car loses contact. This is why roller coaster loops are often clothoid (teardrop) shaped — the smaller radius at the top requires less speed.',
+      distractorExplanations: {
+        1: 'This focuses on enough/kinetic, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on track/outward,, which is not the correct mechanism or principle for this problem.',
+        3: 'At the top of the loop, both gravity and the normal force point toward the center.',
+      },
       hint: 'At the top of the loop, what direction does gravity point relative to the center?',
     },
     {
@@ -109,6 +137,9 @@ export const lesson5: Lesson = {
       question: 'On a frictionless roller coaster, a car that starts from rest at height h will always reach the same maximum speed at the bottom, regardless of the track shape.',
       correctAnswer: true,
       explanation: 'Conservation of energy: mgh = ½mv². The speed at the bottom depends only on the height difference, not the path taken (assuming no friction or drag). This is a direct consequence of gravity being a conservative force. The track shape affects the time to reach the bottom, but not the final speed.',
+      distractorExplanations: {
+        1: 'Conservation of energy: mgh = ½mv².',
+      },
     },
     {
       id: 'htw-L5-Q9',
@@ -123,6 +154,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'At the bottom of a curve, the net upward force must equal the centripetal force: N - mg = mv²/r, so N = m(g + v²/r). The normal force exceeds the rider\'s weight, creating the sensation of feeling heavier. This is the same principle that makes you feel heavy at the bottom of a roller coaster loop.',
+      distractorExplanations: {
+        1: 'This focuses on gravity/increases, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on skateboard/compresses,, which is not the correct mechanism or principle for this problem.',
+        3: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+      },
     },
     // ── DIVING BOARD ──
     {
@@ -138,6 +174,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'A diving board is fixed at one end and free at the other — a cantilever. The bending moment is greatest at the fixed support (M = F × L for a point load at the tip). This is why diving boards are thicker/reinforced at the base and taper toward the free end.',
+      distractorExplanations: {
+        1: 'This focuses on simply/supported, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on column/under, which is not the correct mechanism or principle for this problem.',
+        3: 'This focuses on truss/member, which is not the correct mechanism or principle for this problem.',
+      },
       hint: 'One end is clamped to the platform; the other hangs freely over the water.',
     },
     {
@@ -163,6 +204,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'The impulse-momentum theorem states F·Δt = mΔv. For a given change in momentum (fixed mΔv), increasing the stopping time Δt (by foam crushing) reduces the peak force F on the head. The foam absorbs energy through irreversible plastic deformation — it crushes and does not bounce back, which is why helmets must be replaced after an impact.',
+      distractorExplanations: {
+        1: 'This focuses on reflects/impact, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on stronger/skull, which is not the correct mechanism or principle for this problem.',
+        3: 'This focuses on prevents/helmet, which is not the correct mechanism or principle for this problem.',
+      },
       hint: 'If you catch an egg by moving your hands backward, you increase the stopping time.',
     },
     {
@@ -172,6 +218,9 @@ export const lesson5: Lesson = {
       question: 'A helmet foam liner should be highly elastic (like a rubber ball) so it can be reused after each impact.',
       correctAnswer: false,
       explanation: 'Helmet foam (typically EPS — expanded polystyrene) is designed to deform plastically and crush permanently. This irreversible deformation absorbs maximum energy during the impact. An elastic material would bounce back, returning energy and increasing the rebound force on the head. This is why helmets must be replaced after a crash — the foam is already crushed and cannot protect again.',
+      distractorExplanations: {
+        0: 'Helmet foam (typically EPS — expanded polystyrene) is designed to deform plastically and crush permanently.',
+      },
     },
     // ── SWIMMING / ROWING ──
     {
@@ -187,6 +236,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'At swimming speeds, skin friction (viscous shear stress at the surface) is a significant portion of total drag. A smoother surface reduces the friction coefficient and delays boundary layer transition from laminar to turbulent. Pressure drag (form drag) from body shape is also important but is addressed through streamlining technique, not shaving.',
+      distractorExplanations: {
+        1: 'This focuses on shaving/prevents, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on induced/smooth, which is not the correct mechanism or principle for this problem.',
+        3: 'This focuses on compressibility/smooth, which is not the correct mechanism or principle for this problem.',
+      },
       hint: 'Think about the fluid sliding along the skin surface — what force resists that sliding?',
     },
     {
@@ -212,6 +266,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'A larger club head has a higher moment of inertia (MOI) about its center of gravity. When you hit off-center, the club twists less (angular acceleration = torque/MOI), resulting in less distance and accuracy loss. Titanium\'s low density allows a larger head volume without excessive weight, maximizing MOI within rules limits.',
+      distractorExplanations: {
+        1: 'This focuses on larger/increases, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on titanium/heavier, which is not the correct mechanism or principle for this problem.',
+        3: 'This focuses on larger/stores, which is not the correct mechanism or principle for this problem.',
+      },
       hint: 'What happens when you hit the ball near the toe instead of the center?',
     },
     {
@@ -227,6 +286,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'COR = (v_separation) / (v_approach). A COR of 1.0 means a perfectly elastic collision (no energy loss); 0 means perfectly inelastic (objects stick together). At 0.83, about 31% of kinetic energy is lost to deformation, heat, and sound. Higher COR means the ball leaves faster for a given swing speed.',
+      distractorExplanations: {
+        1: 'This focuses on weight/point, which is not the correct mechanism or principle for this problem.',
+        2: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+        3: 'This focuses on percentage/volume, which is not the correct mechanism or principle for this problem.',
+      },
     },
     {
       id: 'htw-L5-Q18',
@@ -235,6 +299,9 @@ export const lesson5: Lesson = {
       question: 'In a golf swing, doubling the club head speed at impact will exactly double the ball\'s launch speed.',
       correctAnswer: false,
       explanation: 'The collision equation v_ball = v_club × (1 + COR) / (1 + m_ball/m_club) is linear in v_club when COR and masses are constant — so at first glance, doubling speed should double ball speed. However, in reality COR decreases at higher impact speeds because the ball and face undergo greater deformation, dissipating more energy. This speed-dependent COR makes the actual relationship nonlinear, so doubling club speed produces less than double the ball speed.',
+      distractorExplanations: {
+        0: 'The collision equation v_ball = v_club × (1 + COR) / (1 + m_ball/m_club) is linear in v_club when COR and masses are constant — so at fir...',
+      },
     },
     // ── MIXED / CROSS-TOPIC ──
     {
@@ -259,6 +326,11 @@ export const lesson5: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'At steady state, Power = Drag × Velocity. If drag = Cv², then P = Cv³. So v = (P/C)^(1/3). Doubling P gives v_new = (2P/C)^(1/3) = 2^(1/3) × v_old ≈ 1.26v. This cube-root relationship explains why enormous power increases yield modest speed gains in water sports.',
+      distractorExplanations: {
+        1: 'This value results from an incorrect approach; — double power means double speed at steady state.',
+        2: 'This focuses on force/scales, which is not the correct mechanism or principle for this problem.',
+        3: '4 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+      },
       hint: 'At steady state, all power goes to overcoming drag. Write P = F_drag × v and substitute F_drag = Cv².',
     },
   ],
@@ -286,6 +358,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'If the counterweight balanced 50% of max load, it would be perfect only when the cab is exactly half full. Since elevators run empty or lightly loaded far more often than fully loaded, 40% minimizes the average imbalance. This reduces average motor power, energy consumption, and wear. The motor only needs to handle the difference between cab+passengers and counterweight.',
+      distractorExplanations: {
+        1: 'This focuses on would/system, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on building/safety, which is not the correct mechanism or principle for this problem.',
+        3: 'This focuses on extra/counterweight, which is not the correct mechanism or principle for this problem.',
+      },
       hint: 'Think about how often an elevator runs empty vs. fully loaded.',
     },
     {
@@ -301,6 +378,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'The motor must overcome: (1) the net gravitational imbalance = (m_cab − m_cw) × g = 500 × 9.81 = 4905 N, plus (2) the inertia of both masses (cab going up + counterweight going down, both accelerating) = (m_cab + m_cw) × a = 3500 × 1.5 = 5250 N. Total ≈ 10,155 N. Both masses are connected by the cable, so the motor must accelerate both.',
+      distractorExplanations: {
+        1: 'This focuses on 19,620/weight, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on (2000/1500), which is not the correct mechanism or principle for this problem.',
+        3: 'This is too restrictive; the principle applies more broadly than acceleration force suggests.',
+      },
       hint: 'The counterweight cancels most of the gravitational load. The motor handles the difference plus the acceleration.',
     },
     {
@@ -310,6 +392,9 @@ export const lesson6: Lesson = {
       question: 'Elevator safety brakes work by gripping the guide rails when the cable tension drops to zero (cable breaks), using a centrifugal governor that detects overspeed.',
       correctAnswer: true,
       explanation: 'Elisha Otis invented this in 1852. A centrifugal governor spins faster as the cab accelerates downward. When speed exceeds a threshold, the governor triggers wedge-shaped brakes that grip the guide rails, bringing the cab to a stop. The system is fail-safe — it activates when something goes wrong (loss of tension or overspeed), not when something is applied.',
+      distractorExplanations: {
+        1: 'Elisha Otis invented this in 1852.',
+      },
     },
     {
       id: 'htw-L6-Q4',
@@ -334,6 +419,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'A truss resists bending by separating compression and tension into discrete members. Under downward loads, the top chord shortens (compression) and the bottom chord lengthens (tension), just like the top and bottom fibers of a solid beam. Diagonal and vertical members carry the shear forces as alternating tension and compression.',
+      distractorExplanations: {
+        1: '"Both chords carry compression" is incorrect; the reasoning does not follow from the governing equations.',
+        2: 'This focuses on tension,/compression, which is not the correct mechanism or principle for this problem.',
+        3: 'The outcome does depend on the factor this option dismisses (truss members).',
+      },
       hint: 'Think about bending a solid beam — the top compresses and the bottom stretches.',
     },
     {
@@ -349,6 +439,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'An arch transfers loads primarily as compression along its curved axis, minimizing bending moments. Stone and concrete are very strong in compression but weak in tension, making the arch ideal for these materials. A beam of the same material would develop tension on its bottom face, limiting its span before the material fails in tension.',
+      distractorExplanations: {
+        1: 'This focuses on shape/aerodynamic,, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on bridge/total, which is not the correct mechanism or principle for this problem.',
+        3: 'This focuses on geometry/prevents, which is not the correct mechanism or principle for this problem.',
+      },
     },
     {
       id: 'htw-L6-Q7',
@@ -357,6 +452,9 @@ export const lesson6: Lesson = {
       question: 'In a suspension bridge, the main cables are in tension and the towers are in compression.',
       correctAnswer: true,
       explanation: 'The deck load is transferred through vertical suspender cables to the main cables, which are in pure tension (a flexible cable can only pull). The main cables pull inward on the towers, which resist as vertical compression members transferring the load down to the foundations. This arrangement allows very long spans because tension members (cables) can be extremely efficient.',
+      distractorExplanations: {
+        1: 'The deck load is transferred through vertical suspender cables to the main cables, which are in pure tension (a flexible cable can only p...',
+      },
     },
     // ── WATER TOWER ──
     {
@@ -372,6 +470,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'Hydrostatic pressure P = ρgh = 1000 × 9.81 × 40 = 392,400 Pa ≈ 392 kPa ≈ 57 psi. This is the "head" concept — height of fluid creates pressure at the bottom. Water towers use gravity to provide consistent pressure without pumps, as long as the water level is maintained. Pipe diameter affects flow rate, not static pressure.',
+      distractorExplanations: {
+        1: '40 is an order of magnitude too small, likely from a unit conversion error.',
+        2: '4000 is an order of magnitude too large, likely from a unit conversion error.',
+        3: 'This focuses on depends/diameter,, which is not the correct mechanism or principle for this problem.',
+      },
       hint: 'Hydrostatic pressure depends only on fluid density, gravity, and height — not container shape or pipe size.',
     },
     {
@@ -397,6 +500,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'For fully developed turbulent flow in a pipe, the Darcy-Weisbach equation gives ΔP ∝ Q²/(D⁵) at constant flow rate Q. Reducing diameter from 30 to 20 cm increases ΔP by (30/20)⁵ = (1.5)⁵ ≈ 7.6×. This is why duct sizing is critical in HVAC — slightly undersized ducts cause enormous pressure drop increases, demanding larger, more expensive fans.',
+      distractorExplanations: {
+        1: 'This focuses on proportional/diameter, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on ducts/since, which is not the correct mechanism or principle for this problem.',
+        3: 'This focuses on larger/higher, which is not the correct mechanism or principle for this problem.',
+      },
       hint: 'The Darcy-Weisbach equation shows pressure drop depends very strongly on diameter.',
     },
     {
@@ -412,6 +520,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'In turbulent flow, the Colebrook equation (or Moody chart) determines the friction factor, which depends on both Re and the relative roughness (ε/D) of the duct surface. For laminar flow (Re < 2300), f = 64/Re regardless of roughness. This distinction matters for HVAC design — galvanized steel, flexible duct, and fiberglass-lined duct all have different roughness values.',
+      distractorExplanations: {
+        1: 'The outcome does depend on the factor this option dismisses (constant turbulent).',
+        2: 'This focuses on equals/64/re,, which is not the correct mechanism or principle for this problem.',
+        3: 'This focuses on turbulent/because, which is not the correct mechanism or principle for this problem.',
+      },
     },
     // ── CRANE ──
     {
@@ -427,6 +540,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'Stability is a moment balance about the tipping edge (front axle or outrigger). The crane\'s own weight creates a restoring moment, while the lifted load creates an overturning moment = W_load × d_horizontal. This is why cranes have load charts — maximum load decreases as boom reach (horizontal distance) increases. Counterweights increase the restoring moment.',
+      distractorExplanations: {
+        1: 'This "always" claim is too broad; crane heavier the principle has important exceptions.',
+        2: 'This "always" claim is too broad; angle exceed the principle has important exceptions.',
+        3: 'This focuses on centered/directly, which is not the correct mechanism or principle for this problem.',
+      },
       hint: 'Think about a seesaw — which side has the greater moment about the pivot?',
     },
     {
@@ -436,6 +554,9 @@ export const lesson6: Lesson = {
       question: 'A crane\'s maximum lifting capacity remains constant regardless of the boom angle and reach distance.',
       correctAnswer: false,
       explanation: 'The overturning moment = load × horizontal distance from the tipping point. As the boom extends or lowers (increasing horizontal reach), the same load creates a larger overturning moment. This is why every crane has a load chart: capacity decreases as radius increases. A crane rated at 50 tonnes at 10 m might only lift 15 tonnes at 30 m.',
+      distractorExplanations: {
+        0: 'The overturning moment = load × horizontal distance from the tipping point.',
+      },
     },
     {
       id: 'htw-L6-Q14',
@@ -460,6 +581,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'Pressure P = ρgh increases linearly from zero at the surface to ρgH at the base, forming a triangle. The resultant of a triangular distribution acts at the centroid: 1/3 from the base (or 2/3 from the surface). For a dam of height H and width w, the total force = ½ρgH² × w, acting at H/3 from the bottom.',
+      distractorExplanations: {
+        1: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+        2: 'This focuses on parabolic/mid-depth., which is not the correct mechanism or principle for this problem.',
+        3: 'This focuses on surface., which is not the correct mechanism or principle for this problem.',
+      },
     },
     {
       id: 'htw-L6-Q16',
@@ -474,6 +600,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'Hydrostatic pressure increases linearly with depth (P = ρgh), so the base experiences the highest lateral force. The dam must resist both overturning (moment about the toe) and sliding. A wide, heavy base increases the restoring moment and the friction force (f = μN = μ × weight), providing stability. The triangular cross-section efficiently places mass where it is most needed.',
+      distractorExplanations: {
+        1: 'This focuses on thick/purely, which is not the correct mechanism or principle for this problem.',
+        2: 'This focuses on water/uniform, which is not the correct mechanism or principle for this problem.',
+        3: 'This is too restrictive; the principle applies more broadly than thick prevents suggests.',
+      },
       hint: 'Where is the water pressure highest — at the top of the dam or the bottom?',
     },
     {
@@ -483,6 +614,9 @@ export const lesson6: Lesson = {
       question: 'The total hydrostatic force on a dam doubles when the water depth doubles.',
       correctAnswer: false,
       explanation: 'The total hydrostatic force on a vertical surface = ½ρgH²w (per unit width). Since force scales with H², doubling the depth quadruples the total force. This square relationship is why dam design becomes dramatically more challenging as reservoir depth increases — a dam holding back 100 m of water faces four times the force of one holding 50 m.',
+      distractorExplanations: {
+        0: 'The total hydrostatic force on a vertical surface = ½ρgH²w (per unit width).',
+      },
     },
     // ── ESCALATOR / CONVEYOR ──
     {
@@ -498,6 +632,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'Power = rate of potential energy gain = total mass × g × vertical velocity. The vertical component of belt speed = 0.5 × sin(30°) = 0.25 m/s. So P = 30 × 75 × 9.81 × 0.25 ≈ 5,520 W ≈ 5.5 kW. The actual motor must be larger to account for friction, step chain weight, and efficiency (typically 3-5× the theoretical minimum).',
+      distractorExplanations: {
+        1: '110 significantly exceeds the correct answer due to a fundamental formula or calculation error.',
+        2: '1.1 is one-quarter of the correct value, from an extra division or missing squared term.',
+        3: '11 is approximately double the correct answer, likely from a missing factor of 1/2 in the formula.',
+      },
       hint: 'Power equals the rate of doing work against gravity: P = (total weight) × (vertical component of velocity).',
     },
     {
@@ -522,6 +661,11 @@ export const lesson6: Lesson = {
       ],
       correctIndex: 0,
       explanation: 'Motor efficiency η = P_output / P_input. If the motor consumes 15 kW (electrical input) at 85% efficiency, the useful mechanical output = 15 × 0.85 = 12.75 kW. The remaining 2.25 kW is lost as heat. This is why real systems always require motors rated higher than the theoretical load — you must account for efficiency losses in the motor, gearbox, and drivetrain.',
+      distractorExplanations: {
+        1: 'This value results from an incorrect approach; — divide by efficiency because the motor compensates for loss.',
+        2: 'This value results from an incorrect approach; — efficiency does not reduce the mechanical output power.',
+        3: '"12.75 kW at startup only" is incorrect; the reasoning does not follow from the governing equations.',
+      },
       hint: 'Efficiency = output / input. Some energy is always lost as heat.',
     },
   ],

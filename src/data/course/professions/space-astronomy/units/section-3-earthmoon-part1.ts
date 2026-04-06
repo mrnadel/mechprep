@@ -32,6 +32,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Earth's axis is tilted about 23.5 degrees.",
             correctAnswer: true,
             explanation: "Earth's axial tilt is approximately 23.5 degrees. This tilt stays roughly constant as Earth orbits the Sun.",
+            distractorExplanations: {
+              1: 'Earth\'s axial tilt is approximately 23.5 degrees.',
+            },
           },
           {
             id: "sp-sec3-u1-L1-Q2",
@@ -45,6 +48,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Seasons result from Earth's 23.5-degree axial tilt, not distance. Earth is actually closest to the Sun during the Northern Hemisphere's winter.",
+            distractorExplanations: {
+              1: 'Earth\'s distance from the Sun is incorrect; seasons result from Earth\'s 23.5-degree axial tilt, not distance.',
+              2: 'The Moon\'s gravitational pull is incorrect; seasons result from Earth\'s 23.5-degree axial tilt, not distance.',
+              3: 'Changes in the Sun\'s brightness is incorrect; seasons result from Earth\'s 23.5-degree axial tilt, not distance.',
+            },
           },
           {
             id: "sp-sec3-u1-L1-T2",
@@ -72,6 +80,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Northern summer happens when the North Pole tilts toward the Sun. The tilt angle stays the same year-round.",
+            distractorExplanations: {
+              1: 'Earth is closest to the Sun is incorrect; northern summer happens when the North Pole tilts toward the Sun.',
+              2: 'The South Pole tilts toward the Sun is incorrect; northern summer happens when the North Pole tilts toward the Sun.',
+              3: 'Earth\'s tilt increases to 30 degrees is incorrect; northern summer happens when the North Pole tilts toward the Sun.',
+            },
           },
           {
             id: "sp-sec3-u1-L1-T3",
@@ -95,6 +108,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Summer happens because Earth moves closer to the Sun.",
             correctAnswer: false,
             explanation: "Distance has almost no effect on seasons. Earth is actually slightly closer to the Sun in January, during Northern Hemisphere winter.",
+            distractorExplanations: {
+              0: 'Distance has almost no effect on seasons.',
+            },
           },
           {
             id: "sp-sec3-u1-L1-Q7",
@@ -109,6 +125,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Axial tilt is the correct cause. Earth's distance from the Sun varies only about 3%, which is too small to drive seasons.",
+            distractorExplanations: {
+              1: 'This is incorrect; axial tilt is the correct cause.',
+              2: 'This claim is incorrect; axial tilt is the correct cause.',
+              3: 'This is incorrect; axial tilt is the correct cause.',
+            },
           },
         ],
       },
@@ -138,6 +159,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Solstices mark the extremes. The summer solstice is the longest day, and the winter solstice is the shortest day for that hemisphere.",
+            distractorExplanations: {
+              1: 'This is incorrect; solstices mark the extremes.',
+              2: 'Earth\'s tilt temporarily changes is incorrect; solstices mark the extremes.',
+              3: 'The Moon blocks the Sun is incorrect; solstices mark the extremes.',
+            },
           },
           {
             id: "sp-sec3-u1-L2-Q2",
@@ -145,6 +171,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "On an equinox, day and night are approximately equal in length.",
             correctAnswer: true,
             explanation: "The word 'equinox' comes from Latin meaning 'equal night.' Daylight and darkness are close to 12 hours each.",
+            distractorExplanations: {
+              1: 'The word \'equinox\' comes from Latin meaning \'equal night.\' Daylight and darkness are close to 12 hours each.',
+            },
           },
           {
             id: "sp-sec3-u1-L2-T2",
@@ -182,6 +211,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The December solstice (around December 21) marks the start of winter in the Northern Hemisphere, with the shortest day of the year.",
+            distractorExplanations: {
+              0: 'June solstice is incorrect; the December solstice (around December 21) marks the start of winter in the Northern Hemisphere, with the shortest.',
+              1: 'September equinox is incorrect; the December solstice (around December 21) marks the start of winter in the Northern Hemisphere, with the shortest.',
+              3: 'March equinox is incorrect; the December solstice (around December 21) marks the start of winter in the Northern Hemisphere, with the shortest.',
+            },
           },
           {
             id: "sp-sec3-u1-L2-T3",
@@ -203,6 +237,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The June solstice is always the start of summer everywhere on Earth.",
             correctAnswer: false,
             explanation: "The June solstice is the start of summer only in the Northern Hemisphere. In the Southern Hemisphere, it marks the start of winter.",
+            distractorExplanations: {
+              0: 'The June solstice is the start of summer only in the Northern Hemisphere.',
+            },
           },
         ],
       },
@@ -226,6 +263,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "When it's summer in Australia, it's winter in Canada.",
             correctAnswer: true,
             explanation: "Australia is in the Southern Hemisphere and Canada is in the Northern Hemisphere. Their seasons are always opposite.",
+            distractorExplanations: {
+              1: 'Australia is in the Southern Hemisphere and Canada is in the Northern Hemisphere.',
+            },
           },
           {
             id: "sp-sec3-u1-L3-Q2",
@@ -239,6 +279,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "In December the South Pole tilts toward the Sun. That makes it summer in the Southern Hemisphere and winter in the north.",
+            distractorExplanations: {
+              0: 'Northern Hemisphere is incorrect; in December the South Pole tilts toward the Sun.',
+              2: 'Both hemispheres equally is incorrect; in December the South Pole tilts toward the Sun.',
+              3: 'Neither hemisphere is incorrect; in December the South Pole tilts toward the Sun.',
+            },
           },
           {
             id: "sp-sec3-u1-L3-T2",
@@ -276,6 +321,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The equator faces the Sun almost directly throughout the year. The tilt has minimal effect at the equator, so temperatures stay warm year-round.",
+            distractorExplanations: {
+              1: 'It\'s closer to the Sun than the poles is incorrect; the equator faces the Sun almost directly throughout the year.',
+              2: 'The Moon stabilizes its climate is incorrect; the equator faces the Sun almost directly throughout the year.',
+              3: 'It has no axial tilt is incorrect; the equator faces the Sun almost directly throughout the year.',
+            },
           },
           {
             id: "sp-sec3-u1-L3-T3",
@@ -296,6 +346,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "January is summer in the Southern Hemisphere because the South Pole tilts toward the Sun while the North Pole tilts away.",
+            distractorExplanations: {
+              1: 'This is incorrect; january is summer in the Southern Hemisphere because the South Pole tilts toward the Sun while the North Pole tilts away.',
+              2: 'This is incorrect; january is summer in the Southern Hemisphere because the South Pole tilts toward the Sun while the North Pole tilts away.',
+              3: 'This is incorrect; january is summer in the Southern Hemisphere because the South Pole tilts toward the Sun while the North Pole tilts away.',
+            },
           },
         ],
       },
@@ -320,6 +375,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Earth's orbit is nearly circular, so distance from the Sun barely changes.",
             correctAnswer: true,
             explanation: "Earth's orbit is only about 3% off from a perfect circle. The small distance change has negligible effect on seasons.",
+            distractorExplanations: {
+              1: 'Earth\'s orbit is only about 3% off from a perfect circle.',
+            },
           },
           {
             id: "sp-sec3-u1-L4-Q2",
@@ -333,6 +391,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth reaches perihelion (closest point to the Sun) around January 3. That's winter in the Northern Hemisphere, proving distance doesn't cause seasons.",
+            distractorExplanations: {
+              1: 'Late June is incorrect; earth reaches perihelion (closest point to the Sun) around January 3.',
+              2: 'March equinox is incorrect; earth reaches perihelion (closest point to the Sun) around January 3.',
+              3: 'September equinox is incorrect; earth reaches perihelion (closest point to the Sun) around January 3.',
+            },
           },
           {
             id: "sp-sec3-u1-L4-T2",
@@ -355,6 +418,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "If Earth had no axial tilt, we would still have seasons.",
             correctAnswer: false,
             explanation: "Without axial tilt, every spot on Earth would get the same amount of sunlight year-round. There would be no seasons as we know them.",
+            distractorExplanations: {
+              0: 'Without axial tilt, every spot on Earth would get the same amount of sunlight year-round.',
+            },
           },
           {
             id: "sp-sec3-u1-L4-Q5",
@@ -368,6 +434,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Perihelion is when Earth is closest to the Sun (about January 3). Aphelion is when it's farthest away (about July 4).",
+            distractorExplanations: {
+              1: 'Aphelion is incorrect; perihelion is when Earth is closest to the Sun (about January 3).',
+              2: 'Solstice is incorrect; perihelion is when Earth is closest to the Sun (about January 3).',
+              3: 'Equinox is incorrect; perihelion is when Earth is closest to the Sun (about January 3).',
+            },
           },
           {
             id: "sp-sec3-u1-L4-T3",
@@ -397,6 +468,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Great reasoning. If distance caused seasons, the whole planet would warm up together. Opposite seasons in opposite hemispheres prove tilt is the cause.",
+            distractorExplanations: {
+              1: 'This reasoning is wrong because great reasoning.',
+              2: 'This reasoning is wrong because great reasoning.',
+              3: 'This answer is wrong; great reasoning.',
+            },
           },
         ],
       },
@@ -557,6 +633,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon orbits at an average distance of about 384,000 km. For comparison, the Sun is about 150 million km away.",
+            distractorExplanations: {
+              1: '150 million km is incorrect; the Moon orbits at an average distance of about 384,000 km.',
+              2: '40 trillion km is incorrect; the Moon orbits at an average distance of about 384,000 km.',
+              3: '4,000 km is incorrect; the Moon orbits at an average distance of about 384,000 km.',
+            },
           },
           {
             id: "sp-sec3-u2-L1-Q2",
@@ -564,6 +645,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The Moon is about one-quarter the diameter of Earth.",
             correctAnswer: true,
             explanation: "The Moon's diameter is about 3,474 km, roughly 27% of Earth's 12,742 km. That ratio is one of the largest for any planet-moon pair.",
+            distractorExplanations: {
+              1: 'The Moon\'s diameter is about 3,474 km, roughly 27% of Earth\'s 12,742 km.',
+            },
           },
           {
             id: "sp-sec3-u2-L1-T2",
@@ -583,6 +667,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With no atmosphere, there's no wind or erosion. Footprints on the Moon could last millions of years.",
+            distractorExplanations: {
+              1: 'The Moon\'s gravity holds them in place is incorrect; with no atmosphere, there\'s no wind or erosion.',
+              2: 'NASA protected them with a coating is incorrect; with no atmosphere, there\'s no wind or erosion.',
+              3: 'The soil is too hard to be disturbed is incorrect; with no atmosphere, there\'s no wind or erosion.',
+            },
           },
           {
             id: "sp-sec3-u2-L1-Q4",
@@ -604,6 +693,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The Moon produces its own light like a star does.",
             correctAnswer: false,
             explanation: "The Moon has no internal light source. Moonlight is simply reflected sunlight.",
+            distractorExplanations: {
+              0: 'The Moon has no internal light source.',
+            },
           },
           {
             id: "sp-sec3-u2-L1-Q6",
@@ -642,6 +734,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Theia was roughly the size of Mars. Its collision with early Earth produced enough debris to form our Moon.",
+            distractorExplanations: {
+              1: 'A giant asteroid from the belt is incorrect; theia was roughly the size of Mars.',
+              2: 'A passing comet is incorrect; theia was roughly the size of Mars.',
+              3: 'A chunk of the Sun is incorrect; theia was roughly the size of Mars.',
+            },
           },
           {
             id: "sp-sec3-u2-L2-Q2",
@@ -649,6 +746,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The Moon formed about 4.5 billion years ago.",
             correctAnswer: true,
             explanation: "Radioactive dating of Moon rocks brought back by Apollo astronauts confirms the Moon is about 4.5 billion years old.",
+            distractorExplanations: {
+              1: 'Radioactive dating of Moon rocks brought back by Apollo astronauts confirms the Moon is about 4.5 billion years old.',
+            },
           },
           {
             id: "sp-sec3-u2-L2-T2",
@@ -669,6 +769,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Moon rocks match the composition of Earth's mantle, suggesting the Moon formed from material blasted off Earth's outer layers.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; moon rocks match the composition of Earth\'s mantle, suggesting the Moon formed from material blasted off Earth\'s outer layers.',
+              2: 'This claim is incorrect; moon rocks match the composition of Earth\'s mantle, suggesting the Moon formed from material blasted off Earth\'s outer layers.',
+              3: 'This claim is incorrect; moon rocks match the composition of Earth\'s mantle, suggesting the Moon formed from material blasted off Earth\'s outer layers.',
+            },
           },
           {
             id: "sp-sec3-u2-L2-Q4",
@@ -698,6 +803,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The capture theory explains the Moon's composition better than the giant impact hypothesis.",
             correctAnswer: false,
             explanation: "If the Moon were a captured object, its composition would be very different from Earth's. The chemical similarity strongly supports the giant impact.",
+            distractorExplanations: {
+              0: 'If the Moon were a captured object, its composition would be very different from Earth\'s.',
+            },
           },
           {
             id: "sp-sec3-u2-L2-Q7",
@@ -712,6 +820,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The collision blasted mantle material (silicates) into orbit. The heavier iron from both Theia and Earth sank to Earth's core.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; the collision blasted mantle material (silicates) into orbit.',
+              2: 'This is incorrect; the collision blasted mantle material (silicates) into orbit.',
+              3: 'This claim is incorrect; the collision blasted mantle material (silicates) into orbit.',
+            },
           },
         ],
       },
@@ -742,6 +855,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Maria are ancient plains of solidified lava. Early astronomers thought they were seas, which is why they got the Latin name for 'seas.'",
+            distractorExplanations: {
+              1: 'Highlands is incorrect; maria are ancient plains of solidified lava.',
+              2: 'Craters is incorrect; maria are ancient plains of solidified lava.',
+              3: 'Rilles is incorrect; maria are ancient plains of solidified lava.',
+            },
           },
           {
             id: "sp-sec3-u2-L3-Q2",
@@ -749,6 +867,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The lunar maria actually contain liquid water.",
             correctAnswer: false,
             explanation: "Maria aren't seas at all. They're vast plains of hardened basaltic lava that flooded large impact basins billions of years ago.",
+            distractorExplanations: {
+              0: 'Maria aren\'t seas at all.',
+            },
           },
           {
             id: "sp-sec3-u2-L3-T2",
@@ -777,6 +898,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth has weather, water, and tectonic activity that erase craters. The Moon has none of these, so craters last for billions of years.",
+            distractorExplanations: {
+              1: 'The Moon gets hit more often than Earth is incorrect; earth has weather, water, and tectonic activity that erase craters.',
+              2: 'Earth\'s craters are all underwater is incorrect; earth has weather, water, and tectonic activity that erase craters.',
+              3: 'The Moon\'s gravity attracts more asteroids is incorrect; earth has weather, water, and tectonic activity that erase craters.',
+            },
           },
           {
             id: "sp-sec3-u2-L3-Q5",
@@ -806,6 +932,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The lunar highlands are younger than the maria.",
             correctAnswer: false,
             explanation: "The highlands are the Moon's oldest surface, about 4.4 billion years old. The maria formed later from lava flows, about 3 to 4 billion years ago.",
+            distractorExplanations: {
+              0: 'The highlands are the Moon\'s oldest surface, about 4.4 billion years old.',
+            },
           },
         ],
       },
@@ -829,6 +958,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The far side of the Moon is always in complete darkness.",
             correctAnswer: false,
             explanation: "The far side gets just as much sunlight as the near side. We call it the 'far side' because it always faces away from Earth, not because it's dark.",
+            distractorExplanations: {
+              0: 'The far side gets just as much sunlight as the near side.',
+            },
           },
           {
             id: "sp-sec3-u2-L4-Q2",
@@ -842,6 +974,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "This is called tidal locking. The Moon rotates once every 27.3 days, exactly matching the time it takes to orbit Earth. So the same face always points toward us.",
+            distractorExplanations: {
+              1: 'The Moon doesn\'t rotate at all is incorrect; this is called tidal locking.',
+              2: 'Earth\'s atmosphere blocks the far side is incorrect; this is called tidal locking.',
+              3: 'The far side is too dark to see is incorrect; this is called tidal locking.',
+            },
           },
           {
             id: "sp-sec3-u2-L4-T2",
@@ -876,6 +1013,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Full moons have been scientifically proven to affect human behavior.",
             correctAnswer: false,
             explanation: "Despite popular belief, extensive studies have found no link between full moons and unusual behavior, hospital admissions, or crime rates.",
+            distractorExplanations: {
+              0: 'Despite popular belief, extensive studies have found no link between full moons and unusual behavior, hospital.',
+            },
           },
           {
             id: "sp-sec3-u2-L4-T3",
@@ -895,6 +1035,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Craters at the Moon's poles that never receive sunlight are cold enough to trap water ice, confirmed by multiple spacecraft missions.",
+            distractorExplanations: {
+              1: 'In the maria (flat dark areas) is incorrect; craters at the Moon\'s poles that never receive sunlight are cold enough to trap water ice, confirmed by multiple.',
+              2: 'Flowing as rivers under the surface is incorrect; craters at the Moon\'s poles that never receive sunlight are cold enough to trap water ice, confirmed by.',
+              3: 'In the Moon\'s thin atmosphere is incorrect; craters at the Moon\'s poles that never receive sunlight are cold enough to trap water ice, confirmed by multiple.',
+            },
           },
           {
             id: "sp-sec3-u2-L4-Q7",
@@ -1043,6 +1188,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The Moon's shape changes because Earth's shadow falls on it.",
             correctAnswer: false,
             explanation: "Moon phases aren't caused by Earth's shadow. They happen because we see different portions of the Moon's sunlit half as it orbits Earth.",
+            distractorExplanations: {
+              0: 'Moon phases aren\'t caused by Earth\'s shadow.',
+            },
           },
           {
             id: "sp-sec3-u3-L1-Q2",
@@ -1056,6 +1204,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "As the Moon moves around Earth, the angle between the Sun, Moon, and Earth changes. This changes how much of the lit half we can see.",
+            distractorExplanations: {
+              1: 'Earth\'s shadow covers part of the Moon is incorrect; as the Moon moves around Earth, the angle between the Sun, Moon, and Earth changes.',
+              2: 'The Moon rotates to show different sides is incorrect; as the Moon moves around Earth, the angle between the Sun, Moon, and Earth changes.',
+              3: 'This is incorrect; as the Moon moves around Earth, the angle between the Sun, Moon, and Earth changes.',
+            },
           },
           {
             id: "sp-sec3-u3-L1-T2",
@@ -1098,6 +1251,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The synodic month (new moon to new moon) is about 29.5 days. This is slightly longer than the Moon's orbital period because Earth is also moving.",
+            distractorExplanations: {
+              0: '7 days is incorrect; the synodic month (new moon to new moon) is about 29.5 days.',
+              1: '14 days is incorrect; the synodic month (new moon to new moon) is about 29.5 days.',
+              3: '365 days is incorrect; the synodic month (new moon to new moon) is about 29.5 days.',
+            },
           },
           {
             id: "sp-sec3-u3-L1-Q6",
@@ -1105,6 +1263,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "We always see the same side of the Moon, but different amounts of it are lit depending on the phase.",
             correctAnswer: true,
             explanation: "Tidal locking keeps the same face toward Earth. Phases change how much sunlight we see on that face.",
+            distractorExplanations: {
+              1: 'Tidal locking keeps the same face toward Earth.',
+            },
           },
           {
             id: "sp-sec3-u3-L1-Q7",
@@ -1119,6 +1280,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon isn't changing size. As it orbits, we see a shrinking sliver of sunlight on its surface until it reaches new moon. Then the cycle reverses.",
+            distractorExplanations: {
+              1: 'This is incorrect; the Moon isn\'t changing size.',
+              2: 'This claim is incorrect; the Moon isn\'t changing size.',
+              3: 'This is incorrect; the Moon isn\'t changing size.',
+            },
           },
         ],
       },
@@ -1156,6 +1322,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "After full moon, the lit area starts shrinking. The first shrinking phase is waning gibbous.",
+            distractorExplanations: {
+              1: 'Waxing gibbous is incorrect; after full moon, the lit area starts shrinking.',
+              2: 'Third quarter is incorrect; after full moon, the lit area starts shrinking.',
+              3: 'New moon is incorrect; after full moon, the lit area starts shrinking.',
+            },
           },
           {
             id: "sp-sec3-u3-L2-T2",
@@ -1170,6 +1341,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "A 'first quarter' Moon appears half-lit in the sky.",
             correctAnswer: true,
             explanation: "The name 'quarter' refers to the Moon being one-quarter through its cycle. Visually, it looks like half the face is lit.",
+            distractorExplanations: {
+              1: 'The name \'quarter\' refers to the Moon being one-quarter through its cycle.',
+            },
           },
           {
             id: "sp-sec3-u3-L2-Q4",
@@ -1215,6 +1389,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "There are eight named phases: new, waxing crescent, first quarter, waxing gibbous, full, waning gibbous, third quarter, and waning crescent.",
+            distractorExplanations: {
+              0: '4 is incorrect; there are eight named phases: new, waxing crescent, first quarter, waxing gibbous, full, waning gibbous, third.',
+              1: '6 is incorrect; there are eight named phases: new, waxing crescent, first quarter, waxing gibbous, full, waning gibbous, third.',
+              3: '12 is incorrect; there are eight named phases: new, waxing crescent, first quarter, waxing gibbous, full, waning gibbous, third.',
+            },
           },
         ],
       },
@@ -1238,6 +1417,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "A waxing Moon is getting brighter each night.",
             correctAnswer: true,
             explanation: "Waxing means growing. More of the Moon's sunlit side becomes visible each night during the waxing phases.",
+            distractorExplanations: {
+              1: 'Waxing means growing.',
+            },
           },
           {
             id: "sp-sec3-u3-L3-Q2",
@@ -1251,6 +1433,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Waning means decreasing. After full moon, the Moon wanes through gibbous, third quarter, and crescent back to new moon.",
+            distractorExplanations: {
+              0: 'Waxing is incorrect; waning means decreasing.',
+              2: 'Gibbous is incorrect; waning means decreasing.',
+              3: 'Crescent is incorrect; waning means decreasing.',
+            },
           },
           {
             id: "sp-sec3-u3-L3-T2",
@@ -1288,6 +1475,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "In the Northern Hemisphere, waxing phases are lit on the right. You can use this to quickly identify if the Moon is growing or shrinking.",
+            distractorExplanations: {
+              1: 'Left side is incorrect; in the Northern Hemisphere, waxing phases are lit on the right.',
+              2: 'Top is incorrect; in the Northern Hemisphere, waxing phases are lit on the right.',
+              3: 'Bottom is incorrect; in the Northern Hemisphere, waxing phases are lit on the right.',
+            },
           },
           {
             id: "sp-sec3-u3-L3-T3",
@@ -1308,6 +1500,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A thin sliver is a crescent. Right side lit (in the Northern Hemisphere) means it's waxing. So it's a waxing crescent, growing toward first quarter.",
+            distractorExplanations: {
+              1: 'This reasoning is wrong because a thin sliver is a crescent.',
+              2: 'This reasoning is wrong because a thin sliver is a crescent.',
+              3: 'This reasoning is wrong because a thin sliver is a crescent.',
+            },
           },
           {
             id: "sp-sec3-u3-L3-Q7",
@@ -1315,6 +1512,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Third quarter is a waxing phase.",
             correctAnswer: false,
             explanation: "Third quarter happens during the waning half of the cycle, after full moon. The Moon is three-quarters of the way through its cycle and shrinking.",
+            distractorExplanations: {
+              0: 'Third quarter happens during the waning half of the cycle, after full moon.',
+            },
           },
         ],
       },
@@ -1344,6 +1544,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon's orbital period (sidereal month) is about 27.3 days. The longer synodic month of 29.5 days measures the phase cycle.",
+            distractorExplanations: {
+              1: 'About 29.5 days is incorrect; the Moon\'s orbital period (sidereal month) is about 27.3 days.',
+              2: 'About 14 days is incorrect; the Moon\'s orbital period (sidereal month) is about 27.3 days.',
+              3: 'About 365 days is incorrect; the Moon\'s orbital period (sidereal month) is about 27.3 days.',
+            },
           },
           {
             id: "sp-sec3-u3-L4-Q2",
@@ -1351,6 +1556,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The synodic month and the sidereal month are the same length.",
             correctAnswer: false,
             explanation: "The synodic month (29.5 days) is about 2 days longer than the sidereal month (27.3 days). The extra time accounts for Earth moving in its orbit.",
+            distractorExplanations: {
+              0: 'The synodic month (29.5 days) is about 2 days longer than the sidereal month (27.3 days).',
+            },
           },
           {
             id: "sp-sec3-u3-L4-T2",
@@ -1379,6 +1587,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's orbital motion means the Sun-Earth-Moon geometry changes. After one orbit, the Moon needs about 2 more days to line up at the same phase.",
+            distractorExplanations: {
+              1: 'The Moon slows down during full moon is incorrect; earth\'s orbital motion means the Sun-Earth-Moon geometry changes.',
+              2: 'The Sun pulls the Moon backward slightly is incorrect; earth\'s orbital motion means the Sun-Earth-Moon geometry changes.',
+              3: 'The Moon\'s orbit gets larger each month is incorrect; earth\'s orbital motion means the Sun-Earth-Moon geometry changes.',
+            },
           },
           {
             id: "sp-sec3-u3-L4-T3",
@@ -1412,6 +1625,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Lunar calendars are based on the synodic month.",
             correctAnswer: true,
             explanation: "Lunar calendars track the Moon's visible phases, which repeat every 29.5 days (synodic month).",
+            distractorExplanations: {
+              1: 'Lunar calendars track the Moon\'s visible phases, which repeat every 29.5 days (synodic month).',
+            },
           },
           {
             id: "sp-sec3-u3-L4-Q8",
@@ -1426,6 +1642,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon orbits in 27.3 days relative to the stars. But Earth has moved, so the Moon needs about 2 more days to line up at the same phase angle with the Sun.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; the Moon orbits in 27.3 days relative to the stars.',
+              2: 'This is incorrect; the Moon orbits in 27.3 days relative to the stars.',
+              3: 'This claim is incorrect; the Moon orbits in 27.3 days relative to the stars.',
+            },
           },
         ],
       },
@@ -1585,6 +1806,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's axial tilt causes one hemisphere to receive more direct sunlight than the other, creating seasons.",
+            distractorExplanations: {
+              1: 'Distance from the Sun is incorrect; earth\'s axial tilt causes one hemisphere to receive more direct sunlight than the other, creating seasons.',
+              2: 'The Moon\'s gravitational pull is incorrect; earth\'s axial tilt causes one hemisphere to receive more direct sunlight than the other, creating seasons.',
+              3: 'Solar flare activity is incorrect; earth\'s axial tilt causes one hemisphere to receive more direct sunlight than the other, creating seasons.',
+            },
           },
           {
             id: "sp-sec3-u4-L1-Q2",
@@ -1592,6 +1818,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The giant impact hypothesis says a Mars-sized body called Theia formed the Moon.",
             correctAnswer: true,
             explanation: "Theia's collision with early Earth about 4.5 billion years ago blasted debris into orbit that eventually formed the Moon.",
+            distractorExplanations: {
+              1: 'Theia\'s collision with early Earth about 4.5 billion years ago blasted debris into orbit that eventually formed the Moon.',
+            },
           },
           {
             id: "sp-sec3-u4-L1-Q3",
@@ -1622,6 +1851,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "At new moon, the Moon sits between Earth and the Sun. Its lit side faces away from us, so it appears dark.",
+            distractorExplanations: {
+              0: 'Full moon is incorrect; at new moon, the Moon sits between Earth and the Sun.',
+              1: 'First quarter is incorrect; at new moon, the Moon sits between Earth and the Sun.',
+              3: 'Waning gibbous is incorrect; at new moon, the Moon sits between Earth and the Sun.',
+            },
           },
           {
             id: "sp-sec3-u4-L1-Q6",
@@ -1646,6 +1880,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Earth is closest to the Sun in January, during Northern Hemisphere winter.",
             correctAnswer: true,
             explanation: "Earth reaches perihelion around January 3. This proves that distance doesn't cause seasons, since it's winter in the north at that time.",
+            distractorExplanations: {
+              1: 'Earth reaches perihelion around January 3.',
+            },
           },
           {
             id: "sp-sec3-u4-L1-Q9",
@@ -1659,6 +1896,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon rotates once every 27.3 days, exactly matching its orbital period. This synchronization is called tidal locking.",
+            distractorExplanations: {
+              1: 'The Moon doesn\'t rotate at all is incorrect; the Moon rotates once every 27.3 days, exactly matching its orbital period.',
+              2: 'The far side always faces the Sun is incorrect; the Moon rotates once every 27.3 days, exactly matching its orbital period.',
+              3: 'Earth\'s atmosphere blocks the far side is incorrect; the Moon rotates once every 27.3 days, exactly matching its orbital period.',
+            },
           },
         ],
       },
@@ -1689,6 +1931,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Brazil is in the Southern Hemisphere. When it's winter in the north, it's summer in the south, because the hemispheres tilt in opposite directions.",
+            distractorExplanations: {
+              1: 'Brazil is closer to the Sun in December is incorrect; brazil is in the Southern Hemisphere.',
+              2: 'Brazil doesn\'t really have seasons is incorrect; brazil is in the Southern Hemisphere.',
+              3: 'This claim is incorrect; brazil is in the Southern Hemisphere.',
+            },
           },
           {
             id: "sp-sec3-u4-L2-Q2",
@@ -1703,6 +1950,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Left side lit (in the Northern Hemisphere) means waning. A thin sliver means crescent. So it's a waning crescent, heading toward new moon.",
+            distractorExplanations: {
+              1: 'This is incorrect; left side lit (in the Northern Hemisphere) means waning.',
+              2: 'It\'s about to become a full moon is incorrect; left side lit (in the Northern Hemisphere) means waning.',
+              3: 'This is incorrect; left side lit (in the Northern Hemisphere) means waning.',
+            },
           },
           {
             id: "sp-sec3-u4-L2-Q3",
@@ -1717,6 +1969,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's atmosphere, water erosion, and plate tectonics constantly reshape the surface. The Moon has no erosion, so craters last billions of years.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; earth\'s atmosphere, water erosion, and plate tectonics constantly reshape the surface.',
+              2: 'This is incorrect; earth\'s atmosphere, water erosion, and plate tectonics constantly reshape the surface.',
+              3: 'This is incorrect; earth\'s atmosphere, water erosion, and plate tectonics constantly reshape the surface.',
+            },
           },
           {
             id: "sp-sec3-u4-L2-Q4",
@@ -1731,6 +1988,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's shadow only falls on the Moon during a lunar eclipse. Regular phases are simply changes in how much of the sunlit half we can see.",
+            distractorExplanations: {
+              1: 'This is incorrect; earth\'s shadow only falls on the Moon during a lunar eclipse.',
+              2: 'This is incorrect; earth\'s shadow only falls on the Moon during a lunar eclipse.',
+              3: 'This is incorrect; earth\'s shadow only falls on the Moon during a lunar eclipse.',
+            },
           },
           {
             id: "sp-sec3-u4-L2-Q5",
@@ -1744,6 +2006,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The equator receives nearly direct sunlight all year, so temperature changes are minimal. Higher latitudes experience bigger seasonal swings.",
+            distractorExplanations: {
+              1: 'Identical seasons to 45 degrees north is incorrect; the equator receives nearly direct sunlight all year, so temperature changes are minimal.',
+              2: 'More extreme seasons with hotter summers is incorrect; the equator receives nearly direct sunlight all year, so temperature changes are minimal.',
+              3: 'No sunshine at all during winter months is incorrect; the equator receives nearly direct sunlight all year, so temperature changes are minimal.',
+            },
           },
           {
             id: "sp-sec3-u4-L2-Q6",
@@ -1760,6 +2027,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The Moon's maria formed before the highlands.",
             correctAnswer: false,
             explanation: "The highlands are the oldest surfaces on the Moon (about 4.4 billion years old). Maria formed later when lava flooded impact basins between 3 and 4 billion years ago.",
+            distractorExplanations: {
+              0: 'The highlands are the oldest surfaces on the Moon (about 4.4 billion years old).',
+            },
           },
           {
             id: "sp-sec3-u4-L2-Q8",
@@ -1914,6 +2184,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon's gravity creates a differential pull across Earth, stretching the oceans into two bulges and causing tides.",
+            distractorExplanations: {
+              1: 'Wind pushing water against shorelines is incorrect; tides are caused by the Moon\'s gravitational pull creating two ocean bulges.',
+              2: 'Earth\'s rotation spinning water outward is incorrect; the Moon\'s gravity creates a differential pull across Earth, stretching the oceans into two bulges.',
+              3: 'Heat from the Sun expanding the ocean is incorrect; tides are caused by gravitational pull from the Moon, not thermal expansion.',
+            },
           },
           {
             id: "sp-sec3-u5-L1-Q2",
@@ -1921,6 +2196,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Earth has only one tidal bulge, on the side facing the Moon.",
             correctAnswer: false,
             explanation: "There are two bulges: one facing the Moon (pulled toward it) and one on the opposite side (where water is left behind). This is why most places get two high tides per day.",
+            distractorExplanations: {
+              0: 'There are two bulges: one facing the Moon (pulled toward it) and one on the opposite side (where water is left behind).',
+            },
           },
           {
             id: "sp-sec3-u5-L1-T2",
@@ -1940,6 +2218,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's rotation carries each coast through both tidal bulges (near side and far side) roughly once per day.",
+            distractorExplanations: {
+              1: 'The Moon orbits Earth twice a day is incorrect; earth\'s rotation carries each coast through both tidal bulges (near side and far side) roughly once per day.',
+              2: 'This claim is incorrect; earth\'s rotation carries each coast through both tidal bulges (near side and far side) roughly once per day.',
+              3: 'This is incorrect; earth\'s rotation carries each coast through both tidal bulges (near side and far side) roughly once per day.',
+            },
           },
           {
             id: "sp-sec3-u5-L1-Q4",
@@ -1961,6 +2244,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The Sun has no effect on Earth's tides.",
             correctAnswer: false,
             explanation: "The Sun contributes about 46% of the tidal force. The Moon provides the majority, but the Sun's effect is significant.",
+            distractorExplanations: {
+              0: 'The Sun contributes about 46% of the tidal force.',
+            },
           },
           {
             id: "sp-sec3-u5-L1-Q6",
@@ -1983,6 +2269,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Moon's gravity creates bulges in the ocean. As Earth rotates, coastlines move through these bulges, causing the water level to rise and fall.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; the Moon\'s gravity creates bulges in the ocean.',
+              2: 'This is incorrect; the Moon\'s gravity creates bulges in the ocean.',
+              3: 'This claim is incorrect; the Moon\'s gravity creates bulges in the ocean.',
+            },
           },
         ],
       },
@@ -2012,6 +2303,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Spring tides happen at new moon and full moon, when the Sun, Moon, and Earth align. The name has nothing to do with the spring season.",
+            distractorExplanations: {
+              1: 'Only in the spring season is incorrect; spring tides happen at new moon and full moon, when the Sun, Moon, and Earth align.',
+              2: 'During first and third quarter moons is incorrect; spring tides happen at new moon and full moon, when the Sun, Moon, and Earth align.',
+              3: 'Only when the Moon is closest to Earth is incorrect; spring tides happen at new moon and full moon, when the Sun, Moon, and Earth align.',
+            },
           },
           {
             id: "sp-sec3-u5-L2-Q2",
@@ -2019,6 +2315,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Spring tides are named after the spring season.",
             correctAnswer: false,
             explanation: "The word 'spring' here means to 'spring up' or surge. Spring tides happen twice a month, during both new and full moons, in every season.",
+            distractorExplanations: {
+              0: 'The word \'spring\' here means to \'spring up\' or surge.',
+            },
           },
           {
             id: "sp-sec3-u5-L2-T2",
@@ -2048,6 +2347,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At quarter moons, the Sun and Moon are at right angles relative to Earth. Their tidal forces partially cancel, producing smaller tidal ranges.",
+            distractorExplanations: {
+              0: 'New moon and full moon is incorrect; at quarter moons, the Sun and Moon are at right angles relative to Earth.',
+              2: 'Waxing crescent and waning crescent is incorrect; at quarter moons, the Sun and Moon are at right angles relative to Earth.',
+              3: 'Only during full moon is incorrect; at quarter moons, the Sun and Moon are at right angles relative to Earth.',
+            },
           },
           {
             id: "sp-sec3-u5-L2-Q5",
@@ -2078,6 +2382,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Spring tides happen only once a month.",
             correctAnswer: false,
             explanation: "Spring tides happen twice a month: once at new moon and once at full moon, about two weeks apart.",
+            distractorExplanations: {
+              0: 'Spring tides happen twice a month: once at new moon and once at full moon, about two weeks apart.',
+            },
           },
         ],
       },
@@ -2107,6 +2414,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Tidal locking means the Moon rotates once for every orbit, keeping the same face toward Earth at all times.",
+            distractorExplanations: {
+              1: 'When tides stop occurring entirely is incorrect; tidal locking means the Moon rotates once for every orbit, keeping the same face toward Earth at all times.',
+              2: 'When two objects orbit at the same speed is incorrect; tidal locking means the Moon rotates once for every orbit, keeping the same face toward Earth at all.',
+              3: 'When gravity prevents any rotation is incorrect; tidal locking means the Moon rotates once for every orbit, keeping the same face toward Earth at all times.',
+            },
           },
           {
             id: "sp-sec3-u5-L3-Q2",
@@ -2114,6 +2426,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "The Moon doesn't rotate at all.",
             correctAnswer: false,
             explanation: "The Moon does rotate. It spins exactly once every 27.3 days, which matches its orbital period. That's why we always see the same face.",
+            distractorExplanations: {
+              0: 'The Moon does rotate.',
+            },
           },
           {
             id: "sp-sec3-u5-L3-T2",
@@ -2153,6 +2468,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Angular momentum must be conserved. As Earth's spin slows, that energy transfers to the Moon, pushing it farther away at about 3.8 cm per year.",
+            distractorExplanations: {
+              1: 'It speeds up and moves closer is incorrect; angular momentum must be conserved.',
+              2: 'Nothing changes for the Moon is incorrect; angular momentum must be conserved.',
+              3: 'It starts spinning faster is incorrect; angular momentum must be conserved.',
+            },
           },
           {
             id: "sp-sec3-u5-L3-T3",
@@ -2166,6 +2486,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Tidal locking is rare and only happens with Earth's Moon.",
             correctAnswer: false,
             explanation: "Tidal locking is common. Most large moons in the solar system are tidally locked. Pluto and Charon are even mutually locked.",
+            distractorExplanations: {
+              0: 'Tidal locking is common.',
+            },
           },
           {
             id: "sp-sec3-u5-L3-Q7",
@@ -2203,6 +2526,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Bay of Fundy has tidal ranges over 16 meters (53 feet), the highest in the world. Its funnel-shaped bay amplifies the tidal flow.",
+            distractorExplanations: {
+              1: 'Mediterranean Sea is incorrect; the Bay of Fundy has tidal ranges over 16 meters (53 feet), the highest in the world.',
+              2: 'Gulf of Mexico is incorrect; the Bay of Fundy has tidal ranges over 16 meters (53 feet), the highest in the world.',
+              3: 'Pacific Ocean center is incorrect; the Bay of Fundy has tidal ranges over 16 meters (53 feet), the highest in the world.',
+            },
           },
           {
             id: "sp-sec3-u5-L4-Q2",
@@ -2210,6 +2538,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "All coastlines experience the same size tides.",
             correctAnswer: false,
             explanation: "Tidal ranges vary hugely. Local geography, coastline shape, and ocean basin size amplify or diminish tides in different locations.",
+            distractorExplanations: {
+              0: 'Tidal ranges vary hugely.',
+            },
           },
           {
             id: "sp-sec3-u5-L4-T2",
@@ -2247,6 +2578,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Strait of Gibraltar is too narrow for large amounts of water to flow in and out with each tidal cycle, resulting in tiny tides.",
+            distractorExplanations: {
+              1: 'It\'s too far from the Moon is incorrect; the Strait of Gibraltar is too narrow for large amounts of water to flow in and out with each tidal cycle,.',
+              2: 'The water is too warm for tides is incorrect; the Strait of Gibraltar is too narrow for large amounts of water to flow in and out with each tidal cycle,.',
+              3: 'There are no continental shelves nearby is incorrect; the Strait of Gibraltar is too narrow for large amounts of water to flow in and out with each tidal.',
+            },
           },
           {
             id: "sp-sec3-u5-L4-T3",
@@ -2260,6 +2596,9 @@ export const spaceSection3Part1: Unit[] = [
             question: "Tidal zones are important ecosystems because the regular flooding brings nutrients.",
             correctAnswer: true,
             explanation: "The twice-daily flooding delivers nutrients and food to coastal organisms. Tide pools, mangroves, and salt marshes are among Earth's most biodiverse habitats.",
+            distractorExplanations: {
+              1: 'The twice-daily flooding delivers nutrients and food to coastal organisms.',
+            },
           },
           {
             id: "sp-sec3-u5-L4-Q7",
@@ -2274,6 +2613,11 @@ export const spaceSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Local geography is the key factor. Bay shape, water depth, and coastline orientation can amplify or dampen tides dramatically.",
+            distractorExplanations: {
+              1: 'This claim is incorrect; local geography is the key factor.',
+              2: 'This is incorrect; local geography is the key factor.',
+              3: 'This is incorrect; local geography is the key factor.',
+            },
           },
         ],
       },

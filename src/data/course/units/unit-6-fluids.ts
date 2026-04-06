@@ -32,6 +32,9 @@ export const unit6: Unit = {
           question: 'Water and air are both classified as fluids.',
           correctAnswer: true,
           explanation: 'Yes. Any substance that flows and deforms continuously under shear stress is a fluid, whether liquid or gas.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Fluids include both liquids and gases.',
         },
         {
@@ -47,6 +50,11 @@ export const unit6: Unit = {
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- U-tube --> <path d="M24,14 L24,58 Q24,66 32,66 L48,66 Q56,66 56,58 L56,14" stroke-width="1" stroke="#58CC02" fill="none"/> <!-- Manometric fluid (heavy liquid in U-bend) --> <path d="M24.5,44 L24.5,58 Q24.5,65.5 32,65.5 L48,65.5 Q55.5,65.5 55.5,58 L55.5,36" fill="#A5E86C" opacity="0.15"/> <!-- Left fluid column top --> <line x1="22" y1="44" x2="26" y2="44" stroke-width="0.5" stroke="#A5E86C" opacity="0.5"> <animate attributeName="y1" values="44;40;44" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="44;40;44" dur="4s" repeatCount="indefinite"/> </line> <!-- Right fluid column top --> <line x1="54" y1="36" x2="58" y2="36" stroke-width="0.5" stroke="#A5E86C" opacity="0.5"> <animate attributeName="y1" values="36;40;36" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="40;40;40" dur="4s" repeatCount="indefinite"/> </line> <!-- h measurement --> <line x1="62" y1="36" x2="62" y2="44" stroke-width="0.4" stroke="#3B8700" opacity="0.4"> <animate attributeName="y1" values="36;40;36" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="44;40;44" dur="4s" repeatCount="indefinite"/> </line> <line x1="60" y1="36" x2="64" y2="36" stroke-width="0.3" stroke="#3B8700" opacity="0.4"> <animate attributeName="y1" values="36;40;36" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="36;40;36" dur="4s" repeatCount="indefinite"/> </line> <line x1="60" y1="44" x2="64" y2="44" stroke-width="0.3" stroke="#3B8700" opacity="0.4"> <animate attributeName="y1" values="44;40;44" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="44;40;44" dur="4s" repeatCount="indefinite"/> </line> <text x="66" y="42" font-size="3.5" fill="#3B8700" opacity="0.5">h</text> <!-- Pressure connection (left) --> <line x1="10" y1="20" x2="24" y2="20" stroke-width="0.6" stroke="#58CC02"/> <text x="8" y="21.5" font-size="3" fill="#58CC02" text-anchor="end">P₁</text> <!-- Open/reference (right) --> <text x="58" y="12" font-size="3" fill="#3B8700" opacity="0.4">P_atm</text> <!-- Fluid labels --> <text x="40" y="62" font-size="2.5" fill="#A5E86C" opacity="0.35" text-anchor="middle">mercury</text> <!-- Formula --> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#58CC02" opacity="0.4">ΔP = ρgh</text> </svg>',
           explanation: 'This is the hydrostatic paradox. Pressure at a point depends only on depth below the surface: P = P_atm + rho*g*h.',
+          distractorExplanations: {
+            1: 'This focuses on correct,/wider, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on constant/throughout, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on correct,/container, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The hydrostatic equation has no term for container shape.'
         },
         {
@@ -62,6 +70,11 @@ export const unit6: Unit = {
           correctIndex: 3,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="10" y="12" width="34" height="48" rx="6" fill="#58CC02" opacity="0.08"/> <rect x="10" y="12" width="34" height="48" rx="6" stroke="#3B8700" stroke-width="2" fill="none"/> <rect x="13" y="24" width="28" height="34" rx="3" fill="#58CC02" opacity="0.12"/> <rect x="44" y="42" width="8" height="6" rx="3" fill="#3B8700" opacity="0.4"/> <path d="M52,45 Q62,45 67,52 Q71,58 73,66" stroke="#58CC02" stroke-width="2.5" fill="none" opacity="0.35" stroke-linecap="round"/> <circle r="2.5" fill="#58CC02" opacity="0"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M52,45 Q62,45 67,52 Q71,58 73,66"/> <animate attributeName="opacity" values="0.5;0.5;0" dur="1.5s" repeatCount="indefinite"/> </circle> <circle r="2" fill="#A5E86C" opacity="0"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M52,45 Q62,45 67,52 Q71,58 73,66" begin="0.3s"/> <animate attributeName="opacity" values="0.4;0.4;0" dur="1.5s" begin="0.3s" repeatCount="indefinite"/> </circle> <circle r="1.8" fill="#3B8700" opacity="0"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M52,45 Q62,45 67,52 Q71,58 73,66" begin="0.6s"/> <animate attributeName="opacity" values="0.4;0.4;0" dur="1.5s" begin="0.6s" repeatCount="indefinite"/> </circle> <circle r="2.2" fill="#58CC02" opacity="0"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M52,45 Q62,45 67,52 Q71,58 73,66" begin="0.9s"/> <animate attributeName="opacity" values="0.3;0.3;0" dur="1.5s" begin="0.9s" repeatCount="indefinite"/> </circle> <line x1="6" y1="24" x2="6" y2="46" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <text x="4" y="37" font-size="7" fill="#3B8700" opacity="0.35" text-anchor="middle" font-style="italic">h</text> <rect x="4" y="66" width="72" height="4" rx="2" fill="#58CC02" opacity="0.06"/> </svg>',
           explanation: 'Hydrostatic pressure increases with depth, so the resultant force acts below the centroid at the center of pressure.',
+          distractorExplanations: {
+            0: 'This focuses on calculation/correct, which is not the correct mechanism or principle for this problem.',
+            1: 'Regarding resultant force: Hydrostatic pressure increases with depth, so the resultant force acts below the centroid at the center of pressure.',
+            2: 'This focuses on hydrostatic/surface, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Pressure is not uniform: it increases with depth.'
         },
         {
@@ -77,6 +90,11 @@ export const unit6: Unit = {
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Channel walls --> <line x1="4" y1="20" x2="76" y2="20" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <line x1="4" y1="60" x2="76" y2="60" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <text x="40" y="16" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15">no-slip (v=0)</text> <text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15">no-slip (v=0)</text> <line x1="12" y1="24" x2="16" y2="24" stroke="#58CC02" stroke-width="1" opacity="0.2"/> <polygon points="15,22.5 18,24 15,25.5" fill="#58CC02" opacity="0.2"/> <line x1="12" y1="30" x2="24" y2="30" stroke="#58CC02" stroke-width="1" opacity="0.3"/> <polygon points="23,28.5 26,30 23,31.5" fill="#58CC02" opacity="0.3"/> <line x1="12" y1="40" x2="36" y2="40" stroke="#3B8700" stroke-width="1.5" opacity="0.4"/> <polygon points="35,38 38,40 35,42" fill="#3B8700" opacity="0.4"/> <line x1="12" y1="50" x2="24" y2="50" stroke="#58CC02" stroke-width="1" opacity="0.3"/> <polygon points="23,48.5 26,50 23,51.5" fill="#58CC02" opacity="0.3"/> <line x1="12" y1="56" x2="16" y2="56" stroke="#58CC02" stroke-width="1" opacity="0.2"/> <polygon points="15,54.5 18,56 15,57.5" fill="#58CC02" opacity="0.2"/> <path d="M12,20 Q38,40 12,60" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="2,3" fill="none" opacity="0.15"/> <circle r="1.5" fill="#3B8700" opacity="0.4"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M14,40 L66,40"/> </circle> <text x="42" y="39" font-size="4" fill="#3B8700" opacity="0.2" font-style="italic">v_max</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">Poiseuille flow</text> </svg>',
           explanation: 'Newton\'s law of viscosity says tau = mu * (du/dy). For Newtonian fluids, viscosity mu is constant regardless of shear rate.',
+          distractorExplanations: {
+            1: 'This "always" claim is too broad; newtonian fluids the principle has important exceptions.',
+            2: 'This focuses on newtonian/fluids, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on distinction/purely, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The relationship tau = mu * (du/dy) is the key.'
         },
         {
@@ -98,6 +116,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Pressure increases linearly with depth: P = rho*g*h. The deeper you go, the more fluid weight above you.',
+          distractorExplanations: {
+            1: 'Regarding decreases: Pressure increases linearly with depth: P = rho*g*h.',
+            2: 'Regarding stays: Pressure increases linearly with depth: P = rho*g*h.',
+            3: 'Regarding depends shape: Pressure increases linearly with depth: P = rho*g*h.',
+          },
           hint: 'Think about how your ears feel when diving deeper.',
         },
         {
@@ -113,6 +136,11 @@ export const unit6: Unit = {
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="15" y="57" width="52" height="6" rx="2" fill="#A5E86C" opacity="0.15"/> <rect x="17" y="38" width="10" height="19" rx="1" fill="#A5E86C" opacity="0.13"> <animate attributeName="y" values="38;48;38" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> <animate attributeName="height" values="19;9;19" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> </rect> <rect x="49" y="28" width="16" height="29" rx="1" fill="#A5E86C" opacity="0.13"> <animate attributeName="y" values="28;24;28" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> <animate attributeName="height" values="29;33;29" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> </rect> <rect x="14" y="56" width="54" height="8" rx="3" stroke="#3B8700" stroke-width="2" fill="none"/> <line x1="16" y1="26" x2="16" y2="58" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <line x1="28" y1="26" x2="28" y2="58" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <line x1="48" y1="18" x2="48" y2="58" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <line x1="66" y1="18" x2="66" y2="58" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <g> <animateTransform attributeName="transform" type="translate" values="0,0;0,10;0,0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> <rect x="17" y="32" width="10" height="6" rx="2" fill="#58CC02" opacity="0.45"/> <rect x="17" y="32" width="10" height="6" rx="2" stroke="#3B8700" stroke-width="1.5" fill="none"/> <rect x="19.5" y="22" width="5" height="12" rx="2.5" fill="#3B8700" opacity="0.35"/> <line x1="22" y1="12" x2="22" y2="19" stroke="#3B8700" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/> <polygon points="20,18 22,22 24,18" fill="#3B8700" opacity="0.4"/> </g> <g> <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> <rect x="49" y="22" width="16" height="6" rx="2" fill="#58CC02" opacity="0.4"/> <rect x="49" y="22" width="16" height="6" rx="2" stroke="#3B8700" stroke-width="1.5" fill="none"/> <rect x="53" y="14" width="8" height="10" rx="3" fill="#3B8700" opacity="0.3"/> <rect x="50" y="8" width="14" height="6" rx="2" fill="#58CC02" opacity="0.18"/> <rect x="50" y="8" width="14" height="6" rx="2" stroke="#3B8700" stroke-width="1.2" fill="none"/> <polygon points="55,6 57,2 59,6" fill="#3B8700" opacity="0.4"/> </g> <text x="22" y="9" text-anchor="middle" font-size="7" fill="#3B8700" opacity="0.4" font-weight="bold" font-style="italic">f</text> <text x="64" y="5" text-anchor="middle" font-size="8" fill="#3B8700" opacity="0.45" font-weight="bold" font-style="italic">F</text> <text x="22" y="72" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.2" font-style="italic">a</text> <text x="57" y="72" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.2" font-style="italic">A</text> </svg>',
           explanation: 'Pascal\'s law gives force multiplication F2 = F1 * (A2/A1). But volume is conserved: A1*d1 = A2*d2, so displacement shrinks proportionally.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than force multiplication suggests.',
+            1: 'This focuses on energy/difference, which is not the correct mechanism or principle for this problem.',
+            3: 'This incorrectly denies an effect that is relevant to conservation energy and significant in this context.',
+          },
           hint: 'What happens to the displacement when force is multiplied?'
         },
         {
@@ -128,6 +156,11 @@ export const unit6: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><rect x="5" y="40" width="70" height="30" rx="2" fill="#58CC02" opacity="0.08" stroke="#3B8700" stroke-width="1"/><rect x="7" y="42" width="66" height="26" fill="#A5E86C" opacity="0.12"/><rect x="35" y="10" width="10" height="60" rx="1" stroke="#3B8700" stroke-width="1.5" fill="none"/><rect x="36" y="25" width="8" height="45" fill="#A5E86C" opacity="0.15"/><path d="M36,25 Q40,20 44,25" stroke="#58CC02" stroke-width="1" fill="#A5E86C" opacity="0.2"/><line x1="48" y1="25" x2="48" y2="42" stroke="#3B8700" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.4"/><text x="53" y="35" font-size="4" fill="#3B8700" opacity="0.5">h</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#58CC02" opacity="0.4">capillary rise</text></svg>',
           explanation: 'Capillary rise h = 4*sigma*cos(theta)/(rho*g*d), inversely proportional to tube diameter d.',
+          distractorExplanations: {
+            0: 'Temperature is not the primary factor in this problem; the correct analysis uses a different variable.',
+            2: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+            3: 'This focuses on surface/tension, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Look at the capillary rise equation and how diameter appears.'
         },
         {
@@ -175,6 +208,9 @@ export const unit6: Unit = {
           question: 'A steel ship floats because it displaces a volume of water that weighs more than the ship itself.',
           correctAnswer: true,
           explanation: 'Exactly. The hollow hull displaces enough water so the buoyant force equals the ship\'s weight.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Archimedes\' principle is about displaced fluid volume, not material density.',
         },
         {
@@ -190,6 +226,11 @@ export const unit6: Unit = {
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="40" cy="40" r="28" stroke-width="1" stroke="#58CC02" fill="none"/> <circle cx="40" cy="40" r="26" stroke-width="0.3" stroke="#58CC02" fill="none" opacity="0.2"/> <g stroke="#58CC02" stroke-width="0.4" opacity="0.4"> <line x1="40" y1="14" x2="40" y2="18"/><line x1="40" y1="62" x2="40" y2="66"/> <line x1="14" y1="40" x2="18" y2="40"/><line x1="62" y1="40" x2="66" y2="40"/> </g> <text x="40" y="22" font-size="3" fill="#58CC02" opacity="0.35" text-anchor="middle">6</text> <text x="64" y="42" font-size="3" fill="#58CC02" opacity="0.35" text-anchor="middle">10</text> <text x="16" y="42" font-size="3" fill="#58CC02" opacity="0.35" text-anchor="middle">2</text> <text x="22" y="60" font-size="3" fill="#58CC02" opacity="0.35" text-anchor="middle">0</text> <g> <line x1="40" y1="40" x2="24" y2="54" stroke-width="0.8" stroke="#58CC02"/> <animateTransform attributeName="transform" type="rotate" values="0,40,40;-120,40,40;0,40,40" dur="5s" repeatCount="indefinite"/> </g> <circle cx="40" cy="40" r="2.5" stroke-width="0.5" stroke="#58CC02" fill="#58CC02" fill-opacity="0.1"/> <text x="40" y="50" font-size="3" fill="#3B8700" opacity="0.3" text-anchor="middle">bar</text> </svg>',
           explanation: 'P_absolute = P_gauge + P_atmospheric = 350 + 95 = 445 kPa. Gauge pressure uses atmospheric as its zero.',
+          distractorExplanations: {
+            1: 'This value results from an incorrect approach; kPa absolute.',
+            2: '255 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            3: 'This value results from an incorrect approach; kPa, gauge and absolute are equivalent.',
+          },
           hint: 'Gauge pressure uses atmospheric as its zero reference.'
         },
         {
@@ -199,6 +240,9 @@ export const unit6: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="7" text-anchor="middle" font-size="5" fill="#334155" font-weight="bold">Buoyancy Forces</text><rect x="4" y="18" width="72" height="52" rx="2" fill="#58CC02" opacity="0.06"/><line x1="4" y1="18" x2="76" y2="18" stroke="#3B8700" stroke-width="0.8" opacity="0.3"/><rect x="26" y="30" width="28" height="22" rx="3" fill="#A5E86C" opacity="0.15" stroke="#3B8700" stroke-width="1.5"/><text x="40" y="44" text-anchor="middle" font-size="5" fill="#334155">Object</text><line x1="40" y1="30" x2="40" y2="16" stroke="#58CC02" stroke-width="1.5" opacity="0.5"/><polygon points="38.5,18 40,14 41.5,18" fill="#58CC02" opacity="0.5"/><text x="44" y="22" font-size="5" fill="#58CC02" font-weight="bold">F_b</text><line x1="40" y1="52" x2="40" y2="66" stroke="#3B8700" stroke-width="1.5" opacity="0.5"/><polygon points="38.5,64 40,68 41.5,64" fill="#3B8700" opacity="0.5"/><text x="44" y="64" font-size="5" fill="#3B8700" font-weight="bold">W</text><text x="40" y="75" text-anchor="middle" font-size="4" fill="#334155" font-style="italic">F_b = rho_fluid * g * V_obj</text></svg>',
           explanation: 'Buoyant force depends only on the fluid\'s density and the object\'s volume: F_b = rho_fluid * g * V_object.',
+          distractorExplanations: {
+            0: 'Buoyant force depends only on the fluid\.',
+          },
           hint: 'Archimedes\' principle: what determines the buoyant force?'
         },
         {
@@ -214,6 +258,11 @@ export const unit6: Unit = {
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><rect x="5" y="10" width="35" height="55" fill="#A5E86C" opacity="0.1"/><line x1="40" y1="10" x2="40" y2="65" stroke="#3B8700" stroke-width="2.5"/><circle cx="40" cy="65" r="2" fill="#3B8700" opacity="0.5"/><line x1="5" y1="65" x2="75" y2="65" stroke="#3B8700" stroke-width="2"/><circle cx="40" cy="37" r="1.5" fill="#3B8700" opacity="0.6"/><text x="44" y="36" font-size="3" fill="#3B8700" opacity="0.5">CG</text><circle cx="40" cy="44" r="1.5" fill="#58CC02" opacity="0.6"/><text x="44" y="43" font-size="3" fill="#58CC02" opacity="0.5">CP</text><text x="40" y="76" text-anchor="middle" font-size="3" fill="#58CC02" opacity="0.4">CP below CG</text></svg>',
           explanation: 'The resultant hydrostatic force on a plane surface is F = rho*g * y_c * A, where y_c is the depth to the centroid.',
+          distractorExplanations: {
+            0: 'The resultant hydrostatic force on a plane surface is F = rho*g * y_c * A, where y_c is the depth to the centroid.',
+            1: 'This focuses on 470.9, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on 117.7, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The hydrostatic force uses the pressure at the centroid.'
         },
         {
@@ -235,6 +284,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Higher pressure pushes the manometer fluid down on that side, causing it to rise on the opposite side.',
+          distractorExplanations: {
+            0: 'This focuses on sides/equally, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on low-pressure, which is not the correct mechanism or principle for this problem.',
+            3: 'Regarding doesn: Higher pressure pushes the manometer fluid down on that side, causing it to rise on the opposite side.',
+          },
           hint: 'Think about pushing down on one side of a U-tube.',
         },
         {
@@ -250,6 +304,11 @@ export const unit6: Unit = {
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="15" y="20" width="50" height="40" rx="3" fill="#58CC02" opacity="0.08" stroke="#58CC02" stroke-width="1.5"/> <text x="40" y="38" text-anchor="middle" font-size="5" fill="#3B8700" font-weight="bold" font-style="italic">V</text> <g opacity="0"> <animate attributeName="opacity" values="0;0.6;0.6" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.2;1"/> <line x1="8" y1="40" x2="15" y2="40" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <polygon points="13,38 17,40 13,42" fill="#3B8700"/> <line x1="72" y1="40" x2="65" y2="40" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <polygon points="67,42 63,40 67,38" fill="#3B8700"/> </g> <rect x="20" y="25" width="40" height="30" rx="2" fill="none" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2,2" opacity="0"> <animate attributeName="opacity" values="0;0;0.4;0.4" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.3;0.5;1"/> </rect> <text x="40" y="76" text-anchor="middle" font-size="4" fill="#334155" opacity="0.4" font-style="italic">K = delta_P/(delta_V/V)</text> </svg>',
           explanation: 'Bulk modulus K measures how much pressure is needed to compress a fluid by a given fraction. Water has K of about 2.2 GPa.',
+          distractorExplanations: {
+            1: 'This focuses on resistance/shear, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on ratio/surface, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than modulus matters suggests.',
+          },
           hint: 'What happens when you try to compress a fluid?'
         },
         {
@@ -259,6 +318,9 @@ export const unit6: Unit = {
           correctAnswer: true,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><path d="M24,66 L24,22 Q24,14 32,14 L48,14 Q56,14 56,22 L56,66" stroke="#3B8700" stroke-width="1" fill="none"/><path d="M24.5,36 L24.5,22 Q24.5,14.5 32,14.5 L48,14.5 Q55.5,14.5 55.5,22 L55.5,44" fill="#A5E86C" opacity="0.1"/><line x1="62" y1="36" x2="62" y2="44" stroke="#3B8700" stroke-width="0.4" opacity="0.4"/><text x="66" y="42" font-size="3.5" fill="#3B8700" opacity="0.5">h</text><text x="40" y="10" font-size="3" fill="#A5E86C" opacity="0.35" text-anchor="middle">light fluid</text><text x="40" y="76" text-anchor="middle" font-size="3" fill="#58CC02" opacity="0.4">inverted U-tube</text></svg>',
           explanation: 'A manometer needs a fluid of different density to create a measurable height difference. Same fluid on both sides means no height change.',
+          distractorExplanations: {
+            1: 'A manometer needs a fluid of different density to create a measurable height difference.',
+          },
           hint: 'Write out the manometer equation with the same fluid on both sides.'
         },
         {
@@ -273,6 +335,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'P_gauge = rho*g*h = 1025 * 9.81 * 300 = 3,016,575 Pa, which is about 3.02 MPa or 30 atm.',
+          distractorExplanations: {
+            0: '302 significantly exceeds the correct answer due to a fundamental formula or calculation error.',
+            2: '30.2 is an order of magnitude too large, likely from a unit conversion error.',
+            3: '101.3 significantly exceeds the correct answer due to a fundamental formula or calculation error.',
+          },
           hint: 'Use P = rho*g*h with consistent SI units.'
         },
         {
@@ -311,6 +378,9 @@ export const unit6: Unit = {
           question: 'A floating boat is stable when its metacenter is above its center of gravity.',
           correctAnswer: true,
           explanation: 'Correct. When M is above G, any tilt creates a righting moment that pushes the boat back upright.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'M above G = stable. G above M = capsizes.',
         },
         {
@@ -335,6 +405,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'An inclined tube magnifies the fluid travel distance: delta_L = delta_h/sin(theta), making small pressure differences easier to read.',
+          distractorExplanations: {
+            0: 'This focuses on removes/different-density, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on allows/measurement, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on eliminates/parallax, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Same vertical height change produces a longer tube travel.'
         },
         {
@@ -350,6 +425,11 @@ export const unit6: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><rect x="5" y="35" width="70" height="35" fill="#A5E86C" opacity="0.08"/><line x1="5" y1="35" x2="75" y2="35" stroke="#58CC02" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/><rect x="25" y="25" width="30" height="30" rx="3" fill="#58CC02" opacity="0.12" stroke="#3B8700" stroke-width="1.5"/><circle cx="40" cy="45" r="1.5" fill="#3B8700" opacity="0.6"/><text x="44" y="47" font-size="3" fill="#3B8700" opacity="0.5">G</text><circle cx="40" cy="50" r="1.5" fill="#58CC02" opacity="0.6"/><text x="44" y="52" font-size="3" fill="#58CC02" opacity="0.5">B</text><circle cx="40" cy="38" r="1" fill="#A5E86C" opacity="0.6"/><text x="44" y="40" font-size="3" fill="#A5E86C" opacity="0.5">M</text><text x="40" y="76" text-anchor="middle" font-size="3" fill="#58CC02" opacity="0.4">M above G = stable</text></svg>',
           explanation: 'Floating stability depends on the metacentric height GM = BM - BG. Positive GM means stable.',
+          distractorExplanations: {
+            0: 'This focuses on buoyancy, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on located/waterline, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on metacentric/height, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The metacentric height determines stability.'
         },
         {
@@ -371,6 +451,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Cavitation starts when the local pressure falls below the fluid\'s vapor pressure at that temperature.',
+          distractorExplanations: {
+            1: 'This focuses on atmospheric, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on gauge, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on modulus, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The fluid literally boils at low pressure.',
         },
         {
@@ -379,6 +464,9 @@ export const unit6: Unit = {
           question: 'A Bingham plastic fluid behaves as a rigid body until a minimum yield stress is exceeded, after which it flows like a Newtonian fluid.',
           correctAnswer: true,
           explanation: 'Bingham plastics have the equation tau = tau_y + mu_p*(du/dy). Below the yield stress, no flow occurs.',
+          distractorExplanations: {
+            1: 'Bingham plastics have the equation tau = tau_y + mu_p*(du/dy).',
+          },
           hint: 'Toothpaste doesn\'t flow until you squeeze hard enough.'
         },
         {
@@ -393,6 +481,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Specific gravity SG = rho_fluid/rho_water. It\'s dimensionless and convenient: density in kg/m3 is simply 1000 * SG.',
+          distractorExplanations: {
+            0: 'Regarding ratio fluid: Specific gravity SG = rho_fluid/rho_water.',
+            1: 'This focuses on dynamic/viscosity, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on identical/different, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'SG compares a fluid\'s density to water as a reference.'
         },
         {
@@ -408,6 +501,11 @@ export const unit6: Unit = {
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <path d="M4,30 L28,30 Q40,36 52,30 L76,30" stroke-width="0.8" stroke="#58CC02" fill="none"/> <path d="M4,50 L28,50 Q40,44 52,50 L76,50" stroke-width="0.8" stroke="#58CC02" fill="none"/> <circle cx="42" cy="38" r="1.5" stroke-width="0.3" stroke="#A5E86C" fill="none"> <animate attributeName="r" values="0;2;0" dur="1.5s" repeatCount="indefinite"/> <animate attributeName="cx" values="40;50;58" dur="1.5s" repeatCount="indefinite"/> <animate attributeName="opacity" values="0;0.6;0" dur="1.5s" repeatCount="indefinite"/> </circle> <circle cx="42" cy="42" r="1" stroke-width="0.3" stroke="#A5E86C" fill="none"> <animate attributeName="r" values="0;1.5;0" dur="1.5s" repeatCount="indefinite" begin="0.3s"/> <animate attributeName="cx" values="40;48;56" dur="1.5s" repeatCount="indefinite" begin="0.3s"/> <animate attributeName="opacity" values="0;0.5;0" dur="1.5s" repeatCount="indefinite" begin="0.3s"/> </circle> <text x="40" y="58" font-size="3" fill="#3B8700" opacity="0.4" text-anchor="middle">P &lt; P_vapor</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">bubble collapse</text> </svg>',
           explanation: 'Vapor pressure is the pressure at which liquid and vapor coexist. If local pressure drops below this, the fluid boils and cavitation occurs.',
+          distractorExplanations: {
+            0: 'This focuses on exerted/vapors, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on maximum/fluid, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than vapor pressure suggests.',
+          },
           hint: 'What happens when the local pressure in a flowing liquid drops too low?'
         },
         {
@@ -465,6 +563,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Continuity requires A1*V1 = A2*V2. Smaller area means higher velocity.',
+          distractorExplanations: {
+            1: 'Regarding decreases: Continuity requires A1*V1 = A2*V2.',
+            2: 'Regarding stays: Continuity requires A1*V1 = A2*V2.',
+            3: 'Regarding depends material: Continuity requires A1*V1 = A2*V2.',
+          },
           hint: 'Think about putting your thumb over a garden hose.',
         },
         {
@@ -480,6 +583,11 @@ export const unit6: Unit = {
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="7" text-anchor="middle" font-size="5" fill="#334155" font-weight="bold">Bernoulli - Venturi</text><path d="M4,24 L24,24 Q32,24 40,30 Q48,24 56,24 L76,24" stroke="#3B8700" stroke-width="1.5" fill="none"/><path d="M4,48 L24,48 Q32,48 40,42 Q48,48 56,48 L76,48" stroke="#3B8700" stroke-width="1.5" fill="none"/><path d="M4,24 L24,24 Q32,24 40,30 Q48,24 56,24 L76,24 L76,48 L56,48 Q48,48 40,42 Q32,48 24,48 L4,48 Z" fill="#58CC02" opacity="0.05"/><text x="40" y="62" text-anchor="middle" font-size="4" fill="#334155" font-style="italic">P+0.5*rho*v2+rho*gz = const</text></svg>',
           explanation: 'Bernoulli assumes steady, incompressible, inviscid flow. Rough pipes have significant friction losses that Bernoulli ignores.',
+          distractorExplanations: {
+            0: 'This focuses on diameter/likely, which is not the correct mechanism or principle for this problem.',
+            1: 'This is too restrictive; the principle applies more broadly than bernoulli works suggests.',
+            3: 'This incorrectly denies an effect that is relevant to bernoulli apply and significant in this context.',
+          },
           hint: 'What are the assumptions of the Bernoulli equation?'
         },
         {
@@ -489,6 +597,9 @@ export const unit6: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <g opacity="0.15"> <line x1="4" y1="20" x2="14" y2="20" stroke="#3B8700" stroke-width="1"/> <polygon points="13,18.5 16,20 13,21.5" fill="#3B8700"/> <line x1="4" y1="40" x2="14" y2="40" stroke="#3B8700" stroke-width="1"/> <polygon points="13,38.5 16,40 13,41.5" fill="#3B8700"/> <line x1="4" y1="60" x2="14" y2="60" stroke="#3B8700" stroke-width="1"/> <polygon points="13,58.5 16,60 13,61.5" fill="#3B8700"/> </g> <rect x="22" y="38" width="40" height="4" rx="2" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="22" cy="40" r="3" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="19" cy="40" r="1.5" fill="#3B8700" opacity="0.4"> <animate attributeName="r" values="1.5;2.2;1.5" dur="1.5s" repeatCount="indefinite"/> </circle> <text x="50" y="74" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">v = sqrt(2*deltaP/rho)</text> </svg>',
           explanation: 'A pitot tube measures velocity at a single point. In turbulent flow, the velocity profile is flatter, but you still need to account for the profile shape to get average velocity.',
+          distractorExplanations: {
+            0: 'A pitot tube measures velocity at a single point.',
+          },
           hint: 'What velocity does a pitot tube measure: local or average?'
         },
         {
@@ -504,6 +615,9 @@ export const unit6: Unit = {
           question: 'Bernoulli\'s equation can be used when there are significant friction losses in the pipe.',
           correctAnswer: false,
           explanation: 'No. Bernoulli assumes inviscid (frictionless) flow. For friction losses, use the full energy equation.',
+          distractorExplanations: {
+            0: 'The statement is false; the underlying assumption contains an error.',
+          },
           hint: 'One of Bernoulli\'s key assumptions is about friction.',
         },
         {
@@ -518,6 +632,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'V = sqrt(2*(P_stag - P_static)/rho) = sqrt(2 * 500 / 1.2) = sqrt(833) = 28.9 m/s.',
+          distractorExplanations: {
+            0: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            1: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            3: '14.4 is approximately half the correct answer, likely from omitting a required factor of 2.',
+          },
           hint: 'Dynamic pressure = stagnation - static = 0.5*rho*V2.'
         },
         {
@@ -532,6 +651,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'The HGL represents P/(rho*g) + z. When HGL is below the pipe, pressure head is negative gauge (below atmospheric).',
+          distractorExplanations: {
+            0: 'This focuses on total/energy, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on reached/sonic, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on become/turbulent, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What the HGL physically represents in terms of pressure.'
         },
         {
@@ -556,6 +680,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Continuity (mass conservation) and Bernoulli (energy conservation) are complementary. You almost always use them together.',
+          distractorExplanations: {
+            0: 'This focuses on rho1*v1/rho2*v2,, which is not the correct mechanism or principle for this problem.',
+            1: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+            3: 'This focuses on continuity/equation, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Mass conservation and energy conservation are two separate principles.'
         },
       ]
@@ -590,6 +719,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'EGL = HGL + V2/(2g). The velocity head is always positive, so the EGL is always above the HGL.',
+          distractorExplanations: {
+            0: 'The reasoning about below does not correctly apply to this engineering problem.',
+            2: 'The reasoning about equal does not correctly apply to this engineering problem.',
+            3: 'The reasoning about varies does not correctly apply to this engineering problem.',
+          },
           hint: 'EGL includes velocity head; HGL does not.',
         },
         {
@@ -604,6 +738,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'As the pipe rises, elevation z increases. If the HGL drops below the pipe, local pressure goes below atmospheric, and the siphon breaks.',
+          distractorExplanations: {
+            0: 'This focuses on diameter/large, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on water/moves, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on thermal/expansion, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What happens to the pressure as the pipe elevation increases?'
         },
         {
@@ -627,6 +766,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Combining Bernoulli and continuity gives V2 = sqrt(2*deltaP / (rho*(1 - (d2/d1)4))). Then Q = A2*V2.',
+          distractorExplanations: {
+            0: 'This focuses on a2*sqrt(2*deltap/rho),/0.070, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on a1*sqrt(2*deltap/rho),/0.281, which is not the correct mechanism or principle for this problem.',
+            3: 'This incorrectly claims impossibility; the described outcome is achievable under proper conditions.',
+          },
           hint: 'Use both Bernoulli and continuity equations together.'
         },
         {
@@ -642,6 +786,9 @@ export const unit6: Unit = {
           question: 'Torricelli\'s theorem gives the exit velocity of fluid draining from a tank as V = sqrt(2*g*h).',
           correctAnswer: true,
           explanation: 'Yes. This comes directly from Bernoulli between the free surface and the exit hole, assuming the tank is large.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'It\'s a direct application of Bernoulli\'s equation.',
         },
         {
@@ -656,6 +803,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The gradual convergence and divergence of a venturi keeps the flow attached, minimizing energy losses and flow separation.',
+          distractorExplanations: {
+            0: 'This focuses on orifice/plates, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on venturi/meter, which is not the correct mechanism or principle for this problem.',
+            3: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+          },
           hint: 'Compare the flow path through each device.'
         },
         {
@@ -670,6 +822,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Torricelli\'s theorem: V = sqrt(2*g*h). The exit velocity equals the speed of a freely falling object from height h.',
+          distractorExplanations: {
+            1: 'This focuses on sqrt(g*h)/sqrt(9.81, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on 2*g*h/58.86, which is not the correct mechanism or principle for this problem.',
+            3: '"V = sqrt(2*g*h/rho)" is incorrect; the reasoning does not follow from the governing equations.',
+          },
           hint: 'Apply Bernoulli between the free surface and the exit hole.'
         },
         {
@@ -694,6 +851,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'The term 0.5*rho*v2 is the dynamic pressure, representing the kinetic energy per unit volume of the flowing fluid.',
+          distractorExplanations: {
+            1: 'This focuses on static/(potential, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on hydrostatic/elevation, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on total/point, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Each term in Bernoulli corresponds to a form of energy.',
         },
       ]
@@ -722,6 +884,9 @@ export const unit6: Unit = {
           question: 'The full energy equation adds pump head and friction loss terms to Bernoulli\'s equation.',
           correctAnswer: true,
           explanation: 'Correct. The energy equation is Bernoulli plus h_pump (energy added) minus h_loss (energy lost to friction).',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Real systems always have some friction.',
         },
         {
@@ -736,6 +901,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Cv accounts for velocity being less than ideal, while Cc accounts for the vena contracta (area contraction). Cd = Cv * Cc combines both effects.',
+          distractorExplanations: {
+            0: 'This focuses on applies/venturi, which is not the correct mechanism or principle for this problem.',
+            1: 'This "always" claim is too broad; equal well-designed the principle has important exceptions.',
+            3: 'This "always" claim is too broad; sharp-edged orifices the principle has important exceptions.',
+          },
           hint: 'Two separate corrections: one for velocity, one for area contraction.'
         },
         {
@@ -750,6 +920,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The general energy equation adds h_pump (energy input from pumps) and h_loss (energy lost to friction, fittings, etc.).',
+          distractorExplanations: {
+            0: 'This focuses on turbulence/intensity, which is not the correct mechanism or principle for this problem.',
+            1: 'Temperature is not the primary factor in this problem; the correct analysis uses a different variable.',
+            3: 'This focuses on momentum/angular, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What does a pump add? What does friction remove?'
         },
         {
@@ -771,6 +946,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Cd = Q_actual/Q_theoretical. A Cd of 0.61 means only 61% of the ideal Bernoulli flow actually passes through.',
+          distractorExplanations: {
+            0: 'This value results from an incorrect approach; % more than the theoretical flow.',
+            2: 'This value results from an incorrect approach; % of the theoretical flow.',
+            3: 'This value results from an incorrect approach; % of theoretical with 61% efficiency.',
+          },
           hint: 'Cd is the ratio of actual to ideal flow.',
         },
         {
@@ -794,6 +974,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'The full energy equation is the correct tool when pumps add energy to the system.',
+          distractorExplanations: {
+            0: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+            1: 'This focuses on bernoulli/increased, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on continuity/modified, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Bernoulli has no term for pump energy.',
         },
         {
@@ -823,6 +1008,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'There\'s no physical reason air over the top must arrive at the trailing edge at the same time as air below. The real explanation involves circulation and pressure differences.',
+          distractorExplanations: {
+            0: 'This focuses on bernoulli/doesn\, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on theory/correct, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on nothing/airflow, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Ask yourself: why would the air parcels need to "meet up" at the trailing edge?'
         },
       ]
@@ -857,6 +1047,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Re < 2300 means laminar flow. The fluid moves in smooth, orderly layers.',
+          distractorExplanations: {
+            0: 'Regarding turbulent: Re < 2300 means laminar flow.',
+            2: 'Regarding supersonic: Re < 2300 means laminar flow.',
+            3: 'This incorrectly claims impossibility; the described outcome is achievable under proper conditions.',
+          },
           hint: 'The transition from laminar to turbulent happens around Re = 2300.',
         },
         {
@@ -871,6 +1066,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'In laminar flow, the friction factor is exactly f = 64/Re, derived analytically from the Hagen-Poiseuille solution.',
+          distractorExplanations: {
+            0: 'Regarding mulrhogdpi: In laminar flow, the friction factor is exactly f = 64/Re, derived analytically from the Hagen-Poiseuille solution.',
+            1: 'Regarding blasius: In laminar flow, the friction factor is exactly f = 64/Re, derived analytically from the Hagen-Poiseuille solution.',
+            3: 'This "always" claim is too broad; smooth pipes the principle has important exceptions.',
+          },
           hint: 'Laminar friction factor has a simple analytical formula.'
         },
         {
@@ -885,6 +1085,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Re = V*D/nu = 2 * 0.05 / 1e-6 = 100,000. This is well above 4000, so fully turbulent.',
+          distractorExplanations: {
+            0: 'This focuses on (laminar), which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on 10,000/(transitional), which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on 1,000,000/(highly, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Re = V*D/nu. Don\'t forget to convert mm to m.'
         },
         {
@@ -900,6 +1105,9 @@ export const unit6: Unit = {
           question: 'Doubling the length of a pipe doubles the friction head loss.',
           correctAnswer: true,
           explanation: 'Yes. The Darcy-Weisbach equation has L in the numerator: h_f = f*(L/D)*(v2/(2g)). Double L means double h_f.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Look at how L appears in the Darcy-Weisbach equation.',
         },
         {
@@ -914,6 +1122,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'In the "fully rough" zone on the Moody chart, friction factor depends only on relative roughness (epsilon/D), not Re.',
+          distractorExplanations: {
+            0: 'This focuses on increases/linearly, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on continues/decrease, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on moody/chart, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Look at the rightmost part of the Moody chart where the lines flatten out.'
         },
         {
@@ -928,6 +1141,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Halving D quadruples velocity (Q = AV). Then h_f proportional to V2/D means (4V)2/(D/2) = 32 times more loss.',
+          distractorExplanations: {
+            0: 'Halving D quadruples velocity (Q = AV).',
+            1: 'This focuses on doubles, which is not the correct mechanism or principle for this problem.',
+            2: 'Regarding increases times: Halving D quadruples velocity (Q = AV).',
+          },
           hint: 'Both velocity and diameter change. Track both effects.'
         },
         {
@@ -975,6 +1193,9 @@ export const unit6: Unit = {
           question: 'Minor losses from fittings and valves can sometimes exceed the major (friction) losses in a piping system.',
           correctAnswer: true,
           explanation: 'In short systems with many fittings, the "minor" losses often dominate. The name is misleading.',
+          distractorExplanations: {
+            1: 'In short systems with many fittings, the .',
+          },
           hint: 'Think about a short pipe with 10 elbows and 3 valves.',
         },
         {
@@ -989,6 +1210,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'A sudden expansion creates turbulent eddies. The Borda-Carnot equation h_loss = (V1 - V2)2/(2g) quantifies this energy dissipation.',
+          distractorExplanations: {
+            0: 'This focuses on f*(l_eq/d)*(v2/(2g))/using, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on v2/(2g)/where, which is not the correct mechanism or principle for this problem.',
+            2: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+          },
           hint: 'The sudden expansion loss depends on the velocity change.'
         },
         {
@@ -1003,6 +1229,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'In parallel pipes, each branch connects the same two nodes, so the head loss must be the same. Flow splits according to each branch\'s resistance.',
+          distractorExplanations: {
+            0: 'This focuses on velocity, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on through, which is not the correct mechanism or principle for this problem.',
+            3: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+          },
           hint: 'Think of it like parallel resistors in an electrical circuit.'
         },
         {
@@ -1011,6 +1242,9 @@ export const unit6: Unit = {
           question: 'The equivalent length method converts minor losses into an equivalent length of straight pipe for simpler calculation.',
           correctAnswer: true,
           explanation: 'The equivalent length L_eq = K*D/f converts a minor loss coefficient K into meters of straight pipe that would cause the same loss.',
+          distractorExplanations: {
+            1: 'The equivalent length L_eq = K*D/f converts a minor loss coefficient K into meters of straight pipe that would cause the same loss.',
+          },
           hint: 'This lets you add everything together as one big pipe length.'
         },
         {
@@ -1032,6 +1266,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'In series pipes, the same fluid flows through each section, so Q is constant. Head losses add up, and velocity changes with diameter.',
+          distractorExplanations: {
+            0: 'In series pipes, the same fluid flows through each section, so Q is constant.',
+            2: 'Regarding velocity: In series pipes, the same fluid flows through each section, so Q is constant.',
+            3: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+          },
           hint: 'What comes in must go out at each junction.',
         },
         {
@@ -1046,6 +1285,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'The Colebrook equation has f on both sides, so you can\'t solve it directly. Engineers use iteration, the Moody chart, or explicit approximations like Swamee-Jain.',
+          distractorExplanations: {
+            0: 'This focuses on experimental/every, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on calculated/directly, which is not the correct mechanism or principle for this problem.',
+            2: 'This is too restrictive; the principle applies more broadly than equation valid suggests.',
+          },
           hint: 'Implicit means the unknown appears on both sides of the equation.'
         },
         {
@@ -1070,6 +1314,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Hazen-Williams is simpler to use (no Moody chart needed) but only works for water near room temperature in turbulent flow. Darcy-Weisbach works for any fluid.',
+          distractorExplanations: {
+            0: 'This focuses on equation/pipeline, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on theoretical/equation, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on replacement/moody, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Civil engineers love it for water mains. Mechanical engineers prefer Darcy-Weisbach.'
         },
       ]
@@ -1104,6 +1353,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'The parabolic profile in laminar flow has V_max = 2*V_avg. In turbulent flow, it\'s closer to 1.2*V_avg.',
+          distractorExplanations: {
+            0: 'This focuses on times, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on equal, which is not the correct mechanism or principle for this problem.',
+            2: 'Regarding average velocity: The parabolic profile in laminar flow has V_max = 2*V_avg.',
+          },
           hint: 'Laminar flow has a parabolic velocity profile.',
         },
         {
@@ -1118,6 +1372,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Near a pipe entrance, the velocity profile is still developing. The entrance length is about 0.05*Re*D for laminar and 10-60D for turbulent.',
+          distractorExplanations: {
+            1: 'This focuses on length/needed, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on first/fitting, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than entrance length suggests.',
+          },
           hint: 'The boundary layer grows from the wall until it fills the entire pipe.'
         },
         {
@@ -1126,6 +1385,9 @@ export const unit6: Unit = {
           question: 'Water hammer occurs when a valve is closed suddenly, causing a pressure wave to travel through the pipe.',
           correctAnswer: true,
           explanation: 'Sudden valve closure converts kinetic energy of the moving fluid into a pressure pulse that travels at the speed of sound in the fluid.',
+          distractorExplanations: {
+            1: 'Sudden valve closure converts kinetic energy of the moving fluid into a pressure pulse that travels at the speed of sound in the fluid.',
+          },
           hint: 'The loud "bang" when you shut a tap quickly is water hammer.'
         },
         {
@@ -1141,6 +1403,9 @@ export const unit6: Unit = {
           question: 'Using a larger pipe diameter always saves money in the long run because it reduces pumping costs.',
           correctAnswer: false,
           explanation: 'Not always. Larger pipes cost more to buy and install. The economic optimum balances pipe cost vs. pumping cost.',
+          distractorExplanations: {
+            0: 'The statement is false; the underlying assumption contains an error.',
+          },
           hint: 'Think about both the purchase cost and the operating cost.',
         },
         {
@@ -1155,6 +1420,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Absolute roughness epsilon is a physical height of surface bumps. Relative roughness epsilon/D scales it to the pipe size, which is what the Moody chart uses.',
+          distractorExplanations: {
+            1: 'This focuses on identical/measured, which is not the correct mechanism or principle for this problem.',
+            2: '"Absolute roughness applies to new pipes" is incorrect; the reasoning does not follow from the governing equations.',
+            3: 'This "always" claim is too broad; relative roughness the principle has important exceptions.',
+          },
           hint: 'The same roughness matters more in a small pipe than a big one.'
         },
         {
@@ -1192,6 +1462,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Relative roughness = epsilon/D = 0.15/100 = 0.0015. This is the value you use on the Moody chart.',
+          distractorExplanations: {
+            0: '0.015 is an order of magnitude too large, likely from a unit conversion error.',
+            2: '0.15 significantly exceeds the correct answer due to a fundamental formula or calculation error.',
+            3: '15 significantly exceeds the correct answer due to a fundamental formula or calculation error.',
+          },
           hint: 'Make sure both values use the same units before dividing.'
         },
       ]
@@ -1226,6 +1501,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Centrifugal pumps excel at high flow, moderate pressure. They\'re the most common type in water supply.',
+          distractorExplanations: {
+            0: 'This focuses on peristaltic, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on positive/displacement, which is not the correct mechanism or principle for this problem.',
+            2: 'Centrifugal pumps excel at high flow, moderate pressure.',
+          },
           hint: 'Think about what type handles high flow rates well.',
         },
         {
@@ -1240,6 +1520,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'PD pumps maintain flow rate regardless of viscosity and provide precise, repeatable volumes. Centrifugal pump performance degrades badly with viscous fluids.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; pumps efficient the principle has important exceptions.',
+            1: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+            3: 'This incorrectly claims impossibility; the described outcome is achievable under proper conditions.',
+          },
           hint: 'Think about pumping honey vs. water.'
         },
         {
@@ -1254,6 +1539,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Head (H = P/(rho*g)) is energy per unit weight. Using meters makes pump curves valid for any fluid density.',
+          distractorExplanations: {
+            0: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+            1: 'This focuses on maximum/height, which is not the correct mechanism or principle for this problem.',
+            2: '"Head in meters is only used in Europe" is incorrect; the reasoning does not follow from the governing equations.',
+          },
           hint: 'A pump adding 10 m of head adds different pressure depending on the fluid density.'
         },
         {
@@ -1269,6 +1559,9 @@ export const unit6: Unit = {
           question: 'Pumping hot water requires more NPSH margin than pumping cold water.',
           correctAnswer: true,
           explanation: 'Hot water has higher vapor pressure, so the available NPSH is reduced. You need more margin to prevent cavitation.',
+          distractorExplanations: {
+            1: 'Hot water has higher vapor pressure, so the available NPSH is reduced.',
+          },
           hint: 'Temperature raises vapor pressure.',
         },
         {
@@ -1277,6 +1570,9 @@ export const unit6: Unit = {
           question: 'Cavitation in a pump always occurs at the pump discharge (high-pressure side).',
           correctAnswer: false,
           explanation: 'Cavitation occurs at the pump inlet (suction side) where pressure is lowest. That\'s where pressure can drop below vapor pressure.',
+          distractorExplanations: {
+            0: 'Cavitation occurs at the pump inlet (suction side) where pressure is lowest.',
+          },
           hint: 'Where is the pressure lowest in a pumping system?'
         },
         {
@@ -1291,6 +1587,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'NPSH_available (determined by your system) must exceed NPSH_required (from the pump manufacturer) to prevent cavitation.',
+          distractorExplanations: {
+            1: 'NPSH_available (determined by your system) must exceed NPSH_required (from the pump manufacturer) to prevent cavitation.',
+            2: 'Regarding equal: NPSH_available (determined by your system) must exceed NPSH_required (from the pump manufacturer) to prevent cavitation.',
+            3: 'This focuses on unrelated, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Think about margin: you need more available than required.'
         },
         {
@@ -1344,6 +1645,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The operating point is the intersection of the pump curve (what the pump can deliver) and the system curve (what the system demands).',
+          distractorExplanations: {
+            0: 'This focuses on speed/equals, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on efficiency/maximum, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on equals/(shut-off, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'One curve shows pump capability, the other shows system demand.',
         },
         {
@@ -1358,6 +1664,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Affinity laws: Q proportional to N, H proportional to N2, P proportional to N3. Double speed means 2x flow, 4x head, 8x power.',
+          distractorExplanations: {
+            0: 'Regarding quadruples doubles: Affinity laws: Q proportional to N, H proportional to N2, P proportional to N3.',
+            1: 'This focuses on three/double, which is not the correct mechanism or principle for this problem.',
+            3: '"Only flow rate changes" is incorrect; the reasoning does not follow from the governing equations.',
+          },
           hint: 'Q ~ N, H ~ N2, P ~ N3.'
         },
         {
@@ -1372,6 +1683,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Parallel pumps share the flow demand (double Q). Series pumps stack their heads (double H). The actual operating point shifts depend on the system curve.',
+          distractorExplanations: {
+            0: 'This focuses on there/difference, which is not the correct mechanism or principle for this problem.',
+            1: 'The scaling factor cited in the reasoning is incorrect for this problem\'s conditions.',
+            2: 'This focuses on configurations/double, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Parallel = side by side sharing flow. Series = one after another stacking pressure.'
         },
         {
@@ -1380,6 +1696,9 @@ export const unit6: Unit = {
           question: 'Specific speed is a dimensionless number that helps engineers select the right type of pump for an application.',
           correctAnswer: true,
           explanation: 'Specific speed Ns = N*sqrt(Q)/H^(3/4) characterizes pump geometry. Low Ns = radial/centrifugal, medium = mixed flow, high = axial.',
+          distractorExplanations: {
+            1: 'Specific speed Ns = N*sqrt(Q)/H^(3/4) characterizes pump geometry.',
+          },
           hint: 'Different pump types are optimized for different specific speed ranges.'
         },
         {
@@ -1401,6 +1720,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Throttling adds resistance, making the system curve steeper. The operating point shifts left on the pump curve (lower flow).',
+          distractorExplanations: {
+            0: 'This focuses on increase/adding, which is not the correct mechanism or principle for this problem.',
+            2: 'This incorrectly denies an effect that is relevant to effect operation and significant in this context.',
+            3: 'Regarding reduce: Throttling adds resistance, making the system curve steeper.',
+          },
           hint: 'More resistance means the system demands more head at any given flow.',
         },
         {
@@ -1415,6 +1739,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Power is proportional to speed cubed. Reducing speed by 20% cuts power by about 50%. Throttling wastes energy as heat across the valve.',
+          distractorExplanations: {
+            0: 'This is too restrictive; the principle applies more broadly than energy rates suggests.',
+            1: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+            2: 'This focuses on throttle/valves, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'The affinity laws say power goes as speed cubed.'
         },
         {
@@ -1439,6 +1768,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Operating far from BEP causes internal recirculation, cavitation risk, increased vibration, and higher bearing loads. Always size pumps to operate near BEP.',
+          distractorExplanations: {
+            1: 'This focuses on becomes/efficient, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on automatically/adjusts, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than operating right suggests.',
+          },
           hint: 'BEP is called "best efficiency" for a reason.'
         },
       ]
@@ -1467,6 +1801,9 @@ export const unit6: Unit = {
           question: 'Hydraulic power output equals rho*g*Q*H.',
           correctAnswer: true,
           explanation: 'Yes. P_hydraulic = rho*g*Q*H gives the useful power delivered to the fluid in watts.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'This comes directly from the energy equation.',
         },
         {
@@ -1481,6 +1818,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Shaft power = hydraulic power / efficiency. P = rho*g*Q*H/eta = 1000*9.81*0.05*20/0.75 = 13.1 kW.',
+          distractorExplanations: {
+            0: 'This focuses on rho*g*q*h*eta, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on rho*g*q*h, which is not the correct mechanism or principle for this problem.',
+            2: 'Shaft power = hydraulic power / efficiency.',
+          },
           hint: 'Efficiency means you need MORE shaft power than hydraulic power.'
         },
         {
@@ -1489,6 +1831,9 @@ export const unit6: Unit = {
           question: 'A turbine converts fluid energy into mechanical shaft work, which is the opposite of a pump.',
           correctAnswer: true,
           explanation: 'Pumps add energy to fluid; turbines extract energy from fluid. They\'re reverse operations.',
+          distractorExplanations: {
+            1: 'Pumps add energy to fluid; turbines extract energy from fluid.',
+          },
           hint: 'Think about hydroelectric dams: water energy turns turbines.'
         },
         {
@@ -1503,6 +1848,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'If the pump curve has a dip on the left side, operating there creates an unstable condition where flow oscillates between two points.',
+          distractorExplanations: {
+            0: 'This focuses on running/above, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on using/diameter, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than surging occurs suggests.',
+          },
           hint: 'Look at the shape of the pump curve near shut-off.'
         },
         {
@@ -1524,6 +1874,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Centrifugal pumps spin fluid that\'s already there. They can\'t pull a vacuum strong enough to lift liquid into an empty casing.',
+          distractorExplanations: {
+            0: 'Regarding impeller backwards: Centrifugal pumps spin fluid that\.',
+            1: 'Regarding motor needs: Centrifugal pumps spin fluid that\.',
+            3: 'This is too restrictive; the principle applies more broadly than priming needed suggests.',
+          },
           hint: 'Air is too light for the impeller to push effectively.',
         },
         {
@@ -1538,6 +1893,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'NPSH_a = P_atm/(rho*g) + z_s - h_f_suction - P_vapor/(rho*g). Raising the source or reducing suction losses increases NPSH_a.',
+          distractorExplanations: {
+            0: 'This focuses on increase/speed, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on valve/regulation, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on larger/impeller, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Look at the NPSH equation: what variables can you change?'
         },
         {
@@ -1567,6 +1927,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Pelton wheels are impulse turbines. All the pressure energy is converted to kinetic energy in the nozzle before hitting the buckets.',
+          distractorExplanations: {
+            1: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+            2: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+            3: 'This focuses on gravitational/potential, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Impulse turbines use jets; reaction turbines use pressure on submerged blades.'
         },
       ]
@@ -1601,6 +1966,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'By grouping n variables into n-k dimensionless groups, you drastically reduce the experimental and analytical effort.',
+          distractorExplanations: {
+            0: 'This focuses on eliminating/experiments, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on converting/units, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on making/equations, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Fewer variables means fewer experiments needed.',
         },
         {
@@ -1615,6 +1985,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Buckingham Pi: number of Pi groups = n - k = 7 - 3 = 4.',
+          distractorExplanations: {
+            0: 'This value results from an incorrect approach; dimensionless groups.',
+            1: 'This value results from an incorrect approach; dimensionless groups.',
+            2: 'This value results from an incorrect approach; dimensionless groups.',
+          },
           hint: 'n variables minus k dimensions equals number of Pi groups.'
         },
         {
@@ -1629,6 +2004,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'A physically valid equation must have matching dimensions on both sides. You can\'t add meters to seconds.',
+          distractorExplanations: {
+            0: 'This focuses on equation/dimensionless, which is not the correct mechanism or principle for this problem.',
+            1: 'This focuses on variables/units, which is not the correct mechanism or principle for this problem.',
+            3: 'This is too restrictive; the principle applies more broadly than applies fluid suggests.',
+          },
           hint: 'Can you add apples and oranges?'
         },
         {
@@ -1650,6 +2030,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Re = rho*v*L/mu. Large Re means inertia dominates (turbulent). Small Re means viscosity dominates (laminar).',
+          distractorExplanations: {
+            0: 'This focuses on gravity, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on speed/sound, which is not the correct mechanism or principle for this problem.',
+            3: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+          },
           hint: 'It\'s the most common dimensionless number in fluid mechanics.',
         },
         {
@@ -1664,6 +2049,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The Froude number compares inertia to gravity. It governs wave patterns, ship resistance, and open-channel flows.',
+          distractorExplanations: {
+            0: 'This focuses on compressible/dynamics, which is not the correct mechanism or principle for this problem.',
+            1: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+            3: 'This focuses on transfer/fluids, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Which dimensionless number involves gravity?'
         },
         {
@@ -1682,6 +2072,9 @@ export const unit6: Unit = {
           question: 'The Buckingham Pi theorem guarantees that the resulting dimensionless groups are unique.',
           correctAnswer: false,
           explanation: 'The choice of repeating variables affects which Pi groups you get. Different valid choices give different (but equivalent) sets of groups.',
+          distractorExplanations: {
+            0: 'The choice of repeating variables affects which Pi groups you get.',
+          },
           hint: 'Can you form the groups in more than one way?'
         },
         {
@@ -1725,6 +2118,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'Ship resistance is dominated by wave-making drag at cruising speeds, so Froude number similarity is the primary requirement.',
+          distractorExplanations: {
+            0: 'This focuses on reynolds/(viscous, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on (compressibility/matters), which is not the correct mechanism or principle for this problem.',
+            3: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+          },
           hint: 'Ship testing is about waves, not viscosity.',
         },
         {
@@ -1739,6 +2137,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: 'For a 1:10 model matching Fr, you\'d need a fluid with 1/31.6 the kinematic viscosity of water to also match Re. No such fluid exists practically.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; equal matching the principle has important exceptions.',
+            2: 'For a 1:10 model matching Fr, you\.',
+            3: 'Regarding doesn: For a 1:10 model matching Fr, you\.',
+          },
           hint: 'Try the math: what fluid viscosity would you need?'
         },
         {
@@ -1753,6 +2156,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: 'Re = V*L/nu. With L_model = L/5 and same fluid (same nu), you need V_model = 5*V_real to keep Re constant.',
+          distractorExplanations: {
+            1: '1 is one-quarter of the correct value, from an extra division or missing squared term.',
+            2: 'The reasoning about speed does not correctly apply to this engineering problem.',
+            3: 'This value results from an incorrect approach; times the real car speed.',
+          },
           hint: 'Re must be equal: V_model * L_model = V_real * L_real.'
         },
         {
@@ -1768,6 +2176,9 @@ export const unit6: Unit = {
           question: 'In practice, it\'s often impossible to achieve complete dynamic similitude with a scale model.',
           correctAnswer: true,
           explanation: 'Matching all dimensionless numbers simultaneously usually requires impossible fluid properties. Engineers match the dominant one and correct for the rest.',
+          distractorExplanations: {
+            1: 'Matching all dimensionless numbers simultaneously usually requires impossible fluid properties.',
+          },
           hint: 'Complete similitude would require matching ALL force ratios.',
         },
         {
@@ -1782,6 +2193,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Geometric similarity means every dimension is scaled by the same factor. The shape is identical; only the size differs.',
+          distractorExplanations: {
+            0: 'Regarding material: Geometric similarity means every dimension is scaled by the same factor.',
+            1: 'This focuses on scale), which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on surface/roughness, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Think of a perfectly scaled-down replica.'
         },
         {
@@ -1806,6 +2222,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'The Weber number compares inertia to surface tension. It\'s critical for atomization, spray dynamics, and thin film flows.',
+          distractorExplanations: {
+            0: '"We = P/(0.5*rho*V2)" is incorrect; the reasoning does not follow from the governing equations.',
+            1: '"We = V/sqrt(g*L)" is incorrect; the reasoning does not follow from the governing equations.',
+            2: '"We = V*L/nu" is incorrect; the reasoning does not follow from the governing equations.',
+          },
           hint: 'Surface tension is the key force here.'
         },
         {
@@ -1820,6 +2241,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'Froude similarity: V_proto/V_model = sqrt(L_proto/L_model) = sqrt(20) = 4.47. So V_proto = 0.5 * 4.47 = 2.24 m/s.',
+          distractorExplanations: {
+            0: 'This focuses on 0.025, which is not the correct mechanism or principle for this problem.',
+            1: 'Regarding vproto: Froude similarity: V_proto/V_model = sqrt(L_proto/L_model) = sqrt(20) = 4.47.',
+            3: 'This focuses on (same/velocity), which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Froude number V/sqrt(g*L) must be equal. Scale the velocity accordingly.'
         },
       ]
@@ -1848,6 +2274,9 @@ export const unit6: Unit = {
           question: 'The drag coefficient Cd is a dimensionless number.',
           correctAnswer: true,
           explanation: 'Yes. Cd = F_D/(0.5*rho*V2*A). Force divided by (pressure * area) is dimensionless.',
+          distractorExplanations: {
+            1: 'The statement is true based on the underlying engineering principle.',
+          },
           hint: 'Check the units: force divided by force.',
         },
         {
@@ -1862,6 +2291,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The dimples trip the boundary layer to turbulent, which stays attached longer, reducing the wake and overall drag. This is the same physics as the drag crisis on a smooth sphere.',
+          distractorExplanations: {
+            0: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+            1: 'This focuses on increase/ball\, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on purely/aesthetic, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Think about boundary layer separation and wake size.'
         },
         {
@@ -1876,6 +2310,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'n = 5 variables (P, D, N, rho, mu), k = 3 dimensions (M, L, T). Pi groups = 5 - 3 = 2. These are typically the power number and the impeller Reynolds number.',
+          distractorExplanations: {
+            0: '1 is approximately half the correct answer, likely from omitting a required factor of 2.',
+            1: 'This numerical value does not result from the correct formula applied to the given parameters.',
+            2: 'This numerical value does not result from the correct formula applied to the given parameters.',
+          },
           hint: 'Count the variables and fundamental dimensions, then subtract.'
         },
         {
@@ -1897,6 +2336,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The Moody chart uses three dimensionless quantities (f, Re, epsilon/D), which is why it works for any fluid, any pipe size, and any speed.',
+          distractorExplanations: {
+            0: 'This focuses on diameter, which is not the correct mechanism or principle for this problem.',
+            1: 'Pressure alone does not explain the behavior described; the correct mechanism is different.',
+            3: 'This focuses on velocity, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'All axes and parameters on the Moody chart are dimensionless.',
         },
         {
@@ -1911,6 +2355,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: 'Dimensional analysis identifies WHICH groups matter (Cd = f(Re)), but not the FORM of f. You still need experiments or computation for the actual curve.',
+          distractorExplanations: {
+            0: 'This "always" claim is too broad; relationship linear the principle has important exceptions.',
+            1: 'This focuses on buckingham/theorem, which is not the correct mechanism or principle for this problem.',
+            2: 'This is too restrictive; the principle applies more broadly than laminar theory suggests.',
+          },
           hint: 'Pi theorem tells you the groupings, not the function itself.'
         },
         {
@@ -1941,6 +2390,11 @@ export const unit6: Unit = {
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="30" cy="40" r="12" stroke-width="0.8" stroke="#58CC02" fill="#58CC02" fill-opacity="0.04"/> <g stroke="#58CC02" stroke-width="0.4" opacity="0.3"> <path d="M75,28 L50,28 Q20,28 18,34 Q16,38 18,40" fill="none"/> <path d="M75,40 L42,40" fill="none"/> <path d="M75,52 L50,52 Q20,52 18,46 Q16,42 18,40" fill="none"/> </g> <g stroke="#A5E86C" stroke-width="0.3" opacity="0.2"> <path d="M42,36 Q48,38 44,40 Q48,42 42,44" fill="none"> <animate attributeName="opacity" values="0.15;0.3;0.15" dur="1.5s" repeatCount="indefinite"/> </path> </g> <g opacity="0.5"> <line x1="72" y1="16" x2="58" y2="16" stroke-width="0.6" stroke="#58CC02"/> <polygon points="58,14.5 58,17.5 55,16" fill="#58CC02"/> <text x="65" y="14" font-size="3" fill="#58CC02">V</text> </g> <text x="40" y="72" font-size="3" fill="#58CC02" opacity="0.4" text-anchor="middle">F_D = 0.5*Cd*rho*A*V2</text> </svg>',
           explanation: 'Dimensional analysis says Cd = f(Re) for a smooth sphere, but can\'t predict the function. The drag crisis is the boundary layer transitioning to turbulent, reducing wake drag.',
+          distractorExplanations: {
+            0: 'This focuses on sphere/deforms, which is not the correct mechanism or principle for this problem.',
+            2: 'This focuses on compressibility/effects, which is not the correct mechanism or principle for this problem.',
+            3: 'This focuses on crisis/measurement, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'What changes about the boundary layer at the critical Re?'
         },
         {
@@ -1955,6 +2409,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: 'The Strouhal number relates vortex shedding frequency to flow speed and body size. For a cylinder, St is about 0.2 over a wide range of Re.',
+          distractorExplanations: {
+            0: 'This focuses on speed/channels, which is not the correct mechanism or principle for this problem.',
+            1: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
+            3: 'This focuses on transfer/surface, which is not the correct mechanism or principle for this problem.',
+          },
           hint: 'Think about the "singing" of power lines in wind.'
         },
       ]

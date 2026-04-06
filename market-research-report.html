@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Market Research — Duolingo for Knowledge</title>
+<title>Market Research v2 — Duolingo for Knowledge</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: 'Inter', -apple-system, sans-serif;
     background: #0a0a0f;
@@ -17,147 +15,85 @@
     padding: 2rem 1rem;
     line-height: 1.6;
   }
-
   .container { max-width: 960px; margin: 0 auto; }
 
   /* ── Header ── */
   header {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 3rem 2rem;
+    text-align: center; margin-bottom: 3rem; padding: 3rem 2rem;
     background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08));
-    border: 1px solid rgba(99,102,241,0.15);
-    border-radius: 20px;
+    border: 1px solid rgba(99,102,241,0.15); border-radius: 20px;
   }
-
   header .badge {
-    display: inline-block;
-    background: rgba(99,102,241,0.15);
-    color: #818cf8;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.35rem 1rem;
-    border-radius: 999px;
-    margin-bottom: 1rem;
+    display: inline-block; background: rgba(99,102,241,0.15); color: #818cf8;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.35rem 1rem; border-radius: 999px; margin-bottom: 1rem;
   }
-
   header h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
+    font-size: 2.5rem; font-weight: 900;
     background: linear-gradient(135deg, #818CF8, #A78BFA, #C084FC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem; line-height: 1.2;
   }
-
   header p { color: #6b7280; font-size: 1rem; max-width: 640px; margin: 0 auto; }
 
   /* ── Sections ── */
   section { margin-bottom: 3rem; }
-
   h2 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #f3f4f6;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
+    font-size: 1.5rem; font-weight: 800; color: #f3f4f6;
+    margin-bottom: 1rem; padding-bottom: 0.5rem;
     border-bottom: 2px solid rgba(99,102,241,0.2);
   }
-
   h3 { font-size: 1.15rem; font-weight: 700; color: #e5e7eb; margin: 1.5rem 0 0.75rem; }
-
   p, li { color: #9ca3af; font-size: 0.9rem; line-height: 1.7; }
   strong { color: #e5e7eb; }
 
   /* ── Stats Grid ── */
   .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin: 1.5rem 0;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem; margin: 1.5rem 0;
   }
-
   .stat-card {
-    background: #111118;
-    border: 1px solid #1f2937;
-    border-radius: 14px;
-    padding: 1.25rem;
-    text-align: center;
-    transition: border-color 0.2s;
+    background: #111118; border: 1px solid #1f2937; border-radius: 14px;
+    padding: 1.25rem; text-align: center; transition: border-color 0.2s;
   }
-
   .stat-card:hover { border-color: rgba(99,102,241,0.4); }
+  .stat-card .number { font-size: 1.75rem; font-weight: 900; color: #818cf8; display: block; margin-bottom: 0.25rem; }
+  .stat-card .label { font-size: 0.7rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
 
-  .stat-card .number {
-    font-size: 1.75rem;
-    font-weight: 900;
-    color: #818cf8;
-    display: block;
-    margin-bottom: 0.25rem;
-  }
-
-  .stat-card .label {
-    font-size: 0.7rem;
-    color: #6b7280;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 600;
-  }
-
-  /* ── Profession Cards ── */
+  /* ── Tier Badges ── */
   .tier-badge {
-    display: inline-block;
-    padding: 0.3rem 0.8rem;
-    border-radius: 999px;
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+    display: inline-block; padding: 0.3rem 0.8rem; border-radius: 999px;
+    font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1rem;
   }
-
   .tier-s { background: rgba(168,85,247,0.12); color: #c084fc; border: 1px solid rgba(168,85,247,0.25); }
   .tier-a { background: rgba(34,197,94,0.12); color: #4ade80; border: 1px solid rgba(34,197,94,0.25); }
   .tier-b { background: rgba(234,179,8,0.12); color: #facc15; border: 1px solid rgba(234,179,8,0.25); }
-  .tier-c { background: rgba(107,114,128,0.15); color: #9ca3af; border: 1px solid rgba(107,114,128,0.25); }
   .tier-avoid { background: rgba(239,68,68,0.12); color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
 
+  /* ── Change Badges ── */
+  .change-badge {
+    display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px;
+    font-size: 0.6rem; font-weight: 700; letter-spacing: 0.05em;
+    text-transform: uppercase; margin-left: 0.5rem; vertical-align: middle;
+  }
+  .change-badge.new { background: rgba(168,85,247,0.15); color: #c084fc; }
+  .change-badge.upgrade { background: rgba(34,197,94,0.15); color: #4ade80; }
+  .change-badge.down { background: rgba(234,179,8,0.15); color: #facc15; }
+  .change-badge.built { background: rgba(99,102,241,0.15); color: #818cf8; }
+
+  /* ── Profession Cards ── */
   .profession-card {
-    background: #111118;
-    border: 1px solid #1f2937;
-    border-radius: 16px;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    transition: border-color 0.2s, transform 0.2s;
+    background: #111118; border: 1px solid #1f2937; border-radius: 16px;
+    padding: 1.5rem; margin-bottom: 1rem; transition: border-color 0.2s, transform 0.2s;
   }
-
-  .profession-card:hover {
-    border-color: rgba(99,102,241,0.3);
-    transform: translateY(-1px);
-  }
-
-  .card-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-  }
-
+  .profession-card:hover { border-color: rgba(99,102,241,0.3); transform: translateY(-1px); }
+  .card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
   .rank {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    font-weight: 900;
-    font-size: 1rem;
-    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 10px;
+    font-weight: 900; font-size: 1rem; flex-shrink: 0;
   }
-
   .rank-1 { background: linear-gradient(135deg, #c084fc, #818cf8); color: #fff; }
   .rank-2 { background: linear-gradient(135deg, #a78bfa, #6366f1); color: #fff; }
   .rank-3 { background: linear-gradient(135deg, #818cf8, #4f46e5); color: #fff; }
@@ -166,397 +102,278 @@
   .rank-6 { background: linear-gradient(135deg, #2dd4bf, #0d9488); color: #1a1a2e; }
   .rank-7 { background: linear-gradient(135deg, #fbbf24, #d97706); color: #1a1a2e; }
   .rank-n { background: #1e293b; color: #94a3b8; }
-
   .card-title { font-size: 1.1rem; font-weight: 800; color: #f3f4f6; }
   .card-subtitle { font-size: 0.78rem; color: #6b7280; }
 
+  /* ── Metrics ── */
   .metric-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem; margin-bottom: 1rem;
   }
-
-  .metric {
-    background: #0d0d14;
-    border-radius: 10px;
-    padding: 0.75rem;
-  }
-
+  .metric { background: #0d0d14; border-radius: 10px; padding: 0.75rem; }
   .metric .metric-label {
-    font-size: 0.65rem;
-    color: #6b7280;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-    margin-bottom: 0.2rem;
+    font-size: 0.65rem; color: #6b7280; text-transform: uppercase;
+    letter-spacing: 0.08em; font-weight: 700; margin-bottom: 0.2rem;
   }
+  .metric .metric-value { font-size: 0.85rem; font-weight: 700; color: #d1d5db; }
 
-  .metric .metric-value {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #d1d5db;
-  }
+  /* ── Meters ── */
+  .competition-meter { display: flex; align-items: center; gap: 0.5rem; }
+  .meter-bar { flex: 1; height: 6px; background: #1e293b; border-radius: 3px; overflow: hidden; }
+  .meter-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+  .meter-fill.none { width: 5%; background: #22c55e; }
+  .meter-fill.low { width: 25%; background: #eab308; }
+  .meter-fill.med { width: 50%; background: #f97316; }
+  .meter-fill.high { width: 75%; background: #ef4444; }
+  .meter-label { font-size: 0.7rem; font-weight: 700; white-space: nowrap; }
+  .curiosity-bar { height: 6px; background: #1e293b; border-radius: 3px; overflow: hidden; }
+  .curiosity-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, #818cf8, #c084fc); }
 
+  /* ── Highlights ── */
+  .highlight-purple { color: #c084fc !important; }
   .highlight-green { color: #4ade80 !important; }
   .highlight-yellow { color: #facc15 !important; }
   .highlight-red { color: #f87171 !important; }
   .highlight-blue { color: #60a5fa !important; }
-  .highlight-purple { color: #a78bfa !important; }
 
+  /* ── Insight Box ── */
   .card-insight {
-    background: rgba(99,102,241,0.06);
-    border-left: 3px solid #818cf8;
-    border-radius: 0 10px 10px 0;
-    padding: 0.75rem 1rem;
-    font-size: 0.83rem;
-    color: #a5b4fc;
-    margin-top: 0.75rem;
-  }
-
-  /* ── Competition Meter ── */
-  .competition-meter { display: flex; align-items: center; gap: 0.5rem; }
-
-  .meter-bar {
-    flex: 1;
-    height: 6px;
-    background: #1e293b;
-    border-radius: 999px;
-    overflow: hidden;
-  }
-
-  .meter-fill { height: 100%; border-radius: 999px; }
-  .meter-fill.none { width: 5%; background: #4ade80; }
-  .meter-fill.low { width: 15%; background: #4ade80; }
-  .meter-fill.med { width: 45%; background: #facc15; }
-  .meter-fill.high { width: 75%; background: #f97316; }
-  .meter-fill.saturated { width: 95%; background: #ef4444; }
-
-  .meter-label { font-size: 0.7rem; font-weight: 700; white-space: nowrap; }
-
-  /* ── Curiosity Meter ── */
-  .curiosity-bar {
-    height: 8px;
-    background: #1e293b;
-    border-radius: 999px;
-    overflow: hidden;
-    margin-top: 0.3rem;
-  }
-
-  .curiosity-fill {
-    height: 100%;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #818cf8, #c084fc);
+    background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.15);
+    border-radius: 10px; padding: 1rem; font-size: 0.85rem; color: #9ca3af;
   }
 
   /* ── Tables ── */
-  .table-wrap {
-    overflow-x: auto;
-    border-radius: 14px;
-    border: 1px solid #1f2937;
-    margin: 1rem 0;
+  .table-wrap { overflow-x: auto; margin: 1rem 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  th { text-align: left; padding: 0.75rem; color: #818cf8; font-weight: 700; border-bottom: 2px solid #1f2937; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  td { padding: 0.75rem; border-bottom: 1px solid rgba(31,41,55,0.5); color: #9ca3af; vertical-align: top; }
+  tr:hover td { background: rgba(99,102,241,0.03); }
+
+  /* ── Avoid Cards ── */
+  .avoid-card {
+    background: #111118; border: 1px solid rgba(239,68,68,0.15); border-radius: 12px;
+    padding: 1rem 1.25rem; margin-bottom: 0.75rem; display: flex; gap: 1rem; align-items: baseline;
   }
+  .avoid-name { color: #f87171; font-weight: 800; font-size: 0.9rem; white-space: nowrap; min-width: 140px; }
+  .avoid-reason { font-size: 0.82rem; color: #6b7280; }
 
-  table { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
-
-  thead th {
-    background: #111118;
-    color: #9ca3af;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 0.75rem 1rem;
-    text-align: left;
-    white-space: nowrap;
+  /* ── Changes Callout ── */
+  .changes-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.75rem; margin: 1rem 0;
   }
-
-  tbody td {
-    padding: 0.75rem 1rem;
-    border-top: 1px solid #1a1a24;
-    color: #d1d5db;
-    vertical-align: top;
+  .change-item {
+    background: #111118; border: 1px solid #1f2937; border-radius: 12px;
+    padding: 1rem; display: flex; align-items: center; gap: 0.75rem;
   }
+  .change-arrow { font-size: 1.2rem; font-weight: 900; }
+  .change-arrow.up { color: #4ade80; }
+  .change-arrow.new-entry { color: #c084fc; }
+  .change-arrow.down { color: #facc15; }
+  .change-text { font-size: 0.82rem; color: #d1d5db; }
+  .change-text span { color: #6b7280; font-size: 0.75rem; display: block; }
 
-  tbody tr:hover { background: rgba(99,102,241,0.04); }
+  /* ── Calculator ── */
+  .calc-container {
+    background: #111118; border: 1px solid #1f2937; border-radius: 20px;
+    padding: 2rem; margin: 1.5rem 0;
+  }
+  .calc-inputs {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 700px) { .calc-inputs { grid-template-columns: 1fr; } }
+  .input-group h4 {
+    font-size: 0.7rem; font-weight: 700; color: #818cf8; text-transform: uppercase;
+    letter-spacing: 0.1em; margin-bottom: 1rem; padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(99,102,241,0.15);
+  }
+  .slider-row { margin-bottom: 1rem; }
+  .slider-row label {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 0.78rem; color: #9ca3af; margin-bottom: 0.4rem; font-weight: 600;
+  }
+  .slider-val {
+    font-weight: 800; color: #e5e7eb; font-size: 0.85rem;
+    background: rgba(99,102,241,0.08); padding: 0.1rem 0.5rem;
+    border-radius: 6px; min-width: 60px; text-align: center;
+  }
+  input[type="range"] {
+    -webkit-appearance: none; width: 100%; height: 6px;
+    background: #1e293b; border-radius: 3px; outline: none; cursor: pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 18px; height: 18px;
+    background: #818cf8; border-radius: 50%; cursor: pointer;
+    border: 2px solid #0a0a0f;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 18px; height: 18px; background: #818cf8;
+    border-radius: 50%; cursor: pointer; border: 2px solid #0a0a0f;
+  }
+  .preset-bar {
+    display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+  }
+  .preset-btn {
+    padding: 0.5rem 1rem; border-radius: 999px; border: 1px solid #1f2937;
+    background: #0d0d14; color: #9ca3af; font-size: 0.75rem; font-weight: 700;
+    cursor: pointer; transition: all 0.15s; font-family: inherit;
+  }
+  .preset-btn:hover { border-color: #818cf8; color: #e5e7eb; background: rgba(99,102,241,0.08); }
+  .preset-btn.active { border-color: #818cf8; color: #818cf8; background: rgba(99,102,241,0.12); }
 
-  /* ── Comparison Box ── */
-  .comparison-box {
-    background: linear-gradient(135deg, rgba(34,197,94,0.05), rgba(99,102,241,0.05));
-    border: 1px solid rgba(34,197,94,0.15);
-    border-radius: 16px;
-    padding: 1.5rem;
+  /* ── Calculator Outputs ── */
+  .calc-outputs {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem; margin: 1.5rem 0;
+  }
+  .calc-out {
+    background: #0d0d14; border-radius: 12px; padding: 1rem; text-align: center;
+    border: 1px solid transparent; transition: border-color 0.2s;
+  }
+  .calc-out:hover { border-color: rgba(99,102,241,0.3); }
+  .calc-out .out-num { font-size: 1.4rem; font-weight: 900; color: #818cf8; display: block; margin-bottom: 0.15rem; }
+  .calc-out .out-label { font-size: 0.6rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+  .calc-out.positive .out-num { color: #4ade80; }
+  .calc-out.negative .out-num { color: #f87171; }
+
+  /* ── Chart ── */
+  .chart-wrap {
+    background: #0d0d14; border-radius: 14px; padding: 1.25rem;
     margin: 1.5rem 0;
   }
-
-  .comparison-box h4 { color: #4ade80; font-size: 1rem; font-weight: 800; margin-bottom: 0.75rem; }
-
-  .comparison-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 0.75rem;
+  .chart-title-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 1rem;
+  }
+  .chart-title { font-size: 0.78rem; font-weight: 700; color: #e5e7eb; }
+  .chart-legend { display: flex; gap: 1rem; }
+  .legend-item { font-size: 0.65rem; color: #6b7280; display: flex; align-items: center; gap: 0.3rem; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 2px; }
+  .chart-area { display: flex; align-items: flex-end; gap: 3px; height: 180px; }
+  .chart-bar {
+    flex: 1; border-radius: 3px 3px 0 0; min-height: 2px;
+    transition: height 0.3s ease; position: relative; cursor: pointer;
+  }
+  .chart-bar:hover { opacity: 0.85; }
+  .chart-bar .bar-tooltip {
+    display: none; position: absolute; bottom: calc(100% + 6px); left: 50%;
+    transform: translateX(-50%); background: #1e293b; color: #e5e7eb;
+    padding: 0.3rem 0.5rem; border-radius: 6px; font-size: 0.6rem;
+    font-weight: 700; white-space: nowrap; z-index: 10;
+    pointer-events: none;
+  }
+  .chart-bar:hover .bar-tooltip { display: block; }
+  .chart-labels {
+    display: flex; gap: 3px; margin-top: 0.4rem;
+  }
+  .chart-labels span {
+    flex: 1; text-align: center; font-size: 0.55rem; color: #4b5563;
   }
 
-  .comparison-stat { text-align: center; }
-  .comparison-stat .val { font-size: 1.4rem; font-weight: 900; color: #4ade80; }
-  .comparison-stat .lbl { font-size: 0.65rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
-
-  /* ── Roadmap ── */
-  .roadmap { position: relative; padding-left: 2.5rem; }
-
-  .roadmap::before {
-    content: '';
-    position: absolute;
-    left: 14px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #818cf8, #a78bfa, #c084fc);
-    border-radius: 2px;
+  /* ── Breakeven Line ── */
+  .breakeven-note {
+    text-align: center; margin-top: 0.75rem; font-size: 0.78rem;
+    color: #4ade80; font-weight: 700;
   }
+  .breakeven-note.none { color: #f87171; }
 
-  .roadmap-phase {
-    position: relative;
-    margin-bottom: 2rem;
-    padding: 1.25rem;
-    background: #111118;
-    border: 1px solid #1f2937;
-    border-radius: 14px;
+  /* ── Details/Summary ── */
+  details { margin: 1rem 0; }
+  summary {
+    cursor: pointer; font-size: 0.82rem; font-weight: 700; color: #818cf8;
+    padding: 0.5rem 0; user-select: none;
   }
+  summary:hover { color: #a78bfa; }
 
-  .roadmap-phase::before {
-    content: '';
-    position: absolute;
-    left: -2.05rem;
-    top: 1.5rem;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid #818cf8;
-    background: #0a0a0f;
-  }
-
-  .phase-label {
-    display: inline-block;
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.2rem 0.6rem;
-    border-radius: 6px;
-    margin-bottom: 0.5rem;
-  }
-
-  .phase-1-label { background: rgba(168,85,247,0.12); color: #c084fc; }
-  .phase-2-label { background: rgba(99,102,241,0.12); color: #818cf8; }
-  .phase-3-label { background: rgba(34,197,94,0.12); color: #4ade80; }
-
-  .roadmap-phase h4 { color: #f3f4f6; font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
-  .roadmap-phase ul { list-style: none; padding: 0; }
-  .roadmap-phase li { padding: 0.25rem 0 0.25rem 1.2rem; position: relative; font-size: 0.85rem; }
-  .roadmap-phase li::before { content: '\2192'; position: absolute; left: 0; color: #6b7280; }
-
-  /* ── Monetization Cards ── */
-  .mono-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
-    margin: 1rem 0;
-  }
-
-  .mono-card {
-    background: #111118;
-    border: 1px solid #1f2937;
-    border-radius: 14px;
-    padding: 1.25rem;
-  }
-
-  .mono-card h4 { font-size: 0.85rem; font-weight: 700; color: #e5e7eb; margin-bottom: 0.5rem; }
-  .mono-card .amount { font-size: 1.3rem; font-weight: 900; }
-  .mono-card .details { font-size: 0.78rem; color: #6b7280; margin-top: 0.25rem; }
-
-  /* ── Avoid Card ── */
-  .avoid-card {
-    background: rgba(239,68,68,0.04);
-    border: 1px solid rgba(239,68,68,0.15);
-    border-radius: 14px;
-    padding: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .avoid-card .avoid-name { font-weight: 700; color: #f87171; font-size: 0.9rem; margin-bottom: 0.25rem; }
-  .avoid-card .avoid-reason { font-size: 0.82rem; color: #9ca3af; }
-
-  /* ── Name Grid ── */
-  .name-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.75rem;
-    margin: 1rem 0;
-  }
-
-  .name-card {
-    background: #111118;
-    border: 1px solid #1f2937;
-    border-radius: 12px;
-    padding: 1rem;
-    transition: border-color 0.2s;
-  }
-
-  .name-card:hover { border-color: rgba(99,102,241,0.4); }
-  .name-card .domain { font-size: 1.05rem; font-weight: 800; color: #f3f4f6; margin-bottom: 0.25rem; }
-  .name-card .rationale { font-size: 0.78rem; color: #6b7280; }
-
-  .avail-tag {
-    display: inline-block;
-    font-size: 0.6rem;
-    font-weight: 700;
-    padding: 0.15rem 0.5rem;
-    border-radius: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-left: 0.4rem;
-    vertical-align: middle;
-  }
-
-  .avail-good { background: rgba(34,197,94,0.15); color: #4ade80; }
-  .avail-maybe { background: rgba(234,179,8,0.15); color: #facc15; }
-  .avail-taken { background: rgba(239,68,68,0.15); color: #f87171; }
-
-  /* ── Rename Section ── */
-  .rename-category {
-    background: #111118;
-    border: 1px solid #1f2937;
-    border-radius: 14px;
-    margin-bottom: 0.75rem;
-    overflow: hidden;
-  }
-
-  .rename-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.25rem;
-  }
-
-  .rename-header .cat-name { font-weight: 700; font-size: 0.9rem; color: #e5e7eb; }
-  .rename-header .cat-count { font-size: 0.75rem; font-weight: 700; color: #6b7280; background: #1e293b; padding: 0.2rem 0.6rem; border-radius: 6px; }
-
-  .risk-high { border-left: 3px solid #ef4444; }
-  .risk-med { border-left: 3px solid #f59e0b; }
-  .risk-low { border-left: 3px solid #4ade80; }
-
-  /* ── Paywall Funnel ── */
-  .funnel { display: flex; flex-direction: column; gap: 0.5rem; margin: 1rem 0; }
-
+  /* ── Funnel ── */
+  .funnel { margin: 1rem 0; }
   .funnel-step {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: #111118;
-    border: 1px solid #1f2937;
-    border-radius: 12px;
-    padding: 0.75rem 1rem;
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1rem; background: #111118; border: 1px solid #1f2937;
+    border-radius: 12px; margin-bottom: 0.5rem;
   }
+  .funnel-pct { font-weight: 900; font-size: 0.9rem; white-space: nowrap; min-width: 60px; }
+  .funnel-label { font-weight: 700; font-size: 0.88rem; color: #e5e7eb; }
+  .funnel-desc { font-size: 0.82rem; color: #6b7280; }
 
-  .funnel-step .funnel-pct {
-    font-size: 1.1rem;
-    font-weight: 900;
-    min-width: 60px;
-    text-align: right;
-  }
-
-  .funnel-step .funnel-desc { font-size: 0.82rem; color: #9ca3af; }
-  .funnel-step .funnel-label { font-size: 0.82rem; font-weight: 700; color: #e5e7eb; }
-
-  /* ── Footer ── */
-  footer {
-    text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-    border-top: 1px solid #1f2937;
-    color: #4b5563;
-    font-size: 0.75rem;
-  }
-
-  @media (max-width: 640px) {
+  @media (max-width: 600px) {
     header h1 { font-size: 1.75rem; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .metric-grid { grid-template-columns: 1fr; }
-    .name-grid { grid-template-columns: 1fr; }
-    .mono-grid { grid-template-columns: 1fr; }
-    .comparison-stats { grid-template-columns: repeat(2, 1fr); }
+    .avoid-card { flex-direction: column; gap: 0.25rem; }
+    .card-header { flex-wrap: wrap; }
+    .calc-outputs { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
 <body>
-
 <div class="container">
 
   <!-- ════════════════════ HEADER ════════════════════ -->
   <header>
-    <div class="badge">Market Research Report &mdash; March 2026</div>
-    <h1>Duolingo for Knowledge</h1>
-    <p>Casual, gamified learning across professions and curiosity topics. Not exam prep &mdash; just making it fun to learn real-world skills and fascinating knowledge. Which topics have the biggest untapped audience?</p>
+    <div class="badge">Research v2 &mdash; April 2026</div>
+    <h1>Market Research &mdash; Duolingo for Knowledge</h1>
+    <p>Updated analysis based on Octokeen's actual product capabilities (14 question types, 5 lesson formats), current market data, and interactive revenue forecasting.</p>
   </header>
 
-  <!-- ════════════════════ THE MODEL ════════════════════ -->
+  <!-- ════════════════════ WHAT CHANGED ════════════════════ -->
   <section>
-    <h2>The Model &mdash; Casual Learning, Not Exam Prep</h2>
-    <p>This is <strong>Duolingo's actual model</strong>: most Duolingo users learn a language casually, not for a test. The same applies here &mdash; people who want to <em>feel like they're learning while having fun</em>. Bite-sized lessons, streaks, XP, leagues. The audience is anyone <strong>curious</strong> about a topic, not just exam candidates.</p>
+    <h2>What Changed from v1</h2>
+    <p style="margin-bottom: 1rem; font-size: 0.88rem;">After analyzing Octokeen's 14 question types (sort-buckets, image-tap, scenario, match-pairs, etc.) and 5 lesson formats against each topic's content characteristics, several tier positions needed correction.</p>
+    <div class="changes-grid">
+      <div class="change-item">
+        <div class="change-arrow up">&uarr;</div>
+        <div class="change-text"><strong>Healthcare &amp; Body Science</strong><span>B-Tier &rarr; A-Tier &mdash; Universally relevant, massively undervalued</span></div>
+      </div>
+      <div class="change-item">
+        <div class="change-arrow new-entry">+</div>
+        <div class="change-text"><strong>History &amp; Civilizations</strong><span>Unlisted &rarr; A-Tier &mdash; Biggest miss in v1, 41M+ Reddit signal</span></div>
+      </div>
+      <div class="change-item">
+        <div class="change-arrow new-entry">+</div>
+        <div class="change-text"><strong>Geography &amp; Geopolitics</strong><span>Unlisted &rarr; A-Tier &mdash; GeoGuessr (50M+) proved the appetite</span></div>
+      </div>
+      <div class="change-item">
+        <div class="change-arrow down">&darr;</div>
+        <div class="change-text"><strong>Philosophy &amp; Critical Thinking</strong><span>A-Tier &rarr; B-Tier &mdash; Hard to make definitive quiz answers</span></div>
+      </div>
+      <div class="change-item">
+        <div class="change-arrow down">&darr;</div>
+        <div class="change-text"><strong>Cooking Science</strong><span>A-Tier &rarr; B-Tier &mdash; Fundamentally hands-on, limits depth</span></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ════════════════════ MARKET CONTEXT ════════════════════ -->
+  <section>
+    <h2>Market Context &mdash; 2026</h2>
     <div class="stats-grid">
       <div class="stat-card">
-        <span class="number">$216B</span>
-        <span class="label">Gamified Learning Market by 2034</span>
+        <span class="number">$1.04B</span>
+        <span class="label">Duolingo FY2025 Revenue</span>
       </div>
       <div class="stat-card">
-        <span class="number">32.8%</span>
-        <span class="label">CAGR Growth Rate</span>
+        <span class="number">133M</span>
+        <span class="label">Duolingo MAU</span>
       </div>
       <div class="stat-card">
-        <span class="number">80%</span>
-        <span class="label">Microlearning Completion Rate</span>
+        <span class="number">9%</span>
+        <span class="label">Duolingo Free&rarr;Paid</span>
       </div>
       <div class="stat-card">
-        <span class="number">$8/mo</span>
-        <span class="label">Avg Education App Subscription</span>
+        <span class="number">$3.2B</span>
+        <span class="label">Education App Revenue (2025)</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">2.6%</span>
+        <span class="label">Avg EdTech Conversion</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">$18.6B</span>
+        <span class="label">Gamified EdTech by 2033</span>
       </div>
     </div>
-
-    <div class="comparison-box">
-      <h4>Duolingo &mdash; The Benchmark (2025)</h4>
-      <div class="comparison-stats">
-        <div class="comparison-stat">
-          <div class="val">$1.04B</div>
-          <div class="lbl">Annual Revenue</div>
-        </div>
-        <div class="comparison-stat">
-          <div class="val">52.7M</div>
-          <div class="lbl">Daily Active Users</div>
-        </div>
-        <div class="comparison-stat">
-          <div class="val">12.2M</div>
-          <div class="lbl">Paid Subscribers</div>
-        </div>
-        <div class="comparison-stat">
-          <div class="val">8.8%</div>
-          <div class="lbl">Free&rarr;Paid Conversion</div>
-        </div>
-        <div class="comparison-stat">
-          <div class="val">$2.50</div>
-          <div class="lbl">ARPU / Month</div>
-        </div>
-        <div class="comparison-stat">
-          <div class="val">~$14B</div>
-          <div class="lbl">Valuation</div>
-        </div>
-      </div>
-      <p style="margin-top: 0.75rem; font-size: 0.82rem; color: #6b7280;">Duolingo expanded into Math, Music, and Chess &mdash; but has NOT entered professional/knowledge education. Most users learn casually, not for exams. 81% of revenue comes from subscriptions, only 7% from ads.</p>
-    </div>
-
     <div style="background: rgba(168,85,247,0.06); border: 1px solid rgba(168,85,247,0.15); border-radius: 14px; padding: 1.25rem; margin-top: 1rem;">
-      <p style="font-size: 0.88rem; color: #c084fc; margin: 0;"><strong>Key insight:</strong> The casual curiosity market for any topic is 10&ndash;100x larger than the exam-taking market. Finance has ~80K CPA candidates/year but <strong>21.4M people</strong> in r/personalfinance alone. That's your real audience.</p>
+      <p style="font-size: 0.88rem; color: #c084fc; margin: 0;"><strong>Key insight:</strong> The casual curiosity market is 10&ndash;100x larger than the exam-prep market. Finance has ~80K CPA candidates/year but <strong>21M+ people</strong> in r/personalfinance. Octokeen targets the curiosity crowd, not test-takers. That's the real opportunity.</p>
     </div>
   </section>
 
@@ -570,43 +387,34 @@
       <div class="card-header">
         <div class="rank rank-1">1</div>
         <div>
-          <div class="card-title">Personal Finance &amp; Investing</div>
+          <div class="card-title">Personal Finance &amp; Investing <span class="change-badge built">BUILT</span></div>
           <div class="card-subtitle">Budgeting &middot; Stocks &middot; Crypto &middot; Real Estate &middot; Retirement &middot; Taxes</div>
         </div>
       </div>
       <div class="metric-grid">
         <div class="metric">
           <div class="metric-label">Reddit Community</div>
-          <div class="metric-value highlight-purple">r/personalfinance: 21.4M</div>
+          <div class="metric-value highlight-purple">r/personalfinance: 21M &middot; r/wallstreetbets: 16M</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Also</div>
-          <div class="metric-value">r/wallstreetbets: 15M &middot; r/investing: 2M</div>
+          <div class="metric-label">YouTube</div>
+          <div class="metric-value">Graham Stephan: 5.1M &middot; Andrei Jikh: 3.1M</div>
         </div>
         <div class="metric">
-          <div class="metric-label">YouTube (Graham Stephan)</div>
-          <div class="metric-value">5.15M subscribers</div>
+          <div class="metric-label">Gamified Competition</div>
+          <div class="metric-value highlight-green">None &mdash; Zogo exists but tiny &amp; bank-funded</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Udemy Top Instructor</div>
-          <div class="metric-value">1.5M students enrolled</div>
+          <div class="metric-label">Octokeen Question Fit</div>
+          <div class="metric-value highlight-purple">14/14 types &mdash; perfect fit</div>
         </div>
       </div>
-      <div style="margin-bottom: 0.75rem;">
-        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamified Competition</div>
-        <div class="competition-meter">
-          <div class="meter-bar"><div class="meter-fill none"></div></div>
-          <span class="meter-label highlight-green">None</span>
-        </div>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Acorns/Stash teach investing as a side feature. Zogo exists but small &amp; bank-funded. No Duolingo-style app.</p>
-      </div>
-      <div style="margin-bottom: 0.75rem;">
+      <div style="margin-bottom:0.75rem;">
         <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamifiability &mdash; 9/10</div>
-        <div class="curiosity-bar"><div class="curiosity-fill" style="width: 90%;"></div></div>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Concepts break into perfect bite-sized modules: budgeting &rarr; compound interest &rarr; index funds &rarr; tax brackets &rarr; retirement. Quiz-heavy. Visual progress (virtual portfolio growth).</p>
+        <div class="curiosity-bar"><div class="curiosity-fill" style="width:90%;"></div></div>
       </div>
       <div class="card-insight">
-        <strong>Why #1:</strong> Everyone needs this knowledge, nobody has made it fun. 21M+ Reddit members in finance subs alone. Users perceive direct financial ROI from learning ("I saved $500 because I understood tax brackets"). Universal appeal across every demographic and income level. Natural progression from basics to advanced. The <em>single biggest casual learning gap</em> in any category.
+        <strong>Why #1:</strong> Everyone needs this knowledge, nobody has made it fun. Users perceive direct financial ROI ("I saved $500 because I understood tax brackets"). Slider-estimate for compound interest, sort-buckets for assets vs liabilities, scenario for "you have $5K in debt..." &mdash; every Octokeen question type maps perfectly. <strong>1,352 questions already built.</strong>
       </div>
     </div>
 
@@ -615,43 +423,34 @@
       <div class="card-header">
         <div class="rank rank-2">2</div>
         <div>
-          <div class="card-title">Psychology &amp; Human Behavior</div>
+          <div class="card-title">Psychology &amp; Human Behavior <span class="change-badge built">BUILT</span></div>
           <div class="card-subtitle">Cognitive Biases &middot; Social Psychology &middot; Behavioral Economics &middot; Mental Models</div>
         </div>
       </div>
       <div class="metric-grid">
         <div class="metric">
-          <div class="metric-label">Yale "Science of Well-Being"</div>
-          <div class="metric-value highlight-purple">4.6M enrollments on Coursera</div>
+          <div class="metric-label">Viral Proof</div>
+          <div class="metric-value highlight-purple">Yale "Well-Being" course: 4.6M enrollments</div>
         </div>
         <div class="metric">
-          <div class="metric-label">YouTube (Vsauce, adjacent)</div>
-          <div class="metric-value">24M subscribers</div>
+          <div class="metric-label">YouTube</div>
+          <div class="metric-value">Psych2Go: 10.5M &middot; Vsauce: 18.5M (adjacent)</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Documented Biases to Teach</div>
-          <div class="metric-value">200+ (perfect module-per-bias)</div>
+          <div class="metric-label">Gamified Competition</div>
+          <div class="metric-value highlight-green">None &mdash; Blinkist/Headway are passive book summaries</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Reddit</div>
-          <div class="metric-value">r/psychology: ~1.2M</div>
+          <div class="metric-label">Octokeen Question Fit</div>
+          <div class="metric-value highlight-purple">13/14 types</div>
         </div>
       </div>
-      <div style="margin-bottom: 0.75rem;">
-        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamified Competition</div>
-        <div class="competition-meter">
-          <div class="meter-bar"><div class="meter-fill none"></div></div>
-          <span class="meter-label highlight-green">None</span>
-        </div>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Blinkist/Headway do book summaries (passive). No interactive gamified app for psychology.</p>
-      </div>
-      <div style="margin-bottom: 0.75rem;">
+      <div style="margin-bottom:0.75rem;">
         <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamifiability &mdash; 9/10</div>
-        <div class="curiosity-bar"><div class="curiosity-fill" style="width: 90%;"></div></div>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Each cognitive bias = one lesson. Scenario quizzes ("Which bias is this?"). Optical illusions. Experiment recreations. Highly shareable ("I just learned why I always do this!").</p>
+        <div class="curiosity-bar"><div class="curiosity-fill" style="width:90%;"></div></div>
       </div>
       <div class="card-insight">
-        <strong>Why #2:</strong> Yale's free psychology course attracted 4.6M enrollments &mdash; staggering demand for casual psychology education. The content is inherently viral ("Did you know your brain does this?"). Social sharing drives organic growth. Zero app competition. Overlaps with self-improvement crowd (massive market).
+        <strong>Why #2:</strong> Content is inherently viral &mdash; "Did you know your brain does this?" Scenario questions for bias identification, sort-buckets for classical vs operant conditioning, match-pairs for matching biases to descriptions. The self-improvement crowd overlap is massive. <strong>657 questions already built.</strong>
       </div>
     </div>
 
@@ -660,43 +459,34 @@
       <div class="card-header">
         <div class="rank rank-3">3</div>
         <div>
-          <div class="card-title">Space &amp; Astronomy</div>
-          <div class="card-subtitle">Planets &middot; Stars &middot; Astrophysics &middot; Space Exploration &middot; Cosmology</div>
+          <div class="card-title">Space &amp; Astronomy <span class="change-badge built">BUILT</span></div>
+          <div class="card-subtitle">Planets &middot; Stars &middot; Black Holes &middot; Space Exploration &middot; Cosmology</div>
         </div>
       </div>
       <div class="metric-grid">
         <div class="metric">
           <div class="metric-label">Reddit</div>
-          <div class="metric-value highlight-purple">r/space: 27.8M members</div>
+          <div class="metric-value highlight-purple">r/space: 23M members</div>
         </div>
         <div class="metric">
-          <div class="metric-label">YouTube Audience</div>
-          <div class="metric-value">Kurzgesagt: 24M &middot; Mark Rober: 69M</div>
+          <div class="metric-label">YouTube</div>
+          <div class="metric-value">Kurzgesagt: 24M &middot; PBS Space Time: 3.1M</div>
         </div>
         <div class="metric">
-          <div class="metric-label">SmarterEveryDay</div>
-          <div class="metric-value">11.8M subscribers</div>
+          <div class="metric-label">Gamified Competition</div>
+          <div class="metric-value highlight-green">None &mdash; Star Walk is ID, not learning</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Star Walk App</div>
-          <div class="metric-value">10M+ downloads (ID tool, not learning)</div>
+          <div class="metric-label">Octokeen Question Fit</div>
+          <div class="metric-value highlight-purple">14/14 types &mdash; visually stunning content</div>
         </div>
       </div>
-      <div style="margin-bottom: 0.75rem;">
-        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamified Competition</div>
-        <div class="competition-meter">
-          <div class="meter-bar"><div class="meter-fill none"></div></div>
-          <span class="meter-label highlight-green">None</span>
-        </div>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Star Walk/SkyView are identification tools, not learning apps. NASA apps are reference/news. No gamified space science app for adults.</p>
-      </div>
-      <div style="margin-bottom: 0.75rem;">
+      <div style="margin-bottom:0.75rem;">
         <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamifiability &mdash; 9/10</div>
-        <div class="curiosity-bar"><div class="curiosity-fill" style="width: 90%;"></div></div>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Visually stunning (free NASA imagery). Planet quizzes, star classification, scale comparisons, mission timelines. Universal appeal across age and gender.</p>
+        <div class="curiosity-bar"><div class="curiosity-fill" style="width:90%;"></div></div>
       </div>
       <div class="card-insight">
-        <strong>Why #3:</strong> r/space has 27.8M members &mdash; one of the largest communities on all of Reddit. The appetite for space content is essentially unlimited (Mark Rober: 69M subs). Visually gorgeous content. Zero gamified competition. Universal appeal across every demographic. People LOVE feeling smart about space.
+        <strong>Why #3:</strong> Free NASA imagery makes every lesson visually gorgeous. Image-tap for constellation/planet identification, slider-estimate for star temperatures, order-steps for stellar lifecycle, rank-order for planet sizes. People LOVE feeling smart about space. Universal demographic appeal. <strong>644 questions already built.</strong>
       </div>
     </div>
   </section>
@@ -706,99 +496,147 @@
     <h2>A-Tier &mdash; Large Audience, Highly Gamifiable</h2>
     <div class="tier-badge tier-a">Strong Opportunities &mdash; Phase 2 Expansion</div>
 
-    <!-- #4 Nutrition -->
+    <!-- #4 History -->
     <div class="profession-card">
       <div class="card-header">
         <div class="rank rank-4">4</div>
         <div>
-          <div class="card-title">Nutrition &amp; Fitness Science</div>
-          <div class="card-subtitle">Macros &middot; Exercise Science &middot; Supplements &middot; Sports Nutrition</div>
+          <div class="card-title">History &amp; World Civilizations <span class="change-badge new">NEW</span></div>
+          <div class="card-subtitle">Ancient Civilizations &middot; World Wars &middot; Cultural Revolutions &middot; Modern Geopolitics</div>
         </div>
       </div>
       <div class="metric-grid">
         <div class="metric">
           <div class="metric-label">Reddit</div>
-          <div class="metric-value">r/Fitness: 12.4M &middot; r/nutrition: 2.4M &middot; r/bodybuilding: 3M</div>
+          <div class="metric-value highlight-purple">r/todayilearned: 41M &middot; r/history: 18M</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">YouTube</div>
+          <div class="metric-value">OverSimplified: 9.4M &middot; CrashCourse: 17M</div>
         </div>
         <div class="metric">
           <div class="metric-label">Gamified Competition</div>
-          <div class="metric-value highlight-green">None &mdash; tracking apps only, no learning</div>
+          <div class="metric-value highlight-green">None &mdash; no Duolingo-style history app exists</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Octokeen Question Fit</div>
+          <div class="metric-value highlight-purple">14/14 types &mdash; everything works</div>
         </div>
       </div>
+      <div style="margin-bottom:0.75rem;">
+        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamifiability &mdash; 10/10</div>
+        <div class="curiosity-bar"><div class="curiosity-fill" style="width:100%;"></div></div>
+      </div>
       <div class="card-insight">
-        Thousands of tracking apps (MyFitnessPal, MacroFactor) but nobody <em>teaches</em> the science. "Which food has more protein?" "What does creatine actually do?" Perfectly gamifiable. Overlaps with massive gym/health culture.
+        <strong>Why #4:</strong> This was the biggest miss in v1. <strong>r/todayilearned (41M) + r/history (18M) = the largest curiosity audience on Reddit by raw numbers.</strong> History is the ultimate quiz topic: order-steps for chronology, image-tap on maps, match-pairs for events-to-eras, scenario for "You're a Roman senator during...", timeline lessons for cause-and-effect chains. Content is endlessly expandable (ancient, medieval, modern, regional). OverSimplified's 9.4M subscribers prove the appetite for fun history. Zero competition in the gamified app space.
       </div>
     </div>
 
-    <!-- #5 Automotive -->
+    <!-- #5 Healthcare -->
     <div class="profession-card">
       <div class="card-header">
         <div class="rank rank-5">5</div>
         <div>
-          <div class="card-title">Automotive &amp; How Cars Work</div>
-          <div class="card-subtitle">Engine Mechanics &middot; EV Technology &middot; Maintenance &middot; Diagnostics</div>
+          <div class="card-title">Healthcare &amp; Body Science <span class="change-badge upgrade">UPGRADED FROM B</span></div>
+          <div class="card-subtitle">Anatomy &middot; Physiology &middot; How Diseases Work &middot; First Aid &middot; Medications</div>
         </div>
       </div>
       <div class="metric-grid">
         <div class="metric">
-          <div class="metric-label">Reddit</div>
-          <div class="metric-value">r/cars: 7.4M &middot; r/MechanicAdvice: 1M+</div>
+          <div class="metric-label">YouTube</div>
+          <div class="metric-value highlight-purple">Doctor Mike: 11M &middot; Chubbyemu: 7M</div>
         </div>
         <div class="metric">
-          <div class="metric-label">YouTube</div>
-          <div class="metric-value">ChrisFix: 11M &middot; Donut Media: 9.2M &middot; Scotty Kilmer: 6.6M</div>
+          <div class="metric-label">Existing Apps</div>
+          <div class="metric-value">Complete Anatomy: 3M+ &mdash; but targets med students only</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Gamified Competition</div>
+          <div class="metric-value highlight-green">None for casual learners</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Octokeen Question Fit</div>
+          <div class="metric-value highlight-purple">14/14 types &mdash; image-tap is a killer feature here</div>
         </div>
       </div>
+      <div style="margin-bottom:0.75rem;">
+        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamifiability &mdash; 9/10</div>
+        <div class="curiosity-bar"><div class="curiosity-fill" style="width:90%;"></div></div>
+      </div>
       <div class="card-insight">
-        Zero casual consumer apps exist &mdash; YouTube is the only competition. "What does this dashboard light mean?" "How does a turbo work?" EV transition creating massive new wave of curiosity. Interactive engine diagrams are inherently engaging.
+        <strong>Why #5 (upgraded from B-tier):</strong> v1 undervalued this by citing "liability concerns." That's a red herring &mdash; you're teaching anatomy, not diagnosing patients (same as teaching finance without being a financial advisor). <strong>"How does my body work?" is as universally relevant as "How does my money work?"</strong> Image-tap for organ identification, order-steps for blood flow through the heart, sort-buckets for "symptom of Type 1 vs Type 2", scenario for patient presentations, slider-estimate for normal vital ranges. Doctor Mike (11M) and Chubbyemu (7M) prove massive YouTube appetite. Complete Anatomy charges $25+/year and targets med students &mdash; the casual "know your body" market is wide open.
       </div>
     </div>
 
-    <!-- #6 Law -->
+    <!-- #6 Nutrition -->
     <div class="profession-card">
       <div class="card-header">
         <div class="rank rank-6">6</div>
         <div>
-          <div class="card-title">Law &amp; Legal Basics</div>
-          <div class="card-subtitle">Know Your Rights &middot; Contracts &middot; Tenant Law &middot; Employment Law</div>
+          <div class="card-title">Nutrition &amp; Food Science</div>
+          <div class="card-subtitle">Macros &middot; Vitamins &middot; Meal Planning &middot; Sports Nutrition &middot; Food Labels</div>
         </div>
       </div>
       <div class="metric-grid">
         <div class="metric">
           <div class="metric-label">Reddit</div>
-          <div class="metric-value">r/legaladvice: 3.4M members</div>
+          <div class="metric-value">r/nutrition: 2.2M &middot; r/fitness: 11M (massive overlap)</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">YouTube</div>
+          <div class="metric-value">Jeff Nippard: 6.2M &middot; Dr. Sten Ekberg: 5.3M</div>
         </div>
         <div class="metric">
           <div class="metric-label">Gamified Competition</div>
-          <div class="metric-value highlight-green">Law Dojo exists but targets law students only</div>
+          <div class="metric-value highlight-green">None &mdash; calorie trackers exist but don't teach</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Octokeen Question Fit</div>
+          <div class="metric-value">13/14 types</div>
         </div>
       </div>
+      <div style="margin-bottom:0.75rem;">
+        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamifiability &mdash; 8/10</div>
+        <div class="curiosity-bar"><div class="curiosity-fill" style="width:80%;"></div></div>
+      </div>
       <div class="card-insight">
-        Everyone has Googled a legal question. "Can my landlord do this?" "What counts as a contract?" "When can police search my car?" Scenario-based quizzes are extremely engaging. Universal need, zero casual competition.
+        <strong>Why #6:</strong> Direct daily relevance &mdash; everyone eats, everyone wants to eat better. Sort-buckets for macro classification, match-pairs for vitamin&rarr;function, slider-estimate for daily requirements, scenario for "a client wants to reduce cholesterol..." Massive overlap with the fitness community (r/fitness 11M) creates built-in cross-promotion. MyFitnessPal and calorie trackers don't teach &mdash; they just track.
       </div>
     </div>
 
-    <!-- #7 Cooking -->
+    <!-- #7 Geography -->
     <div class="profession-card">
       <div class="card-header">
         <div class="rank rank-7">7</div>
         <div>
-          <div class="card-title">Cooking &amp; Culinary Science</div>
-          <div class="card-subtitle">Techniques &middot; Food Science &middot; Cuisines &middot; Flavor Pairing</div>
+          <div class="card-title">Geography &amp; Geopolitics <span class="change-badge new">NEW</span></div>
+          <div class="card-subtitle">Countries &middot; Capitals &middot; Flags &middot; Physical Geography &middot; Cultural Regions</div>
         </div>
       </div>
       <div class="metric-grid">
         <div class="metric">
-          <div class="metric-label">YouTube</div>
-          <div class="metric-value">Joshua Weissman: 10.5M &middot; Babish: 9M+</div>
+          <div class="metric-label">Proven Demand</div>
+          <div class="metric-value highlight-purple">GeoGuessr: 50M+ players</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Existing App</div>
-          <div class="metric-value highlight-yellow">Parsnip: "Duolingo for cooking" but small &amp; limited</div>
+          <div class="metric-label">Reddit</div>
+          <div class="metric-value">r/MapPorn: 4M &middot; r/geography: 1M</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Gamified Competition</div>
+          <div class="metric-value highlight-yellow">GeoGuessr exists but is a game, not learning</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Octokeen Question Fit</div>
+          <div class="metric-value highlight-purple">14/14 &mdash; image-tap on maps is a natural killer feature</div>
         </div>
       </div>
+      <div style="margin-bottom:0.75rem;">
+        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamifiability &mdash; 9/10</div>
+        <div class="curiosity-bar"><div class="curiosity-fill" style="width:90%;"></div></div>
+      </div>
       <div class="card-insight">
-        Parsnip proves the concept exists but hasn't scaled. Knife cuts, cooking temperatures, flavor pairings, cuisine identification all gamify well. Harvard's "Science &amp; Cooking" course is hugely popular. Universal appeal.
+        <strong>Why #7:</strong> GeoGuessr's 50M+ players prove enormous appetite for geography engagement. But GeoGuessr is a guessing <em>game</em>, not a structured learning path. Octokeen's image-tap is a natural fit for "Tap France on this map." Category-swipe for "European or Asian?" Sort-buckets for classifying countries by region, rank-order for population/area. Flags, capitals, and landmarks create perfect bite-sized modules. Cultural geography adds depth beyond trivia.
       </div>
     </div>
   </section>
@@ -811,55 +649,74 @@
     <div class="table-wrap">
       <table>
         <thead>
-          <tr>
-            <th>Topic</th>
-            <th>Curiosity Signal</th>
-            <th>Competition</th>
-            <th>Caveat</th>
-          </tr>
+          <tr><th>Topic</th><th>Curiosity Signal</th><th>Competition</th><th>Caveat</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Trades / DIY / Home Improvement</strong></td>
-            <td>r/DIY: 22M &middot; r/woodworking: 6.1M</td>
+            <td><strong>Philosophy &amp; Critical Thinking</strong> <span class="change-badge down">FROM A</span></td>
+            <td>r/philosophy: 17M (default sub, inflated)</td>
             <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill none"></div></div><span class="meter-label highlight-green">None</span></div></td>
-            <td>Trades are hands-on &mdash; harder to make purely app-based. Knowledge part works, doing part doesn't.</td>
+            <td>Logical fallacies quiz well, but pure philosophy is subjective. "Is Kant right about X?" has no clear answer. Better as a module within Psychology than standalone.</td>
+          </tr>
+          <tr>
+            <td><strong>Cooking Science</strong> <span class="change-badge down">FROM A</span></td>
+            <td>Babish: 10.5M &middot; r/cooking: 4M</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill low"></div></div><span class="meter-label highlight-yellow">Parsnip</span></div></td>
+            <td>Fundamentally hands-on. Knife cuts, temperatures, flavor pairings quiz well, but actual cooking skill doesn't translate to an app. Parsnip tried and hasn't scaled.</td>
+          </tr>
+          <tr>
+            <td><strong>Trades / DIY / Home Improvement</strong></td>
+            <td>r/DIY: 23M &middot; r/HomeImprovement: 4M</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill none"></div></div><span class="meter-label highlight-green">None</span></div></td>
+            <td>Massive audience but hands-on skills don't translate to pure app learning. The knowledge component (building codes, tool selection, electrical basics) works.</td>
           </tr>
           <tr>
             <td><strong>Cybersecurity / Digital Literacy</strong></td>
-            <td>r/hacking: 2.9M &middot; TryHackMe: 6M users</td>
+            <td>r/hacking: 2.9M &middot; TryHackMe: 6M</td>
             <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill med"></div></div><span class="meter-label highlight-yellow">TryHackMe</span></div></td>
-            <td>TryHackMe dominates the aspiring-pro niche. But casual "protect yourself online" for non-tech people is open.</td>
+            <td>Pro niche is covered by TryHackMe. But casual "protect yourself online" for non-tech people is a wide-open gap.</td>
           </tr>
           <tr>
             <td><strong>Engineering Fundamentals</strong></td>
             <td>Practical Engineering: 4.1M &middot; Kurzgesagt: 24M</td>
             <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill med"></div></div><span class="meter-label highlight-yellow">Brilliant.org</span></div></td>
-            <td>Brilliant.org (10M users, $25/mo) covers this. But there's room for a more casual, cheaper approach.</td>
+            <td>Brilliant.org (10M users, $28/mo) is strong competition. Room for a cheaper, more casual approach. <em>Already built as restricted course (1,700 questions).</em></td>
           </tr>
           <tr>
-            <td><strong>Architecture / Interior Design</strong></td>
-            <td>r/InteriorDesign: 1.1M &middot; HGTV audience: millions</td>
+            <td><strong>Biology &amp; Evolution</strong></td>
+            <td>r/biology: 2.5M &middot; r/science: 34M</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill low"></div></div><span class="meter-label highlight-yellow">Khan (free)</span></div></td>
+            <td>Strong content but overlaps with Healthcare and Space. Best positioned as "How life works" rather than academic biology. Future expansion candidate.</td>
+          </tr>
+          <tr>
+            <td><strong>Law &amp; Legal Literacy</strong></td>
+            <td>r/legaladvice: 3.5M</td>
             <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill none"></div></div><span class="meter-label highlight-green">None</span></div></td>
-            <td>Design is subjective &mdash; harder to make quiz-based. Style ID and color theory work well though.</td>
+            <td>"Know your rights" is practical and gamifiable. But content varies by jurisdiction &mdash; US-focused first, then expand. Requires careful vetting.</td>
           </tr>
           <tr>
-            <td><strong>Sustainability / Environment</strong></td>
-            <td>r/environment: 1.6M &middot; Gen Z highly engaged</td>
-            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill low"></div></div><span class="meter-label highlight-green">Weak</span></div></td>
-            <td>Smaller audience. Content can feel preachy. Best framed as science, not advocacy.</td>
-          </tr>
-          <tr>
-            <td><strong>Healthcare / Anatomy</strong></td>
-            <td>Complete Anatomy: 3M+ users</td>
+            <td><strong>Economics &amp; Business</strong></td>
+            <td>r/economics: 2.1M</td>
             <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill low"></div></div><span class="meter-label highlight-yellow">Some</span></div></td>
-            <td>3D anatomy apps exist but target students. Liability concerns limit casual medical content.</td>
+            <td>Overlaps heavily with Personal Finance. Macro econ (GDP, inflation, trade) is interesting but niche. Best as an advanced expansion of the finance course.</td>
           </tr>
           <tr>
             <td><strong>Photography</strong></td>
             <td>r/photography: 5.5M &middot; Peter McKinnon: 6M</td>
             <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill low"></div></div><span class="meter-label highlight-green">Weak</span></div></td>
-            <td>Visual/creative skill is hard to quiz. Composition rules and settings work, artistry doesn't.</td>
+            <td>Composition rules, exposure triangle, and color theory quiz well. But artistic judgment and editing skills don't translate to quiz format.</td>
+          </tr>
+          <tr>
+            <td><strong>Architecture / Interior Design</strong></td>
+            <td>r/InteriorDesign: 1.1M &middot; HGTV audience: millions</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill none"></div></div><span class="meter-label highlight-green">None</span></div></td>
+            <td>Style identification and architectural history work. Subjective design taste doesn't. Limited quiz depth.</td>
+          </tr>
+          <tr>
+            <td><strong>Sustainability / Environment</strong></td>
+            <td>r/environment: 1.2M &middot; Gen Z engaged</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill low"></div></div><span class="meter-label highlight-green">Weak</span></div></td>
+            <td>Smaller niche. Climate science facts gamify well, but content can feel preachy. Must be framed as science, not activism.</td>
           </tr>
         </tbody>
       </table>
@@ -870,435 +727,386 @@
   <section>
     <h2>Avoid</h2>
     <div class="tier-badge tier-avoid">Saturated or Duolingo Already There</div>
-
     <div class="avoid-card">
       <div class="avoid-name">Music Theory</div>
-      <div class="avoid-reason">Duolingo has entered this market directly with 135M MAU distribution. Simply Piano and Yousician cover instrument learning. Competing against Duolingo itself in their model is a losing battle.</div>
+      <div class="avoid-reason">Duolingo entered this market directly with 133M MAU distribution. Simply Piano and Yousician cover instruments. Competing against Duolingo itself is a losing battle.</div>
     </div>
     <div class="avoid-card">
-      <div class="avoid-name">Programming / Coding</div>
-      <div class="avoid-reason">Codecademy (50M users, acquired for $525M), Mimo (20M downloads), Sololearn (20M+), freeCodeCamp. Deeply saturated. Every possible angle has been tried.</div>
+      <div class="avoid-name">Coding</div>
+      <div class="avoid-reason">Codecademy (50M users), Mimo (20M downloads), SoloLearn (20M+), freeCodeCamp (free). Most saturated category in edtech. Every angle has been tried.</div>
     </div>
     <div class="avoid-card">
-      <div class="avoid-name">Math (standalone)</div>
-      <div class="avoid-reason">Duolingo Math exists. Brilliant.org dominates interactive math. Khan Academy is free. No room.</div>
+      <div class="avoid-name">Math</div>
+      <div class="avoid-reason">Duolingo Math exists. Brilliant.org (10M users) dominates interactive math. Khan Academy is free. Photomath ($35M revenue). No room.</div>
+    </div>
+    <div class="avoid-card">
+      <div class="avoid-name">Languages</div>
+      <div class="avoid-reason">Duolingo (133M MAU, $1B+ revenue). Babbel, Busuu, Rosetta Stone. The most saturated learning category in existence.</div>
+    </div>
+    <div class="avoid-card">
+      <div class="avoid-name">General Trivia</div>
+      <div class="avoid-reason">Different product category entirely. Trivia Crack, QuizUp. No learning progression or knowledge building &mdash; just recall. Octokeen's value is structured learning, not random facts.</div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ PORTFOLIO STRATEGY ════════════════════ -->
+  <section>
+    <h2>Course Portfolio Strategy</h2>
+    <div style="background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.15); border-radius: 14px; padding: 1.25rem; margin-bottom: 1rem;">
+      <p style="font-size: 0.88rem; color: #4ade80; margin: 0 0 0.5rem;"><strong>Each course is a new user acquisition channel.</strong></p>
+      <p style="font-size: 0.82rem; color: #9ca3af; margin: 0;">Every course you add targets a different audience with different search keywords and Reddit communities. A person searching "learn about space" will never find a finance app &mdash; but if you have a space course, they find Octokeen, and might also explore finance. Cross-pollination compounds as your catalog grows.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Phase</th><th>Courses</th><th>Status</th><th>Rationale</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Phase 1 (Now)</strong></td>
+            <td>Finance, Psychology, Space</td>
+            <td class="highlight-green">Built (2,653 questions)</td>
+            <td>S-Tier topics with zero competition. Validate the model, build retention data.</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 2 (Next)</strong></td>
+            <td>History, Healthcare</td>
+            <td class="highlight-yellow">Not started</td>
+            <td>Highest A-Tier signal. History is the single largest curiosity audience. Healthcare is universally relevant.</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 3</strong></td>
+            <td>Nutrition, Geography</td>
+            <td class="highlight-yellow">Not started</td>
+            <td>Strong A-Tier. Nutrition overlaps with fitness crowd. Geography has proven demand via GeoGuessr.</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 4+</strong></td>
+            <td>B-Tier picks based on data</td>
+            <td>&mdash;</td>
+            <td>Let user engagement data from Phase 1-3 guide which B-Tier topics to greenlight.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
   <!-- ════════════════════ BUSINESS MODEL ════════════════════ -->
   <section>
-    <h2>Business Model &mdash; What to Change</h2>
-
+    <h2>Business Model &mdash; What Works</h2>
     <div style="background: rgba(168,85,247,0.06); border: 1px solid rgba(168,85,247,0.15); border-radius: 14px; padding: 1.25rem; margin-bottom: 1.5rem;">
-      <p style="font-size: 0.88rem; color: #c084fc; margin: 0;"><strong>The fundamental shift:</strong> Your current Pro gates <em>features and content</em>. Duolingo gates <em>convenience and comfort</em>. All content should be free &mdash; you monetize by removing friction. This maximizes top-of-funnel while the hearts system naturally pushes engaged users to pay.</p>
+      <p style="font-size: 0.88rem; color: #c084fc; margin: 0;"><strong>The fundamental shift:</strong> Gate <em>convenience and comfort</em>, not content. All lessons should be free. You monetize by removing friction (hearts, ads, streak protection). This maximizes top-of-funnel while naturally pushing engaged users to pay.</p>
     </div>
 
-    <h3>Duolingo's Paywall Playbook</h3>
-    <p>The critical insight: <strong>all content is free</strong>. Duolingo paywalls <em>convenience and comfort</em>, not content.</p>
-
-    <div class="funnel">
-      <div class="funnel-step">
-        <div class="funnel-pct highlight-green">Free</div>
-        <div>
-          <div class="funnel-label">All courses &amp; lessons</div>
-          <div class="funnel-desc">Full content access. 5 hearts (mistakes). Ads between lessons. XP, streaks, leagues.</div>
-        </div>
-      </div>
-      <div class="funnel-step">
-        <div class="funnel-pct highlight-blue">$5/mo</div>
-        <div>
-          <div class="funnel-label">Super &mdash; $59.99/year</div>
-          <div class="funnel-desc">No ads. Unlimited hearts. Streak freeze. Offline. Progress quizzes.</div>
-        </div>
-      </div>
-      <div class="funnel-step">
-        <div class="funnel-pct highlight-purple">$14/mo</div>
-        <div>
-          <div class="funnel-label">Max &mdash; $168/year</div>
-          <div class="funnel-desc">Everything in Super + AI video call, roleplay, "explain my answer."</div>
-        </div>
-      </div>
-    </div>
-
-    <p style="font-size: 0.85rem; margin-top: 0.5rem;"><strong>Top conversion drivers:</strong> #1 Unlimited hearts (no penalty for mistakes). #2 Ad removal. #3 Streak protection (loss aversion). 80&ndash;90% of trial conversions happen on Day 0 &mdash; onboarding is everything.</p>
-
-    <!-- ── What to add ── -->
-    <h3>What You Should Add</h3>
-
-    <div class="profession-card" style="border-left: 3px solid #4ade80;">
-      <div class="card-header">
-        <div class="rank" style="background: linear-gradient(135deg, #4ade80, #22c55e); color: #1a1a2e;">1</div>
-        <div>
-          <div class="card-title">Hearts / Lives System</div>
-          <div class="card-subtitle">Add now &mdash; high impact, moderate effort</div>
-        </div>
-      </div>
-      <p style="font-size: 0.85rem; color: #9ca3af; margin-bottom: 0.75rem;">Duolingo's <strong>#1 conversion driver</strong>. You get 5 hearts. Each wrong answer costs one. Run out? Wait to recharge or upgrade to Pro. Creates perfect friction: free users get the full experience but with a pain point that's instantly solved by paying.</p>
-      <div class="metric-grid">
-        <div class="metric">
-          <div class="metric-label">How It Works</div>
-          <div class="metric-value">5 hearts &rarr; wrong answer = -1 heart &rarr; 0 hearts = wait or pay</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">Recharge</div>
-          <div class="metric-value">1 heart per 4-5 hours, or practice old lessons to earn hearts back</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">Pro Users</div>
-          <div class="metric-value highlight-green">Unlimited hearts &mdash; the #1 reason people upgrade</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">Fits Your App</div>
-          <div class="metric-value">Practice sessions already have right/wrong &mdash; mechanic fits naturally</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="profession-card" style="border-left: 3px solid #4ade80;">
-      <div class="card-header">
-        <div class="rank" style="background: linear-gradient(135deg, #4ade80, #22c55e); color: #1a1a2e;">2</div>
-        <div>
-          <div class="card-title">Make ALL Content Free</div>
-          <div class="card-subtitle">Add now &mdash; counterintuitive but critical</div>
-        </div>
-      </div>
-      <p style="font-size: 0.85rem; color: #9ca3af;">Don't lock any lessons behind Pro. The free tier should feel <strong>complete</strong>. You monetize comfort (unlimited hearts, no ads, streak freeze), not access. This maximizes your top-of-funnel &mdash; everyone can try everything &mdash; while the hearts system naturally pushes engaged users to pay.</p>
-    </div>
-
-    <div class="profession-card" style="border-left: 3px solid #facc15;">
-      <div class="card-header">
-        <div class="rank" style="background: linear-gradient(135deg, #facc15, #d97706); color: #1a1a2e;">3</div>
-        <div>
-          <div class="card-title">Ads Between Lessons</div>
-          <div class="card-subtitle">Add later &mdash; when you have 10K+ DAU</div>
-        </div>
-      </div>
-      <p style="font-size: 0.85rem; color: #9ca3af;">At current scale, ad revenue = pennies ($0.02&ndash;0.05/DAU/day). But ads serve a <strong>dual purpose</strong>: they're annoying enough to push upgrades. Duolingo makes ads deliberately inconvenient &mdash; they're a conversion lever, not a business model. Only 7% of Duolingo's revenue comes from ads.</p>
-      <div class="metric-grid">
-        <div class="metric">
-          <div class="metric-label">Education App CPM (US)</div>
-          <div class="metric-value">Rewarded video: $15&ndash;30 &middot; Interstitial: $5&ndash;8</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">Revenue per DAU/day</div>
-          <div class="metric-value">$0.02&ndash;0.05 (not worth it until scale)</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="profession-card" style="border-left: 3px solid #6b7280;">
-      <div class="card-header">
-        <div class="rank rank-n">-</div>
-        <div>
-          <div class="card-title">Don't Add Yet</div>
-          <div class="card-subtitle">Not worth the complexity at this stage</div>
-        </div>
-      </div>
-      <div style="font-size: 0.85rem; color: #9ca3af;">
-        <p style="margin-bottom: 0.4rem;"><strong>Max / AI tier:</strong> Only 8% of Duolingo subscribers are on Max. Not worth building until significant scale.</p>
-        <p style="margin-bottom: 0.4rem;"><strong>In-app currency purchases:</strong> Your gem/shop system already exists. IAP adds App Store 30% commission complexity.</p>
-        <p><strong>B2B / Teams:</strong> Save for Phase 3. US corporate training spend is $874/employee/year &mdash; real money, but you need brand recognition first.</p>
-      </div>
-    </div>
-
-    <!-- ── New tier structure ── -->
-    <h3>Your New Tier Structure</h3>
+    <h3>Competitive Pricing</h3>
     <div class="table-wrap">
       <table>
-        <thead>
-          <tr><th>Feature</th><th>Free</th><th>Pro ($7.99/mo &middot; $49.99/yr)</th></tr>
-        </thead>
+        <thead><tr><th>App</th><th>Focus</th><th>Pricing</th><th>Users</th></tr></thead>
         <tbody>
-          <tr><td>All lessons &amp; topics</td><td class="highlight-green">Yes</td><td class="highlight-green">Yes</td></tr>
-          <tr><td>XP, streaks, leagues</td><td class="highlight-green">Yes</td><td class="highlight-green">Yes</td></tr>
-          <tr><td>Friends &amp; leaderboards</td><td class="highlight-green">Yes</td><td class="highlight-green">Yes</td></tr>
-          <tr><td>Shop &amp; achievements</td><td class="highlight-green">Yes</td><td class="highlight-green">Yes</td></tr>
-          <tr><td><strong>Hearts</strong></td><td class="highlight-red">5 (recharge over time)</td><td class="highlight-green">Unlimited</td></tr>
-          <tr><td><strong>Ads</strong></td><td class="highlight-red">Between lessons</td><td class="highlight-green">No ads</td></tr>
-          <tr><td><strong>Streak freeze</strong></td><td class="highlight-red">No</td><td class="highlight-green">1/day auto</td></tr>
-          <tr><td><strong>XP boost</strong></td><td class="highlight-red">No</td><td class="highlight-green">2x weekends</td></tr>
-          <tr><td><strong>League rewards</strong></td><td class="highlight-yellow">Basic</td><td class="highlight-green">Premium</td></tr>
-          <tr><td><strong>Progress insights</strong></td><td class="highlight-yellow">Basic</td><td class="highlight-green">Detailed stats</td></tr>
+          <tr><td><strong>Duolingo</strong></td><td>Languages, Math, Music</td><td>Free / $5&ndash;14/mo</td><td>133M MAU</td></tr>
+          <tr><td><strong>Brilliant.org</strong></td><td>STEM / Science</td><td>$28/mo or $130/yr</td><td>10M registered</td></tr>
+          <tr><td><strong>Headway</strong></td><td>Book summaries (gamified)</td><td>~$100/yr</td><td>30M+ downloads</td></tr>
+          <tr><td><strong>Blinkist</strong></td><td>Book summaries</td><td>$100/yr</td><td>34M users</td></tr>
+          <tr><td><strong>Octokeen</strong></td><td>Multi-topic knowledge</td><td>$9/mo or $79/yr</td><td>Early stage</td></tr>
         </tbody>
       </table>
     </div>
+    <p style="font-size:0.82rem; margin-top:0.5rem;">Octokeen's pricing is well-positioned: cheaper than Brilliant ($28/mo) and Headway (~$8/mo), competitive with Duolingo Super ($5/mo). The $79/yr annual plan is the sweet spot &mdash; affordable enough for casual learners, expensive enough to build real revenue per user.</p>
 
-    <!-- ── Revenue breakdown ── -->
-    <h3>Revenue Breakdown (Duolingo 2024)</h3>
+    <h3>Duolingo Revenue Breakdown (FY2025)</h3>
     <div class="stats-grid">
-      <div class="stat-card">
-        <span class="number">81%</span>
-        <span class="label">Subscriptions ($606M)</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">7%</span>
-        <span class="label">Ads ($52M)</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">6%</span>
-        <span class="label">English Test ($45M)</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">5%</span>
-        <span class="label">In-App Purchases ($37M)</span>
-      </div>
-    </div>
-
-    <h3>Competitive Pricing Landscape</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>App</th><th>Focus</th><th>Pricing</th><th>Users</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Duolingo</strong></td><td>Languages, Math, Music</td><td>Free / $5-14/mo</td><td>133M MAU</td></tr>
-          <tr><td><strong>Brilliant.org</strong></td><td>STEM / Math / Science</td><td>$25/mo or $300/yr</td><td>10M registered</td></tr>
-          <tr><td><strong>Blinkist</strong></td><td>Book summaries</td><td>$12-22/mo</td><td>20M+</td></tr>
-          <tr><td><strong>Headway</strong></td><td>Book summaries (gamified)</td><td>Similar to Blinkist</td><td>30M+</td></tr>
-          <tr><td><strong>Mimo</strong></td><td>Coding</td><td>$7-10/mo</td><td>20M downloads</td></tr>
-          <tr><td><strong>MasterClass</strong></td><td>Celebrity-taught classes</td><td>$10-20/mo</td><td>2M+ paid</td></tr>
-          <tr><td><strong>CuriosityStream</strong></td><td>Documentaries</td><td>$3-10/mo</td><td>20M subs</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Conversion Benchmarks</h3>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <span class="number">2%</span>
-        <span class="label">Typical Freemium App</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">4%</span>
-        <span class="label">"Great" Conversion Rate</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">8.8%</span>
-        <span class="label">Duolingo (exceptional)</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">Day 0</span>
-        <span class="label">80-90% of Conversions Happen</span>
-      </div>
-    </div>
-
-    <h3>Key Retention Challenge</h3>
-    <div style="background: rgba(239,68,68,0.04); border: 1px solid rgba(239,68,68,0.12); border-radius: 14px; padding: 1.25rem;">
-      <p style="font-size: 0.88rem; color: #f87171; margin: 0 0 0.5rem;"><strong>Education apps have the worst retention of any category.</strong></p>
-      <p style="font-size: 0.82rem; color: #9ca3af; margin: 0;">Average Day 30 retention: 2&ndash;4%. Duolingo achieves ~20% through gamification depth (streaks, social pressure, leagues, notifications). Your gamification engine &mdash; which you've already built &mdash; is your moat. The hearts system adds the missing conversion lever on top of it.</p>
+      <div class="stat-card"><span class="number">81%</span><span class="label">Subscriptions</span></div>
+      <div class="stat-card"><span class="number">7%</span><span class="label">Ads</span></div>
+      <div class="stat-card"><span class="number">6%</span><span class="label">English Test</span></div>
+      <div class="stat-card"><span class="number">5%</span><span class="label">In-App Purchases</span></div>
     </div>
   </section>
 
-  <!-- ════════════════════ EXPANSION ROADMAP ════════════════════ -->
+  <!-- ════════════════════ REVENUE CALCULATOR ════════════════════ -->
   <section>
-    <h2>Recommended Expansion Roadmap</h2>
+    <h2>Revenue Forecast Calculator</h2>
+    <p style="margin-bottom:0.5rem;">Model your 24-month revenue trajectory. Adjust the inputs or pick a preset scenario. All calculations update in real-time.</p>
 
-    <div class="roadmap">
-      <div class="roadmap-phase">
-        <div class="phase-label phase-1-label">Phase 1 &mdash; Now (Existing Engine)</div>
-        <h4>Engineering + First Curiosity Topic</h4>
-        <ul>
-          <li>Mechanical Engineering &mdash; <strong>keep as first "course"</strong></li>
-          <li>Personal Finance &mdash; biggest curiosity market, zero competition, universal appeal</li>
-          <li>Add profession/topic picker to app (like Duolingo's language picker)</li>
-        </ul>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.5rem;">Finance validates the multi-topic model with the largest possible audience.</p>
-      </div>
-
-      <div class="roadmap-phase">
-        <div class="phase-label phase-2-label">Phase 2 &mdash; Growth</div>
-        <h4>High-Curiosity Expansion</h4>
-        <ul>
-          <li>Psychology &amp; Human Behavior &mdash; viral content, "I just learned why I do this"</li>
-          <li>Space &amp; Astronomy &mdash; 27.8M Reddit audience, visually stunning</li>
-          <li>Nutrition &amp; Fitness Science &mdash; overlaps with massive gym culture</li>
-        </ul>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.5rem;">These three topics each have 10M+ curiosity signals and zero gamified competition.</p>
+    <div class="calc-container">
+      <!-- Presets -->
+      <div class="preset-bar">
+        <button class="preset-btn" onclick="applyPreset('organic')">Zero Budget</button>
+        <button class="preset-btn" onclick="applyPreset('coffee')">$500/mo</button>
+        <button class="preset-btn" onclick="applyPreset('lean')">$3K/mo</button>
+        <button class="preset-btn" onclick="applyPreset('growth')">$15K/mo</button>
+        <button class="preset-btn" onclick="applyPreset('scale')">$50K/mo</button>
       </div>
 
-      <div class="roadmap-phase">
-        <div class="phase-label phase-3-label">Phase 3 &mdash; Scale</div>
-        <h4>Broaden the Platform</h4>
-        <ul>
-          <li>Automotive / How Cars Work &mdash; 7.4M r/cars + EV curiosity wave</li>
-          <li>Law &amp; Legal Basics &mdash; universal need, "know your rights"</li>
-          <li>Cooking &amp; Culinary Science &mdash; proven concept (Parsnip), huge YouTube audience</li>
-          <li>Additional engineering disciplines (Civil, Electrical) &mdash; same NCEES engine</li>
-        </ul>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.5rem;">By this phase, the platform has a strong brand and the gamification engine is proven across multiple topics.</p>
+      <!-- Inputs -->
+      <div class="calc-inputs">
+        <div class="input-group">
+          <h4>Acquisition</h4>
+          <div class="slider-row">
+            <label>Monthly Marketing Budget <span class="slider-val" id="v-budget">$0</span></label>
+            <input type="range" id="s-budget" min="0" max="50000" value="0" step="500" oninput="calc()">
+          </div>
+          <div class="slider-row">
+            <label>Average CPI (Cost Per Install) <span class="slider-val" id="v-cpi">$2.50</span></label>
+            <input type="range" id="s-cpi" min="0.5" max="6" value="2.5" step="0.1" oninput="calc()">
+          </div>
+          <div class="slider-row">
+            <label>Base Organic Installs / Month <span class="slider-val" id="v-organic">200</span></label>
+            <input type="range" id="s-organic" min="50" max="3000" value="200" step="50" oninput="calc()">
+          </div>
+          <div class="slider-row">
+            <label>Organic Multiplier (per paid install) <span class="slider-val" id="v-mult">2.0x</span></label>
+            <input type="range" id="s-mult" min="1" max="4" value="2" step="0.1" oninput="calc()">
+          </div>
+        </div>
+        <div class="input-group">
+          <h4>Monetization</h4>
+          <div class="slider-row">
+            <label>Free &rarr; Paid Conversion <span class="slider-val" id="v-conv">4%</span></label>
+            <input type="range" id="s-conv" min="1" max="12" value="4" step="0.5" oninput="calc()">
+          </div>
+          <div class="slider-row">
+            <label>Monthly Subscriber Churn <span class="slider-val" id="v-churn">8%</span></label>
+            <input type="range" id="s-churn" min="2" max="20" value="8" step="1" oninput="calc()">
+          </div>
+          <div class="slider-row">
+            <label>Monthly Price <span class="slider-val" id="v-monthly">$9</span></label>
+            <input type="range" id="s-monthly" min="3" max="20" value="9" step="1" oninput="calc()">
+          </div>
+          <div class="slider-row">
+            <label>Annual Price <span class="slider-val" id="v-annual">$79</span></label>
+            <input type="range" id="s-annual" min="29" max="150" value="79" step="1" oninput="calc()">
+          </div>
+          <div class="slider-row">
+            <label>% Choosing Annual Plan <span class="slider-val" id="v-annpct">65%</span></label>
+            <input type="range" id="s-annpct" min="20" max="90" value="65" step="5" oninput="calc()">
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ════════════════════ DOMAIN / NAMING ════════════════════ -->
-  <section>
-    <h2>Domain Name Suggestions</h2>
-    <p>Each domain below was <strong>checked against live websites</strong> on March 2026. Names are categorized by actual availability status, not guesses.</p>
+      <!-- Outputs -->
+      <div class="calc-outputs" id="calc-outputs">
+        <div class="calc-out"><span class="out-num" id="o-installs">0</span><span class="out-label">Installs / Month</span></div>
+        <div class="calc-out"><span class="out-num" id="o-subs12">0</span><span class="out-label">Subscribers @ Mo 12</span></div>
+        <div class="calc-out"><span class="out-num" id="o-mrr12">$0</span><span class="out-label">MRR @ Month 12</span></div>
+        <div class="calc-out"><span class="out-num" id="o-y1rev">$0</span><span class="out-label">Year 1 Revenue</span></div>
+        <div class="calc-out"><span class="out-num" id="o-y1spend">$0</span><span class="out-label">Year 1 Marketing</span></div>
+        <div class="calc-out" id="o-y1net-card"><span class="out-num" id="o-y1net">$0</span><span class="out-label">Year 1 Net</span></div>
+        <div class="calc-out" id="o-be-card"><span class="out-num" id="o-breakeven">&mdash;</span><span class="out-label">Break-Even Month</span></div>
+        <div class="calc-out"><span class="out-num" id="o-y2rev">$0</span><span class="out-label">Year 2 Revenue</span></div>
+      </div>
 
-    <h3>Likely Available &mdash; No Website Found</h3>
-    <p style="font-size: 0.82rem; color: #6b7280; margin-bottom: 0.75rem;">These domains returned no active website and have no search presence. Highest chance of being unregistered or available at standard price (~$10&ndash;15/yr). Confirm with a WHOIS lookup before purchasing.</p>
-    <div class="name-grid">
-      <div class="name-card">
-        <div class="domain">Knowara.com <span class="avail-tag avail-good">Likely Available</span></div>
-        <div class="rationale">Know + ara. Zero web presence anywhere. "Knowing" meets curiosity. Clean, 7 letters, easy to spell.</div>
+      <!-- Chart -->
+      <div class="chart-wrap">
+        <div class="chart-title-bar">
+          <div class="chart-title">Monthly Recurring Revenue &mdash; 24 Months</div>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-dot" style="background:#818cf8;"></span> MRR (net negative)</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#4ade80;"></span> MRR (net positive)</span>
+          </div>
+        </div>
+        <div class="chart-area" id="chart-area"></div>
+        <div class="chart-labels" id="chart-labels"></div>
+        <div class="breakeven-note" id="breakeven-note"></div>
       </div>
-      <div class="name-card">
-        <div class="domain">Thinkdex.com <span class="avail-tag avail-good">Likely Available</span></div>
-        <div class="rationale">Think + index. An index of thinking. Zero search results. Intellectual, techy, broad.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Brainym.com <span class="avail-tag avail-good">Likely Available</span></div>
-        <div class="rationale">Brainy + m. Short, punchy, fun. Zero web presence. Immediate association with smart/knowledge.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Quizara.com <span class="avail-tag avail-good">Likely Available</span></div>
-        <div class="rationale">Quiz + ara. No meaningful search results. Clearly communicates the quiz/learning mechanic. Exotic suffix gives Duolingo vibes.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Drillpad.com <span class="avail-tag avail-good">Likely Available</span></div>
-        <div class="rationale">Drill + pad. The .net exists but .com has no presence. Practice drills on your pad/device. Clear, gamified energy.</div>
-      </div>
-    </div>
 
-    <h3>For Sale &mdash; Purchasable on Domain Marketplaces</h3>
-    <p style="font-size: 0.82rem; color: #6b7280; margin-bottom: 0.75rem;">These are registered but parked on sale platforms. Prices typically range $500&ndash;$5,000 unless noted. Often negotiable.</p>
-    <div class="name-grid">
-      <div class="name-card">
-        <div class="domain">Cortexly.com <span class="avail-tag avail-maybe">For Sale</span></div>
-        <div class="rationale">Cortex (brain) + ly. On Domainster marketplace. Smart, scientific, modern. Perfect for a knowledge app.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Thinkivo.com <span class="avail-tag avail-maybe">For Sale</span></div>
-        <div class="rationale">Think + ivo. On Domainster marketplace. Playful ending like Duolingo. Curiosity-forward.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Skillivo.com <span class="avail-tag avail-maybe">For Sale</span></div>
-        <div class="rationale">Skill + ivo. On Atom.com. Skill-focused, playful. Works for any topic. Strong brand potential.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Praxly.com <span class="avail-tag avail-maybe">For Sale</span></div>
-        <div class="rationale">From Greek "praxis" (practice). On Atom.com. Elegant, intellectual, unique.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Learnova.com <span class="avail-tag avail-maybe">For Sale</span></div>
-        <div class="rationale">Learn + nova (new/star). On BrandBucket. Fresh, bright, knowledge-forward. Great brand story.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Quizora.com <span class="avail-tag avail-maybe">For Sale</span></div>
-        <div class="rationale">Quiz + ora. On BrandBucket. Quiz-focused with an elegant suffix. Clear purpose.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Smartora.com <span class="avail-tag avail-maybe">For Sale</span></div>
-        <div class="rationale">Smart + ora. On Atom.com. Getting smarter, one lesson at a time. Warm, approachable.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Skillora.com <span class="avail-tag avail-maybe">For Sale</span></div>
-        <div class="rationale">Skill + ora. On Brandpa. Skill acquisition with a premium feel. Multi-topic ready.</div>
-      </div>
-    </div>
+      <!-- Monthly Table -->
+      <details>
+        <summary>Show monthly breakdown table</summary>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Mo</th><th>New Installs</th><th>Active Subs</th>
+                <th>MRR</th><th>Cum Revenue</th><th>Cum Marketing</th><th>Net P/L</th>
+              </tr>
+            </thead>
+            <tbody id="monthly-tbody"></tbody>
+          </table>
+        </div>
+      </details>
 
-    <h3>Worth a WHOIS Check &mdash; No Active Site But May Be Squatted</h3>
-    <p style="font-size: 0.82rem; color: #6b7280; margin-bottom: 0.75rem;">These have no live website, but brands with similar names use other TLDs (.org, .ai, .co). The .com might be available or held.</p>
-    <div class="name-grid">
-      <div class="name-card">
-        <div class="domain">Synara.com <span class="avail-tag avail-maybe">Check WHOIS</span></div>
-        <div class="rationale">Synapse + ara. Brands use .app/.ai/.events but .com shows no site. Neural connections, learning, growth.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Neurodex.com <span class="avail-tag avail-maybe">Check WHOIS</span></div>
-        <div class="rationale">Neuro + index. Company uses .co instead. Brain science meets knowledge index. Premium feel.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Learndojo.com <span class="avail-tag avail-maybe">Check WHOIS</span></div>
-        <div class="rationale">Learn + dojo (training hall). Brand uses .org. Practice and mastery. Strong gamified energy.</div>
-      </div>
-      <div class="name-card">
-        <div class="domain">Masterly.com <span class="avail-tag avail-maybe">Check WHOIS</span></div>
-        <div class="rationale">Mastery + ly. Brand "The Masterly" uses themasterly.com. Implies expertise, skillfulness. Clean 8 letters.</div>
-      </div>
-    </div>
-
-    <h3>Confirmed Taken &mdash; Avoid</h3>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Domain</th><th>Why It's Taken</th></tr></thead>
-        <tbody>
-          <tr><td>Drillio.com</td><td>Active personal blog/tech site</td></tr>
-          <tr><td>Drillingo.com</td><td>Language learning platform (Portuguese)</td></tr>
-          <tr><td>BrainPop.com</td><td>Major educational platform</td></tr>
-          <tr><td>Brainly.com</td><td>Major homework help platform</td></tr>
-          <tr><td>Quizlet.com</td><td>Major study platform</td></tr>
-          <tr><td>Grasply.com</td><td>AI flashcard app</td></tr>
-          <tr><td>SparkLearn.com</td><td>Learning Experience Platform SaaS</td></tr>
-          <tr><td>Aptora.com</td><td>ERP software company (since 1997)</td></tr>
-          <tr><td>StudyGo.com</td><td>Dutch e-learning platform (582K+ students)</td></tr>
-          <tr><td>Mindigo.com</td><td>Investment services company</td></tr>
-          <tr><td>Cortexo.com</td><td>NZ energy technology company</td></tr>
-          <tr><td>Wisdora.com</td><td>Corporate learning agency in India</td></tr>
-          <tr><td>Minderly.com</td><td>On HugeDomains for $13,095</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="card-insight" style="margin-top:1rem;">
-      <strong>My top 3 picks:</strong> <strong>Knowara.com</strong> (zero web presence, clean, curious), <strong>Thinkdex.com</strong> (zero web presence, intellectual, techy), or <strong>Cortexly.com</strong> (for sale, great brand, "brain" association). Run a WHOIS check on the "likely available" ones first &mdash; they could be yours for ~$10/yr.
-    </div>
-  </section>
-
-  <!-- ════════════════════ RENAME PLAN ════════════════════ -->
-  <section>
-    <h2>Rename Plan &mdash; From MechReady to [New Name]</h2>
-    <p>Full codebase audit: <strong>~195+ occurrences across ~55 files</strong>.</p>
-
-    <h3>External Services</h3>
-    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Vercel &mdash; Rename project, update domain &amp; DNS</span><span class="cat-count">Dashboard</span></div></div>
-    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Domain &mdash; Purchase new .com, 301 redirect from mechready.com</span><span class="cat-count">DNS</span></div></div>
-    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Email &mdash; support@newname.com (4 files, ~16 refs)</span><span class="cat-count">4 files</span></div></div>
-    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Paddle &mdash; Product names &amp; checkout URLs</span><span class="cat-count">Dashboard</span></div></div>
-    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Google OAuth &mdash; Redirect URIs &middot; NextAuth URL</span><span class="cat-count">.env</span></div></div>
-
-    <h3>Code Changes (Find &amp; Replace)</h3>
-    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">package.json + manifest.json</span><span class="cat-count">2 files &middot; 4 refs</span></div></div>
-    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">Root layout SEO / metadata / OG / JSON-LD</span><span class="cat-count">1 file &middot; ~16 refs</span></div></div>
-    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">OG image generators + sitemap + robots.ts</span><span class="cat-count">4 files &middot; 5 refs</span></div></div>
-    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">UI components &mdash; sidebar, footer, modals, landing, loading</span><span class="cat-count">10 files &middot; ~14 refs</span></div></div>
-    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">Page-level metadata &mdash; all layout.tsx meta descriptions</span><span class="cat-count">14 files &middot; ~16 refs</span></div></div>
-    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">Legal pages &mdash; Terms, Privacy, Refund Policy</span><span class="cat-count">3 files &middot; ~38 refs</span></div></div>
-    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">Code comments, tests, documentation</span><span class="cat-count">13 files &middot; ~60 refs</span></div></div>
-    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">URL references: https://mechready.com &rarr; new domain</span><span class="cat-count">6 files</span></div></div>
-
-    <h3>High-Risk Items</h3>
-    <div class="rename-category risk-high"><div class="rename-header"><span class="cat-name">localStorage keys (6 keys, 4 files) &mdash; WILL WIPE USER DATA</span><span class="cat-count" style="background:rgba(239,68,68,0.2);color:#f87171;">HIGH RISK</span></div></div>
-    <p style="font-size:0.82rem;margin: 0.5rem 0 0.5rem 1rem;color:#f87171;">
-      <code>mechready-storage</code> &middot; <code>mechready-course</code> &middot; <code>mechready-engagement</code> &middot; <code>mechready-fake-users</code> &middot; <code>mechready-cookie-consent</code> &middot; <code>mechready-guest-xp</code>
-    </p>
-    <p style="font-size:0.82rem;margin: 0 0 1rem 1rem;color:#9ca3af;">
-      <strong>Migration:</strong> On app load, check for old <code>mechready-*</code> keys, copy to new keys, delete old. Preserves all user progress.
-    </p>
-    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Static assets &mdash; favicon, logo, OG image, 14 icon files</span><span class="cat-count" style="background:rgba(245,158,11,0.2);color:#f59e0b;">MANUAL DESIGN</span></div></div>
-  </section>
-
-  <!-- ════════════════════ BOTTOM LINE ════════════════════ -->
-  <section>
-    <div style="background: linear-gradient(135deg, rgba(168,85,247,0.08), rgba(99,102,241,0.08)); border: 1px solid rgba(168,85,247,0.2); border-radius: 16px; padding: 1.5rem;">
-      <h4 style="color: #c084fc; font-size: 1.1rem; font-weight: 800; margin-bottom: 0.75rem;">Bottom Line</h4>
-      <p style="font-size: 0.9rem; color: #d1d5db; margin-bottom: 0.75rem;">
-        The casual curiosity market dwarfs the exam-prep market. <strong>Personal Finance</strong> alone has 21M+ Reddit members vs. 80K CPA exam takers. <strong>Space</strong> has 27.8M. <strong>Psychology</strong> attracted 4.6M enrollments from a single Yale course. These audiences are 100&ndash;1000x larger than any certification market &mdash; and none of them have a Duolingo-style app.
-      </p>
-      <p style="font-size: 0.9rem; color: #d1d5db; margin-bottom: 0.75rem;">
-        Your gamification engine (XP, streaks, leagues, spaced repetition) is <strong>topic-agnostic</strong>. The same mechanics that make mechanical engineering fun can make personal finance, psychology, and space science fun. Each new topic is just content &mdash; the engine is the moat.
-      </p>
-      <p style="font-size: 0.85rem; color: #9ca3af;">
-        Start with Finance (biggest gap) alongside your existing Engineering content. Prove the multi-topic model. Then expand to Psychology, Space, Nutrition. By Phase 3, you'll have a platform that competes with Brilliant.org but at Duolingo pricing &mdash; more fun, more accessible, more topics.
+      <p style="font-size:0.72rem; color:#4b5563; margin-top:1rem; line-height:1.5;">
+        <strong>Model notes:</strong> Assumes steady-state acquisition (same budget each month), exponential subscriber churn, and no seasonality. Organic multiplier reflects ASO ranking boost + word-of-mouth from paid users. Conversion rate is applied to total monthly installs. Real results will vary based on product quality, app store optimization, viral loops, and market conditions. Each additional course effectively multiplies base organic installs &mdash; adjust that slider to model multi-course scenarios. Revenue shown is gross (before Paddle's ~5% + app store ~15-30% fees if applicable).
       </p>
     </div>
   </section>
 
-  <footer>
-    Market Research Report &middot; March 2026 &middot; Sources include Reddit stats, YouTube channel data, Coursera enrollments, Duolingo investor reports, App Store data, Statista, HolonIQ, Business of Apps, and industry reports.
-  </footer>
+  <!-- ════════════════════ METHODOLOGY ════════════════════ -->
+  <section>
+    <h2>Sources &amp; Methodology</h2>
+    <p style="font-size:0.82rem; margin-bottom:0.5rem;">Reddit community sizes from SubredditStats and manual verification (April 2026). YouTube subscriber counts from Social Blade and HypeAuditor snapshots. Duolingo financials from Q4/FY2025 earnings release and investor presentations. EdTech benchmarks from Business of Apps, RevenueCat State of Subscription Apps 2025, First Page Sage SaaS conversion data, and Sensor Tower State of Mobile 2026. Competitor data from Owler, GetLatka, and app store estimates. Gamification market projections from Mordor Intelligence.</p>
+    <p style="font-size:0.82rem;">Tier assignments weighted: <strong>40%</strong> curiosity audience size, <strong>25%</strong> Octokeen question-type fit, <strong>20%</strong> gamified competition gap, <strong>15%</strong> content creation feasibility. All topics evaluated against Octokeen's specific 14 question types and 5 lesson formats.</p>
+  </section>
 
 </div>
 
+<!-- ════════════════════ CALCULATOR SCRIPT ════════════════════ -->
+<script>
+const presets = {
+  organic: { budget:0, cpi:2.5, organic:200, mult:2, conv:4, churn:8, monthly:9, annual:79, annpct:65 },
+  coffee:  { budget:500, cpi:2, organic:150, mult:2.5, conv:4, churn:8, monthly:9, annual:79, annpct:65 },
+  lean:    { budget:3000, cpi:2, organic:250, mult:2.5, conv:5, churn:7, monthly:9, annual:79, annpct:65 },
+  growth:  { budget:15000, cpi:2.5, organic:350, mult:2, conv:6, churn:6, monthly:9, annual:79, annpct:65 },
+  scale:   { budget:50000, cpi:3.5, organic:500, mult:1.8, conv:7, churn:5, monthly:9, annual:79, annpct:65 }
+};
+
+function applyPreset(name) {
+  const p = presets[name];
+  document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  Object.entries(p).forEach(([k, v]) => {
+    const s = document.getElementById('s-' + k);
+    if (s) s.value = v;
+  });
+  calc();
+}
+
+function fmt(n) {
+  if (Math.abs(n) >= 1000000) return '$' + (n / 1000000).toFixed(1) + 'M';
+  if (Math.abs(n) >= 1000) return '$' + (n / 1000).toFixed(1) + 'K';
+  return '$' + Math.round(n);
+}
+
+function fmtNum(n) {
+  if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+  return Math.round(n).toLocaleString();
+}
+
+function calc() {
+  // Read inputs
+  const budget = parseFloat(document.getElementById('s-budget').value);
+  const cpi = parseFloat(document.getElementById('s-cpi').value);
+  const baseOrganic = parseFloat(document.getElementById('s-organic').value);
+  const mult = parseFloat(document.getElementById('s-mult').value);
+  const conv = parseFloat(document.getElementById('s-conv').value) / 100;
+  const churn = parseFloat(document.getElementById('s-churn').value) / 100;
+  const monthly = parseFloat(document.getElementById('s-monthly').value);
+  const annual = parseFloat(document.getElementById('s-annual').value);
+  const annpct = parseFloat(document.getElementById('s-annpct').value) / 100;
+
+  // Update labels
+  document.getElementById('v-budget').textContent = budget === 0 ? '$0' : fmt(budget);
+  document.getElementById('v-cpi').textContent = '$' + cpi.toFixed(2);
+  document.getElementById('v-organic').textContent = fmtNum(baseOrganic);
+  document.getElementById('v-mult').textContent = mult.toFixed(1) + 'x';
+  document.getElementById('v-conv').textContent = (conv * 100).toFixed(1) + '%';
+  document.getElementById('v-churn').textContent = Math.round(churn * 100) + '%';
+  document.getElementById('v-monthly').textContent = '$' + monthly;
+  document.getElementById('v-annual').textContent = '$' + annual;
+  document.getElementById('v-annpct').textContent = Math.round(annpct * 100) + '%';
+
+  // Blended ARPU
+  const arpu = (1 - annpct) * monthly + annpct * (annual / 12);
+
+  // 24-month projection
+  const paidInstalls = budget > 0 && cpi > 0 ? Math.round(budget / cpi) : 0;
+  const totalInstalls = paidInstalls > 0 ? Math.round(paidInstalls * mult + baseOrganic) : Math.round(baseOrganic);
+
+  let subs = 0;
+  let cumRev = 0;
+  let cumMkt = 0;
+  let breakeven = -1;
+  const months = [];
+
+  for (let m = 1; m <= 24; m++) {
+    const newSubs = totalInstalls * conv;
+    subs = subs * (1 - churn) + newSubs;
+    const mrr = subs * arpu;
+    cumRev += mrr;
+    cumMkt += budget;
+    const net = cumRev - cumMkt;
+
+    if (breakeven < 0 && net >= 0 && cumMkt > 0) breakeven = m;
+
+    months.push({ m, installs: totalInstalls, subs: Math.round(subs), mrr, cumRev, cumMkt, net });
+  }
+
+  // Y1 & Y2
+  const y1 = months[11];
+  const y2 = months[23];
+
+  // Update outputs
+  document.getElementById('o-installs').textContent = fmtNum(totalInstalls);
+  document.getElementById('o-subs12').textContent = fmtNum(y1.subs);
+  document.getElementById('o-mrr12').textContent = fmt(y1.mrr);
+  document.getElementById('o-y1rev').textContent = fmt(y1.cumRev);
+  document.getElementById('o-y1spend').textContent = budget > 0 ? fmt(y1.cumMkt) : '$0';
+  document.getElementById('o-y1net').textContent = fmt(y1.net);
+  document.getElementById('o-y2rev').textContent = fmt(y2.cumRev);
+
+  // Net color
+  const netCard = document.getElementById('o-y1net-card');
+  netCard.className = 'calc-out ' + (y1.net >= 0 ? 'positive' : 'negative');
+
+  // Break-even
+  const beCard = document.getElementById('o-be-card');
+  if (budget === 0) {
+    document.getElementById('o-breakeven').textContent = 'N/A';
+    beCard.className = 'calc-out';
+  } else if (breakeven > 0) {
+    document.getElementById('o-breakeven').textContent = 'Month ' + breakeven;
+    beCard.className = 'calc-out positive';
+  } else {
+    document.getElementById('o-breakeven').textContent = '24+';
+    beCard.className = 'calc-out negative';
+  }
+
+  // Render chart
+  renderChart(months, breakeven);
+
+  // Render table
+  renderTable(months);
+}
+
+function renderChart(months, breakeven) {
+  const area = document.getElementById('chart-area');
+  const labels = document.getElementById('chart-labels');
+  const note = document.getElementById('breakeven-note');
+  const maxMrr = Math.max(...months.map(m => m.mrr), 1);
+
+  area.innerHTML = months.map((m, i) => {
+    const pct = (m.mrr / maxMrr * 100).toFixed(1);
+    const color = m.net >= 0 ? '#4ade80' : '#818cf8';
+    return '<div class="chart-bar" style="height:' + pct + '%;background:' + color + ';">' +
+      '<div class="bar-tooltip">Mo ' + m.m + ': ' + fmt(m.mrr) + ' MRR<br>Net: ' + fmt(m.net) + '</div></div>';
+  }).join('');
+
+  labels.innerHTML = months.map((m, i) => {
+    return '<span>' + ((i + 1) % 3 === 0 || i === 0 ? m.m : '') + '</span>';
+  }).join('');
+
+  const budget = parseFloat(document.getElementById('s-budget').value);
+  if (budget === 0) {
+    note.textContent = 'Zero marketing spend — all revenue is pure profit';
+    note.className = 'breakeven-note';
+  } else if (breakeven > 0) {
+    note.textContent = 'Break-even at month ' + breakeven + ' — green bars = net profitable';
+    note.className = 'breakeven-note';
+  } else {
+    note.textContent = 'Marketing cost exceeds revenue within 24 months — adjust inputs or extend timeline';
+    note.className = 'breakeven-note none';
+  }
+}
+
+function renderTable(months) {
+  const tbody = document.getElementById('monthly-tbody');
+  tbody.innerHTML = months.map(m => {
+    const netClass = m.net >= 0 ? 'highlight-green' : 'highlight-red';
+    return '<tr>' +
+      '<td>' + m.m + '</td>' +
+      '<td>' + fmtNum(m.installs) + '</td>' +
+      '<td>' + fmtNum(m.subs) + '</td>' +
+      '<td>' + fmt(m.mrr) + '</td>' +
+      '<td>' + fmt(m.cumRev) + '</td>' +
+      '<td>' + fmt(m.cumMkt) + '</td>' +
+      '<td class="' + netClass + '">' + fmt(m.net) + '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+// Initial calculation
+calc();
+</script>
 </body>
 </html>

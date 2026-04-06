@@ -29,6 +29,9 @@ export const unit4: Unit = {
           question: "Emotions evolved to help humans survive.",
           correctAnswer: true,
           explanation: "Every basic emotion serves a survival function. Fear protects you from threats, disgust prevents poisoning, and anger helps you defend resources.",
+          distractorExplanations: {
+            1: 'Every basic emotion serves a survival function',
+          },
         },
         {
           id: "psy-u4-L1-Q2",
@@ -42,6 +45,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "Emotions are rapid signals that prepare your body and mind to respond before you have time to think it through. Speed matters when survival is at stake.",
+          distractorExplanations: {
+            0: 'Emotions are rapid signals that prepare your body and mind to respond before you have time to think it through',
+            1: 'Emotions are rapid signals that prepare your body and mind to respond before you have time to think it through',
+            2: 'Emotions are rapid signals that prepare your body and mind to respond before you have time to think it through',
+          },
         },
         {
           id: "psy-u4-L1-T2",
@@ -79,6 +87,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "The amygdala processes threats and triggers emotional reactions in milliseconds, often before you're consciously aware of what's happening.",
+          distractorExplanations: {
+            0: 'The amygdala processes threats and triggers emotional reactions in milliseconds, often before you\'re consciously aware of what\'s happening',
+            2: 'The amygdala processes threats and triggers emotional reactions in milliseconds, often before you\'re consciously aware of what\'s happening',
+            3: 'The amygdala processes threats and triggers emotional reactions in milliseconds, often before you\'re consciously aware of what\'s happening',
+          },
         },
         {
           id: "psy-u4-L1-T3",
@@ -101,6 +114,9 @@ export const unit4: Unit = {
           question: "Emotions happen after you carefully analyze a situation.",
           correctAnswer: false,
           explanation: "Emotions fire before conscious analysis. The amygdala can trigger a fear response in about 12 milliseconds, way before your 'thinking brain' catches up.",
+          distractorExplanations: {
+            0: 'Emotions fire before conscious analysis',
+          },
         },
         {
           id: "psy-u4-L1-Q8",
@@ -114,6 +130,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "The amygdala triggered your fear response and made you jump before your cortex finished processing the image. Emotions are faster than thought.",
+          distractorExplanations: {
+            0: 'The amygdala triggered your fear response and made you jump before your cortex finished processing the image',
+            2: 'The amygdala triggered your fear response and made you jump before your cortex finished processing the image',
+            3: 'The amygdala triggered your fear response and made you jump before your cortex finished processing the image',
+          },
         },
       ],
     },
@@ -152,6 +173,9 @@ export const unit4: Unit = {
           question: "People from all cultures show the same facial expressions for basic emotions.",
           correctAnswer: true,
           explanation: "Ekman studied isolated tribes with no media exposure and found the same facial expressions for the basic 6. This suggests emotions are hardwired, not learned.",
+          distractorExplanations: {
+            1: 'Ekman studied isolated tribes with no media exposure and found the same facial expressions for the basic 6',
+          },
         },
         {
           id: "psy-u4-L2-Q2",
@@ -165,6 +189,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Jealousy is a complex emotion that combines basic ones. The 6 basics are happiness, sadness, anger, fear, surprise, and disgust.",
+          distractorExplanations: {
+            1: 'Jealousy is a complex emotion that combines basic ones',
+            2: 'Jealousy is a complex emotion that combines basic ones',
+            3: 'Jealousy is a complex emotion that combines basic ones',
+          },
         },
         {
           id: "psy-u4-L2-T2",
@@ -215,6 +244,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Complex emotions blend basic ones and require higher-level thinking. Guilt mixes sadness, fear, and self-judgment. Jealousy mixes fear, anger, and sadness.",
+          distractorExplanations: {
+            1: 'Complex emotions blend basic ones and require higher-level thinking',
+            2: 'Complex emotions blend basic ones and require higher-level thinking',
+            3: 'Complex emotions blend basic ones and require higher-level thinking',
+          },
         },
         {
           id: "psy-u4-L2-Q7",
@@ -222,6 +256,9 @@ export const unit4: Unit = {
           question: "A person blind from birth makes the same facial expression for disgust as a sighted person.",
           correctAnswer: true,
           explanation: "Studies of congenitally blind individuals show they produce the same basic emotional expressions. They couldn't have learned them by watching others, which supports emotions being innate.",
+          distractorExplanations: {
+            1: 'Studies of congenitally blind individuals show they produce the same basic emotional expressions',
+          },
         },
         {
           id: "psy-u4-L2-Q8",
@@ -235,6 +272,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "Feeling multiple emotions simultaneously is completely normal. Complex situations produce blended emotional responses built from basic ones.",
+          distractorExplanations: {
+            0: 'Feeling multiple emotions simultaneously is completely normal',
+            1: 'Feeling multiple emotions simultaneously is completely normal',
+            2: 'Feeling multiple emotions simultaneously is completely normal',
+          },
         },
       ],
     },
@@ -259,6 +301,9 @@ export const unit4: Unit = {
           question: "The fight-or-flight response prepares your body to deal with threats.",
           correctAnswer: true,
           explanation: "This stress response diverts energy to your muscles and sharpens your senses so you can fight the threat or run from it.",
+          distractorExplanations: {
+            1: 'This stress response diverts energy to your muscles and sharpens your senses so you can fight the threat or run from it',
+          },
         },
         {
           id: "psy-u4-L3-Q2",
@@ -272,6 +317,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "The amygdala acts as a threat detector. When it senses danger, it activates the stress response before your thinking brain even gets involved.",
+          distractorExplanations: {
+            0: 'The amygdala acts as a threat detector',
+            2: 'The amygdala acts as a threat detector',
+            3: 'The amygdala acts as a threat detector',
+          },
         },
         {
           id: "psy-u4-L3-T2",
@@ -309,6 +359,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "Increased heart rate pumps more blood (and oxygen) to muscles. This makes you stronger and faster, exactly what you need when running from a predator.",
+          distractorExplanations: {
+            0: 'Increased heart rate pumps more blood (and oxygen) to muscles',
+            1: 'Increased heart rate pumps more blood (and oxygen) to muscles',
+            3: 'Increased heart rate pumps more blood (and oxygen) to muscles',
+          },
         },
         {
           id: "psy-u4-L3-T3",
@@ -322,6 +377,9 @@ export const unit4: Unit = {
           question: "The fight-or-flight response only activates during life-threatening situations.",
           correctAnswer: false,
           explanation: "Your brain can trigger the same response for a work email, a social rejection, or a traffic jam. The system doesn't distinguish between real and perceived threats.",
+          distractorExplanations: {
+            0: 'Your brain can trigger the same response for a work email, a social rejection, or a traffic jam',
+          },
         },
         {
           id: "psy-u4-L3-Q7",
@@ -343,6 +401,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "Your amygdala evolved to detect threats, but it hasn't updated for modern life. Social rejection felt as dangerous as predators to our ancestors.",
+          distractorExplanations: {
+            0: 'Your amygdala evolved to detect threats, but it hasn\'t updated for modern life',
+            1: 'Your amygdala evolved to detect threats, but it hasn\'t updated for modern life',
+            2: 'Your amygdala evolved to detect threats, but it hasn\'t updated for modern life',
+          },
         },
       ],
     },
@@ -367,6 +430,9 @@ export const unit4: Unit = {
           question: "Intrinsic motivation means doing something because you find it personally rewarding.",
           correctAnswer: true,
           explanation: "When you read a book because you're curious, that's intrinsic. When you read it because there's a test, that's extrinsic. The activity is the same, but the drive is different.",
+          distractorExplanations: {
+            1: 'When you read a book because you\'re curious, that\'s intrinsic',
+          },
         },
         {
           id: "psy-u4-L4-Q2",
@@ -396,6 +462,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "This is the overjustification effect. The external reward replaced their internal motivation. Once the reward vanished, so did the desire to draw.",
+          distractorExplanations: {
+            0: 'This is the overjustification effect',
+            1: 'This is the overjustification effect',
+            3: 'This is the overjustification effect',
+          },
         },
         {
           id: "psy-u4-L4-Q4",
@@ -417,6 +488,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "Intrinsic motivation is self-sustaining. You don't need someone to keep rewarding you. Extrinsic motivation often fades when the reward is removed.",
+          distractorExplanations: {
+            0: 'Intrinsic motivation is self-sustaining',
+            1: 'Intrinsic motivation is self-sustaining',
+            2: 'Intrinsic motivation is self-sustaining',
+          },
         },
         {
           id: "psy-u4-L4-T3",
@@ -430,6 +506,9 @@ export const unit4: Unit = {
           question: "External rewards are always harmful to motivation.",
           correctAnswer: false,
           explanation: "Not always. For boring tasks with no intrinsic motivation, external rewards are genuinely helpful. The problem is using them on activities people already enjoy.",
+          distractorExplanations: {
+            0: 'Not always. For boring tasks with no intrinsic motivation, external rewards are genuinely helpful',
+          },
         },
         {
           id: "psy-u4-L4-Q7",
@@ -444,6 +523,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "The overjustification effect occurs when adding external rewards to an intrinsically enjoyable activity kills the internal motivation. Once the payment stopped, the joy did not return because Emma's brain had reframed painting as 'work for money' rather than 'play for fun.'",
+          distractorExplanations: {
+            1: 'The overjustification effect occurs when adding external rewards to an intrinsically enjoyable activity kills the internal motivation',
+            2: 'The overjustification effect occurs when adding external rewards to an intrinsically enjoyable activity kills the internal motivation',
+            3: 'The overjustification effect occurs when adding external rewards to an intrinsically enjoyable activity kills the internal motivation',
+          },
         },
         {
           id: "psy-u4-L4-Q8",
@@ -457,6 +541,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "Creativity thrives on intrinsic motivation. Autonomy and interesting work fuel it. Cash prizes, threats, and pressure can actually reduce creative thinking.",
+          distractorExplanations: {
+            0: 'Creativity thrives on intrinsic motivation',
+            1: 'Creativity thrives on intrinsic motivation',
+            2: 'Creativity thrives on intrinsic motivation',
+          },
         },
       ],
     },
@@ -481,6 +570,9 @@ export const unit4: Unit = {
           question: "Dopamine is primarily about the anticipation of reward, not the pleasure itself.",
           correctAnswer: true,
           explanation: "Dopamine surges when you expect something good, not when you get it. That's why the anticipation of eating pizza often feels better than the last bite.",
+          distractorExplanations: {
+            1: 'Dopamine surges when you expect something good, not when you get it',
+          },
         },
         {
           id: "psy-u4-L5-Q2",
@@ -494,6 +586,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "Dopamine peaks during anticipation. Your brain is more excited about the possibility of reward than the actual experience of it.",
+          distractorExplanations: {
+            0: 'Dopamine peaks during anticipation',
+            2: 'Dopamine peaks during anticipation',
+            3: 'Dopamine peaks during anticipation',
+          },
         },
         {
           id: "psy-u4-L5-T2",
@@ -513,6 +610,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Each notification might be exciting or boring. That unpredictability triggers more dopamine than a guaranteed reward would.",
+          distractorExplanations: {
+            1: 'Each notification might be exciting or boring',
+            2: 'Each notification might be exciting or boring',
+            3: 'Each notification might be exciting or boring',
+          },
         },
         {
           id: "psy-u4-L5-Q4",
@@ -543,6 +645,9 @@ export const unit4: Unit = {
           question: "Your brain releases the same amount of dopamine every time you experience the same reward.",
           correctAnswer: false,
           explanation: "Your brain develops tolerance. The same reward produces less dopamine over time, which is why novelty seekers constantly chase new experiences.",
+          distractorExplanations: {
+            0: 'Your brain develops tolerance. The same reward produces less dopamine over time, which is why novelty seekers constantly chase new experiences',
+          },
         },
         {
           id: "psy-u4-L5-Q7",
@@ -565,6 +670,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "Meaningful activities (relationships, learning, creative work) provide sustainable satisfaction. Quick dopamine hits from junk food or social media create tolerance and leave you wanting more.",
+          distractorExplanations: {
+            0: 'Meaningful activities (relationships, learning, creative work) provide sustainable satisfaction',
+            1: 'Meaningful activities (relationships, learning, creative work) provide sustainable satisfaction',
+            2: 'Meaningful activities (relationships, learning, creative work) provide sustainable satisfaction',
+          },
         },
       ],
     },
@@ -589,6 +699,9 @@ export const unit4: Unit = {
           question: "Emotional intelligence can be more important for career success than IQ.",
           correctAnswer: true,
           explanation: "Studies show EQ is a stronger predictor of leadership, teamwork, and job performance than IQ alone. Technical skill gets you hired. EQ gets you promoted.",
+          distractorExplanations: {
+            1: 'Studies show EQ is a stronger predictor of leadership, teamwork, and job performance than IQ alone',
+          },
         },
         {
           id: "psy-u4-L6-Q2",
@@ -602,6 +715,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "EQ isn't about hiding emotions or forcing positivity. It's about being aware of emotions and using that awareness skillfully.",
+          distractorExplanations: {
+            0: 'EQ isn\'t about hiding emotions or forcing positivity',
+            1: 'EQ isn\'t about hiding emotions or forcing positivity',
+            3: 'EQ isn\'t about hiding emotions or forcing positivity',
+          },
         },
         {
           id: "psy-u4-L6-T2",
@@ -654,6 +772,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 3,
           explanation: "Self-management means you feel the emotion but choose how to respond. It's not suppression (not noticing) or avoidance. It's aware, intentional control.",
+          distractorExplanations: {
+            0: 'Self-management means you feel the emotion but choose how to respond',
+            1: 'Self-management means you feel the emotion but choose how to respond',
+            2: 'Self-management means you feel the emotion but choose how to respond',
+          },
         },
         {
           id: "psy-u4-L6-Q7",
@@ -661,6 +784,9 @@ export const unit4: Unit = {
           question: "Emotional intelligence means never feeling negative emotions.",
           correctAnswer: false,
           explanation: "EQ isn't about eliminating emotions. It's about recognizing them, understanding why they're there, and choosing how to act on them.",
+          distractorExplanations: {
+            0: 'EQ isn\'t about eliminating emotions',
+          },
         },
         {
           id: "psy-u4-L6-Q8",
@@ -674,6 +800,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "Acknowledging emotions, offering support, and adapting shows all 4 EQ skills: awareness of others, self-management, social awareness, and relationship management.",
+          distractorExplanations: {
+            1: 'Acknowledging emotions, offering support, and adapting shows all 4 EQ skills: awareness of others, self-management, social awareness, and relations...',
+            2: 'Acknowledging emotions, offering support, and adapting shows all 4 EQ skills: awareness of others, self-management, social awareness, and relations...',
+            3: 'Acknowledging emotions, offering support, and adapting shows all 4 EQ skills: awareness of others, self-management, social awareness, and relations...',
+          },
         },
       ],
     },
@@ -895,6 +1026,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "Your brain weighs about 1.4 kg but uses roughly 20% of your body's energy. It's the most energy-hungry organ you have.",
+          distractorExplanations: {
+            0: 'The correct answer is About 20%, not About 5%',
+            2: 'The correct answer is About 20%, not About 50%',
+            3: 'The correct answer is About 20%, not About 80%',
+          },
         },
         {
           id: "psy-u4-rev-Q2",
@@ -902,6 +1038,9 @@ export const unit4: Unit = {
           question: "Confirmation bias is the tendency to seek out information that supports what you already believe.",
           correctAnswer: true,
           explanation: "Confirmation bias makes you notice evidence that agrees with your views and ignore evidence that doesn't. Everyone has it.",
+          distractorExplanations: {
+            1: 'Confirmation bias makes you notice evidence that agrees with your views and ignore evidence that doesn\'t',
+          },
         },
         {
           id: "psy-u4-rev-Q3",
@@ -917,6 +1056,9 @@ export const unit4: Unit = {
           question: "The amygdala is responsible for slow, deliberate decision-making.",
           correctAnswer: false,
           explanation: "The amygdala is your brain's alarm system. It triggers fast emotional reactions (especially fear) before conscious thought. The prefrontal cortex handles deliberate decisions.",
+          distractorExplanations: {
+            0: 'The amygdala is your brain\'s alarm system',
+          },
         },
         {
           id: "psy-u4-rev-Q5",
@@ -956,6 +1098,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 1,
           explanation: "Spaced repetition (reviewing at increasing intervals) and active recall (testing yourself) are the two most powerful techniques backed by decades of research.",
+          distractorExplanations: {
+            0: 'Spaced repetition (reviewing at increasing intervals) and active recall (testing yourself) are the two most powerful techniques backed by decades o...',
+            2: 'Spaced repetition (reviewing at increasing intervals) and active recall (testing yourself) are the two most powerful techniques backed by decades o...',
+            3: 'Spaced repetition (reviewing at increasing intervals) and active recall (testing yourself) are the two most powerful techniques backed by decades o...',
+          },
         },
         {
           id: "psy-u4-rev-Q9",
@@ -969,6 +1116,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "Intrinsic motivation comes from within: curiosity, enjoyment, personal satisfaction. Extrinsic motivation comes from external rewards or pressures.",
+          distractorExplanations: {
+            0: 'Intrinsic motivation comes from within: curiosity, enjoyment, personal satisfaction',
+            1: 'Intrinsic motivation comes from within: curiosity, enjoyment, personal satisfaction',
+            3: 'Intrinsic motivation comes from within: curiosity, enjoyment, personal satisfaction',
+          },
         },
         {
           id: "psy-u4-rev-Q10",
@@ -983,6 +1135,11 @@ export const unit4: Unit = {
           ],
           correctIndex: 2,
           explanation: "The availability heuristic makes you judge risk based on how easily examples come to mind. After watching crash footage, plane disasters feel more likely, even though the actual statistics haven't changed.",
+          distractorExplanations: {
+            0: 'The availability heuristic makes you judge risk based on how easily examples come to mind',
+            1: 'The availability heuristic makes you judge risk based on how easily examples come to mind',
+            3: 'The availability heuristic makes you judge risk based on how easily examples come to mind',
+          },
         },
       ],
     },

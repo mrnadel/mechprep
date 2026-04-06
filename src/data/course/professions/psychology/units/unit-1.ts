@@ -29,6 +29,9 @@ export const unit1: Unit = {
           question: "Your brain controls your thoughts, emotions, and movements.",
           correctAnswer: true,
           explanation: "Your brain is command central. Every thought, feeling, and action starts there.",
+          distractorExplanations: {
+            1: 'Your brain is command central. Every thought, feeling, and action starts there',
+          },
         },
         {
           id: "psy-u1-L1-myth1",
@@ -63,6 +66,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 1,
           explanation: "Despite being only 2% of your body weight, your brain consumes about 20% of your energy.",
+          distractorExplanations: {
+            0: 'The correct answer is About 20%, not About 5%',
+            2: 'The correct answer is About 20%, not About 50%',
+            3: 'The correct answer is About 20%, not About 80%',
+          },
         },
         {
           id: "psy-u1-L1-Q3",
@@ -108,6 +116,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 1,
           explanation: "The frontal lobe handles planning, decision-making, and personality. It's what makes you, you.",
+          distractorExplanations: {
+            0: 'The frontal lobe handles planning, decision-making, and personality',
+            2: 'The frontal lobe handles planning, decision-making, and personality',
+            3: 'The frontal lobe handles planning, decision-making, and personality',
+          },
         },
         {
           id: "psy-u1-L1-T3",
@@ -122,6 +135,9 @@ export const unit1: Unit = {
           question: "Your brain shuts off while you sleep.",
           correctAnswer: false,
           explanation: "Your brain stays very active during sleep. It consolidates memories and performs essential maintenance.",
+          distractorExplanations: {
+            0: 'Your brain stays very active during sleep',
+          },
         },
       ],
     },
@@ -146,6 +162,9 @@ export const unit1: Unit = {
           question: "Neurons are cells that send electrical signals in your brain.",
           correctAnswer: true,
           explanation: "Neurons communicate using tiny electrical impulses. That's how thoughts travel through your brain.",
+          distractorExplanations: {
+            1: 'Neurons communicate using tiny electrical impulses',
+          },
         },
         {
           id: "psy-u1-L2-Q2",
@@ -159,6 +178,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 1,
           explanation: "About 86 billion neurons, each one connecting to thousands of others. The complexity is staggering.",
+          distractorExplanations: {
+            0: 'The correct answer is About 86 billion, not About 1 million',
+            2: 'The correct answer is About 86 billion, not About 500 million',
+            3: 'The correct answer is About 86 billion, not About 1 trillion',
+          },
         },
         {
           id: "psy-u1-L2-T2",
@@ -202,6 +226,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 1,
           explanation: "Repeated practice strengthens neural pathways. This is the basis of learning and habit formation.",
+          distractorExplanations: {
+            0: 'Repeated practice strengthens neural pathways',
+            2: 'Repeated practice strengthens neural pathways',
+            3: 'Repeated practice strengthens neural pathways',
+          },
         },
         {
           id: "psy-u1-L2-Q6",
@@ -209,6 +238,9 @@ export const unit1: Unit = {
           question: "Neurotransmitters are electrical signals that jump across synapses.",
           correctAnswer: false,
           explanation: "Not quite. Neurotransmitters are chemical messengers. The signals within neurons are electrical, but the crossing of the synapse uses chemicals.",
+          distractorExplanations: {
+            0: 'Neurotransmitters are chemical messengers',
+          },
         },
         {
           id: "psy-u1-L2-Q7",
@@ -258,6 +290,9 @@ export const unit1: Unit = {
           question: "People can be neatly divided into 'left-brained' (logical) and 'right-brained' (creative).",
           correctAnswer: false,
           explanation: "This is a popular myth. Brain imaging studies show that people use both hemispheres for all types of tasks.",
+          distractorExplanations: {
+            0: 'This is a popular myth. Brain imaging studies show that people use both hemispheres for all types of tasks',
+          },
         },
         {
           id: "psy-u1-L3-Q2",
@@ -271,6 +306,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 2,
           explanation: "Simple, tidy explanations are satisfying. Our brains love clear categories, even when reality is messier.",
+          distractorExplanations: {
+            0: 'Simple, tidy explanations are satisfying',
+            1: 'Simple, tidy explanations are satisfying',
+            3: 'Simple, tidy explanations are satisfying',
+          },
         },
         {
           id: "psy-u1-L3-T2",
@@ -314,6 +354,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 2,
           explanation: "The study at the University of Utah scanned over 1,000 brains and found no evidence of hemisphere dominance in individuals.",
+          distractorExplanations: {
+            0: 'The study at the University of Utah scanned over 1,000 brains and found no evidence of hemisphere dominance in individuals',
+            1: 'The study at the University of Utah scanned over 1,000 brains and found no evidence of hemisphere dominance in individuals',
+            3: 'The study at the University of Utah scanned over 1,000 brains and found no evidence of hemisphere dominance in individuals',
+          },
         },
         {
           id: "psy-u1-L3-Q6",
@@ -321,6 +366,9 @@ export const unit1: Unit = {
           question: "The left hemisphere plays a larger role in language processing for most people.",
           correctAnswer: true,
           explanation: "This is true for about 95% of right-handed people. But the right hemisphere still contributes, especially to understanding tone and context.",
+          distractorExplanations: {
+            1: 'This is true for about 95% of right-handed people',
+          },
         },
         {
           id: "psy-u1-L3-Q7",
@@ -334,6 +382,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "Math uses both hemispheres. The 'not a math person' belief is often a self-limiting myth, not a brain hardware issue.",
+          distractorExplanations: {
+            1: 'Math uses both hemispheres. The \'not a math person\' belief is often a self-limiting myth, not a brain hardware issue',
+            2: 'Math uses both hemispheres. The \'not a math person\' belief is often a self-limiting myth, not a brain hardware issue',
+            3: 'Math uses both hemispheres. The \'not a math person\' belief is often a self-limiting myth, not a brain hardware issue',
+          },
         },
         {
           id: "psy-u1-L3-Q8",
@@ -341,6 +394,9 @@ export const unit1: Unit = {
           question: "We only use about 10% of our brain.",
           correctAnswer: false,
           explanation: "This is one of the most widespread brain myths. Brain scans show activity across the entire brain, even during simple tasks.",
+          distractorExplanations: {
+            0: 'This is one of the most widespread brain myths',
+          },
         },
       ],
     },
@@ -365,6 +421,9 @@ export const unit1: Unit = {
           question: "Humans can effectively multitask on two complex tasks at the same time.",
           correctAnswer: false,
           explanation: "Your brain switches between tasks rather than doing them simultaneously. Each switch wastes time and mental energy.",
+          distractorExplanations: {
+            0: 'Your brain switches between tasks rather than doing them simultaneously',
+          },
         },
         {
           id: "psy-u1-L4-Q2",
@@ -378,6 +437,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 3,
           explanation: "It's called task-switching, not multitasking. Each switch costs you focus and increases errors.",
+          distractorExplanations: {
+            0: 'It\'s called task-switching, not multitasking',
+            1: 'It\'s called task-switching, not multitasking',
+            2: 'It\'s called task-switching, not multitasking',
+          },
         },
         {
           id: "psy-u1-L4-T2",
@@ -406,6 +470,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "When focused on counting passes, about 50% of people completely missed someone in a gorilla suit walking through the scene. That's selective attention in action.",
+          distractorExplanations: {
+            1: 'When focused on counting passes, about 50% of people completely missed someone in a gorilla suit walking through the scene',
+            2: 'When focused on counting passes, about 50% of people completely missed someone in a gorilla suit walking through the scene',
+            3: 'When focused on counting passes, about 50% of people completely missed someone in a gorilla suit walking through the scene',
+          },
         },
         {
           id: "psy-u1-L4-T3",
@@ -429,6 +498,9 @@ export const unit1: Unit = {
           question: "Research shows that after switching tasks, it takes an average of about 23 minutes to fully refocus.",
           correctAnswer: true,
           explanation: "A University of California study found it takes about 23 minutes to return to deep focus after an interruption. Every 'quick check' of your phone is expensive.",
+          distractorExplanations: {
+            1: 'A University of California study found it takes about 23 minutes to return to deep focus after an interruption',
+          },
         },
         {
           id: "psy-u1-L4-Q7",
@@ -451,6 +523,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "Lena's environment is destroying her focus. Removing distractions (phone, tabs, TV) and using the Pomodoro technique (25-minute blocks) addresses the core problem: her brain cannot truly multitask.",
+          distractorExplanations: {
+            1: 'Lena\'s environment is destroying her focus',
+            2: 'Lena\'s environment is destroying her focus',
+            3: 'Lena\'s environment is destroying her focus',
+          },
         },
       ],
     },

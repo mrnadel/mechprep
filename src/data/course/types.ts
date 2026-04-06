@@ -200,6 +200,8 @@ export interface ActiveLesson {
   startTime: number;
   sessionQuestionIds: string[];
   isGolden: boolean;
+  /** IDs of review questions interleaved from earlier units (for UI badge). */
+  reviewQuestionIds?: string[];
 }
 
 export interface LessonResult {

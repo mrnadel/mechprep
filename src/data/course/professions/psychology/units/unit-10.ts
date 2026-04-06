@@ -29,6 +29,9 @@ export const unit10: Unit = {
           question: "The cognitive biases you've learned about are actively exploited by companies to influence your behavior.",
           correctAnswer: true,
           explanation: "Every bias is a lever. Loss aversion, scarcity, social proof, anchoring: entire industries are built around pulling these levers.",
+          distractorExplanations: {
+            1: 'Every bias is a lever. Loss aversion, scarcity, social proof, anchoring: entire industries are built around pulling these levers',
+          },
         },
         {
           id: "psy-u10-L0-Q2",
@@ -42,6 +45,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "Billions are spent on understanding how you think so companies can influence what you buy, click, and believe.",
+          distractorExplanations: {
+            0: 'Billions are spent on understanding how you think so companies can influence what you buy, click, and believe',
+            1: 'Billions are spent on understanding how you think so companies can influence what you buy, click, and believe',
+            3: 'Billions are spent on understanding how you think so companies can influence what you buy, click, and believe',
+          },
         },
         {
           id: "psy-u10-L0-T2",
@@ -79,6 +87,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Ethical persuasion respects your ability to choose. Manipulation exploits psychological vulnerabilities to remove genuine choice.",
+          distractorExplanations: {
+            0: 'Ethical persuasion respects your ability to choose',
+            2: 'Ethical persuasion respects your ability to choose',
+            3: 'Ethical persuasion respects your ability to choose',
+          },
         },
         {
           id: "psy-u10-L0-T3",
@@ -92,6 +105,9 @@ export const unit10: Unit = {
           question: "The goal of this unit is to make you afraid of all advertising and technology.",
           correctAnswer: false,
           explanation: "The goal is awareness, not fear. Most marketing is harmless. The skill is knowing when someone crosses the line from informing to manipulating.",
+          distractorExplanations: {
+            0: 'The goal is awareness, not fear. Most marketing is harmless',
+          },
         },
       ],
     },
@@ -116,6 +132,9 @@ export const unit10: Unit = {
           question: "Most successful advertisements focus on product features and specifications.",
           correctAnswer: false,
           explanation: "The most effective ads focus on how the product makes you feel. Car ads sell freedom, not engines. Perfume ads sell attraction, not scent molecules.",
+          distractorExplanations: {
+            0: 'The most effective ads focus on how the product makes you feel',
+          },
         },
         {
           id: "psy-u10-L1-Q2",
@@ -129,6 +148,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "The beer is barely mentioned. The ad links the product to friendship and fun. Your brain connects 'that beer = good times with friends.'",
+          distractorExplanations: {
+            1: 'The beer is barely mentioned. The ad links the product to friendship and fun',
+            2: 'The beer is barely mentioned. The ad links the product to friendship and fun',
+            3: 'The beer is barely mentioned. The ad links the product to friendship and fun',
+          },
         },
         {
           id: "psy-u10-L1-T2",
@@ -166,6 +190,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "This is called 'evaluative conditioning.' Your brain transfers the positive feelings about the person to the product without you noticing.",
+          distractorExplanations: {
+            0: 'This is called \'evaluative conditioning.\' Your brain transfers the positive feelings about the person to the product without you noticing',
+            2: 'This is called \'evaluative conditioning.\' Your brain transfers the positive feelings about the person to the product without you noticing',
+            3: 'This is called \'evaluative conditioning.\' Your brain transfers the positive feelings about the person to the product without you noticing',
+          },
         },
         {
           id: "psy-u10-L1-T3",
@@ -187,6 +216,9 @@ export const unit10: Unit = {
           question: "Being aware of advertising tactics makes you completely immune to them.",
           correctAnswer: false,
           explanation: "Awareness helps significantly, but these tactics evolved over decades to work on everyone. The goal is reducing their impact, not eliminating it.",
+          distractorExplanations: {
+            0: 'Awareness helps significantly, but these tactics evolved over decades to work on everyone',
+          },
         },
         {
           id: "psy-u10-L1-Q8",
@@ -200,6 +232,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "Social proof uses the crowd to signal safety and correctness. 'Everyone's doing it' bypasses individual analysis.",
+          distractorExplanations: {
+            0: 'Social proof uses the crowd to signal safety and correctness',
+            1: 'Social proof uses the crowd to signal safety and correctness',
+            3: 'Social proof uses the crowd to signal safety and correctness',
+          },
         },
       ],
     },
@@ -224,6 +261,9 @@ export const unit10: Unit = {
           question: "Social media companies hire psychologists to make their apps more engaging.",
           correctAnswer: true,
           explanation: "Former employees of major platforms have confirmed this publicly. The goal is 'time on app,' and psychology is the tool to achieve it.",
+          distractorExplanations: {
+            1: 'Former employees of major platforms have confirmed this publicly',
+          },
         },
         {
           id: "psy-u10-L2-Q2",
@@ -237,6 +277,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Old websites had page breaks that created natural exit points. Infinite scroll removes every 'should I stop?' moment.",
+          distractorExplanations: {
+            0: 'Old websites had page breaks that created natural exit points',
+            2: 'Old websites had page breaks that created natural exit points',
+            3: 'Old websites had page breaks that created natural exit points',
+          },
         },
         {
           id: "psy-u10-L2-T2",
@@ -274,6 +319,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Red is associated with warnings and urgency. It triggers an impulse to check, even when you know it's probably nothing important.",
+          distractorExplanations: {
+            1: 'Red is associated with warnings and urgency',
+            2: 'Red is associated with warnings and urgency',
+            3: 'Red is associated with warnings and urgency',
+          },
         },
         {
           id: "psy-u10-L2-T3",
@@ -287,6 +337,9 @@ export const unit10: Unit = {
           question: "Studies show that more time on social media is linked to lower well-being in many people.",
           correctAnswer: true,
           explanation: "Multiple studies show a correlation between heavy social media use and increased anxiety, depression, and loneliness, especially from social comparison.",
+          distractorExplanations: {
+            1: 'Multiple studies show a correlation between heavy social media use and increased anxiety, depression, and loneliness, especially from social compar...',
+          },
         },
         {
           id: "psy-u10-L2-Q7",
@@ -308,6 +361,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Notifications are the trigger. Time limits are the boundary. Removing the trigger and setting a constraint breaks the dopamine loop without going to extremes.",
+          distractorExplanations: {
+            0: 'Notifications are the trigger. Time limits are the boundary',
+            2: 'Notifications are the trigger. Time limits are the boundary',
+            3: 'Notifications are the trigger. Time limits are the boundary',
+          },
         },
       ],
     },
@@ -332,6 +390,9 @@ export const unit10: Unit = {
           question: "The more times you hear a statement, the more likely you are to believe it, even if it's false.",
           correctAnswer: true,
           explanation: "This is called the 'illusory truth effect.' Repetition creates familiarity, and your brain mistakes familiarity for truth.",
+          distractorExplanations: {
+            1: 'This is called the \'illusory truth effect.\' Repetition creates familiarity, and your brain mistakes familiarity for truth',
+          },
         },
         {
           id: "psy-u10-L3-Q2",
@@ -345,6 +406,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 3,
           explanation: "Propaganda thrives on simplicity and repetition. Complex, balanced arguments are the opposite of what propagandists want.",
+          distractorExplanations: {
+            0: 'Propaganda thrives on simplicity and repetition',
+            1: 'Propaganda thrives on simplicity and repetition',
+            2: 'Propaganda thrives on simplicity and repetition',
+          },
         },
         {
           id: "psy-u10-L3-T2",
@@ -382,6 +448,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Characterizing opponents as existential threats shuts down analysis. Real policy differences rarely involve 'destroying everything.'",
+          distractorExplanations: {
+            0: 'Characterizing opponents as existential threats shuts down analysis',
+            2: 'Characterizing opponents as existential threats shuts down analysis',
+            3: 'Characterizing opponents as existential threats shuts down analysis',
+          },
         },
         {
           id: "psy-u10-L3-T3",
@@ -402,6 +473,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 0,
           explanation: "Four techniques are at work: an emotional story replaces evidence, no peer-reviewed sources are cited, the source has a financial motive to scare you away from conventional products, and viral sharing exploits the illusory truth effect (repetition makes claims feel true).",
+          distractorExplanations: {
+            1: 'Four techniques are at work: an emotional story replaces evidence, no peer-reviewed sources are cited, the source has a financial motive to scare y...',
+            2: 'Four techniques are at work: an emotional story replaces evidence, no peer-reviewed sources are cited, the source has a financial motive to scare y...',
+            3: 'Four techniques are at work: an emotional story replaces evidence, no peer-reviewed sources are cited, the source has a financial motive to scare y...',
+          },
         },
         {
           id: "psy-u10-L3-Q7",
@@ -409,6 +485,9 @@ export const unit10: Unit = {
           question: "Only uneducated people fall for propaganda.",
           correctAnswer: false,
           explanation: "Propaganda works on everyone. Education helps, but the illusory truth effect and emotional manipulation affect all humans. Awareness is the best defense.",
+          distractorExplanations: {
+            0: 'Propaganda works on everyone. Education helps, but the illusory truth effect and emotional manipulation affect all humans',
+          },
         },
         {
           id: "psy-u10-L3-Q8",
@@ -422,6 +501,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Strong emotions are exactly when you should slow down. Cross-referencing sources and waiting before reacting prevents you from spreading misinformation.",
+          distractorExplanations: {
+            0: 'Strong emotions are exactly when you should slow down',
+            2: 'Strong emotions are exactly when you should slow down',
+            3: 'Strong emotions are exactly when you should slow down',
+          },
         },
       ],
     },
@@ -446,6 +530,9 @@ export const unit10: Unit = {
           question: "Some websites are intentionally designed to make it hard to cancel a subscription.",
           correctAnswer: true,
           explanation: "This is called a 'roach motel' pattern: easy to sign up, extremely difficult to cancel. Some companies require a phone call or hide the cancel button.",
+          distractorExplanations: {
+            1: 'This is called a \'roach motel\' pattern: easy to sign up, extremely difficult to cancel',
+          },
         },
         {
           id: "psy-u10-L4-Q2",
@@ -459,6 +546,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "Confirmshaming uses guilt to prevent you from declining. The 'no' option is worded to make you feel foolish for choosing it.",
+          distractorExplanations: {
+            0: 'Confirmshaming uses guilt to prevent you from declining',
+            1: 'Confirmshaming uses guilt to prevent you from declining',
+            3: 'Confirmshaming uses guilt to prevent you from declining',
+          },
         },
         {
           id: "psy-u10-L4-T2",
@@ -496,6 +588,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 3,
           explanation: "The timer creates panic. In most cases, the offer resets if you leave and come back. The scarcity is fake.",
+          distractorExplanations: {
+            0: 'The timer creates panic. In most cases, the offer resets if you leave and come back',
+            1: 'The timer creates panic. In most cases, the offer resets if you leave and come back',
+            2: 'The timer creates panic. In most cases, the offer resets if you leave and come back',
+          },
         },
         {
           id: "psy-u10-L4-T3",
@@ -518,6 +615,9 @@ export const unit10: Unit = {
           question: "Some countries have started passing laws against dark patterns.",
           correctAnswer: true,
           explanation: "The EU, California, and other regions have begun regulating manipulative design. Cookie consent rules and subscription cancellation laws are early examples.",
+          distractorExplanations: {
+            1: 'The EU, California, and other regions have begun regulating manipulative design',
+          },
         },
         {
           id: "psy-u10-L4-Q8",
@@ -531,6 +631,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 1,
           explanation: "Dark patterns rely on speed and inattention. Slowing down and reading carefully disarms most of them.",
+          distractorExplanations: {
+            0: 'Dark patterns rely on speed and inattention',
+            2: 'Dark patterns rely on speed and inattention',
+            3: 'Dark patterns rely on speed and inattention',
+          },
         },
       ],
     },
@@ -569,6 +674,9 @@ export const unit10: Unit = {
           question: "The best defense against manipulation is understanding the specific tactics being used.",
           correctAnswer: true,
           explanation: "When you can name the tactic ('that's a decoy,' 'that's confirmshaming'), your analytical brain kicks in and the manipulation loses its grip.",
+          distractorExplanations: {
+            1: 'When you can name the tactic (\'that\'s a decoy,\' \'that\'s confirmshaming\'), your analytical brain kicks in and the manipulation loses its grip',
+          },
         },
         {
           id: "psy-u10-L5-Q2",
@@ -582,6 +690,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 3,
           explanation: "Those first 30 minutes set your brain's agenda for the day. Letting notifications set it means someone else controls your attention from the start.",
+          distractorExplanations: {
+            0: 'Those first 30 minutes set your brain\'s agenda for the day',
+            1: 'Those first 30 minutes set your brain\'s agenda for the day',
+            2: 'Those first 30 minutes set your brain\'s agenda for the day',
+          },
         },
         {
           id: "psy-u10-L5-T2",
@@ -619,6 +732,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 3,
           explanation: "Stop is always step one. The emotional urge to share immediately is exactly what misinformation relies on.",
+          distractorExplanations: {
+            0: 'Stop is always step one. The emotional urge to share immediately is exactly what misinformation relies on',
+            1: 'Stop is always step one. The emotional urge to share immediately is exactly what misinformation relies on',
+            2: 'Stop is always step one. The emotional urge to share immediately is exactly what misinformation relies on',
+          },
         },
         {
           id: "psy-u10-L5-T3",
@@ -641,6 +759,9 @@ export const unit10: Unit = {
           question: "Adding friction to impulsive behaviors is a form of commitment device.",
           correctAnswer: true,
           explanation: "You learned about commitment devices in Unit 8. Deleting apps, logging out, and removing saved cards are all commitment devices that protect your future self.",
+          distractorExplanations: {
+            1: 'You learned about commitment devices in Unit 8',
+          },
         },
         {
           id: "psy-u10-L5-Q8",
@@ -654,6 +775,11 @@ export const unit10: Unit = {
           ],
           correctIndex: 2,
           explanation: "Self-knowledge is power. You can't eliminate biases, but you can recognize them. You can't avoid all manipulation, but you can name it. That changes everything.",
+          distractorExplanations: {
+            0: 'Self-knowledge is power. You can\'t eliminate biases, but you can recognize them',
+            1: 'Self-knowledge is power. You can\'t eliminate biases, but you can recognize them',
+            3: 'Self-knowledge is power. You can\'t eliminate biases, but you can recognize them',
+          },
         },
       ],
     },

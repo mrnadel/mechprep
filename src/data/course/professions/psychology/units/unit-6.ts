@@ -29,6 +29,9 @@ export const unit6: Unit = {
           question: "Personality is the unique pattern of thoughts, feelings, and behaviors that makes each person different.",
           correctAnswer: true,
           explanation: "That's the standard definition. Your personality is what stays relatively consistent across situations and over time.",
+          distractorExplanations: {
+            1: 'That\'s the standard definition. Your personality is what stays relatively consistent across situations and over time',
+          },
         },
         {
           id: "psy-u6-L0-Q2",
@@ -42,6 +45,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "Traits are consistent across situations and time. A mood comes and goes, but traits stick around.",
+          distractorExplanations: {
+            0: 'Traits are consistent across situations and time',
+            1: 'Traits are consistent across situations and time',
+            3: 'Traits are consistent across situations and time',
+          },
         },
         {
           id: "psy-u6-L0-T2",
@@ -85,6 +93,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: "Personality psychology explains why people respond differently to the same situations, consistently over time.",
+          distractorExplanations: {
+            1: 'Personality psychology explains why people respond differently to the same situations, consistently over time',
+            2: 'Personality psychology explains why people respond differently to the same situations, consistently over time',
+            3: 'Personality psychology explains why people respond differently to the same situations, consistently over time',
+          },
         },
         {
           id: "psy-u6-L0-Q6",
@@ -92,6 +105,9 @@ export const unit6: Unit = {
           question: "Your personality can change slightly over your lifetime, but core traits tend to stay stable.",
           correctAnswer: true,
           explanation: "Research shows personality does shift somewhat with age (people tend to become more agreeable and conscientious), but the core patterns remain recognizable.",
+          distractorExplanations: {
+            1: 'Research shows personality does shift somewhat with age (people tend to become more agreeable and conscientious), but the core patterns remain reco...',
+          },
         },
       ],
     },
@@ -117,6 +133,9 @@ export const unit6: Unit = {
           question: "OCEAN stands for Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.",
           correctAnswer: true,
           explanation: "That's the Big Five. Each one is a spectrum, not a yes-or-no category.",
+          distractorExplanations: {
+            1: 'That\'s the Big Five. Each one is a spectrum, not a yes-or-no category',
+          },
         },
         {
           id: "psy-u6-L1-Q2",
@@ -145,6 +164,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: "High conscientiousness means organized, disciplined, and reliable. Planners and deadlines are their thing.",
+          distractorExplanations: {
+            0: 'High conscientiousness means organized, disciplined, and reliable',
+            1: 'High conscientiousness means organized, disciplined, and reliable',
+            2: 'High conscientiousness means organized, disciplined, and reliable',
+          },
         },
         {
           id: "psy-u6-L1-Q4",
@@ -181,6 +205,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "Conscientiousness consistently predicts job performance. Organized, reliable, and hardworking people tend to perform well in most roles.",
+          distractorExplanations: {
+            0: 'Conscientiousness consistently predicts job performance',
+            2: 'Conscientiousness consistently predicts job performance',
+            3: 'Conscientiousness consistently predicts job performance',
+          },
         },
         {
           id: "psy-u6-L1-Q7",
@@ -188,6 +217,9 @@ export const unit6: Unit = {
           question: "High agreeableness means you tend to be cooperative, compassionate, and trusting.",
           correctAnswer: true,
           explanation: "Agreeable people prioritize getting along with others. They're warm and cooperative, though sometimes at the cost of assertiveness.",
+          distractorExplanations: {
+            1: 'Agreeable people prioritize getting along with others',
+          },
         },
         {
           id: "psy-u6-L1-Q8",
@@ -201,6 +233,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "Low extraversion = prefers solitude. High openness = curious and creative. That combination often looks like a thoughtful, independent thinker.",
+          distractorExplanations: {
+            0: 'Low extraversion = prefers solitude',
+            2: 'Low extraversion = prefers solitude',
+            3: 'Low extraversion = prefers solitude',
+          },
         },
       ],
     },
@@ -226,6 +263,9 @@ export const unit6: Unit = {
           question: "The MBTI sorts people into 16 personality types.",
           correctAnswer: true,
           explanation: "4 dimensions with 2 options each = 16 combinations. Types like INTJ, ENFP, and ISTP.",
+          distractorExplanations: {
+            1: '4 dimensions with 2 options each = 16 combinations',
+          },
         },
         {
           id: "psy-u6-L2-Q2",
@@ -239,6 +279,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: "Up to 50% of people get a different type when they retake the test after 5 weeks. A good personality test should give consistent results.",
+          distractorExplanations: {
+            0: 'Up to 50% of people get a different type when they retake the test after 5 weeks',
+            1: 'Up to 50% of people get a different type when they retake the test after 5 weeks',
+            2: 'Up to 50% of people get a different type when they retake the test after 5 weeks',
+          },
         },
         {
           id: "psy-u6-L2-T2",
@@ -258,6 +303,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: "Decades of research support the Big Five's validity and reliability. The MBTI's type-based approach doesn't hold up as well under scientific scrutiny.",
+          distractorExplanations: {
+            0: 'Decades of research support the Big Five\'s validity and reliability',
+            1: 'Decades of research support the Big Five\'s validity and reliability',
+            2: 'Decades of research support the Big Five\'s validity and reliability',
+          },
         },
         {
           id: "psy-u6-L2-Q4",
@@ -294,6 +344,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 3,
           explanation: "The Barnum effect is why horoscopes and personality quizzes feel 'so accurate.' The descriptions are broad enough to fit almost anyone.",
+          distractorExplanations: {
+            0: 'The Barnum effect is why horoscopes and personality quizzes feel \'so accurate.\' The descriptions are broad enough to fit almost anyone',
+            1: 'The Barnum effect is why horoscopes and personality quizzes feel \'so accurate.\' The descriptions are broad enough to fit almost anyone',
+            2: 'The Barnum effect is why horoscopes and personality quizzes feel \'so accurate.\' The descriptions are broad enough to fit almost anyone',
+          },
         },
         {
           id: "psy-u6-L2-Q7",
@@ -301,6 +356,9 @@ export const unit6: Unit = {
           question: "The MBTI is useful for self-reflection even though it's not scientifically strong.",
           correctAnswer: true,
           explanation: "It can spark interesting self-reflection and conversation. Just don't use it for hiring decisions or treat it as scientifically rigorous.",
+          distractorExplanations: {
+            1: 'It can spark interesting self-reflection and conversation',
+          },
         },
         {
           id: "psy-u6-L2-Q8",
@@ -315,6 +373,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: "The MBTI was not designed for hiring and does not reliably predict job performance. Up to 50% of people get a different type when retested. Rejecting a qualified candidate based on a personality type letter ignores 8 years of real-world evidence.",
+          distractorExplanations: {
+            1: 'The MBTI was not designed for hiring and does not reliably predict job performance',
+            2: 'The MBTI was not designed for hiring and does not reliably predict job performance',
+            3: 'The MBTI was not designed for hiring and does not reliably predict job performance',
+          },
         },
       ],
     },
@@ -339,6 +402,9 @@ export const unit6: Unit = {
           question: "Personality is 100% determined by your genes.",
           correctAnswer: false,
           explanation: "Twin studies show genes account for about 40-60% of personality variation. Environment accounts for the rest.",
+          distractorExplanations: {
+            0: 'Twin studies show genes account for about 40-60% of personality variation',
+          },
         },
         {
           id: "psy-u6-L3-Q2",
@@ -383,6 +449,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: "Same genes, different environments, same outcome. That points to a strong genetic contribution to anxiety.",
+          distractorExplanations: {
+            1: 'Same genes, different environments, same outcome',
+            2: 'Same genes, different environments, same outcome',
+            3: 'Same genes, different environments, same outcome',
+          },
         },
         {
           id: "psy-u6-L3-T3",
@@ -403,6 +474,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "Epigenetics shows that nature and nurture aren't separate forces. Your environment physically alters how your genes work.",
+          distractorExplanations: {
+            0: 'Epigenetics shows that nature and nurture aren\'t separate forces',
+            2: 'Epigenetics shows that nature and nurture aren\'t separate forces',
+            3: 'Epigenetics shows that nature and nurture aren\'t separate forces',
+          },
         },
         {
           id: "psy-u6-L3-Q7",
@@ -410,6 +486,9 @@ export const unit6: Unit = {
           question: "Modern psychology sees nature vs nurture as a false choice: it's always both working together.",
           correctAnswer: true,
           explanation: "The real question isn't 'which one?' but 'how do they interact?' Genes and environment always work together.",
+          distractorExplanations: {
+            1: 'The real question isn\'t \'which one?\' but \'how do they interact?\' Genes and environment always work together',
+          },
         },
       ],
     },
@@ -434,6 +513,9 @@ export const unit6: Unit = {
           question: "Self-concept is the set of beliefs and perceptions you have about yourself.",
           correctAnswer: true,
           explanation: "Your self-concept includes everything from 'I'm athletic' to 'I'm bad at math.' These beliefs shape how you act.",
+          distractorExplanations: {
+            1: 'Your self-concept includes everything from \'I\'m athletic\' to \'I\'m bad at math.\' These beliefs shape how you act',
+          },
         },
         {
           id: "psy-u6-L4-Q2",
@@ -447,6 +529,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: "Self-concept = 'I'm quiet.' Self-esteem = 'I feel good/bad about being quiet.' One is description, the other is evaluation.",
+          distractorExplanations: {
+            1: 'Self-concept = \'I\'m quiet.\' Self-esteem = \'I feel good/bad about being quiet.\' One is description, the other is evaluation',
+            2: 'Self-concept = \'I\'m quiet.\' Self-esteem = \'I feel good/bad about being quiet.\' One is description, the other is evaluation',
+            3: 'Self-concept = \'I\'m quiet.\' Self-esteem = \'I feel good/bad about being quiet.\' One is description, the other is evaluation',
+          },
         },
         {
           id: "psy-u6-L4-T2",
@@ -498,6 +585,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "Real self-esteem comes from real accomplishment. Empty affirmations and avoidance don't build genuine confidence.",
+          distractorExplanations: {
+            0: 'Real self-esteem comes from real accomplishment',
+            1: 'Real self-esteem comes from real accomplishment',
+            3: 'Real self-esteem comes from real accomplishment',
+          },
         },
         {
           id: "psy-u6-L4-Q7",
@@ -505,6 +597,9 @@ export const unit6: Unit = {
           question: "The looking-glass self means your self-concept is partly shaped by how you think others see you.",
           correctAnswer: true,
           explanation: "You see yourself partly through the reactions of others. If people treat you as competent, you start to believe it.",
+          distractorExplanations: {
+            1: 'You see yourself partly through the reactions of others',
+          },
         },
         {
           id: "psy-u6-L4-Q8",
@@ -518,6 +613,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "Self-esteem (feeling good) without accurate self-concept (knowing yourself) can lead to overconfidence. Both matter.",
+          distractorExplanations: {
+            0: 'Self-esteem (feeling good) without accurate self-concept (knowing yourself) can lead to overconfidence',
+            1: 'Self-esteem (feeling good) without accurate self-concept (knowing yourself) can lead to overconfidence',
+            3: 'Self-esteem (feeling good) without accurate self-concept (knowing yourself) can lead to overconfidence',
+          },
         },
       ],
     },
@@ -542,6 +642,9 @@ export const unit6: Unit = {
           question: "A growth mindset means believing your abilities can improve with effort.",
           correctAnswer: true,
           explanation: "Growth mindset is the belief that talent and intelligence aren't fixed. They can be developed through practice and learning.",
+          distractorExplanations: {
+            1: 'Growth mindset is the belief that talent and intelligence aren\'t fixed',
+          },
         },
         {
           id: "psy-u6-L5-Q2",
@@ -555,6 +658,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 0,
           explanation: "Fixed mindset interprets failure as proof of permanent inability. 'I'm not a math person' treats math skill as something you either have or don't.",
+          distractorExplanations: {
+            1: 'Fixed mindset interprets failure as proof of permanent inability',
+            2: 'Fixed mindset interprets failure as proof of permanent inability',
+            3: 'Fixed mindset interprets failure as proof of permanent inability',
+          },
         },
         {
           id: "psy-u6-L5-T2",
@@ -591,6 +699,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 2,
           explanation: "Praising effort ('you worked hard') builds growth mindset. Praising talent ('you're smart') builds fixed mindset because kids learn that ability is innate.",
+          distractorExplanations: {
+            0: 'Praising effort (\'you worked hard\') builds growth mindset',
+            1: 'Praising effort (\'you worked hard\') builds growth mindset',
+            3: 'Praising effort (\'you worked hard\') builds growth mindset',
+          },
         },
         {
           id: "psy-u6-L5-T3",
@@ -611,6 +724,11 @@ export const unit6: Unit = {
           ],
           correctIndex: 1,
           explanation: "Growth mindset students improve more over time because they embrace challenges instead of avoiding them.",
+          distractorExplanations: {
+            0: 'Growth mindset students improve more over time because they embrace challenges instead of avoiding them',
+            2: 'Growth mindset students improve more over time because they embrace challenges instead of avoiding them',
+            3: 'Growth mindset students improve more over time because they embrace challenges instead of avoiding them',
+          },
         },
         {
           id: "psy-u6-L5-Q7",
@@ -618,6 +736,9 @@ export const unit6: Unit = {
           question: "Having a growth mindset means you believe anyone can become good at anything with enough effort.",
           correctAnswer: false,
           explanation: "Growth mindset means abilities can be developed, not that everyone can achieve anything. Genetics and starting points still matter. It's about improvement, not unlimited potential.",
+          distractorExplanations: {
+            0: 'Growth mindset means abilities can be developed, not that everyone can achieve anything',
+          },
         },
         {
           id: "psy-u6-L5-Q8",

@@ -36,6 +36,9 @@ export const unit9: Unit = {
           question: "The universe is about 13.8 billion years old.",
           correctAnswer: true,
           explanation: "Multiple lines of evidence, including the cosmic microwave background and the expansion rate, all point to 13.8 billion years.",
+          distractorExplanations: {
+            1: 'Multiple lines of evidence, including the cosmic microwave background and the expansion rate, all point to 13.8 billion years',
+          },
         },
         {
           id: "sp-u9-L1-Q2",
@@ -49,6 +52,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "The Big Bang wasn't an explosion in space. It was the rapid expansion of space itself from an extremely hot, dense state.",
+          distractorExplanations: {
+            0: 'The Big Bang wasn\'t an explosion in space',
+            1: 'The Big Bang wasn\'t an explosion in space',
+            3: 'The Big Bang wasn\'t an explosion in space',
+          },
         },
         {
           id: "sp-u9-L1-T2",
@@ -63,6 +71,9 @@ export const unit9: Unit = {
           question: "The Big Bang was an explosion that happened at a specific point in space.",
           correctAnswer: false,
           explanation: "Space itself expanded everywhere at once. There was no center point and no 'outside' for an explosion to happen in.",
+          distractorExplanations: {
+            0: 'Space itself expanded everywhere at once',
+          },
         },
         {
           id: "sp-u9-L1-Q4",
@@ -103,6 +114,9 @@ export const unit9: Unit = {
           question: "The expansion of the universe is one of the key pieces of evidence for the Big Bang.",
           correctAnswer: true,
           explanation: "The fact that galaxies are moving away from each other shows the universe is expanding, just as the Big Bang theory predicts.",
+          distractorExplanations: {
+            1: 'The fact that galaxies are moving away from each other shows the universe is expanding, just as the Big Bang theory predicts',
+          },
         },
         {
           id: "sp-u9-L1-Q6",
@@ -125,6 +139,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "In 1929, Edwin Hubble observed that distant galaxies are moving away from us, providing the first evidence of an expanding universe.",
+          distractorExplanations: {
+            0: 'In 1929, Edwin Hubble observed that distant galaxies are moving away from us, providing the first evidence of an expanding universe',
+            1: 'In 1929, Edwin Hubble observed that distant galaxies are moving away from us, providing the first evidence of an expanding universe',
+            3: 'In 1929, Edwin Hubble observed that distant galaxies are moving away from us, providing the first evidence of an expanding universe',
+          },
         },
         {
           id: "sp-u9-L1-Q8",
@@ -132,6 +151,9 @@ export const unit9: Unit = {
           question: "Before the Big Bang, the universe was cold and empty.",
           correctAnswer: false,
           explanation: "Our physics can't describe 'before' the Big Bang. The Big Bang was the beginning of space, time, and everything we can measure.",
+          distractorExplanations: {
+            0: 'Our physics can\'t describe \'before\' the Big Bang',
+          },
         },
       ],
     },
@@ -156,6 +178,9 @@ export const unit9: Unit = {
           question: "The cosmic microwave background is the oldest light in the universe.",
           correctAnswer: true,
           explanation: "The CMB was released about 380,000 years after the Big Bang. No older light exists because the universe was opaque before that.",
+          distractorExplanations: {
+            1: 'The CMB was released about 380,000 years after the Big Bang',
+          },
         },
         {
           id: "sp-u9-L2-Q2",
@@ -169,6 +194,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "It took 380,000 years for the universe to cool enough for atoms to form and light to travel freely. That's when the CMB was released.",
+          distractorExplanations: {
+            1: 'It took 380,000 years for the universe to cool enough for atoms to form and light to travel freely',
+            2: 'It took 380,000 years for the universe to cool enough for atoms to form and light to travel freely',
+            3: 'It took 380,000 years for the universe to cool enough for atoms to form and light to travel freely',
+          },
         },
         {
           id: "sp-u9-L2-T2",
@@ -208,6 +238,9 @@ export const unit9: Unit = {
           question: "The CMB is perfectly uniform with no temperature variations at all.",
           correctAnswer: false,
           explanation: "It's nearly uniform but has tiny fluctuations (about 1 in 100,000). These tiny differences seeded the formation of all galaxies and structures.",
+          distractorExplanations: {
+            0: 'It\'s nearly uniform but has tiny fluctuations (about 1 in 100,000)',
+          },
         },
         {
           id: "sp-u9-L2-Q6",
@@ -221,6 +254,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "Penzias and Wilson found a persistent background noise in their radio antenna. It turned out to be the CMB, earning them a Nobel Prize.",
+          distractorExplanations: {
+            0: 'Penzias and Wilson found a persistent background noise in their radio antenna',
+            1: 'Penzias and Wilson found a persistent background noise in their radio antenna',
+            3: 'Penzias and Wilson found a persistent background noise in their radio antenna',
+          },
         },
         {
           id: "sp-u9-L2-Q7",
@@ -237,6 +275,9 @@ export const unit9: Unit = {
           question: "The tiny temperature fluctuations in the CMB eventually led to the formation of galaxies.",
           correctAnswer: true,
           explanation: "Slightly denser regions attracted more matter through gravity over billions of years, eventually forming the galaxies and galaxy clusters we see today.",
+          distractorExplanations: {
+            1: 'Slightly denser regions attracted more matter through gravity over billions of years, eventually forming the galaxies and galaxy clusters we see today',
+          },
         },
       ],
     },
@@ -261,6 +302,9 @@ export const unit9: Unit = {
           question: "Dark matter makes up about 27% of the universe.",
           correctAnswer: true,
           explanation: "Ordinary matter (atoms, stars, planets, us) makes up only about 5%. Dark matter accounts for roughly 27%, and dark energy the remaining 68%.",
+          distractorExplanations: {
+            1: 'Ordinary matter (atoms, stars, planets, us) makes up only about 5%',
+          },
         },
         {
           id: "sp-u9-L3-Q2",
@@ -274,6 +318,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Dark matter is 'dark' because it's invisible. It doesn't produce, absorb, or reflect any form of light or electromagnetic radiation.",
+          distractorExplanations: {
+            1: 'Dark matter is \'dark\' because it\'s invisible',
+            2: 'Dark matter is \'dark\' because it\'s invisible',
+            3: 'Dark matter is \'dark\' because it\'s invisible',
+          },
         },
         {
           id: "sp-u9-L3-T2",
@@ -287,6 +336,9 @@ export const unit9: Unit = {
           question: "Without dark matter, galaxies would spin apart because visible matter alone does not provide enough gravity.",
           correctAnswer: true,
           explanation: "Galaxies rotate too fast for visible matter to hold them together. Dark matter provides the extra gravitational pull.",
+          distractorExplanations: {
+            1: 'Galaxies rotate too fast for visible matter to hold them together',
+          },
         },
         {
           id: "sp-u9-L3-Q3",
@@ -301,6 +353,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "Galaxy rotation speeds showed that visible matter alone couldn't provide enough gravity. Something unseen, dark matter, was adding extra mass to hold galaxies together.",
+          distractorExplanations: {
+            1: 'Galaxy rotation speeds showed that visible matter alone couldn\'t provide enough gravity',
+            2: 'Galaxy rotation speeds showed that visible matter alone couldn\'t provide enough gravity',
+            3: 'Galaxy rotation speeds showed that visible matter alone couldn\'t provide enough gravity',
+          },
         },
         {
           id: "sp-u9-L3-Q4",
@@ -323,6 +380,9 @@ export const unit9: Unit = {
           question: "Scientists have identified exactly what dark matter is made of.",
           correctAnswer: false,
           explanation: "Despite decades of searching, we still don't know what dark matter is made of. It's one of the biggest mysteries in physics.",
+          distractorExplanations: {
+            0: 'Despite decades of searching, we still don\'t know what dark matter is made of',
+          },
         },
         {
           id: "sp-u9-L3-Q6",
@@ -345,6 +405,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 3,
           explanation: "Dark matter's gravity bends light passing through it, distorting images of background galaxies. This effect maps out where dark matter sits.",
+          distractorExplanations: {
+            0: 'Dark matter\'s gravity bends light passing through it, distorting images of background galaxies',
+            1: 'Dark matter\'s gravity bends light passing through it, distorting images of background galaxies',
+            2: 'Dark matter\'s gravity bends light passing through it, distorting images of background galaxies',
+          },
         },
         {
           id: "sp-u9-L3-Q8",
@@ -352,6 +417,9 @@ export const unit9: Unit = {
           question: "Without dark matter, galaxies would likely fly apart.",
           correctAnswer: true,
           explanation: "The visible matter alone doesn't have enough gravity to hold galaxies together at their rotation speeds. Dark matter provides the missing gravitational glue.",
+          distractorExplanations: {
+            1: 'The visible matter alone doesn\'t have enough gravity to hold galaxies together at their rotation speeds',
+          },
         },
       ],
     },
@@ -376,6 +444,9 @@ export const unit9: Unit = {
           question: "The universe's expansion is slowing down over time.",
           correctAnswer: false,
           explanation: "The opposite is true. Since 1998, we've known the expansion is accelerating. Distant galaxies are moving away from us faster than ever.",
+          distractorExplanations: {
+            0: 'Is true. Since 1998, we\'ve known the expansion is accelerating',
+          },
         },
         {
           id: "sp-u9-L4-Q2",
@@ -389,6 +460,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 3,
           explanation: "By studying distant supernovae, two teams independently found that the universe's expansion is speeding up, not slowing down.",
+          distractorExplanations: {
+            0: 'By studying distant supernovae, two teams independently found that the universe\'s expansion is speeding up, not slowing down',
+            1: 'By studying distant supernovae, two teams independently found that the universe\'s expansion is speeding up, not slowing down',
+            2: 'By studying distant supernovae, two teams independently found that the universe\'s expansion is speeding up, not slowing down',
+          },
         },
         {
           id: "sp-u9-L4-T2",
@@ -416,6 +492,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 3,
           explanation: "Dark energy drives the universe's expansion to accelerate. On smaller scales (galaxies, solar systems), gravity still dominates.",
+          distractorExplanations: {
+            0: 'Dark energy drives the universe\'s expansion to accelerate',
+            1: 'Dark energy drives the universe\'s expansion to accelerate',
+            2: 'Dark energy drives the universe\'s expansion to accelerate',
+          },
         },
         {
           id: "sp-u9-L4-T3",
@@ -429,6 +510,9 @@ export const unit9: Unit = {
           question: "Scientists fully understand what dark energy is.",
           correctAnswer: false,
           explanation: "Dark energy remains one of the greatest mysteries in science. We can measure its effects but don't yet understand its nature.",
+          distractorExplanations: {
+            0: 'Dark energy remains one of the greatest mysteries in science',
+          },
         },
         {
           id: "sp-u9-L4-Q6",
@@ -460,6 +544,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 2,
           explanation: "Distant Type Ia supernovae appeared dimmer than expected, meaning they were farther away than predicted. The expansion must be speeding up.",
+          distractorExplanations: {
+            0: 'Distant Type Ia supernovae appeared dimmer than expected, meaning they were farther away than predicted',
+            1: 'Distant Type Ia supernovae appeared dimmer than expected, meaning they were farther away than predicted',
+            3: 'Distant Type Ia supernovae appeared dimmer than expected, meaning they were farther away than predicted',
+          },
         },
       ],
     },
@@ -484,6 +573,9 @@ export const unit9: Unit = {
           question: "The fate of the universe depends on the competition between gravity and dark energy.",
           correctAnswer: true,
           explanation: "Gravity wants to pull everything back together. Dark energy pushes it apart. Whichever wins determines the ending.",
+          distractorExplanations: {
+            1: 'Gravity wants to pull everything back together',
+          },
         },
         {
           id: "sp-u9-L5-Q2",
@@ -528,6 +620,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 1,
           explanation: "In a Big Crunch, gravity would overcome dark energy, pulling everything back into a single point, the reverse of the Big Bang.",
+          distractorExplanations: {
+            0: 'In a Big Crunch, gravity would overcome dark energy, pulling everything back into a single point, the reverse of the Big Bang',
+            2: 'In a Big Crunch, gravity would overcome dark energy, pulling everything back into a single point, the reverse of the Big Bang',
+            3: 'In a Big Crunch, gravity would overcome dark energy, pulling everything back into a single point, the reverse of the Big Bang',
+          },
         },
         {
           id: "sp-u9-L5-T3",
@@ -550,6 +647,9 @@ export const unit9: Unit = {
           question: "The Big Rip scenario requires dark energy to get weaker over time.",
           correctAnswer: false,
           explanation: "The Big Rip requires dark energy to get stronger over time, eventually overpowering all other forces, even the ones holding atoms together.",
+          distractorExplanations: {
+            0: 'The Big Rip requires dark energy to get stronger over time, eventually overpowering all other forces, even the ones holding atoms together',
+          },
         },
         {
           id: "sp-u9-L5-Q8",
@@ -564,6 +664,11 @@ export const unit9: Unit = {
           ],
           correctIndex: 0,
           explanation: "If dark energy strengthens over time, it could eventually overpower all other forces. This would favor the Big Rip scenario over the Big Freeze.",
+          distractorExplanations: {
+            1: 'If dark energy strengthens over time, it could eventually overpower all other forces',
+            2: 'If dark energy strengthens over time, it could eventually overpower all other forces',
+            3: 'If dark energy strengthens over time, it could eventually overpower all other forces',
+          },
         },
       ],
     },

@@ -34,6 +34,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Behavioral economics shows that people always make perfectly rational decisions.',
             correctAnswer: false,
             explanation: 'Behavioral economics demonstrates that people systematically deviate from rational choices due to cognitive biases.',
+            distractorExplanations: {
+              0: 'Behavioral economics demonstrates that people systematically deviate from rational choices due to cognitive biases.',
+            },
           },
           {
             id: 'psy-sec13-u1-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Heuristics are mental shortcuts we use because we lack the time or capacity to analyze every decision fully.',
+            distractorExplanations: {
+              0: '"Mathematical formulas for optimal choices" is incorrect; mental shortcuts that simplify decision-making.',
+              1: '"Emotional disorders that impair judgment" is incorrect; mental shortcuts that simplify decision-making.',
+              2: '"Strategies used only by experts" is incorrect; mental shortcuts that simplify decision-making.',
+            },
           },
           {
             id: 'psy-sec13-u1-L1-T2',
@@ -98,6 +106,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'She used a social shortcut (coworker recommendation) and stopped searching once she found an acceptable option.',
+            distractorExplanations: {
+              0: '"Rational utility maximization" is incorrect; satisficing with a social heuristic.',
+              2: '"Loss aversion bias" is incorrect; satisficing with a social heuristic.',
+              3: '"Sunk cost fallacy" is incorrect; satisficing with a social heuristic.',
+            },
           },
           {
             id: 'psy-sec13-u1-L1-Q6',
@@ -111,6 +124,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cognitive biases are systematic, meaning most people make the same types of errors in similar situations.',
+            distractorExplanations: {
+              1: '"They only affect uneducated consumers" is incorrect; they follow systematic patterns across people.',
+              2: '"They disappear with enough information" is incorrect; they follow systematic patterns across people.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
         ],
       },
@@ -136,6 +154,9 @@ export const psySection13Part1: Unit[] = [
             question: 'The anchoring effect means the first number you encounter influences later estimates.',
             correctAnswer: true,
             explanation: 'Anchoring causes people to adjust insufficiently from an initial reference point.',
+            distractorExplanations: {
+              1: 'Anchoring causes people to adjust insufficiently from an initial reference point.',
+            },
           },
           {
             id: 'psy-sec13-u1-L2-Q2',
@@ -149,6 +170,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The expensive watch anchors the shopper, making the $300 option feel like a bargain by comparison.',
+            distractorExplanations: {
+              0: '"A loss leader" is incorrect; an anchor that makes $300 seem reasonable.',
+              1: '"A satisficing trigger" is incorrect; an anchor that makes $300 seem reasonable.',
+              2: '"A sunk cost reference" is incorrect; an anchor that makes $300 seem reasonable.',
+            },
           },
           {
             id: 'psy-sec13-u1-L2-T2',
@@ -168,6 +194,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The experiment showed that even a completely random number from a spinning wheel influenced numerical estimates.',
+            distractorExplanations: {
+              0: '"People only anchor to relevant information" is incorrect; even random, irrelevant numbers shift estimates.',
+              1: '"Experts are immune to anchoring effects" is incorrect; even random, irrelevant numbers shift estimates.',
+              2: '"Anchoring only works with financial decisions" is incorrect; even random, irrelevant numbers shift estimates.',
+            },
           },
           {
             id: 'psy-sec13-u1-L2-Q4',
@@ -208,6 +239,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The high-priced option anchors the client, making the middle option feel like a reasonable compromise.',
+            distractorExplanations: {
+              0: '"The $15,000 option makes $30,000 look expensive" is incorrect; the $50,000 option anchors the client to see $30,000 as moderate.',
+              2: 'Not 3 options are equally likely to be chosen.',
+              3: '"Anchoring does not apply to service pricing" is incorrect; the $50,000 option anchors the client to see $30,000 as moderate.',
+            },
           },
           {
             id: 'psy-sec13-u1-L2-Q6',
@@ -221,6 +257,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Research shows anchoring persists even when people know about it, though awareness can somewhat reduce its strength.',
+            distractorExplanations: {
+              1: '"It requires the anchor to be relevant" is incorrect; awareness reduces it but does not eliminate it.',
+              2: '"Experts are completely immune to it" is incorrect; awareness reduces it but does not eliminate it.',
+              3: '"It only works on impulsive shoppers" is incorrect; awareness reduces it but does not eliminate it.',
+            },
           },
         ],
       },
@@ -246,6 +287,9 @@ export const psySection13Part1: Unit[] = [
             question: 'People feel losses and gains with equal emotional intensity.',
             correctAnswer: false,
             explanation: 'Losses feel approximately twice as painful as equivalent gains feel pleasurable.',
+            distractorExplanations: {
+              0: 'Losses feel approximately twice as painful as equivalent gains feel pleasurable.',
+            },
           },
           {
             id: 'psy-sec13-u1-L3-Q2',
@@ -259,6 +303,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Loss aversion research suggests losses are felt about twice as strongly, so a $100 gain would be needed to offset a $50 loss.',
+            distractorExplanations: {
+              0: '"About $25" is incorrect; about $100.',
+              2: '"About $200" is incorrect; about $100.',
+              3: '"Exactly $50" is incorrect; about $100.',
+            },
           },
           {
             id: 'psy-sec13-u1-L3-T2',
@@ -310,6 +359,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Maria overvalues the jacket because she owns it. The purchase price anchors her, but the core issue is endowment effect.',
+            distractorExplanations: {
+              0: '"She is rationally calculating resale value" is incorrect; the endowment effect inflates her perceived value.',
+              2: '"The anchoring effect from the friend\\\'s offer" is incorrect; the endowment effect inflates her perceived value.',
+              3: '"She is using the availability heuristic" is incorrect; the endowment effect inflates her perceived value.',
+            },
           },
           {
             id: 'psy-sec13-u1-L3-Q6',
@@ -323,6 +377,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Money-back guarantees reduce the fear of loss, and once customers own the product, the endowment effect makes returns unlikely.',
+            distractorExplanations: {
+              0: '"They prove the product is high quality" is incorrect; they reduce perceived risk by addressing loss aversion.',
+              1: '"They are legally required in most countries" is incorrect; they reduce perceived risk by addressing loss aversion.',
+              3: '"They appeal to satisficing consumers" is incorrect; they reduce perceived risk by addressing loss aversion.',
+            },
           },
         ],
       },
@@ -348,6 +407,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Framing effects mean that identical information can lead to different decisions based on wording.',
             correctAnswer: true,
             explanation: 'People respond differently to gain frames ("saves 200 lives") versus loss frames ("400 people will die") even when the outcomes are mathematically the same.',
+            distractorExplanations: {
+              1: 'People respond differently to gain frames ("saves 200 lives") versus loss frames ("400 people will die") even when the.',
+            },
           },
           {
             id: 'psy-sec13-u1-L4-Q2',
@@ -361,6 +423,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Positive framing (95% success) is more persuasive than negative framing (5% failure), even though they describe the same outcome.',
+            distractorExplanations: {
+              0: 'This figure is inaccurate; the research-supported estimate is approximately 95%.',
+              1: '"5 out of 100 patients do not survive" is incorrect; this treatment has a 95% success rate.',
+              3: 'Not framings produce equal responses.',
+            },
           },
           {
             id: 'psy-sec13-u1-L4-T2',
@@ -423,6 +490,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'According to prospect theory, outcomes are evaluated relative to expectations. B\'s higher reference point turned the same raise into a perceived loss.',
+            distractorExplanations: {
+              0: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              2: 'This figure is inaccurate; the research-supported estimate is approximately 3%.',
+              3: '"The anchoring effect made B expect more money" is incorrect; b\\\'s reference point was higher, making 3% feel like a loss.',
+            },
           },
           {
             id: 'psy-sec13-u1-L4-Q6',
@@ -436,6 +508,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Loss framing (10% mortality) triggers loss aversion, making people more reluctant even though the information is mathematically identical.',
+            distractorExplanations: {
+              0: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+              2: 'The scope is broader than risk-seeking patients would be affected alone.',
+              3: '"More patients would consent to surgery" is incorrect; fewer patients would consent to surgery.',
+            },
           },
         ],
       },
@@ -461,6 +538,9 @@ export const psySection13Part1: Unit[] = [
             question: 'The paradox of choice suggests that too many options can reduce satisfaction and cause decision paralysis.',
             correctAnswer: true,
             explanation: 'Barry Schwartz showed that excessive choice can overwhelm people, leading to worse decisions and lower satisfaction.',
+            distractorExplanations: {
+              1: 'Barry Schwartz showed that excessive choice can overwhelm people, leading to worse decisions and lower satisfaction.',
+            },
           },
           {
             id: 'psy-sec13-u1-L5-Q2',
@@ -474,6 +554,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Shoppers facing 24 options experienced choice overload and were significantly less likely to buy.',
+            distractorExplanations: {
+              0: '"They bought more jam due to wider selection" is incorrect; they were less likely to purchase any jam.',
+              1: 'These are distinct concepts with different characteristics, causes, or applications.',
+              2: '"They bought the most expensive option" is incorrect; they were less likely to purchase any jam.',
+            },
           },
           {
             id: 'psy-sec13-u1-L5-T2',
@@ -522,6 +607,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The auto-renewal default, combined with status quo bias (preference for the current state), keeps users paying without an active decision.',
+            distractorExplanations: {
+              0: '"The anchoring effect on pricing" is incorrect; status quo bias and default effect combined.',
+              2: '"Prospect theory\\\'s reference dependence" is incorrect; status quo bias and default effect combined.',
+              3: '"The availability heuristic" is incorrect; status quo bias and default effect combined.',
+            },
           },
           {
             id: 'psy-sec13-u1-L5-Q6',
@@ -535,6 +625,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Auto-enrollment with opt-out leverages both the default effect and inertia, dramatically increasing participation.',
+            distractorExplanations: {
+              0: '"Offer 50 different fund options to maximize choice" is incorrect; make enrollment the default with an opt-out option.',
+              1: '"Send employees a 20-page brochure about benefits" is incorrect; make enrollment the default with an opt-out option.',
+              2: '"Require employees to attend a 3-hour seminar" is incorrect; make enrollment the default with an opt-out option.',
+            },
           },
         ],
       },
@@ -574,6 +669,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Charm pricing works because people cannot do basic math.',
             correctAnswer: false,
             explanation: 'Charm pricing exploits the left-digit effect, not mathematical inability. People process the first digit faster than they compute the total.',
+            distractorExplanations: {
+              0: 'Charm pricing exploits the left-digit effect, not mathematical inability.',
+            },
           },
           {
             id: 'psy-sec13-u2-L1-Q2',
@@ -587,6 +685,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The left-digit effect means the "4" in $4.99 dominates price perception, making it feel closer to $4 than $5.',
+            distractorExplanations: {
+              0: 'This figure is inaccurate; the research-supported estimate is approximately 4%.',
+              1: 'The scope is broader than budget-conscious shoppers notice the difference alone.',
+              2: '"The decimal point confuses the brain" is incorrect; the left digit "4" is processed first and anchors perception.',
+            },
           },
           {
             id: 'psy-sec13-u2-L1-T2',
@@ -649,6 +752,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The hotel context shifts the consumer\'s reference point. Within that environment, $8 feels more acceptable than it would elsewhere.',
+            distractorExplanations: {
+              0: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              2: '"The candy bar is a different quality in hotels" is incorrect; contextual pricing shifts the reference point.',
+              3: '"The anchoring effect from room rate prices" is incorrect; contextual pricing shifts the reference point.',
+            },
           },
           {
             id: 'psy-sec13-u2-L1-Q6',
@@ -662,6 +770,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Round prices signal quality and sophistication, aligning with a premium brand positioning.',
+            distractorExplanations: {
+              0: '"End all prices in .99 to maximize perceived value" is incorrect; use round numbers like $5 and $12.',
+              1: '"Use very precise prices like $4.37" is incorrect; use round numbers like $5 and $12.',
+              2: '"Price everything at $1 to attract volume" is incorrect; use round numbers like $5 and $12.',
+            },
           },
         ],
       },
@@ -687,6 +800,9 @@ export const psySection13Part1: Unit[] = [
             question: 'The decoy effect means adding an inferior third option can change which of the original two options people prefer.',
             correctAnswer: true,
             explanation: 'The decoy makes one existing option look superior by comparison, shifting consumer preference.',
+            distractorExplanations: {
+              1: 'The decoy makes one existing option look superior by comparison, shifting consumer preference.',
+            },
           },
           {
             id: 'psy-sec13-u2-L2-Q2',
@@ -700,6 +816,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Print-only at $125 is the decoy. It makes print+online at $125 look like an obvious bargain since you get more for the same price.',
+            distractorExplanations: {
+              0: '"Online-only at $59" is incorrect; print-only at $125.',
+              1: '"Print+online at $125" is incorrect; print-only at $125.',
+              2: '"There is no decoy in this pricing" is incorrect; print-only at $125.',
+            },
           },
           {
             id: 'psy-sec13-u2-L2-T2',
@@ -748,6 +869,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Plus at $45 is the decoy. It makes Premium at $50 look like an incredible deal for only $5 more.',
+            distractorExplanations: {
+              0: '"Basic at $20, because it has the fewest features" is incorrect; plus at $45, because Premium offers much more for just $5 extra.',
+              1: '"Premium at $50, because it is the most expensive" is incorrect; plus at $45, because Premium offers much more for just $5 extra.',
+              2: 'This blanket denial is incorrect; evidence shows the relationship does exist.',
+            },
           },
           {
             id: 'psy-sec13-u2-L2-Q6',
@@ -761,6 +887,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Rational choice theory says preferences between two options should not change when a third irrelevant option is added.',
+            distractorExplanations: {
+              0: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              1: '"Classical economics does not account for pricing" does not accurately describe the concept asked about.',
+              2: '"It only works on uneducated consumers" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -786,6 +917,9 @@ export const psySection13Part1: Unit[] = [
             question: 'The scarcity principle works because limited availability increases an item\'s perceived value.',
             correctAnswer: true,
             explanation: 'Scarcity triggers loss aversion and increases urgency, making products seem more desirable.',
+            distractorExplanations: {
+              1: 'Scarcity triggers loss aversion and increases urgency, making products seem more desirable.',
+            },
           },
           {
             id: 'psy-sec13-u2-L3-Q2',
@@ -799,6 +933,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Limited edition framing triggers both scarcity (fear of missing out) and exclusivity (feeling special for owning it).',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              1: '"Consumers trust limited-run manufacturers more" is incorrect; scarcity creates urgency and perceived exclusivity.',
+              3: '"It signals that the product is on clearance" is incorrect; scarcity creates urgency and perceived exclusivity.',
+            },
           },
           {
             id: 'psy-sec13-u2-L3-T2',
@@ -861,6 +1000,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The listing combines social proof (bestseller, ratings, cart count), scarcity (1 left), and urgency (midnight deadline).',
+            distractorExplanations: {
+              0: 'The scope is broader than anchoring and the decoy effect alone.',
+              2: '"The endowment effect and loss aversion only" is incorrect; social proof, scarcity, and urgency together.',
+              3: '"Charm pricing and contextual framing" is incorrect; social proof, scarcity, and urgency together.',
+            },
           },
           {
             id: 'psy-sec13-u2-L3-Q6',
@@ -874,6 +1018,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Social proof is most powerful when people are uncertain. The less they know, the more they rely on what others have done.',
+            distractorExplanations: {
+              0: '"When the product is familiar and well-known" is incorrect; when consumers are uncertain about quality or choice.',
+              2: '"When consumers already have strong preferences" is incorrect; when consumers are uncertain about quality or choice.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
         ],
       },
@@ -899,6 +1048,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Research shows that "free" triggers the same response as any other small price reduction.',
             correctAnswer: false,
             explanation: '"Free" produces a disproportionately strong emotional response. The jump from $0.01 to $0.00 is psychologically much larger than from $0.02 to $0.01.',
+            distractorExplanations: {
+              0: '"Free" produces a disproportionately strong emotional response.',
+            },
           },
           {
             id: 'psy-sec13-u2-L4-Q2',
@@ -912,6 +1064,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Demand surged from about 40% to 90% when the price went from one cent to free, showing the unique power of zero price.',
+            distractorExplanations: {
+              0: 'These are distinct concepts with different characteristics, causes, or applications.',
+              1: '"Demand decreased because people suspected low quality" is incorrect; demand more than doubled.',
+              2: '"Demand slightly increased by about 10%" is incorrect; demand more than doubled.',
+            },
           },
           {
             id: 'psy-sec13-u2-L4-T2',
@@ -963,6 +1120,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The emotional pull of "free shipping" led the customer to spend $20 more to avoid a $5 charge, a clearly irrational but predictable behavior.',
+            distractorExplanations: {
+              0: '"The customer is maximizing utility rationally" is incorrect; the zero-price effect on shipping overrides rational math.',
+              2: '"The decoy effect from the $35 threshold" is incorrect; the zero-price effect on shipping overrides rational math.',
+              3: '"Anchoring to the $35 number" is incorrect; the zero-price effect on shipping overrides rational math.',
+            },
           },
           {
             id: 'psy-sec13-u2-L4-Q6',
@@ -976,6 +1138,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Though mathematically equivalent, "free" produces a disproportionate emotional response compared to a percentage discount.',
+            distractorExplanations: {
+              0: '"BOGO is cheaper for the company" is incorrect; free" triggers a stronger emotional response than "50% off.',
+              1: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
         ],
       },
@@ -1001,6 +1168,9 @@ export const psySection13Part1: Unit[] = [
             question: 'A nudge changes behavior while preserving complete freedom of choice.',
             correctAnswer: true,
             explanation: 'Nudges guide behavior by changing the choice environment, not by restricting available options.',
+            distractorExplanations: {
+              1: 'Nudges guide behavior by changing the choice environment, not by restricting available options.',
+            },
           },
           {
             id: 'psy-sec13-u2-L5-Q2',
@@ -1014,6 +1184,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Making healthy food the default guides behavior without removing other options, fitting the definition of a nudge.',
+            distractorExplanations: {
+              0: '"Banning sugary drinks in schools" is incorrect; making healthy food the default in a cafeteria.',
+              1: '"Taxing cigarettes at a higher rate" is incorrect; making healthy food the default in a cafeteria.',
+              2: '"Requiring calorie counts by law" is incorrect; making healthy food the default in a cafeteria.',
+            },
           },
           {
             id: 'psy-sec13-u2-L5-T2',
@@ -1076,6 +1251,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Making recycling easier through physical design is a classic nudge. It changes the choice architecture without restricting freedom.',
+            distractorExplanations: {
+              1: '"Ban all non-recyclable packaging" is incorrect; make recycling bins larger and more accessible than trash cans.',
+              2: '"Charge a fee for each bag of trash" is incorrect; make recycling bins larger and more accessible than trash cans.',
+              3: '"Require citizens to attend recycling workshops" is incorrect; make recycling bins larger and more accessible than trash cans.',
+            },
           },
           {
             id: 'psy-sec13-u2-L5-Q6',
@@ -1089,6 +1269,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The core critique is that nudging requires someone to define the "better" outcome, which introduces values and potential bias into policy design.',
+            distractorExplanations: {
+              0: '"Nudges are too expensive to implement" is incorrect; someone must decide what counts as a "good" choice.',
+              2: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
         ],
       },
@@ -1128,6 +1313,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Mental accounting causes people to treat identical amounts of money differently depending on its source or intended use.',
             correctAnswer: true,
             explanation: 'People assign money to mental categories (rent, fun, savings) and treat dollars differently even though they are economically interchangeable.',
+            distractorExplanations: {
+              1: 'People assign money to mental categories (rent.',
+            },
           },
           {
             id: 'psy-sec13-u3-L1-Q2',
@@ -1141,6 +1329,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Keeping vacation savings separate from debt repayment treats identical dollars differently based on mental categories.',
+            distractorExplanations: {
+              0: '"Investing all money in a diversified portfolio" is incorrect; refusing to use vacation savings to pay off credit card debt.',
+              1: '"Comparing prices across multiple stores" is incorrect; refusing to use vacation savings to pay off credit card debt.',
+              2: '"Creating a budget that tracks all spending equally" is incorrect; refusing to use vacation savings to pay off credit card debt.',
+            },
           },
           {
             id: 'psy-sec13-u3-L1-T2',
@@ -1192,6 +1385,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Alex\'s mental accounting creates artificial categories. Rationally, paying off 22% debt with 1% savings is a guaranteed 21% return.',
+            distractorExplanations: {
+              0: '"Being financially responsible by maintaining savings" is incorrect; treating the savings and debt as separate mental accounts.',
+              1: '"Using the anchoring effect on interest rates" is incorrect; treating the savings and debt as separate mental accounts.',
+              3: '"Applying rational cost-benefit analysis" is incorrect; treating the savings and debt as separate mental accounts.',
+            },
           },
           {
             id: 'psy-sec13-u3-L1-Q6',
@@ -1205,6 +1403,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Gift cards are mentally categorized differently from earned cash, making people more willing to spend them on non-essential items.',
+            distractorExplanations: {
+              0: '"Gift cards expire, so they must be used quickly" is incorrect; mental accounting categorizes gift cards as "free money.',
+              1: '"Gift cards have less purchasing power than cash" is incorrect; mental accounting categorizes gift cards as "free money.',
+              3: '"People receive gift cards only for luxury items" is incorrect; mental accounting categorizes gift cards as "free money.',
+            },
           },
         ],
       },
@@ -1230,6 +1433,9 @@ export const psySection13Part1: Unit[] = [
             question: 'The sunk cost fallacy means past investments should influence future decisions.',
             correctAnswer: false,
             explanation: 'The sunk cost fallacy is an error. Rational decisions should be based only on future costs and benefits, not past unrecoverable spending.',
+            distractorExplanations: {
+              0: 'The sunk cost fallacy is an error.',
+            },
           },
           {
             id: 'psy-sec13-u3-L2-Q2',
@@ -1243,6 +1449,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The sunk cost fallacy drives people to attend events they would skip if the tickets were free, just to justify past spending.',
+            distractorExplanations: {
+              0: '"You will stay home and rest" is incorrect; you will go despite being sick to "not waste" the $200.',
+              2: '"You will try to sell the tickets at a discount" is incorrect; you will go despite being sick to "not waste" the $200.',
+              3: '"You will give the tickets away for free" is incorrect; you will go despite being sick to "not waste" the $200.',
+            },
           },
           {
             id: 'psy-sec13-u3-L2-T2',
@@ -1297,6 +1508,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The $5 million is a sunk cost. Only future costs ($3M) versus future revenue ($2M) matter, making continuation irrational.',
+            distractorExplanations: {
+              0: '"Continue because $5 million is already invested" is incorrect; stop development; future costs exceed future revenue.',
+              2: '"Double the budget to improve the product" is incorrect; stop development; future costs exceed future revenue.',
+              3: '"Launch the unfinished version to recover some cost" is incorrect; stop development; future costs exceed future revenue.',
+            },
           },
           {
             id: 'psy-sec13-u3-L2-Q6',
@@ -1310,6 +1526,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Loss aversion makes abandoning past investments feel like accepting a painful, definitive loss.',
+            distractorExplanations: {
+              0: '"The availability heuristic" is incorrect; loss aversion.',
+              1: '"The anchoring effect" is incorrect; loss aversion.',
+              2: '"Social proof" is incorrect; loss aversion.',
+            },
           },
         ],
       },
@@ -1335,6 +1556,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Research shows people tend to spend 12-18% more when paying with credit cards compared to cash.',
             correctAnswer: true,
             explanation: 'Credit cards reduce the pain of paying by abstracting the transaction, which leads to higher spending.',
+            distractorExplanations: {
+              1: 'Credit cards reduce the pain of paying by abstracting the transaction, which leads to higher spending.',
+            },
           },
           {
             id: 'psy-sec13-u3-L3-Q2',
@@ -1367,6 +1591,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Prepayment decouples the cost from the experience. Each activity feels "free" because the payment pain already occurred.',
+            distractorExplanations: {
+              0: '"They offer higher quality experiences" is incorrect; prepayment separates the pain of paying from consumption.',
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              3: '"Social proof from other guests increases enjoyment" is incorrect; prepayment separates the pain of paying from consumption.',
+            },
           },
           {
             id: 'psy-sec13-u3-L3-Q4',
@@ -1404,6 +1633,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cash creates higher payment pain due to its physical, visible nature. Credit cards abstract the transaction, reducing the psychological cost.',
+            distractorExplanations: {
+              1: '"The cash payer has less money overall" is incorrect; different levels of payment pain from the transaction format.',
+              2: '"The credit card user is wealthier" is incorrect; different levels of payment pain from the transaction format.',
+              3: '"Restaurant pricing only matters for cash payers" is incorrect; different levels of payment pain from the transaction format.',
+            },
           },
           {
             id: 'psy-sec13-u3-L3-Q6',
@@ -1417,6 +1651,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Chips abstract money, reducing payment pain. Losing a colored disc feels less painful than losing paper bills.',
+            distractorExplanations: {
+              0: '"Chips are easier to stack and count quickly" is incorrect; converting cash to chips reduces the pain of losing money.',
+              1: '"Chips prevent theft more effectively than cash" is incorrect; converting cash to chips reduces the pain of losing money.',
+              2: '"Gaming regulations require chip usage" is incorrect; converting cash to chips reduces the pain of losing money.',
+            },
           },
         ],
       },
@@ -1442,6 +1681,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Temporal discounting means people value future rewards less than equivalent immediate rewards.',
             correctAnswer: true,
             explanation: 'People systematically discount future rewards. A dollar today feels worth more than a dollar tomorrow, even without inflation.',
+            distractorExplanations: {
+              1: 'People systematically discount future rewards. A dollar today feels worth more than a dollar tomorrow, even without inflation.',
+            },
           },
           {
             id: 'psy-sec13-u3-L4-Q2',
@@ -1455,6 +1697,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Choosing $500 now over a much larger future amount shows the characteristic preference for immediate rewards.',
+            distractorExplanations: {
+              0: '"Investing consistently for 30 years" is incorrect; choosing $500 now over $1,000 in two years.',
+              1: '"Delaying a purchase to wait for a sale" is incorrect; choosing $500 now over $1,000 in two years.',
+              3: '"Comparing interest rates across savings accounts" is incorrect; choosing $500 now over $1,000 in two years.',
+            },
           },
           {
             id: 'psy-sec13-u3-L4-T2',
@@ -1525,6 +1772,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Auto-escalation is a commitment device that uses defaults and inertia to overcome present bias, proven far more effective than information alone.',
+            distractorExplanations: {
+              1: '"Send monthly emails reminding employees to save more" is incorrect; auto-escalate contributions by 1% per year with opt-out.',
+              2: '"Offer a one-time retirement planning seminar" is incorrect; auto-escalate contributions by 1% per year with opt-out.',
+              3: '"Post motivational posters about saving in the break room" is incorrect; auto-escalate contributions by 1% per year with opt-out.',
+            },
           },
         ],
       },
@@ -1550,6 +1802,9 @@ export const psySection13Part1: Unit[] = [
             question: 'The disposition effect causes investors to hold losing stocks too long and sell winning stocks too early.',
             correctAnswer: true,
             explanation: 'Driven by loss aversion, investors avoid realizing losses and rush to realize gains, which is the opposite of optimal strategy.',
+            distractorExplanations: {
+              1: 'Driven by loss aversion, investors avoid realizing losses and rush to realize gains, which is the opposite of optimal strategy.',
+            },
           },
           {
             id: 'psy-sec13-u3-L5-Q2',
@@ -1563,6 +1818,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Overconfidence bias leads investors to overestimate their ability to pick stocks and time the market, despite evidence that most fail to beat index funds.',
+            distractorExplanations: {
+              0: '"Anchoring bias" is incorrect; overconfidence bias.',
+              1: '"The endowment effect" is incorrect; overconfidence bias.',
+              3: '"Status quo bias" is incorrect; overconfidence bias.',
+            },
           },
           {
             id: 'psy-sec13-u3-L5-T2',
@@ -1614,6 +1874,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'She overinvested due to recency bias (expecting the trend to continue) and panic-sold due to herding and loss aversion.',
+            distractorExplanations: {
+              1: '"Rational rebalancing based on new information" is incorrect; recency bias during the bull run, then herding during the crash.',
+              2: '"The endowment effect and anchoring" is incorrect; recency bias during the bull run, then herding during the crash.',
+              3: '"Overconfidence followed by the decoy effect" is incorrect; recency bias during the bull run, then herding during the crash.',
+            },
           },
           {
             id: 'psy-sec13-u3-L5-Q6',
@@ -1627,6 +1892,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Automated strategies (index funds, auto-rebalancing) remove emotional decision-making, which is the primary source of behavioral errors in investing.',
+            distractorExplanations: {
+              0: '"Watch financial news daily for better information" is incorrect; use automated, rules-based investment strategies.',
+              1: '"Follow the recommendations of popular investors" is incorrect; use automated, rules-based investment strategies.',
+              2: '"Make investment decisions based on gut feeling" is incorrect; use automated, rules-based investment strategies.',
+            },
           },
         ],
       },
@@ -1673,6 +1943,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The $45,000 car anchored the customer\'s price perception, making $28,000 feel reasonable despite exceeding the original budget.',
+            distractorExplanations: {
+              1: '"The sunk cost of visiting the dealership" is incorrect; anchoring from the $45,000 car shifted the reference point.',
+              2: '"Social proof from the dealer\\\'s recommendation" is incorrect; anchoring from the $45,000 car shifted the reference point.',
+              3: '"Choice overload from too many car options" is incorrect; anchoring from the $45,000 car shifted the reference point.',
+            },
           },
           {
             id: 'psy-sec13-u4-L1-Q2',
@@ -1728,6 +2003,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The "original" price anchors, the sale creates scarcity/urgency, the wait creates sunk cost pressure, and the credit card reduces payment pain.',
+            distractorExplanations: {
+              1: 'The scope is broader than the framing effect and social proof alone.',
+              2: 'The temporal lobe handles auditory processing and language comprehension, not the process described here.',
+              3: '"Choice overload and bounded rationality only" is incorrect; anchoring, scarcity, sunk cost, and reduced payment pain.',
+            },
           },
           {
             id: 'psy-sec13-u4-L1-Q5',
@@ -1741,6 +2021,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Mobile payments maximize abstraction, reducing the pain of paying and making spending feel less real.',
+            distractorExplanations: {
+              0: '"Mental accounting changed her spending categories" is incorrect; reduced payment pain from abstract transactions.',
+              2: '"The anchoring effect from app-displayed prices" is incorrect; reduced payment pain from abstract transactions.',
+              3: 'The temporal lobe handles auditory processing and language comprehension, not the process described here.',
+            },
           },
           {
             id: 'psy-sec13-u4-L1-Q6',
@@ -1754,6 +2039,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Awareness alone is insufficient. Structural interventions (commitment devices, automation, defaults) are the most effective tools against biases.',
+            distractorExplanations: {
+              0: 'This dismisses a real clinical condition and could prevent someone from seeking needed help.',
+              1: '"Making all decisions quickly before biases kick in" does not accurately describe the concept asked about.',
+              2: '"Avoiding all marketing and advertising" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -1804,6 +2094,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A $24 combo that offers less value than the $25 pasta creates a decoy effect, making the pasta look like a great deal.',
+            distractorExplanations: {
+              1: '"Remove the steak to reduce choice overload" is incorrect; add a $24 soup+salad combo as a decoy near the pasta.',
+              2: '"Lower the pasta price to $24.99 for charm pricing" is incorrect; add a $24 soup+salad combo as a decoy near the pasta.',
+              3: '"Add "bestseller" next to the salad" is incorrect; add a $24 soup+salad combo as a decoy near the pasta.',
+            },
           },
           {
             id: 'psy-sec13-u4-L2-T2',
@@ -1839,6 +2134,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Deliberately making cancellation difficult is a dark pattern that exploits inertia and status quo bias to retain subscribers.',
+            distractorExplanations: {
+              0: '"Ethical nudging toward better value" is incorrect; a dark pattern exploiting inertia and friction.',
+              1: '"Standard user interface best practices" is incorrect; a dark pattern exploiting inertia and friction.',
+              3: '"The decoy effect in action" is incorrect; a dark pattern exploiting inertia and friction.',
+            },
           },
           {
             id: 'psy-sec13-u4-L2-Q5',
@@ -1861,6 +2161,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A transparent default with easy opt-out is a nudge that preserves autonomy. The other options are deceptive or manipulative.',
+            distractorExplanations: {
+              1: '"Hide the opt-out option in fine print" is incorrect; make preventive care the default with easy opt-out.',
+              2: '"Inflate the price of plans without preventive care" is incorrect; make preventive care the default with easy opt-out.',
+              3: '"Show fake testimonials about preventive care benefits" is incorrect; make preventive care the default with easy opt-out.',
+            },
           },
         ],
       },
@@ -1892,6 +2197,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Cognitive biases operate at the automatic processing level. Even experts who study them fall prey to them in real-time decisions.',
+            distractorExplanations: {
+              0: 'The scope is broader than psychologists can understand biases alone.',
+              1: '"Biases are fictional concepts with no real impact" is incorrect; biases operate automatically, below conscious control.',
+              3: '"Education eliminates all biases permanently" is incorrect; biases operate automatically, below conscious control.',
+            },
           },
           {
             id: 'psy-sec13-u4-L3-Q2',
@@ -1925,6 +2235,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Opt-out organ donation systems leverage default effects and inertia, achieving rates above 90% in countries that use them.',
+            distractorExplanations: {
+              1: '"Run a television campaign explaining the importance of donation" is incorrect; switch to an opt-out system where citizens must actively decline.',
+              2: '"Offer a $100 tax credit for registered organ donors" is incorrect; switch to an opt-out system where citizens must actively decline.',
+              3: '"Send a pamphlet about organ donation to every household" is incorrect; switch to an opt-out system where citizens must actively decline.',
+            },
           },
           {
             id: 'psy-sec13-u4-L3-Q4',
@@ -1980,6 +2295,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Behavioral economics shows that human irrationality is systematic and predictable, which means better choice architecture can reliably improve decisions.',
+            distractorExplanations: {
+              0: 'Evidence contradicts this denial; research has established a meaningful connection.',
+              1: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"Education alone can solve all decision-making problems" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },
@@ -2019,6 +2339,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Intrinsic motivation comes from external rewards like bonuses and promotions.',
             correctAnswer: false,
             explanation: 'Intrinsic motivation comes from internal sources like interest, curiosity, and personal satisfaction. External rewards provide extrinsic motivation.',
+            distractorExplanations: {
+              0: 'Intrinsic motivation comes from internal sources like interest, curiosity, and personal satisfaction.',
+            },
           },
           {
             id: 'psy-sec13-u5-L1-Q2',
@@ -2062,6 +2385,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The bonus may shift motivation from intrinsic (enjoying creativity) to extrinsic (earning money), making creativity dependent on the reward.',
+            distractorExplanations: {
+              0: '"Creative output increases permanently" is incorrect; employees may stop generating ideas when bonuses are removed.',
+              1: '"Intrinsic motivation immediately increases" is incorrect; employees may stop generating ideas when bonuses are removed.',
+              2: '"There will be no change in creative output" is incorrect; employees may stop generating ideas when bonuses are removed.',
+            },
           },
           {
             id: 'psy-sec13-u5-L1-T3',
@@ -2083,6 +2411,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'For complex creative work, intrinsic motivators (autonomy, mastery, purpose) outperform financial incentives.',
+            distractorExplanations: {
+              0: '"Increase the bonus to $50,000 for stronger motivation" is incorrect; give engineers autonomy, time, and meaningful challenges instead.',
+              2: '"Add strict deadlines to the bonus program" is incorrect; give engineers autonomy, time, and meaningful challenges instead.',
+              3: '"Replace the bonus with public ranking of contributions" is incorrect; give engineers autonomy, time, and meaningful challenges instead.',
+            },
           },
           {
             id: 'psy-sec13-u5-L1-Q6',
@@ -2096,6 +2429,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Pink\'s research identifies autonomy (control), mastery (growth), and purpose (meaning) as the three key intrinsic motivators for knowledge work.',
+            distractorExplanations: {
+              0: '"Money, status, and competition" is incorrect; autonomy, mastery, and purpose.',
+              1: '"Deadlines, bonuses, and praise" is incorrect; autonomy, mastery, and purpose.',
+              3: '"Structure, supervision, and quotas" is incorrect; autonomy, mastery, and purpose.',
+            },
           },
         ],
       },
@@ -2121,6 +2459,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Self-determination theory identifies autonomy, competence, and relatedness as three basic psychological needs.',
             correctAnswer: true,
             explanation: 'SDT\'s three needs are autonomy (choice), competence (mastery), and relatedness (belonging).',
+            distractorExplanations: {
+              1: 'SDT\\\'s three needs are autonomy (choice), competence (mastery), and relatedness (belonging).',
+            },
           },
           {
             id: 'psy-sec13-u5-L2-Q2',
@@ -2159,6 +2500,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Micromanagement directly threatens autonomy, one of the three core psychological needs. Without autonomy, intrinsic motivation drops.',
+            distractorExplanations: {
+              0: '"It provides too much feedback for employees to process" is incorrect; it undermines the need for autonomy.',
+              1: '"It satisfies relatedness too strongly" is incorrect; it undermines the need for autonomy.',
+              2: '"It increases competence beyond optimal levels" is incorrect; it undermines the need for autonomy.',
+            },
           },
           {
             id: 'psy-sec13-u5-L2-Q4',
@@ -2209,6 +2555,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'She has competence (skilled) and relatedness (good coworker relations) but lacks autonomy (no control over decisions).',
+            distractorExplanations: {
+              1: '"Competence is lacking because she is not growing" is incorrect; autonomy is missing despite competence and relatedness being met.',
+              2: '"Relatedness is absent because she feels isolated" is incorrect; autonomy is missing despite competence and relatedness being met.',
+              3: 'Not three needs are fully met and the problem is elsewhere.',
+            },
           },
         ],
       },
@@ -2234,6 +2585,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Herzberg argued that salary prevents dissatisfaction but cannot by itself create genuine job satisfaction.',
             correctAnswer: true,
             explanation: 'Salary is a hygiene factor. Motivators like meaningful work, growth, and recognition are needed to create real satisfaction.',
+            distractorExplanations: {
+              1: 'Salary is a hygiene factor. Motivators like meaningful work, growth, and recognition are needed to create real satisfaction.',
+            },
           },
           {
             id: 'psy-sec13-u5-L3-Q2',
@@ -2269,6 +2623,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'With hygiene factors met, the employee needs motivators (meaningful work, autonomy, growth) to move from "not dissatisfied" to "satisfied."',
+            distractorExplanations: {
+              0: '"More hygiene factors like a bigger office" is incorrect; motivators such as challenging work and growth opportunities.',
+              1: '"Higher salary to increase satisfaction" is incorrect; motivators such as challenging work and growth opportunities.',
+              2: '"Better company policies and procedures" is incorrect; motivators such as challenging work and growth opportunities.',
+            },
           },
           {
             id: 'psy-sec13-u5-L3-Q4',
@@ -2317,6 +2676,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Herzberg\'s theory says fix hygiene factors (pay, schedules) first to stop dissatisfaction, then add motivators (career development) to build satisfaction.',
+            distractorExplanations: {
+              1: '"Start with career development to motivate remaining employees" is incorrect; fix schedules and pay first, then add career development programs.',
+              2: '"Add team-building events to improve morale" is incorrect; fix schedules and pay first, then add career development programs.',
+              3: '"Give the remaining employees more responsibilities immediately" is incorrect; fix schedules and pay first, then add career development programs.',
+            },
           },
         ],
       },
@@ -2342,6 +2706,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Modern leadership research shows that one leadership style is universally best in all situations.',
             correctAnswer: false,
             explanation: 'Situational and contingency theories show that effective leadership depends on context. Different situations call for different styles.',
+            distractorExplanations: {
+              0: 'Situational and contingency theories show that effective leadership depends on context.',
+            },
           },
           {
             id: 'psy-sec13-u5-L4-Q2',
@@ -2355,6 +2722,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The trait approach assumed leadership qualities are innate, overlooking the fact that leadership skills can be learned and that context matters.',
+            distractorExplanations: {
+              0: '"It focused too much on employee satisfaction" is incorrect; it assumed leaders are born, not developed.',
+              1: '"It only studied military leaders" is incorrect; it assumed leaders are born, not developed.',
+              3: '"It ignored personality entirely" is incorrect; it assumed leaders are born, not developed.',
+            },
           },
           {
             id: 'psy-sec13-u5-L4-T2',
@@ -2419,6 +2791,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The team has competence (experienced) but lacks cohesion (newly formed). Coaching provides needed direction while building the relationships required for coordination.',
+            distractorExplanations: {
+              1: 'Dependent PD involves excessive need for others to make decisions, not the pattern described here.',
+              2: '"Laissez-faire: step back and let the team self-organize" is incorrect; coaching: provide clear direction while building team cohesion.',
+              3: '"Transactional: set strict performance targets with bonuses" is incorrect; coaching: provide clear direction while building team cohesion.',
+            },
           },
         ],
       },
@@ -2444,6 +2821,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Emotional intelligence is a stronger predictor of leadership effectiveness than technical expertise alone.',
             correctAnswer: true,
             explanation: 'Research by Goleman and others consistently shows that EI distinguishes outstanding leaders from average ones more than technical skills do.',
+            distractorExplanations: {
+              1: 'Research by Goleman and others consistently shows that EI distinguishes outstanding leaders from average ones more than.',
+            },
           },
           {
             id: 'psy-sec13-u5-L5-Q2',
@@ -2482,6 +2862,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Emotional contagion means a leader\'s panic or calm directly influences the team. Self-regulation ensures the leader projects confidence when it matters most.',
+            distractorExplanations: {
+              0: '"Leaders should suppress all emotions to appear strong" is incorrect; their emotional state spreads to the team through emotional contagion.',
+              1: '"Self-regulation prevents them from making any decisions" is incorrect; their emotional state spreads to the team through emotional contagion.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec13-u5-L5-Q4',
@@ -2519,6 +2904,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The highest EI response combines self-regulation (managing frustration), empathy (validating the concern), and social skills (addressing it constructively).',
+            distractorExplanations: {
+              1: '"Shut down the discussion immediately to maintain authority" does not accurately describe the concept asked about.',
+              2: '"Agree with the team member to avoid conflict" does not accurately describe the concept asked about.',
+              3: '"Respond sarcastically to restore dominance in the room" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec13-u5-L5-Q6',
@@ -2532,6 +2922,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Research consistently shows emotional intelligence is learnable through targeted practice, feedback, and reflection.',
+            distractorExplanations: {
+              0: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+              2: '"EI matters only in people-facing roles, not technical ones" is incorrect; eI can be systematically developed through training and practice.',
+              3: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
         ],
       },
@@ -2571,6 +2966,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Social facilitation means the presence of others always improves performance.',
             correctAnswer: false,
             explanation: 'Social facilitation improves performance on simple or well-practiced tasks but can impair performance on complex or unfamiliar tasks.',
+            distractorExplanations: {
+              0: 'Social facilitation improves performance on simple or well-practiced tasks but can impair performance on complex or.',
+            },
           },
           {
             id: 'psy-sec13-u6-L1-Q2',
@@ -2584,6 +2982,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'For the expert, the dominant response is correct technique (enhanced). For the student, the dominant response is errors (amplified).',
+            distractorExplanations: {
+              0: '"Social loafing: the student is putting in less effort" is incorrect; social facilitation: audiences amplify the dominant response.',
+              1: '"Groupthink: the student copies the chef\\\'s style" is incorrect; social facilitation: audiences amplify the dominant response.',
+              3: '"The bystander effect: observers distract the student" is incorrect; social facilitation: audiences amplify the dominant response.',
+            },
           },
           {
             id: 'psy-sec13-u6-L1-T2',
@@ -2635,6 +3038,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Individual accountability combats both free riding and the sucker effect. Adding more people would likely increase social loafing.',
+            distractorExplanations: {
+              0: '"Give the whole team a motivational speech" is incorrect; assign clear individual deliverables with visible accountability.',
+              1: '"Add 4 more people to spread the workload" is incorrect; assign clear individual deliverables with visible accountability.',
+              3: '"Increase the team budget to hire external help" is incorrect; assign clear individual deliverables with visible accountability.',
+            },
           },
           {
             id: 'psy-sec13-u6-L1-Q6',
@@ -2648,6 +3056,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Research suggests 5-7 members balances sufficient diversity with individual accountability. Larger groups see significant increases in social loafing.',
+            distractorExplanations: {
+              0: 'This figure is inaccurate; the research-supported estimate is approximately 5%.',
+              1: 'This figure is inaccurate; the research-supported estimate is approximately 5%.',
+              3: '"20+ people" is incorrect; 5-7 people.',
+            },
           },
         ],
       },
@@ -2673,6 +3086,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Groupthink is most likely in groups with low cohesion and frequent conflict.',
             correctAnswer: false,
             explanation: 'Groupthink is most likely in highly cohesive groups where members prioritize agreement and harmony over critical analysis.',
+            distractorExplanations: {
+              0: 'Groupthink is most likely in highly cohesive groups where members prioritize agreement and harmony over critical analysis.',
+            },
           },
           {
             id: 'psy-sec13-u6-L2-Q2',
@@ -2686,6 +3102,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Self-censorship (suppressing doubts) is a core symptom of groupthink. The other options are preventive measures.',
+            distractorExplanations: {
+              0: '"Actively seeking outside expert opinions" is incorrect; suppressing personal doubts to maintain group harmony.',
+              1: '"Openly debating the pros and cons of each option" is incorrect; suppressing personal doubts to maintain group harmony.',
+              2: '"Assigning a devil\\\'s advocate to challenge assumptions" is incorrect; suppressing personal doubts to maintain group harmony.',
+            },
           },
           {
             id: 'psy-sec13-u6-L2-T2',
@@ -2748,6 +3169,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The CEO withholding opinion prevents anchoring, and a devil\'s advocate ensures critical examination of the decision.',
+            distractorExplanations: {
+              1: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              2: '"The team should vote immediately while momentum is high" does not accurately describe the concept asked about.',
+              3: 'The scope is broader than people who agree should be included in the meeting alone.',
+            },
           },
           {
             id: 'psy-sec13-u6-L2-Q6',
@@ -2761,6 +3187,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Psychological safety encourages members to voice concerns without fear of punishment, directly countering self-censorship and conformity pressure.',
+            distractorExplanations: {
+              0: '"Keeping team sizes very large" is incorrect; psychological safety: making dissent safe and expected.',
+              1: '"Eliminating all conflict from the group" is incorrect; psychological safety: making dissent safe and expected.',
+              2: 'These are distinct concepts with different characteristics, causes, or applications.',
+            },
           },
         ],
       },
@@ -2786,6 +3217,9 @@ export const psySection13Part1: Unit[] = [
             question: 'An organization\'s mission statement can differ significantly from its actual underlying culture.',
             correctAnswer: true,
             explanation: 'Espoused values (mission statements) often diverge from the basic assumptions and behaviors that define real organizational culture.',
+            distractorExplanations: {
+              1: 'Espoused values (mission statements) often diverge from the basic assumptions and behaviors that define real organizational.',
+            },
           },
           {
             id: 'psy-sec13-u6-L3-Q2',
@@ -2833,6 +3267,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The stated value (work-life balance) conflicts with the underlying assumption (overwork leads to success). The deeper level drives actual behavior.',
+            distractorExplanations: {
+              0: '"Their artifact level matches their assumptions" is incorrect; a gap between espoused values and basic underlying assumptions.',
+              1: '"Their organizational climate is positive" is incorrect; a gap between espoused values and basic underlying assumptions.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec13-u6-L3-T3',
@@ -2862,6 +3301,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Changing only visible artifacts (posters, office layout) without aligning the reward system (basic assumptions) ensures the real culture stays the same.',
+            distractorExplanations: {
+              1: '"The CEO did not spend enough on the office renovation" does not accurately describe the concept asked about.',
+              2: '"Pizza lunches are not motivating enough" does not accurately describe the concept asked about.',
+              3: 'This absolute claim oversimplifies the situation; multiple factors are involved.',
+            },
           },
         ],
       },
@@ -2887,6 +3331,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Google\'s Project Aristotle found that the most important factor for team effectiveness is having the smartest team members.',
             correctAnswer: false,
             explanation: 'Project Aristotle found psychological safety, not individual intelligence, was the #1 predictor of team effectiveness.',
+            distractorExplanations: {
+              0: 'Project Aristotle found psychological safety, not individual intelligence, was the #1 predictor of team effectiveness.',
+            },
           },
           {
             id: 'psy-sec13-u6-L4-Q2',
@@ -2900,6 +3347,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Psychological safety means team members feel safe to take interpersonal risks: asking questions, admitting mistakes, and offering ideas without fear of punishment or humiliation.',
+            distractorExplanations: {
+              0: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+              1: '"An environment where all feedback is positive" does not accurately describe the concept asked about.',
+              3: '"A policy that prevents workplace conflict" does not accurately describe the concept asked about.',
+            },
           },
           {
             id: 'psy-sec13-u6-L4-T2',
@@ -2957,6 +3409,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'When pointing out problems is met with gratitude rather than defensiveness, it signals that the team is safe for honest communication.',
+            distractorExplanations: {
+              1: '"It undermines the team lead\\\'s authority" is incorrect; it builds psychological safety by rewarding speaking up.',
+              2: '"It will discourage others from raising issues" is incorrect; it builds psychological safety by rewarding speaking up.',
+              3: 'Evidence contradicts this denial; research has established a meaningful connection.',
+            },
           },
           {
             id: 'psy-sec13-u6-L4-Q6',
@@ -2970,6 +3427,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Psychological safety is necessary but not sufficient. Teams also need dependability, structure, meaning, and impact to perform at their best.',
+            distractorExplanations: {
+              0: '"The team will be highly effective regardless" is incorrect; safety alone is insufficient without structure and clarity.',
+              1: '"Clear goals are unnecessary when trust is high" is incorrect; safety alone is insufficient without structure and clarity.',
+              2: '"The team will create its own structure automatically" is incorrect; safety alone is insufficient without structure and clarity.',
+            },
           },
         ],
       },
@@ -3011,6 +3473,9 @@ export const psySection13Part1: Unit[] = [
             question: 'Task conflict about work content can improve decision quality when managed properly.',
             correctAnswer: true,
             explanation: 'Constructive disagreement about work approaches exposes diverse perspectives. Only relationship conflict is consistently harmful.',
+            distractorExplanations: {
+              1: 'Constructive disagreement about work approaches exposes diverse perspectives. Only relationship conflict is consistently harmful.',
+            },
           },
           {
             id: 'psy-sec13-u6-L5-T2',
@@ -3049,6 +3514,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'People can accept unfavorable outcomes when they believe the decision-making process was fair and transparent (procedural justice).',
+            distractorExplanations: {
+              0: '"Distributive justice made the outcome feel fair" is incorrect; procedural justice made the process feel legitimate.',
+              1: '"Interactional justice through personal apology" is incorrect; procedural justice made the process feel legitimate.',
+              3: 'This punitive or avoidant approach does not address the underlying issue and could cause additional harm.',
+            },
           },
           {
             id: 'psy-sec13-u6-L5-T3',
@@ -3070,6 +3540,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The automated notification, lack of explanation, and immediate escort violate interactional justice. This treatment damages trust across the entire remaining workforce.',
+            distractorExplanations: {
+              1: '"Distributive injustice: unequal severance packages" is incorrect; interactional injustice: no dignity, respect, or explanation.',
+              2: '"Procedural injustice: random selection of who to lay off" is incorrect; interactional injustice: no dignity, respect, or explanation.',
+              3: '"The layoff itself is the only problem" is incorrect; interactional injustice: no dignity, respect, or explanation.',
+            },
           },
           {
             id: 'psy-sec13-u6-L5-Q6',
@@ -3083,6 +3558,11 @@ export const psySection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The most effective approach is to channel productive disagreement about ideas while intervening when conflict becomes personal.',
+            distractorExplanations: {
+              0: '"Suppress all disagreements to maintain harmony" does not accurately describe the concept asked about.',
+              1: '"Let all conflicts resolve naturally without intervention" does not accurately describe the concept asked about.',
+              3: '"Separate team members who disagree into different departments" does not accurately describe the concept asked about.',
+            },
           },
         ],
       },

@@ -34,6 +34,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "A star spends most of its life on the main sequence.",
             correctAnswer: true,
             explanation: "About 90% of a star's total lifetime is spent on the main sequence, steadily fusing hydrogen into helium.",
+            distractorExplanations: {
+              1: 'About 90% of a star\'s total lifetime is spent on the main sequence, steadily fusing hydrogen into helium.',
+            },
           },
           {
             id: "sp-sec5-u6-L1-Q2",
@@ -47,6 +50,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Sun is about 4.6 billion years old with a total main sequence lifetime of roughly 10 billion years. It has about 5 billion years left.",
+            distractorExplanations: {
+              0: 'About 500 million years is incorrect; the Sun is about 4.6 billion years old with a total main sequence lifetime of roughly 10 billion years.',
+              2: 'About 50 billion years is incorrect; the Sun is about 4.6 billion years old with a total main sequence lifetime of roughly 10 billion years.',
+              3: 'It already left the main sequence is incorrect; the Sun is about 4.6 billion years old with a total main sequence lifetime of roughly 10 billion years.',
+            },
           },
           {
             id: "sp-sec5-u6-L1-T2",
@@ -60,6 +68,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Massive stars live longer than low-mass stars because they have more fuel.",
             correctAnswer: false,
             explanation: "Even though they have more fuel, massive stars burn it exponentially faster. They live much shorter lives than small stars.",
+            distractorExplanations: {
+              0: 'Even though they have more fuel, massive stars burn it exponentially faster.',
+            },
           },
           {
             id: "sp-sec5-u6-L1-Q4",
@@ -88,6 +99,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Red dwarfs have the least mass and burn fuel the slowest. They can shine steadily for trillions of years.",
+            distractorExplanations: {
+              0: 'A massive blue supergiant is incorrect; red dwarfs have the least mass and burn fuel the slowest.',
+              1: 'A medium yellow star like the Sun is incorrect; red dwarfs have the least mass and burn fuel the slowest.',
+              3: 'A large white star is incorrect; red dwarfs have the least mass and burn fuel the slowest.',
+            },
           },
           {
             id: "sp-sec5-u6-L1-Q6",
@@ -122,6 +138,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "When core hydrogen runs out, fusion stops completely in the star.",
             correctAnswer: false,
             explanation: "Fusion continues in a shell of hydrogen around the core. This shell burning actually produces more energy than core fusion did.",
+            distractorExplanations: {
+              0: 'Fusion continues in a shell of hydrogen around the core.',
+            },
           },
           {
             id: "sp-sec5-u6-L2-Q2",
@@ -135,6 +154,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without fusion pressure, gravity compresses the core. This compression heats it up dramatically, eventually to over 100 million degrees.",
+            distractorExplanations: {
+              0: 'It expands and cools is incorrect; without fusion pressure, gravity compresses the core.',
+              2: 'It stays exactly the same is incorrect; without fusion pressure, gravity compresses the core.',
+              3: 'It immediately explodes is incorrect; without fusion pressure, gravity compresses the core.',
+            },
           },
           {
             id: "sp-sec5-u6-L2-T2",
@@ -163,6 +187,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Sun will expand to roughly the orbit of Earth. Mercury and Venus will definitely be consumed, and Earth's fate is uncertain.",
+            distractorExplanations: {
+              0: 'None of them is incorrect; the Sun will expand to roughly the orbit of Earth.',
+              2: 'Only Pluto is incorrect; the Sun will expand to roughly the orbit of Earth.',
+              3: 'Jupiter and Saturn is incorrect; the Sun will expand to roughly the orbit of Earth.',
+            },
           },
           {
             id: "sp-sec5-u6-L2-T3",
@@ -176,6 +205,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "The helium flash happens when the core reaches about 100 million degrees.",
             correctAnswer: true,
             explanation: "Helium nuclei need much higher temperatures to fuse than hydrogen. The core must reach about 100 million degrees before helium fusion can begin.",
+            distractorExplanations: {
+              1: 'Helium nuclei need much higher temperatures to fuse than hydrogen.',
+            },
           },
           {
             id: "sp-sec5-u6-L2-Q6",
@@ -208,6 +240,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "A planetary nebula is a cloud of gas shed by a dying star.",
             correctAnswer: true,
             explanation: "The star's outer layers are gently blown away, forming a colorful expanding shell of gas. The hot core at the center illuminates the gas.",
+            distractorExplanations: {
+              1: 'The star\'s outer layers are gently blown away, forming a colorful expanding shell of gas.',
+            },
           },
           {
             id: "sp-sec5-u6-L3-Q2",
@@ -221,6 +256,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Early astronomers saw small, round, greenish disks that looked like planets. The name stuck even though planetary nebulae have nothing to do with planets.",
+            distractorExplanations: {
+              0: 'Because it creates new planets is incorrect; early astronomers saw small, round, greenish disks that looked like planets.',
+              2: 'Because it orbits like a planet is incorrect; early astronomers saw small, round, greenish disks that looked like planets.',
+              3: 'Because it contains planet-sized objects is incorrect; early astronomers saw small, round, greenish disks that looked like planets.',
+            },
           },
           {
             id: "sp-sec5-u6-L3-T2",
@@ -248,6 +288,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The exposed core, now becoming a white dwarf, is extremely hot. Its ultraviolet radiation energizes the gas, causing it to fluoresce in beautiful colors.",
+            distractorExplanations: {
+              0: 'Chemical reactions with dark matter is incorrect; the exposed core, now becoming a white dwarf, is extremely hot.',
+              1: 'This is incorrect; the exposed core, now becoming a white dwarf, is extremely hot.',
+              3: 'Friction from colliding gas clouds is incorrect; the exposed core, now becoming a white dwarf, is extremely hot.',
+            },
           },
           {
             id: "sp-sec5-u6-L3-T3",
@@ -261,6 +306,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Elements created inside a star can be recycled into new stars through planetary nebulae.",
             correctAnswer: true,
             explanation: "Planetary nebulae are a key part of the cosmic recycling process. Heavy elements made by fusion get returned to space for the next generation.",
+            distractorExplanations: {
+              1: 'Planetary nebulae are a key part of the cosmic recycling process.',
+            },
           },
           {
             id: "sp-sec5-u6-L3-Q6",
@@ -293,6 +341,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "A white dwarf is the leftover core of a dead low-mass star.",
             correctAnswer: true,
             explanation: "After shedding its outer layers, the core is exposed as a white dwarf. It has no more nuclear fuel to burn.",
+            distractorExplanations: {
+              1: 'After shedding its outer layers, the core is exposed as a white dwarf.',
+            },
           },
           {
             id: "sp-sec5-u6-L4-Q2",
@@ -306,6 +357,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Electrons resist being squeezed too close together. This quantum mechanical effect, called electron degeneracy pressure, holds up the white dwarf.",
+            distractorExplanations: {
+              0: 'Nuclear fusion pressure is incorrect; electrons resist being squeezed too close together.',
+              1: 'Magnetic field strength is incorrect; electrons resist being squeezed too close together.',
+              3: 'Thermal expansion is incorrect; electrons resist being squeezed too close together.',
+            },
           },
           {
             id: "sp-sec5-u6-L4-T2",
@@ -351,6 +407,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cooling from white-hot to completely cold takes longer than the age of the universe (13.8 billion years). No black dwarfs exist yet.",
+            distractorExplanations: {
+              0: 'White dwarfs don\'t cool down is incorrect; cooling from white-hot to completely cold takes longer than the age of the universe (13.8 billion years).',
+              2: 'Black dwarfs are instantly destroyed is incorrect; cooling from white-hot to completely cold takes longer than the age of the universe (13.8 billion years).',
+              3: 'All white dwarfs explode before cooling is incorrect; cooling from white-hot to completely cold takes longer than the age of the universe (13.8 billion years).',
+            },
           },
           {
             id: "sp-sec5-u6-L4-Q6",
@@ -501,6 +562,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Massive stars can fuse elements heavier than helium.",
             correctAnswer: true,
             explanation: "Stars over about 8 solar masses reach temperatures high enough to fuse carbon, neon, oxygen, and silicon in sequence.",
+            distractorExplanations: {
+              1: 'Stars over about 8 solar masses reach temperatures high enough to fuse carbon, neon, oxygen, and silicon in sequence.',
+            },
           },
           {
             id: "sp-sec5-u7-L1-Q2",
@@ -528,6 +592,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Silicon burning is incredibly brief. The star fuses silicon into iron in about one day, then the end comes swiftly.",
+            distractorExplanations: {
+              0: 'Millions of years is incorrect; silicon burning is incredibly brief.',
+              1: 'Thousands of years is incorrect; silicon burning is incredibly brief.',
+              3: 'Less than a second is incorrect; silicon burning is incredibly brief.',
+            },
           },
           {
             id: "sp-sec5-u7-L1-Q4",
@@ -558,6 +627,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Fusing iron releases enormous energy like fusing hydrogen.",
             correctAnswer: false,
             explanation: "Iron fusion absorbs energy. That's why it's the dead end. Once a star builds an iron core, it can no longer generate energy from fusion.",
+            distractorExplanations: {
+              0: 'Iron fusion absorbs energy.',
+            },
           },
         ],
       },
@@ -598,6 +670,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The largest supergiants would extend well past Jupiter's orbit. They're incomprehensibly enormous compared to our Sun.",
+            distractorExplanations: {
+              0: 'Just past Mercury is incorrect; the largest supergiants would extend well past Jupiter\'s orbit.',
+              1: 'About to Earth\'s orbit is incorrect; the largest supergiants would extend well past Jupiter\'s orbit.',
+              2: 'Past Mars\' orbit is incorrect; the largest supergiants would extend well past Jupiter\'s orbit.',
+            },
           },
           {
             id: "sp-sec5-u7-L2-T2",
@@ -612,6 +689,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "A massive supergiant fuses different elements in layers around its core.",
             correctAnswer: true,
             explanation: "Each layer fuses a different element at a different temperature. The structure resembles an onion with iron at the center.",
+            distractorExplanations: {
+              1: 'Each layer fuses a different element at a different temperature.',
+            },
           },
           {
             id: "sp-sec5-u7-L2-Q4",
@@ -639,6 +719,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Betelgeuse, the red star in Orion's shoulder, is one of the best-known red supergiants. It's expected to explode as a supernova within the next 100,000 years.",
+            distractorExplanations: {
+              0: 'Polaris is incorrect; betelgeuse, the red star in Orion\'s shoulder, is one of the best-known red supergiants.',
+              1: 'Sirius is incorrect; betelgeuse, the red star in Orion\'s shoulder, is one of the best-known red supergiants.',
+              3: 'Vega is incorrect; betelgeuse, the red star in Orion\'s shoulder, is one of the best-known red supergiants.',
+            },
           },
           {
             id: "sp-sec5-u7-L2-Q6",
@@ -671,6 +756,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "The core collapse that triggers a supernova takes less than a second.",
             correctAnswer: true,
             explanation: "The collapse is incredibly fast. The core goes from roughly Earth-sized to about 20 km across in a fraction of a second.",
+            distractorExplanations: {
+              1: 'The collapse is incredibly fast.',
+            },
           },
           {
             id: "sp-sec5-u7-L3-Q2",
@@ -684,6 +772,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When the iron core grows beyond about 1.4 solar masses, electron degeneracy pressure can no longer support it. The core collapses catastrophically.",
+            distractorExplanations: {
+              0: 'Hydrogen fuel running out is incorrect; when the iron core grows beyond about 1.4 solar masses, electron degeneracy pressure can no longer support it.',
+              2: 'A collision with another star is incorrect; when the iron core grows beyond about 1.4 solar masses, electron degeneracy pressure can no longer support it.',
+              3: 'Magnetic field failure is incorrect; when the iron core grows beyond about 1.4 solar masses, electron degeneracy pressure can no longer support it.',
+            },
           },
           {
             id: "sp-sec5-u7-L3-T2",
@@ -712,6 +805,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A single supernova can briefly outshine its entire host galaxy of 100 billion or more stars. It's one of the most energetic events in the universe.",
+            distractorExplanations: {
+              0: 'This is incorrect; a single supernova can briefly outshine its entire host galaxy of 100 billion or more stars.',
+              1: 'As bright as a million stars is incorrect; a single supernova can briefly outshine its entire host galaxy of 100 billion or more stars.',
+              3: 'About as bright as our Sun is incorrect; a single supernova can briefly outshine its entire host galaxy of 100 billion or more stars.',
+            },
           },
           {
             id: "sp-sec5-u7-L3-T3",
@@ -725,6 +823,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Elements heavier than iron are created during supernova explosions.",
             correctAnswer: true,
             explanation: "Normal fusion can't make elements heavier than iron. The extreme energy of a supernova provides the conditions to forge gold, uranium, and other heavy elements.",
+            distractorExplanations: {
+              1: 'Normal fusion can\'t make elements heavier than iron.',
+            },
           },
           {
             id: "sp-sec5-u7-L3-Q6",
@@ -739,6 +840,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A sudden, dramatic increase in brightness that fades over weeks is the signature of a supernova. No other stellar event produces such a dramatic, temporary brightening.",
+            distractorExplanations: {
+              0: 'The star has entered its main sequence phase is incorrect; a sudden, dramatic increase in brightness that fades over weeks is the signature of a supernova.',
+              2: 'The star became a white dwarf is incorrect; a sudden, dramatic increase in brightness that fades over weeks is the signature of a supernova.',
+              3: 'The star moved closer to Earth temporarily is incorrect; a sudden, dramatic increase in brightness that fades over weeks is the signature of a supernova.',
+            },
           },
         ],
       },
@@ -762,6 +868,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "A neutron star is only about 20 km across.",
             correctAnswer: true,
             explanation: "Neutron stars are city-sized objects with incredible density. A sphere 20 km wide containing more mass than the Sun.",
+            distractorExplanations: {
+              1: 'Neutron stars are city-sized objects with incredible density.',
+            },
           },
           {
             id: "sp-sec5-u7-L4-Q2",
@@ -775,6 +884,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Neutrons resist being squeezed further. This neutron degeneracy pressure is even stronger than electron degeneracy pressure in white dwarfs.",
+            distractorExplanations: {
+              0: 'Electron degeneracy pressure is incorrect; neutrons resist being squeezed further.',
+              1: 'Nuclear fusion is incorrect; neutrons resist being squeezed further.',
+              3: 'Magnetic repulsion is incorrect; neutrons resist being squeezed further.',
+            },
           },
           {
             id: "sp-sec5-u7-L4-T2",
@@ -803,6 +917,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Millisecond pulsars can spin over 700 times per second. That's faster than a kitchen blender, for an object weighing more than the Sun.",
+            distractorExplanations: {
+              0: 'Once per hour is incorrect; millisecond pulsars can spin over 700 times per second.',
+              1: 'Once per minute is incorrect; millisecond pulsars can spin over 700 times per second.',
+              2: 'Once per second is incorrect; millisecond pulsars can spin over 700 times per second.',
+            },
           },
           {
             id: "sp-sec5-u7-L4-T3",
@@ -985,6 +1104,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Most stars in the Milky Way are part of binary or multiple star systems.",
             correctAnswer: true,
             explanation: "More than half of all star systems contain two or more stars. Single stars like our Sun are in the minority.",
+            distractorExplanations: {
+              1: 'More than half of all star systems contain two or more stars.',
+            },
           },
           {
             id: "sp-sec5-u8-L1-Q2",
@@ -998,6 +1120,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Both stars orbit the barycenter, the common center of mass. If the stars have equal mass, this point is exactly between them.",
+            distractorExplanations: {
+              0: 'The larger star is incorrect; both stars orbit the barycenter, the common center of mass.',
+              1: 'The smaller star is incorrect; both stars orbit the barycenter, the common center of mass.',
+              3: 'The nearest galaxy center is incorrect; both stars orbit the barycenter, the common center of mass.',
+            },
           },
           {
             id: "sp-sec5-u8-L1-T2",
@@ -1040,6 +1167,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Orbital mechanics lets us calculate the masses of both stars. This is the most reliable way to determine stellar mass.",
+            distractorExplanations: {
+              0: 'This is incorrect; orbital mechanics lets us calculate the masses of both stars.',
+              2: 'This is incorrect; orbital mechanics lets us calculate the masses of both stars.',
+              3: 'This is incorrect; orbital mechanics lets us calculate the masses of both stars.',
+            },
           },
           {
             id: "sp-sec5-u8-L1-Q6",
@@ -1047,6 +1179,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Our Sun is part of a binary star system.",
             correctAnswer: false,
             explanation: "The Sun is a single star. It's actually in the minority; most stars have at least one companion.",
+            distractorExplanations: {
+              0: 'The Sun is a single star.',
+            },
           },
         ],
       },
@@ -1070,6 +1205,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Eclipsing binaries show periodic dips in brightness as one star blocks the other.",
             correctAnswer: true,
             explanation: "As one star passes in front, it blocks some light. The resulting dip in a light curve is how we identify eclipsing binaries.",
+            distractorExplanations: {
+              1: 'As one star passes in front, it blocks some light.',
+            },
           },
           {
             id: "sp-sec5-u8-L2-Q2",
@@ -1083,6 +1221,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A deeper dip means a bigger star is being eclipsed. The depth and shape of the light curve reveal the relative sizes of both stars.",
+            distractorExplanations: {
+              0: 'The distance to the system is incorrect; a deeper dip means a bigger star is being eclipsed.',
+              2: 'How old the stars are is incorrect; a deeper dip means a bigger star is being eclipsed.',
+              3: 'What elements they contain is incorrect; a deeper dip means a bigger star is being eclipsed.',
+            },
           },
           {
             id: "sp-sec5-u8-L2-T2",
@@ -1111,6 +1254,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Light curves are incredibly rich. They reveal star sizes (from eclipse depth), surface temperatures (from eclipse shape), and orbital details.",
+            distractorExplanations: {
+              0: 'Only the orbital period is incorrect; light curves are incredibly rich.',
+              2: 'Only the star colors is incorrect; light curves are incredibly rich.',
+              3: 'Only the distance to the system is incorrect; light curves are incredibly rich.',
+            },
           },
           {
             id: "sp-sec5-u8-L2-T3",
@@ -1124,6 +1272,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "An eclipsing binary produces only one brightness dip per orbit.",
             correctAnswer: false,
             explanation: "There are two dips: a deep primary eclipse and a shallower secondary eclipse. Each happens when one star passes behind the other.",
+            distractorExplanations: {
+              0: 'There are two dips: a deep primary eclipse and a shallower secondary eclipse.',
+            },
           },
           {
             id: "sp-sec5-u8-L2-Q6",
@@ -1138,6 +1289,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Two periodic dips of different depths, repeating at a fixed interval: this is the textbook signature of an eclipsing binary star system.",
+            distractorExplanations: {
+              0: 'The star has a planet blocking its light is incorrect; two periodic dips of different depths, repeating at a fixed interval: this is the textbook signature.',
+              2: 'This reasoning is wrong because two periodic dips of different depths, repeating at a fixed interval: this is the textbook signature of an.',
+              3: 'This is incorrect; two periodic dips of different depths, repeating at a fixed interval: this is the textbook signature of an.',
+            },
           },
         ],
       },
@@ -1161,6 +1317,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "All variable stars change brightness because of eclipses.",
             correctAnswer: false,
             explanation: "Some variable stars change brightness because they physically pulsate. These intrinsic variables expand and contract on their own.",
+            distractorExplanations: {
+              0: 'Some variable stars change brightness because they physically pulsate.',
+            },
           },
           {
             id: "sp-sec5-u8-L3-Q2",
@@ -1174,6 +1333,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Intrinsic variables physically pulsate. As they compress, they heat up and brighten. As they expand, they cool and dim.",
+            distractorExplanations: {
+              0: 'Another star passing in front of them is incorrect; intrinsic variables physically pulsate.',
+              2: 'Changes in Earth\'s atmosphere is incorrect; intrinsic variables physically pulsate.',
+              3: 'Orbiting planets blocking light is incorrect; intrinsic variables physically pulsate.',
+            },
           },
           {
             id: "sp-sec5-u8-L3-T2",
@@ -1202,6 +1366,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Measure the period, determine the luminosity. Compare that to apparent brightness, and you get the distance. Cepheids are standard candles.",
+            distractorExplanations: {
+              0: 'They always have the same color is incorrect; measure the period, determine the luminosity.',
+              2: 'This is incorrect; measure the period, determine the luminosity.',
+              3: 'They emit a unique radio signal is incorrect; measure the period, determine the luminosity.',
+            },
           },
           {
             id: "sp-sec5-u8-L3-T3",
@@ -1221,6 +1390,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Henrietta Leavitt discovered this crucial relationship in 1908. Her work was foundational for measuring cosmic distances.",
+            distractorExplanations: {
+              0: 'Edwin Hubble is incorrect; henrietta Leavitt discovered this crucial relationship in 1908.',
+              1: 'Albert Einstein is incorrect; henrietta Leavitt discovered this crucial relationship in 1908.',
+              3: 'Isaac Newton is incorrect; henrietta Leavitt discovered this crucial relationship in 1908.',
+            },
           },
           {
             id: "sp-sec5-u8-L3-Q6",
@@ -1372,6 +1546,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Parallax is the apparent shift in position of an object when viewed from two different points.",
             correctAnswer: true,
             explanation: "Parallax is a geometric effect. The closer the object, the bigger the apparent shift. Astronomers use this to measure stellar distances.",
+            distractorExplanations: {
+              1: 'Parallax is a geometric effect.',
+            },
           },
           {
             id: "sp-sec5-u9-L1-Q2",
@@ -1385,6 +1562,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Six months apart, Earth is on opposite sides of the Sun. That's a baseline of 2 AU (about 300 million km) for measuring parallax.",
+            distractorExplanations: {
+              0: 'This is incorrect; six months apart, Earth is on opposite sides of the Sun.',
+              2: 'The North and South Poles is incorrect; six months apart, Earth is on opposite sides of the Sun.',
+              3: 'Earth and Mars is incorrect; six months apart, Earth is on opposite sides of the Sun.',
+            },
           },
           {
             id: "sp-sec5-u9-L1-T2",
@@ -1412,6 +1594,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "More parallax means closer. Star A shifts more, so it must be nearer to Earth. Distance is inversely proportional to parallax angle.",
+            distractorExplanations: {
+              0: 'Star B is closer is incorrect; more parallax means closer.',
+              2: 'They\'re the same distance is incorrect; more parallax means closer.',
+              3: 'You can\'t tell from parallax alone is incorrect; more parallax means closer.',
+            },
           },
           {
             id: "sp-sec5-u9-L1-T3",
@@ -1425,6 +1612,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Parallax can measure the distance to any star in any galaxy.",
             correctAnswer: false,
             explanation: "Parallax only works for relatively nearby stars. Beyond a few thousand light-years, the angles are too tiny even for the best instruments.",
+            distractorExplanations: {
+              0: 'Parallax only works for relatively nearby stars.',
+            },
           },
           {
             id: "sp-sec5-u9-L1-Q6",
@@ -1438,6 +1628,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "ESA's Gaia mission has measured precise parallaxes for over 1.8 billion stars, creating the most detailed 3D map of our galaxy.",
+            distractorExplanations: {
+              0: 'Hubble is incorrect; eSA\'s Gaia mission has measured precise parallaxes for over 1.8 billion stars, creating the most detailed 3D map of our galaxy.',
+              1: 'James Webb is incorrect; eSA\'s Gaia mission has measured precise parallaxes for over 1.8 billion stars, creating the most detailed 3D map of our galaxy.',
+              3: 'Spitzer is incorrect; eSA\'s Gaia mission has measured precise parallaxes for over 1.8 billion stars, creating the most detailed 3D map of our galaxy.',
+            },
           },
         ],
       },
@@ -1461,6 +1656,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "A standard candle is an object with known luminosity used to measure distance.",
             correctAnswer: true,
             explanation: "If you know how bright something truly is and measure how bright it appears, the difference tells you how far away it is.",
+            distractorExplanations: {
+              1: 'If you know how bright something truly is and measure how bright it appears, the difference tells you how far away it is.',
+            },
           },
           {
             id: "sp-sec5-u9-L2-Q2",
@@ -1474,6 +1672,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cepheids have a known period-luminosity relationship. Measure the period, determine the luminosity, compare to apparent brightness, and calculate distance.",
+            distractorExplanations: {
+              0: 'The Moon is incorrect; cepheids have a known period-luminosity relationship.',
+              2: 'Comets is incorrect; cepheids have a known period-luminosity relationship.',
+              3: 'Asteroids is incorrect; cepheids have a known period-luminosity relationship.',
+            },
           },
           {
             id: "sp-sec5-u9-L2-T2",
@@ -1502,6 +1705,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Since they all reach similar peak brightness, their apparent brightness directly reveals their distance. They can be seen across billions of light-years.",
+            distractorExplanations: {
+              0: 'They happen very frequently is incorrect; since they all reach similar peak brightness, their apparent brightness directly reveals their distance.',
+              2: 'They\'re always the same color is incorrect; since they all reach similar peak brightness, their apparent brightness directly reveals their distance.',
+              3: 'They occur only in nearby galaxies is incorrect; since they all reach similar peak brightness, their apparent brightness directly reveals their distance.',
+            },
           },
           {
             id: "sp-sec5-u9-L2-T3",
@@ -1524,6 +1732,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Standard candles work because we know how bright they truly are.",
             correctAnswer: true,
             explanation: "The key to any standard candle is knowing its intrinsic luminosity. Comparing that to how bright it appears gives us the distance.",
+            distractorExplanations: {
+              1: 'The key to any standard candle is knowing its intrinsic luminosity.',
+            },
           },
         ],
       },
@@ -1547,6 +1758,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "In the magnitude system, a magnitude 1 star is brighter than a magnitude 5 star.",
             correctAnswer: true,
             explanation: "Lower magnitude means brighter. It's backwards from what you might expect. Magnitude 1 is bright; magnitude 6 is barely visible.",
+            distractorExplanations: {
+              1: 'Lower magnitude means brighter.',
+            },
           },
           {
             id: "sp-sec5-u9-L3-Q2",
@@ -1560,6 +1774,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The ancient Greek astronomer Hipparchus created the first star catalog around 129 BC, ranking stars by brightness from 1 to 6.",
+            distractorExplanations: {
+              0: 'Galileo Galilei is incorrect; the ancient Greek astronomer Hipparchus created the first star catalog around 129 BC, ranking stars by brightness from 1 to 6.',
+              2: 'Isaac Newton is incorrect; the ancient Greek astronomer Hipparchus created the first star catalog around 129 BC, ranking stars by brightness from 1 to 6.',
+              3: 'Nicolaus Copernicus is incorrect; the ancient Greek astronomer Hipparchus created the first star catalog around 129 BC, ranking stars by brightness from 1 to 6.',
+            },
           },
           {
             id: "sp-sec5-u9-L3-T2",
@@ -1603,6 +1822,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Each magnitude step is about 2.5x brighter. Over 5 steps: 2.5 x 2.5 x 2.5 x 2.5 x 2.5 = approximately 100 times brighter.",
+            distractorExplanations: {
+              0: '5 times brighter is incorrect; each magnitude step is about 2.5x brighter.',
+              1: '10 times brighter is incorrect; each magnitude step is about 2.5x brighter.',
+              2: '50 times brighter is incorrect; each magnitude step is about 2.5x brighter.',
+            },
           },
           {
             id: "sp-sec5-u9-L3-Q6",
@@ -1617,6 +1841,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Absolute magnitude reveals true luminosity. Star A at -5 is enormously luminous but far away. Star B is closer but intrinsically dimmer at +2.",
+            distractorExplanations: {
+              0: 'This reasoning is wrong because absolute magnitude reveals true luminosity.',
+              2: 'They have the same luminosity is incorrect; absolute magnitude reveals true luminosity.',
+              3: 'You can\'t compare them is incorrect; absolute magnitude reveals true luminosity.',
+            },
           },
         ],
       },
@@ -1640,6 +1869,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "The cosmic distance ladder uses a chain of methods, each calibrating the next.",
             correctAnswer: true,
             explanation: "Each rung works at a specific range. Parallax covers nearby stars, which calibrates Cepheids for nearby galaxies, which calibrates supernovae for distant galaxies.",
+            distractorExplanations: {
+              1: 'Each rung works at a specific range.',
+            },
           },
           {
             id: "sp-sec5-u9-L4-Q2",
@@ -1676,6 +1908,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Redshift stretches light to longer (redder) wavelengths. The amount of redshift reveals how fast the galaxy is receding, which indicates distance via Hubble's law.",
+            distractorExplanations: {
+              0: 'Its temperature is incorrect; redshift stretches light to longer (redder) wavelengths.',
+              1: 'Its chemical composition is incorrect; redshift stretches light to longer (redder) wavelengths.',
+              3: 'How many stars it contains is incorrect; redshift stretches light to longer (redder) wavelengths.',
+            },
           },
           {
             id: "sp-sec5-u9-L4-T3",
@@ -1689,6 +1926,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Improving parallax measurements helps improve all higher rungs of the distance ladder.",
             correctAnswer: true,
             explanation: "Parallax is the foundation. Better parallax means better Cepheid calibrations, which means better supernova calibrations, and so on up the ladder.",
+            distractorExplanations: {
+              1: 'Parallax is the foundation.',
+            },
           },
           {
             id: "sp-sec5-u9-L4-Q6",
@@ -1877,6 +2117,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Iron has the most stable nucleus. Fusing it requires energy input rather than producing energy output. Iron is the dead end of stellar fusion.",
+            distractorExplanations: {
+              0: 'This is incorrect; iron has the most stable nucleus.',
+              2: 'This is incorrect; iron has the most stable nucleus.',
+              3: 'Iron melts at too low a temperature is incorrect; iron has the most stable nucleus.',
+            },
           },
           {
             id: "sp-sec5-u10-L1-T2",
@@ -1912,6 +2157,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Above 1.4 solar masses, electron degeneracy pressure can't support the star. It would collapse into a neutron star instead.",
+            distractorExplanations: {
+              0: 'The maximum speed of light is incorrect; above 1.4 solar masses, electron degeneracy pressure can\'t support the star.',
+              2: 'The minimum mass for a star is incorrect; above 1.4 solar masses, electron degeneracy pressure can\'t support the star.',
+              3: 'The temperature needed for fusion is incorrect; above 1.4 solar masses, electron degeneracy pressure can\'t support the star.',
+            },
           },
           {
             id: "sp-sec5-u10-L1-Q7",
@@ -1919,6 +2169,9 @@ export const spaceSection5Part2: Unit[] = [
             question: "Cepheid variable stars are useful distance markers because their period reveals their luminosity.",
             correctAnswer: true,
             explanation: "The period-luminosity relationship, discovered by Henrietta Leavitt, makes Cepheids reliable standard candles for measuring galactic distances.",
+            distractorExplanations: {
+              1: 'The period-luminosity relationship, discovered by Henrietta Leavitt, makes Cepheids reliable standard candles for.',
+            },
           },
           {
             id: "sp-sec5-u10-L1-Q8",
@@ -1933,6 +2186,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Extremely regular, rapid pulses are the signature of a pulsar. These spinning neutron stars can pulse hundreds of times per second with remarkable precision.",
+            distractorExplanations: {
+              0: 'A quasar is incorrect; extremely regular, rapid pulses are the signature of a pulsar.',
+              2: 'A red giant is incorrect; extremely regular, rapid pulses are the signature of a pulsar.',
+              3: 'A Cepheid variable is incorrect; extremely regular, rapid pulses are the signature of a pulsar.',
+            },
           },
         ],
       },
@@ -1963,6 +2221,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "At 0.3 solar masses, this is a red dwarf. Red dwarfs burn fuel so slowly they can last trillions of years, far longer than the current age of the universe.",
+            distractorExplanations: {
+              0: 'This is incorrect; at 0.3 solar masses, this is a red dwarf.',
+              1: 'This is incorrect; at 0.3 solar masses, this is a red dwarf.',
+              3: 'This is incorrect; at 0.3 solar masses, this is a red dwarf.',
+            },
           },
           {
             id: "sp-sec5-u10-L2-Q2",
@@ -1977,6 +2240,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Expanded, cool, with shell hydrogen burning around an inert core: this is a textbook red giant. The next step will be helium fusion in the core.",
+            distractorExplanations: {
+              0: 'It\'s a T Tauri star just beginning life is incorrect; expanded, cool, with shell hydrogen burning around an inert core: this is a textbook red giant.',
+              1: 'It\'s a main sequence star is incorrect; expanded, cool, with shell hydrogen burning around an inert core: this is a textbook red giant.',
+              3: 'It\'s a white dwarf cooling down is incorrect; expanded, cool, with shell hydrogen burning around an inert core: this is a textbook red giant.',
+            },
           },
           {
             id: "sp-sec5-u10-L2-Q3",
@@ -1991,6 +2259,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "At 50 million light-years, Cepheid variables are the ideal choice. They can be observed in nearby galaxies and their period-luminosity relationship gives distance.",
+            distractorExplanations: {
+              0: 'Stellar parallax is incorrect; at 50 million light-years, Cepheid variables are the ideal choice.',
+              1: 'Radar ranging is incorrect; at 50 million light-years, Cepheid variables are the ideal choice.',
+              3: 'Only Hubble\'s law works at any distance is incorrect; at 50 million light-years, Cepheid variables are the ideal choice.',
+            },
           },
           {
             id: "sp-sec5-u10-L2-Q4",
@@ -2004,6 +2277,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Massive stars have more fuel but burn it disproportionately faster. A star with 10x the mass may use fuel 1,000x faster, dying in 1/100th the time.",
+            distractorExplanations: {
+              0: 'They have less fuel than small stars is incorrect; massive stars have more fuel but burn it disproportionately faster.',
+              1: 'This is incorrect; massive stars have more fuel but burn it disproportionately faster.',
+              3: 'This claim is incorrect; massive stars have more fuel but burn it disproportionately faster.',
+            },
           },
           {
             id: "sp-sec5-u10-L2-Q5",
@@ -2018,6 +2296,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Periodic brightness dips at a regular interval from two orbiting stars: this is the classic signature of an eclipsing binary system.",
+            distractorExplanations: {
+              0: 'This is incorrect; periodic brightness dips at a regular interval from two orbiting stars: this is the classic signature of an.',
+              2: 'Two Cepheid variables pulsating in sync is incorrect; periodic brightness dips at a regular interval from two orbiting stars: this is the classic signature.',
+              3: 'A star and its planet is incorrect; periodic brightness dips at a regular interval from two orbiting stars: this is the classic signature of an.',
+            },
           },
           {
             id: "sp-sec5-u10-L2-Q6",
@@ -2040,6 +2323,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Sun is a G2V star sitting roughly in the middle of the main sequence. Average temperature, average brightness, average mass.",
+            distractorExplanations: {
+              0: 'Upper left corner (hot and bright) is incorrect; the Sun is a G2V star sitting roughly in the middle of the main sequence.',
+              2: 'Upper right corner (cool and bright) is incorrect; the Sun is a G2V star sitting roughly in the middle of the main sequence.',
+              3: 'Lower left corner (hot and dim) is incorrect; the Sun is a G2V star sitting roughly in the middle of the main sequence.',
+            },
           },
           {
             id: "sp-sec5-u10-L2-Q8",
@@ -2054,6 +2342,11 @@ export const spaceSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Type Ia supernovae are bright enough to be seen billions of light-years away. Their consistent peak brightness makes them ideal standard candles at these extreme distances.",
+            distractorExplanations: {
+              0: 'This approach is incorrect; type Ia supernovae are bright enough to be seen billions of light-years away.',
+              2: 'Use radar ranging with radio telescopes is incorrect; type Ia supernovae are bright enough to be seen billions of light-years away.',
+              3: 'Accept that the distance is unmeasurable is incorrect; type Ia supernovae are bright enough to be seen billions of light-years away.',
+            },
           },
         ],
       },

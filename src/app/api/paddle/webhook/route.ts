@@ -152,7 +152,9 @@ async function handleSubscriptionUpsert(sub: SubscriptionNotification) {
 
   const userId = await getUserIdByCustomer(customerId);
   if (!userId) {
-    throw new NonRetryableError(`No user found for Paddle customer ${customerId}`);
+    // User was likely deleted — acknowledge so Paddle stops retrying
+    console.warn(`[webhook] Ignoring subscription upsert: no user for Paddle customer ${customerId} (account may have been deleted)`);
+    return;
   }
 
   const priceId = sub.items?.[0]?.price?.id ?? null;
@@ -179,7 +181,8 @@ async function handleSubscriptionPastDue(sub: SubscriptionNotification) {
 
   const userId = await getUserIdByCustomer(customerId);
   if (!userId) {
-    throw new NonRetryableError(`No user found for Paddle customer ${customerId}`);
+    console.warn(`[webhook] Ignoring past_due event: no user for Paddle customer ${customerId} (account may have been deleted)`);
+    return;
   }
 
   const priceId = sub.items?.[0]?.price?.id ?? null;
@@ -202,7 +205,8 @@ async function handleSubscriptionCanceled(sub: SubscriptionNotification) {
 
   const userId = await getUserIdByCustomer(customerId);
   if (!userId) {
-    throw new NonRetryableError(`No user found for Paddle customer ${customerId}`);
+    console.warn(`[webhook] Ignoring canceled event: no user for Paddle customer ${customerId} (account may have been deleted)`);
+    return;
   }
 
   // Preserve currentPeriodEnd so the user knows when access actually expires.
@@ -220,7 +224,8 @@ async function handleSubscriptionPaused(sub: SubscriptionNotification) {
 
   const userId = await getUserIdByCustomer(customerId);
   if (!userId) {
-    throw new NonRetryableError(`No user found for Paddle customer ${customerId}`);
+    console.warn(`[webhook] Ignoring paused event: no user for Paddle customer ${customerId} (account may have been deleted)`);
+    return;
   }
 
   await upsertSubscription(userId, sub.id, {
@@ -238,7 +243,8 @@ async function handleTransactionCompleted(txn: TransactionNotification) {
 
   const userId = await getUserIdByCustomer(customerId);
   if (!userId) {
-    throw new NonRetryableError(`No user found for Paddle customer ${customerId}`);
+    console.warn(`[webhook] Ignoring transaction completed: no user for Paddle customer ${customerId} (account may have been deleted)`);
+    return;
   }
 
   // Idempotent: skip if already recorded (unique constraint on paddleTransactionId
@@ -271,7 +277,8 @@ async function handleTransactionPaymentFailed(txn: TransactionNotification) {
 
   const userId = await getUserIdByCustomer(customerId);
   if (!userId) {
-    throw new NonRetryableError(`No user found for Paddle customer ${customerId}`);
+    console.warn(`[webhook] Ignoring failed payment: no user for Paddle customer ${customerId} (account may have been deleted)`);
+    return;
   }
 
   // Idempotent: skip if already recorded

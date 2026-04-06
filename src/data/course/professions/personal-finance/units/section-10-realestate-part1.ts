@@ -39,6 +39,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "Renting is always a waste of money compared to buying.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Renting provides shelter and flexibility.' },
             explanation: "Renting provides shelter and flexibility. Whether it's better than buying depends on your situation and local market.",
           },
           {
@@ -52,6 +53,11 @@ export const finSection10Part1: Unit[] = [
               "You get tax deductions on rent",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'You build equity every month is not correct in this context; renters don\'t pay for broken appliances, roof repairs, or plumbing issues.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; renters don\'t pay for broken appliances, roof repairs, or plumbing issues.',
+            },
             explanation: "Renters don't pay for broken appliances, roof repairs, or plumbing issues. The landlord covers those.",
           },
           {
@@ -88,6 +94,11 @@ export const finSection10Part1: Unit[] = [
               "$1,590",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $1,545.',
+              1: 'This does not match the correct calculation; the right answer is $1,545.',
+              3: 'This does not match the correct calculation; the right answer is $1,545.',
+            },
             explanation: "$1,500 times 1.03 equals $1,545. Annual rent increases compound over time.",
           },
           {
@@ -102,6 +113,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "The money saved by not paying a down payment could be invested for potential returns.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'This is called opportunity cost, making this statement true.' },
             explanation: "This is called opportunity cost. Investing a down payment elsewhere is a real financial alternative.",
           },
           {
@@ -135,6 +147,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "A homeowner's only monthly expense is their mortgage payment.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Property taxes, insurance, maintenance, and HOA fees all add to the monthly cost of owning..' },
             explanation: "Property taxes, insurance, maintenance, and HOA fees all add to the monthly cost of owning.",
           },
           {
@@ -164,6 +177,11 @@ export const finSection10Part1: Unit[] = [
               "A fixed flat fee set by the bank",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; Over 30 years at typical rates.',
+              1: 'About equal to the home price is not correct in this context; Over 30 years at typical rates.',
+              3: 'This is not the best answer; Over 30 years at typical rates.',
+            },
             explanation: "Over 30 years at typical rates, you can pay more in interest than the purchase price of the home.",
           },
           {
@@ -186,6 +204,11 @@ export const finSection10Part1: Unit[] = [
               "A vacation to celebrate the purchase",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; The 1% rule says budget about $2.',
+              2: 'This is not the best answer; The 1% rule says budget about $2.',
+              3: 'This is not the best answer; The 1% rule says budget about $2.',
+            },
             explanation: "The 1% rule says budget about $2,500/year ($208/month) for maintenance on a $250,000 home.",
           },
           {
@@ -206,6 +229,11 @@ export const finSection10Part1: Unit[] = [
               "$40,000",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $24,000.',
+              1: 'This does not match the correct calculation; the right answer is $24,000.',
+              3: 'This does not match the correct calculation; the right answer is $24,000.',
+            },
             explanation: "$400,000 times 0.06 equals $24,000. Selling a home is expensive.",
           },
         ],
@@ -231,6 +259,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "The 5% rule helps compare the monthly cost of renting versus buying.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'It gives you a quick breakeven point, making this statement true.' },
             explanation: "It gives you a quick breakeven point. If rent is below 5% of the home price divided by 12, renting costs less.",
           },
           {
@@ -244,6 +273,11 @@ export const finSection10Part1: Unit[] = [
               "$1,500",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $1,250.',
+              1: 'This does not match the correct calculation; the right answer is $1,250.',
+              3: 'This does not match the correct calculation; the right answer is $1,250.',
+            },
             explanation: "$300,000 times 0.05 equals $15,000 per year. Divide by 12 to get $1,250 per month.",
           },
           {
@@ -280,6 +314,11 @@ export const finSection10Part1: Unit[] = [
               "It depends on the color of the house",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that you build equity does not accurately reflect the financial principle at work.',
+              2: 'They\'re exactly equal is not correct in this context; Since rent ($1,800) is below the breakeven ($2,083), renting costs less on a ...',
+              3: 'This is not the best answer; Since rent ($1,800) is below the breakeven ($2,083), renting costs less on a ...',
+            },
             explanation: "Since rent ($1,800) is below the breakeven ($2,083), renting costs less on a pure monthly basis.",
           },
           {
@@ -320,6 +359,11 @@ export const finSection10Part1: Unit[] = [
               "Ignore the math and go with your gut",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'The reasoning that $2,200 is below $2,500 does not accurately reflect the financial principle at work.',
+              2: 'This is not the best answer; Rent ($2,200) is higher than the breakeven ($1,667), so buying could be cheap...',
+              3: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+            },
             explanation: "Rent ($2,200) is higher than the breakeven ($1,667), so buying could be cheaper on a monthly cost basis.",
           },
         ],
@@ -345,6 +389,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "Buying a home makes financial sense even if you plan to move in 2 years.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Closing costs and selling fees typically require 5+ years of ownership to recoup..' },
             explanation: "Closing costs and selling fees typically require 5+ years of ownership to recoup.",
           },
           {
@@ -358,6 +403,11 @@ export const finSection10Part1: Unit[] = [
               "You can't sell a home within 5 years",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; in the first few years, most of your payment goes to interest.',
+              2: 'This is not the best answer; in the first few years, most of your payment goes to interest.',
+              3: 'This is not the best answer; in the first few years, most of your payment goes to interest.',
+            },
             explanation: "In the first few years, most of your payment goes to interest. You build little equity while paying big upfront and exit costs.",
           },
           {
@@ -388,6 +438,11 @@ export const finSection10Part1: Unit[] = [
               "Rent, but only if Alex can't afford the down payment",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'The reasoning that mortgage rates are good right now does not accurately reflect the financial principle at work.',
+              3: 'This is not the best answer; A 3-year stay in a high-cost market is a classic case where renting wins fina...',
+            },
             explanation: "A 3-year stay in a high-cost market is a classic case where renting wins financially.",
           },
           {
@@ -402,6 +457,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "A renter can typically relocate faster and cheaper than a homeowner.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Ending a lease is much faster and cheaper than selling a home, which can take months and cost thousands.' },
             explanation: "Ending a lease is much faster and cheaper than selling a home, which can take months and cost thousands.",
           },
           {
@@ -415,6 +471,11 @@ export const finSection10Part1: Unit[] = [
               "You have no emergency fund yet",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; a 15-year stay is long enough to benefit from buying.',
+              2: 'This is not the best answer; a 15-year stay is long enough to benefit from buying.',
+              3: 'This is not the best answer; a 15-year stay is long enough to benefit from buying.',
+            },
             explanation: "A 15-year stay is long enough to benefit from buying. The other situations all favor renting.",
           },
         ],
@@ -566,6 +627,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "A fixed-rate mortgage has the same interest rate for the entire loan term.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'That\'s the defining feature of a fixed-rate mortgage, making this statement true.' },
             explanation: "That's the defining feature of a fixed-rate mortgage. Your rate is locked in at closing.",
           },
           {
@@ -579,6 +641,11 @@ export const finSection10Part1: Unit[] = [
               "Faster equity building than other types",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; predictability is the biggest benefit.',
+              2: 'No down payment required is not correct in this context; predictability is the biggest benefit.',
+              3: 'Stopping payments or credit use does not solve the underlying issue and can create new problems.',
+            },
             explanation: "Predictability is the biggest benefit. You always know what you'll pay each month.",
           },
           {
@@ -593,6 +660,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "Fixed-rate mortgages usually have a lower starting rate than adjustable-rate mortgages.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Fixed rates start higher because the lender guarantees the rate won\'t change.' },
             explanation: "Fixed rates start higher because the lender guarantees the rate won't change. You pay extra for that stability.",
           },
           {
@@ -626,6 +694,11 @@ export const finSection10Part1: Unit[] = [
               "A balloon mortgage for short-term savings",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; A long-term stay plus a desire for predictability makes a fixed-rate mortgage...',
+              2: 'This is not the best answer; A long-term stay plus a desire for predictability makes a fixed-rate mortgage...',
+              3: 'This is not the best answer; A long-term stay plus a desire for predictability makes a fixed-rate mortgage...',
+            },
             explanation: "A long-term stay plus a desire for predictability makes a fixed-rate mortgage the clear choice.",
           },
         ],
@@ -651,6 +724,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "A 5/1 ARM has a fixed rate for the first 5 years.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The first number (5) is the fixed period in years, making this statement true.' },
             explanation: "The first number (5) is the fixed period in years. The second (1) means it adjusts once per year after that.",
           },
           {
@@ -664,6 +738,11 @@ export const finSection10Part1: Unit[] = [
               "Maximum 1% rate increase total",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: '1% interest rate is not correct in this context; the second number tells you how often the rate adjusts.',
+              1: 'This timeframe is incorrect based on the facts presented.',
+              3: 'This is not the best answer; the second number tells you how often the rate adjusts.',
+            },
             explanation: "The second number tells you how often the rate adjusts. In a 5/1 ARM, it adjusts annually after year 5.",
           },
           {
@@ -694,6 +773,11 @@ export const finSection10Part1: Unit[] = [
               "He automatically refinances to a new loan",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that the fixed period ended does not accurately reflect the financial principle at work.',
+              2: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              3: 'This is not the best answer; when the rate increases from 4.',
+            },
             explanation: "When the rate increases from 4.5% to 6.5%, the monthly payment jumps significantly.",
           },
           {
@@ -701,6 +785,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "An ARM is a good choice if you plan to sell or refinance before the fixed period ends.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'If you sell during the fixed period, you get the lower rate without facing any adjustment risk.' },
             explanation: "If you sell during the fixed period, you get the lower rate without facing any adjustment risk.",
           },
           {
@@ -721,6 +806,11 @@ export const finSection10Part1: Unit[] = [
               "When current ARM rates are lower than fixed rates",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Staying 30 years in a 5/1 ARM means 25 years of rate adjustments and unpredic...',
+              2: 'This is not the best answer; Staying 30 years in a 5/1 ARM means 25 years of rate adjustments and unpredic...',
+              3: 'This is not the best answer; Staying 30 years in a 5/1 ARM means 25 years of rate adjustments and unpredic...',
+            },
             explanation: "Staying 30 years in a 5/1 ARM means 25 years of rate adjustments and unpredictable payments.",
           },
         ],
@@ -746,6 +836,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "A 15-year mortgage typically has a lower interest rate than a 30-year mortgage.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Lenders charge less for shorter loans because they get their money back sooner and face less risk.' },
             explanation: "Lenders charge less for shorter loans because they get their money back sooner and face less risk.",
           },
           {
@@ -759,6 +850,11 @@ export const finSection10Part1: Unit[] = [
               "About $349,000",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is About $214,000.',
+              1: 'This does not match the correct calculation; the right answer is About $214,000.',
+              3: 'This does not match the correct calculation; the right answer is About $214,000.',
+            },
             explanation: "$349,000 minus $135,000 equals $214,000 in interest savings by choosing the shorter term.",
           },
           {
@@ -796,6 +892,11 @@ export const finSection10Part1: Unit[] = [
               "Neither, they should keep renting",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              2: 'The reasoning that rates are lower does not accurately reflect the financial principle at work.',
+              3: 'This is not the best answer; the 15-year payment would consume too much of their income.',
+            },
             explanation: "The 15-year payment would consume too much of their income. The 30-year leaves more breathing room.",
           },
           {
@@ -818,6 +919,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "You can take a 30-year mortgage and make extra payments to pay it off faster.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Most mortgages allow extra payments toward principal, making this statement true.' },
             explanation: "Most mortgages allow extra payments toward principal. This gives you 30-year flexibility with 15-year-like savings.",
           },
         ],
@@ -843,6 +945,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "The APR includes fees and points in addition to the interest rate.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'APR bundles all loan costs into one number, making it easier to compare different offers.' },
             explanation: "APR bundles all loan costs into one number, making it easier to compare different offers.",
           },
           {
@@ -856,6 +959,11 @@ export const finSection10Part1: Unit[] = [
               "The monthly payment amount only",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The interest rate only is not correct in this context; The APR combines the rate and fees into one number.',
+              1: 'The fees only is not correct in this context; The APR combines the rate and fees into one number.',
+              3: 'This is not the best answer; The APR combines the rate and fees into one number.',
+            },
             explanation: "The APR combines the rate and fees into one number, giving you the true cost comparison.",
           },
           {
@@ -876,6 +984,11 @@ export const finSection10Part1: Unit[] = [
               "$30,000",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $3,000.',
+              1: 'This does not match the correct calculation; the right answer is $3,000.',
+              3: 'This does not match the correct calculation; the right answer is $3,000.',
+            },
             explanation: "One point equals 1% of the loan amount. $300,000 times 0.01 equals $3,000.",
           },
           {
@@ -898,6 +1011,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "Getting mortgage quotes from multiple lenders on the same day gives you the most accurate comparison.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Rates change daily, so same-day quotes eliminate timing differences from the comparison.' },
             explanation: "Rates change daily, so same-day quotes eliminate timing differences from the comparison.",
           },
           {
@@ -975,6 +1089,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "A mortgage pre-approval tells you the maximum amount a lender will let you borrow.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Pre-approval is based on your income, credit, and debts, making this statement true.' },
             explanation: "Pre-approval is based on your income, credit, and debts. It gives you a firm borrowing limit.",
           },
           {
@@ -988,6 +1103,11 @@ export const finSection10Part1: Unit[] = [
               "Pre-qualification requires more documentation",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; pre-qualification is a rough estimate.',
+              2: 'This is not the best answer; pre-qualification is a rough estimate.',
+              3: 'This is not the best answer; pre-qualification is a rough estimate.',
+            },
             explanation: "Pre-qualification is a rough estimate. Pre-approval involves actual document verification and a credit check.",
           },
           {
@@ -1002,6 +1122,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "You should get pre-approved after you find a home you want to buy.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Get pre-approved first.' },
             explanation: "Get pre-approved first. It strengthens your offer and prevents wasting time looking at homes you can't afford.",
           },
           {
@@ -1038,6 +1159,11 @@ export const finSection10Part1: Unit[] = [
               "Because you have to pay the full amount upfront",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; The maximum amount doesn\'t account for your other financial goals.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; The maximum amount doesn\'t account for your other financial goals.',
+            },
             explanation: "The maximum amount doesn't account for your other financial goals, lifestyle, or unexpected expenses.",
           },
         ],
@@ -1063,6 +1189,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "Making a needs vs wants list before house hunting helps prevent overspending.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'A clear list keeps you grounded so you don\'t stretch your budget for features you don\'t truly need.' },
             explanation: "A clear list keeps you grounded so you don't stretch your budget for features you don't truly need.",
           },
           {
@@ -1099,6 +1226,11 @@ export const finSection10Part1: Unit[] = [
               "Age of the water heater",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Kitchen countertop material is not correct in this context; Location is the one factor you can\'t change and has the most impact on resale...',
+              1: 'Paint color on the walls is not correct in this context; Location is the one factor you can\'t change and has the most impact on resale...',
+              3: 'Age of the water heater is not correct in this context; Location is the one factor you can\'t change and has the most impact on resale...',
+            },
             explanation: "Location is the one factor you can't change and has the most impact on resale value.",
           },
           {
@@ -1122,6 +1254,11 @@ export const finSection10Part1: Unit[] = [
               "Buy it and find a closer job later",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that the kitchen and pool add value does not accurately reflect the financial principle at work.',
+              2: 'This is not the best answer; over budget plus a long commute is a bad combination.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "Over budget plus a long commute is a bad combination. Don't let cosmetic features override practical concerns.",
           },
           {
@@ -1136,6 +1273,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "A buyer's agent represents the buyer's interests during the home purchase.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The buyer\'s agent works for you, helping you find the right home and negotiate the best deal.' },
             explanation: "The buyer's agent works for you, helping you find the right home and negotiate the best deal.",
           },
         ],
@@ -1161,6 +1299,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "A home purchase offer only specifies the price you want to pay.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Offers include price, earnest money, contingencies, closing timeline, and other terms..' },
             explanation: "Offers include price, earnest money, contingencies, closing timeline, and other terms.",
           },
           {
@@ -1174,6 +1313,11 @@ export const finSection10Part1: Unit[] = [
               "The down payment on the home",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The first mortgage payment is not correct in this context; Earnest money (typically 1% to 3% of the price) goes into escrow to show the ...',
+              2: 'This is not the best answer; Earnest money (typically 1% to 3% of the price) goes into escrow to show the ...',
+              3: 'The down payment on the home is not correct in this context; Earnest money (typically 1% to 3% of the price) goes into escrow to show the ...',
+            },
             explanation: "Earnest money (typically 1% to 3% of the price) goes into escrow to show the seller you're committed.",
           },
           {
@@ -1218,6 +1362,11 @@ export const finSection10Part1: Unit[] = [
               "The competition between multiple buyers",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; Comparable sales (comps) show what similar homes recently sold for.',
+              1: 'This is not the best answer; Comparable sales (comps) show what similar homes recently sold for.',
+              3: 'This is not the best answer; Comparable sales (comps) show what similar homes recently sold for.',
+            },
             explanation: "Comparable sales (comps) show what similar homes recently sold for, helping you make a fair offer.",
           },
           {
@@ -1232,6 +1381,11 @@ export const finSection10Part1: Unit[] = [
               "Wait 6 more months for the price to drop further",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; an offer in the comp range is fair and justified.',
+              2: 'This is not the best answer; an offer in the comp range is fair and justified.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "An offer in the comp range is fair and justified. The long listing time gives you leverage to negotiate.",
           },
         ],
@@ -1257,6 +1411,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "A home inspection is optional and not worth the cost.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'An inspection can reveal tens of thousands of dollars in hidden problems.' },
             explanation: "An inspection can reveal tens of thousands of dollars in hidden problems. The $300 to $500 cost is a small price for that protection.",
           },
           {
@@ -1270,6 +1425,11 @@ export const finSection10Part1: Unit[] = [
               "Just the kitchen and bathrooms",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Only the exterior of the home is not correct in this context; Inspectors examine all major systems including structural.',
+              2: 'This is not the best answer; Inspectors examine all major systems including structural.',
+              3: 'This is not the best answer; Inspectors examine all major systems including structural.',
+            },
             explanation: "Inspectors examine all major systems including structural, mechanical, and safety components.",
           },
           {
@@ -1315,6 +1475,11 @@ export const finSection10Part1: Unit[] = [
               "Ignore both issues since you love the house",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; focus your negotiation on the expensive roof issue.',
+              2: 'This is not the best answer; focus your negotiation on the expensive roof issue.',
+              3: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+            },
             explanation: "Focus your negotiation on the expensive roof issue. A $150 faucet fix isn't worth fighting over.",
           },
           {
@@ -1335,6 +1500,11 @@ export const finSection10Part1: Unit[] = [
               "When the home is less than 5 years old",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Termites, radon, and mold require specialized equipment and expertise beyond ...',
+              2: 'This is not the best answer; Termites, radon, and mold require specialized equipment and expertise beyond ...',
+              3: 'This is not the best answer; Termites, radon, and mold require specialized equipment and expertise beyond ...',
+            },
             explanation: "Termites, radon, and mold require specialized equipment and expertise beyond a general inspection.",
           },
         ],
@@ -1486,6 +1656,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "Buying a home is always a better financial decision than renting.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'It depends on how long you\'ll stay, local prices, and your financial readiness..' },
             explanation: "It depends on how long you'll stay, local prices, and your financial readiness.",
           },
           {
@@ -1499,6 +1670,11 @@ export const finSection10Part1: Unit[] = [
               "$2,000/month",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: '$1,000/month is not correct in this context; $400,000 times 0.',
+              1: '$1,333/month is not correct in this context; $400,000 times 0.',
+              3: '$2,000/month is not correct in this context; $400,000 times 0.',
+            },
             explanation: "$400,000 times 0.05 equals $20,000 per year. Divided by 12 is about $1,667 per month.",
           },
           {
@@ -1545,6 +1721,11 @@ export const finSection10Part1: Unit[] = [
               "Skip the HVAC repair for now",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; an $8,000 repair is significant.',
+              2: 'This is not the best answer; an $8,000 repair is significant.',
+              3: 'Skip the HVAC repair for now is not correct in this context; an $8,000 repair is significant.',
+            },
             explanation: "An $8,000 repair is significant. Use the inspection results to negotiate a better price or seller credit.",
           },
           {
@@ -1585,6 +1766,11 @@ export const finSection10Part1: Unit[] = [
               "Keep renting since they can't afford 20% down",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+              2: 'This is not the best answer; they\'re stable, have savings, and plan to stay.',
+              3: 'This is not the best answer; they\'re stable, have savings, and plan to stay.',
+            },
             explanation: "They're stable, have savings, and plan to stay. Buying with a smaller down payment (plus PMI) is reasonable.",
           },
           {
@@ -1599,6 +1785,11 @@ export const finSection10Part1: Unit[] = [
               "Take a 15-year mortgage to build equity fast",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Moving every 2 to 3 years means closing costs and selling fees would eat most...',
+              2: 'This is not the best answer; Moving every 2 to 3 years means closing costs and selling fees would eat most...',
+              3: 'Stopping payments or credit use does not solve the underlying issue and can create new problems.',
+            },
             explanation: "Moving every 2 to 3 years means closing costs and selling fees would eat most of any equity gained.",
           },
           {
@@ -1612,6 +1803,11 @@ export const finSection10Part1: Unit[] = [
               "They're equal in total cost",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The reasoning that the rate is lower does not accurately reflect the financial principle at work.',
+              1: 'The reasoning that the fees are lower does not accurately reflect the financial principle at work.',
+              3: 'They\'re equal in total cost is not correct in this context; the APR accounts for both rate and fees.',
+            },
             explanation: "The APR accounts for both rate and fees. Offer A's lower APR (6.8% vs 6.85%) means it costs less overall.",
           },
           {
@@ -1619,6 +1815,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "If a home inspection reveals a cracked foundation, the buyer should always walk away.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'A cracked foundation is serious but not always a deal-breaker.' },
             explanation: "A cracked foundation is serious but not always a deal-breaker. You can negotiate repairs, price reductions, or get a structural engineer's opinion.",
           },
           {
@@ -1633,6 +1830,11 @@ export const finSection10Part1: Unit[] = [
               "Wait for the price to drop on its own",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; an offer in the comp range is well-supported.',
+              2: 'This is not the best answer; an offer in the comp range is well-supported.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "An offer in the comp range is well-supported. Just because you can afford more doesn't mean you should pay more.",
           },
           {
@@ -1709,6 +1911,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "Property taxes are based on the assessed value of your home.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Local governments assess your home\'s value and apply a tax rate to calculate your annual bill.' },
             explanation: "Local governments assess your home's value and apply a tax rate to calculate your annual bill.",
           },
           {
@@ -1722,6 +1925,11 @@ export const finSection10Part1: Unit[] = [
               "$6,000",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $4,500.',
+              1: 'This does not match the correct calculation; the right answer is $4,500.',
+              3: 'This does not match the correct calculation; the right answer is $4,500.',
+            },
             explanation: "$300,000 times 0.015 equals $4,500 per year, or $375 per month.",
           },
           {
@@ -1773,6 +1981,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "You can appeal your property tax assessment if you think it's too high.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Most jurisdictions allow homeowners to challenge their assessed value with evidence from comparable sales.' },
             explanation: "Most jurisdictions allow homeowners to challenge their assessed value with evidence from comparable sales.",
           },
           {
@@ -1797,6 +2006,11 @@ export const finSection10Part1: Unit[] = [
               "Your household income level",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Comparable sales data showing similar homes valued lower is the strongest evi...',
+              2: 'Your mortgage interest rate is not correct in this context; Comparable sales data showing similar homes valued lower is the strongest evi...',
+              3: 'Your household income level is not correct in this context; Comparable sales data showing similar homes valued lower is the strongest evi...',
+            },
             explanation: "Comparable sales data showing similar homes valued lower is the strongest evidence for a successful appeal.",
           },
         ],
@@ -1822,6 +2036,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "HOA fees pay for the maintenance of shared community spaces and amenities.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'HOA fees fund common area upkeep, shared amenities, insurance for common areas, and sometimes utilities.' },
             explanation: "HOA fees fund common area upkeep, shared amenities, insurance for common areas, and sometimes utilities.",
           },
           {
@@ -1835,6 +2050,11 @@ export const finSection10Part1: Unit[] = [
               "The annual increase in property taxes",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Special assessments are extra charges when the HOA needs to cover a big expen...',
+              2: 'This is not the best answer; Special assessments are extra charges when the HOA needs to cover a big expen...',
+              3: 'This is not the best answer; Special assessments are extra charges when the HOA needs to cover a big expen...',
+            },
             explanation: "Special assessments are extra charges when the HOA needs to cover a big expense like roof replacement or elevator repair.",
           },
           {
@@ -1872,6 +2092,11 @@ export const finSection10Part1: Unit[] = [
               "The roof age is normal and not a concern",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The monthly fee is too high is not correct in this context; a $5,000 reserve for 50 units is dangerously low.',
+              2: 'This is not the best answer; a $5,000 reserve for 50 units is dangerously low.',
+              3: 'This is not the best answer; a $5,000 reserve for 50 units is dangerously low.',
+            },
             explanation: "A $5,000 reserve for 50 units is dangerously low. An 18-year-old roof will need replacement soon, and each owner could face a big one-time charge.",
           },
           {
@@ -1887,6 +2112,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "You can opt out of paying HOA fees if you don't use the shared amenities.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'HOA fees are mandatory for all homeowners in the community, regardless of whether you personally use the amenities..' },
             explanation: "HOA fees are mandatory for all homeowners in the community, regardless of whether you personally use the amenities.",
           },
         ],
@@ -1912,6 +2138,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "The 1% rule suggests saving 1% of your home's value each year for maintenance.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'This rule of thumb helps you prepare for inevitable repairs and replacements.' },
             explanation: "This rule of thumb helps you prepare for inevitable repairs and replacements.",
           },
           {
@@ -1925,6 +2152,11 @@ export const finSection10Part1: Unit[] = [
               "$40,000",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $4,000.',
+              1: 'This does not match the correct calculation; the right answer is $4,000.',
+              3: 'This does not match the correct calculation; the right answer is $4,000.',
+            },
             explanation: "$400,000 times 0.01 equals $4,000 per year, or about $333 per month.",
           },
           {
@@ -1955,6 +2187,11 @@ export const finSection10Part1: Unit[] = [
               "Use the maintenance fund for vacations instead",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; just because nothing broke this year doesn\'t mean next year will be the same.',
+              2: 'Only save if something breaks is not correct in this context; just because nothing broke this year doesn\'t mean next year will be the same.',
+              3: 'This is not the best answer; just because nothing broke this year doesn\'t mean next year will be the same.',
+            },
             explanation: "Just because nothing broke this year doesn't mean next year will be the same. The fund should grow for future big-ticket repairs.",
           },
           {
@@ -1977,6 +2214,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "It's smart to automate monthly transfers into a home maintenance savings account.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Automation removes the temptation to skip contributions, making this statement true.' },
             explanation: "Automation removes the temptation to skip contributions. The fund grows steadily until you need it.",
           },
         ],
@@ -2002,6 +2240,7 @@ export const finSection10Part1: Unit[] = [
             type: "true-false",
             question: "Your mortgage lender requires you to carry homeowner's insurance.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The lender needs to protect their collateral (your home), making this statement true.' },
             explanation: "The lender needs to protect their collateral (your home). Insurance is mandatory until the loan is paid off.",
           },
           {
@@ -2015,6 +2254,11 @@ export const finSection10Part1: Unit[] = [
               "Liability if someone is injured on your property",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Fire damage is not correct in this context; standard homeowner\'s insurance does not cover floods.',
+              1: 'Theft of personal belongings is not correct in this context; standard homeowner\'s insurance does not cover floods.',
+              3: 'This is not the best answer; standard homeowner\'s insurance does not cover floods.',
+            },
             explanation: "Standard homeowner's insurance does not cover floods. Flood insurance must be purchased separately.",
           },
           {
@@ -2066,6 +2310,11 @@ export const finSection10Part1: Unit[] = [
               "Landlords pay half the renter's utilities",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Larger spaces cost more to heat and cool.',
+              2: 'This is not the best answer; Larger spaces cost more to heat and cool.',
+              3: 'This is not the best answer; Larger spaces cost more to heat and cool.',
+            },
             explanation: "Larger spaces cost more to heat and cool, and homeowners pay for services that landlords sometimes include in rent.",
           },
           {
@@ -2080,6 +2329,11 @@ export const finSection10Part1: Unit[] = [
               "$2,750 (all costs combined)",
             ],
             correctIndex: 3,
+            distractorExplanations: {
+              0: '$1,800 (just the mortgage) is not correct in this context; The true monthly cost includes every line item: $1.',
+              1: 'This is not the best answer; The true monthly cost includes every line item: $1.',
+              2: 'This is not the best answer; The true monthly cost includes every line item: $1.',
+            },
             explanation: "The true monthly cost includes every line item: $1,800 + $250 + $150 + $100 + $200 + $250 = $2,750.",
           },
         ],

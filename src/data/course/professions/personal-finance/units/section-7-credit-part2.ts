@@ -39,6 +39,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "A credit report includes your account payment history and public records.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Payment history and public records like bankruptcies are 2 of the 4 main sections on every credit report.' },
             explanation: "Payment history and public records like bankruptcies are 2 of the 4 main sections on every credit report.",
           },
           {
@@ -88,6 +89,11 @@ export const finSection7Part2: Unit[] = [
               "Your annual income from your employer",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Your monthly rent amount is not correct in this context; late payments on loans and credit cards are tracked on your report.',
+              1: 'Your checking account balance is not correct in this context; late payments on loans and credit cards are tracked on your report.',
+              3: 'This is not the best answer; late payments on loans and credit cards are tracked on your report.',
+            },
             explanation: "Late payments on loans and credit cards are tracked on your report. Income and bank balances are not included.",
           },
           {
@@ -107,6 +113,11 @@ export const finSection7Part2: Unit[] = [
               "Every 5 years",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Every 6 months is not correct in this context; you\'re entitled to one free report per bureau per year.',
+              2: 'Only when applying for a loan is not correct in this context; you\'re entitled to one free report per bureau per year.',
+              3: 'Every 5 years is not correct in this context; you\'re entitled to one free report per bureau per year.',
+            },
             explanation: "You're entitled to one free report per bureau per year. That's 3 free reports total each year.",
           },
           {
@@ -139,6 +150,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "All 3 credit bureaus always have identical information about you.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Each bureau collects data independently.' },
             explanation: "Each bureau collects data independently. A lender might report to only 1 or 2 bureaus, creating differences.",
           },
           {
@@ -152,6 +164,11 @@ export const finSection7Part2: Unit[] = [
               "TransUnion only tracks loans, not cards",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; lenders choose which bureaus to report to.',
+              2: 'This is not the best answer; lenders choose which bureaus to report to.',
+              3: 'This is not the best answer; lenders choose which bureaus to report to.',
+            },
             explanation: "Lenders choose which bureaus to report to. Some report to all 3, others to just 1 or 2.",
           },
           {
@@ -193,6 +210,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Credit bureaus are government agencies.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'They\'re private, for-profit companies.' },
             explanation: "They're private, for-profit companies. They make money by selling your credit information to businesses that request it.",
           },
           {
@@ -206,6 +224,11 @@ export const finSection7Part2: Unit[] = [
               "Wait until you're denied credit to check any",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              1: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+            },
             explanation: "Staggering gives you a credit check-up roughly every 4 months, helping you catch errors or fraud sooner.",
           },
         ],
@@ -230,6 +253,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "A 'charged off' status on your report means the lender gave up on collecting.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Charged off means the lender wrote off the debt as a loss, making this statement true.' },
             explanation: "Charged off means the lender wrote off the debt as a loss. It's one of the most negative marks possible on your report.",
           },
           {
@@ -264,6 +288,11 @@ export const finSection7Part2: Unit[] = [
               "You have 60 days until the next payment",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The payment was $60 is not correct in this context; the number represents how many days late the payment was.',
+              1: 'The account is 60 months old is not correct in this context; the number represents how many days late the payment was.',
+              3: 'This is not the best answer; the number represents how many days late the payment was.',
+            },
             explanation: "The number represents how many days late the payment was. A '60' means the bill went 60 days without payment.",
           },
           {
@@ -298,6 +327,11 @@ export const finSection7Part2: Unit[] = [
               "Close the card and move on",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              1: 'This is not the best answer; an account you didn\'t open is a sign of identity theft.',
+              3: 'Close the card and move on is not correct in this context; an account you didn\'t open is a sign of identity theft.',
+            },
             explanation: "An account you didn't open is a sign of identity theft. Dispute it with the bureau and consider a fraud alert or credit freeze.",
           },
           {
@@ -339,6 +373,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "About 1 in 5 consumers has an error on at least one credit report.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The Federal Trade Commission found that roughly 20% of consumers have a material error, making this statement true.' },
             explanation: "The Federal Trade Commission found that roughly 20% of consumers have a material error. Regular checking catches these mistakes.",
           },
           {
@@ -352,6 +387,11 @@ export const finSection7Part2: Unit[] = [
               "Close all your credit accounts",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Hire a lawyer immediately is not correct in this context; Before filing a dispute.',
+              1: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Before filing a dispute, collect documentation like payment receipts, bank statements, or correspondence that shows the error.",
           },
           {
@@ -400,6 +440,11 @@ export const finSection7Part2: Unit[] = [
               "Close the account to hide the error",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              2: 'This is not the best answer; each bureau operates independently.',
+              3: 'Closing accounts can reduce available credit and shorten credit history, both of which can hurt your score.',
+            },
             explanation: "Each bureau operates independently. Dani needs to file a dispute with TransUnion separately to get it corrected there too.",
           },
           {
@@ -413,6 +458,11 @@ export const finSection7Part2: Unit[] = [
               "Your score automatically drops 50 points",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; If the bureau can\'t verify the accuracy of the disputed information within 30...',
+              1: 'This is not the best answer; If the bureau can\'t verify the accuracy of the disputed information within 30...',
+              3: 'This is not the best answer; If the bureau can\'t verify the accuracy of the disputed information within 30...',
+            },
             explanation: "If the bureau can't verify the accuracy of the disputed information within 30 days, federal law requires removal or correction.",
           },
         ],
@@ -481,6 +531,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "A credit inquiry is recorded whenever someone accesses your credit report.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Every access is logged, making this statement true.' },
             explanation: "Every access is logged. Knowing who checked your credit and when helps you track your financial activity.",
           },
           {
@@ -494,6 +545,11 @@ export const finSection7Part2: Unit[] = [
               "Public and private",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Fast and slow is not correct in this context; hard inquiries happen when you apply for credit.',
+              2: 'Good and bad is not correct in this context; hard inquiries happen when you apply for credit.',
+              3: 'Public and private is not correct in this context; hard inquiries happen when you apply for credit.',
+            },
             explanation: "Hard inquiries happen when you apply for credit. Soft inquiries happen for background checks or when you check your own credit.",
           },
           {
@@ -507,6 +563,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Both hard and soft inquiries affect your credit score.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Only hard inquiries impact your score.' },
             explanation: "Only hard inquiries impact your score. Soft inquiries are recorded but have no effect on your number.",
           },
           {
@@ -534,6 +591,11 @@ export const finSection7Part2: Unit[] = [
               "7 years",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This timeframe is incorrect based on the facts presented.',
+              1: 'This timeframe is incorrect based on the facts presented.',
+              3: 'This timeframe is incorrect based on the facts presented.',
+            },
             explanation: "Hard inquiries remain visible for 2 years, but they only influence your score for about 12 months.",
           },
           {
@@ -574,6 +636,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "A lender can run a hard inquiry on your credit without your permission.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Hard inquiries require your consent.' },
             explanation: "Hard inquiries require your consent. You authorize them when you sign a credit application.",
           },
           {
@@ -587,6 +650,11 @@ export const finSection7Part2: Unit[] = [
               "100 or more points",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: '0 points is not correct in this context; a single hard inquiry usually drops your score by about 5 to 10 points.',
+              2: '50 to 75 points is not correct in this context; a single hard inquiry usually drops your score by about 5 to 10 points.',
+              3: '100 or more points is not correct in this context; a single hard inquiry usually drops your score by about 5 to 10 points.',
+            },
             explanation: "A single hard inquiry usually drops your score by about 5 to 10 points. The impact is small and temporary.",
           },
           {
@@ -608,6 +676,11 @@ export const finSection7Part2: Unit[] = [
               "2 hard inquiries (half are forgiven)",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: '4 separate hard inquiries is not correct in this context; Multiple mortgage inquiries within a short window are treated as a single inq...',
+              2: 'This is not the best answer; Multiple mortgage inquiries within a short window are treated as a single inq...',
+              3: 'This is not the best answer; Multiple mortgage inquiries within a short window are treated as a single inq...',
+            },
             explanation: "Multiple mortgage inquiries within a short window are treated as a single inquiry. FICO recognizes rate shopping behavior.",
           },
           {
@@ -621,6 +694,11 @@ export const finSection7Part2: Unit[] = [
               "Student loan applications",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Mortgage applications is not correct in this context; rate shopping protection applies to mortgages, auto loans, and student loans.',
+              1: 'Auto loan applications is not correct in this context; rate shopping protection applies to mortgages, auto loans, and student loans.',
+              3: 'Student loan applications is not correct in this context; rate shopping protection applies to mortgages, auto loans, and student loans.',
+            },
             explanation: "Rate shopping protection applies to mortgages, auto loans, and student loans. Each credit card application counts as a separate hard inquiry.",
           },
           {
@@ -634,6 +712,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Applying for 5 credit cards in one week only counts as 1 hard inquiry.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Rate shopping protection applies to mortgages, auto, and student loans, not credit cards.' },
             explanation: "Rate shopping protection applies to mortgages, auto, and student loans, not credit cards. Each card application is a separate hard inquiry.",
           },
           {
@@ -666,6 +745,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Lenders can see your soft inquiries when reviewing your credit application.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Soft inquiries are only visible to you.' },
             explanation: "Soft inquiries are only visible to you. Lenders reviewing your report for a credit decision see only hard inquiries.",
           },
           {
@@ -695,6 +775,11 @@ export const finSection7Part2: Unit[] = [
               "Every 6 months",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Only once per month is not correct in this context; self-checks are always soft inquiries.',
+              1: 'Once per year is not correct in this context; self-checks are always soft inquiries.',
+              3: 'Every 6 months is not correct in this context; self-checks are always soft inquiries.',
+            },
             explanation: "Self-checks are always soft inquiries. There's no limit and no score impact, so check as often as you'd like.",
           },
           {
@@ -730,6 +815,11 @@ export const finSection7Part2: Unit[] = [
               "What your current score is",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Knowing whether it\'s a hard or soft pull helps you decide if it\'s worth the p...',
+              2: 'How much money you can borrow is not correct in this context; Knowing whether it\'s a hard or soft pull helps you decide if it\'s worth the p...',
+              3: 'What your current score is is not correct in this context; Knowing whether it\'s a hard or soft pull helps you decide if it\'s worth the p...',
+            },
             explanation: "Knowing whether it's a hard or soft pull helps you decide if it's worth the potential score impact. Always ask before agreeing.",
           },
           {
@@ -737,6 +827,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Pre-qualification always involves a hard pull.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Pre-qualification typically uses a soft inquiry.' },
             explanation: "Pre-qualification typically uses a soft inquiry. Pre-approval is more thorough and may use a hard inquiry. But policies vary by lender.",
           },
         ],
@@ -888,6 +979,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Paying down a high credit card balance can improve your score within 1 billing cycle.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Utilization has no memory, making this statement true.' },
             explanation: "Utilization has no memory. As soon as a lower balance is reported, your score reflects the improvement.",
           },
           {
@@ -901,6 +993,11 @@ export const finSection7Part2: Unit[] = [
               "Applying for 3 new credit cards",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Opening a new savings account is not correct in this context; Dropping utilization from 80% to 10% is one of the fastest score improvements...',
+              2: 'This is not the best answer; Dropping utilization from 80% to 10% is one of the fastest score improvements...',
+              3: 'This is not the best answer; Dropping utilization from 80% to 10% is one of the fastest score improvements...',
+            },
             explanation: "Dropping utilization from 80% to 10% is one of the fastest score improvements possible. It takes effect at the next statement cycle.",
           },
           {
@@ -921,6 +1018,11 @@ export const finSection7Part2: Unit[] = [
               "Stop using both cards completely",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'Closing accounts can reduce available credit and shorten credit history, both of which can hurt your score.',
+              2: 'Apply for a new credit card is not correct in this context; A limit increase on Card A would reduce its 80% utilization without requiring...',
+              3: 'Stopping payments or credit use does not solve the underlying issue and can create new problems.',
+            },
             explanation: "A limit increase on Card A would reduce its 80% utilization without requiring payment. If the limit doubles to $10,000, utilization drops to 40%.",
           },
           {
@@ -948,6 +1050,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Experian Boost can add utility and phone payments to your credit report.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Experian Boost allows you to include payments that traditionally don\'t appear on credit reports, making this statement true.' },
             explanation: "Experian Boost allows you to include payments that traditionally don't appear on credit reports. It only affects your Experian file.",
           },
           {
@@ -985,6 +1088,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Closing your oldest credit card can lower your score by shortening your average account age.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Length of history is 15% of your FICO score, making this statement true.' },
             explanation: "Length of history is 15% of your FICO score. Losing your oldest account reduces your average age, which can cause a noticeable drop.",
           },
           {
@@ -998,6 +1102,11 @@ export const finSection7Part2: Unit[] = [
               "Request a limit decrease on it",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Using it occasionally keeps it active (some banks close inactive cards) while...',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; Using it occasionally keeps it active (some banks close inactive cards) while...',
+            },
             explanation: "Using it occasionally keeps it active (some banks close inactive cards) while preserving your credit age and available credit.",
           },
           {
@@ -1048,6 +1157,11 @@ export const finSection7Part2: Unit[] = [
               "They check their score every single day",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; time and consistency are the biggest factors.',
+              1: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; time and consistency are the biggest factors.',
+            },
             explanation: "Time and consistency are the biggest factors. Top scorers have long histories of responsible credit management.",
           },
           {
@@ -1062,6 +1176,11 @@ export const finSection7Part2: Unit[] = [
               "Max out all her cards and pay them off each month to show activity",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; adding installment credit improves her mix.',
+              2: 'Closing accounts can reduce available credit and shorten credit history, both of which can hurt your score.',
+              3: 'This is not the best answer; adding installment credit improves her mix.',
+            },
             explanation: "Adding installment credit improves her mix. Keeping cards open preserves history. Time and consistency will close the gap to 760.",
           },
         ],
@@ -1086,6 +1205,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Closing a credit card always improves your score by reducing the number of accounts.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Closing a card usually hurts your score by raising utilization and potentially lowering average account age..' },
             explanation: "Closing a card usually hurts your score by raising utilization and potentially lowering average account age.",
           },
           {
@@ -1100,6 +1220,11 @@ export const finSection7Part2: Unit[] = [
               "Her score increases because Card B wasn't being used",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The reasoning that she has fewer accounts does not accurately reflect the financial principle at work.',
+              2: 'This is not the best answer; currently: $2,000/$15,000 = 13%.',
+              3: 'The reasoning that Card B wasn\'t being used does not accurately reflect the financial principle at work.',
+            },
             explanation: "Currently: $2,000/$15,000 = 13%. After closing: $2,000/$10,000 = 20%. Higher utilization typically means a lower score.",
           },
           {
@@ -1120,6 +1245,11 @@ export const finSection7Part2: Unit[] = [
               "Banks charge a fee for minimum payments",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; minimum payments mostly cover interest charges.',
+              1: 'This is not the best answer; minimum payments mostly cover interest charges.',
+              3: 'This is not the best answer; minimum payments mostly cover interest charges.',
+            },
             explanation: "Minimum payments mostly cover interest charges. The actual balance barely shrinks, keeping you in debt for years or decades.",
           },
           {
@@ -1149,6 +1279,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "If someone you co-signed for misses a payment, your credit score is unaffected.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Co-signing means the loan appears on your credit report.' },
             explanation: "Co-signing means the loan appears on your credit report. Their missed payments become your missed payments in the eyes of the bureaus.",
           },
           {
@@ -1162,6 +1293,11 @@ export const finSection7Part2: Unit[] = [
               "Checking your credit score too often",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'This is not the best answer; High balances with minimum payments keep utilization high and cost thousands ...',
+              1: 'This is not the best answer; High balances with minimum payments keep utilization high and cost thousands ...',
+              3: 'This is not the best answer; High balances with minimum payments keep utilization high and cost thousands ...',
+            },
             explanation: "High balances with minimum payments keep utilization high and cost thousands in interest. It's the most common and costly credit mistake.",
           },
         ],
@@ -1186,6 +1322,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Opening a new credit account lowers your average credit age.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Each new account with an age of zero pulls down the average, making this statement true.' },
             explanation: "Each new account with an age of zero pulls down the average. The more accounts you have, the less a single new one affects the average.",
           },
           {
@@ -1200,6 +1337,11 @@ export const finSection7Part2: Unit[] = [
               "10 years",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: '6.7 years (unchanged) is not correct in this context; (10 + 6 + 4 + 0) / 4 = 5 years.',
+              2: '3.3 years is not correct in this context; (10 + 6 + 4 + 0) / 4 = 5 years.',
+              3: 'This timeframe is incorrect based on the facts presented.',
+            },
             explanation: "(10 + 6 + 4 + 0) / 4 = 5 years. One new account dropped the average from 6.7 to 5 years.",
           },
           {
@@ -1220,6 +1362,11 @@ export const finSection7Part2: Unit[] = [
               "Only use cash and never open credit accounts",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; spacing out new accounts minimizes the impact on your average age.',
+              2: 'Closing accounts can reduce available credit and shorten credit history, both of which can hurt your score.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Spacing out new accounts minimizes the impact on your average age. A burst of new accounts tanks the average immediately.",
           },
           {
@@ -1247,6 +1394,11 @@ export const finSection7Part2: Unit[] = [
               "10 years",
             ],
             correctIndex: 3,
+            distractorExplanations: {
+              0: 'This timeframe is incorrect based on the facts presented.',
+              1: 'This timeframe is incorrect based on the facts presented.',
+              2: 'This timeframe is incorrect based on the facts presented.',
+            },
             explanation: "Closed accounts with positive history remain on your report for 10 years. After that, they drop off and your average age may decrease.",
           },
           {
@@ -1329,6 +1481,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Regular credit monitoring helps you catch fraud early.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Monitoring alerts you when new accounts are opened or significant changes appear, making this statement true.' },
             explanation: "Monitoring alerts you when new accounts are opened or significant changes appear. Early detection is the best defense.",
           },
           {
@@ -1342,6 +1495,11 @@ export const finSection7Part2: Unit[] = [
               "It eliminates the need to check your report",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Monitoring doesn\'t prevent fraud.',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; Monitoring doesn\'t prevent fraud.',
+            },
             explanation: "Monitoring doesn't prevent fraud, but it detects it quickly so you can respond before more damage occurs.",
           },
           {
@@ -1362,6 +1520,11 @@ export const finSection7Part2: Unit[] = [
               "Close all his credit cards to prevent further drops",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              2: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "A 55-point drop with no obvious cause warrants investigation. It could be an error, unreported fraud, or an account issue.",
           },
           {
@@ -1383,6 +1546,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Data breaches can expose your personal information to identity thieves.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Company data breaches can leak names, Social Security numbers, and other data that thieves use to open accounts in your name.' },
             explanation: "Company data breaches can leak names, Social Security numbers, and other data that thieves use to open accounts in your name.",
           },
           {
@@ -1396,6 +1560,11 @@ export const finSection7Part2: Unit[] = [
               "Only after a data breach notification",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Every 10 years is not correct in this context; annual reviews are the minimum.',
+              1: 'Only when denied credit is not correct in this context; annual reviews are the minimum.',
+              3: 'This is not the best answer; annual reviews are the minimum.',
+            },
             explanation: "Annual reviews are the minimum. Checking every 4 months by rotating bureaus gives you more frequent coverage.",
           },
         ],
@@ -1420,6 +1589,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "You must pay for a subscription to monitor your credit effectively.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Free tools from banks, Credit Karma, and AnnualCreditReport.com provide solid monitoring without any cost..' },
             explanation: "Free tools from banks, Credit Karma, and AnnualCreditReport.com provide solid monitoring without any cost.",
           },
           {
@@ -1454,6 +1624,11 @@ export const finSection7Part2: Unit[] = [
               "Ask a friend to check for you",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Combining your bank\'s score.',
+              2: 'This is not the best answer; Combining your bank\'s score.',
+              3: 'Ask a friend to check for you is not correct in this context; Combining your bank\'s score.',
+            },
             explanation: "Combining your bank's score, Credit Karma's reports, and annual full reports gives you thorough, free coverage from multiple angles.",
           },
           {
@@ -1489,6 +1664,11 @@ export const finSection7Part2: Unit[] = [
               "If you've never had a credit account",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; After a data breach, the extra features of paid monitoring (insurance, dark w...',
+              2: 'This is not the best answer; After a data breach, the extra features of paid monitoring (insurance, dark w...',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "After a data breach, the extra features of paid monitoring (insurance, dark web scanning) provide meaningful additional protection.",
           },
           {
@@ -1496,6 +1676,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Credit Karma's scores use the FICO model.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Credit Karma uses VantageScore, not FICO.' },
             explanation: "Credit Karma uses VantageScore, not FICO. The numbers may differ from what a lender sees using FICO, but trends are similar.",
           },
         ],
@@ -1521,6 +1702,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "A credit freeze prevents new accounts from being opened in your name.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'When your credit is frozen, lenders can\'t access your report, which means they can\'t approve new accounts, making this statement true.' },
             explanation: "When your credit is frozen, lenders can't access your report, which means they can't approve new accounts. This blocks most identity theft.",
           },
           {
@@ -1534,6 +1716,11 @@ export const finSection7Part2: Unit[] = [
               "No, but your score drops 50 points",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The reasoning that all cards stop working immediately does not hold up against the correct analysis.',
+              1: 'The reasoning that interest rates go up on all cards does not hold up against the correct analysis.',
+              3: 'The reasoning that but your score drops 50 points does not hold up against the correct analysis.',
+            },
             explanation: "A freeze only blocks new applications. Your current cards, loans, and score continue operating normally.",
           },
           {
@@ -1598,6 +1785,11 @@ export const finSection7Part2: Unit[] = [
               "Close all her existing credit accounts",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Doing nothing allows the problem to worsen; proactive action is needed.',
+              2: 'This is not the best answer; Since Lena won\'t need new credit soon.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Since Lena won't need new credit soon, a full freeze at all 3 bureaus provides the strongest protection after a data breach.",
           },
         ],
@@ -1622,6 +1814,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Responding quickly to identity theft limits the damage.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Fast action can prevent thieves from opening more accounts or running up larger balances in your name.' },
             explanation: "Fast action can prevent thieves from opening more accounts or running up larger balances in your name.",
           },
           {
@@ -1656,6 +1849,11 @@ export const finSection7Part2: Unit[] = [
               "Free credit scores from all 3 bureaus",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Free credit repair services is not correct in this context; identityTheft.',
+              2: 'This is not the best answer; identityTheft.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "IdentityTheft.gov walks you through recovery step by step and creates letters you can send to creditors and bureaus.",
           },
           {
@@ -1683,6 +1881,11 @@ export const finSection7Part2: Unit[] = [
               "The full amount charged",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $50.',
+              2: 'This does not match the correct calculation; the right answer is $50.',
+              3: 'The full amount charged is not correct in this context; federal law caps credit card fraud liability at $50.',
+            },
             explanation: "Federal law caps credit card fraud liability at $50. Many issuers voluntarily offer $0 liability for additional protection.",
           },
           {
@@ -1697,6 +1900,11 @@ export const finSection7Part2: Unit[] = [
               "Close his own credit cards to prevent more fraud",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; Freeze his credit to prevent more fraudulent accounts.',
+              2: 'Waiting delays resolution and may allow the situation to deteriorate further.',
+              3: 'Closing accounts can reduce available credit and shorten credit history, both of which can hurt your score.',
+            },
             explanation: "Freeze his credit to prevent more fraudulent accounts, then file at IdentityTheft.gov to begin the recovery process. Never pay fraudulent charges.",
           },
         ],
@@ -1848,6 +2056,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "Payment history and amounts owed together make up 65% of your FICO score.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Payment history (35%) plus amounts owed (30%) equals 65%, making this statement true.' },
             explanation: "Payment history (35%) plus amounts owed (30%) equals 65%. These 2 factors give you the most control over your score.",
           },
           {
@@ -1875,6 +2084,11 @@ export const finSection7Part2: Unit[] = [
               "Unlimited",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This does not match the correct calculation; the right answer is $50.',
+              2: 'This does not match the correct calculation; the right answer is $50.',
+              3: 'Unlimited is not correct in this context; Federal law caps your liability at $50 for unauthorized credit card charges, ...',
+            },
             explanation: "Federal law caps your liability at $50 for unauthorized credit card charges, though many issuers offer $0 liability.",
           },
           {
@@ -1949,6 +2163,11 @@ export const finSection7Part2: Unit[] = [
               "Apply for a mortgage now before her score changes",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'This is not the best answer; Reducing utilization from 45% to under 30% and ensuring no late payments are ...',
+              2: 'Closing accounts can reduce available credit and shorten credit history, both of which can hurt your score.',
+              3: 'This is not the best answer; Reducing utilization from 45% to under 30% and ensuring no late payments are ...',
+            },
             explanation: "Reducing utilization from 45% to under 30% and ensuring no late payments are the 2 fastest ways to boost her score before the mortgage application.",
           },
           {
@@ -1962,6 +2181,11 @@ export const finSection7Part2: Unit[] = [
               "Ask each lender for a soft pull instead",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; mortgage rate shopping within 14 to 45 days counts as a single inquiry.',
+              2: 'This is not the best answer; mortgage rate shopping within 14 to 45 days counts as a single inquiry.',
+              3: 'This is not the best answer; mortgage rate shopping within 14 to 45 days counts as a single inquiry.',
+            },
             explanation: "Mortgage rate shopping within 14 to 45 days counts as a single inquiry. Carlos should compare several lenders in a short window.",
           },
           {
@@ -1976,6 +2200,11 @@ export const finSection7Part2: Unit[] = [
               "She should close her TransUnion file",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'This is not the best answer; A 140-point gap between bureaus with similar behavior strongly suggests an er...',
+              2: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+              3: 'This is not the best answer; A 140-point gap between bureaus with similar behavior strongly suggests an er...',
+            },
             explanation: "A 140-point gap between bureaus with similar behavior strongly suggests an error on the TransUnion report. She should review and dispute.",
           },
           {
@@ -2009,6 +2238,11 @@ export const finSection7Part2: Unit[] = [
               "Only use cash and avoid all credit activity",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Opening multiple new accounts adds hard inquiries and is counterproductive in this situation.',
+              2: 'Closing accounts can reduce available credit and shorten credit history, both of which can hurt your score.',
+              3: 'This absolute statement oversimplifies the situation; there are important exceptions.',
+            },
             explanation: "Addressing the 2 biggest factors (payment history and utilization) while correcting errors gives the most comprehensive improvement.",
           },
           {
@@ -2016,6 +2250,7 @@ export const finSection7Part2: Unit[] = [
             type: "true-false",
             question: "A credit-builder loan and a secured card together can help build credit mix.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'A secured card provides revolving credit and a credit-builder loan provides installment credit, making this statement true.' },
             explanation: "A secured card provides revolving credit and a credit-builder loan provides installment credit. Together they diversify your credit mix.",
           },
         ],

@@ -32,6 +32,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'A satellite is any object placed into orbit around a larger body.',
             correctAnswer: true,
             explanation: 'By definition, a satellite orbits a larger body. Even the Moon is a natural satellite of Earth.',
+            distractorExplanations: {
+              1: 'This statement is correct because by definition, a satellite orbits a larger body. Even the Moon is a natural satellite of Earth.',
+            },
           },
           {
             id: 'sp-sec13-u1-L1-Q2',
@@ -45,6 +48,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Satellites operate in space, not underwater. Power, attitude control, and thermal management are all essential subsystems.',
+            distractorExplanations: {
+              1: 'Power generation is incorrect; satellites operate in space, not underwater. Power, attitude control, and thermal management are all essential subsystems.',
+              2: 'Attitude control is incorrect; satellites operate in space, not underwater. Power, attitude control, and thermal management are all essential subsystems.',
+              3: 'Thermal management is incorrect; satellites operate in space, not underwater. Power, attitude control, and thermal management are all essential subsystems.',
+            },
           },
           {
             id: 'sp-sec13-u1-L1-T2',
@@ -87,6 +95,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Reaction wheels use conservation of angular momentum. Spinning them in one direction rotates the satellite in the opposite direction.',
+            distractorExplanations: {
+              1: 'Shield the satellite from radiation is incorrect; reaction wheels use conservation of angular momentum. Spinning them in one direction rotates the satellite in the opposite direction.',
+              2: 'Generate electrical power is incorrect; reaction wheels use conservation of angular momentum. Spinning them in one direction rotates the satellite in the opposite direction.',
+              3: 'Store data for downlink is incorrect; reaction wheels use conservation of angular momentum. Spinning them in one direction rotates the satellite in the opposite direction.',
+            },
           },
           {
             id: 'sp-sec13-u1-L1-Q6',
@@ -120,6 +133,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'A satellite in orbit does not experience gravity.',
             correctAnswer: false,
             explanation: 'Satellites absolutely experience gravity. That is what keeps them in orbit. They are in constant free fall, which creates the sensation of weightlessness.',
+            distractorExplanations: {
+              0: 'Satellites absolutely experience gravity. That is what keeps them in orbit. They are in constant free fall, which creates the sensation of weightlessness.',
+            },
           },
           {
             id: 'sp-sec13-u1-L2-Q2',
@@ -133,6 +149,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The satellite\'s sideways velocity is high enough that its curved path matches Earth\'s curvature. No engines are needed to maintain a stable orbit.',
+            distractorExplanations: {
+              0: 'Its engines constantly fire upward is incorrect; the satellite\\.',
+              1: 'There is no gravity in space is incorrect; the satellite\\.',
+              2: 'Earth\\\'s magnetic field holds it up is incorrect; the satellite\\.',
+            },
           },
           {
             id: 'sp-sec13-u1-L2-T2',
@@ -163,6 +184,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Higher orbits have weaker gravity, so less speed is needed to maintain the orbital path. Geostationary satellites move much slower than the ISS.',
+            distractorExplanations: {
+              0: 'It increases with altitude is incorrect; higher orbits have weaker gravity, so less speed is needed to maintain the orbital path. Geostationary satellites move much slower than the ISS.',
+              2: 'It stays the same at all altitudes is incorrect; higher orbits have weaker gravity, so less speed is needed to maintain the orbital path. Geostationary satellites move much slower than the ISS.',
+              3: 'It doubles every 1,000 km is incorrect; higher orbits have weaker gravity, so less speed is needed to maintain the orbital path. Geostationary satellites move much slower than the ISS.',
+            },
           },
           {
             id: 'sp-sec13-u1-L2-Q5',
@@ -202,6 +228,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'To raise an orbit, you increase speed by firing prograde (in the direction of travel). This pushes the far side of the orbit higher.',
+            distractorExplanations: {
+              1: 'Fire thrusters against the direction of travel to slow down is incorrect; to raise an orbit, you increase speed by firing prograde (in the direction of travel). This pushes the far side of the orbit higher.',
+              2: 'Turn off all systems and wait for gravity to push it higher is incorrect; to raise an orbit, you increase speed by firing prograde (in the direction of travel). This pushes the far side of the orbit higher.',
+              3: 'Deploy a parachute to catch solar wind is incorrect; to raise an orbit, you increase speed by firing prograde (in the direction of travel). This pushes the far side of the orbit higher.',
+            },
           },
         ],
       },
@@ -226,6 +257,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Low Earth Orbit satellites can see the entire Earth at once.',
             correctAnswer: false,
             explanation: 'LEO satellites are too close to see the whole planet. They see a narrow strip and must orbit many times to build a complete picture.',
+            distractorExplanations: {
+              0: 'LEO satellites are too close to see the whole planet. They see a narrow strip and must orbit many times to build a complete picture.',
+            },
           },
           {
             id: 'sp-sec13-u1-L3-Q2',
@@ -239,6 +273,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'LEO extends from about 200 km (below which atmospheric drag is too strong) up to about 2,000 km.',
+            distractorExplanations: {
+              1: '5,000 to 10,000 km is incorrect; lEO extends from about 200 km (below which atmospheric drag is too strong) up to about 2,000 km.',
+              2: '10 to 100 km is incorrect; lEO extends from about 200 km (below which atmospheric drag is too strong) up to about 2,000 km.',
+              3: '35,000 to 40,000 km is incorrect; lEO extends from about 200 km (below which atmospheric drag is too strong) up to about 2,000 km.',
+            },
           },
           {
             id: 'sp-sec13-u1-L3-T2',
@@ -284,6 +323,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'By crossing the equator at the same local time each pass, the sun angle stays consistent. This makes comparing images taken on different days much easier.',
+            distractorExplanations: {
+              0: 'The satellite hovers over one location is incorrect; by crossing the equator at the same local time each pass, the sun angle stays consistent. This makes comparing images taken on different days much easier.',
+              1: 'The fastest possible orbital speed is incorrect; by crossing the equator at the same local time each pass, the sun angle stays consistent. This makes comparing images taken on different days much easier.',
+              3: 'Coverage of only tropical regions is incorrect; by crossing the equator at the same local time each pass, the sun angle stays consistent. This makes comparing images taken on different days much easier.',
+            },
           },
           {
             id: 'sp-sec13-u1-L3-Q6',
@@ -307,6 +351,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A sun-synchronous polar orbit covers the Arctic regularly with consistent sun angles, which is ideal for long-term environmental monitoring.',
+            distractorExplanations: {
+              0: 'Geostationary orbit over the equator is incorrect; a sun-synchronous polar orbit covers the Arctic regularly with consistent sun angles, which is ideal for long-term environmental monitoring.',
+              2: 'Low equatorial orbit is incorrect; a sun-synchronous polar orbit covers the Arctic regularly with consistent sun angles, which is ideal for long-term environmental monitoring.',
+              3: 'Highly elliptical transfer orbit is incorrect; a sun-synchronous polar orbit covers the Arctic regularly with consistent sun angles, which is ideal for long-term environmental monitoring.',
+            },
           },
         ],
       },
@@ -331,6 +380,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Delta-v measures the total change in velocity a spacecraft can achieve.',
             correctAnswer: true,
             explanation: 'Delta-v is the sum of all velocity changes a spacecraft can make with its available propellant.',
+            distractorExplanations: {
+              1: 'This statement is correct because delta-v is the sum of all velocity changes a spacecraft can make with its available propellant.',
+            },
           },
           {
             id: 'sp-sec13-u1-L4-Q2',
@@ -358,6 +410,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The first burn enters the elliptical transfer orbit, and the second burn circularizes at the destination altitude.',
+            distractorExplanations: {
+              1: 'Three burns is incorrect; the first burn enters the elliptical transfer orbit, and the second burn circularizes at the destination altitude.',
+              2: 'One burn only is incorrect; the first burn enters the elliptical transfer orbit, and the second burn circularizes at the destination altitude.',
+              3: 'Continuous thrust throughout is incorrect; the first burn enters the elliptical transfer orbit, and the second burn circularizes at the destination altitude.',
+            },
           },
           {
             id: 'sp-sec13-u1-L4-Q4',
@@ -390,6 +447,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Gravity assists borrow energy from a planet\'s orbital motion, giving the spacecraft a free velocity change.',
+            distractorExplanations: {
+              0: 'It requires the most fuel of any maneuver is incorrect; gravity assists borrow energy from a planet\\.',
+              1: 'It only works for returning to Earth is incorrect; gravity assists borrow energy from a planet\\.',
+              3: 'It slows the spacecraft to a stop is incorrect; gravity assists borrow energy from a planet\\.',
+            },
           },
           {
             id: 'sp-sec13-u1-L4-Q6',
@@ -404,6 +466,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Gravity assists from inner and outer planets can provide the needed delta-v for free. Many outer solar system missions use this strategy.',
+            distractorExplanations: {
+              1: 'Cancel the mission entirely is incorrect; gravity assists from inner and outer planets can provide the needed delta-v for free. Many outer solar system missions use this strategy.',
+              2: 'Use a larger fuel tank and launch again is incorrect; gravity assists from inner and outer planets can provide the needed delta-v for free. Many outer solar system missions use this strategy.',
+              3: 'Aim for Mars instead since it is closer is incorrect; gravity assists from inner and outer planets can provide the needed delta-v for free. Many outer solar system missions use this strategy.',
+            },
           },
         ],
       },
@@ -428,6 +495,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'In space, satellites can use fans to cool their electronics like computers on Earth.',
             correctAnswer: false,
             explanation: 'There is no air in space, so convection cooling with fans is impossible. Satellites use radiators that emit heat as infrared radiation.',
+            distractorExplanations: {
+              0: 'There is no air in space, so convection cooling with fans is impossible. Satellites use radiators that emit heat as infrared radiation.',
+            },
           },
           {
             id: 'sp-sec13-u1-L5-Q2',
@@ -492,6 +562,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'At orbital velocities of 7+ km/s, even a small fleck of paint carries enough kinetic energy to pit a window or damage a component.',
+            distractorExplanations: {
+              0: 'It blocks radio signals completely is incorrect; at orbital velocities of 7+ km/s, even a small fleck of paint carries enough kinetic energy to pit a window or damage a component.',
+              2: 'Paint is toxic to satellite sensors is incorrect; at orbital velocities of 7+ km/s, even a small fleck of paint carries enough kinetic energy to pit a window or damage a component.',
+              3: 'It sticks to solar panels and adds weight is incorrect; at orbital velocities of 7+ km/s, even a small fleck of paint carries enough kinetic energy to pit a window or damage a component.',
+            },
           },
           {
             id: 'sp-sec13-u1-L5-Q7',
@@ -542,6 +617,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Radio waves travel at the speed of light in a vacuum.',
             correctAnswer: true,
             explanation: 'All electromagnetic radiation, including radio waves, travels at the speed of light (about 300,000 km/s) in a vacuum.',
+            distractorExplanations: {
+              1: 'This statement is correct because all electromagnetic radiation, including radio waves, travels at the speed of light (about 300,000 km/s) in a vacuum.',
+            },
           },
           {
             id: 'sp-sec13-u2-L1-Q2',
@@ -555,6 +633,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Radio waves propagate through vacuum without a medium, can be modulated to carry information, and can be focused using dish antennas.',
+            distractorExplanations: {
+              1: 'They travel faster than the speed of light is incorrect; radio waves propagate through vacuum without a medium, can be modulated to carry information, and can be focused using dish antennas.',
+              2: 'They are visible to the human eye is incorrect; radio waves propagate through vacuum without a medium, can be modulated to carry information, and can be focused using dish antennas.',
+              3: 'They require no energy to generate is incorrect; radio waves propagate through vacuum without a medium, can be modulated to carry information, and can be focused using dish antennas.',
+            },
           },
           {
             id: 'sp-sec13-u2-L1-T2',
@@ -585,6 +668,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'With a minimum 3-minute one-way delay (and up to 22 minutes), a round-trip exchange takes at least 6 minutes. Real-time control is impractical.',
+            distractorExplanations: {
+              0: 'Mars has no atmosphere for sound is incorrect; with a minimum 3-minute one-way delay (and up to 22 minutes), a round-trip exchange takes at least 6 minutes. Real-time control is impractical.',
+              1: 'Radio waves cannot reach Mars is incorrect; with a minimum 3-minute one-way delay (and up to 22 minutes), a round-trip exchange takes at least 6 minutes. Real-time control is impractical.',
+              2: 'Mars rovers have no microphones is incorrect; with a minimum 3-minute one-way delay (and up to 22 minutes), a round-trip exchange takes at least 6 minutes. Real-time control is impractical.',
+            },
           },
           {
             id: 'sp-sec13-u2-L1-T3',
@@ -613,6 +701,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Ka-band offers the highest data rates. Since the ground stations are in dry areas, rain attenuation is minimal, making Ka-band a great choice.',
+            distractorExplanations: {
+              0: 'S-band for maximum reliability is incorrect; ka-band offers the highest data rates. Since the ground stations are in dry areas, rain attenuation is minimal, making Ka-band a great choice.',
+              1: 'AM radio for broad coverage is incorrect; ka-band offers the highest data rates. Since the ground stations are in dry areas, rain attenuation is minimal, making Ka-band a great choice.',
+              2: 'Visible light for highest resolution is incorrect; ka-band offers the highest data rates. Since the ground stations are in dry areas, rain attenuation is minimal, making Ka-band a great choice.',
+            },
           },
         ],
       },
@@ -637,6 +730,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'The Deep Space Network has ground stations on every continent.',
             correctAnswer: false,
             explanation: 'The DSN has exactly three stations: in the USA, Spain, and Australia. They are spaced 120 degrees apart so at least one always faces any direction in space.',
+            distractorExplanations: {
+              0: 'The DSN has exactly three stations: in the USA, Spain, and Australia. They are spaced 120 degrees apart so at least one always faces any direction in space.',
+            },
           },
           {
             id: 'sp-sec13-u2-L2-Q2',
@@ -676,6 +772,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Signals from deep space are incredibly weak. A larger dish captures more energy, improving the signal-to-noise ratio.',
+            distractorExplanations: {
+              1: 'To transmit louder sounds into space is incorrect; signals from deep space are incredibly weak. A larger dish captures more energy, improving the signal-to-noise ratio.',
+              2: 'To withstand high winds is incorrect; signals from deep space are incredibly weak. A larger dish captures more energy, improving the signal-to-noise ratio.',
+              3: 'To block interference from other satellites is incorrect; signals from deep space are incredibly weak. A larger dish captures more energy, improving the signal-to-noise ratio.',
+            },
           },
           {
             id: 'sp-sec13-u2-L2-Q5',
@@ -714,6 +815,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'As Earth rotates, one station sets below the spacecraft\'s horizon while the next one rises above it. This guarantees uninterrupted communication.',
+            distractorExplanations: {
+              0: 'To minimize construction costs is incorrect; as Earth rotates, one station sets below the spacecraft\\.',
+              2: 'To avoid radio interference between stations is incorrect; as Earth rotates, one station sets below the spacecraft\\.',
+              3: 'To match the positions of continents is incorrect; as Earth rotates, one station sets below the spacecraft\\.',
+            },
           },
         ],
       },
@@ -737,6 +843,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'The downlink is the signal sent from Earth to a spacecraft.',
             correctAnswer: false,
             explanation: 'The downlink goes from spacecraft to Earth. The uplink goes from Earth to the spacecraft. Think: data comes "down" to us.',
+            distractorExplanations: {
+              0: 'The downlink goes from spacecraft to Earth. The uplink goes from Earth to the spacecraft. Think: data comes "down" to us.',
+            },
           },
           {
             id: 'sp-sec13-u2-L3-Q2',
@@ -776,6 +885,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Signal strength follows the inverse square law. Double the distance means the signal spreads over 4 times the area, making it 4 times weaker.',
+            distractorExplanations: {
+              0: 'It halves is incorrect; signal strength follows the inverse square law. Double the distance means the signal spreads over 4 times the area, making it 4 times weaker.',
+              1: 'It stays the same is incorrect; signal strength follows the inverse square law. Double the distance means the signal spreads over 4 times the area, making it 4 times weaker.',
+              2: 'It doubles is incorrect; signal strength follows the inverse square law. Double the distance means the signal spreads over 4 times the area, making it 4 times weaker.',
+            },
           },
           {
             id: 'sp-sec13-u2-L3-Q5',
@@ -803,6 +917,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Compression reduces the number of bits that must be transmitted. With very low data rates, this means more science data can be returned in the available time.',
+            distractorExplanations: {
+              0: 'To make the signal travel faster is incorrect; compression reduces the number of bits that must be transmitted. With very low data rates, this means more science data can be returned in the available time.',
+              2: 'To encrypt the data for security is incorrect; compression reduces the number of bits that must be transmitted. With very low data rates, this means more science data can be returned in the available time.',
+              3: 'To reduce the power needed by ground stations is incorrect; compression reduces the number of bits that must be transmitted. With very low data rates, this means more science data can be returned in the available time.',
+            },
           },
           {
             id: 'sp-sec13-u2-L3-Q7',
@@ -817,6 +936,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Lossy compression can shrink image data by 3x or more while preserving most of the scientific value, fitting all 500 images into the 4-hour window.',
+            distractorExplanations: {
+              0: 'Send only the first 100 images and discard the rest is incorrect; lossy compression can shrink image data by 3x or more while preserving most of the scientific value, fitting all 500 images into the 4-hour window.',
+              1: 'Wait 3 days and send them all uncompressed is incorrect; lossy compression can shrink image data by 3x or more while preserving most of the scientific value, fitting all 500 images into the 4-hour window.',
+              3: 'Boost transmitter power to triple the data rate is incorrect; lossy compression can shrink image data by 3x or more while preserving most of the scientific value, fitting all 500 images into the 4-hour window.',
+            },
           },
         ],
       },
@@ -841,6 +965,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'A high-gain antenna sends a wide signal in all directions.',
             correctAnswer: false,
             explanation: 'A high-gain antenna focuses energy into a narrow beam aimed at Earth. This is what gives it a strong signal and high data rate. Low-gain antennas broadcast widely.',
+            distractorExplanations: {
+              0: 'A high-gain antenna focuses energy into a narrow beam aimed at Earth. This is what gives it a strong signal and high data rate. Low-gain antennas broadcast widely.',
+            },
           },
           {
             id: 'sp-sec13-u2-L4-Q2',
@@ -869,6 +996,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'With signal delays of minutes to hours, asking for retransmission wastes precious time. Error correction lets receivers fix most errors on the first try.',
+            distractorExplanations: {
+              0: 'Signals are already encrypted is incorrect; with signal delays of minutes to hours, asking for retransmission wastes precious time. Error correction lets receivers fix most errors on the first try.',
+              1: 'Ground stations have unlimited bandwidth is incorrect; with signal delays of minutes to hours, asking for retransmission wastes precious time. Error correction lets receivers fix most errors on the first try.',
+              3: 'Deep space signals are perfectly clean is incorrect; with signal delays of minutes to hours, asking for retransmission wastes precious time. Error correction lets receivers fix most errors on the first try.',
+            },
           },
           {
             id: 'sp-sec13-u2-L4-Q4',
@@ -896,6 +1028,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Relay orbiters receive data from the rover, store it, then transmit it to Earth when they have line-of-sight to ground stations.',
+            distractorExplanations: {
+              0: 'They boost the rover\\\'s transmitter power remotely is incorrect; relay orbiters receive data from the rover, store it, then transmit it to Earth when they have line-of-sight to ground stations.',
+              2: 'They convert radio waves to visible light is incorrect; relay orbiters receive data from the rover, store it, then transmit it to Earth when they have line-of-sight to ground stations.',
+              3: 'They physically carry data between planets is incorrect; relay orbiters receive data from the rover, store it, then transmit it to Earth when they have line-of-sight to ground stations.',
+            },
           },
           {
             id: 'sp-sec13-u2-L4-Q6',
@@ -919,6 +1056,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Using multiple relay passes throughout the day maximizes total transmission time. The orbiter can store data and forward it to Earth with its more powerful transmitter.',
+            distractorExplanations: {
+              0: 'Wait until the rover can see Earth for a full day is incorrect; using multiple relay passes throughout the day maximizes total transmission time. The orbiter can store data and forward it to Earth with its more powerful transmitter.',
+              1: 'Point the rover antenna at Jupiter as a relay is incorrect; using multiple relay passes throughout the day maximizes total transmission time. The orbiter can store data and forward it to Earth with its more powerful transmitter.',
+              3: 'Compress the data to fit into one 30-minute window is incorrect; using multiple relay passes throughout the day maximizes total transmission time. The orbiter can store data and forward it to Earth with its more powerful transmitter.',
+            },
           },
         ],
       },
@@ -943,6 +1085,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Laser communication can achieve higher data rates than radio because the beam is more focused.',
             correctAnswer: true,
             explanation: 'A tighter beam concentrates more signal energy on the receiver, dramatically improving the signal-to-noise ratio and achievable data rate.',
+            distractorExplanations: {
+              1: 'This statement is correct because a tighter beam concentrates more signal energy on the receiver, dramatically improving the signal-to-noise ratio and achievable data rate.',
+            },
           },
           {
             id: 'sp-sec13-u2-L5-Q2',
@@ -956,6 +1101,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Near-infrared wavelengths (around 1,550 nm) are commonly used because they align with existing fiber-optic technology and detector capabilities.',
+            distractorExplanations: {
+              0: 'Ultraviolet is incorrect; near-infrared wavelengths (around 1,550 nm) are commonly used because they align with existing fiber-optic technology and detector capabilities.',
+              1: 'Visible blue light is incorrect; near-infrared wavelengths (around 1,550 nm) are commonly used because they align with existing fiber-optic technology and detector capabilities.',
+              3: 'Gamma rays is incorrect; near-infrared wavelengths (around 1,550 nm) are commonly used because they align with existing fiber-optic technology and detector capabilities.',
+            },
           },
           {
             id: 'sp-sec13-u2-L5-T2',
@@ -1001,6 +1151,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Radio signals pass through clouds and rain, providing a dependable backup. Lasers deliver high bandwidth when skies are clear.',
+            distractorExplanations: {
+              0: 'Radio is cheaper so it saves money is incorrect; radio signals pass through clouds and rain, providing a dependable backup. Lasers deliver high bandwidth when skies are clear.',
+              1: 'Lasers fail in all conditions is incorrect; radio signals pass through clouds and rain, providing a dependable backup. Lasers deliver high bandwidth when skies are clear.',
+              3: 'They use the same antenna is incorrect; radio signals pass through clouds and rain, providing a dependable backup. Lasers deliver high bandwidth when skies are clear.',
+            },
           },
           {
             id: 'sp-sec13-u2-L5-Q6',
@@ -1014,6 +1169,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'A hybrid approach maximizes data throughput with lasers while maintaining reliable command-and-control through radio. This is the direction NASA and ESA are heading.',
+            distractorExplanations: {
+              0: 'Radio-only with a very large dish antenna is incorrect; a hybrid approach maximizes data throughput with lasers while maintaining reliable command-and-control through radio. This is the direction NASA and ESA are heading.',
+              1: 'Laser-only with no radio backup is incorrect; a hybrid approach maximizes data throughput with lasers while maintaining reliable command-and-control through radio. This is the direction NASA and ESA are heading.',
+              2: 'Physical return of hard drives on cargo ships is incorrect; a hybrid approach maximizes data throughput with lasers while maintaining reliable command-and-control through radio. This is the direction NASA and ESA are heading.',
+            },
           },
           {
             id: 'sp-sec13-u2-L5-Q7',
@@ -1064,6 +1224,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Solar panels are the most common power source for spacecraft in the inner solar system.',
             correctAnswer: true,
             explanation: 'Within Jupiter\'s orbit, sunlight is strong enough for solar panels to generate useful power. Most satellites, probes, and the ISS use them.',
+            distractorExplanations: {
+              1: 'This statement is correct because within Jupiter\\.',
+            },
           },
           {
             id: 'sp-sec13-u3-L1-Q2',
@@ -1077,6 +1240,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Photovoltaic cells use the photoelectric effect. Photons knock electrons loose in semiconductor material, creating an electric current.',
+            distractorExplanations: {
+              1: 'They burn fuel using sunlight as an igniter is incorrect; photovoltaic cells use the photoelectric effect. Photons knock electrons loose in semiconductor material, creating an electric current.',
+              2: 'They heat water to spin a turbine is incorrect; photovoltaic cells use the photoelectric effect. Photons knock electrons loose in semiconductor material, creating an electric current.',
+              3: 'They collect solar wind particles is incorrect; photovoltaic cells use the photoelectric effect. Photons knock electrons loose in semiconductor material, creating an electric current.',
+            },
           },
           {
             id: 'sp-sec13-u3-L1-T2',
@@ -1132,6 +1300,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'At Jupiter, solar intensity is only about 3.7% of Earth levels. The panels would need to be enormous to generate useful power.',
+            distractorExplanations: {
+              0: 'Jupiter\\\'s magnetic field destroys them is incorrect; at Jupiter, solar intensity is only about 3.7% of Earth levels. The panels would need to be enormous to generate useful power.',
+              1: 'Solar wind blows them off the spacecraft is incorrect; at Jupiter, solar intensity is only about 3.7% of Earth levels. The panels would need to be enormous to generate useful power.',
+              3: 'They freeze and shatter in the cold is incorrect; at Jupiter, solar intensity is only about 3.7% of Earth levels. The panels would need to be enormous to generate useful power.',
+            },
           },
           {
             id: 'sp-sec13-u3-L1-Q7',
@@ -1146,6 +1319,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'For an Earth-orbiting satellite needing moderate power, solar panels are the proven, cost-effective choice. Batteries cover eclipse periods when the satellite is in Earth\'s shadow.',
+            distractorExplanations: {
+              0: 'A nuclear reactor for maximum power is incorrect; for an Earth-orbiting satellite needing moderate power, solar panels are the proven, cost-effective choice. Batteries cover eclipse periods when the satellite is in Earth\\.',
+              1: 'Chemical fuel cells that burn hydrogen is incorrect; for an Earth-orbiting satellite needing moderate power, solar panels are the proven, cost-effective choice. Batteries cover eclipse periods when the satellite is in Earth\\.',
+              2: 'A radioisotope thermoelectric generator is incorrect; for an Earth-orbiting satellite needing moderate power, solar panels are the proven, cost-effective choice. Batteries cover eclipse periods when the satellite is in Earth\\.',
+            },
           },
         ],
       },
@@ -1170,6 +1348,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'RTGs use nuclear fission reactions like a nuclear power plant.',
             correctAnswer: false,
             explanation: 'RTGs use the natural radioactive decay of plutonium-238, not fission chain reactions. They are much simpler and smaller than nuclear reactors.',
+            distractorExplanations: {
+              0: 'RTGs use the natural radioactive decay of plutonium-238, not fission chain reactions. They are much simpler and smaller than nuclear reactors.',
+            },
           },
           {
             id: 'sp-sec13-u3-L2-Q2',
@@ -1208,6 +1389,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'RTGs rely on radioactive decay, not sunlight. They produce steady power whether near the Sun or in the darkness of interstellar space.',
+            distractorExplanations: {
+              0: 'They weigh less than solar panels is incorrect; rTGs rely on radioactive decay, not sunlight. They produce steady power whether near the Sun or in the darkness of interstellar space.',
+              1: 'They produce more power than solar panels at any distance is incorrect; rTGs rely on radioactive decay, not sunlight. They produce steady power whether near the Sun or in the darkness of interstellar space.',
+              3: 'They are cheaper to manufacture than solar panels is incorrect; rTGs rely on radioactive decay, not sunlight. They produce steady power whether near the Sun or in the darkness of interstellar space.',
+            },
           },
           {
             id: 'sp-sec13-u3-L2-Q5',
@@ -1240,6 +1426,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'As plutonium-238 decays, less radioactive material remains to produce heat. Thermocouple junctions also degrade over time, reducing conversion efficiency.',
+            distractorExplanations: {
+              0: 'Solar radiation damages the RTG casing is incorrect; as plutonium-238 decays, less radioactive material remains to produce heat. Thermocouple junctions also degrade over time, reducing conversion efficiency.',
+              2: 'The plutonium runs out of fuel is incorrect; as plutonium-238 decays, less radioactive material remains to produce heat. Thermocouple junctions also degrade over time, reducing conversion efficiency.',
+              3: 'Micrometeorites destroy the thermocouple wiring is incorrect; as plutonium-238 decays, less radioactive material remains to produce heat. Thermocouple junctions also degrade over time, reducing conversion efficiency.',
+            },
           },
           {
             id: 'sp-sec13-u3-L2-Q7',
@@ -1273,6 +1464,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Spacecraft batteries are only used once and then discarded.',
             correctAnswer: false,
             explanation: 'Most spacecraft use rechargeable batteries that charge during sunlight and discharge during eclipses. They cycle thousands of times over the mission lifetime.',
+            distractorExplanations: {
+              0: 'Most spacecraft use rechargeable batteries that charge during sunlight and discharge during eclipses. They cycle thousands of times over the mission lifetime.',
+            },
           },
           {
             id: 'sp-sec13-u3-L3-Q2',
@@ -1303,6 +1497,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Lithium-ion batteries offer the best energy density and cycle life. The ISS switched from nickel-hydrogen to lithium-ion batteries in 2017.',
+            distractorExplanations: {
+              0: 'Lead-acid is incorrect; lithium-ion batteries offer the best energy density and cycle life. The ISS switched from nickel-hydrogen to lithium-ion batteries in 2017.',
+              1: 'Nickel-cadmium is incorrect; lithium-ion batteries offer the best energy density and cycle life. The ISS switched from nickel-hydrogen to lithium-ion batteries in 2017.',
+              2: 'Alkaline is incorrect; lithium-ion batteries offer the best energy density and cycle life. The ISS switched from nickel-hydrogen to lithium-ion batteries in 2017.',
+            },
           },
           {
             id: 'sp-sec13-u3-L3-Q4',
@@ -1331,6 +1530,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Shallower cycling puts less stress on battery chemistry. A satellite that orbits 16 times per day for 15 years needs over 87,000 charge cycles.',
+            distractorExplanations: {
+              0: 'Deeper discharge makes the battery hotter is incorrect; shallower cycling puts less stress on battery chemistry. A satellite that orbits 16 times per day for 15 years needs over 87,000 charge cycles.',
+              2: 'The battery cannot physically discharge more is incorrect; shallower cycling puts less stress on battery chemistry. A satellite that orbits 16 times per day for 15 years needs over 87,000 charge cycles.',
+              3: 'It reduces the weight of the battery is incorrect; shallower cycling puts less stress on battery chemistry. A satellite that orbits 16 times per day for 15 years needs over 87,000 charge cycles.',
+            },
           },
           {
             id: 'sp-sec13-u3-L3-Q6',
@@ -1353,6 +1557,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Oversizing batteries by 3 to 4x keeps DoD at 25 to 30%, ensuring they survive 87,000+ cycles over 15 years. Exact-sizing would mean 100% DoD, killing the battery in months.',
+            distractorExplanations: {
+              0: 'Batteries sized for exactly 500 watts for 36 minutes is incorrect; oversizing batteries by 3 to 4x keeps DoD at 25 to 30%, ensuring they survive 87,000+ cycles over 15 years. Exact-sizing would mean 100% DoD, killing the battery in months.',
+              1: 'The smallest possible batteries to save weight is incorrect; oversizing batteries by 3 to 4x keeps DoD at 25 to 30%, ensuring they survive 87,000+ cycles over 15 years. Exact-sizing would mean 100% DoD, killing the battery in months.',
+              2: 'Non-rechargeable batteries replaced by astronauts yearly is incorrect; oversizing batteries by 3 to 4x keeps DoD at 25 to 30%, ensuring they survive 87,000+ cycles over 15 years. Exact-sizing would mean 100% DoD, killing the battery in months.',
+            },
           },
         ],
       },
@@ -1376,6 +1585,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Solar panels are the best power source for every space mission regardless of destination.',
             correctAnswer: false,
             explanation: 'Solar panels work well in the inner solar system, but missions to the outer planets, interstellar space, or dusty surfaces often need RTGs instead.',
+            distractorExplanations: {
+              0: 'Solar panels work well in the inner solar system, but missions to the outer planets, interstellar space, or dusty surfaces often need RTGs instead.',
+            },
           },
           {
             id: 'sp-sec13-u3-L4-Q2',
@@ -1413,6 +1625,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Spirit relied on solar panels. Over time, dust accumulated and reduced power output. A harsh Martian winter finally drained the batteries completely.',
+            distractorExplanations: {
+              1: 'Its RTG ran out of plutonium is incorrect; spirit relied on solar panels. Over time, dust accumulated and reduced power output. A harsh Martian winter finally drained the batteries completely.',
+              2: 'A software bug shut down the power system is incorrect; spirit relied on solar panels. Over time, dust accumulated and reduced power output. A harsh Martian winter finally drained the batteries completely.',
+              3: 'A meteorite destroyed its battery pack is incorrect; spirit relied on solar panels. Over time, dust accumulated and reduced power output. A harsh Martian winter finally drained the batteries completely.',
+            },
           },
           {
             id: 'sp-sec13-u3-L4-T3',
@@ -1432,6 +1649,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Hydrogen fuel cells combine hydrogen and oxygen to produce electricity and pure water. On Apollo missions, astronauts actually drank the water byproduct.',
+            distractorExplanations: {
+              0: 'Helium gas is incorrect; hydrogen fuel cells combine hydrogen and oxygen to produce electricity and pure water. On Apollo missions, astronauts actually drank the water byproduct.',
+              1: 'Carbon dioxide is incorrect; hydrogen fuel cells combine hydrogen and oxygen to produce electricity and pure water. On Apollo missions, astronauts actually drank the water byproduct.',
+              3: 'Nitrogen is incorrect; hydrogen fuel cells combine hydrogen and oxygen to produce electricity and pure water. On Apollo missions, astronauts actually drank the water byproduct.',
+            },
           },
           {
             id: 'sp-sec13-u3-L4-Q6',
@@ -1457,6 +1679,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Nuclear reactors provide continuous, reliable power regardless of sunlight. Multiple Kilopower units can meet the 40 kW demand through the long lunar nights. RTGs produce too little power, and batteries for 200 hours would be impractically heavy.',
+            distractorExplanations: {
+              0: 'Solar panels only with massive battery banks is incorrect; nuclear reactors provide continuous, reliable power regardless of sunlight. Multiple Kilopower units can meet the 40 kW demand through the long lunar nights. RTGs produce too little power, and batteries for 200 hours would be impractically heavy.',
+              1: 'A single large RTG is incorrect; nuclear reactors provide continuous, reliable power regardless of sunlight. Multiple Kilopower units can meet the 40 kW demand through the long lunar nights. RTGs produce too little power, and batteries for 200 hours would be impractically heavy.',
+              3: 'Fuel cells with unlimited hydrogen supply is incorrect; nuclear reactors provide continuous, reliable power regardless of sunlight. Multiple Kilopower units can meet the 40 kW demand through the long lunar nights. RTGs produce too little power, and batteries for 200 hours would be impractically heavy.',
+            },
           },
         ],
       },
@@ -1481,6 +1708,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Engineers design solar panels to meet power requirements at end-of-life, not beginning.',
             correctAnswer: true,
             explanation: 'Since panels degrade over time, designing for end-of-life ensures the satellite has enough power throughout its entire mission.',
+            distractorExplanations: {
+              1: 'This statement is correct because since panels degrade over time, designing for end-of-life ensures the satellite has enough power throughout its entire mission.',
+            },
           },
           {
             id: 'sp-sec13-u3-L5-Q2',
@@ -1511,6 +1741,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Most electrical energy eventually becomes heat. A spacecraft generating 10 kW might need to radiate 6 to 7 kW of waste heat.',
+            distractorExplanations: {
+              1: 'Radiators generate additional power from sunlight is incorrect; most electrical energy eventually becomes heat. A spacecraft generating 10 kW might need to radiate 6 to 7 kW of waste heat.',
+              2: 'More power means less heat generation is incorrect; most electrical energy eventually becomes heat. A spacecraft generating 10 kW might need to radiate 6 to 7 kW of waste heat.',
+              3: 'Larger panels block the radiator\\\'s view of space is incorrect; most electrical energy eventually becomes heat. A spacecraft generating 10 kW might need to radiate 6 to 7 kW of waste heat.',
+            },
           },
           {
             id: 'sp-sec13-u3-L5-Q4',
@@ -1550,6 +1785,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Before Juno, all Jupiter missions used RTGs. Juno proved that with large enough arrays and efficient cells, solar power is viable even at 5.2 AU from the Sun.',
+            distractorExplanations: {
+              0: 'It was the first satellite to use solar panels is incorrect; before Juno, all Jupiter missions used RTGs. Juno proved that with large enough arrays and efficient cells, solar power is viable even at 5.2 AU from the Sun.',
+              1: 'Its panels were smaller than any previous spacecraft is incorrect; before Juno, all Jupiter missions used RTGs. Juno proved that with large enough arrays and efficient cells, solar power is viable even at 5.2 AU from the Sun.',
+              2: 'It generated more power at Jupiter than at Earth is incorrect; before Juno, all Jupiter missions used RTGs. Juno proved that with large enough arrays and efficient cells, solar power is viable even at 5.2 AU from the Sun.',
+            },
           },
           {
             id: 'sp-sec13-u3-L5-Q7',
@@ -1563,6 +1803,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Designing for end-of-life with additional margin ensures the satellite works throughout its full mission even with degradation and unexpected issues.',
+            distractorExplanations: {
+              0: 'Design for beginning-of-life power requirements is incorrect; designing for end-of-life with additional margin ensures the satellite works throughout its full mission even with degradation and unexpected issues.',
+              1: 'Design for average power over the mission is incorrect; designing for end-of-life with additional margin ensures the satellite works throughout its full mission even with degradation and unexpected issues.',
+              2: 'Use the smallest system that works at launch is incorrect; designing for end-of-life with additional margin ensures the satellite works throughout its full mission even with degradation and unexpected issues.',
+            },
           },
         ],
       },
@@ -1605,6 +1850,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The bus is the spacecraft platform containing structure, power, propulsion, computers, and thermal control. The payload rides on the bus.',
+            distractorExplanations: {
+              0: 'The launch vehicle that carries the satellite is incorrect; the bus is the spacecraft platform containing structure, power, propulsion, computers, and thermal control. The payload rides on the bus.',
+              2: 'The mission-specific camera or sensor is incorrect; the bus is the spacecraft platform containing structure, power, propulsion, computers, and thermal control. The payload rides on the bus.',
+              3: 'The ground station that controls the satellite is incorrect; the bus is the spacecraft platform containing structure, power, propulsion, computers, and thermal control. The payload rides on the bus.',
+            },
           },
           {
             id: 'sp-sec13-u4-L1-Q2',
@@ -1646,6 +1896,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A Hohmann transfer uses two burns: one to enter the elliptical transfer orbit, and one to circularize at the target altitude.',
+            distractorExplanations: {
+              1: 'Three is incorrect; a Hohmann transfer uses two burns: one to enter the elliptical transfer orbit, and one to circularize at the target altitude.',
+              2: 'One is incorrect; a Hohmann transfer uses two burns: one to enter the elliptical transfer orbit, and one to circularize at the target altitude.',
+              3: 'Continuous thrust is incorrect; a Hohmann transfer uses two burns: one to enter the elliptical transfer orbit, and one to circularize at the target altitude.',
+            },
           },
           {
             id: 'sp-sec13-u4-L1-Q6',
@@ -1660,6 +1915,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'GEO satellites appear stationary above the equator, providing continuous coverage to a fixed region. Dish antennas can be permanently pointed at them.',
+            distractorExplanations: {
+              0: 'Low Earth polar orbit is incorrect; gEO satellites appear stationary above the equator, providing continuous coverage to a fixed region. Dish antennas can be permanently pointed at them.',
+              2: 'Sun-synchronous orbit is incorrect; gEO satellites appear stationary above the equator, providing continuous coverage to a fixed region. Dish antennas can be permanently pointed at them.',
+              3: 'Highly elliptical Molniya orbit is incorrect; gEO satellites appear stationary above the equator, providing continuous coverage to a fixed region. Dish antennas can be permanently pointed at them.',
+            },
           },
           {
             id: 'sp-sec13-u4-L1-Q7',
@@ -1706,6 +1966,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The DSN has three stations (Goldstone, Madrid, Canberra) spaced 120 degrees apart for continuous sky coverage.',
+            distractorExplanations: {
+              1: 'Five is incorrect; the DSN has three stations (Goldstone, Madrid, Canberra) spaced 120 degrees apart for continuous sky coverage.',
+              2: 'Two is incorrect; the DSN has three stations (Goldstone, Madrid, Canberra) spaced 120 degrees apart for continuous sky coverage.',
+              3: 'Ten is incorrect; the DSN has three stations (Goldstone, Madrid, Canberra) spaced 120 degrees apart for continuous sky coverage.',
+            },
           },
           {
             id: 'sp-sec13-u4-L2-Q3',
@@ -1736,6 +2001,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The narrow laser beam concentrates more energy on the receiver, enabling dramatically higher data rates compared to radio.',
+            distractorExplanations: {
+              0: 'Lasers work through clouds easily is incorrect; the narrow laser beam concentrates more energy on the receiver, enabling dramatically higher data rates compared to radio.',
+              1: 'Lasers require no pointing accuracy is incorrect; the narrow laser beam concentrates more energy on the receiver, enabling dramatically higher data rates compared to radio.',
+              2: 'Lasers cost less than radio systems is incorrect; the narrow laser beam concentrates more energy on the receiver, enabling dramatically higher data rates compared to radio.',
+            },
           },
           {
             id: 'sp-sec13-u4-L2-Q6',
@@ -1750,6 +2020,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Mars relay orbiters (like MRO) pass overhead regularly and can receive data from the rover, store it, and forward it to Earth with their more powerful transmitters.',
+            distractorExplanations: {
+              0: 'Wait until Earth is visible and transmit directly is incorrect; mars relay orbiters (like MRO) pass overhead regularly and can receive data from the rover, store it, and forward it to Earth with their more powerful transmitters.',
+              1: 'Use a laser beam to bounce off the Moon to Earth is incorrect; mars relay orbiters (like MRO) pass overhead regularly and can receive data from the rover, store it, and forward it to Earth with their more powerful transmitters.',
+              2: 'Store data indefinitely until a crewed mission arrives is incorrect; mars relay orbiters (like MRO) pass overhead regularly and can receive data from the rover, store it, and forward it to Earth with their more powerful transmitters.',
+            },
           },
           {
             id: 'sp-sec13-u4-L2-Q7',
@@ -1757,6 +2032,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Error correction codes allow receivers to fix corrupted bits without requesting retransmission.',
             correctAnswer: true,
             explanation: 'Forward error correction adds redundant bits so the receiver can detect and repair errors. This is essential when retransmission delays are measured in minutes or hours.',
+            distractorExplanations: {
+              1: 'This statement is correct because forward error correction adds redundant bits so the receiver can detect and repair errors. This is essential when retransmission delays are measured in minutes or hours.',
+            },
           },
         ],
       },
@@ -1795,6 +2073,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Plutonium-238 provides steady heat for decades through natural radioactive decay. Its half-life of 87.7 years makes it ideal for long missions.',
+            distractorExplanations: {
+              0: 'Uranium-235 is incorrect; plutonium-238 provides steady heat for decades through natural radioactive decay. Its half-life of 87.7 years makes it ideal for long missions.',
+              1: 'Cobalt-60 is incorrect; plutonium-238 provides steady heat for decades through natural radioactive decay. Its half-life of 87.7 years makes it ideal for long missions.',
+              2: 'Cesium-137 is incorrect; plutonium-238 provides steady heat for decades through natural radioactive decay. Its half-life of 87.7 years makes it ideal for long missions.',
+            },
           },
           {
             id: 'sp-sec13-u4-L3-Q3',
@@ -1827,6 +2110,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Juno demonstrated that with large enough arrays, solar power is viable even at Jupiter\'s distance (5.2 AU), where sunlight is just 3.7% of Earth levels.',
+            distractorExplanations: {
+              0: 'It was the first satellite to orbit Jupiter is incorrect; juno demonstrated that with large enough arrays, solar power is viable even at Jupiter\\.',
+              2: 'Its panels were made of a new material is incorrect; juno demonstrated that with large enough arrays, solar power is viable even at Jupiter\\.',
+              3: 'It generated more power than any RTG is incorrect; juno demonstrated that with large enough arrays, solar power is viable even at Jupiter\\.',
+            },
           },
           {
             id: 'sp-sec13-u4-L3-Q6',
@@ -1850,6 +2138,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'At 40 AU, solar power is negligible. Batteries and fuel cells cannot last 20 years. An RTG provides steady, reliable power from radioactive decay for decades.',
+            distractorExplanations: {
+              0: 'Massive solar panel arrays is incorrect; at 40 AU, solar power is negligible. Batteries and fuel cells cannot last 20 years. An RTG provides steady, reliable power from radioactive decay for decades.',
+              2: 'Lithium-ion batteries pre-charged at launch is incorrect; at 40 AU, solar power is negligible. Batteries and fuel cells cannot last 20 years. An RTG provides steady, reliable power from radioactive decay for decades.',
+              3: 'A hydrogen fuel cell with large tanks is incorrect; at 40 AU, solar power is negligible. Batteries and fuel cells cannot last 20 years. An RTG provides steady, reliable power from radioactive decay for decades.',
+            },
           },
         ],
       },
@@ -1887,6 +2180,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Space naturally provides stable pressure and temperature for humans.',
             correctAnswer: false,
             explanation: 'Space is a near-perfect vacuum at about -270 C in the shade. Without artificial life support, a human would not survive more than a minute or two.',
+            distractorExplanations: {
+              0: 'Space is a near-perfect vacuum at about -270 C in the shade. Without artificial life support, a human would not survive more than a minute or two.',
+            },
           },
           {
             id: 'sp-sec13-u5-L1-Q2',
@@ -1953,6 +2249,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'A Mars mission cannot receive quick resupply from Earth. Recycling water and air is essential to reduce the mass that must be launched.',
+            distractorExplanations: {
+              0: 'Mars has breathable air that just needs filtering is incorrect; a Mars mission cannot receive quick resupply from Earth. Recycling water and air is essential to reduce the mass that must be launched.',
+              1: 'Open-loop systems weigh less than closed-loop is incorrect; a Mars mission cannot receive quick resupply from Earth. Recycling water and air is essential to reduce the mass that must be launched.',
+              2: 'Mars has abundant liquid water on the surface is incorrect; a Mars mission cannot receive quick resupply from Earth. Recycling water and air is essential to reduce the mass that must be launched.',
+            },
           },
         ],
       },
@@ -1976,6 +2277,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'The ISS carries all its oxygen in tanks launched from Earth.',
             correctAnswer: false,
             explanation: 'While backup oxygen tanks exist, most ISS oxygen is generated onboard by splitting water via electrolysis.',
+            distractorExplanations: {
+              0: 'While backup oxygen tanks exist, most ISS oxygen is generated onboard by splitting water via electrolysis.',
+            },
           },
           {
             id: 'sp-sec13-u5-L2-Q2',
@@ -2003,6 +2307,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Zeolite beds adsorb CO2 when cool and release it when heated. This allows the beds to be regenerated and reused, unlike consumable scrubbers.',
+            distractorExplanations: {
+              0: 'Activated charcoal is incorrect; zeolite beds adsorb CO2 when cool and release it when heated. This allows the beds to be regenerated and reused, unlike consumable scrubbers.',
+              2: 'Calcium hydroxide is incorrect; zeolite beds adsorb CO2 when cool and release it when heated. This allows the beds to be regenerated and reused, unlike consumable scrubbers.',
+              3: 'Silica gel is incorrect; zeolite beds adsorb CO2 when cool and release it when heated. This allows the beds to be regenerated and reused, unlike consumable scrubbers.',
+            },
           },
           {
             id: 'sp-sec13-u5-L2-Q4',
@@ -2047,6 +2356,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The Apollo 1 fire in 1967, which killed three astronauts, was fueled by the pure oxygen atmosphere. Modern spacecraft use a nitrogen-oxygen mix to reduce fire risk.',
+            distractorExplanations: {
+              0: 'Pure oxygen is too expensive to produce is incorrect; the Apollo 1 fire in 1967, which killed three astronauts, was fueled by the pure oxygen atmosphere. Modern spacecraft use a nitrogen-oxygen mix to reduce fire risk.',
+              1: 'Astronauts cannot breathe pure oxygen is incorrect; the Apollo 1 fire in 1967, which killed three astronauts, was fueled by the pure oxygen atmosphere. Modern spacecraft use a nitrogen-oxygen mix to reduce fire risk.',
+              3: 'Pure oxygen corrodes spacecraft walls is incorrect; the Apollo 1 fire in 1967, which killed three astronauts, was fueled by the pure oxygen atmosphere. Modern spacecraft use a nitrogen-oxygen mix to reduce fire risk.',
+            },
           },
           {
             id: 'sp-sec13-u5-L2-Q7',
@@ -2080,6 +2394,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'The ISS Water Recovery System can recycle urine into drinking water.',
             correctAnswer: true,
             explanation: 'The system processes urine through distillation and catalytic oxidation to produce clean water. It recovers about 90% of all water on the station.',
+            distractorExplanations: {
+              1: 'This statement is correct because the system processes urine through distillation and catalytic oxidation to produce clean water. It recovers about 90% of all water on the station.',
+            },
           },
           {
             id: 'sp-sec13-u5-L3-Q2',
@@ -2093,6 +2410,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The Water Recovery System collects water from multiple sources including cabin humidity, perspiration, and urine to maximize recovery.',
+            distractorExplanations: {
+              0: 'Only condensation from the air is incorrect; the Water Recovery System collects water from multiple sources including cabin humidity, perspiration, and urine to maximize recovery.',
+              1: 'Only water tanks launched from Earth is incorrect; the Water Recovery System collects water from multiple sources including cabin humidity, perspiration, and urine to maximize recovery.',
+              3: 'Rainwater collected in orbit is incorrect; the Water Recovery System collects water from multiple sources including cabin humidity, perspiration, and urine to maximize recovery.',
+            },
           },
           {
             id: 'sp-sec13-u5-L3-T2',
@@ -2152,6 +2474,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Growing even a small portion of food onboard reduces the mass that must be launched, which directly saves fuel and cost. Fresh food also provides important vitamins and morale benefits.',
+            distractorExplanations: {
+              0: 'It entertains the crew during the long journey is incorrect; growing even a small portion of food onboard reduces the mass that must be launched, which directly saves fuel and cost. Fresh food also provides important vitamins and morale benefits.',
+              2: 'Earth food loses all nutrition after 2 weeks is incorrect; growing even a small portion of food onboard reduces the mass that must be launched, which directly saves fuel and cost. Fresh food also provides important vitamins and morale benefits.',
+              3: 'Mars has ideal soil for farming is incorrect; growing even a small portion of food onboard reduces the mass that must be launched, which directly saves fuel and cost. Fresh food also provides important vitamins and morale benefits.',
+            },
           },
           {
             id: 'sp-sec13-u5-L3-Q7',
@@ -2166,6 +2493,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Repairing the recycler is the highest priority since the crew depends on it for the remaining months. Water conservation extends reserves while repairs are made.',
+            distractorExplanations: {
+              0: 'Ration water to 1 liter per person per day is incorrect; repairing the recycler is the highest priority since the crew depends on it for the remaining months. Water conservation extends reserves while repairs are made.',
+              1: 'Abort the mission and return to Earth immediately is incorrect; repairing the recycler is the highest priority since the crew depends on it for the remaining months. Water conservation extends reserves while repairs are made.',
+              3: 'Melt the backup ice reserves and ignore the recycler is incorrect; repairing the recycler is the highest priority since the crew depends on it for the remaining months. Water conservation extends reserves while repairs are made.',
+            },
           },
         ],
       },
@@ -2190,6 +2522,9 @@ export const spaceSection13Part1: Unit[] = [
             question: 'Earth\'s magnetic field protects ISS astronauts from most galactic cosmic rays.',
             correctAnswer: true,
             explanation: 'The ISS orbits within Earth\'s magnetosphere, which deflects most charged particles. Astronauts on Mars missions would not have this protection.',
+            distractorExplanations: {
+              1: 'This statement is correct because the ISS orbits within Earth\\.',
+            },
           },
           {
             id: 'sp-sec13-u5-L4-Q2',
@@ -2218,6 +2553,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Hydrogen nuclei (protons) are close in mass to incoming particles, making energy transfer during collisions very efficient. This slows and stops the radiation.',
+            distractorExplanations: {
+              1: 'They reflect radiation like a mirror is incorrect; hydrogen nuclei (protons) are close in mass to incoming particles, making energy transfer during collisions very efficient. This slows and stops the radiation.',
+              2: 'They are the heaviest materials available is incorrect; hydrogen nuclei (protons) are close in mass to incoming particles, making energy transfer during collisions very efficient. This slows and stops the radiation.',
+              3: 'They generate a magnetic field is incorrect; hydrogen nuclei (protons) are close in mass to incoming particles, making energy transfer during collisions very efficient. This slows and stops the radiation.',
+            },
           },
           {
             id: 'sp-sec13-u5-L4-Q4',
@@ -2245,6 +2585,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'A storm shelter is a small area with extra radiation shielding. Astronauts retreat there during the hours or days of a solar particle event.',
+            distractorExplanations: {
+              0: 'An escape pod for landing on a planet is incorrect; a storm shelter is a small area with extra radiation shielding. Astronauts retreat there during the hours or days of a solar particle event.',
+              1: 'A storage room for emergency food supplies is incorrect; a storm shelter is a small area with extra radiation shielding. Astronauts retreat there during the hours or days of a solar particle event.',
+              2: 'An airlock for emergency spacewalks is incorrect; a storm shelter is a small area with extra radiation shielding. Astronauts retreat there during the hours or days of a solar particle event.',
+            },
           },
           {
             id: 'sp-sec13-u5-L4-Q6',
@@ -2268,6 +2613,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The storm shelter provides the best available protection. Astronauts should move there promptly and stay until the event passes, which could take hours to days.',
+            distractorExplanations: {
+              0: 'Continue normal activities since the hull provides enough... is incorrect; the storm shelter provides the best available protection. Astronauts should move there promptly and stay until the event passes, which could take hours to days.',
+              2: 'Perform a spacewalk to deploy additional external shielding is incorrect; the storm shelter provides the best available protection. Astronauts should move there promptly and stay until the event passes, which could take hours to days.',
+              3: 'Accelerate the spacecraft to outrun the solar particles is incorrect; the storm shelter provides the best available protection. Astronauts should move there promptly and stay until the event passes, which could take hours to days.',
+            },
           },
         ],
       },
@@ -2309,6 +2659,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'A Mars mission lasts 2 to 3 years compared to 6 months on the ISS. Cramped conditions for that long significantly increase stress, conflict, and psychological problems.',
+            distractorExplanations: {
+              0: 'Mars has stronger gravity requiring larger rooms is incorrect; a Mars mission lasts 2 to 3 years compared to 6 months on the ISS. Cramped conditions for that long significantly increase stress, conflict, and psychological problems.',
+              1: 'Mars habitats must store more scientific equipment is incorrect; a Mars mission lasts 2 to 3 years compared to 6 months on the ISS. Cramped conditions for that long significantly increase stress, conflict, and psychological problems.',
+              3: 'NASA regulations require larger rooms for Mars missions is incorrect; a Mars mission lasts 2 to 3 years compared to 6 months on the ISS. Cramped conditions for that long significantly increase stress, conflict, and psychological problems.',
+            },
           },
           {
             id: 'sp-sec13-u5-L5-T2',
@@ -2362,6 +2717,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Rotation creates centrifugal force that pushes occupants toward the outer wall, mimicking gravity. Larger radii produce more comfortable, natural-feeling gravity.',
+            distractorExplanations: {
+              0: 'By generating a strong magnetic field is incorrect; rotation creates centrifugal force that pushes occupants toward the outer wall, mimicking gravity. Larger radii produce more comfortable, natural-feeling gravity.',
+              2: 'By accelerating constantly at the speed of light is incorrect; rotation creates centrifugal force that pushes occupants toward the outer wall, mimicking gravity. Larger radii produce more comfortable, natural-feeling gravity.',
+              3: 'By using heavy furniture to weigh people down is incorrect; rotation creates centrifugal force that pushes occupants toward the outer wall, mimicking gravity. Larger radii produce more comfortable, natural-feeling gravity.',
+            },
           },
           {
             id: 'sp-sec13-u5-L5-Q7',
@@ -2375,6 +2735,11 @@ export const spaceSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'A balanced design with adequate personal space, dedicated exercise facilities, and communal areas best supports both physical and psychological health for a multi-year mission. Cutting volume risks crew performance and mental health.',
+            distractorExplanations: {
+              0: 'Minimal volume to save mass, crew adapts to tight quarters is incorrect; a balanced design with adequate personal space, dedicated exercise facilities, and communal areas best supports both physical and psychological health for a multi-year mission. Cutting volume risks crew performance and mental health.',
+              1: 'Separate individual pods with no shared space is incorrect; a balanced design with adequate personal space, dedicated exercise facilities, and communal areas best supports both physical and psychological health for a multi-year mission. Cutting volume risks crew performance and mental health.',
+              3: 'Open floor plan with no walls or privacy is incorrect; a balanced design with adequate personal space, dedicated exercise facilities, and communal areas best supports both physical and psychological health for a multi-year mission. Cutting volume risks crew performance and mental health.',
+            },
           },
         ],
       },
