@@ -2,7 +2,7 @@ import type { UserProgress } from './types';
 
 export const seedProgress: UserProgress = {
   userId: 'demo-user',
-  displayName: 'Alex Chen',
+  displayName: 'Learner',
   joinedDate: '2026-03-06',
   currentLevel: 8,
   totalXp: 2450,

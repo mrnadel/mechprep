@@ -11,10 +11,13 @@ import { LeagueImage } from '@/components/icons/LeagueImage';
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 import { LeaderboardRow } from '@/components/ui/LeaderboardRow';
 import { useIsDark } from '@/store/useThemeStore';
+import { useSession } from 'next-auth/react';
 
 export function LeagueBoard() {
   const league = useLeague();
-  const displayName = useStore((s) => s.progress.displayName);
+  const { data: session } = useSession();
+  const storeDisplayName = useStore((s) => s.progress.displayName);
+  const displayName = session?.user?.name || storeDisplayName || 'You';
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const isDark = useIsDark();

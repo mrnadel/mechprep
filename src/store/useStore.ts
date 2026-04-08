@@ -18,6 +18,7 @@ import { awardStreakMilestones } from '@/lib/streak-rewards';
 import { DOUBLE_XP_SHOP_DURATION_MS } from '@/data/engagement-types';
 import { DOUBLE_XP_BUFFER_MS, DOUBLE_XP_RECENT_PURCHASE_WINDOW_MS } from '@/lib/game-config';
 import { STORAGE_KEYS } from '@/lib/storage-keys';
+import { getEventXpMultiplier } from '@/lib/xp-events';
 
 // --- Session Types ---
 export type SessionType = 'adaptive' | 'topic-deep-dive' | 'interview-sim' | 'daily-challenge' | 'real-world' | 'weak-areas' | 'smart-practice';
@@ -95,7 +96,7 @@ interface AppState {
 function getDefaultProgress(): UserProgress {
   return {
     userId: 'user',
-    displayName: 'Engineer',
+    displayName: 'Learner',
     joinedDate: getTodayString(),
     currentLevel: 1,
     totalXp: 0,
@@ -569,6 +570,7 @@ export const useStore = create<AppState>()(
         // Apply double XP boost if active (with tamper validation)
         const engState = useEngagementStore.getState();
         const doubleXpExpiry = engState.doubleXpExpiry;
+        let shopDoubleXp = false;
         if (doubleXpExpiry) {
           const expiry = new Date(doubleXpExpiry).getTime();
           const now = Date.now();
@@ -576,14 +578,23 @@ export const useStore = create<AppState>()(
           // and a recent shop_purchase transaction must exist
           if (!isNaN(expiry) && expiry > now && expiry <= now + DOUBLE_XP_SHOP_DURATION_MS + DOUBLE_XP_BUFFER_MS) {
             const recentCutoff = now - (DOUBLE_XP_SHOP_DURATION_MS + DOUBLE_XP_RECENT_PURCHASE_WINDOW_MS);
-            const hasRecentPurchase = engState.gems.transactions.some(
+            shopDoubleXp = engState.gems.transactions.some(
               (t) => t.source === 'shop_purchase' && t.amount < 0 && new Date(t.timestamp).getTime() > recentCutoff
             );
-            if (hasRecentPurchase) {
-              xp *= 2;
-            }
           }
         }
+
+        // Time-limited XP events (weekend 2x, power hour, league sprint)
+        const isPro = useSubscriptionStore.getState().tier === 'pro';
+        const eventMultiplier = getEventXpMultiplier(isPro);
+        const shopMultiplier = shopDoubleXp ? 2 : 1;
+        // Shop boost and event boost stack additively (matches useCourseStore.completeLesson)
+        const totalBoostMultiplier = shopMultiplier === 1 && eventMultiplier === 1
+          ? 1
+          : 1 + (shopMultiplier - 1) + (eventMultiplier - 1);
+        xp = Math.round(xp * totalBoostMultiplier);
+        // Cap per-question XP to prevent extreme inflation during event stacking
+        xp = Math.min(xp, 200);
 
         set(state => ({
           session: state.session ? {
