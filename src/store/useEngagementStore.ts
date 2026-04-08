@@ -13,6 +13,8 @@ import type {
   LeagueCompetitor,
   StreakEnhancements,
   ComebackState,
+  DailyRewardCalendarState,
+  NudgeState,
   Quest,
   QuestTrackingKey,
   NudgeType,
@@ -23,6 +25,12 @@ import {
   DOUBLE_XP_SHOP_DURATION_MS,
   COMEBACK_THRESHOLD_DAYS,
 } from '@/data/engagement-types';
+import {
+  DAILY_REWARD_CYCLE,
+  REWARD_CYCLE_LENGTH,
+  MYSTERY_REWARD_POOL,
+} from '@/data/daily-rewards';
+import type { MysteryReward } from '@/data/daily-rewards';
 import { shopItems } from '@/data/gem-shop';
 import { dailyChestReward, weeklyChestReward } from '@/data/quests';
 import { LEAGUE_GEM_REWARD_PROMOTION } from '@/data/league';
@@ -33,6 +41,7 @@ import {
   getCommitmentScale,
   getTodayDate,
   getCurrentWeekMonday,
+  hashString,
   DAILY_QUEST_COUNT,
   WEEKLY_QUEST_COUNT,
 } from '@/lib/quest-engine';
@@ -94,6 +103,24 @@ function getDefaultComeback(): ComebackState {
   };
 }
 
+function getDefaultNudge(): NudgeState {
+  return {
+    lastDay1NudgeDate: null,
+    lastDay2NudgeDate: null,
+    daysAway: 0,
+  };
+}
+
+function getDefaultDailyRewardCalendar(): DailyRewardCalendarState {
+  return {
+    currentDay: 1,
+    lastClaimDate: null,
+    todayClaimed: false,
+    cycleStartDate: null,
+    cyclesCompleted: 0,
+  };
+}
+
 function getDefaultState(): EngagementState {
   return {
     gems: getDefaultGems(),
@@ -108,6 +135,8 @@ function getDefaultState(): EngagementState {
     league: getDefaultLeague(),
     streak: getDefaultStreak(),
     comeback: getDefaultComeback(),
+    nudge: getDefaultNudge(),
+    dailyRewardCalendar: getDefaultDailyRewardCalendar(),
     dismissedNudges: [],
     doubleXpExpiry: null,
   };
@@ -163,12 +192,17 @@ interface EngagementActions {
   simulateLeagueWeek: () => void;
   updateLeagueXp: (xp: number) => void;
   checkComebackFlow: () => void;
+  checkNudges: () => void;
   dismissNudge: (type: NudgeType) => void;
   activateDoubleXp: (duration: number) => void;
   addGems: (amount: number, source: string) => void;
   completeComebackQuest: () => void;
   equipTitle: (itemId: string | null) => void;
   equipFrame: (itemId: string | null) => void;
+  /** Check if daily reward cycle needs reset (called on app open) */
+  checkDailyRewardCalendar: () => void;
+  /** Claim today's daily reward */
+  claimDailyReward: () => { gems: number; xp: number; bonusType?: string; mystery?: MysteryReward } | null;
   debugSetFromCourse: (data: { gems: number; leagueXp: number }) => void;
   debugSetLeagueTier: (tier: number) => void;
 }
@@ -599,13 +633,12 @@ export const useEngagementStore = create<EngagementStore>()(
             fetch('/api/league', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ tier: result.newTier, weekStart: monday }),
+              body: JSON.stringify({ tier: result.newTier, weekStart: monday, weeklyXp: 0 }),
             })
               .then((r) => r.ok ? r.json() : null)
               .then((data) => {
                 if (!data?.members) return;
                 const reqUserId = data.requestingUserId;
-                // Replace local fake competitors with server data (real + fake mix), excluding self
                 const serverCompetitors: LeagueCompetitor[] = data.members
                   .filter((m: any) => !(m.isReal && m.userId === reqUserId))
                   .map((m: any) => ({
@@ -614,16 +647,20 @@ export const useEngagementStore = create<EngagementStore>()(
                     avatarInitial: m.avatarInitial,
                     countryFlag: m.countryFlag || '',
                     weeklyXp: m.weeklyXp,
-                    dailyXpRate: 0,
-                    variance: 0,
+                    dailyXpRate: m.dailyXpRate ?? 0,
+                    variance: m.variance ?? 0,
                     fakeUserId: m.isReal ? undefined : m.fakeUserId,
                     frameStyle: m.frameStyle,
                     realUserId: m.isReal ? m.userId : undefined,
                   }));
-                // Only update if still on the same week
                 if (get().league.weekStartDate === monday) {
+                  const serverTier = (data.tier >= 1 && data.tier <= 5) ? data.tier as 1|2|3|4|5 : undefined;
                   set((s) => ({
-                    league: { ...s.league, competitors: serverCompetitors },
+                    league: {
+                      ...s.league,
+                      competitors: serverCompetitors,
+                      ...(serverTier ? { currentTier: serverTier } : {}),
+                    },
                   }));
                 }
               })
@@ -655,15 +692,20 @@ export const useEngagementStore = create<EngagementStore>()(
                     avatarInitial: m.avatarInitial,
                     countryFlag: m.countryFlag || '',
                     weeklyXp: m.weeklyXp,
-                    dailyXpRate: 0,
-                    variance: 0,
+                    dailyXpRate: m.dailyXpRate ?? 0,
+                    variance: m.variance ?? 0,
                     fakeUserId: m.isReal ? undefined : m.fakeUserId,
                     frameStyle: m.frameStyle,
                     realUserId: m.isReal ? m.userId : undefined,
                   }));
                 if (get().league.weekStartDate === monday) {
+                  const serverTier = (data.tier >= 1 && data.tier <= 5) ? data.tier as 1|2|3|4|5 : undefined;
                   set((s) => ({
-                    league: { ...s.league, competitors: serverCompetitors },
+                    league: {
+                      ...s.league,
+                      competitors: serverCompetitors,
+                      ...(serverTier ? { currentTier: serverTier } : {}),
+                    },
                   }));
                 }
               })
@@ -729,7 +771,48 @@ export const useEngagementStore = create<EngagementStore>()(
           }
         },
 
-        // === Action 13: dismissNudge ===
+        // === Action 13: checkNudges ===
+        // Graduated nudge system: sets nudge state for Day-1 and Day-2 returning users.
+        // Reads from BOTH useStore AND useCourseStore (CR-C12: course-only users also need nudges).
+        checkNudges: () => {
+          const state = get();
+          const today = getTodayDate();
+
+          // Don't nudge if already in comeback flow (3+ days away)
+          if (state.comeback.isInComebackFlow) return;
+
+          // Read lastActiveDate from BOTH stores, use the more recent one
+          const practiceDate = useStore.getState().progress.lastActiveDate || '';
+          const courseDate = useCourseStore.getState().progress.lastActiveDate || '';
+          const lastActiveDate = practiceDate > courseDate ? practiceDate : courseDate;
+
+          if (!lastActiveDate) return;
+          if (lastActiveDate === today) return; // active today, no nudge needed
+
+          // Don't nudge users who never practiced (fresh installs)
+          const practiceTotalXp = useStore.getState().progress.totalXp;
+          const courseTotalXp = useCourseStore.getState().progress.totalXp;
+          if (practiceTotalXp === 0 && courseTotalXp === 0) return;
+
+          const lastActive = new Date(lastActiveDate + 'T00:00:00Z');
+          const todayD = new Date(today + 'T00:00:00Z');
+          const daysMissed = Math.floor(
+            (todayD.getTime() - lastActive.getTime()) / (1000 * 60 * 60 * 24),
+          );
+
+          if (daysMissed === 1 && state.nudge.lastDay1NudgeDate !== today) {
+            set({
+              nudge: { ...state.nudge, lastDay1NudgeDate: today, daysAway: daysMissed },
+            });
+          } else if (daysMissed === 2 && state.nudge.lastDay2NudgeDate !== today) {
+            set({
+              nudge: { ...state.nudge, lastDay2NudgeDate: today, daysAway: daysMissed },
+            });
+          }
+          // daysMissed >= 3 is handled by checkComebackFlow
+        },
+
+        // === Action 14: dismissNudge ===
         dismissNudge: (type) => {
           set((state) => ({
             dismissedNudges: state.dismissedNudges.includes(type)
@@ -818,7 +901,144 @@ export const useEngagementStore = create<EngagementStore>()(
           }));
         },
 
-        // === Action 18: debugSetLeagueTier ===
+        // === Action: checkDailyRewardCalendar ===
+        checkDailyRewardCalendar: () => {
+          const state = get();
+          const today = getTodayDate();
+          const cal = state.dailyRewardCalendar;
+
+          // Already claimed today — no state change needed
+          if (cal.todayClaimed && cal.lastClaimDate === today) return;
+
+          // New day: reset todayClaimed flag
+          if (cal.lastClaimDate && cal.lastClaimDate !== today) {
+            // Check if user missed a day (broke the streak)
+            const lastClaim = new Date(cal.lastClaimDate + 'T00:00:00Z');
+            const todayD = new Date(today + 'T00:00:00Z');
+            const daysSinceLastClaim = Math.floor(
+              (todayD.getTime() - lastClaim.getTime()) / (1000 * 60 * 60 * 24),
+            );
+
+            if (daysSinceLastClaim === 1) {
+              // Consecutive day — advance to next day in cycle
+              const nextDay = cal.currentDay >= REWARD_CYCLE_LENGTH ? 1 : cal.currentDay + 1;
+              const cyclesCompleted = cal.currentDay >= REWARD_CYCLE_LENGTH
+                ? cal.cyclesCompleted + 1
+                : cal.cyclesCompleted;
+
+              set({
+                dailyRewardCalendar: {
+                  ...cal,
+                  currentDay: nextDay,
+                  todayClaimed: false,
+                  cycleStartDate: nextDay === 1 ? today : cal.cycleStartDate,
+                  cyclesCompleted,
+                },
+              });
+            } else {
+              // Missed one or more days — reset cycle to Day 1
+              set({
+                dailyRewardCalendar: {
+                  currentDay: 1,
+                  lastClaimDate: cal.lastClaimDate, // preserve for display
+                  todayClaimed: false,
+                  cycleStartDate: null, // will be set on next claim
+                  cyclesCompleted: cal.cyclesCompleted,
+                },
+              });
+            }
+          }
+          // If lastClaimDate is null (first time), keep defaults (day 1, unclaimed)
+        },
+
+        // === Action: claimDailyReward ===
+        claimDailyReward: () => {
+          const state = get();
+          const today = getTodayDate();
+          const cal = state.dailyRewardCalendar;
+
+          // Already claimed today
+          if (cal.todayClaimed && cal.lastClaimDate === today) return null;
+
+          const reward = DAILY_REWARD_CYCLE[cal.currentDay - 1];
+          if (!reward) return null;
+
+          // Award gems
+          get().addGems(reward.gems, 'daily_reward_calendar');
+
+          // Handle bonus items
+          let mystery: MysteryReward | undefined;
+
+          if (reward.bonusType === 'streak_freeze') {
+            // Grant streak freeze (respect max cap)
+            const currentFreezes = state.streak.freezesOwned;
+            if (currentFreezes < MAX_STREAK_FREEZES) {
+              set((s) => ({
+                streak: {
+                  ...s.streak,
+                  freezesOwned: s.streak.freezesOwned + 1,
+                },
+              }));
+            } else {
+              // If at cap, give extra gems instead
+              get().addGems(15, 'daily_reward_bonus_overflow');
+            }
+          }
+
+          if (reward.bonusType === 'mystery_frame') {
+            // Deterministic selection based on cycle count for consistency
+            const pool = MYSTERY_REWARD_POOL;
+            const seed = hashString(`mystery-${cal.cyclesCompleted}-${today}`);
+            const idx = seed % pool.length;
+            mystery = pool[idx];
+
+            // Apply the mystery reward
+            switch (mystery.type) {
+              case 'gems_bonus':
+                get().addGems(mystery.gemsAmount!, 'mystery_reward');
+                break;
+              case 'double_xp':
+                get().activateDoubleXp(mystery.durationMs!);
+                break;
+              case 'frame':
+                if (mystery.itemId) {
+                  set((s) => {
+                    const frames = s.gems.inventory.activeFrames;
+                    if (frames.includes(mystery!.itemId!)) return {};
+                    return {
+                      gems: {
+                        ...s.gems,
+                        inventory: {
+                          ...s.gems.inventory,
+                          activeFrames: [...frames, mystery!.itemId!],
+                        },
+                      },
+                    };
+                  });
+                }
+                break;
+            }
+          }
+
+          // Update calendar state
+          set({
+            dailyRewardCalendar: {
+              ...cal,
+              lastClaimDate: today,
+              todayClaimed: true,
+              cycleStartDate: cal.cycleStartDate ?? today,
+            },
+          });
+
+          return {
+            gems: reward.gems,
+            xp: reward.xp,
+            bonusType: reward.bonusType,
+            mystery,
+          };
+        },
+
+        // === Action: debugSetLeagueTier ===
         debugSetLeagueTier: (tier) => {
           const clamped = Math.max(1, Math.min(tier, 5)) as 1 | 2 | 3 | 4 | 5;
           set((state) => ({
@@ -848,12 +1068,15 @@ export const useEngagementStore = create<EngagementStore>()(
             simulateLeagueWeek: _10,
             updateLeagueXp: _11,
             checkComebackFlow: _12,
+            checkNudges: _12b,
             dismissNudge: _13,
             activateDoubleXp: _14,
             addGems: _15,
             completeComebackQuest: _16,
             equipTitle: _17,
             equipFrame: _18,
+            checkDailyRewardCalendar: _21,
+            claimDailyReward: _22,
             debugSetFromCourse: _19,
             debugSetLeagueTier: _20,
             ...stateOnly
@@ -902,6 +1125,12 @@ export const useEngagementStore = create<EngagementStore>()(
             comeback: persisted.comeback
               ? { ...defaults.comeback, ...persisted.comeback }
               : defaults.comeback,
+            nudge: persisted.nudge
+              ? { ...defaults.nudge, ...persisted.nudge }
+              : defaults.nudge,
+            dailyRewardCalendar: persisted.dailyRewardCalendar
+              ? { ...defaults.dailyRewardCalendar, ...persisted.dailyRewardCalendar }
+              : defaults.dailyRewardCalendar,
             dismissedNudges: persisted.dismissedNudges ?? defaults.dismissedNudges,
             doubleXpExpiry: persisted.doubleXpExpiry ?? defaults.doubleXpExpiry,
           };
@@ -919,6 +1148,9 @@ export const useWeeklyQuests = () => useEngagementStore((s) => s.weeklyQuests);
 export const useLeague = () => useEngagementStore((s) => s.league);
 export const useStreakEnhancements = () => useEngagementStore((s) => s.streak);
 export const useComeback = () => useEngagementStore((s) => s.comeback);
+export const useNudgeState = () => useEngagementStore(useShallow((s) => s.nudge));
+export const useDailyRewardCalendar = () =>
+  useEngagementStore(useShallow((s) => s.dailyRewardCalendar));
 /** Returns whether double XP is currently active (validated against purchase history). */
 export const useDoubleXpActive = () =>
   useEngagementStore((s) => {
@@ -952,11 +1184,14 @@ export const useEngagementActions = () =>
       simulateLeagueWeek: s.simulateLeagueWeek,
       updateLeagueXp: s.updateLeagueXp,
       checkComebackFlow: s.checkComebackFlow,
+      checkNudges: s.checkNudges,
       dismissNudge: s.dismissNudge,
       activateDoubleXp: s.activateDoubleXp,
       addGems: s.addGems,
       completeComebackQuest: s.completeComebackQuest,
       equipTitle: s.equipTitle,
       equipFrame: s.equipFrame,
+      checkDailyRewardCalendar: s.checkDailyRewardCalendar,
+      claimDailyReward: s.claimDailyReward,
     })),
   );

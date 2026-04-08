@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAuthUserId } from '@/lib/auth-utils';
 import { assignUserToLeague, getLeagueLeaderboard, updateMemberXp } from '@/lib/league-matching';
-import { db } from '@/lib/db';
-import { leagueState } from '@/lib/db/schema';
-import { eq, sql } from 'drizzle-orm';
 
 function isMonday(dateStr: string): boolean {
   const d = new Date(dateStr + 'T00:00:00Z');
@@ -44,7 +41,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  let body: { tier?: number; weekStart?: string };
+  let body: { tier?: number; weekStart?: string; weeklyXp?: number };
   try {
     body = await request.json();
   } catch {
@@ -59,8 +56,11 @@ export async function POST(request: NextRequest) {
   if (!weekStart || !/^\d{4}-\d{2}-\d{2}$/.test(weekStart) || !isMonday(weekStart)) {
     return NextResponse.json({ error: 'Invalid weekStart (must be a Monday)' }, { status: 400 });
   }
+  const initialXp = typeof body.weeklyXp === 'number' && body.weeklyXp >= 0
+    ? Math.min(Math.floor(body.weeklyXp), 5000)
+    : 0;
 
-  const groupId = await assignUserToLeague(userId, tier as 1 | 2 | 3 | 4 | 5, weekStart);
+  const groupId = await assignUserToLeague(userId, tier as 1 | 2 | 3 | 4 | 5, weekStart, initialXp);
   const leaderboard = await getLeagueLeaderboard(userId, weekStart);
 
   return NextResponse.json({ groupId, ...leaderboard });
@@ -89,27 +89,13 @@ export async function PATCH(request: NextRequest) {
   if (!weekStart || !/^\d{4}-\d{2}-\d{2}$/.test(weekStart) || !isMonday(weekStart)) {
     return NextResponse.json({ error: 'Invalid weekStart (must be a Monday)' }, { status: 400 });
   }
-  // Cap per-request XP to a reasonable session maximum (one lesson = ~25 XP max)
-  const MAX_XP_PER_REQUEST = 100;
+  // Cap per-request XP — covers base XP * accuracy bonus * double-XP * event multiplier
+  const MAX_XP_PER_REQUEST = 500;
   if (typeof xpDelta !== 'number' || xpDelta <= 0 || xpDelta > MAX_XP_PER_REQUEST) {
     return NextResponse.json({ error: `Invalid xpDelta (must be 1-${MAX_XP_PER_REQUEST})` }, { status: 400 });
   }
 
   await updateMemberXp(userId, weekStart, Math.floor(xpDelta));
-
-  // Also update the legacy leagueState table for backwards compatibility
-  const existingState = await db
-    .select({ id: leagueState.id })
-    .from(leagueState)
-    .where(eq(leagueState.userId, userId))
-    .limit(1);
-
-  if (existingState.length > 0) {
-    await db.update(leagueState).set({
-      weeklyXp: sql`${leagueState.weeklyXp} + ${Math.floor(xpDelta)}`,
-      updatedAt: new Date(),
-    }).where(eq(leagueState.userId, userId));
-  }
 
   return NextResponse.json({ ok: true });
 }

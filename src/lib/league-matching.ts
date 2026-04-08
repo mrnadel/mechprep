@@ -27,6 +27,7 @@ export async function assignUserToLeague(
   userId: string,
   tier: 1 | 2 | 3 | 4 | 5,
   weekStart: string,
+  initialXp: number = 0,
 ): Promise<string> {
   // Check if user already has an assignment this week (any tier — prevents duplicates after promotion)
   const existing = await db
@@ -127,7 +128,7 @@ export async function assignUserToLeague(
       displayName,
       avatarInitial: displayName.charAt(0).toUpperCase(),
       isReal: true,
-      weeklyXp: 0,
+      weeklyXp: initialXp,
       dailyXpRate: 0,
       variance: 0,
     });
@@ -169,6 +170,8 @@ export async function getLeagueLeaderboard(
     weeklyXp: number;
     isReal: boolean;
     frameStyle: string | null;
+    dailyXpRate: number;
+    variance: number;
   }>;
 } | null> {
   // Find user's group
@@ -248,6 +251,8 @@ export async function getLeagueLeaderboard(
       weeklyXp: m.weeklyXp,
       isReal: m.isReal,
       frameStyle: m.frameStyle,
+      dailyXpRate: m.isReal ? 0 : m.dailyXpRate,
+      variance: m.isReal ? 0 : m.variance,
     })),
   };
 }
