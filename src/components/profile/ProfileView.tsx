@@ -24,6 +24,7 @@ export interface ProfileData {
   image: string | null;
   totalXp: number;
   currentStreak: number;
+  longestStreak?: number;
   accuracy: number;
   joinedDate: string | null;
   achievementIds: string[];
@@ -287,6 +288,15 @@ export function ProfileView({
             <p className="text-lg font-extrabold tabular-nums text-orange-500">{data.currentStreak}d</p>
             <p className="text-[10px] font-bold uppercase tracking-wider text-[#AFAFAF] dark:text-surface-500">Streak</p>
           </div>
+          {!isOwn && data.longestStreak != null && (
+            <>
+              <div className="w-px h-8 bg-gray-100 dark:bg-surface-700 mx-1 flex-shrink-0" />
+              <div className="flex-1 text-center">
+                <p className="text-lg font-extrabold tabular-nums text-amber-500">{data.longestStreak}d</p>
+                <p className="text-[10px] font-medium text-gray-400 dark:text-surface-400 uppercase tracking-wider">Best</p>
+              </div>
+            </>
+          )}
           {isOwn && (
             <>
               <div className="w-px h-8 bg-surface-200 dark:bg-surface-700" />

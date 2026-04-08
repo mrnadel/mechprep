@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Loader2 } from 'lucide-react';
+import { ArrowLeft, Loader2, UserPlus, UserCheck, UserX } from 'lucide-react';
 import { ProfileView } from '@/components/profile/ProfileView';
 import type { ProfileData } from '@/components/profile/ProfileView';
 
@@ -29,6 +29,9 @@ export default function PublicProfilePage() {
   const [profile, setProfile] = useState<PublicProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [relation, setRelation] = useState<PublicProfile['relationship']>('none');
+  const [reqId, setReqId] = useState<string | undefined>();
+  const [actionLoading, setActionLoading] = useState(false);
 
   useEffect(() => {
     if (!id) return;
@@ -43,10 +46,85 @@ export default function PublicProfilePage() {
           return;
         }
         setProfile(data);
+        setRelation(data.relationship);
+        setReqId(data.requestId);
       })
       .catch(() => setError('User not found'))
       .finally(() => setLoading(false));
   }, [id, router]);
+
+  async function handleAddFriend() {
+    if (!profile || actionLoading) return;
+    setActionLoading(true);
+    try {
+      const res = await fetch('/api/friends/request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ receiverId: profile.id }),
+      });
+      if (res.ok) setRelation('request_sent');
+    } finally {
+      setActionLoading(false);
+    }
+  }
+
+  async function handleCancelRequest() {
+    if (!reqId || actionLoading) return;
+    setActionLoading(true);
+    try {
+      const res = await fetch(`/api/friends/request/${reqId}`, { method: 'DELETE' });
+      if (res.ok) {
+        setRelation('none');
+        setReqId(undefined);
+      }
+    } finally {
+      setActionLoading(false);
+    }
+  }
+
+  async function handleAcceptRequest() {
+    if (!reqId || actionLoading) return;
+    setActionLoading(true);
+    try {
+      const res = await fetch(`/api/friends/request/${reqId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'accept' }),
+      });
+      if (res.ok) setRelation('friends');
+    } finally {
+      setActionLoading(false);
+    }
+  }
+
+  async function handleDeclineRequest() {
+    if (!reqId || actionLoading) return;
+    setActionLoading(true);
+    try {
+      const res = await fetch(`/api/friends/request/${reqId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'decline' }),
+      });
+      if (res.ok) {
+        setRelation('none');
+        setReqId(undefined);
+      }
+    } finally {
+      setActionLoading(false);
+    }
+  }
+
+  async function handleUnfriend() {
+    if (!profile || actionLoading) return;
+    setActionLoading(true);
+    try {
+      const res = await fetch(`/api/friends/${profile.id}`, { method: 'DELETE' });
+      if (res.ok) setRelation('none');
+    } finally {
+      setActionLoading(false);
+    }
+  }
 
   if (loading) {
     return (
@@ -91,11 +169,79 @@ export default function PublicProfilePage() {
     image: profile.image,
     totalXp: profile.totalXp,
     currentStreak: profile.currentStreak,
+    longestStreak: profile.longestStreak,
     accuracy: profile.accuracy,
     joinedDate: profile.joinedDate,
     achievementIds: profile.achievements,
     leagueTier: profile.leagueTier,
   };
 
-  return <ProfileView data={profileData} />;
+  const friendButton = (() => {
+    if (relation === 'none') {
+      return (
+        <button
+          onClick={handleAddFriend}
+          disabled={actionLoading}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-brand-500 text-white hover:bg-brand-600 active:scale-95 transition-all disabled:opacity-50"
+        >
+          {actionLoading ? <Loader2 size={14} className="animate-spin" /> : <UserPlus size={14} />}
+          Add Friend
+        </button>
+      );
+    }
+    if (relation === 'request_sent') {
+      return (
+        <button
+          onClick={handleCancelRequest}
+          disabled={actionLoading}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-gray-100 dark:bg-surface-700 text-gray-500 dark:text-surface-300 hover:bg-gray-200 dark:hover:bg-surface-600 active:scale-95 transition-all disabled:opacity-50"
+        >
+          {actionLoading ? <Loader2 size={14} className="animate-spin" /> : <UserCheck size={14} />}
+          Request Sent
+        </button>
+      );
+    }
+    if (relation === 'request_received') {
+      return (
+        <div className="flex items-center gap-2">
+          <button
+            onClick={handleAcceptRequest}
+            disabled={actionLoading}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-500 text-white hover:bg-emerald-600 active:scale-95 transition-all disabled:opacity-50"
+          >
+            {actionLoading ? <Loader2 size={14} className="animate-spin" /> : <UserCheck size={14} />}
+            Accept
+          </button>
+          <button
+            onClick={handleDeclineRequest}
+            disabled={actionLoading}
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold bg-gray-100 dark:bg-surface-700 text-gray-500 dark:text-surface-300 hover:bg-gray-200 dark:hover:bg-surface-600 active:scale-95 transition-all disabled:opacity-50"
+          >
+            <UserX size={14} />
+          </button>
+        </div>
+      );
+    }
+    if (relation === 'friends') {
+      return (
+        <button
+          onClick={handleUnfriend}
+          disabled={actionLoading}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 hover:bg-red-50 dark:hover:bg-red-900/30 hover:text-red-500 dark:hover:text-red-400 active:scale-95 transition-all disabled:opacity-50 group"
+        >
+          {actionLoading ? (
+            <Loader2 size={14} className="animate-spin" />
+          ) : (
+            <UserCheck size={14} className="group-hover:hidden" />
+          )}
+          {!actionLoading && <UserX size={14} className="hidden group-hover:block" />}
+          <span className="group-hover:hidden">Friends</span>
+          <span className="hidden group-hover:inline">Unfriend</span>
+        </button>
+      );
+    }
+    return null;
+  })();
+
+  return <ProfileView data={profileData} headerTrailing={friendButton} />;
 }
