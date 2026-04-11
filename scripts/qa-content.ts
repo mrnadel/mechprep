@@ -117,8 +117,6 @@ function guessUnitFile(unitId: string, courseDir: string): string {
   }) || unitId);
 }
 
-// ─── Run checks via shared module ──────────────────────────
-
 // ─── Main ───────────────────────────────────────────────────
 
 async function main() {

@@ -5,7 +5,7 @@
  * Used by the CLI script and the admin API route.
  */
 
-import type { Unit, Lesson, CourseQuestion, ConversationNode } from '@/data/course/types';
+import type { Unit, ConversationNode } from '@/data/course/types';
 
 // ─── Public Types ──────────────────────────────────────────
 
