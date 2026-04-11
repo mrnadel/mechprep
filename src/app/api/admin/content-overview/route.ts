@@ -204,8 +204,8 @@ function buildIndexBias(courses: { id: string; name: string; units: Unit[] }[]):
           ) {
             if (q.correctIndex >= 0 && q.correctIndex < 4) {
               counts[q.correctIndex]++;
+              total++;
             }
-            total++;
           }
         }
       }
@@ -304,7 +304,7 @@ export async function GET() {
       courseStats,
       qaViolations,
       audioCoverage,
-      questionQuality,
+      questionQuality: questionQuality.rows,
       userReports,
       indexBias,
     });
