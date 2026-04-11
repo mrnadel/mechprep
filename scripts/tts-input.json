@@ -1,0 +1,79 @@
+[
+  {
+    "id": "sp-u1-L1",
+    "title": "Welcome to the Universe",
+    "description": "You're on a tiny rock hurtling through space at 67,000 mph. Let's explore.",
+    "unitId": "sp-u1-night-sky",
+    "unitTitle": "Look Up!",
+    "profession": "space-astronomy",
+    "questions": [
+      {
+        "id": "sp-u1-L1-T1",
+        "type": "teaching",
+        "question": "Welcome to the Cosmos",
+        "explanation": "Right now, you're standing on a rock that's spinning at 1,000 mph and orbiting the Sun at 67,000 mph. You just can't feel it. Welcome to the universe."
+      },
+      {
+        "id": "sp-u1-L1-Q1",
+        "type": "true-false",
+        "question": "Earth is moving through space right now.",
+        "explanation": "Yes! Earth orbits the Sun at about 67,000 mph. You're a space traveler and always have been."
+      },
+      {
+        "id": "sp-u1-L1-Q2",
+        "type": "multiple-choice",
+        "question": "What is the Sun?",
+        "explanation": "The Sun is a star, just like the ones you see at night. It's just much, much closer to us."
+      },
+      {
+        "id": "sp-u1-L1-T2",
+        "type": "teaching",
+        "question": "You Already Know More Than You Think",
+        "explanation": "Every bright dot you've ever noticed in the night sky is a real object: a star, a planet, or a satellite. Astronomy starts with simply looking up and asking what you're seeing.",
+        "hint": "Try this now: tonight, step outside and count how many bright dots you can spot in 60 seconds."
+      },
+      {
+        "id": "sp-u1-L1-Q3",
+        "type": "fill-blank",
+        "question": "The Sun is actually a _____, just like the dots of light you see at night.",
+        "explanation": "The Sun is a star. Other stars look like tiny dots only because they're trillions of miles away."
+      },
+      {
+        "id": "sp-u1-L1-Q4",
+        "type": "slider-estimate",
+        "question": "Roughly how many stars can you see with the naked eye on a clear, dark night?",
+        "explanation": "From a dark location, about 2,500 stars are visible. City lights reduce that number dramatically."
+      },
+      {
+        "id": "sp-u1-L1-T3",
+        "type": "teaching",
+        "question": "Our Cosmic Address",
+        "explanation": "Earth orbits the Sun. The Sun is one of about 200 billion stars in the Milky Way galaxy. And the Milky Way is one of trillions of galaxies in the observable universe."
+      },
+      {
+        "id": "sp-u1-L1-Q5",
+        "type": "true-false",
+        "question": "The Milky Way contains about 200 billion stars.",
+        "explanation": "About 200 billion stars, and many of them have their own planets. The numbers in space are staggering."
+      },
+      {
+        "id": "sp-u1-L1-Q6",
+        "type": "order-steps",
+        "question": "Arrange our cosmic address from smallest to largest:",
+        "explanation": "Earth sits inside the solar system, which orbits within the Milky Way galaxy, which is part of the Local Group of galaxies, all within the observable universe."
+      },
+      {
+        "id": "sp-u1-L1-Q7",
+        "type": "category-swipe",
+        "question": "Part of our solar system, or not?",
+        "explanation": "The Sun and planets (Mars, Jupiter) and Saturn's rings are all in our solar system. Andromeda is a separate galaxy, and the Milky Way's center is far beyond our solar system."
+      },
+      {
+        "id": "sp-u1-L1-Q8",
+        "type": "multiple-choice",
+        "question": "Why do stars look like tiny dots from Earth?",
+        "explanation": "Stars are huge, but they're so far away that their light appears as a single point to our eyes."
+      }
+    ]
+  }
+]

@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo } from 'react';
+import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo, useRef } from 'react';
 import { motion, Reorder } from 'framer-motion';
+import { Check, X } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -50,6 +51,8 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
     const [order, setOrder] = useState<number[]>(initialOrder);
     const [results, setResults] = useState<boolean[] | null>(null);
     const [dragging, setDragging] = useState<number | null>(null);
+    const [liveMessage, setLiveMessage] = useState('');
+    const itemRefs = useRef<(HTMLElement | null)[]>([]);
 
     useEffect(() => {
       setOrder(initialOrder);
@@ -65,6 +68,29 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
       if (answered) return;
       setOrder(newOrder);
     }, [answered]);
+
+    const handleKeyDown = useCallback((e: React.KeyboardEvent, rank: number) => {
+      if (answered) return;
+      if (e.key === 'ArrowUp' && rank > 0) {
+        e.preventDefault();
+        setOrder(prev => {
+          const next = [...prev];
+          [next[rank - 1], next[rank]] = [next[rank], next[rank - 1]];
+          return next;
+        });
+        setLiveMessage(`Moved to rank ${rank} of ${items.length}`);
+        requestAnimationFrame(() => itemRefs.current[rank - 1]?.focus());
+      } else if (e.key === 'ArrowDown' && rank < order.length - 1) {
+        e.preventDefault();
+        setOrder(prev => {
+          const next = [...prev];
+          [next[rank], next[rank + 1]] = [next[rank + 1], next[rank]];
+          return next;
+        });
+        setLiveMessage(`Moved to rank ${rank + 2} of ${items.length}`);
+        requestAnimationFrame(() => itemRefs.current[rank + 1]?.focus());
+      }
+    }, [answered, order.length, items.length]);
 
     const handleCheck = useCallback(() => {
       if (answered) return;
@@ -124,6 +150,9 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
           </motion.div>
         )}
 
+        <div className="sr-only">Use up and down arrow keys to reorder items</div>
+        <div aria-live="assertive" className="sr-only">{liveMessage}</div>
+
         {/* Ranked list */}
         <Reorder.Group
           axis="y"
@@ -152,6 +181,11 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
               <Reorder.Item
                 key={itemIdx}
                 value={itemIdx}
+                ref={(el: HTMLElement | null) => { itemRefs.current[rank] = el; }}
+                tabIndex={0}
+                onKeyDown={(e: React.KeyboardEvent) => handleKeyDown(e, rank)}
+                role="option"
+                aria-label={`Rank ${rank + 1}: ${items[itemIdx]}${isCorrect !== null ? (isCorrect ? ' — correct rank' : ' — incorrect rank') : ''}`}
                 dragListener={!answered}
                 onDragStart={() => setDragging(itemIdx)}
                 onDragEnd={() => setDragging(null)}
@@ -173,12 +207,15 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
                   ...(isDragging ? { zIndex: 10 } : {}),
                 }}
               >
-                {/* Medal/rank */}
+                {/* Medal/rank + Check/X icon */}
                 <span style={{
                   fontSize: 22, lineHeight: 1, flexShrink: 0, width: 32, textAlign: 'center',
                   filter: isCorrect === false ? 'grayscale(1)' : 'none',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}>
-                  {medal}
+                  {isCorrect === true ? <Check className="w-4 h-4" strokeWidth={3} style={{ color: '#58A700' }} />
+                    : isCorrect === false ? <X className="w-4 h-4" strokeWidth={3} style={{ color: '#EA2B2B' }} />
+                    : medal}
                 </span>
 
                 {/* Item text */}

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Share2, Linkedin } from 'lucide-react';
+import { Download, Share2, Linkedin, Check, Loader2 } from 'lucide-react';
 import { playSound } from '@/lib/sounds';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useStore } from '@/store/useStore';
@@ -12,12 +12,19 @@ import { GameButton } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 import { getProfession } from '@/data/professions';
-import { downloadCertificate, shareCertificate, getLinkedInShareUrl } from '@/lib/certificate';
+import {
+  getCertificateUrl,
+  downloadCertificate,
+  shareCertificate,
+  getLinkedInShareUrl,
+  type CertificateShareResult,
+} from '@/lib/certificate';
 
 interface Props { onDismiss: () => void; }
 
 export function CourseCompleteCelebration({ onDismiss }: Props) {
   const [canDismiss, setCanDismiss] = useState(false);
+  const [shareState, setShareState] = useState<'idle' | 'loading' | 'done'>('idle');
   const courseData = useCourseStore((s) => s.courseData);
   const activeProfession = useCourseStore((s) => s.activeProfession);
   const completedLessons = useCourseStore((s) => s.progress.completedLessons);
@@ -43,7 +50,7 @@ export function CourseCompleteCelebration({ onDismiss }: Props) {
   const certParams = {
     name: displayName || 'Learner',
     profession: profession?.name || 'Course',
-    professionIcon: profession?.icon || '🎓',
+    professionIcon: profession?.icon || '\uD83C\uDF93',
     color: profession?.color || '#6366f1',
     score,
   };
@@ -52,8 +59,19 @@ export function CourseCompleteCelebration({ onDismiss }: Props) {
     downloadCertificate(certParams);
   }, [certParams]);
 
-  const handleShare = useCallback(() => {
-    shareCertificate(certParams);
+  const handleShare = useCallback(async () => {
+    setShareState('loading');
+    try {
+      const result: CertificateShareResult = await shareCertificate(certParams);
+      if (result !== 'cancelled') {
+        setShareState('done');
+        setTimeout(() => setShareState('idle'), 2000);
+      } else {
+        setShareState('idle');
+      }
+    } catch {
+      setShareState('idle');
+    }
   }, [certParams]);
 
   const handleLinkedIn = useCallback(() => {
@@ -68,6 +86,17 @@ export function CourseCompleteCelebration({ onDismiss }: Props) {
       fx="fireworks"
       footer={
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: canDismiss ? 1 : 0 }} transition={{ duration: 0.4 }} className="space-y-3">
+          {/* Certificate preview */}
+          <div className="mb-3 rounded-xl overflow-hidden border-2 border-white/20 mx-auto" style={{ maxWidth: 320 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={getCertificateUrl(certParams)}
+              alt="Your certificate"
+              className="w-full h-auto"
+              loading="eager"
+            />
+          </div>
+
           {/* Certificate action buttons */}
           <div className="flex gap-2 justify-center">
             <button
@@ -78,9 +107,16 @@ export function CourseCompleteCelebration({ onDismiss }: Props) {
             </button>
             <button
               onClick={handleShare}
-              className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/15 text-white text-xs font-bold hover:bg-white/25 transition-colors"
+              disabled={shareState === 'loading'}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/15 text-white text-xs font-bold hover:bg-white/25 transition-colors disabled:opacity-60 disabled:cursor-wait"
             >
-              <Share2 className="w-3.5 h-3.5" /> Share
+              {shareState === 'loading' ? (
+                <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Sharing...</>
+              ) : shareState === 'done' ? (
+                <><Check className="w-3.5 h-3.5" /> Shared!</>
+              ) : (
+                <><Share2 className="w-3.5 h-3.5" /> Share</>
+              )}
             </button>
             <button
               onClick={handleLinkedIn}

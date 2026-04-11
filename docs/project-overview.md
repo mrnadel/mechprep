@@ -121,23 +121,17 @@ src/
 │   └── ui/                       # AvatarFrame, CookieConsent, DailyLimitBanner, UpgradeGate/Modal
 │
 ├── data/
-│   ├── course/                   # Course content
-│   │   ├── course-meta.ts        # Lightweight unit/lesson metadata (no questions)
+│   ├── course/                   # Course content (multi-profession)
+│   │   ├── course-meta.ts        # Lightweight unit/lesson metadata router
 │   │   ├── index.ts              # Barrel export for full course data
 │   │   ├── types.ts              # CourseQuestion, Unit, Lesson, CourseProgress types
-│   │   └── units/                # Full unit data files with questions + SVG diagrams
-│   │       ├── unit-1-statics.ts
-│   │       ├── unit-2-dynamics.ts
-│   │       ├── unit-3-strength.ts
-│   │       ├── unit-4-thermo.ts
-│   │       ├── unit-5-heat.ts
-│   │       ├── unit-6-fluids.ts
-│   │       ├── unit-7-materials.ts
-│   │       ├── unit-7-how-things-work.ts  # "How Things Work" supplemental unit
-│   │       ├── unit-8-machine.ts
-│   │       ├── unit-9-gdt.ts
-│   │       ├── unit-10-interview.ts
-│   │       └── htw-L*.ts         # "How Things Work" lesson data files
+│   │   └── professions/          # Per-course content directories
+│   │       ├── personal-finance/  # 💰 Budgeting, investing, taxes
+│   │       ├── psychology/        # 🧠 Cognitive biases, social psych
+│   │       ├── space-astronomy/   # 🚀 Planets, stars, cosmology
+│   │       └── mechanical-engineering/  # ⚙️ Legacy (admin-only)
+│   │       # Each has: meta.ts, units/, glossary.ts?, syllabus.ts?
+│   │       # See docs/courses.md for current list (sourced from professions.ts)
 │   ├── achievements.ts           # Achievement definitions (25+ achievements)
 │   ├── blueprints.ts             # Blueprint/schematic data
 │   ├── daily-challenges.ts       # Daily challenge configurations
@@ -358,20 +352,8 @@ designs/                          # Design assets
 
 ## 8. Course Content Structure
 
-### Units (10 core + "How Things Work" supplemental)
-| # | Unit ID | Title | Topic |
-|---|---|---|---|
-| 1 | u1-statics | Statics & Equilibrium | engineering-mechanics |
-| 2 | u2-dynamics | Dynamics & Kinematics | engineering-mechanics |
-| 3 | u3-strength | Strength of Materials | strength-of-materials |
-| 4 | u4-thermo | Thermodynamics | thermodynamics |
-| 5 | u5-heat | Heat Transfer | heat-transfer |
-| 6 | u6-fluids | Fluid Mechanics | fluid-mechanics |
-| 7 | u7-materials | Materials Engineering | materials-engineering |
-| 8 | u8-machine | Machine Elements | machine-elements |
-| 9 | u9-gdt | GD&T | design-tolerancing |
-| 10 | u10-interview | Interview Mastery | (mixed) |
-| HTW | u7-htw | How Things Work | real-world-mechanisms |
+> **Active courses are listed in `docs/courses.md`** (sourced from `src/data/professions.ts`).
+> Each course has its own unit/lesson structure under `src/data/course/professions/<course-id>/`.
 
 ### Question Types (Course)
 - `multiple-choice` — 4 options, one correct

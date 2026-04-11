@@ -190,6 +190,8 @@ export interface CourseProgress {
   courseIntros?: Record<string, CourseIntroData>;
   /** Unit index from placement test. All lessons before this unit are unlocked (but not completed). */
   placementUnitIndex?: number;
+  /** IDs of story unlocks the user has already seen. Separate field per CR-C17. */
+  viewedStoryUnlocks?: string[];
 }
 
 export interface ActiveLesson {
@@ -202,6 +204,8 @@ export interface ActiveLesson {
   isGolden: boolean;
   /** IDs of review questions interleaved from earlier units (for UI badge). */
   reviewQuestionIds?: string[];
+  /** Count of questions answered correctly while in cruising mode (100% rolling accuracy). */
+  cruisingCorrectCount?: number;
 }
 
 export interface LessonResult {
@@ -218,6 +222,10 @@ export interface LessonResult {
   isNewBest: boolean;
   isFirstCompletion: boolean;
   isGolden: boolean;
+  /** XP multiplier from active events at time of completion (1 = no events). */
+  eventXpMultiplier?: number;
+  /** Name(s) of active events at time of completion. */
+  activeEventNames?: string[];
 }
 
 // ─── Placement Test ──────────────────────────────────────────────

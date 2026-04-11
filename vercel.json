@@ -7,6 +7,14 @@
     {
       "path": "/api/cron/league-finalize",
       "schedule": "5 0 * * 1"
+    },
+    {
+      "path": "/api/cron/friend-nudge",
+      "schedule": "0 20 * * *"
+    },
+    {
+      "path": "/api/cron/activity-cleanup",
+      "schedule": "0 3 * * 1"
     }
   ]
 }

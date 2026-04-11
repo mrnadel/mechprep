@@ -33,9 +33,13 @@ export type SoundName =
   | 'equip'
   | 'toast'
   | 'claimReward'
+  | 'dailyRewardClaim'
   | 'outOfHearts'
   | 'lessonFail'
-  | 'lessonPass';
+  | 'lessonPass'
+  | 'streak'
+  | 'nudgeGentle'
+  | 'nudgeUrgent';
 
 // ── Audio context singleton ──
 
@@ -250,6 +254,15 @@ const sounds: Record<SoundName, () => void> = {
     noise(0.04, 0.1);
   },
 
+  dailyRewardClaim() {
+    // Cheerful ascending arpeggio + sparkle
+    tone(523, 0.1, 'sine', 0, 0.2);       // C5
+    tone(659, 0.1, 'sine', 0.08, 0.2);    // E5
+    tone(784, 0.1, 'sine', 0.16, 0.2);    // G5
+    tone(1047, 0.2, 'sine', 0.24, 0.25);  // C6
+    noise(0.04, 0.24, 4000, 0.06);        // sparkle
+  },
+
   chestOpen() {
     tone(440, 0.08, 'sine', 0);
     tone(554, 0.08, 'sine', 0.06);
@@ -325,6 +338,27 @@ const sounds: Record<SoundName, () => void> = {
   toast() {
     tone(800, 0.05, 'sine', 0, 0.1);
     tone(1000, 0.04, 'sine', 0.03, 0.1);
+  },
+
+  streak() {
+    tone(880, 0.08, 'sine', 0, 0.15);
+    tone(1047, 0.08, 'sine', 0.06, 0.15);
+    tone(1319, 0.1, 'sine', 0.12, 0.18);
+  },
+
+  // ─ Nudges ─
+
+  nudgeGentle() {
+    // Soft two-note chime
+    tone(880, 0.12, 'sine', 0, 0.15);
+    tone(1047, 0.18, 'sine', 0.08, 0.15);
+  },
+
+  nudgeUrgent() {
+    // Attention-grabbing three-note pattern
+    tone(880, 0.1, 'triangle', 0, 0.2);
+    tone(880, 0.1, 'triangle', 0.12, 0.2);
+    tone(1047, 0.2, 'triangle', 0.24, 0.25);
   },
 };
 

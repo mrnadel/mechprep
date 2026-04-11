@@ -56,7 +56,10 @@ export default function FriendCard({
           <div className="flex items-center gap-1.5">
             <p className="text-sm font-bold text-surface-900 dark:text-surface-50 truncate">{displayName}</p>
             {hasSharedStreak && (
-              <span className="shrink-0 text-[10px] font-bold text-amber-600 bg-amber-100 dark:bg-amber-900/30 px-1.5 py-0.5 rounded-full">
+              <span
+                className="shrink-0 text-[10px] font-bold text-amber-600 bg-amber-100 dark:bg-amber-900/30 px-1.5 py-0.5 rounded-full"
+                title={`You and ${displayName} both have active streaks`}
+              >
                 🔥 {sharedStreakDays}d shared
               </span>
             )}

@@ -275,6 +275,17 @@ export function CourseMap() {
     return ids;
   }, [masteryEvents, courseData]);
 
+  const [sectionCharMap, setSectionCharMap] = useState<Record<number, string>>({});
+
+  useEffect(() => {
+    (async () => {
+      const { loadSectionCharacterMap } = await import('@/lib/story-utils');
+      const profId = useCourseStore.getState().activeProfession;
+      const map = await loadSectionCharacterMap(profId);
+      setSectionCharMap(map);
+    })();
+  }, []);
+
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const [showOutOfHearts, setShowOutOfHearts] = useState(false);
   const [jumpModal, setJumpModal] = useState<JumpModalType | null>(null);

@@ -18,17 +18,20 @@
 
 ## Documentation
 
-### Generated
+### Active
 - [Project Overview (Brownfield Doc)](./project-overview.md) — Comprehensive project context for AI agents
-
-### Existing
-- [SPECIFICATION.md](../SPECIFICATION.md) — Original product specification
+- [Active Courses](./courses.md) — Current course list (single source of truth, mirrors `src/data/professions.ts`)
+- [Content Writing Guide](./content-writing-guide.md) — Tone, structure, and formatting for course content
 - [DESIGN_SYSTEM.md](../DESIGN_SYSTEM.md) — Design system documentation
-- [PRODUCT_AND_COACHING_STRATEGY.md](../PRODUCT_AND_COACHING_STRATEGY.md) — Product strategy
-- [COMPETITIVE_ANALYSIS.md](../COMPETITIVE_ANALYSIS.md) — Competitive analysis
-- [COMPETITOR_ANALYSIS.md](../COMPETITOR_ANALYSIS.md) — Competitor analysis
-- [AUDIT-REPORT.md](../AUDIT-REPORT.md) — Audit report
-- [mechanical_engineering_content_framework.md](../mechanical_engineering_content_framework.md) — Content framework
+
+### Historical (ME-era, kept for reference only)
+These docs were written when Octokeen was a single-course Mechanical Engineering app. They no longer reflect the current multi-course platform.
+- [SPECIFICATION.md](../SPECIFICATION.md) — Original ME product specification
+- [PRODUCT_AND_COACHING_STRATEGY.md](../PRODUCT_AND_COACHING_STRATEGY.md) — Original ME product strategy
+- [COMPETITIVE_ANALYSIS.md](../COMPETITIVE_ANALYSIS.md) — ME-era competitive analysis
+- [COMPETITOR_ANALYSIS.md](../COMPETITOR_ANALYSIS.md) — ME-era competitor analysis
+- [AUDIT-REPORT.md](../AUDIT-REPORT.md) — Codebase audit (March 2026, ME-era)
+- [mechanical_engineering_content_framework.md](../mechanical_engineering_content_framework.md) — ME content framework
 
 ## Getting Started
 1. Copy `.env.local.example` to `.env.local` and fill in credentials

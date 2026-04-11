@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { Check, X } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -167,6 +168,7 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
             return (
               <motion.button
                 key={originalIdx}
+                aria-label={`Option ${String.fromCharCode(65 + displayIdx)}: ${option}${answered && localCorrect !== null ? (isCorrectOption ? ' — correct' : isSelected && !isCorrectOption ? ' — incorrect' : '') : ''}`}
                 onClick={() => !answered && setSelectedIndex(displayIdx)}
                 disabled={answered}
                 initial={{ opacity: 0, y: 16 }}
@@ -192,7 +194,7 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
                     fontSize: 14, fontWeight: 800,
                     background: isCorrectOption ? '#58CC02' : '#FF4B4B', color: 'white',
                   }}>
-                    {iconContent}
+                    {isCorrectOption ? <Check className="w-3.5 h-3.5" strokeWidth={3} /> : <X className="w-3.5 h-3.5" strokeWidth={3} />}
                   </span>
                 ) : (
                   <span style={{

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Hub v6</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f0f0f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; display: flex; justify-content: center; padding: 24px; gap: 32px; flex-wrap: wrap; }
+
+  .phone { width: 390px; background: #131F24; border-radius: 32px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.25); border: 8px solid #0a0a0a; }
+  .phone-inner { overflow: hidden; border-radius: 24px; position: relative; }
+
+  :root {
+    --brand: #6C63FF;
+    --green: #58CC02;
+    --orange: #FF9600;
+    --red: #FF4B4B;
+    --blue: #1CB0F6;
+    --yellow: #FFC800;
+    --bg-dark: #131F24;
+    --card-dark: #1A2C32;
+    --card-border: #2A3C42;
+    --text-white: #FFFFFF;
+    --text-muted: #8BA0A8;
+  }
+
+  .header {
+    background: var(--bg-dark);
+    padding: 16px 20px 4px;
+  }
+
+  .content {
+    background: var(--bg-dark);
+    padding: 0 16px 110px;
+    min-height: 700px;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-white);
+    padding: 20px 4px 14px;
+  }
+
+  /* Featured card — dark gradient like Duolingo's "Today's Review" */
+  .featured-card {
+    background: linear-gradient(135deg, #1a1a3e 0%, #2d1b4e 40%, #3b1d5e 100%);
+    border-radius: 18px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid rgba(108, 99, 255, 0.3);
+    min-height: 180px;
+  }
+  .featured-card::after {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .featured-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand);
+    background: rgba(108,99,255,0.2);
+    padding: 3px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+  .featured-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-white);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .featured-desc {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 220px;
+    margin-bottom: 18px;
+  }
+  .featured-illustration {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, rgba(108,99,255,0.3), rgba(108,99,255,0.1));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+  }
+  .featured-btn {
+    display: inline-block;
+    background: var(--brand);
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 0 var(--brand-dark, #4a3fd0);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+  }
+  .featured-btn:active { box-shadow: none; transform: translateY(4px); }
+
+  /* Collection cards */
+  .collection-card {
+    background: var(--card-dark);
+    border-radius: 16px;
+    border: 2px solid var(--card-border);
+    padding: 18px 18px 18px 18px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .collection-card:active { border-color: var(--brand); }
+
+  .collection-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .collection-info { flex: 1; }
+  .collection-info h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-white);
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .collection-info p {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .collection-illustration {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    flex-shrink: 0;
+    margin-right: -4px;
+  }
+
+  .badge-count {
+    background: var(--red);
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 10px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  /* Bottom nav */
+  .bottom-nav {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: var(--bg-dark); border-top: 2px solid var(--card-border);
+    display: flex; justify-content: space-around; padding: 8px 0 14px;
+  }
+  .nav-item { text-align: center; font-size: 10px; font-weight: 700; color: var(--text-muted); padding: 4px 8px; }
+  .nav-item.active { color: var(--brand); }
+  .nav-icon { font-size: 22px; margin-bottom: 2px; }
+
+  /* Notes */
+  .notes { width: 400px; display: flex; flex-direction: column; gap: 16px; padding-top: 8px; }
+  .note { background: white; border-radius: 16px; padding: 20px; border: 2px solid #e5e5e5; }
+  .note h3 { font-size: 15px; font-weight: 800; color: #3c3c3c; margin-bottom: 10px; }
+  .note p { font-size: 13px; color: #6b7280; line-height: 1.6; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<div class="phone">
+  <div class="phone-inner">
+    <div class="header"></div>
+    <div class="content">
+
+      <!-- FEATURED: Today's Practice -->
+      <div class="section-title">Today's Practice</div>
+      <div class="featured-card">
+        <div class="featured-label">PERSONALIZED</div>
+        <div class="featured-title">Smart Practice</div>
+        <div class="featured-desc">Questions picked just for you based on what you need most</div>
+        <button class="featured-btn">Start</button>
+        <div class="featured-illustration">🧠</div>
+      </div>
+
+      <!-- COLLECTIONS -->
+      <div class="section-title">Your collections</div>
+
+      <!-- Mistakes -->
+      <div class="collection-card">
+        <div class="collection-icon" style="background:linear-gradient(135deg,#FF9600,#FF6B00);">🔄</div>
+        <div class="collection-info">
+          <h3>Mistakes</h3>
+          <p>Practice the questions you got wrong recently</p>
+        </div>
+        <div class="collection-illustration" style="opacity:0.8;">📝</div>
+        <div class="badge-count">7</div>
+      </div>
+
+      <!-- Daily Challenge -->
+      <div class="collection-card">
+        <div class="collection-icon" style="background:linear-gradient(135deg,#58CC02,#46A302);">⚡</div>
+        <div class="collection-info">
+          <h3>Daily Challenge</h3>
+          <p>5 themed questions — new every day</p>
+        </div>
+        <div class="collection-illustration" style="opacity:0.8;">📅</div>
+      </div>
+
+      <!-- Spaced Review -->
+      <div class="collection-card">
+        <div class="collection-icon" style="background:linear-gradient(135deg,#CE82FF,#A855F7);">🔮</div>
+        <div class="collection-info">
+          <h3>Review</h3>
+          <p>Revisit topics before you forget them</p>
+        </div>
+        <div class="collection-illustration" style="opacity:0.8;">🧩</div>
+      </div>
+
+    </div>
+
+    <div class="bottom-nav">
+      <div class="nav-item"><div class="nav-icon">🏠</div>Home</div>
+      <div class="nav-item"><div class="nav-icon">⚔️</div>Quests</div>
+      <div class="nav-item active"><div class="nav-icon">🧠</div>Practice</div>
+      <div class="nav-item"><div class="nav-icon">🏆</div>League</div>
+      <div class="nav-item"><div class="nav-icon">👤</div>Profile</div>
+    </div>
+  </div>
+</div>
+
+<div class="notes">
+  <div class="note">
+    <h3>Matching Duolingo's Layout</h3>
+    <p><strong>Featured card at top</strong> — dark gradient, bold title, illustration, CTA button. Like Duolingo's "Today's Review" card.</p>
+    <p><strong>"Your collections" below</strong> — dark bordered cards with icon + title + description + illustration. Matches Duolingo's Mistakes/Words/Stories layout.</p>
+    <p><strong>Dark theme</strong> — Duolingo's practice hub uses their dark navy background. We match that.</p>
+    <p><strong>Emoji placeholders</strong> — in production, these would be real illustrated icons like Duolingo's microphone/headphones/cards.</p>
+  </div>
+
+  <div class="note">
+    <h3>Three Practice Modes</h3>
+    <p><strong>Smart Practice</strong> (featured) — the main mode. Algorithm picks 10 questions, wrong answers recycle. Always the hero card.</p>
+    <p><strong>Mistakes</strong> — re-practice questions you got wrong in past sessions. Badge shows count of unresolved mistakes. Uses existing mistake tracking.</p>
+    <p><strong>Daily Challenge</strong> — existing /practice/daily, 5 themed questions per day. Already built.</p>
+    <p><strong>Review</strong> — existing /practice/review (spaced repetition). Already built.</p>
+  </div>
+
+  <div class="note">
+    <h3>What This Replaces</h3>
+    <p>Removes 6 fragmented pages: /practice/smart, /adaptive, /interview, /weak-areas, /real-world, /topics</p>
+    <p>Keeps 2 existing pages: /practice/daily, /practice/review (linked from collection cards)</p>
+    <p>Adds 1 new page: /practice (this hub)</p>
+    <p>Smart Practice is the only new session mode — others are links to existing pages</p>
+  </div>
+</div>
+
+</body>
+</html>

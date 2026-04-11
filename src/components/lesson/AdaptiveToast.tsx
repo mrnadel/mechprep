@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Mascot, type MascotPose } from '@/components/ui/Mascot';
 
 export type AdaptiveMode = 'normal' | 'struggling' | 'cruising';
@@ -10,11 +10,15 @@ const MESSAGES: Record<Exclude<AdaptiveMode, 'normal'>, { pose: MascotPose; text
     { pose: 'excited', text: 'You got this! Take your time.' },
     { pose: 'torch', text: "Keep going, you're learning!" },
     { pose: 'winking', text: 'Mistakes help you grow!' },
+    { pose: 'thinking', text: 'Almost there — think it through!' },
+    { pose: 'proud', text: 'Every wrong answer teaches something!' },
   ],
   cruising: [
     { pose: 'on-fire', text: "You're on fire! Bonus XP!" },
     { pose: 'champion', text: 'Perfect streak! 1.5x XP!' },
     { pose: 'celebrating', text: 'Unstoppable! Bonus round!' },
+    { pose: 'proud', text: 'Crushing it! Extra XP earned!' },
+    { pose: 'explorer', text: 'Flawless run — keep it up!' },
   ],
 };
 
@@ -30,6 +34,7 @@ interface AdaptiveToastProps {
 }
 
 export function AdaptiveToast({ mode, seed = 0 }: AdaptiveToastProps) {
+  const reducedMotion = useReducedMotion();
   const visible = mode !== 'normal';
   const msg = visible ? pickMessage(mode as Exclude<AdaptiveMode, 'normal'>, seed) : null;
 
@@ -38,10 +43,12 @@ export function AdaptiveToast({ mode, seed = 0 }: AdaptiveToastProps) {
       {visible && msg && (
         <motion.div
           key={mode}
-          initial={{ opacity: 0, y: -20, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: -20, scale: 0.9 }}
-          transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+          role="status"
+          aria-live="polite"
+          initial={reducedMotion ? { opacity: 0 } : { opacity: 0, y: -20, scale: 0.9 }}
+          animate={reducedMotion ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+          exit={reducedMotion ? { opacity: 0 } : { opacity: 0, y: -20, scale: 0.9 }}
+          transition={reducedMotion ? { duration: 0.15 } : { type: 'spring', stiffness: 400, damping: 25 }}
           className="flex items-center gap-3 rounded-2xl px-4 py-3 mx-4 mb-3"
           style={{
             background: mode === 'struggling'

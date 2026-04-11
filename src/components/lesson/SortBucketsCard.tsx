@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Check, X } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -182,7 +183,16 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
               <div
                 key={label}
                 ref={bucketRef}
+                tabIndex={0}
+                role="listbox"
+                aria-label={`Bucket: ${label}`}
                 onClick={() => handleBucketTap(bIdx)}
+                onKeyDown={(e: React.KeyboardEvent) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleBucketTap(bIdx);
+                  }
+                }}
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -224,6 +234,8 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                         <motion.button
                           key={`sorted-${originalIdx}`}
                           layout
+                          role="option"
+                          aria-label={`${items[originalIdx]} in ${label}${isCorrect !== null ? (isCorrect ? ' — correct' : ' — incorrect') : '. Tap to return to pool'}`}
                           initial={{ opacity: 0, scale: 0.7, y: -8 }}
                           animate={
                             isCorrect !== null
@@ -251,6 +263,10 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                             fontWeight: 700,
                             textAlign: 'center',
                             cursor: answered ? 'default' : 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: 4,
                             border: isCorrect === null ? `2px solid ${c.border}`
                               : isCorrect ? '2px solid #58CC02' : '2px solid #FF4B4B',
                             background: isCorrect === null ? c.cardBg
@@ -262,7 +278,8 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                             transition: 'background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
                           }}
                         >
-                          {items[originalIdx]} {isCorrect === true ? '✓' : isCorrect === false ? '✗' : '×'}
+                          {items[originalIdx]}
+                          {isCorrect === true ? <Check className="w-3.5 h-3.5" strokeWidth={3} /> : isCorrect === false ? <X className="w-3.5 h-3.5" strokeWidth={3} /> : ' ×'}
                         </motion.button>
                       );
                     })}
@@ -306,6 +323,16 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                 return (
                   <motion.div
                     key={`item-${originalIdx}`}
+                    tabIndex={0}
+                    onKeyDown={(e: React.KeyboardEvent) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleItemTap(originalIdx);
+                      }
+                    }}
+                    role="option"
+                    aria-selected={isSelected}
+                    aria-label={`${items[originalIdx]}${isSelected ? ', selected' : ''}`}
                     drag
                     dragSnapToOrigin
                     dragMomentum={false}

@@ -11,6 +11,7 @@ import {
 import { comebackQuests, dailyQuestPool, weeklyQuestPool } from '@/data/quests';
 import { QuestCard } from './QuestCard';
 import { ChestAnimation } from './ChestAnimation';
+import { DailyRewardCalendar } from './DailyRewardCalendar';
 import { useIsDark } from '@/store/useThemeStore';
 import type { Quest } from '@/data/engagement-types';
 
@@ -159,6 +160,11 @@ export function QuestBoard() {
 
   return (
     <div className="space-y-6">
+      {/* ---- Daily Reward Calendar ---- */}
+      <section className="space-y-2.5">
+        <DailyRewardCalendar compact />
+      </section>
+
       {/* ---- Daily Quests ---- */}
       <section className="space-y-2.5">
         <div className="flex items-center justify-between px-1">

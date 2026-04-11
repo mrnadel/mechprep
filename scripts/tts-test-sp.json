@@ -1,0 +1,71 @@
+[
+  {
+    "id": "sp-sec1-u1-L1",
+    "title": "You Are Here",
+    "description": "Your address in the universe, from your street to the edge of the observable cosmos.",
+    "unitId": "sp-sec1-u1",
+    "unitTitle": "Welcome to the Universe",
+    "profession": "space-astronomy",
+    "characterId": "space-kai",
+    "voice": "am_puck",
+    "langCode": "a",
+    "questions": [
+      {
+        "id": "sp-sec1-u1-L1-T1",
+        "type": "teaching",
+        "question": "Welcome to the biggest adventure",
+        "explanation": "You're standing on a rocky planet called Earth, spinning at over 1,600 km/h while orbiting a star we call the Sun at 107,000 km/h. You've been a space traveler your whole life.",
+        "hint": "Try this now: step outside and look up. Everything you see is part of the universe, including you."
+      },
+      {
+        "id": "sp-sec1-u1-L1-Q1",
+        "type": "true-false",
+        "question": "Earth is a planet that orbits a star called the Sun.",
+        "explanation": "Earth is the third planet from the Sun, completing one orbit every 365.25 days."
+      },
+      {
+        "id": "sp-sec1-u1-L1-Q2",
+        "type": "multiple-choice",
+        "question": "What is the Sun?",
+        "explanation": "The Sun is a star. It produces its own light and heat through nuclear reactions in its core."
+      },
+      {
+        "id": "sp-sec1-u1-L1-T2",
+        "type": "teaching",
+        "question": "Your cosmic address",
+        "explanation": "Earth orbits the Sun in our solar system. Our solar system sits inside the Milky Way galaxy, which contains roughly 200 to 400 billion stars. The Milky Way is just one of trillions of galaxies in the observable universe."
+      },
+      {
+        "id": "sp-sec1-u1-L1-Q3",
+        "type": "order-steps",
+        "question": "Arrange these from smallest to largest:",
+        "explanation": "Earth is inside the solar system, which is inside the Milky Way, which is one galaxy among trillions in the observable universe."
+      },
+      {
+        "id": "sp-sec1-u1-L1-Q4",
+        "type": "fill-blank",
+        "question": "Our home galaxy is called the _____.",
+        "explanation": "The Milky Way is a spiral galaxy containing our solar system and hundreds of billions of other stars."
+      },
+      {
+        "id": "sp-sec1-u1-L1-T3",
+        "type": "teaching",
+        "question": "Why look up at all?",
+        "explanation": "Humans have gazed at the sky for thousands of years. The stars helped ancient travelers navigate, farmers time their planting, and scientists unlock the secrets of the universe. Today, you can do the same with just your eyes.",
+        "hint": "On a clear night far from city lights, you can see about 2,500 stars with your naked eye."
+      },
+      {
+        "id": "sp-sec1-u1-L1-Q5",
+        "type": "multiple-choice",
+        "question": "About how many stars can you see on a clear, dark night with just your eyes?",
+        "explanation": "Under perfect conditions, the human eye can see roughly 2,500 stars. Light pollution reduces that number dramatically in cities."
+      },
+      {
+        "id": "sp-sec1-u1-L1-Q6",
+        "type": "sort-buckets",
+        "question": "Sort these into the correct category:",
+        "explanation": "The Sun, Mars, and Jupiter are all inside the Milky Way. The Milky Way and Andromeda are each separate galaxies."
+      }
+    ]
+  }
+]

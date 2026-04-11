@@ -40,8 +40,8 @@ export const PROFESSIONS: Profession[] = [
     icon: '\uD83D\uDCB0',
     color: '#10B981',
     description: 'Budgeting, investing, taxes, and building wealth',
-    unitCount: 13,
-    questionCount: 1352,
+    unitCount: 19,
+    questionCount: 2988,
   },
   {
     id: PROFESSION_ID.PSYCHOLOGY,
@@ -50,8 +50,8 @@ export const PROFESSIONS: Profession[] = [
     icon: '\uD83E\uDDE0',
     color: '#A78BFA',
     description: 'Cognitive biases, social psychology, behavioral economics, and mental models',
-    unitCount: 10,
-    questionCount: 657,
+    unitCount: 18,
+    questionCount: 1766,
   },
   {
     id: PROFESSION_ID.SPACE_ASTRONOMY,

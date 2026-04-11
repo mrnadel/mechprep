@@ -2,7 +2,10 @@
 
 > Design Specification v1.0
 > Learning Experience + Gamification Architecture
-> Target: A smart engineering training game -- motivating, professional, effective.
+> Target: A smart gamified learning platform -- motivating, professional, effective.
+> See `docs/courses.md` for active courses.
+>
+> **Note:** Examples in this doc may reference Mechanical Engineering topics from the original single-course era. The design patterns (loops, gamification, progression) apply to all courses.
 
 ---
 

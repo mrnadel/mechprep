@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -24,6 +24,17 @@ export default function UnitsPage() {
   const isGuest = status !== 'authenticated';
   const { isProUser } = useSubscription();
   const isDark = useIsDark();
+
+  const [sectionCharMap, setSectionCharMap] = useState<Record<number, string>>({});
+
+  useEffect(() => {
+    (async () => {
+      const { loadSectionCharacterMap } = await import('@/lib/story-utils');
+      const profId = useCourseStore.getState().activeProfession;
+      const map = await loadSectionCharacterMap(profId);
+      setSectionCharMap(map);
+    })();
+  }, []);
 
   const unitStats = useMemo(() => {
     return courseData.map((unit, unitIndex) => {
@@ -265,6 +276,7 @@ export default function UnitsPage() {
                 professionId={activeProfession}
                 showProgress
                 onClick={() => router.push(`/?unit=${unitIndex}`)}
+                characterId={sectionCharMap[unit.sectionIndex ?? -1] ?? null}
               />
             </motion.div>
           ))

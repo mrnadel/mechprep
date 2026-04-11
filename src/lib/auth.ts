@@ -83,12 +83,16 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
   ],
   callbacks: {
-    async jwt({ token, user, account, trigger, session }) {
+    async jwt({ token, user, account, profile, trigger, session }) {
       if (user) {
         token.id = user.id;
       }
       if (account) {
         token.provider = account.provider;
+      }
+      // On OAuth sign-in, use the fresh profile name (DB record may be stale)
+      if (profile?.name) {
+        token.name = profile.name as string;
       }
       if (trigger === 'update') {
         if (session?.name) token.name = session.name;
@@ -111,9 +115,19 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       }
       return session;
     },
-    async signIn({ user }) {
+    async signIn({ user, account, profile }) {
       if (user.id) {
         try {
+          // Sync OAuth profile name to displayName on each sign-in.
+          // `profile` has the fresh OAuth data; `user` is the stale DB record.
+          const oauthName = (profile as { name?: string })?.name;
+          if (account?.provider !== 'credentials' && oauthName) {
+            await db
+              .update(users)
+              .set({ displayName: oauthName, name: oauthName })
+              .where(eq(users.id, user.id));
+          }
+
           const cookieStore = await cookies();
           const inviterId = cookieStore.get('invite_ref')?.value;
 

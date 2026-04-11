@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo } from 'react';
 import { motion, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
+import { Check, X } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -154,6 +155,7 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
                         <motion.div
                           key={`sorted-${originalIdx}`}
                           layout
+                          aria-label={`${items[originalIdx]} in ${categories[catIdx]}${isCorrect !== null ? (isCorrect ? ' — correct' : ' — incorrect') : ''}`}
                           initial={{ opacity: 0, scale: 0.7, y: -6 }}
                           animate={
                             isCorrect !== null
@@ -170,6 +172,7 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
                           style={{
                             padding: '7px 10px', borderRadius: 10, textAlign: 'center',
                             fontSize: 12, fontWeight: 700,
+                            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4,
                             background: isCorrect === null ? c.cardBg : isCorrect ? '#D7FFB8' : '#FFDFE0',
                             border: isCorrect === null ? `1.5px solid ${c.border}` : isCorrect ? '1.5px solid #58CC02' : '1.5px solid #FF4B4B',
                             color: isCorrect === null ? c.title : isCorrect ? '#58A700' : '#EA2B2B',
@@ -177,7 +180,8 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
                           }}
                         >
                           {items[originalIdx]}
-                          {isCorrect !== null && (isCorrect ? ' ✓' : ' ✗')}
+                          {isCorrect === true && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
+                          {isCorrect === false && <X className="w-3.5 h-3.5" strokeWidth={3} />}
                         </motion.div>
                       );
                     })}
@@ -188,12 +192,25 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
           })}
         </div>
 
+        <div className="sr-only">Use left and right arrow keys to categorize</div>
+
         {/* Swipe card area */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: 180, position: 'relative', flex: 1 }}>
           {!allSwiped && currentOriginalIdx !== -1 && !answered && (
             <AnimatePresence mode="popLayout">
               <motion.div
                 key={`swipe-${currentOriginalIdx}`}
+                tabIndex={0}
+                onKeyDown={(e: React.KeyboardEvent) => {
+                  if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    handleSwipe(currentOriginalIdx, 0);
+                  } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    handleSwipe(currentOriginalIdx, 1);
+                  }
+                }}
+                aria-label={`${items[currentOriginalIdx]}. Press left arrow for ${categories[0]}, right arrow for ${categories[1]}`}
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={0.8}
@@ -230,6 +247,7 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
             <motion.button
               whileTap={{ y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } }}
               onClick={() => handleSwipe(currentOriginalIdx, 0)}
+              aria-label={`Sort "${items[currentOriginalIdx]}" into ${categories[0]}`}
               style={{
                 padding: '10px 14px', borderRadius: 12, border: `2px solid ${unitColor}40`,
                 background: `${unitColor}08`, fontSize: 13, fontWeight: 700, color: unitColor,
@@ -242,6 +260,7 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
             <motion.button
               whileTap={{ y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } }}
               onClick={() => handleSwipe(currentOriginalIdx, 1)}
+              aria-label={`Sort "${items[currentOriginalIdx]}" into ${categories[1]}`}
               style={{
                 padding: '10px 14px', borderRadius: 12, border: `2px solid ${unitColor}40`,
                 background: `${unitColor}08`, fontSize: 13, fontWeight: 700, color: unitColor,

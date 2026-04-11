@@ -485,6 +485,8 @@ const rewardFrames: RewardFrame[] = [
   { id: 'reward-frame-speed-demon', name: 'Speed Demon', icon: '⚡', frameStyle: 'speed-demon', source: 'Complete 10 lessons in a day', borderColor: '#EAB308', glowColor: 'rgba(234,179,8,0.4)' },
   { id: 'reward-frame-perfectionist', name: 'Perfectionist', icon: '🎯', frameStyle: 'perfectionist', source: '100% accuracy on 25 lessons', borderColor: '#DC2626', glowColor: 'rgba(220,38,38,0.35)' },
   { id: 'reward-frame-all-gold', name: 'Golden Engineer', icon: '👑', frameStyle: 'all-gold', source: 'Complete ALL golden lessons', borderColor: '#EAB308', glowColor: 'rgba(234,179,8,0.5)' },
+  // Daily reward calendar
+  { id: 'reward-frame-calendar-collector', name: 'Calendar Collector', icon: '📅', frameStyle: 'calendar-collector', source: 'Day 7 Mystery Reward', borderColor: '#8B5CF6', glowColor: 'rgba(139,92,246,0.4)' },
 ];
 
 // Reward titles (not purchasable)

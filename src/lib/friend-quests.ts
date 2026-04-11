@@ -25,7 +25,7 @@ export const FRIEND_QUEST_POOL: FriendQuestDefinition[] = [
     description: 'Together, earn {target} XP this week',
     icon: '⚡',
     target: 500,
-    rewardXp: 100,
+    rewardXp: 0,
     rewardGems: 20,
   },
   {
@@ -34,16 +34,16 @@ export const FRIEND_QUEST_POOL: FriendQuestDefinition[] = [
     description: 'Together, complete {target} lessons this week',
     icon: '📚',
     target: 10,
-    rewardXp: 80,
+    rewardXp: 0,
     rewardGems: 15,
   },
   {
     type: 'combined_accuracy',
     title: 'Accuracy Alliance',
-    description: 'Both maintain {target}%+ accuracy this week',
+    description: 'Both complete {target} sessions at 80%+ accuracy',
     icon: '🎯',
-    target: 80,
-    rewardXp: 120,
+    target: 3,
+    rewardXp: 0,
     rewardGems: 25,
   },
   {
@@ -52,7 +52,7 @@ export const FRIEND_QUEST_POOL: FriendQuestDefinition[] = [
     description: 'Together, earn {target} XP this week',
     icon: '🚀',
     target: 800,
-    rewardXp: 150,
+    rewardXp: 0,
     rewardGems: 30,
   },
   {
@@ -61,7 +61,7 @@ export const FRIEND_QUEST_POOL: FriendQuestDefinition[] = [
     description: 'Together, complete {target} lessons this week',
     icon: '🤝',
     target: 6,
-    rewardXp: 60,
+    rewardXp: 0,
     rewardGems: 10,
   },
 ];

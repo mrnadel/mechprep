@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { Check, X } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -170,6 +171,9 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
               return (
                 <motion.button
                   key={`l-${leftIdx}`}
+                  role="option"
+                  aria-selected={isSelected || matches[leftIdx] !== null}
+                  aria-label={`${item}${matches[leftIdx] !== null ? ` — matched to ${rightItems[matches[leftIdx]!]}` : ''}${isCorrect !== null ? (isCorrect ? ' — correct' : ' — incorrect') : ''}`}
                   onClick={() => handleLeftTap(leftIdx)}
                   disabled={answered}
                   initial={{ opacity: 0, x: -16 }}
@@ -192,8 +196,14 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
                     transition: 'background 0.2s ease, border 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
                     textAlign: 'center',
                     boxShadow: shadow,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 4,
                   }}
                 >
+                  {isCorrect !== null && isCorrect && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
+                  {isCorrect !== null && !isCorrect && <X className="w-3.5 h-3.5" strokeWidth={3} />}
                   {item}
                 </motion.button>
               );
@@ -237,6 +247,9 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
               return (
                 <motion.button
                   key={`r-${displayIdx}`}
+                  role="option"
+                  aria-selected={matchedRightSet.has(rightActualIdx)}
+                  aria-label={`${item}${matchedByLeft !== -1 ? ` — matched to ${leftItems[matchedByLeft]}` : ''}${isCorrect !== null ? (isCorrect ? ' — correct' : ' — incorrect') : ''}`}
                   onClick={() => handleRightTap(rightActualIdx)}
                   disabled={answered || selectedLeft === null}
                   initial={{ opacity: 0, x: 16 }}
@@ -259,8 +272,14 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
                     transition: 'background 0.2s ease, border 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
                     textAlign: 'center',
                     boxShadow: shadow,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 4,
                   }}
                 >
+                  {isCorrect !== null && isCorrect && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
+                  {isCorrect !== null && !isCorrect && <X className="w-3.5 h-3.5" strokeWidth={3} />}
                   {item}
                 </motion.button>
               );

@@ -41,16 +41,18 @@ import type { ContentFeedbackType } from '@/data/types';
 import { GlossaryText } from '@/components/ui/GlossaryText';
 import { GlossaryProvider } from '@/components/lesson/GlossaryContext';
 import { useNarration } from '@/hooks/useNarration';
+import { AudioButton } from '@/components/ui/AudioButton';
 import { AdaptiveToast, type AdaptiveMode } from '@/components/lesson/AdaptiveToast';
-
-// --------------- Adaptive Difficulty ---------------
-const ROLLING_WINDOW = 5;
-const STRUGGLING_THRESHOLD = 0.4; // ≤40% accuracy over last 5
-const CRUISING_THRESHOLD = 1.0;   // 100% accuracy over last 5
-const CRUISING_XP_BONUS = 1.5;
+import { MicroCelebration, type CelebrationType } from '@/components/lesson/MicroCelebration';
+import {
+  ADAPTIVE_ROLLING_WINDOW as ROLLING_WINDOW,
+  ADAPTIVE_STRUGGLING_THRESHOLD as STRUGGLING_THRESHOLD,
+  ADAPTIVE_CRUISING_THRESHOLD as CRUISING_THRESHOLD,
+  ADAPTIVE_MIN_ANSWERS,
+} from '@/lib/game-config';
 
 function getAdaptiveMode(recentAnswers: boolean[]): AdaptiveMode {
-  if (recentAnswers.length < 3) return 'normal'; // Need at least 3 answers
+  if (recentAnswers.length < ADAPTIVE_MIN_ANSWERS) return 'normal';
   const window = recentAnswers.slice(-ROLLING_WINDOW);
   const accuracy = window.filter(Boolean).length / window.length;
   if (accuracy <= STRUGGLING_THRESHOLD) return 'struggling';
@@ -109,12 +111,39 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const [isCalcOpen, setIsCalcOpen] = useState(false);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(null);
   const [lastSelectedIndex, setLastSelectedIndex] = useState<number | undefined>(undefined);
-  const [xpGain, setXpGain] = useState(0);
   const [showOutOfHearts, setShowOutOfHearts] = useState(false);
   const [recentAnswers, setRecentAnswers] = useState<boolean[]>([]);
   const adaptiveMode = useMemo(() => getAdaptiveMode(recentAnswers), [recentAnswers]);
   const adaptiveSeed = useRef(0);
+  const prevAdaptiveMode = useRef<AdaptiveMode>('normal');
+
+  // Micro-celebration state
+  const [celebration, setCelebration] = useState<{
+    type: CelebrationType;
+    streakCount?: number;
+    key: number;
+  } | null>(null);
+  const celebrationKeyRef = useRef(0);
+  const [correctStreak, setCorrectStreak] = useState(0);
+  const [milestoneGlow, setMilestoneGlow] = useState(false);
+
+  // Character state for section-based character integration
+  const [lessonCharacter, setLessonCharacter] = useState<{ id: string; name: string } | null>(null);
+  const [charLines, setCharLines] = useState<import('@/data/course/character-lines').CharacterLines[] | null>(null);
+
+  // Play a celebratory sound when entering cruising mode
+  useEffect(() => {
+    if (adaptiveMode === prevAdaptiveMode.current) return;
+    prevAdaptiveMode.current = adaptiveMode;
+    if (adaptiveMode === 'cruising') {
+      playSound('streakMilestone');
+    }
+  }, [adaptiveMode]);
+
   const questionRef = useRef<QuestionCardHandle>(null);
+  const continueBtnRef = useRef<HTMLButtonElement>(null);
+  const questionAreaRef = useRef<HTMLDivElement>(null);
+  const exitDialogRef = useRef<HTMLDivElement>(null);
   const isDoubleXp = useDoubleXpActive();
   const addMasteryEvent = useMasteryStore((s) => s.addEvent);
   useScrollLock(true);
@@ -133,6 +162,41 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   useEffect(() => {
     if (!adapter && lessonResult) syncMastery();
   }, [adapter, lessonResult, syncMastery]);
+
+  // Focus the continue button when an answer is submitted
+  useEffect(() => {
+    if (lastAnswerCorrect !== null) {
+      requestAnimationFrame(() => continueBtnRef.current?.focus());
+    }
+  }, [lastAnswerCorrect]);
+
+  // Focus trap for exit confirm dialog
+  useEffect(() => {
+    if (!showExitConfirm || !exitDialogRef.current) return;
+    const dialog = exitDialogRef.current;
+    const focusableSelector = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const focusableEls = dialog.querySelectorAll<HTMLElement>(focusableSelector);
+    if (focusableEls.length === 0) return;
+    const firstEl = focusableEls[0];
+    const lastEl = focusableEls[focusableEls.length - 1];
+    firstEl.focus();
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) {
+        if (document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        }
+      } else {
+        if (document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
+    };
+    dialog.addEventListener('keydown', handleTab);
+    return () => dialog.removeEventListener('keydown', handleTab);
+  }, [showExitConfirm]);
 
   // Scroll lock handled by useScrollLock(true) above
 
@@ -242,6 +306,30 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
     return () => { if (bgStepAnimRef.current) cancelAnimationFrame(bgStepAnimRef.current); };
   }, [bgStepIndex]);
 
+  // Load section character + character lines when lesson starts
+  useEffect(() => {
+    if (!activeLesson || adapter) return;
+    const sectionIdx = lessonData?.unit?.sectionIndex;
+    if (sectionIdx == null) return;
+    let cancelled = false;
+    (async () => {
+      const { loadCharacters, loadSectionCharacterMap, loadCharacterLines, getCharacterForSection } = await import('@/lib/story-utils');
+      const profId = activeProfession;
+      const [characters, sectionMap, lines] = await Promise.all([
+        loadCharacters(profId),
+        loadSectionCharacterMap(profId),
+        loadCharacterLines(profId),
+      ]);
+      if (cancelled) return;
+      const char = getCharacterForSection(sectionIdx, sectionMap, characters);
+      if (char) {
+        setLessonCharacter({ id: char.id, name: char.name });
+        setCharLines(lines);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [activeLesson?.unitIndex, adapter, activeProfession]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const overlayActive = showExitConfirm || showOutOfHearts;
 
   const lessonSessionQuestions = useMemo(() => {
@@ -350,14 +438,24 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
           source: 'course',
         });
       }
-      if (correct) {
-        setXpGain((prev) => prev + (isDoubleXp ? 20 : 10));
-      } else {
+      if (!correct) {
         playSound('heartLost');
         loseHeart();
       }
+
+      // Streak tracking for non-standard lesson types
+      const newStreak = correct ? correctStreak + 1 : 0;
+      setCorrectStreak(newStreak);
+      if (correct && newStreak >= 3 && adaptiveMode !== 'cruising') {
+        celebrationKeyRef.current++;
+        setCelebration({
+          type: 'streak',
+          streakCount: newStreak,
+          key: celebrationKeyRef.current,
+        });
+      }
     },
-    [_submitAnswer, lessonData, addMasteryEvent, isDoubleXp, loseHeart],
+    [_submitAnswer, lessonData, addMasteryEvent, loseHeart, correctStreak, adaptiveMode],
   );
 
   const handleTypeProgress = useCallback((current: number, total: number) => {
@@ -413,7 +511,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
       if (adapter) {
         adapter.submitAnswer(currentQuestion.id, correct);
       } else {
-        _submitAnswer(currentQuestion.id, correct);
+        _submitAnswer(currentQuestion.id, correct, adaptiveMode === 'cruising' && correct);
         const topicId = lessonData?.unit.topicId;
         if (topicId) {
           addMasteryEvent({
@@ -431,21 +529,34 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
       // Track rolling accuracy for adaptive difficulty
       setRecentAnswers((prev) => {
         const next = [...prev, correct];
-        // Check if the NEW mode will be cruising for XP bonus
         const mode = getAdaptiveMode(next);
         if (mode !== adaptiveMode) adaptiveSeed.current++;
         return next;
       });
-      if (correct) {
-        // Cruising bonus: 1.5x XP per question during a perfect streak
-        const cruiseBonus = adaptiveMode === 'cruising' ? CRUISING_XP_BONUS : 1;
-        setXpGain((prev) => prev + Math.round((isDoubleXp ? 20 : 10) * cruiseBonus));
-      } else if (!adapter?.noHearts) {
+      if (!correct && !adapter?.noHearts) {
         playSound('heartLost');
         loseHeart();
       }
+
+      // Track correct streak (skip teaching cards — they use handleTeachingGotIt)
+      if (!isTeaching) {
+        const newStreak = correct ? correctStreak + 1 : 0;
+        setCorrectStreak(newStreak);
+
+        // Trigger streak celebration at 3+ in a row
+        // Suppress when adaptive mode is cruising (they convey similar info)
+        const currentAdaptiveMode = adapter ? 'normal' : adaptiveMode;
+        if (correct && newStreak >= 3 && currentAdaptiveMode !== 'cruising') {
+          celebrationKeyRef.current++;
+          setCelebration({
+            type: 'streak',
+            streakCount: newStreak,
+            key: celebrationKeyRef.current,
+          });
+        }
+      }
     },
-    [adapter, currentQuestion, _submitAnswer, lessonData, addMasteryEvent, isDoubleXp, loseHeart, adaptiveMode]
+    [adapter, currentQuestion, _submitAnswer, lessonData, addMasteryEvent, loseHeart, adaptiveMode, isTeaching, correctStreak]
   );
 
   const handleSelectionChange = useCallback((value: boolean) => {
@@ -460,6 +571,31 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
     setLastAnswerCorrect(null);
     setLastSelectedIndex(undefined);
     setHasSelection(false);
+
+    // Milestone detection — fires BEFORE advancing to the next question
+    const nextIndex = adapter
+      ? adapter.answeredCount
+      : (activeLesson?.currentQuestionIndex ?? 0) + 1;
+    const total = resolvedTotalQuestions;
+
+    // Halfway check: fire once when crossing the midpoint (4+ questions only)
+    if (total >= 4 && nextIndex === Math.floor(total / 2)) {
+      celebrationKeyRef.current++;
+      setCelebration({ type: 'halfway', key: celebrationKeyRef.current });
+      // Trigger milestone glow on progress bar
+      setMilestoneGlow(true);
+      setTimeout(() => setMilestoneGlow(false), 1200);
+    }
+
+    // Last question check: fire when advancing to the final question (3+ questions)
+    if (total >= 3 && nextIndex === total - 1 && !isLastQuestion) {
+      // Only trigger if we don't already have a streak celebration showing
+      if (!celebration || celebration.type !== 'streak') {
+        celebrationKeyRef.current++;
+        setCelebration({ type: 'last-question', key: celebrationKeyRef.current });
+      }
+    }
+
     if (isLastQuestion) {
       adapter ? adapter.complete() : _completeLesson();
     } else {
@@ -469,8 +605,9 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         return;
       }
       adapter ? adapter.nextQuestion() : _nextQuestion();
+      requestAnimationFrame(() => questionAreaRef.current?.focus());
     }
-  }, [adapter, isLastQuestion, _completeLesson, _nextQuestion, hasHearts]);
+  }, [adapter, activeLesson, isLastQuestion, _completeLesson, _nextQuestion, hasHearts, resolvedTotalQuestions, celebration]);
 
   const handleExitClick = useCallback(() => {
     if (adapter) {
@@ -508,6 +645,9 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
     }
   }, [showHotkeyHint]);
 
+  // Teaching cards auto-submit as correct but must NOT affect adaptive
+  // difficulty tracking (recentAnswers). This callback deliberately
+  // bypasses handleAnswer to avoid inflating the rolling accuracy window.
   const handleTeachingGotIt = useCallback(() => {
     if (!currentQuestion) return;
     // Auto-submit teaching card as correct (won't count toward accuracy)
@@ -614,23 +754,66 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
 
   const displayQuestion = currentQuestion;
 
-  // === NARRATION ===
-  const { speak: narrateText, stop: stopNarration } = useNarration();
+  // Compute character teaching line for the current teaching card
+  const teachingLine = useMemo(() => {
+    if (!lessonCharacter || !charLines || displayQuestion?.type !== 'teaching') return null;
+    // Use dynamic import result cached in charLines; getTeachingLine is a sync pure function
+    const { getTeachingLine } = require('@/lib/story-utils') as typeof import('@/lib/story-utils');
+    return getTeachingLine(displayQuestion.question, lessonCharacter.id, charLines);
+  }, [lessonCharacter, charLines, displayQuestion]);
+
+  // Compute character celebration line
+  const celebrationCharLine = useMemo(() => {
+    if (!lessonCharacter || !charLines || !celebration) return null;
+    const { getCelebrationLine } = require('@/lib/story-utils') as typeof import('@/lib/story-utils');
+    return getCelebrationLine(celebration.type, lessonCharacter.id, charLines);
+  }, [lessonCharacter, charLines, celebration]);
+
+  // === NARRATION (client-side Kokoro TTS) ===
+  const { speakWithCharacter, prefetch: prefetchAudio, stop: stopNarration, modelReady } = useNarration();
+  const currentCharacterId = lessonCharacter?.id ?? null;
+
+  // Narrate the current card when it changes (or when model finishes loading)
   useEffect(() => {
-    if (!displayQuestion) return;
-    const parts: string[] = [];
-    if (displayQuestion.question) parts.push(displayQuestion.question);
+    if (!displayQuestion || !modelReady) return;
+
     if (displayQuestion.type === 'teaching') {
-      // Teaching cards show everything at once
-      if (displayQuestion.explanation) parts.push(displayQuestion.explanation);
-      if (displayQuestion.hint) parts.push(displayQuestion.hint);
+      if (displayQuestion.explanation) {
+        speakWithCharacter(displayQuestion.explanation, currentCharacterId);
+      }
     } else {
-      // Regular questions: only narrate hint (visible helper text), not explanation (post-answer)
-      if (displayQuestion.hint) parts.push(displayQuestion.hint);
+      if (displayQuestion.question) {
+        speakWithCharacter(displayQuestion.question, currentCharacterId);
+      }
     }
-    narrateText(parts.join('. '));
+
+    // Look-ahead: pre-generate audio for next 3 cards while user reads this one
+    const idx = activeLesson?.currentQuestionIndex ?? 0;
+    const upcoming: { text: string; characterId?: string | null }[] = [];
+    for (let i = idx + 1; i <= idx + 3 && i < lessonSessionQuestions.length; i++) {
+      const q = lessonSessionQuestions[i];
+      if (!q) continue;
+      if (q.type === 'teaching' && q.explanation) {
+        upcoming.push({ text: q.explanation, characterId: currentCharacterId });
+      } else if (q.question) {
+        upcoming.push({ text: q.question, characterId: currentCharacterId });
+      }
+      if (q.explanation) {
+        upcoming.push({ text: q.explanation, characterId: currentCharacterId });
+      }
+    }
+    if (upcoming.length) prefetchAudio(upcoming);
+
     return () => stopNarration();
-  }, [displayQuestion?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [displayQuestion?.id, modelReady]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Narrate the explanation when an answer is revealed
+  useEffect(() => {
+    if (lastAnswerCorrect === null || !displayQuestion || displayQuestion.type === 'teaching') return;
+    if (!displayQuestion.explanation) return;
+
+    speakWithCharacter(displayQuestion.explanation, currentCharacterId);
+  }, [lastAnswerCorrect, displayQuestion?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!displayQuestion && !isNonStandard) return null;
 
@@ -732,6 +915,8 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
             current={resolvedAnsweredCount}
             total={resolvedTotalQuestions}
             color={isGolden ? '#FFB800' : unitColor}
+            glowing={adaptiveMode === 'cruising'}
+            milestoneGlow={milestoneGlow}
           />
 
           {/* Debug: prev/next for dev mode */}
@@ -942,11 +1127,14 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         ) : displayQuestion ? (
         <>
         <div
+          ref={questionAreaRef}
+          tabIndex={-1}
           className={`flex-1 overflow-y-auto overflow-x-hidden${hasBackground ? ' lesson-has-background' : ''}`}
           style={{
             padding: '16px 20px 20px',
             position: 'relative',
             zIndex: 1,
+            outline: 'none',
           }}
         >
           <div style={{ minHeight: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -983,6 +1171,20 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
               <AdaptiveToast mode={adaptiveMode} seed={adaptiveSeed.current} />
             )}
 
+            {/* Mid-lesson micro-celebration toast — hidden when AdaptiveToast is showing */}
+            <AnimatePresence>
+              {celebration && !(lastAnswerCorrect === null && adaptiveMode !== 'normal' && displayQuestion.type !== 'teaching') && (
+                <MicroCelebration
+                  key={celebration.key}
+                  type={celebration.type}
+                  streakCount={celebration.streakCount}
+                  onDismiss={() => setCelebration(null)}
+                  characterId={lessonCharacter?.id}
+                  characterLine={celebrationCharLine}
+                />
+              )}
+            </AnimatePresence>
+
             <AnimatePresence mode="popLayout">
               <motion.div
                 key={displayQuestion.id}
@@ -999,6 +1201,9 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                     onGotIt={handleTeachingGotIt}
                     hasBackground={hasBackground}
                     bgTheme={bgTheme}
+                    characterId={lessonCharacter?.id}
+                    characterName={lessonCharacter?.name}
+                    characterLine={teachingLine}
                   />
                 ) : displayQuestion.type === 'sort-buckets' ? (
                   <SortBucketsCard
@@ -1223,26 +1428,46 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
               )}
               {/* General explanation (why the correct answer is right) */}
               {displayQuestion.explanation && (
-                <motion.p
+                <motion.div
                   initial={!lastAnswerCorrect && displayQuestion.distractorExplanations?.[lastSelectedIndex!] ? { opacity: 0, y: 4 } : undefined}
                   animate={{ opacity: 0.75, y: 0 }}
                   transition={!lastAnswerCorrect && displayQuestion.distractorExplanations?.[lastSelectedIndex!] ? { delay: 0.35, duration: 0.25 } : undefined}
                   style={{
-                    fontSize: 13,
-                    fontWeight: 600,
-                    color: lastAnswerCorrect ? '#58A700' : '#EA2B2B',
-                    opacity: 0.75,
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: 2,
                     margin: '4px 0 0',
-                    lineHeight: 1.4,
                   }}
                 >
-                  <GlossaryText text={(userCountry && displayQuestion.variants?.[userCountry]) || displayQuestion.explanation} />
-                </motion.p>
+                  <p
+                    style={{
+                      fontSize: 13,
+                      fontWeight: 600,
+                      color: lastAnswerCorrect ? '#58A700' : '#EA2B2B',
+                      opacity: 0.75,
+                      margin: 0,
+                      lineHeight: 1.4,
+                      flex: 1,
+                    }}
+                  >
+                    <GlossaryText text={(userCountry && displayQuestion.variants?.[userCountry]) || displayQuestion.explanation} />
+                  </p>
+                  {displayQuestion.explanation && (
+                    <AudioButton
+                      text={displayQuestion.explanation}
+                      characterId={currentCharacterId}
+                      color={lastAnswerCorrect ? '#58A700' : '#EA2B2B'}
+                      size={16}
+                    />
+                  )}
+                </motion.div>
               )}
               <FlagButton contentType={flagContentType} contentId={displayQuestion.id} hasGraphic={!!displayQuestion.diagram} />
             </div>
 
             <GameButton
+              ref={continueBtnRef}
+              data-testid="continue-button"
               onClick={handleContinue}
               variant={lastAnswerCorrect ? 'green' : 'red'}
             >
@@ -1326,6 +1551,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
             >
               <div className="absolute inset-0 bg-black/40" />
               <motion.div
+                ref={exitDialogRef}
                 className="relative w-full sm:w-auto"
                 role="dialog"
                 aria-modal="true"
@@ -1365,6 +1591,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                 </p>
                 <div className="flex" style={{ gap: 12 }}>
                   <motion.button
+                    data-testid="keep-going-button"
                     onClick={handleCancelExit}
                     whileTap={{ y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } }}
                     className="flex-1"

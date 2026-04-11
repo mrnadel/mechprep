@@ -14,7 +14,7 @@ interface NarrationState {
 export const useNarrationStore = create<NarrationState>()(
   persist(
     (set) => ({
-      enabled: false,
+      enabled: true,
       voiceName: null,
       rate: 0.95,
       toggleNarration: () => set((s) => ({ enabled: !s.enabled })),
@@ -27,6 +27,12 @@ export const useNarrationStore = create<NarrationState>()(
         enabled: state.enabled,
         voiceName: state.voiceName,
         rate: state.rate,
+      }),
+      // Force narration enabled for new TTS feature rollout
+      merge: (persisted, current) => ({
+        ...current,
+        ...(persisted as Partial<NarrationState>),
+        enabled: true,
       }),
     },
   ),

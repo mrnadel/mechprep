@@ -11,6 +11,7 @@ import { useEngagementActions } from '@/store/useEngagementStore';
 import { analytics } from '@/lib/mixpanel';
 import { achievements } from '@/data/achievements';
 import { playSound } from '@/lib/sounds';
+import { reportFriendQuestProgress } from '@/hooks/useFriendQuestSync';
 import { useAdManager } from '@/components/ads/useAdManager';
 import { InterstitialAd } from '@/components/ads/InterstitialAd';
 
@@ -97,6 +98,12 @@ export default function SessionSummary({ summary }: Props) {
     if (summary.accuracy === 100 && summary.questionsAttempted >= 3) updateQuestProgress('perfect_sessions', 1);
     updateQuestProgress('topics_practiced', 1);
     if (summary.type === 'daily-challenge') updateQuestProgress('daily_challenges_completed', 1);
+    // Report to friend quest progress API (fire-and-forget)
+    reportFriendQuestProgress([
+      { event: 'xp_earned', value: summary.xpEarned },
+      { event: 'lesson_completed', value: 1 },
+      { event: 'accuracy_report', value: summary.accuracy },
+    ]);
     // streak_days: use absolute mode to set progress to the current streak value,
     // preventing multi-session-per-day inflation (quest target is 7 for a full week)
     const currentStreak = useStore.getState().progress.currentStreak;

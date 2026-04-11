@@ -4,7 +4,7 @@ import { create } from 'zustand';
 import { persist, subscribeWithSelector } from 'zustand/middleware';
 import { loadUnitData, getCourseMetaForProfession } from '@/data/course/course-meta';
 import { PROFESSION_ID } from '@/data/professions';
-import { SESSION_SIZE as SESSION_SIZE_CONFIG, STAR_THRESHOLDS, DOUBLE_XP_BUFFER_MS, DOUBLE_XP_RECENT_PURCHASE_WINDOW_MS } from '@/lib/game-config';
+import { SESSION_SIZE as SESSION_SIZE_CONFIG, STAR_THRESHOLDS, DOUBLE_XP_BUFFER_MS, DOUBLE_XP_RECENT_PURCHASE_WINDOW_MS, ADAPTIVE_CRUISING_XP_BONUS } from '@/lib/game-config';
 import { STORAGE_KEYS } from '@/lib/storage-keys';
 import { topics } from '@/data/topics';
 import { toLocalDateString, getYesterdayString, shuffleArray } from '@/lib/utils';
@@ -22,7 +22,7 @@ import { pickReviewQuestions } from '@/lib/review-engine';
 import { DOUBLE_XP_SHOP_DURATION_MS } from '@/data/engagement-types';
 import { getLevelForXp } from '@/data/levels';
 import { getLevelReward, type LevelReward } from '@/data/level-rewards';
-import { getEventXpMultiplier } from '@/lib/xp-events';
+import { getEventXpMultiplier, getActiveXpEvents } from '@/lib/xp-events';
 import { DEBUG_ALL_TYPES_UNIT } from '@/data/debug-all-question-types';
 
 /** Check if a lesson's content is loaded (not just lightweight metadata). */
@@ -95,9 +95,12 @@ interface CourseState {
   setCourseData: (data: Unit[]) => void;
   setActiveProfession: (id: string) => void;
 
+  // Actions — Story Narrative (Gap 11)
+  markStoryUnlockViewed: (unlockId: string) => void;
+
   // Actions
   startLesson: (unitIndex: number, lessonIndex: number, golden?: boolean) => void;
-  submitAnswer: (questionId: string, correct: boolean) => void;
+  submitAnswer: (questionId: string, correct: boolean, cruisingBonus?: boolean) => void;
   nextQuestion: () => void;
   completeLesson: () => void;
   exitLesson: () => void;
@@ -216,6 +219,19 @@ export const useCourseStore = create<CourseState>()(
         });
       },
 
+      // ── Story Narrative (Gap 11) ──────────────────────────────────
+      markStoryUnlockViewed: (unlockId: string) => {
+        set((state) => ({
+          progress: {
+            ...state.progress,
+            viewedStoryUnlocks: [
+              ...(state.progress.viewedStoryUnlocks ?? []),
+              unlockId,
+            ],
+          },
+        }));
+      },
+
       startLesson: (unitIndex: number, lessonIndex: number, golden?: boolean) => {
         // ── Client-side unit access check ──
         // Free users can only access unit 0; Pro users can access all units.
@@ -325,7 +341,7 @@ export const useCourseStore = create<CourseState>()(
         });
       },
 
-      submitAnswer: (questionId: string, correct: boolean) => {
+      submitAnswer: (questionId: string, correct: boolean, cruisingBonus?: boolean) => {
         set((state) => {
           if (!state.activeLesson) return state;
 
@@ -335,6 +351,8 @@ export const useCourseStore = create<CourseState>()(
 
           // Re-queue wrong answers so the user must answer them correctly to finish
           const shouldRequeue = !correct && lessonType === 'standard';
+
+          const prevCruising = state.activeLesson.cruisingCorrectCount ?? 0;
 
           return {
             activeLesson: {
@@ -346,6 +364,7 @@ export const useCourseStore = create<CourseState>()(
               sessionQuestionIds: shouldRequeue
                 ? [...state.activeLesson.sessionQuestionIds, questionId]
                 : state.activeLesson.sessionQuestionIds,
+              cruisingCorrectCount: (cruisingBonus && correct) ? prevCruising + 1 : prevCruising,
             },
           };
         });
@@ -443,7 +462,12 @@ export const useCourseStore = create<CourseState>()(
         const totalBoostMultiplier = shopMultiplier === 1 && eventMultiplier === 1
           ? 1
           : 1 + (shopMultiplier - 1) + (eventMultiplier - 1);
-        const xpEarned = lesson.xpReward * accuracyMultiplier * totalBoostMultiplier;
+        // Cruising bonus: extra XP for questions answered correctly during a perfect streak
+        const cruisingCorrectCount = state.activeLesson.cruisingCorrectCount ?? 0;
+        const cruisingBonusXp = cruisingCorrectCount > 0
+          ? Math.round(lesson.xpReward * (ADAPTIVE_CRUISING_XP_BONUS - 1) * (cruisingCorrectCount / totalQuestions))
+          : 0;
+        const xpEarned = lesson.xpReward * accuracyMultiplier * totalBoostMultiplier + cruisingBonusXp;
 
         // Build updated lesson progress
         const updatedLessonProgress = {
@@ -518,6 +542,9 @@ export const useCourseStore = create<CourseState>()(
           }
         }
 
+        // Capture active event info at completion time for ResultScreen breakdown
+        const activeEvents = getActiveXpEvents(isPro);
+
         const result: LessonResult = {
           lessonId: lesson.id,
           unitTitle: unit.title,
@@ -532,6 +559,8 @@ export const useCourseStore = create<CourseState>()(
           isNewBest,
           isFirstCompletion,
           isGolden,
+          eventXpMultiplier: eventMultiplier > 1 ? eventMultiplier : undefined,
+          activeEventNames: eventMultiplier > 1 ? activeEvents.map(e => e.name) : undefined,
         };
 
         const newCompletedLessons = {
@@ -1345,6 +1374,7 @@ export const useCourseStore = create<CourseState>()(
             completedLessons: migratedLessons,
             courseIntros: (persisted.progress as any).courseIntros ?? undefined,
             placementUnitIndex: (persisted.progress as any).placementUnitIndex ?? undefined,
+            viewedStoryUnlocks: (persisted.progress as any).viewedStoryUnlocks ?? undefined,
           },
         };
       },

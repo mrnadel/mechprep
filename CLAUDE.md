@@ -10,7 +10,7 @@ Before making changes, read `docs/project-overview.md` for full project context 
 - **NextAuth v5** (Google + Credentials). Config at `src/lib/auth.ts`
 - **Paddle** for payments. Two-layer subscription gating (client Zustand + server access-control.ts)
 - **Tailwind CSS 4** with custom design system — no shadcn/ui
-- **Course content** is static TypeScript files in `src/data/course/units/`, NOT from DB
+- **Course content** is static TypeScript files in `src/data/course/professions/`, NOT from DB. See `docs/courses.md` for active courses (sourced from `src/data/professions.ts`)
 - **Vitest** for testing. Run `npm test` before committing
 
 ## Content Writing
@@ -39,4 +39,4 @@ Before making changes, read `docs/project-overview.md` for full project context 
 - Friendships table has CHECK constraint: `user_id < friend_id` — always use `sortFriendPair()`
 - Course data loads lazily (~5MB with SVG diagrams) — `course-meta.ts` is lightweight metadata only
 - SSR guard needed for any code touching sessionStorage/localStorage
-- League competitors are simulated (fake users), not real multiplayer
+- League competitors are a hybrid of real users and simulated bots (bots backfill when not enough real users)

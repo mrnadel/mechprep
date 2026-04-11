@@ -11,6 +11,8 @@ import { levels } from '@/data/levels';
 import { LevelBadge } from '@/components/engagement/LevelBadge';
 import { GameButton } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
+import { ShareButton } from '@/components/ui/ShareButton';
+import { getShareCardUrl, getShareText, getDisplayName } from '@/lib/share-card';
 
 interface Props { reward: LevelReward; onClose: () => void; }
 
@@ -26,7 +28,14 @@ export function LevelUpCelebration({ reward, onClose }: Props) {
       fx={isMilestone ? 'stars' : 'sparkle-dust'}
       labelId="level-up-title"
       footer={
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="space-y-3">
+          <div className="flex justify-center">
+            <ShareButton
+              imageUrl={getShareCardUrl('level', reward.level, getDisplayName())}
+              shareText={getShareText('level', reward.level)}
+              fileName={`octokeen-level-${reward.level}.png`}
+            />
+          </div>
           <GameButton variant={isMilestone ? 'goldDark' : 'indigo'} onClick={onClose}>Claim &amp; Continue</GameButton>
         </motion.div>
       }

@@ -10,6 +10,7 @@ import {
   memo,
 } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Check, X } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import { GlossaryText } from '@/components/ui/GlossaryText';
 import { playSound } from '@/lib/sounds';
@@ -271,6 +272,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                     <motion.button
                       onClick={() => handleBlankTap(i)}
                       disabled={answered}
+                      aria-label={`Blank ${i + 1}${filledBlanks[i] ? `: ${filledBlanks[i]}` : ': empty'}${answered && localCorrect !== null ? (filledBlanks[i]?.toLowerCase() === question.blanks![i]?.toLowerCase() ? ' — correct' : ' — incorrect') : ''}`}
                       whileTap={!answered && filledBlanks[i] ? { scale: 0.92 } : undefined}
                       animate={
                         answered && localCorrect !== null
@@ -294,6 +296,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                         verticalAlign: 'middle',
                         fontSize: 15,
                         fontWeight: 800,
+                        gap: 4,
                         cursor: answered ? 'default' : filledBlanks[i] ? 'pointer' : 'default',
                         transition: 'background 0.2s ease, border 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
                         ...(answered && localCorrect !== null
@@ -311,6 +314,8 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                       }}
                     >
                       {filledBlanks[i] || '\u00A0'}
+                      {answered && localCorrect !== null && filledBlanks[i]?.toLowerCase() === question.blanks![i]?.toLowerCase() && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
+                      {answered && localCorrect !== null && filledBlanks[i]?.toLowerCase() !== question.blanks![i]?.toLowerCase() && <X className="w-3.5 h-3.5" strokeWidth={3} />}
                     </motion.button>
                   )}
                 </span>
@@ -415,6 +420,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   key={originalIndex}
                   onClick={() => { if (!answered) { playSound('tap'); setSelectedIndex(displayIndex); } }}
                   disabled={answered}
+                  aria-label={`Option ${String.fromCharCode(65 + displayIndex)}: ${option}${answered && localCorrect !== null ? (isCorrectOption ? ' — correct' : isSelected && !isCorrectOption ? ' — incorrect' : '') : ''}`}
                   initial={{ opacity: 0, y: 16 }}
                   animate={revealAnimation}
                   transition={
@@ -450,7 +456,11 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                       transition: 'background 0.2s ease, color 0.2s ease',
                     }}
                   >
-                    {String.fromCharCode(65 + displayIndex)}
+                    {answered && localCorrect !== null && isCorrectOption
+                      ? <Check className="w-3.5 h-3.5" strokeWidth={3} />
+                      : answered && localCorrect !== null && isSelected && !isCorrectOption
+                        ? <X className="w-3.5 h-3.5" strokeWidth={3} />
+                        : String.fromCharCode(65 + displayIndex)}
                   </motion.span>
                   <span
                     style={{
@@ -517,6 +527,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   key={String(value)}
                   onClick={() => { if (!answered) { playSound('tap'); setSelectedBool(value); } }}
                   disabled={answered}
+                  aria-label={`${value ? 'True' : 'False'}${answered && localCorrect !== null ? (isCorrectOption ? ' — correct' : isSelected && !isCorrectOption ? ' — incorrect' : '') : ''}`}
                   initial={{ opacity: 0, y: 14 }}
                   animate={revealAnimation}
                   transition={
@@ -537,8 +548,11 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                     color: textColor,
                     transition: 'background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease',
                     boxShadow: shadow,
+                    gap: 6,
                   }}
                 >
+                  {answered && localCorrect !== null && isCorrectOption && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
+                  {answered && localCorrect !== null && isSelected && !isCorrectOption && <X className="w-3.5 h-3.5" strokeWidth={3} />}
                   {value ? 'True' : 'False'}
                 </motion.button>
               );
@@ -555,6 +569,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   key={`${word}-${i}`}
                   onClick={() => available && handleWordTap(word)}
                   disabled={answered || !available}
+                  aria-label={`Word: ${word}${available ? '' : ' — already used'}`}
                   whileTap={!answered && available ? { y: 2, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                   layout
                   initial={{ opacity: 0, y: 10, scale: 0.9 }}

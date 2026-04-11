@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import type { Unit } from '@/data/course/types';
 import type { UnitTheme } from '@/lib/unitThemes';
 import { UnitIllustration } from './UnitIllustrations';
+import { CharacterAvatar } from '@/components/ui/CharacterAvatar';
 
 interface UnitHeaderProps {
   unit: Unit;
@@ -18,6 +19,7 @@ interface UnitHeaderProps {
   professionId?: string;
   showProgress?: boolean;
   onClick?: () => void;
+  characterId?: string | null;
 }
 
 const GOLD = '#FFB800';
@@ -35,6 +37,7 @@ export const UnitHeader = memo(function UnitHeader({
   professionId,
   showProgress = false,
   onClick,
+  characterId,
 }: UnitHeaderProps) {
   const progressPercent =
     totalInUnit > 0 ? (completedInUnit / totalInUnit) * 100 : 0;
@@ -117,7 +120,7 @@ export const UnitHeader = memo(function UnitHeader({
         {/* Illustration */}
         <div
           className="flex-shrink-0"
-          style={{ width: 72, height: 72 }}
+          style={{ width: 72, height: 72, position: 'relative' }}
         >
           <UnitIllustration
             unitIndex={unitIndex}
@@ -125,6 +128,29 @@ export const UnitHeader = memo(function UnitHeader({
             className="w-full h-full"
             professionId={professionId}
           />
+          {characterId && (
+            <div
+              style={{
+                position: 'absolute',
+                top: -4,
+                right: -4,
+                width: 28,
+                height: 28,
+                borderRadius: '50%',
+                background: 'white',
+                border: `2px solid ${bg}`,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                zIndex: 2,
+                boxShadow: '0 2px 4px rgba(0,0,0,0.15)',
+                overflow: 'hidden',
+              }}
+              aria-hidden="true"
+            >
+              <CharacterAvatar characterId={characterId} size={22} />
+            </div>
+          )}
         </div>
       </div>
 

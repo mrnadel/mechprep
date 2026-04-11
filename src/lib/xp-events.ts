@@ -140,12 +140,72 @@ export function getEventXpMultiplier(isPro: boolean): number {
 
 /**
  * Format remaining time until event ends as a human-readable string.
+ * Shows seconds when under 10 minutes remaining for urgency.
  */
 export function formatEventTimeLeft(endsAt: string): string {
   const ms = new Date(endsAt).getTime() - Date.now();
   if (ms <= 0) return 'Ending soon';
   const hours = Math.floor(ms / (1000 * 60 * 60));
   const minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((ms % (1000 * 60)) / 1000);
   if (hours > 0) return `${hours}h ${minutes}m left`;
-  return `${minutes}m left`;
+  if (minutes >= 10) return `${minutes}m left`;
+  return `${minutes}m ${seconds}s left`;
+}
+
+// --------------- Event Notifications ---------------
+
+const scheduledTimers = new Set<ReturnType<typeof setTimeout>>();
+
+/**
+ * Schedule browser notifications for upcoming XP events.
+ * Only schedules within the current browser session (no persistence needed).
+ * Clears previously scheduled timers on re-call to prevent leaks.
+ */
+export function scheduleEventNotifications(isPro: boolean): void {
+  // Clear any previously scheduled timers
+  scheduledTimers.forEach(clearTimeout);
+  scheduledTimers.clear();
+
+  if (typeof window === 'undefined') return;
+  if (!('Notification' in window) || Notification.permission !== 'granted') return;
+
+  const now = new Date();
+
+  // Power Hour: notify 5 minutes before 7 PM if user is active
+  const powerHourStart = new Date(now);
+  powerHourStart.setHours(POWER_HOUR_START, 0, 0, 0);
+  const msUntilPowerHour = powerHourStart.getTime() - now.getTime() - 5 * 60 * 1000;
+
+  if (msUntilPowerHour > 0 && msUntilPowerHour < 30 * 60 * 1000) {
+    const timerId = setTimeout(() => {
+      new Notification('Power Hour starts in 5 minutes!', {
+        body: 'Earn 1.5x XP on all questions from 7-9 PM',
+        icon: '/favicons/favicon-192x192.png',
+        tag: 'xp-event-power-hour',
+      });
+    }, msUntilPowerHour);
+    scheduledTimers.add(timerId);
+  }
+
+  // Weekend Double XP: notify on Friday evening if Pro
+  if (isPro) {
+    const day = now.getDay();
+    if (day === 5) { // Friday
+      const saturdayMidnight = new Date(now);
+      saturdayMidnight.setDate(now.getDate() + 1);
+      saturdayMidnight.setHours(0, 0, 0, 0);
+      const msUntilWeekend = saturdayMidnight.getTime() - now.getTime() - 30 * 60 * 1000;
+      if (msUntilWeekend > 0 && msUntilWeekend < 60 * 60 * 1000) {
+        const timerId = setTimeout(() => {
+          new Notification('Weekend Double XP starts soon!', {
+            body: 'Earn 2x XP all weekend as a Pro member',
+            icon: '/favicons/favicon-192x192.png',
+            tag: 'xp-event-weekend',
+          });
+        }, msUntilWeekend);
+        scheduledTimers.add(timerId);
+      }
+    }
+  }
 }

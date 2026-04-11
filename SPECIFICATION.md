@@ -1,3 +1,5 @@
+> **HISTORICAL DOCUMENT** — This spec was written when Octokeen was a single-course Mechanical Engineering app (codename "MechReady"). The platform is now multi-course. See `docs/courses.md` for active courses and `docs/project-overview.md` for current architecture.
+
 # Mechanical Engineering Interview Prep App - Complete Specification
 
 > **Codename:** MechReady

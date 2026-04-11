@@ -8,8 +8,10 @@ import { leagueTiers } from '@/data/league';
 import { LEAGUE_GEM_REWARD_PROMOTION } from '@/data/league';
 import { GameButton, type GameButtonVariant } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
+import { ShareButton } from '@/components/ui/ShareButton';
 import { CURRENCY } from '@/data/currency';
 import { LeagueImage } from '@/components/icons/LeagueImage';
+import { getShareCardUrl, getShareText, getDisplayName } from '@/lib/share-card';
 import type { FXName } from '@/components/ui/ScreenFX';
 
 export function LeaguePromotion() {
@@ -49,7 +51,16 @@ export function LeaguePromotion() {
       bg={content.bg}
       fx={content.fx}
       footer={
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="space-y-3">
+          {isPromoted && (
+            <div className="flex justify-center">
+              <ShareButton
+                imageUrl={getShareCardUrl('league', currentTier.name, getDisplayName())}
+                shareText={getShareText('league', currentTier.name)}
+                fileName={`octokeen-league-${currentTier.name.toLowerCase()}.png`}
+              />
+            </div>
+          )}
           <GameButton variant={content.buttonVariant} onClick={setResultSeen}>Continue</GameButton>
         </motion.div>
       }

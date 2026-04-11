@@ -1,3 +1,5 @@
+> **HISTORICAL DOCUMENT** — This strategy was written when Octokeen was a single-course Mechanical Engineering app. The platform is now multi-course. See `docs/courses.md` for active courses.
+
 # Mechanical Engineering Interview Prep App
 # Product Strategy & Interview Coaching Framework
 

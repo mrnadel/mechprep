@@ -378,6 +378,12 @@
   transition: box-shadow 75ms, transform 75ms;
 }
 
+/* Audio button pulse when playing */
+@keyframes audioButtonPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
 .group:active .go-btn-pulse {
   box-shadow: 0 0 0 var(--go-shadow-color) !important;
   transform: translateY(4px);
@@ -392,6 +398,11 @@
 
 .lesson-btn-pulse {
   animation: lessonPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
 }
 
 /* Lesson overlay */

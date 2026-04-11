@@ -14,6 +14,7 @@ import FriendRequestCard from '@/components/friends/FriendRequestCard';
 import { FriendQuestCard, type FriendQuestData } from '@/components/friends/FriendQuestCard';
 import { ActivityFeed } from '@/components/friends/ActivityFeed';
 import { useStore } from '@/store/useStore';
+import { useEngagementStore } from '@/store/useEngagementStore';
 import useSWR from 'swr';
 
 const fetcher = (url: string) =>
@@ -54,6 +55,26 @@ export default function FriendsPage() {
     mutateRequests();
     mutateQuests();
   }, [mutateFriends, mutateRequests, mutateQuests]);
+
+  const handleClaimQuest = useCallback(async (questId: string) => {
+    try {
+      const res = await fetch('/api/friends/quests/claim', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ questId }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        // Add gems to local engagement store so balance updates immediately
+        const { addGems } = useEngagementStore.getState();
+        addGems(data.rewardGems, 'friend_quest_reward');
+        // Refresh quest list to show "Claimed" state
+        mutateQuests();
+      }
+    } catch {
+      // Silent failure
+    }
+  }, [mutateQuests]);
 
   const friendQuests = questsData?.quests ?? [];
 
@@ -107,7 +128,7 @@ export default function FriendsPage() {
                         Weekly Quests
                       </h3>
                       {friendQuests.map((q, i) => (
-                        <FriendQuestCard key={q.id} quest={q} index={i} />
+                        <FriendQuestCard key={q.id} quest={q} onClaim={handleClaimQuest} index={i} />
                       ))}
                     </div>
                   )}

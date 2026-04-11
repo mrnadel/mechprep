@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { Check, X } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -160,6 +161,9 @@ const MultiSelectCard = forwardRef<QuestionCardHandle, MultiSelectCardProps>(
             return (
               <motion.button
                 key={originalIdx}
+                role="checkbox"
+                aria-checked={isSelected}
+                aria-label={`${option}${answered && localCorrect !== null ? (isCorrectOption ? ' — correct' : isSelected && !isCorrectOption ? ' — incorrect' : '') : ''}`}
                 onClick={() => toggleOption(originalIdx)}
                 disabled={answered}
                 initial={{ opacity: 0, y: 16 }}
@@ -191,7 +195,11 @@ const MultiSelectCard = forwardRef<QuestionCardHandle, MultiSelectCardProps>(
                     transition: 'background 0.2s, color 0.2s, border 0.2s',
                   }}
                 >
-                  {checkContent}
+                  {answered && localCorrect !== null && isCorrectOption
+                    ? <Check className="w-3.5 h-3.5" strokeWidth={3} />
+                    : answered && localCorrect !== null && isSelected && !isCorrectOption
+                      ? <X className="w-3.5 h-3.5" strokeWidth={3} />
+                      : checkContent}
                 </motion.span>
                 <span style={{ fontSize: 14.5, fontWeight: 700, color: textColor, lineHeight: 1.3 }}>
                   {option}

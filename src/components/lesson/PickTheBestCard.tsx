@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { Check, X } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -163,6 +164,7 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
             return (
               <motion.button
                 key={originalIdx}
+                aria-label={`${option}${answered && localCorrect !== null ? (isBest ? ' — best answer' : isSelected && !isBest ? ' — good but not best' : '') : ''}`}
                 onClick={() => !answered && setSelectedIndex(displayIdx)}
                 disabled={answered}
                 initial={{ opacity: 0, y: 16 }}
@@ -181,17 +183,22 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
                   boxShadow: shadow,
                 }}
               >
-                {/* Star indicator */}
+                {/* Star indicator / Check/X icon */}
                 <motion.span
                   animate={isSelected && !answered ? { scale: [1, 1.3, 1], rotate: [0, 15, -15, 0] } : { scale: 1 }}
                   transition={{ type: 'tween', duration: 0.3 }}
                   style={{
                     fontSize: 20, flexShrink: 0, width: 28, textAlign: 'center',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
                     color: starColor, transition: 'color 0.2s',
                     filter: starColor === '#E5E5E5' || starColor === '#D5D5D5' ? 'grayscale(1) opacity(0.4)' : 'none',
                   }}
                 >
-                  ⭐
+                  {answered && localCorrect !== null && isBest
+                    ? <Check className="w-4 h-4" strokeWidth={3} style={{ color: '#58A700' }} />
+                    : answered && localCorrect !== null && isSelected && !isBest
+                      ? <X className="w-4 h-4" strokeWidth={3} style={{ color: '#B8860B' }} />
+                      : <>⭐</>}
                 </motion.span>
                 <span style={{ fontSize: 14, fontWeight: 700, color: textColor, lineHeight: 1.3 }}>
                   {option}

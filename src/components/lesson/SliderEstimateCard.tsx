@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { Check, X, Minus } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -143,7 +144,11 @@ const SliderEstimateCard = forwardRef<QuestionCardHandle, SliderEstimateCardProp
               ? localCorrect ? '#58A700' : closeness === 'close' ? '#F59E0B' : '#EA2B2B'
               : unitColor,
             transition: 'color 0.3s ease',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
           }}>
+            {localCorrect !== null && localCorrect && <Check className="w-6 h-6" strokeWidth={3} />}
+            {localCorrect !== null && !localCorrect && closeness === 'close' && <Minus className="w-6 h-6" strokeWidth={3} />}
+            {localCorrect !== null && !localCorrect && closeness !== 'close' && <X className="w-6 h-6" strokeWidth={3} />}
             {formatValue(value)}
           </div>
           {localCorrect !== null && (
@@ -225,6 +230,12 @@ const SliderEstimateCard = forwardRef<QuestionCardHandle, SliderEstimateCardProp
               value={value}
               onChange={handleSliderChange}
               disabled={answered}
+              role="slider"
+              aria-valuemin={min}
+              aria-valuemax={max}
+              aria-valuenow={value}
+              aria-valuetext={formatValue(value)}
+              aria-label={`Estimate slider: ${formatValue(value)}`}
               style={{
                 position: 'absolute', left: 0, right: 0, width: '100%', height: 40,
                 opacity: 0, cursor: answered ? 'default' : 'pointer', zIndex: 10,

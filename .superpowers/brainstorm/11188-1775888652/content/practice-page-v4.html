@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Page — Duolingo Style</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f7f7f7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; display: flex; justify-content: center; padding: 24px; gap: 32px; flex-wrap: wrap; }
+
+  .phone { width: 375px; background: #fff; border-radius: 32px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.12); border: 8px solid #1a1a2e; }
+  .phone-inner { overflow: hidden; border-radius: 24px; }
+
+  /* Octokeen brand mapped to Duolingo-style palette */
+  :root {
+    --brand: #6C63FF;
+    --brand-dark: #5549e0;
+    --brand-shadow: #4a3fd0;
+    --green: #58CC02;
+    --green-dark: #46A302;
+    --orange: #FF9600;
+    --red: #FF4B4B;
+    --blue: #1CB0F6;
+    --blue-shadow: #1899D6;
+    --yellow: #FFC800;
+    --bg: #FFFFFF;
+    --bg-page: #F7F7F7;
+    --text: #3C3C3C;
+    --text-light: #AFAFAF;
+    --border: #E5E5E5;
+  }
+
+  .header {
+    background: var(--bg);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--border);
+  }
+  .header h1 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+
+  .content {
+    background: var(--bg-page);
+    padding: 20px 16px 100px;
+    min-height: 600px;
+  }
+
+  /* Mascot hero */
+  .hero {
+    text-align: center;
+    padding: 20px 0 16px;
+  }
+  .hero-mascot {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, #E8E5FF 0%, #D4D0FF 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    box-shadow: 0 4px 0 #C5C0F0;
+  }
+  .hero h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .hero p {
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 600;
+  }
+
+  /* Duolingo-style 3D button */
+  .duo-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.08s;
+    position: relative;
+    text-align: center;
+  }
+  .duo-btn-primary {
+    background: var(--brand);
+    color: white;
+    box-shadow: 0 5px 0 var(--brand-shadow);
+    margin-bottom: 5px;
+  }
+  .duo-btn-primary:active {
+    box-shadow: none;
+    transform: translateY(5px);
+    margin-bottom: 0;
+  }
+
+  /* Session cards */
+  .session-card {
+    background: var(--bg);
+    border-radius: 16px;
+    border: 2px solid var(--border);
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .session-card:hover { border-color: #ccc; }
+  .session-card:active { border-color: var(--brand); background: #FAFAFF; }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .card-info { flex: 1; }
+  .card-info h3 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .card-info p {
+    font-size: 12px;
+    color: var(--text-light);
+    font-weight: 600;
+  }
+  .card-xp {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--yellow);
+    background: #FFF8E0;
+    padding: 4px 10px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  /* Stats strip */
+  .stats-strip {
+    display: flex;
+    gap: 0;
+    background: var(--bg);
+    border-radius: 16px;
+    border: 2px solid var(--border);
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .stat {
+    flex: 1;
+    text-align: center;
+    padding: 14px 8px;
+  }
+  .stat + .stat { border-left: 2px solid var(--border); }
+  .stat-value {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 2px;
+  }
+  .stat-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Section label */
+  .section-label {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 4px;
+  }
+
+  /* Bottom nav */
+  .bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-top: 2px solid var(--border);
+    display: flex;
+    justify-content: space-around;
+    padding: 6px 0 10px;
+  }
+  .nav-item {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+  .nav-item.active { color: var(--brand); }
+  .nav-icon { font-size: 22px; margin-bottom: 1px; }
+
+  /* Notes panel */
+  .notes {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 8px;
+  }
+  .note {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    border: 2px solid #e5e5e5;
+  }
+  .note h3 {
+    font-size: 15px;
+    font-weight: 800;
+    color: #3c3c3c;
+    margin-bottom: 10px;
+  }
+  .note p {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .note code {
+    background: #f3f4f6;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="phone">
+  <div class="phone-inner" style="position:relative;">
+    <!-- Header -->
+    <div class="header">
+      <h1>Practice</h1>
+    </div>
+
+    <div class="content">
+      <!-- Mascot Hero -->
+      <div class="hero">
+        <div class="hero-mascot">🧠</div>
+        <h2>Ready to practice?</h2>
+        <p>We picked the perfect questions for you</p>
+      </div>
+
+      <!-- Big Start Button -->
+      <div style="padding: 0 0 8px;">
+        <button class="duo-btn duo-btn-primary">START PRACTICE</button>
+      </div>
+
+      <!-- Stats -->
+      <div class="section-label">Your progress</div>
+      <div class="stats-strip">
+        <div class="stat">
+          <div class="stat-value" style="color:var(--brand);">76%</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" style="color:var(--orange);">183</div>
+          <div class="stat-label">Practiced</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" style="color:var(--green);">12</div>
+          <div class="stat-label">Sessions</div>
+        </div>
+      </div>
+
+      <!-- Last Session -->
+      <div class="section-label">Last session</div>
+      <div class="session-card">
+        <div class="card-icon" style="background:linear-gradient(135deg,#d4fc79,#96e6a1);">
+          ✅
+        </div>
+        <div class="card-info">
+          <h3>8 of 10 correct</h3>
+          <p>Yesterday · Budgeting & Taxes</p>
+        </div>
+        <div class="card-xp">+25 XP</div>
+      </div>
+
+      <div class="session-card">
+        <div class="card-icon" style="background:linear-gradient(135deg,#fde68a,#fbbf24);">
+          ⚡
+        </div>
+        <div class="card-info">
+          <h3>6 of 10 correct</h3>
+          <p>2 days ago · Credit & Investing</p>
+        </div>
+        <div class="card-xp">+15 XP</div>
+      </div>
+    </div>
+
+    <!-- Bottom Nav -->
+    <div class="bottom-nav">
+      <div class="nav-item"><div class="nav-icon">🏠</div>Home</div>
+      <div class="nav-item"><div class="nav-icon">⚔️</div>Quests</div>
+      <div class="nav-item active"><div class="nav-icon">🧠</div>Practice</div>
+      <div class="nav-item"><div class="nav-icon">🏆</div>League</div>
+      <div class="nav-item"><div class="nav-icon">👤</div>Profile</div>
+    </div>
+  </div>
+</div>
+
+<div class="notes">
+  <div class="note">
+    <h3>Duolingo-Style Design Elements</h3>
+    <p><strong>3D press-effect button</strong> — green/brand with <code>box-shadow: 0 5px 0</code> that drops on press, uppercase bold text</p>
+    <p><strong>Clean white cards</strong> with 2px borders and 16px radius — no shadows, just borders like Duolingo</p>
+    <p><strong>Stats strip</strong> — divided cells in one card, no separate boxes</p>
+    <p><strong>Mascot circle</strong> — placeholder for a real mascot illustration later</p>
+    <p><strong>Session history cards</strong> — shows what topics the algorithm covered (after the fact, not before)</p>
+  </div>
+
+  <div class="note">
+    <h3>What The User Sees vs What Happens</h3>
+    <p><strong>User sees:</strong> "We picked the perfect questions for you" + big START button</p>
+    <p><strong>What happens:</strong> Smart algorithm selects 6 weak + 2 medium + 2 strong questions, adapted to user's level, avoiding recently-answered ones</p>
+    <p><strong>After session:</strong> History cards show which topics were covered — so users learn what they practiced, not what they'll practice</p>
+  </div>
+
+  <div class="note">
+    <h3>Technical Scope</h3>
+    <p>1. Wire <code>selectSmartPracticeQuestions</code> into the store</p>
+    <p>2. Build this <code>/practice</code> page</p>
+    <p>3. Uncomment Practice tab in nav</p>
+    <p>4. Remove old practice pages (smart, adaptive, interview, weak-areas, real-world, topics)</p>
+    <p>5. Keep /practice/daily and /practice/review</p>
+  </div>
+</div>
+
+</body>
+</html>

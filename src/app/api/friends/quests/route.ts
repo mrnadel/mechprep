@@ -105,7 +105,7 @@ export async function GET() {
       myProgress: isUserA ? q.progressUser : q.progressPartner,
       partnerProgress: isUserA ? q.progressPartner : q.progressUser,
       completed: q.completed,
-      rewardClaimed: q.rewardClaimed,
+      rewardClaimed: isUserA ? q.rewardClaimedUser : q.rewardClaimedPartner,
       rewardXp: def.rewardXp,
       rewardGems: def.rewardGems,
       partner: partner

@@ -1,3 +1,5 @@
+> **HISTORICAL DOCUMENT** — This audit was conducted when Octokeen was a single-course Mechanical Engineering app (codename "MechReady"). The audit findings and fixes are still valid but the course references are outdated. See `docs/courses.md` for active courses.
+
 # MechReady Full Codebase Audit Report
 
 **Date:** 2026-03-23

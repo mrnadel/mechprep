@@ -115,6 +115,7 @@
     <button class="tab-btn active" data-tab="screens">Screens</button>
     <button class="tab-btn" data-tab="fx">FX</button>
     <button class="tab-btn" data-tab="mascots">Mascots</button>
+    <button class="tab-btn" data-tab="characters">Characters</button>
     <button class="tab-btn" data-tab="badges">Badges</button>
     <button class="tab-btn" data-tab="diagrams">SVG Diagrams</button>
     <button class="tab-btn" data-tab="backgrounds">Backgrounds</button>
@@ -12121,6 +12122,72 @@ var __soundData = [{"name":"Practice","sounds":[{"name":"correct","body":"tone(6
 </div>
 </div>
 
+<div id="tab-characters" style="display:none">
+<div class="sec">Course Characters</div>
+<p style="font-size:12px;color:#666;text-align:center;margin:-16px 0 24px;">Characters appear in teaching cards, micro-celebrations, result screens, and the course map. Add new characters by dropping images in <code style="color:#888;">public/characters/</code> and registering in <code style="color:#888;">CharacterAvatar.tsx</code>.</p>
+
+<div class="sec" style="font-size:10px;color:#3B82F6;">Alex — Personal Finance · Your Study Buddy</div>
+<div class="asset-grid">
+<div class="asset-card" style="border-color:#3B82F640;"><img src="public/characters/pf-alex-neutral.png" width="200" height="200"><div class="asset-card-name">neutral (default)</div></div>
+<div class="asset-card" style="border-color:#3B82F640;"><img src="public/characters/pf-alex-excited.png" width="200" height="200"><div class="asset-card-name">excited</div></div>
+<div class="asset-card" style="border-color:#3B82F640;"><img src="public/characters/pf-alex-thinking.png" width="200" height="200"><div class="asset-card-name">thinking</div></div>
+<div class="asset-card" style="border-color:#3B82F640;"><img src="public/characters/pf-alex-worried.png" width="200" height="200"><div class="asset-card-name">worried</div></div>
+<div class="asset-card" style="border-color:#3B82F640;"><img src="public/characters/pf-alex-celebrating.png" width="200" height="200"><div class="asset-card-name">celebrating</div></div>
+<div class="asset-card" style="border-color:#3B82F640;"><img src="public/characters/pf-alex-explaining.png" width="200" height="200"><div class="asset-card-name">explaining</div></div>
+</div>
+
+<div class="sec" style="font-size:10px;color:#8B5CF6;">Jordan — Personal Finance · The Determined One</div>
+<div class="asset-grid">
+<div class="asset-card" style="border-color:#8B5CF640;"><img src="public/characters/pf-jordan-neutral.png" width="200" height="200"><div class="asset-card-name">neutral (default)</div></div>
+<div class="asset-card" style="border-color:#8B5CF640;"><img src="public/characters/pf-jordan-thinking.png" width="200" height="200"><div class="asset-card-name">thinking</div></div>
+<div class="asset-card" style="border-color:#8B5CF640;"><img src="public/characters/pf-jordan-proud.png" width="200" height="200"><div class="asset-card-name">proud</div></div>
+<div class="asset-card" style="border-color:#8B5CF640;"><img src="public/characters/pf-jordan-concerned.png" width="200" height="200"><div class="asset-card-name">concerned</div></div>
+<div class="asset-card" style="border-color:#8B5CF640;"><img src="public/characters/pf-jordan-celebrating.png" width="200" height="200"><div class="asset-card-name">celebrating</div></div>
+<div class="asset-card" style="border-color:#8B5CF640;"><img src="public/characters/pf-jordan-encouraging.png" width="200" height="200"><div class="asset-card-name">encouraging</div></div>
+</div>
+
+<div class="sec" style="font-size:10px;color:#059669;">Dr. Maya — Psychology · The Professor</div>
+<div class="asset-grid">
+<div class="asset-card" style="border-color:#05966940;"><img src="public/characters/psy-maya-neutral.png" width="200" height="200"><div class="asset-card-name">neutral (default)</div></div>
+<div class="asset-card" style="border-color:#05966940;"><img src="public/characters/psy-maya-explaining.png" width="200" height="200"><div class="asset-card-name">explaining</div></div>
+<div class="asset-card" style="border-color:#05966940;"><img src="public/characters/psy-maya-surprised.png" width="200" height="200"><div class="asset-card-name">surprised</div></div>
+<div class="asset-card" style="border-color:#05966940;"><img src="public/characters/psy-maya-proud.png" width="200" height="200"><div class="asset-card-name">proud</div></div>
+<div class="asset-card" style="border-color:#05966940;"><img src="public/characters/psy-maya-thinking.png" width="200" height="200"><div class="asset-card-name">thinking</div></div>
+<div class="asset-card" style="border-color:#05966940;"><img src="public/characters/psy-maya-questioning.png" width="200" height="200"><div class="asset-card-name">questioning</div></div>
+</div>
+
+<div class="sec" style="font-size:10px;color:#D97706;">Sam — Psychology · The Curious Student</div>
+<div class="asset-grid">
+<div class="asset-card" style="border-color:#D9770640;"><img src="public/characters/psy-sam-neutral.png" width="200" height="200"><div class="asset-card-name">neutral (default)</div></div>
+<div class="asset-card" style="border-color:#D9770640;"><img src="public/characters/psy-sam-mindblown.png" width="200" height="200"><div class="asset-card-name">mindblown</div></div>
+<div class="asset-card" style="border-color:#D9770640;"><img src="public/characters/psy-sam-excited.png" width="200" height="200"><div class="asset-card-name">excited</div></div>
+<div class="asset-card" style="border-color:#D9770640;"><img src="public/characters/psy-sam-confused.png" width="200" height="200"><div class="asset-card-name">confused</div></div>
+<div class="asset-card" style="border-color:#D9770640;"><img src="public/characters/psy-sam-celebrating.png" width="200" height="200"><div class="asset-card-name">celebrating</div></div>
+<div class="asset-card" style="border-color:#D9770640;"><img src="public/characters/psy-sam-focused.png" width="200" height="200"><div class="asset-card-name">focused</div></div>
+</div>
+
+<div class="sec" style="font-size:10px;color:#DC2626;">Captain Nova — Space · Astronaut Mentor</div>
+<div class="asset-grid">
+<div class="asset-card" style="border-color:#DC262640;"><img src="public/characters/space-nova-neutral.png" width="200" height="200"><div class="asset-card-name">neutral (default)</div></div>
+<div class="asset-card" style="border-color:#DC262640;"><img src="public/characters/space-nova-saluting.png" width="200" height="200"><div class="asset-card-name">saluting</div></div>
+<div class="asset-card" style="border-color:#DC262640;"><img src="public/characters/space-nova-explaining.png" width="200" height="200"><div class="asset-card-name">explaining</div></div>
+<div class="asset-card" style="border-color:#DC262640;"><img src="public/characters/space-nova-remembering.png" width="200" height="200"><div class="asset-card-name">remembering</div></div>
+<div class="asset-card" style="border-color:#DC262640;"><img src="public/characters/space-nova-impressed.png" width="200" height="200"><div class="asset-card-name">impressed</div></div>
+<div class="asset-card" style="border-color:#DC262640;"><img src="public/characters/space-nova-celebrating.png" width="200" height="200"><div class="asset-card-name">celebrating</div></div>
+</div>
+
+<div class="sec" style="font-size:10px;color:#0891B2;">Kai — Space · Backyard Astronomer</div>
+<div class="asset-grid">
+<div class="asset-card" style="border-color:#0891B240;"><img src="public/characters/space-kai-neutral.png" width="200" height="200"><div class="asset-card-name">neutral (default)</div></div>
+<div class="asset-card" style="border-color:#0891B240;"><img src="public/characters/space-kai-pointing.png" width="200" height="200"><div class="asset-card-name">pointing</div></div>
+<div class="asset-card" style="border-color:#0891B240;"><img src="public/characters/space-kai-mindblown.png" width="200" height="200"><div class="asset-card-name">mindblown</div></div>
+<div class="asset-card" style="border-color:#0891B240;"><img src="public/characters/space-kai-excited.png" width="200" height="200"><div class="asset-card-name">excited</div></div>
+<div class="asset-card" style="border-color:#0891B240;"><img src="public/characters/space-kai-thinking.png" width="200" height="200"><div class="asset-card-name">thinking</div></div>
+<div class="asset-card" style="border-color:#0891B240;"><img src="public/characters/space-kai-telescope.png" width="200" height="200"><div class="asset-card-name">telescope</div></div>
+</div>
+
+</div>
+
 <div id="tab-badges" style="display:none">
 <div class="sec" id="badge-sec-level">Level Badges</div>
 <div class="asset-grid">
@@ -12295,6 +12362,7 @@ effects.forEach(function(fx){
     screens: document.getElementById('tab-screens'),
     fx: document.getElementById('tab-fx'),
     mascots: document.getElementById('tab-mascots'),
+    characters: document.getElementById('tab-characters'),
     badges: document.getElementById('tab-badges'),
     diagrams: document.getElementById('tab-diagrams'),
     backgrounds: document.getElementById('tab-backgrounds'),
@@ -12327,6 +12395,7 @@ effects.forEach(function(fx){
       {label:'Dramatic',target:'fx-sec-dramatic'}
     ],
     mascots: [],
+    characters: [],
     badges: [
       {label:'Level Badges',target:'badge-sec-level'},
       {label:'League Badges',target:'badge-sec-league'},

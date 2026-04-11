@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Octokeen — Modal &amp; Screen Gallery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Nunito', system-ui, sans-serif; background: #f8fafc; color: #1e293b; padding: 2rem; }
+    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    p.subtitle { color: #64748b; margin-bottom: 2rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+    .entry { background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
+    .entry header { padding: 1rem; border-bottom: 1px solid #e2e8f0; }
+    .entry header h2 { font-size: 0.875rem; font-weight: 700; }
+    .entry header .tags { display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap; }
+    .entry header .tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 9999px; background: #f1f5f9; color: #475569; }
+    .entry .preview { padding: 1rem; font-size: 0.8rem; color: #64748b; min-height: 100px; }
+    .section-title { grid-column: 1 / -1; font-size: 1.1rem; font-weight: 700; margin-top: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e2e8f0; }
+  </style>
+</head>
+<body>
+  <h1>Octokeen Modal &amp; Screen Gallery</h1>
+  <p class="subtitle">Every modal, overlay, toast, and full-screen state in one place. Add new entries as features ship.</p>
+
+  <div class="gallery">
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="section-title">Existing Screens</div>
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="entry">
+      <header>
+        <h2>Exit Lesson Confirm Dialog</h2>
+        <div class="tags"><span class="tag">LessonView</span><span class="tag">dialog</span></div>
+      </header>
+      <div class="preview">Shown when user taps X during a lesson. Two buttons: "Keep going" (primary) and "Quit" (destructive).</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Lesson Result Screen</h2>
+        <div class="tags"><span class="tag">ResultScreen</span><span class="tag">full-screen</span></div>
+      </header>
+      <div class="preview">Post-lesson results: stars, XP earned, accuracy, streak. Animated counters.</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Streak Celebration Modal</h2>
+        <div class="tags"><span class="tag">StreakCelebration</span><span class="tag">modal</span></div>
+      </header>
+      <div class="preview">Milestone streak celebration with gem reward. Triggered at 3, 7, 14, 30, 60, 100+ day streaks.</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>League Promotion Modal</h2>
+        <div class="tags"><span class="tag">LeaguePromotion</span><span class="tag">modal</span></div>
+      </header>
+      <div class="preview">Weekly league promotion/demotion results with gem rewards and confetti.</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Level Up Modal</h2>
+        <div class="tags"><span class="tag">LevelUpCelebration</span><span class="tag">modal</span></div>
+      </header>
+      <div class="preview">Level-up celebration with XP progress ring and gem/title/frame rewards.</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Course Complete Celebration</h2>
+        <div class="tags"><span class="tag">CourseCompleteCelebration</span><span class="tag">modal</span></div>
+      </header>
+      <div class="preview">Full course completion with certificate download, share, and LinkedIn post buttons.</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Achievement Unlocked Toast</h2>
+        <div class="tags"><span class="tag">AchievementUnlocked</span><span class="tag">toast</span></div>
+      </header>
+      <div class="preview">Slide-in toast showing newly unlocked achievement icon and title.</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Upgrade Gate Modal</h2>
+        <div class="tags"><span class="tag">UpgradeModal</span><span class="tag">modal</span></div>
+      </header>
+      <div class="preview">Pro upgrade prompt when free user hits a gated feature (units, practice modes, hearts).</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Streak Repair Modal</h2>
+        <div class="tags"><span class="tag">StreakRepair</span><span class="tag">modal</span></div>
+      </header>
+      <div class="preview">Offers to repair broken streak using gems. Shows old streak value and cost.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="section-title">Gap 4: Adaptive Difficulty</div>
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="entry">
+      <header>
+        <h2>Adaptive Toast (Cruising / Struggling)</h2>
+        <div class="tags"><span class="tag">AdaptiveToast</span><span class="tag">toast</span><span class="tag">Gap 4</span></div>
+      </header>
+      <div class="preview">Top toast showing "You're on fire!" (cruising) or "Take your time" (struggling). Includes bonus XP indicator during cruising mode.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="section-title">Gap 8: Certificates</div>
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="entry">
+      <header>
+        <h2>Public Certificate Page</h2>
+        <div class="tags"><span class="tag">CertificatePage</span><span class="tag">full-screen</span><span class="tag">Gap 8</span></div>
+      </header>
+      <div class="preview">Public shareable certificate page with OG meta tags for social previews. Download + LinkedIn buttons.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="section-title">Gap 9: Comeback Nudges</div>
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="entry">
+      <header>
+        <h2>Streak Nudge Banner — Day 1 (Gentle)</h2>
+        <div class="tags"><span class="tag">StreakNudgeBanner</span><span class="tag">banner</span><span class="tag">Gap 9</span></div>
+      </header>
+      <div class="preview">Blue gradient banner with winking mascot. "Welcome back! Start a quick lesson to keep your streak alive." CTA: [Start]. Shown when user missed 1 day. Dismissible via X button (component state).</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Streak Nudge Banner — Day 2 (Urgent)</h2>
+        <div class="tags"><span class="tag">StreakNudgeBanner</span><span class="tag">banner</span><span class="tag">Gap 9</span></div>
+      </header>
+      <div class="preview">Amber-to-rose gradient banner with worried mascot. "Your 14-day streak breaks tomorrow!" CTA: [Save Streak]. Shows "or use a Streak Freeze" if user owns freezes. Shown when user missed 2 days.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="section-title">Gap 10: Daily Rewards</div>
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="entry">
+      <header>
+        <h2>Daily Reward Calendar</h2>
+        <div class="tags"><span class="tag">DailyRewardCalendar</span><span class="tag">component</span><span class="tag">Gap 10</span></div>
+      </header>
+      <div class="preview">7-day reward calendar showing escalating gems (3-25). Day 4 includes streak freeze. Day 7 is mystery reward.</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Daily Reward Claim Modal</h2>
+        <div class="tags"><span class="tag">DailyRewardClaimModal</span><span class="tag">modal</span><span class="tag">Gap 10</span></div>
+      </header>
+      <div class="preview">Celebration modal when claiming daily reward. Shows gem animation and reward details.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="section-title">Gap 11: Story Narrative</div>
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="entry">
+      <header>
+        <h2>Story Unlock Screen</h2>
+        <div class="tags"><span class="tag">StoryUnlock</span><span class="tag">dialog</span><span class="tag">Gap 11</span></div>
+      </header>
+      <div class="preview">Full-screen character dialogue shown after completing a course section. Dark blue bg (#1a365d), sparkle-dust FX. 80px character emoji, name + role, optional callback quote (bg-white/10), speech bubble with dialogue, gem reward (+10 gems via story_unlock source). 1.5s dismiss delay. Component: <code>src/components/engagement/StoryUnlock.tsx</code>. Triggers from <code>page.tsx</code> after lesson flow ends.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="section-title">Gap 12: Celebration Sharing</div>
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="entry">
+      <header>
+        <h2>Share Button (Universal)</h2>
+        <div class="tags"><span class="tag">ShareButton</span><span class="tag">component</span><span class="tag">Gap 12</span></div>
+      </header>
+      <div class="preview">Reusable share button with loading state. Uses Web Share API with PNG fallback to download.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="section-title">Gap 13: Micro-Celebrations</div>
+    <!-- ═══════════════════════════════════════════════ -->
+
+    <div class="entry">
+      <header>
+        <h2>Micro-Celebration: Halfway</h2>
+        <div class="tags"><span class="tag">MicroCelebration</span><span class="tag">toast</span><span class="tag">Gap 13</span></div>
+      </header>
+      <div class="preview">Blue gradient toast with winking mascot. "Halfway there!" Shown at 50% of questions answered (4+ question lessons only). Auto-dismisses after 2.5s. Progress bar gets a brief glow effect.</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Micro-Celebration: Last Question</h2>
+        <div class="tags"><span class="tag">MicroCelebration</span><span class="tag">toast</span><span class="tag">Gap 13</span></div>
+      </header>
+      <div class="preview">Amber gradient toast with almost-there mascot. "Final question - you got this!" Shown when advancing to the last question (3+ question lessons). Auto-dismisses after 2.5s.</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Micro-Celebration: Streak</h2>
+        <div class="tags"><span class="tag">MicroCelebration</span><span class="tag">toast</span><span class="tag">Gap 13</span></div>
+      </header>
+      <div class="preview">Rose gradient toast with on-fire (3-4) or champion (5+) mascot. "3 in a row - on fire!" / "4 in a row!" / "N streak! Unstoppable!". Suppressed during adaptive cruising mode. Uses streak sound effect.</div>
+    </div>
+
+    <div class="entry">
+      <header>
+        <h2>Certificate Page (Public)</h2>
+        <div class="tags"><span class="tag">page</span><span class="tag">certificate</span><span class="tag">Gap 8</span></div>
+      </header>
+      <div class="preview">Public shareable page at /certificate?name=...&amp;profession=...&amp;score=... showing a user's course completion certificate. Includes the certificate image (1200x630 PNG from /api/certificate), download button, share button with loading/success states, and LinkedIn share button. Has dynamic OG meta tags so LinkedIn shows a rich preview card. Dark mode supported. Not indexed by search engines.</div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,3 +1,5 @@
+> **HISTORICAL DOCUMENT** — This content framework was written for the original Mechanical Engineering course. The platform is now multi-course. See `docs/courses.md` for active courses and `docs/content-writing-guide.md` for current content standards.
+
 # Mechanical Engineering Interview Prep -- Complete Content Framework
 
 ---

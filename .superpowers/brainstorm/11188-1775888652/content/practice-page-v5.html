@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Page v5</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f7f7f7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; display: flex; justify-content: center; padding: 24px; gap: 32px; flex-wrap: wrap; }
+
+  .phone { width: 375px; background: #fff; border-radius: 32px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.12); border: 8px solid #1a1a2e; }
+  .phone-inner { overflow: hidden; border-radius: 24px; position: relative; }
+
+  :root {
+    --brand: #6C63FF;
+    --brand-dark: #5549e0;
+    --brand-shadow: #4a3fd0;
+    --green: #58CC02;
+    --green-dark: #46A302;
+    --orange: #FF9600;
+    --red: #FF4B4B;
+    --blue: #1CB0F6;
+    --yellow: #FFC800;
+    --bg: #FFFFFF;
+    --bg-page: #F7F7F7;
+    --text: #3C3C3C;
+    --text-light: #AFAFAF;
+    --border: #E5E5E5;
+  }
+
+  .header {
+    background: var(--bg);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--border);
+  }
+  .header h1 { font-size: 17px; font-weight: 800; color: var(--text); }
+
+  .content { background: var(--bg-page); padding: 20px 16px 100px; min-height: 600px; }
+
+  .hero { text-align: center; padding: 20px 0 16px; }
+  .hero-mascot {
+    width: 100px; height: 100px; margin: 0 auto 16px;
+    background: linear-gradient(135deg, #E8E5FF 0%, #D4D0FF 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 52px;
+    box-shadow: 0 4px 0 #C5C0F0;
+  }
+  .hero h2 { font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+  .hero p { font-size: 14px; color: var(--text-light); font-weight: 600; }
+
+  .duo-btn {
+    display: block; width: 100%; padding: 14px 24px; border: none; border-radius: 16px;
+    font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;
+    cursor: pointer; transition: all 0.08s; text-align: center;
+  }
+  .duo-btn-primary {
+    background: var(--brand); color: white;
+    box-shadow: 0 5px 0 var(--brand-shadow); margin-bottom: 5px;
+  }
+  .duo-btn-primary:active { box-shadow: none; transform: translateY(5px); margin-bottom: 0; }
+
+  .stats-strip {
+    display: flex; background: var(--bg); border-radius: 16px;
+    border: 2px solid var(--border); overflow: hidden; margin-bottom: 16px;
+  }
+  .stat { flex: 1; text-align: center; padding: 14px 8px; }
+  .stat + .stat { border-left: 2px solid var(--border); }
+  .stat-value { font-size: 20px; font-weight: 800; margin-bottom: 2px; }
+  .stat-label { font-size: 10px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .section-label {
+    font-size: 12px; font-weight: 800; color: var(--text-light);
+    text-transform: uppercase; letter-spacing: 1px; margin: 20px 0 10px 4px;
+  }
+
+  .session-card {
+    background: var(--bg); border-radius: 16px; border: 2px solid var(--border);
+    padding: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 14px;
+  }
+  .card-icon {
+    width: 48px; height: 48px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; flex-shrink: 0;
+  }
+  .card-info { flex: 1; }
+  .card-info h3 { font-size: 15px; font-weight: 800; color: var(--text); margin-bottom: 2px; }
+  .card-info p { font-size: 12px; color: var(--text-light); font-weight: 600; }
+  .card-xp {
+    font-size: 13px; font-weight: 800; color: var(--yellow); background: #FFF8E0;
+    padding: 4px 10px; border-radius: 10px; flex-shrink: 0;
+  }
+
+  .bottom-nav {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: var(--bg); border-top: 2px solid var(--border);
+    display: flex; justify-content: space-around; padding: 6px 0 10px;
+  }
+  .nav-item { text-align: center; font-size: 10px; font-weight: 700; color: var(--text-light); padding: 4px 8px; }
+  .nav-item.active { color: var(--brand); }
+  .nav-icon { font-size: 22px; margin-bottom: 1px; }
+
+  .notes { width: 420px; display: flex; flex-direction: column; gap: 16px; padding-top: 8px; }
+  .note { background: white; border-radius: 16px; padding: 20px; border: 2px solid #e5e5e5; }
+  .note h3 { font-size: 15px; font-weight: 800; color: #3c3c3c; margin-bottom: 10px; }
+  .note p { font-size: 13px; color: #6b7280; line-height: 1.6; margin-bottom: 6px; }
+  .note code { background: #f3f4f6; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+
+  .badge-perfect {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 11px; font-weight: 800; color: var(--green);
+    background: #EAFBE5; padding: 3px 8px; border-radius: 8px;
+  }
+  .badge-retries {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 11px; font-weight: 800; color: var(--orange);
+    background: #FFF3E0; padding: 3px 8px; border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="phone">
+  <div class="phone-inner">
+    <div class="header"><h1>Practice</h1></div>
+    <div class="content">
+      <div class="hero">
+        <div class="hero-mascot">🧠</div>
+        <h2>Ready to practice?</h2>
+        <p>We picked the perfect questions for you</p>
+      </div>
+
+      <div style="padding: 0 0 8px;">
+        <button class="duo-btn duo-btn-primary">START PRACTICE</button>
+      </div>
+
+      <div class="section-label">Your progress</div>
+      <div class="stats-strip">
+        <div class="stat">
+          <div class="stat-value" style="color:var(--brand);">76%</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" style="color:var(--orange);">183</div>
+          <div class="stat-label">Practiced</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" style="color:var(--green);">12</div>
+          <div class="stat-label">Sessions</div>
+        </div>
+      </div>
+
+      <div class="section-label">Recent sessions</div>
+
+      <!-- Perfect run -->
+      <div class="session-card">
+        <div class="card-icon" style="background:linear-gradient(135deg,#d4fc79,#96e6a1);">⭐</div>
+        <div class="card-info">
+          <h3>Budgeting & Taxes <span class="badge-perfect">Perfect!</span></h3>
+          <p>Yesterday · 10 questions</p>
+        </div>
+        <div class="card-xp">+30 XP</div>
+      </div>
+
+      <!-- Session with retries -->
+      <div class="session-card">
+        <div class="card-icon" style="background:linear-gradient(135deg,#fde68a,#fbbf24);">✅</div>
+        <div class="card-info">
+          <h3>Credit & Investing <span class="badge-retries">3 retries</span></h3>
+          <p>2 days ago · 13 questions</p>
+        </div>
+        <div class="card-xp">+20 XP</div>
+      </div>
+
+      <!-- Another session -->
+      <div class="session-card">
+        <div class="card-icon" style="background:linear-gradient(135deg,#ddd6fe,#c4b5fd);">✅</div>
+        <div class="card-info">
+          <h3>Banking & Saving <span class="badge-retries">1 retry</span></h3>
+          <p>3 days ago · 11 questions</p>
+        </div>
+        <div class="card-xp">+25 XP</div>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <div class="nav-item"><div class="nav-icon">🏠</div>Home</div>
+      <div class="nav-item"><div class="nav-icon">⚔️</div>Quests</div>
+      <div class="nav-item active"><div class="nav-icon">🧠</div>Practice</div>
+      <div class="nav-item"><div class="nav-icon">🏆</div>League</div>
+      <div class="nav-item"><div class="nav-icon">👤</div>Profile</div>
+    </div>
+  </div>
+</div>
+
+<div class="notes">
+  <div class="note">
+    <h3>How Wrong-Answer Recycling Works</h3>
+    <p><strong>During a session:</strong> When you answer a question wrong, it goes back into the queue and resurfaces later. The session only ends when all questions have been answered correctly.</p>
+    <p><strong>Session length varies:</strong> A perfect run = 10 questions. A session with 3 mistakes = 13 questions (10 original + 3 retries).</p>
+    <p><strong>No failure state:</strong> Every session ends with 100% — the question is how many retries it took. "Perfect!" badge for zero retries.</p>
+  </div>
+
+  <div class="note">
+    <h3>Session History Shows Results, Not Scores</h3>
+    <p><strong>Perfect run:</strong> ⭐ with green "Perfect!" badge — no mistakes</p>
+    <p><strong>With retries:</strong> ✅ with orange "3 retries" badge — shows total questions (13 = 10 original + 3 retries)</p>
+    <p><strong>Topics shown after the fact</strong> — user sees which topics the algorithm focused on, but only after completing the session</p>
+    <p><strong>XP scales:</strong> More XP for fewer retries (perfect = max XP)</p>
+  </div>
+
+  <div class="note">
+    <h3>Technical: Retry Queue in Session</h3>
+    <p>Modify the session flow in the store:</p>
+    <p>1. When <code>answerQuestion</code> is called with <code>correct: false</code>, push the question back into <code>session.questions</code> at a random position 2-4 slots later</p>
+    <p>2. Track <code>session.retryCount</code> to count total retries</p>
+    <p>3. Session completes when <code>currentIndex >= questions.length</code> (array grows as retries are added)</p>
+    <p>4. <code>totalQuestions</code> in progress bar = original count (10), but the bar doesn't go past 100% — retries extend the session</p>
+  </div>
+</div>
+
+</body>
+</html>

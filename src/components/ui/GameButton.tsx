@@ -32,6 +32,7 @@ export const GameButton = forwardRef<HTMLButtonElement, GameButtonProps>(
           'w-full py-4 rounded-2xl text-sm font-extrabold',
           'flex items-center justify-center gap-2',
           'select-none',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white',
           v.bg, v.shadow, v.text,
           disabled && 'opacity-50 cursor-not-allowed',
           className,

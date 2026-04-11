@@ -11,7 +11,9 @@ import type { StreakMilestoneDefinition } from '@/data/engagement-types';
 import { streakMilestones } from '@/data/streak-milestones';
 import { GameButton } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
+import { ShareButton } from '@/components/ui/ShareButton';
 import { Mascot } from '@/components/ui/Mascot';
+import { getShareCardUrl, getShareText, getDisplayName } from '@/lib/share-card';
 import {
   WeekWarriorIcon, FortnightFocusIcon, IronWillIcon, DiamondDedicationIcon, CenturionStreakIcon,
 } from '@/components/icons/StreakIcons';
@@ -39,7 +41,18 @@ export function StreakMilestone({ milestone, onClose }: Props) {
       bg="#E8850C"
       fx="confetti"
       labelId="streak-milestone-title"
-      footer={<GameButton variant="gold" onClick={onClose}>Continue</GameButton>}
+      footer={
+        <div className="space-y-3">
+          <div className="flex justify-center">
+            <ShareButton
+              imageUrl={getShareCardUrl('streak', milestone.days, getDisplayName())}
+              shareText={getShareText('streak', milestone.days)}
+              fileName={`octokeen-streak-${milestone.days}.png`}
+            />
+          </div>
+          <GameButton variant="gold" onClick={onClose}>Continue</GameButton>
+        </div>
+      }
     >
       <motion.div className="relative inline-flex items-center justify-center w-28 h-28 rounded-full mb-3" style={{ background: 'rgba(255,255,255,0.2)' }}
         initial={{ scale: 0.5, rotate: -10 }} animate={{ scale: 1, rotate: 0 }} transition={{ type: 'spring', stiffness: 300, damping: 18, delay: 0.1 }}>

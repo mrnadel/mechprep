@@ -7,7 +7,8 @@ import { getActiveXpEvents, formatEventTimeLeft, type ActiveXpEvent } from '@/li
 
 /**
  * Shows active XP event banners (weekend double XP, power hour, league sprint).
- * Auto-refreshes every 30 seconds to update countdown timers and detect new events.
+ * Auto-refreshes every 30 seconds to detect new events.
+ * Per-event countdown updates every second when < 10 min remaining.
  */
 export function ActiveEventBanner() {
   const { isProUser } = useSubscription();
@@ -22,8 +23,15 @@ export function ActiveEventBanner() {
 
   if (events.length === 0) return null;
 
+  const totalMultiplier = events.reduce((sum, e) => sum + (e.multiplier - 1), 1);
+
   return (
-    <div className="space-y-2 mb-4">
+    <div className="space-y-2 mb-4" role="region" aria-label="Active XP events">
+      {events.length > 1 && (
+        <div className="text-center text-xs font-bold text-surface-500 dark:text-surface-400">
+          Combined: {totalMultiplier.toFixed(1)}x XP
+        </div>
+      )}
       <AnimatePresence>
         {events.map((event) => (
           <EventCard key={event.id} event={event} />
@@ -37,22 +45,24 @@ function EventCard({ event }: { event: ActiveXpEvent }) {
   const [timeLeft, setTimeLeft] = useState(formatEventTimeLeft(event.endsAt));
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTimeLeft(formatEventTimeLeft(event.endsAt));
-    }, 30_000);
+    const updateTime = () => setTimeLeft(formatEventTimeLeft(event.endsAt));
+    // Use 1-second updates when <10 min remaining, else 30s
+    const msRemaining = new Date(event.endsAt).getTime() - Date.now();
+    const intervalMs = msRemaining < 10 * 60 * 1000 ? 1000 : 30_000;
+    const interval = setInterval(updateTime, intervalMs);
     return () => clearInterval(interval);
   }, [event.endsAt]);
 
   const gradients: Record<string, string> = {
-    'weekend-double-xp': 'from-purple-500/20 to-indigo-500/20 border-purple-400/30',
-    'power-hour': 'from-amber-500/20 to-orange-500/20 border-amber-400/30',
-    'league-sprint': 'from-emerald-500/20 to-teal-500/20 border-emerald-400/30',
+    'weekend-double-xp': 'from-purple-100 to-indigo-100 border-purple-300 dark:from-purple-500/20 dark:to-indigo-500/20 dark:border-purple-400/30',
+    'power-hour': 'from-amber-100 to-orange-100 border-amber-300 dark:from-amber-500/20 dark:to-orange-500/20 dark:border-amber-400/30',
+    'league-sprint': 'from-emerald-100 to-teal-100 border-emerald-300 dark:from-emerald-500/20 dark:to-teal-500/20 dark:border-emerald-400/30',
   };
 
   const textColors: Record<string, string> = {
-    'weekend-double-xp': 'text-purple-300',
-    'power-hour': 'text-amber-300',
-    'league-sprint': 'text-emerald-300',
+    'weekend-double-xp': 'text-purple-700 dark:text-purple-300',
+    'power-hour': 'text-amber-700 dark:text-amber-300',
+    'league-sprint': 'text-emerald-700 dark:text-emerald-300',
   };
 
   const gradient = gradients[event.id] ?? gradients['power-hour'];
@@ -78,13 +88,17 @@ function EventCard({ event }: { event: ActiveXpEvent }) {
           <div className={`text-sm font-bold ${textColor}`}>
             {event.name}
           </div>
-          <div className="text-xs text-surface-400">
-            {event.multiplier}x XP on all questions
+          <div className="text-xs text-surface-500 dark:text-surface-400">
+            <span aria-live="polite" aria-atomic="true">{timeLeft}</span>
           </div>
         </div>
       </div>
-      <div className="text-xs font-semibold text-surface-400 tabular-nums">
-        {timeLeft}
+      <div
+        className="flex items-center gap-1.5 rounded-full bg-white/80 dark:bg-white/10 px-2.5 py-1"
+        aria-label={`${event.multiplier}x XP multiplier`}
+      >
+        <span className="text-xs font-black tabular-nums">{event.multiplier}x</span>
+        <span className="text-[10px] font-semibold text-surface-500">XP</span>
       </div>
     </motion.div>
   );

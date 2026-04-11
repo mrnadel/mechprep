@@ -7,14 +7,23 @@ interface LessonProgressBarProps {
   current: number;
   total: number;
   color: string;
+  glowing?: boolean;
+  /** One-shot milestone glow when reaching halfway */
+  milestoneGlow?: boolean;
 }
 
-export default function LessonProgressBar({ current, total, color }: LessonProgressBarProps) {
+export default function LessonProgressBar({ current, total, color, glowing, milestoneGlow }: LessonProgressBarProps) {
   const c = useLessonColors();
+
+  // Milestone glow: brief box-shadow on the container when reaching a milestone
+  const milestoneGlowStyle = milestoneGlow
+    ? { boxShadow: `0 0 10px ${color}80, 0 0 20px ${color}40` }
+    : {};
+
   return (
     <div
       className="flex items-center flex-1 min-w-0"
-      style={{ gap: 5 }}
+      style={{ gap: 5, transition: 'box-shadow 0.5s ease-out', borderRadius: 4, ...milestoneGlowStyle }}
       role="progressbar"
       aria-valuenow={current}
       aria-valuemin={0}
@@ -41,6 +50,8 @@ export default function LessonProgressBar({ current, total, color }: LessonProgr
                   height: '100%',
                   borderRadius: 4,
                   backgroundColor: color,
+                  boxShadow: glowing ? `0 0 8px ${color}80, 0 0 16px ${color}40` : undefined,
+                  animation: glowing ? 'pulse-glow 1.5s ease-in-out infinite' : undefined,
                 }}
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}

@@ -78,3 +78,16 @@ export const INTERVIEW_READINESS = {
 // --------------- Password Validation ---------------
 
 export const PASSWORD_MIN_LENGTH = 8;
+
+// --------------- Adaptive Difficulty ---------------
+
+/** Number of recent answers to consider for rolling accuracy. */
+export const ADAPTIVE_ROLLING_WINDOW = 5;
+/** Rolling accuracy at or below this triggers struggling mode. */
+export const ADAPTIVE_STRUGGLING_THRESHOLD = 0.4;
+/** Rolling accuracy at or above this triggers cruising mode (must be perfect). */
+export const ADAPTIVE_CRUISING_THRESHOLD = 1.0;
+/** XP multiplier bonus per question answered correctly during cruising mode. */
+export const ADAPTIVE_CRUISING_XP_BONUS = 1.5;
+/** Minimum answers before adaptive mode kicks in. */
+export const ADAPTIVE_MIN_ANSWERS = 3;

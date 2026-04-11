@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, memo } from 'react';
 import { motion } from 'framer-motion';
+import { Check, X } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -140,7 +141,17 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
             return (
               <motion.button
                 key={zone.id}
+                tabIndex={0}
+                role="radio"
+                aria-checked={isSelected}
+                aria-label={`Tap zone: ${zone.label}${isSelected ? ', selected' : ''}${answered && localCorrect !== null ? (isCorrectZone ? ' — correct' : isSelected && !isCorrectZone ? ' — incorrect' : '') : ''}`}
                 onClick={() => handleZoneTap(zone.id)}
+                onKeyDown={(e: React.KeyboardEvent) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleZoneTap(zone.id);
+                  }
+                }}
                 disabled={answered}
                 whileTap={!answered ? { scale: 0.95, transition: { duration: 0.1 } } : undefined}
                 animate={
@@ -173,10 +184,11 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
                     padding: '2px 8px', borderRadius: 6,
                     transition: 'background 0.2s',
                     textShadow: '0 1px 2px rgba(0,0,0,0.2)',
+                    display: 'inline-flex', alignItems: 'center', gap: 3,
                   }}>
                     {zone.label}
-                    {isCorrectZone && ' ✓'}
-                    {isSelected && !isCorrectZone && ' ✗'}
+                    {isCorrectZone && <Check className="w-3 h-3" strokeWidth={3} />}
+                    {isSelected && !isCorrectZone && <X className="w-3 h-3" strokeWidth={3} />}
                   </span>
                 ) : isSelected ? (
                   <span style={{
@@ -216,6 +228,9 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
               return (
                 <motion.button
                   key={zone.id}
+                  role="radio"
+                  aria-checked={isSelected}
+                  aria-label={`${zone.label}${answered && localCorrect !== null ? (isCorrectZone ? ' — correct' : isSelected && !isCorrectZone ? ' — incorrect' : '') : ''}`}
                   onClick={() => handleZoneTap(zone.id)}
                   disabled={answered}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -228,9 +243,12 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
                     cursor: answered ? 'default' : 'pointer',
                     transition: 'background 0.2s, border 0.2s',
                     boxShadow: answered ? 'none' : isSelected ? `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)` : '0 3px 0 #DCDCDC',
+                    display: 'inline-flex', alignItems: 'center', gap: 4,
                   }}
                 >
                   {zone.label}
+                  {answered && localCorrect !== null && isCorrectZone && <Check className="w-3.5 h-3.5" strokeWidth={3} />}
+                  {answered && localCorrect !== null && isSelected && !isCorrectZone && <X className="w-3.5 h-3.5" strokeWidth={3} />}
                 </motion.button>
               );
             })}

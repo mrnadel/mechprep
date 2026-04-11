@@ -7,7 +7,9 @@ import { useCourseStore } from '@/store/useCourseStore';
 import { useBackHandler } from '@/hooks/useBackHandler';
 import { GameButton } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
+import { ShareButton } from '@/components/ui/ShareButton';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
+import { getShareCardUrl, getShareText, getDisplayName } from '@/lib/share-card';
 
 
 interface BlueprintCelebrationProps { unitIndex: number; isGolden: boolean; onDismiss: () => void; }
@@ -42,7 +44,14 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
         bg={isGolden ? '#E8850C' : '#58A700'}
         fx={isGolden ? 'stars' : 'confetti'}
         footer={
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: canDismiss ? 1 : 0 }} transition={{ duration: 0.4 }}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: canDismiss ? 1 : 0 }} transition={{ duration: 0.4 }} className="space-y-3">
+            <div className="flex justify-center">
+              <ShareButton
+                imageUrl={getShareCardUrl('chapter', unitTitle, getDisplayName())}
+                shareText={getShareText('chapter', unitTitle)}
+                fileName={`octokeen-chapter-${unitIndex + 1}.png`}
+              />
+            </div>
             <GameButton variant="gold" onClick={handleDismiss}>CONTINUE</GameButton>
           </motion.div>
         }

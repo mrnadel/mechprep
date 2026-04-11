@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo } from 'react';
+import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo, useRef } from 'react';
 import { motion, Reorder } from 'framer-motion';
+import { Check, X } from 'lucide-react';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -47,6 +48,8 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
     const [order, setOrder] = useState<number[]>(initialOrder);
     const [results, setResults] = useState<boolean[] | null>(null);
     const [dragging, setDragging] = useState<number | null>(null);
+    const [liveMessage, setLiveMessage] = useState('');
+    const itemRefs = useRef<(HTMLElement | null)[]>([]);
 
     useEffect(() => {
       setOrder(initialOrder);
@@ -62,6 +65,29 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
       if (answered) return;
       setOrder(newOrder);
     }, [answered]);
+
+    const handleKeyDown = useCallback((e: React.KeyboardEvent, position: number) => {
+      if (answered) return;
+      if (e.key === 'ArrowUp' && position > 0) {
+        e.preventDefault();
+        setOrder(prev => {
+          const next = [...prev];
+          [next[position - 1], next[position]] = [next[position], next[position - 1]];
+          return next;
+        });
+        setLiveMessage(`Moved to position ${position} of ${steps.length}`);
+        requestAnimationFrame(() => itemRefs.current[position - 1]?.focus());
+      } else if (e.key === 'ArrowDown' && position < order.length - 1) {
+        e.preventDefault();
+        setOrder(prev => {
+          const next = [...prev];
+          [next[position], next[position + 1]] = [next[position + 1], next[position]];
+          return next;
+        });
+        setLiveMessage(`Moved to position ${position + 2} of ${steps.length}`);
+        requestAnimationFrame(() => itemRefs.current[position + 1]?.focus());
+      }
+    }, [answered, order.length, steps.length]);
 
     const handleCheck = useCallback(() => {
       if (answered) return;
@@ -115,6 +141,9 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
           First
         </div>
 
+        <div className="sr-only">Use up and down arrow keys to reorder items</div>
+        <div aria-live="assertive" className="sr-only">{liveMessage}</div>
+
         {/* Step list */}
         <Reorder.Group
           axis="y"
@@ -146,6 +175,11 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
               <Reorder.Item
                 key={stepIdx}
                 value={stepIdx}
+                ref={(el: HTMLElement | null) => { itemRefs.current[position] = el; }}
+                tabIndex={0}
+                onKeyDown={(e: React.KeyboardEvent) => handleKeyDown(e, position)}
+                aria-label={`Step ${position + 1}: ${steps[stepIdx]}${isCorrect !== null ? (isCorrect ? ' — correct position' : ' — incorrect position') : ''}`}
+                role="option"
                 dragListener={!answered}
                 onDragStart={() => setDragging(stepIdx)}
                 onDragEnd={() => setDragging(null)}
@@ -167,14 +201,16 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
                   ...(isDragging ? { zIndex: 10 } : {}),
                 }}
               >
-                {/* Step number */}
+                {/* Step number / Check/X icon */}
                 <span style={{
                   width: 28, height: 28, borderRadius: 8, display: 'flex',
                   alignItems: 'center', justifyContent: 'center', flexShrink: 0,
                   fontSize: 12, fontWeight: 800, background: numberBg, color: numberColor,
                   transition: 'background 0.2s, color 0.2s',
                 }}>
-                  {position + 1}
+                  {isCorrect === true ? <Check className="w-3.5 h-3.5" strokeWidth={3} />
+                    : isCorrect === false ? <X className="w-3.5 h-3.5" strokeWidth={3} />
+                    : position + 1}
                 </span>
 
                 {/* Step text */}

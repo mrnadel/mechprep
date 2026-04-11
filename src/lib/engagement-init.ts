@@ -5,6 +5,8 @@ import { useStore } from '@/store/useStore';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useEngagementStore } from '@/store/useEngagementStore';
 import { initFakeUserPool, progressFakeUsers } from '@/lib/fake-user-generator';
+import { useSubscriptionStore } from '@/hooks/useSubscription';
+import { scheduleEventNotifications } from '@/lib/xp-events';
 
 function getYesterday(): string {
   const d = new Date();
@@ -82,7 +84,7 @@ export function useEngagementInit(isHydrated = true) {
       }));
     }
 
-    // Initialize all engagement systems
+    // === Engagement init sequence (ORDER MATTERS) ===
     // Initialize fake user pool (must happen before league simulation)
     initFakeUserPool();
     progressFakeUsers();
@@ -90,7 +92,13 @@ export function useEngagementInit(isHydrated = true) {
     useEngagementStore.getState().initWeeklyQuests();
     useEngagementStore.getState().simulateLeagueWeek();
     if (hasEngagementHistory) {
-      useEngagementStore.getState().checkComebackFlow();
+      useEngagementStore.getState().checkComebackFlow();    // Gap 9
     }
+    useEngagementStore.getState().checkDailyRewardCalendar();  // Gap 10
+    // Gap 9: Graduated nudge banners (Day-1 / Day-2 returning users)
+    useEngagementStore.getState().checkNudges();
+    // Gap 6: Schedule browser notifications for upcoming XP events
+    const isPro = useSubscriptionStore.getState().tier === 'pro';
+    scheduleEventNotifications(isPro);
   }, [isHydrated]);
 }

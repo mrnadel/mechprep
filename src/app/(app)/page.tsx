@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, lazy, Suspense } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback, lazy, Suspense } from 'react';
 import { useSession } from 'next-auth/react';
 import { CourseHeader } from '@/components/course/CourseHeader';
 import { CourseMap } from '@/components/course/CourseMap';
@@ -12,6 +12,7 @@ import { streakMilestones } from '@/data/streak-milestones';
 import { useFeatureFlag } from '@/hooks/useFeatureFlags';
 import { analytics } from '@/lib/mixpanel';
 import { STORAGE_KEYS } from '@/lib/storage-keys';
+import type { CharacterArc, StoryUnlockEntry } from '@/data/course/character-arcs';
 
 // Lazy-load heavy components that are conditionally rendered
 const LandingPage = lazy(() => import('@/components/landing/LandingPage').then(m => ({ default: m.LandingPage })));
@@ -30,6 +31,9 @@ const PlacementTestView = lazy(() => import('@/components/course/PlacementTestVi
 const PlacementTestResult = lazy(() => import('@/components/course/PlacementTestResult'));
 const CourseIntroFlow = lazy(() => import('@/components/course/CourseIntroFlow').then(m => ({ default: m.CourseIntroFlow })));
 const OnboardingPlacementTest = lazy(() => import('@/components/course/OnboardingPlacementTest').then(m => ({ default: m.OnboardingPlacementTest })));
+const StoryUnlockScreen = lazy(() => import('@/components/engagement/StoryUnlock').then(m => ({ default: m.StoryUnlock })));
+const StreakNudgeBanner = lazy(() => import('@/components/engagement/StreakNudgeBanner').then(m => ({ default: m.StreakNudgeBanner })));
+const DailyRewardClaimModal = lazy(() => import('@/components/engagement/DailyRewardClaimModal').then(m => ({ default: m.DailyRewardClaimModal })));
 
 export default function HomePage() {
   const { status } = useSession();
@@ -161,6 +165,77 @@ export default function HomePage() {
     setShownMilestone(null);
   };
 
+  // ── Story Unlock (Gap 11) ────────────────────────────────
+  // After the entire lesson flow finishes (result dismissed, celebrations done,
+  // chapter/course completion dismissed), check if a story unlock should appear.
+  const markStoryUnlockViewed = useCourseStore((s) => s.markStoryUnlockViewed);
+  const [pendingStoryUnlock, setPendingStoryUnlock] = useState<{
+    unlock: StoryUnlockEntry;
+    character: CharacterArc;
+  } | null>(null);
+  // Track whether we already ran the story unlock check for the current lesson completion
+  // cycle. Reset when a new lesson starts.
+  const storyCheckDone = useRef(false);
+
+  // Reset the check flag when a new lesson starts
+  useEffect(() => {
+    if (activeLesson) {
+      storyCheckDone.current = false;
+    }
+  }, [activeLesson]);
+
+  // Check for story unlocks when the lesson flow fully ends
+  const lessonFlowJustEnded = !activeLesson && !lessonResult && pendingCelebrations.length === 0 && !chapterJustCompleted && !courseJustCompleted;
+  useEffect(() => {
+    if (!lessonFlowJustEnded || storyCheckDone.current || pendingStoryUnlock) return;
+    storyCheckDone.current = true;
+
+    // Lazy-load story data and check
+    let cancelled = false;
+    (async () => {
+      const { loadCharacters, loadStoryUnlocks, getNextStoryUnlock, getCharacter } = await import('@/lib/story-utils');
+      if (cancelled) return;
+
+      const prof = useCourseStore.getState().activeProfession;
+      const [characters, storyUnlocks] = await Promise.all([
+        loadCharacters(prof),
+        loadStoryUnlocks(prof),
+      ]);
+      if (cancelled || characters.length === 0 || storyUnlocks.length === 0) return;
+
+      const { progress, courseData: units } = useCourseStore.getState();
+      const nextUnlock = getNextStoryUnlock(
+        progress.completedLessons,
+        progress.viewedStoryUnlocks ?? [],
+        storyUnlocks,
+        units,
+      );
+      if (!nextUnlock || cancelled) return;
+
+      const char = getCharacter(nextUnlock.characterId, characters);
+      if (!char) return;
+
+      setPendingStoryUnlock({ unlock: nextUnlock, character: char });
+    })();
+
+    return () => { cancelled = true; };
+  }, [lessonFlowJustEnded, pendingStoryUnlock]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const handleStoryUnlockDismiss = useCallback(() => {
+    if (!pendingStoryUnlock) return;
+    const { unlock } = pendingStoryUnlock;
+
+    // Mark as viewed in store
+    markStoryUnlockViewed(unlock.id);
+
+    // Award gems
+    if (unlock.gemReward && unlock.gemReward > 0) {
+      addGems(unlock.gemReward, 'story_unlock');
+    }
+
+    setPendingStoryUnlock(null);
+  }, [pendingStoryUnlock, markStoryUnlockViewed, addGems]);
+
   if (status === 'loading') {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
@@ -177,11 +252,12 @@ export default function HomePage() {
     );
   }
 
-  // Lesson flow covers: active lesson → result screen → celebrations → chapter/course completion.
+  // Lesson flow covers: active lesson → result screen → celebrations → chapter/course completion → story unlock.
   // An opaque backdrop stays mounted through ALL phases so the home page never flashes between screens.
   const lessonFlowActive = !!(
     activeLesson ||
     lessonResult ||
+    pendingStoryUnlock ||
     (flagCelebrations && (
       pendingCelebrations.length > 0 ||
       chapterJustCompleted ||
@@ -249,6 +325,7 @@ export default function HomePage() {
       {/* Overlays - lazy loaded, gated by feature flags */}
       <Suspense fallback={null}>
         {flagComeback && <WelcomeBack />}
+        <DailyRewardClaimModal />
         {flagLeagues && <LeagueWinner />}
         {flagLeagues && <LeaguePromotion />}
         {flagStreaks && <StreakFreeze />}
@@ -264,6 +341,15 @@ export default function HomePage() {
       <div className="px-4 max-w-lg mx-auto">
         <ActiveEventBanner />
       </div>
+
+      {/* Streak nudge banner for returning users (Day-1 / Day-2) */}
+      {flagStreaks && (
+        <div className="px-4 max-w-lg mx-auto mt-2">
+          <Suspense fallback={null}>
+            <StreakNudgeBanner />
+          </Suspense>
+        </div>
+      )}
 
       {/* Course map */}
       <CourseMap />
@@ -299,6 +385,15 @@ export default function HomePage() {
         )}
         {flagCelebrations && !lessonResult && pendingCelebrations.length === 0 && !chapterJustCompleted && courseJustCompleted && (
           <CourseCompleteCelebration onDismiss={dismissCourseCompletion} />
+        )}
+
+        {/* Story Unlock (Gap 11) — shows after all celebrations are dismissed */}
+        {pendingStoryUnlock && (
+          <StoryUnlockScreen
+            unlock={pendingStoryUnlock.unlock}
+            character={pendingStoryUnlock.character}
+            onDismiss={handleStoryUnlockDismiss}
+          />
         )}
       </Suspense>
     </>

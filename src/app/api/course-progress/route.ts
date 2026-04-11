@@ -5,6 +5,7 @@ import { users, courseProgress } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
 import { getLessonById } from '@/data/course';
 import { courseProgressSyncSchema } from '@/lib/validation';
+import { insertActivity } from '@/lib/activity-feed';
 import type { CourseProgress } from '@/data/course/types';
 import { PROFESSION_ID } from '@/data/professions';
 
@@ -87,7 +88,7 @@ export async function POST(request: NextRequest) {
   }
 
   const existing = await db
-    .select({ id: courseProgress.id })
+    .select({ id: courseProgress.id, completedLessons: courseProgress.completedLessons })
     .from(courseProgress)
     .where(eq(courseProgress.userId, userId))
     .limit(1);
@@ -112,6 +113,20 @@ export async function POST(request: NextRequest) {
       .where(eq(courseProgress.userId, userId));
   } else {
     await db.insert(courseProgress).values(data);
+  }
+
+  // Check for new lesson completions and insert activity
+  if (existing.length > 0 && progress.completedLessons) {
+    const prevLessons = Object.keys(
+      (existing[0].completedLessons as Record<string, unknown>) ?? {},
+    );
+    const newLessons = Object.keys(validLessons);
+    const newCompletions = newLessons.filter((id) => !prevLessons.includes(id));
+    if (newCompletions.length > 0) {
+      await insertActivity(userId, 'lesson_complete', {
+        count: newCompletions.length,
+      });
+    }
   }
 
   // Also update display name

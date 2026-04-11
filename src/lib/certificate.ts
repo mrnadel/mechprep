@@ -4,13 +4,50 @@
 
 import { APP_NAME } from '@/lib/constants';
 
-interface CertificateParams {
+export interface CertificateParams {
   name: string;
   profession: string;
   professionIcon: string;
   color: string;
   score: number;
   date?: string;
+}
+
+export type CertificateShareResult = 'shared' | 'copied' | 'downloaded' | 'cancelled';
+
+/**
+ * Generate a short deterministic certificate ID from user + profession + date.
+ * Format: OKC-XXXXXX (6 uppercase alphanumeric chars).
+ * NOT cryptographically secure — decorative only.
+ */
+export function generateCertificateId(name: string, profession: string, date: string): string {
+  const input = `${name}:${profession}:${date}`;
+  let hash = 0;
+  for (let i = 0; i < input.length; i++) {
+    hash = ((hash << 5) - hash + input.charCodeAt(i)) | 0;
+  }
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // No 0/O/1/I confusion
+  let id = '';
+  let h = Math.abs(hash);
+  for (let i = 0; i < 6; i++) {
+    id += chars[h % chars.length];
+    h = Math.floor(h / chars.length);
+  }
+  return `OKC-${id}`;
+}
+
+/**
+ * Build the public certificate page URL (for sharing/LinkedIn).
+ */
+export function getCertificatePageUrl(params: CertificateParams, appUrl: string): string {
+  const certPageUrl = new URL('/certificate', appUrl);
+  certPageUrl.searchParams.set('name', params.name);
+  certPageUrl.searchParams.set('profession', params.profession);
+  certPageUrl.searchParams.set('professionIcon', params.professionIcon);
+  certPageUrl.searchParams.set('color', params.color);
+  certPageUrl.searchParams.set('score', String(Math.round(params.score)));
+  if (params.date) certPageUrl.searchParams.set('date', params.date);
+  return certPageUrl.toString();
 }
 
 /**
@@ -46,8 +83,9 @@ export async function downloadCertificate(params: CertificateParams): Promise<vo
 
 /**
  * Share the certificate via Web Share API (with image) or fallback to download.
+ * Returns the result so callers can show appropriate UI feedback.
  */
-export async function shareCertificate(params: CertificateParams): Promise<void> {
+export async function shareCertificate(params: CertificateParams): Promise<CertificateShareResult> {
   const url = getCertificateUrl(params);
 
   // Try Web Share API with file
@@ -63,9 +101,11 @@ export async function shareCertificate(params: CertificateParams): Promise<void>
           text: `I completed the ${params.profession} course on ${APP_NAME} with a ${Math.round(params.score)}% readiness score!`,
           files: [file],
         });
-        return;
+        return 'shared';
       }
-    } catch {
+    } catch (e) {
+      if (e instanceof DOMException && e.name === 'AbortError') return 'cancelled';
+      console.warn('[certificate] Image share failed, falling back:', e);
       // Fall through to text-only share
     }
   }
@@ -77,20 +117,25 @@ export async function shareCertificate(params: CertificateParams): Promise<void>
         title: `${APP_NAME} Certificate`,
         text: `I completed the ${params.profession} course on ${APP_NAME} with a ${Math.round(params.score)}% readiness score!`,
       });
-      return;
-    } catch {
+      return 'shared';
+    } catch (e) {
+      if (e instanceof DOMException && e.name === 'AbortError') return 'cancelled';
+      console.warn('[certificate] Text share failed, falling back to download:', e);
       // Fall through to download
     }
   }
 
   // Final fallback: download
   await downloadCertificate(params);
+  return 'downloaded';
 }
 
 /**
- * Build a LinkedIn share URL with pre-filled text.
+ * Build a LinkedIn share URL pointing to the public certificate page.
+ * LinkedIn's share-offsite endpoint only accepts `url` — the shared content
+ * preview is pulled from the target page's Open Graph tags.
  */
 export function getLinkedInShareUrl(params: CertificateParams, appUrl: string): string {
-  const text = `I just completed the ${params.profession} course on ${APP_NAME} with a ${Math.round(params.score)}% readiness score! 🎓\n\n${appUrl}`;
-  return `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(appUrl)}&summary=${encodeURIComponent(text)}`;
+  const certPageUrl = getCertificatePageUrl(params, appUrl);
+  return `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(certPageUrl)}`;
 }

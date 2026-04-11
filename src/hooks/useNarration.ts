@@ -1,107 +1,138 @@
 'use client';
 
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef, useState } from 'react';
 import { useNarrationStore } from '@/store/useNarrationStore';
+import { getKokoroClient } from '@/lib/kokoro-client';
+import { getVoiceForCharacter } from '@/data/voice-config';
+import { getSharedAudioContext } from '@/lib/kokoro-audio-ctx';
 
-/** Pick the best available English voice (prefer Google/Natural/Samantha over defaults). */
-function pickBestVoice(preferredName: string | null): SpeechSynthesisVoice | null {
-  const voices = speechSynthesis.getVoices();
-  if (voices.length === 0) return null;
+const SAMPLE_RATE = 24000;
 
-  // If user picked a specific voice, try to use it
-  if (preferredName) {
-    const match = voices.find((v) => v.name === preferredName);
-    if (match) return match;
-  }
-
-  // Auto-pick: score English voices by quality heuristics
-  const english = voices.filter((v) => v.lang.startsWith('en'));
-  if (english.length === 0) return voices[0];
-
-  const score = (v: SpeechSynthesisVoice) => {
-    let s = 0;
-    const n = v.name.toLowerCase();
-    if (n.includes('natural')) s += 10;
-    if (n.includes('google')) s += 8;
-    if (n.includes('samantha')) s += 7;
-    if (n.includes('neural')) s += 6;
-    if (n.includes('online')) s += 4;
-    if (!v.localService) s += 2; // remote voices are often higher quality
-    if (v.lang === 'en-US') s += 1;
-    return s;
-  };
-
-  return english.sort((a, b) => score(b) - score(a))[0];
-}
-
-/**
- * Strip markdown-like formatting and clean text for TTS.
- * Removes **bold**, *italic*, and other markers that would sound odd.
- */
 function cleanTextForSpeech(text: string): string {
   return text
-    .replace(/\*\*(.*?)\*\*/g, '$1')  // **bold**
-    .replace(/\*(.*?)\*/g, '$1')       // *italic*
-    .replace(/`(.*?)`/g, '$1')         // `code`
-    .replace(/\[(.*?)\]\(.*?\)/g, '$1') // [link](url)
-    .replace(/[#>-]/g, '')             // markdown headers, blockquotes, list markers
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\*(.*?)\*/g, '$1')
+    .replace(/`(.*?)`/g, '$1')
+    .replace(/\[(.*?)\]\(.*?\)/g, '$1')
+    .replace(/[#>-]/g, '')
     .trim();
 }
 
-/** Hook that speaks text aloud when narration is enabled. */
+function playPCM(
+  ctx: AudioContext,
+  pcm: Float32Array,
+  playbackRate: number,
+): AudioBufferSourceNode {
+  const buffer = ctx.createBuffer(1, pcm.length, SAMPLE_RATE);
+  buffer.getChannelData(0).set(pcm);
+  const source = ctx.createBufferSource();
+  source.buffer = buffer;
+  source.playbackRate.value = playbackRate;
+  source.connect(ctx.destination);
+  source.start();
+  return source;
+}
+
 export function useNarration() {
   const enabled = useNarrationStore((s) => s.enabled);
-  const voiceName = useNarrationStore((s) => s.voiceName);
   const rate = useNarrationStore((s) => s.rate);
-  const resolvedVoiceRef = useRef<SpeechSynthesisVoice | null>(null);
-  const voiceKeyRef = useRef<string | null>(null);
+  const [modelReady, setModelReady] = useState(false);
+  const [modelProgress, setModelProgress] = useState(0);
+  const sourceRef = useRef<AudioBufferSourceNode | null>(null);
+  const abortRef = useRef(0);
 
-  // Resolve voice once and cache it. Re-resolve only if voiceName preference changes.
+  // Lazy-init the Kokoro model when narration is first enabled
   useEffect(() => {
-    const resolve = () => {
-      const voice = pickBestVoice(voiceName);
-      if (voice) {
-        resolvedVoiceRef.current = voice;
-        voiceKeyRef.current = voiceName;
-      }
-    };
-
-    resolve();
-    // Voices may load asynchronously — listen for them once
-    if (!resolvedVoiceRef.current) {
-      speechSynthesis.addEventListener('voiceschanged', resolve, { once: true });
-      return () => speechSynthesis.removeEventListener('voiceschanged', resolve);
+    if (!enabled) return;
+    const client = getKokoroClient();
+    if (client.isReady) {
+      setModelReady(true);
+      return;
     }
-  }, [voiceName]);
-
-  // Cancel on unmount or when disabled
-  useEffect(() => {
-    if (!enabled) {
-      speechSynthesis.cancel();
-    }
-    return () => speechSynthesis.cancel();
+    console.log('[narration] Initializing Kokoro TTS...');
+    client.init(
+      (progress) => {
+        setModelProgress(progress);
+        if (progress % 20 === 0) console.log(`[narration] Loading model: ${progress}%`);
+      },
+      () => {
+        console.log('[narration] Model ready!');
+        setModelReady(true);
+      },
+    ).catch((err) => {
+      console.error('[narration] Model failed to load:', err);
+    });
   }, [enabled]);
 
-  const speak = useCallback(
-    (text: string) => {
+  useEffect(() => {
+    return () => {
+      try { sourceRef.current?.stop(); } catch { /* */ }
+      sourceRef.current = null;
+    };
+  }, []);
+
+  const stop = useCallback(() => {
+    abortRef.current++;
+    if (sourceRef.current) {
+      try { sourceRef.current.stop(); } catch { /* */ }
+      sourceRef.current = null;
+    }
+  }, []);
+
+  const speakWithCharacter = useCallback(
+    async (text: string, characterId?: string | null) => {
       if (!enabled || !text) return;
-      speechSynthesis.cancel();
+      stop();
+
+      const client = getKokoroClient();
+      if (!client.isReady) {
+        console.log('[narration] Model not ready, skipping');
+        return;
+      }
 
       const cleaned = cleanTextForSpeech(text);
       if (!cleaned) return;
 
-      const utterance = new SpeechSynthesisUtterance(cleaned);
-      if (resolvedVoiceRef.current) utterance.voice = resolvedVoiceRef.current;
-      utterance.rate = rate;
-      utterance.pitch = 1;
-      speechSynthesis.speak(utterance);
+      const { voice } = getVoiceForCharacter(characterId ?? null);
+      const token = ++abortRef.current;
+
+      console.log(`[narration] Speaking: voice=${voice}, text="${cleaned.slice(0, 50)}..."`);
+
+      try {
+        const pcm = await client.generate(cleaned, voice, 0.95);
+        if (abortRef.current !== token) return;
+
+        console.log(`[narration] Got audio: ${pcm.length} samples (${(pcm.length / SAMPLE_RATE).toFixed(1)}s)`);
+
+        const ctx = getSharedAudioContext();
+        if (ctx.state === 'suspended') {
+          await ctx.resume();
+        }
+
+        sourceRef.current = playPCM(ctx, pcm, rate);
+        console.log('[narration] Playing audio');
+      } catch (err) {
+        console.error('[narration] Generate/play error:', err);
+      }
     },
-    [enabled, rate],
+    [enabled, rate, stop],
   );
 
-  const stop = useCallback(() => {
-    speechSynthesis.cancel();
-  }, []);
+  const prefetch = useCallback(
+    (texts: { text: string; characterId?: string | null }[]) => {
+      if (!enabled) return;
+      const client = getKokoroClient();
+      if (!client.isReady) return;
 
-  return { speak, stop, enabled };
+      for (const { text, characterId } of texts) {
+        const cleaned = cleanTextForSpeech(text);
+        if (!cleaned) continue;
+        const { voice } = getVoiceForCharacter(characterId ?? null);
+        client.prefetch(cleaned, voice, 0.95);
+      }
+    },
+    [enabled],
+  );
+
+  return { speakWithCharacter, prefetch, stop, enabled, modelReady, modelProgress };
 }

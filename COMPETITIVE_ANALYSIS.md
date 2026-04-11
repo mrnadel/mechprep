@@ -1,3 +1,5 @@
+> **HISTORICAL DOCUMENT** — This analysis was written when Octokeen was a single-course Mechanical Engineering app (codename "MechReady"). The platform is now multi-course. See `docs/courses.md` for active courses.
+
 # MechReady Competitive Analysis
 **Date:** March 2026
 **Scope:** Competitors in mechanical engineering interview prep, gamified STEM learning, and adjacent spaces

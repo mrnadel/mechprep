@@ -4,10 +4,12 @@ import { memo, useMemo, useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import { Mascot, type MascotPose } from '@/components/ui/Mascot';
+import { CharacterAvatar } from '@/components/ui/CharacterAvatar';
 import { getTeachingColors } from '@/lib/teachingColors';
 import { useIsDark } from '@/store/useThemeStore';
 import { STORAGE_KEYS } from '@/lib/storage-keys';
 import EngagingText from './EngagingText';
+import { AudioButton } from '@/components/ui/AudioButton';
 
 const DiagramDisplay = memo(function DiagramDisplay({ html, cardBg, border }: { html: string; cardBg: string; border: string }) {
   const sanitised = html
@@ -65,9 +67,12 @@ interface TeachingCardProps {
   onGotIt: () => void;
   hasBackground?: boolean;
   bgTheme?: 'dark' | 'light' | null;
+  characterId?: string | null;
+  characterName?: string | null;
+  characterLine?: string | null;
 }
 
-export default function TeachingCard({ question, unitColor, onGotIt, hasBackground, bgTheme }: TeachingCardProps) {
+export default function TeachingCard({ question, unitColor, onGotIt, hasBackground, bgTheme, characterId, characterName, characterLine }: TeachingCardProps) {
   const isDark = useIsDark();
   const tc = getTeachingColors({
     isDark,
@@ -108,16 +113,17 @@ export default function TeachingCard({ question, unitColor, onGotIt, hasBackgrou
         className="flex flex-col items-center text-center flex-1 justify-center"
         style={{ padding: '20px 24px', gap: 14, maxWidth: 460, margin: '0 auto', width: '100%' }}
       >
-        {/* Mascot */}
+        {/* Mascot / Character */}
         <motion.div
           initial={{ scale: 0.5, rotate: -10 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ type: 'spring', stiffness: 350, damping: 15, delay: 0.05 }}
+          style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}
         >
           <div
             style={{
-              width: 120,
-              height: 120,
+              width: characterId ? 160 : 120,
+              height: characterId ? 160 : 120,
               borderRadius: '50%',
               background: tc.isGlass
                 ? `radial-gradient(circle, ${tc.accentSoft}30 0%, transparent 70%)`
@@ -127,8 +133,18 @@ export default function TeachingCard({ question, unitColor, onGotIt, hasBackgrou
               justifyContent: 'center',
             }}
           >
-            <Mascot pose={pose} size={84} />
+            {characterId ? (
+              <CharacterAvatar characterId={characterId} size={140} />
+            ) : (
+              <Mascot pose={pose} size={84} />
+            )}
           </div>
+          {characterId && characterName && (
+            <span style={{ fontSize: 11, fontWeight: 800, color: tc.accentSoft, textTransform: 'uppercase', letterSpacing: 0.5 }}>{characterName}</span>
+          )}
+          {question.explanation && (
+            <AudioButton text={question.explanation} characterId={characterId} color={tc.accentSoft} size={18} />
+          )}
         </motion.div>
 
         {/* Headline */}
@@ -148,11 +164,30 @@ export default function TeachingCard({ question, unitColor, onGotIt, hasBackgrou
           {title}
         </motion.h2>
 
+        {/* Character line */}
+        {characterLine && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.3 }}
+            style={{
+              fontSize: 13.5,
+              fontWeight: 600,
+              fontStyle: 'italic',
+              color: tc.accentSoft,
+              lineHeight: 1.4,
+              maxWidth: 300,
+            }}
+          >
+            &ldquo;{characterLine}&rdquo;
+          </motion.div>
+        )}
+
         {/* One-liner */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25, duration: 0.3 }}
+          transition={{ delay: characterLine ? 0.3 : 0.25, duration: 0.3 }}
           style={{
             fontSize: 15,
             fontWeight: 600,
@@ -187,6 +222,8 @@ export default function TeachingCard({ question, unitColor, onGotIt, hasBackgrou
         >
           <button
             onClick={toggleExpand}
+            aria-expanded={expanded}
+            aria-label={expanded ? 'Show less detail' : 'Tell me more — expand for detail'}
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -278,6 +315,7 @@ export default function TeachingCard({ question, unitColor, onGotIt, hasBackgrou
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45 }}
           onClick={onGotIt}
+          aria-label="Got it — continue to next card"
           whileTap={{ y: 4, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } }}
           className="w-full"
           style={{

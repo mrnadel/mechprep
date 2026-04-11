@@ -13,8 +13,10 @@ import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 import type { FXName } from '@/components/ui/ScreenFX';
 import { playSound } from '@/lib/sounds';
+import { reportFriendQuestProgress } from '@/hooks/useFriendQuestSync';
 import { useAdManager } from '@/components/ads/useAdManager';
 import { InterstitialAd } from '@/components/ads/InterstitialAd';
+import { CharacterAvatar } from '@/components/ui/CharacterAvatar';
 
 export { ResultScreen };
 export default function ResultScreen() {
@@ -25,6 +27,34 @@ export default function ResultScreen() {
   const adTracked = useRef(false);
   const [showingAd, setShowingAd] = useState(false);
   const { shouldShowAd, recordCompletion, recordAdShown } = useAdManager();
+  const [resultCharacter, setResultCharacter] = useState<{ id: string; name: string; line: string } | null>(null);
+
+  useEffect(() => {
+    (async () => {
+      const profId = useCourseStore.getState().activeProfession;
+      const { getCourseMetaForProfession } = await import('@/data/course/course-meta');
+      const courseMeta = getCourseMetaForProfession(profId);
+      if (!courseMeta) return;
+      let sectionIdx: number | undefined;
+      for (const unit of courseMeta) {
+        if (unit.lessons.some(l => l.id === lessonResult?.lessonId)) {
+          sectionIdx = unit.sectionIndex;
+          break;
+        }
+      }
+      if (sectionIdx === undefined) return;
+      const { loadCharacters, loadSectionCharacterMap, loadCharacterLines, getCharacterForSection, getResultLine } = await import('@/lib/story-utils');
+      const [characters, sectionMap, lines] = await Promise.all([
+        loadCharacters(profId),
+        loadSectionCharacterMap(profId),
+        loadCharacterLines(profId),
+      ]);
+      const char = getCharacterForSection(sectionIdx, sectionMap, characters);
+      if (!char) return;
+      const line = getResultLine(lessonResult!.accuracy, char.id, lines);
+      if (line) setResultCharacter({ id: char.id, name: char.name, line });
+    })();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Record completion for ad frequency tracking (once per result)
   useEffect(() => {
@@ -75,6 +105,15 @@ export default function ResultScreen() {
       updateQuestProgress('topics_practiced', 1);
       if (lessonResult.isFirstCompletion && lessonResult.stars === 3) addGems(10, '3_star_first_time');
     }
+    // Report to friend quest progress API (fire-and-forget)
+    const friendEvents: Array<{ event: 'xp_earned' | 'lesson_completed' | 'accuracy_report'; value: number }> = [
+      { event: 'xp_earned', value: lessonResult.xpEarned },
+    ];
+    if (lessonResult.passed) {
+      friendEvents.push({ event: 'lesson_completed', value: 1 });
+      friendEvents.push({ event: 'accuracy_report', value: lessonResult.accuracy });
+    }
+    reportFriendQuestProgress(friendEvents);
   }, [lessonResult]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!lessonResult) return null;
@@ -164,6 +203,7 @@ export default function ResultScreen() {
           <motion.div
             className="flex-1 rounded-2xl overflow-hidden"
             style={{ border: '3px solid rgba(255,255,255,0.3)' }}
+            aria-label={`Total XP: ${lessonResult.xpEarned}`}
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.55, type: 'spring', stiffness: 300, damping: 20 }}
@@ -176,16 +216,28 @@ export default function ResultScreen() {
                 Total XP
               </span>
             </div>
-            <div className="py-4 flex items-center justify-center gap-2">
-              <Zap className="w-5 h-5 text-white" fill="currentColor" />
-              <motion.span
-                className="text-[26px] font-extrabold text-white"
-                initial={{ scale: 0.5, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ type: 'spring', stiffness: 250, damping: 15, delay: 0.7 }}
-              >
-                {lessonResult.xpEarned}
-              </motion.span>
+            <div className="py-4 flex flex-col items-center justify-center gap-1">
+              <div className="flex items-center gap-2">
+                <Zap className="w-5 h-5 text-white" fill="currentColor" />
+                <motion.span
+                  className="text-[26px] font-extrabold text-white"
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ type: 'spring', stiffness: 250, damping: 15, delay: 0.7 }}
+                >
+                  {lessonResult.xpEarned}
+                </motion.span>
+              </div>
+              {lessonResult.eventXpMultiplier && lessonResult.eventXpMultiplier > 1 && (
+                <motion.div
+                  className="text-[10px] font-semibold text-white/70"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8 }}
+                >
+                  +{Math.round(lessonResult.xpEarned * (1 - 1 / lessonResult.eventXpMultiplier))} bonus from {lessonResult.activeEventNames?.join(' + ')}
+                </motion.div>
+              )}
             </div>
           </motion.div>
 
@@ -193,6 +245,7 @@ export default function ResultScreen() {
           <motion.div
             className="flex-1 rounded-2xl overflow-hidden"
             style={{ border: '3px solid rgba(255,255,255,0.3)' }}
+            aria-label={`Accuracy: ${lessonResult.accuracy}%, ${getAccuracyLabel()}`}
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.6, type: 'spring', stiffness: 300, damping: 20 }}
@@ -213,6 +266,22 @@ export default function ResultScreen() {
             </div>
           </motion.div>
         </motion.div>
+
+        {resultCharacter && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="flex items-center gap-3 rounded-2xl px-4 py-3 mt-4"
+            style={{ background: 'rgba(255,255,255,0.1)', border: '1.5px solid rgba(255,255,255,0.15)' }}
+          >
+            <CharacterAvatar characterId={resultCharacter.id} size={40} />
+            <div className="flex-1 min-w-0">
+              <div className="text-[10px] font-bold text-white/50 uppercase tracking-wider">{resultCharacter.name}</div>
+              <div className="text-sm font-semibold text-white/90">&ldquo;{resultCharacter.line}&rdquo;</div>
+            </div>
+          </motion.div>
+        )}
 
         {isFlawless && passed && (
           <motion.p className="mt-4 text-sm font-bold text-white/70" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
