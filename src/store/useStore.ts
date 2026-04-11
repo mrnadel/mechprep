@@ -185,7 +185,9 @@ function selectQuestionsForSession(type: SessionType, options?: { topicId?: Topi
     case 'smart-practice': {
       const state = useStore.getState();
       const performance = buildPerformance(state.progress.topicProgress, state.progress.sessionHistory);
-      const selected = selectSmartPracticeQuestions([], useCourseStore.getState().courseData, performance, {
+      // Use pool (already gathered + flattened course questions) as practiceQuestions.
+      // Pass [] for courseData since pool already contains everything.
+      const selected = selectSmartPracticeQuestions(pool as any, [], performance, {
         topicId: options?.topicId,
         count: 10,
       });

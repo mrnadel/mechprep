@@ -50,7 +50,7 @@ export default function PracticePage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-surface-950">
+    <div className="bg-[#FAFAFA] dark:bg-surface-950">
       {/* Header */}
       <div className="px-5 pt-5 pb-1">
         <h1 className="text-[22px] font-extrabold text-gray-800 dark:text-surface-50">Practice</h1>
