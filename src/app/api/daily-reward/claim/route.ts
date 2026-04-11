@@ -1,18 +1,19 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { userProgress } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 import { getAuthUserId } from '@/lib/auth-utils';
 import { DAILY_REWARD_CYCLE } from '@/data/daily-rewards';
 import { MAX_STREAK_FREEZES } from '@/data/engagement-types';
+import { getServerToday } from '@/lib/server-dates';
 
-export async function POST() {
+export async function POST(request: NextRequest) {
   const userId = await getAuthUserId();
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const today = new Date().toISOString().split('T')[0];
+  const today = getServerToday(request.headers.get('x-timezone'));
 
   // Use a transaction to prevent TOCTOU race conditions (double claiming)
   const result = await db.transaction(async (tx) => {

@@ -354,7 +354,7 @@ export const useEngagementStore = create<EngagementStore>()(
           // Server validates and marks claimed in DB (no gem insertion — engagement sync handles that)
           fetch('/api/quests/claim', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'X-Timezone': Intl.DateTimeFormat().resolvedOptions().timeZone },
             body: JSON.stringify({ questId, questType, questDate }),
           }).catch(() => {
             // Network error — optimistic update stands, reconciled on next hydration
@@ -1044,7 +1044,10 @@ export const useEngagementStore = create<EngagementStore>()(
           });
 
           // Validate with server in the background
-          fetch('/api/daily-reward/claim', { method: 'POST' }).catch(() => {
+          fetch('/api/daily-reward/claim', {
+            method: 'POST',
+            headers: { 'X-Timezone': Intl.DateTimeFormat().resolvedOptions().timeZone },
+          }).catch(() => {
             // Network error — keep optimistic update, will reconcile on next hydration
           });
 

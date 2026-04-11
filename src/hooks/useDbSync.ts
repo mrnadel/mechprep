@@ -39,7 +39,11 @@ export function useDbSync() {
         const controller = new AbortController();
         hydrateTimeout = setTimeout(() => controller.abort(), 15000);
 
-        const fetchOpts = { signal: controller.signal };
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const fetchOpts = {
+          signal: controller.signal,
+          headers: { 'X-Timezone': tz },
+        };
         const [progressRes, courseRes, feedbackRes, contentCourseRes, engagementRes, streakRes] = await Promise.all([
           fetch('/api/progress', fetchOpts),
           fetch('/api/course-progress', fetchOpts),
@@ -397,7 +401,7 @@ export function useDbSync() {
           const progress = useStore.getState().progress;
           fetch('/api/progress', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'X-Timezone': Intl.DateTimeFormat().resolvedOptions().timeZone },
             body: JSON.stringify({ progress }),
           }).catch(console.error);
         }, 800);
@@ -413,7 +417,7 @@ export function useDbSync() {
           try {
             const res = await fetch('/api/course-progress', {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
+              headers: { 'Content-Type': 'application/json', 'X-Timezone': Intl.DateTimeFormat().resolvedOptions().timeZone },
               body: JSON.stringify({ progress, activeProfession }),
             });
             if (!res.ok) {
@@ -487,7 +491,7 @@ export function useDbSync() {
 
         fetch('/api/engagement', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'X-Timezone': Intl.DateTimeFormat().resolvedOptions().timeZone },
           body: JSON.stringify(payload),
         }).catch(console.error);
       }, 1500);

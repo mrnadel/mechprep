@@ -1,11 +1,12 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { sessionHistory, userProgress, courseProgress } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 import { getAuthUserId } from '@/lib/auth-utils';
 import { computeStreakFromDates } from '@/lib/streak-utils';
+import { getServerToday, getServerNow } from '@/lib/server-dates';
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   const userId = await getAuthUserId();
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -38,13 +39,14 @@ export async function GET() {
 
   // Pass streak freeze count so the computation can bridge single-day gaps
   const freezesAvailable = progressRows[0]?.streakFreezes ?? 0;
-  const today = new Date().toISOString().split('T')[0];
+  const tz = request.headers.get('x-timezone');
+  const today = getServerToday(tz);
   const { currentStreak, longestStreak } = computeStreakFromDates(allDates, today, freezesAvailable);
 
   // Return last 14 days of activity
-  const twoWeeksAgo = new Date();
+  const twoWeeksAgo = getServerNow(tz);
   twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
-  const twoWeeksAgoStr = twoWeeksAgo.toISOString().split('T')[0];
+  const twoWeeksAgoStr = `${twoWeeksAgo.getFullYear()}-${String(twoWeeksAgo.getMonth() + 1).padStart(2, '0')}-${String(twoWeeksAgo.getDate()).padStart(2, '0')}`;
   const recentActiveDays = allDates.filter((d) => d >= twoWeeksAgoStr);
 
   return NextResponse.json({

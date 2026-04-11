@@ -10,6 +10,9 @@ import { insertActivity } from '@/lib/activity-feed';
 const FREE_MAX_HEARTS = 5;
 const RECHARGE_INTERVAL_MS = 14400000; // 4 hours
 
+// Streak freeze cap (must match client gem-shop config)
+const MAX_STREAK_FREEZES = 2;
+
 /** Check if user is on a paid/trial tier (pro users have unlimited hearts). */
 async function isProUser(userId: string): Promise<boolean> {
   const [sub] = await db
@@ -235,12 +238,20 @@ export async function POST(request: NextRequest) {
     .where(eq(userProgress.userId, userId))
     .limit(1);
 
-  // Validate streak freezes: client can only decrease (use a freeze), not increase.
-  // Increases only happen through daily reward or shop purchase server endpoints.
+  // Validate streak freezes: increases must be backed by a shop_purchase in this sync.
   const dbFreezes = existing[0]?.streakFreezes ?? 0;
-  const validatedFreezes = data.streak.freezesOwned <= dbFreezes
-    ? data.streak.freezesOwned  // Client used a freeze — accept decrease
-    : dbFreezes;                // Client claims more — cap at DB value
+  let validatedFreezes: number;
+  if (data.streak.freezesOwned <= dbFreezes) {
+    // Client used a freeze — accept decrease
+    validatedFreezes = data.streak.freezesOwned;
+  } else {
+    // Client claims more freezes — only allow if backed by shop_purchase tx in this batch
+    const freezePurchaseCount = (data.newGemTransactions ?? [])
+      .filter((t: { amount: number; source: string }) => t.source === 'shop_purchase' && t.amount < 0)
+      .length;
+    const maxAllowed = Math.min(dbFreezes + freezePurchaseCount, MAX_STREAK_FREEZES);
+    validatedFreezes = Math.min(data.streak.freezesOwned, maxAllowed);
+  }
 
   // Validate doubleXpExpiry: reject if too far in future or in the past
   let validatedDoubleXpExpiry = data.doubleXpExpiry;
