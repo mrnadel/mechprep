@@ -160,7 +160,7 @@ export default function ContentOverviewPage() {
     .filter(v => violationSeverity === 'all' || v.severity === violationSeverity)
     .sort((a, b) => (a.severity === 'error' ? -1 : 1) - (b.severity === 'error' ? -1 : 1));
   const filteredAudio = (data?.audioCoverage ?? []).filter(a => !courseFilter || a.courseId === courseFilter);
-  const filteredQuality = (data?.questionQuality ?? []).filter(q => !courseFilter || filteredStats.some(s => q.question_id.startsWith(s.courseId)));
+  const filteredQuality = data?.questionQuality ?? []; // no course filter — question IDs don't embed courseId
   const filteredReports = (data?.userReports ?? []).filter(() => true); // reports don't have courseId filtering
   const filteredBias = (data?.indexBias ?? []).filter(b => !courseFilter || b.courseId === courseFilter);
 
