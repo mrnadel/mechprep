@@ -304,7 +304,7 @@ export async function GET() {
       courseStats,
       qaViolations,
       audioCoverage,
-      questionQuality: questionQuality.rows,
+      questionQuality: [...questionQuality],
       userReports,
       indexBias,
     });
