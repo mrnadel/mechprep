@@ -3,15 +3,14 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { Icon } from '@phosphor-icons/react';
-import { House, Lightning, Trophy, UserCircle } from '@phosphor-icons/react/dist/ssr';
+import { BookOpen, House, Lightning, Trophy, UserCircle } from '@phosphor-icons/react/dist/ssr';
 import { cn } from '@/lib/utils';
 import { useDailyQuests, useWeeklyQuests } from '@/store/useEngagementStore';
 
 const tabs: { href: string; label: string; icon: Icon; activeColor: string; activeBg: string; inactiveColor: string }[] = [
   { href: '/', label: 'Home', icon: House, activeColor: 'text-primary-600', activeBg: 'bg-primary-50', inactiveColor: 'text-slate-400' },
   { href: '/quests', label: 'Quests', icon: Lightning, activeColor: 'text-orange-500', activeBg: 'bg-orange-50', inactiveColor: 'text-slate-400' },
-  // Practice tab hidden until per-course practice is built
-  // { href: '/practice/topics', label: 'Practice', icon: BookOpen, activeColor: 'text-emerald-600', activeBg: 'bg-emerald-50', inactiveColor: 'text-slate-400' },
+  { href: '/practice', label: 'Practice', icon: BookOpen, activeColor: 'text-brand-600', activeBg: 'bg-brand-50', inactiveColor: 'text-slate-400' },
   { href: '/league', label: 'League', icon: Trophy, activeColor: 'text-amber-500', activeBg: 'bg-amber-50', inactiveColor: 'text-slate-400' },
   { href: '/profile', label: 'Profile', icon: UserCircle, activeColor: 'text-sky-500', activeBg: 'bg-sky-50', inactiveColor: 'text-slate-400' },
 ];

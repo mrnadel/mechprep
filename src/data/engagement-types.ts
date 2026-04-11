@@ -9,6 +9,13 @@ export const MAX_GEM_TRANSACTIONS_CLIENT = 100;
 export const DOUBLE_XP_SHOP_DURATION_MS = 30 * 60 * 1000;
 export const COMEBACK_THRESHOLD_DAYS = 3;
 
+// Graduated nudge thresholds (days since last activity)
+export const NUDGE_DAY1_THRESHOLD = 1;   // gentle nudge
+export const NUDGE_DAY2_THRESHOLD = 2;   // urgent nudge
+
+// Nudge urgency levels
+export type NudgeUrgency = 'gentle' | 'urgent' | 'comeback';
+
 // --------------- Quest Types ---------------
 
 export type QuestTrackingKey =
@@ -214,10 +221,38 @@ export interface ComebackState {
   lastDismissedDate: string | null; // prevents re-triggering after dismiss
 }
 
+// --------------- Daily Reward Calendar ---------------
+
+export interface DailyRewardCalendarState {
+  /** Current day in the 7-day cycle (1-7). Resets to 1 on miss or after Day 7. */
+  currentDay: number;
+  /** ISO date of last claimed reward */
+  lastClaimDate: string | null;
+  /** Whether today's reward has been claimed */
+  todayClaimed: boolean;
+  /** ISO date when the current cycle started */
+  cycleStartDate: string | null;
+  /** Total cycles completed (lifetime stat) */
+  cyclesCompleted: number;
+}
+
+// --------------- Nudge State ---------------
+
+export interface NudgeState {
+  /** ISO date when last Day-1 nudge was shown in-app */
+  lastDay1NudgeDate: string | null;
+  /** ISO date when last Day-2 nudge was shown in-app */
+  lastDay2NudgeDate: string | null;
+  /** Days since last activity (0 = active today) */
+  daysAway: number;
+}
+
 // --------------- Nudges & Hooks ---------------
 
 export type NudgeType =
   | 'streak_warning'
+  | 'streak_nudge_day1'
+  | 'streak_nudge_day2'
   | 'quest_expiring'
   | 'league_falling'
   | 'chest_ready'
@@ -239,6 +274,9 @@ export interface EngagementState {
   league: LeagueState;
   streak: StreakEnhancements;
   comeback: ComebackState;
+  nudge: NudgeState;
+  dailyRewardCalendar: DailyRewardCalendarState;
   dismissedNudges: NudgeType[];
   doubleXpExpiry: string | null; // ISO timestamp
+  mistakeQuestionIds: string[];
 }

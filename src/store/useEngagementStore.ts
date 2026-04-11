@@ -139,6 +139,7 @@ function getDefaultState(): EngagementState {
     dailyRewardCalendar: getDefaultDailyRewardCalendar(),
     dismissedNudges: [],
     doubleXpExpiry: null,
+    mistakeQuestionIds: [],
   };
 }
 
@@ -205,6 +206,8 @@ interface EngagementActions {
   claimDailyReward: () => { gems: number; xp: number; bonusType?: string; mystery?: MysteryReward } | null;
   debugSetFromCourse: (data: { gems: number; leagueXp: number }) => void;
   debugSetLeagueTier: (tier: number) => void;
+  addMistake: (questionId: string) => void;
+  removeMistakes: (questionIds: string[]) => void;
 }
 
 type EngagementStore = EngagementState & EngagementActions;
@@ -1070,6 +1073,23 @@ export const useEngagementStore = create<EngagementStore>()(
             },
           }));
         },
+
+        // === Action: addMistake ===
+        addMistake: (questionId) => {
+          set(state => {
+            const ids = state.mistakeQuestionIds;
+            if (ids.includes(questionId)) return {};
+            const updated = [questionId, ...ids].slice(0, 50);
+            return { mistakeQuestionIds: updated };
+          });
+        },
+
+        // === Action: removeMistakes ===
+        removeMistakes: (questionIds) => {
+          set(state => ({
+            mistakeQuestionIds: state.mistakeQuestionIds.filter(id => !questionIds.includes(id)),
+          }));
+        },
       }),
       {
         name: STORAGE_KEYS.ENGAGEMENT,
@@ -1100,6 +1120,8 @@ export const useEngagementStore = create<EngagementStore>()(
             claimDailyReward: _22,
             debugSetFromCourse: _19,
             debugSetLeagueTier: _20,
+            addMistake: _23,
+            removeMistakes: _24,
             ...stateOnly
           } = state;
           return stateOnly;
@@ -1154,6 +1176,7 @@ export const useEngagementStore = create<EngagementStore>()(
               : defaults.dailyRewardCalendar,
             dismissedNudges: persisted.dismissedNudges ?? defaults.dismissedNudges,
             doubleXpExpiry: persisted.doubleXpExpiry ?? defaults.doubleXpExpiry,
+            mistakeQuestionIds: persisted.mistakeQuestionIds ?? defaults.mistakeQuestionIds,
           };
         },
       },
@@ -1189,6 +1212,8 @@ export const useDoubleXpActive = () =>
     );
     return hasRecentPurchase;
   });
+
+export const useMistakeQuestionIds = () => useEngagementStore((s) => s.mistakeQuestionIds);
 
 export const useEngagementActions = () =>
   useEngagementStore(

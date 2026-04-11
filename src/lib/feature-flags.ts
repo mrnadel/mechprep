@@ -28,10 +28,6 @@ export const FLAG_DEFINITIONS: FlagDefinition[] = [
   { key: 'ui.practice_card',         enabled: true,  category: 'ui',         description: 'Smart practice recommendation card on home screen' },
 
   // ─── Practice Modes ────────────────────────────────
-  { key: 'practice.interview',       enabled: true,  category: 'practice',   description: 'Interview simulation practice mode' },
-  { key: 'practice.adaptive',        enabled: true,  category: 'practice',   description: 'Adaptive difficulty practice mode' },
-  { key: 'practice.weak_areas',      enabled: true,  category: 'practice',   description: 'Weak areas targeting practice mode' },
-  { key: 'practice.real_world',      enabled: true,  category: 'practice',   description: 'Real-world scenario practice mode' },
   { key: 'practice.daily',           enabled: true,  category: 'practice',   description: 'Daily challenge practice mode' },
 
   // ─── Course ────────────────────────────────────────

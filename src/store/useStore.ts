@@ -19,6 +19,7 @@ import { DOUBLE_XP_SHOP_DURATION_MS } from '@/data/engagement-types';
 import { DOUBLE_XP_BUFFER_MS, DOUBLE_XP_RECENT_PURCHASE_WINDOW_MS } from '@/lib/game-config';
 import { STORAGE_KEYS } from '@/lib/storage-keys';
 import { getEventXpMultiplier } from '@/lib/xp-events';
+import { selectSmartPracticeQuestions, buildPerformance } from '@/lib/practice-algorithm';
 
 // --- Session Types ---
 export type SessionType = 'adaptive' | 'topic-deep-dive' | 'interview-sim' | 'daily-challenge' | 'real-world' | 'weak-areas' | 'smart-practice';
@@ -40,6 +41,7 @@ export interface ActiveSession {
   startTime: number;
   isTimed: boolean;
   timeLimit?: number;
+  retryCount: number;
 }
 
 export interface SessionSummary {
@@ -180,9 +182,19 @@ function selectQuestionsForSession(type: SessionType, options?: { topicId?: Topi
       pool = pool.filter(q => q.topic === 'real-world-mechanisms');
       count = 6;
       break;
-    case 'smart-practice':
+    case 'smart-practice': {
+      const state = useStore.getState();
+      const performance = buildPerformance(state.progress.topicProgress, state.progress.sessionHistory);
+      const selected = selectSmartPracticeQuestions([], useCourseStore.getState().courseData, performance, {
+        topicId: options?.topicId,
+        count: 10,
+      });
+      if (selected.length > 0) {
+        return selected.map(s => s.question as unknown as PracticeQuestion);
+      }
       count = 10;
       break;
+    }
     case 'weak-areas':
     case 'adaptive':
     default:
@@ -508,6 +520,7 @@ export const useStore = create<AppState>()(
                 answers: {},
                 startTime: Date.now(),
                 isTimed: type === 'interview-sim',
+                retryCount: 0,
               },
               sessionSummary: null,
             });
@@ -532,6 +545,7 @@ export const useStore = create<AppState>()(
             startTime: Date.now(),
             isTimed: type === 'interview-sim',
             timeLimit: type === 'interview-sim' ? 30 * 60 : undefined,
+            retryCount: 0,
           },
           sessionSummary: null,
         });
@@ -620,6 +634,29 @@ export const useStore = create<AppState>()(
         // Bridge to course store if this is a course question
         if (questionId.match(/^u\d+-L\d+-Q/)) {
           useCourseStore.getState().creditPracticeAnswer(questionId, correct);
+        }
+
+        // Wrong-answer recycling for practice sessions
+        if (!correct && session.type === 'smart-practice') {
+          set(state => {
+            if (!state.session) return {};
+            const questions = [...state.session.questions];
+            const insertOffset = 2 + Math.floor(Math.random() * 3); // 2-4 positions later
+            const insertAt = Math.min(state.session.currentIndex + insertOffset, questions.length);
+            questions.splice(insertAt, 0, question);
+            return {
+              session: {
+                ...state.session,
+                questions,
+                retryCount: state.session.retryCount + 1,
+              },
+            };
+          });
+        }
+
+        // Track mistakes globally
+        if (!correct) {
+          useEngagementStore.getState().addMistake(questionId);
         }
       },
 

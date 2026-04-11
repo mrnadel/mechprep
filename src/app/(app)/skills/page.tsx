@@ -7,11 +7,11 @@ import { useCourseStore } from '@/store/useCourseStore';
 import { useIsDark } from '@/store/useThemeStore';
 import { courseMeta } from '@/data/course/course-meta';
 import { topics } from '@/data/topics';
-import { TrendingUp, AlertTriangle, Trophy, Share2 } from 'lucide-react';
+import { TrendingUp, AlertTriangle, Trophy, Share2, Download, Linkedin } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { useStore } from '@/store/useStore';
 import { getProfession } from '@/data/professions';
-import { shareCertificate } from '@/lib/certificate';
+import { shareCertificate, downloadCertificate, getLinkedInShareUrl } from '@/lib/certificate';
 
 /* ── helpers ── */
 
@@ -207,26 +207,51 @@ export default function SkillMapPage() {
               </div>
             ))}
           </div>
-          {/* Share Score button */}
-          {readiness > 0 && (
-            <button
-              onClick={() => shareCertificate({
-                name: displayName || 'Learner',
-                profession: profession?.name || 'Course',
-                professionIcon: profession?.icon || '🎓',
-                color: profession?.color || '#6366f1',
-                score: readiness,
-              })}
-              className="mt-4 flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-colors"
-              style={{
-                background: `${ringColor}15`,
-                color: ringColor,
-                border: `1.5px solid ${ringColor}30`,
-              }}
-            >
-              <Share2 style={{ width: 14, height: 14 }} /> Share Score
-            </button>
-          )}
+          {/* Certificate action buttons */}
+          {readiness > 0 && (() => {
+            const certParams = {
+              name: displayName || 'Learner',
+              profession: profession?.name || 'Course',
+              professionIcon: profession?.icon || '\uD83C\uDF93',
+              color: profession?.color || '#6366f1',
+              score: readiness,
+            };
+            return (
+              <div className="mt-4 flex items-center gap-2">
+                <button
+                  onClick={() => shareCertificate(certParams)}
+                  className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-colors"
+                  style={{
+                    background: `${ringColor}15`,
+                    color: ringColor,
+                    border: `1.5px solid ${ringColor}30`,
+                  }}
+                >
+                  <Share2 style={{ width: 14, height: 14 }} /> Share
+                </button>
+                <button
+                  onClick={() => {
+                    const url = getLinkedInShareUrl(certParams, window.location.origin);
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                  }}
+                  className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-colors bg-[#0A66C2] text-white hover:bg-[#004182]"
+                >
+                  <Linkedin style={{ width: 14, height: 14 }} /> LinkedIn
+                </button>
+                <button
+                  onClick={() => downloadCertificate(certParams)}
+                  className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-colors"
+                  style={{
+                    background: `${ringColor}15`,
+                    color: ringColor,
+                    border: `1.5px solid ${ringColor}30`,
+                  }}
+                >
+                  <Download style={{ width: 14, height: 14 }} /> Download
+                </button>
+              </div>
+            );
+          })()}
         </motion.div>
 
         {/* ── Weaknesses (priority) ── */}
@@ -239,7 +264,7 @@ export default function SkillMapPage() {
             delay={0.1}
           >
             {weaknesses.map((t) => (
-              <TopicRow key={t.id} topic={t} onPractice={(topicId) => router.push(`/practice/smart?topic=${topicId}`)} />
+              <TopicRow key={t.id} topic={t} onPractice={(topicId) => router.push(`/practice?topic=${topicId}`)} />
             ))}
           </Section>
         )}
@@ -254,7 +279,7 @@ export default function SkillMapPage() {
             delay={0.15}
           >
             {growing.map((t) => (
-              <TopicRow key={t.id} topic={t} onPractice={(topicId) => router.push(`/practice/smart?topic=${topicId}`)} />
+              <TopicRow key={t.id} topic={t} onPractice={(topicId) => router.push(`/practice?topic=${topicId}`)} />
             ))}
           </Section>
         )}
@@ -269,7 +294,7 @@ export default function SkillMapPage() {
             delay={0.2}
           >
             {strengths.map((t) => (
-              <TopicRow key={t.id} topic={t} compact onPractice={(topicId) => router.push(`/practice/smart?topic=${topicId}`)} />
+              <TopicRow key={t.id} topic={t} compact onPractice={(topicId) => router.push(`/practice?topic=${topicId}`)} />
             ))}
           </Section>
         )}
@@ -284,7 +309,7 @@ export default function SkillMapPage() {
             delay={0.25}
           >
             {untouched.map((t) => (
-              <TopicRow key={t.id} topic={t} compact onPractice={(topicId) => router.push(`/practice/smart?topic=${topicId}`)} />
+              <TopicRow key={t.id} topic={t} compact onPractice={(topicId) => router.push(`/practice?topic=${topicId}`)} />
             ))}
           </Section>
         )}

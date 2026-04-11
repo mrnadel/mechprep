@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Trophy, Users, User, Swords } from 'lucide-react';
+import { BookOpen, LayoutDashboard, Trophy, Users, User, Swords } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { APP_NAME } from '@/lib/constants';
 import FriendsBadge from '@/components/friends/FriendsBadge';
@@ -13,8 +13,7 @@ import { CourseIcon } from '@/components/course/CourseIcon';
 const allTabs = [
   { href: '/', label: 'Home', icon: LayoutDashboard },
   { href: '/quests', label: 'Quests', icon: Swords },
-  // Practice tab hidden until per-course practice is built
-  // { href: '/practice/topics', label: 'Practice', icon: BookOpen },
+  { href: '/practice', label: 'Practice', icon: BookOpen },
   { href: '/league', label: 'League', icon: Trophy },
   { href: '/friends', label: 'Friends', icon: Users, badge: true },
   { href: '/profile', label: 'Profile', icon: User },

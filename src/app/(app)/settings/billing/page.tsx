@@ -19,6 +19,8 @@ const FEATURE_LABELS: Record<Feature, string> = {
   [FEATURES.DETAILED_EXPLANATIONS]: 'Detailed explanations',
   [FEATURES.PREMIUM_LEAGUE_REWARDS]: 'Premium league rewards',
   [FEATURES.NO_ADS]: 'No ads',
+  [FEATURES.PRACTICE_MISTAKES]: 'Mistakes practice mode',
+  [FEATURES.PRACTICE_REVIEW]: 'Spaced review practice',
 };
 
 export default function BillingSettingsPage() {
