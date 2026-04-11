@@ -1,6 +1,4 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
 import { db } from '@/lib/db';
 import { masteryEvents, contentFeedback, contentFeedbackDismissals } from '@/lib/db/schema';
 import { sql } from 'drizzle-orm';
@@ -21,23 +19,6 @@ interface CourseStats {
   teachingCount: number;
   totalCards: number;
   typeCounts: Record<string, number>;
-}
-
-interface LessonAudioCoverage {
-  lessonId: string;
-  lessonTitle: string;
-  unitTitle: string;
-  expected: number;
-  actual: number;
-}
-
-interface AudioCoverage {
-  courseId: string;
-  courseName: string;
-  expectedFiles: number;
-  actualFiles: number;
-  coveragePct: number;
-  lessonCoverage: LessonAudioCoverage[];
 }
 
 interface IndexBias {
@@ -102,92 +83,6 @@ function buildCourseStats(courses: { id: string; name: string; units: Unit[] }[]
   });
 }
 
-/**
- * Scan `public/audio/tts/` for audio file coverage.
- *
- * Convention:
- *  - Teaching cards: `{cardId}.ogg`
- *  - Questions: `{cardId}-q.ogg` (question text) and `{cardId}-exp.ogg` (explanation)
- */
-function buildAudioCoverage(courses: { id: string; name: string; units: Unit[] }[]): AudioCoverage[] {
-  const ttsDir = path.join(process.cwd(), 'public', 'audio', 'tts');
-  const ttsExists = fs.existsSync(ttsDir);
-
-  // Build a set of all actual audio files for fast lookup
-  const actualFiles = new Set<string>();
-  if (ttsExists) {
-    try {
-      const lessonDirs = fs.readdirSync(ttsDir, { withFileTypes: true });
-      for (const entry of lessonDirs) {
-        if (entry.isDirectory()) {
-          const lessonPath = path.join(ttsDir, entry.name);
-          const files = fs.readdirSync(lessonPath);
-          for (const file of files) {
-            // Store as "lessonId/filename" for lookup
-            actualFiles.add(`${entry.name}/${file}`);
-          }
-        }
-      }
-    } catch {
-      // Directory unreadable — treat as empty
-    }
-  }
-
-  return courses.map(c => {
-    let expectedFiles = 0;
-    let actualCount = 0;
-    const lessonCoverage: LessonAudioCoverage[] = [];
-
-    for (const unit of c.units) {
-      for (const lesson of unit.lessons) {
-        let lessonExpected = 0;
-        let lessonActual = 0;
-
-        for (const q of lesson.questions) {
-          if (q.type === 'teaching') {
-            // Teaching card: 1 file ({cardId}.ogg)
-            lessonExpected++;
-            if (actualFiles.has(`${lesson.id}/${q.id}.ogg`)) {
-              lessonActual++;
-            }
-          } else {
-            // Question card: 2 files ({cardId}-q.ogg + {cardId}-exp.ogg)
-            lessonExpected += 2;
-            if (actualFiles.has(`${lesson.id}/${q.id}-q.ogg`)) {
-              lessonActual++;
-            }
-            if (actualFiles.has(`${lesson.id}/${q.id}-exp.ogg`)) {
-              lessonActual++;
-            }
-          }
-        }
-
-        if (lessonExpected > 0) {
-          lessonCoverage.push({
-            lessonId: lesson.id,
-            lessonTitle: lesson.title,
-            unitTitle: unit.title,
-            expected: lessonExpected,
-            actual: lessonActual,
-          });
-        }
-
-        expectedFiles += lessonExpected;
-        actualCount += lessonActual;
-      }
-    }
-
-    return {
-      courseId: c.id,
-      courseName: c.name,
-      expectedFiles,
-      actualFiles: actualCount,
-      coveragePct: expectedFiles > 0 ? Math.round((actualCount / expectedFiles) * 1000) / 10 : 0,
-      lessonCoverage,
-    };
-  });
-}
-
 /** Build correctIndex distribution (A/B/C/D bias) per course. */
 function buildIndexBias(courses: { id: string; name: string; units: Unit[] }[]): IndexBias[] {
   return courses.map(c => {
@@ -243,10 +138,7 @@ export async function GET() {
     // 3. Build course stats
     const courseStats = buildCourseStats(courses);
 
-    // 4. Audio coverage scan
-    const audioCoverage = buildAudioCoverage(courses);
-
-    // 5. Question accuracy from mastery_events (questions with >= 10 attempts)
+    // 4. Question accuracy from mastery_events (questions with >= 10 attempts)
     const questionQuality = await db.execute<{
       question_id: string;
       attempts: number;
@@ -303,7 +195,6 @@ export async function GET() {
     return NextResponse.json({
       courseStats,
       qaViolations,
-      audioCoverage,
       questionQuality: [...questionQuality],
       userReports,
       indexBias,

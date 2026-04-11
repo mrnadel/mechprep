@@ -28,23 +28,6 @@ interface QAViolation {
   message: string;
 }
 
-interface LessonAudioCoverage {
-  lessonId: string;
-  lessonTitle: string;
-  unitTitle: string;
-  expected: number;
-  actual: number;
-}
-
-interface AudioCoverage {
-  courseId: string;
-  courseName: string;
-  expectedFiles: number;
-  actualFiles: number;
-  coveragePct: number;
-  lessonCoverage: LessonAudioCoverage[];
-}
-
 interface QuestionQualityRow {
   question_id: string;
   attempts: number;
@@ -70,7 +53,6 @@ interface IndexBias {
 interface OverviewData {
   courseStats: CourseStat[];
   qaViolations: QAViolation[];
-  audioCoverage: AudioCoverage[];
   questionQuality: QuestionQualityRow[];
   userReports: UserReport[];
   indexBias: IndexBias[];
@@ -92,7 +74,6 @@ export default function ContentOverviewPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [courseFilter, setCourseFilter] = useState<string | null>(null);
-  const [expandedAudio, setExpandedAudio] = useState<string | null>(null);
   const [violationSeverity, setViolationSeverity] = useState<'all' | 'error' | 'warning'>('all');
 
   useEffect(() => {
@@ -159,7 +140,6 @@ export default function ContentOverviewPage() {
     .filter(v => !courseFilter || v.courseId === courseFilter)
     .filter(v => violationSeverity === 'all' || v.severity === violationSeverity)
     .sort((a, b) => (a.severity === 'error' ? -1 : 1) - (b.severity === 'error' ? -1 : 1));
-  const filteredAudio = (data?.audioCoverage ?? []).filter(a => !courseFilter || a.courseId === courseFilter);
   const filteredQuality = data?.questionQuality ?? []; // no course filter — question IDs don't embed courseId
   const filteredReports = (data?.userReports ?? []).filter(() => true); // reports don't have courseId filtering
   const filteredBias = (data?.indexBias ?? []).filter(b => !courseFilter || b.courseId === courseFilter);
@@ -169,12 +149,6 @@ export default function ContentOverviewPage() {
 
   function getProfessionIcon(courseId: string) {
     return PROFESSIONS.find(p => p.id === courseId)?.icon ?? '';
-  }
-
-  function coverageColor(pct: number) {
-    if (pct >= 80) return GREEN;
-    if (pct >= 50) return YELLOW;
-    return RED;
   }
 
   function healthBorderColor(stat: CourseStat) {
@@ -193,16 +167,11 @@ export default function ContentOverviewPage() {
     return { errors, warnings };
   }
 
-  function audioCoveragePct(courseId: string) {
-    const ac = (data?.audioCoverage ?? []).find(a => a.courseId === courseId);
-    return ac?.coveragePct ?? 0;
-  }
-
   return (
     <div style={{ padding: '32px 24px', fontFamily: 'system-ui' }}>
       <h1 style={{ fontSize: 24, fontWeight: 800, marginBottom: 8 }}>Content Overview</h1>
       <p style={{ fontSize: 14, color: '#666', marginBottom: 24 }}>
-        Course health, QA violations, audio coverage, and content quality metrics.
+        Course health, QA violations, and content quality metrics.
       </p>
 
       {loading && (
@@ -259,7 +228,6 @@ export default function ContentOverviewPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 16, marginBottom: 32 }}>
             {filteredStats.map(stat => {
               const qa = qaViolationSummary(stat.courseId);
-              const audioPct = audioCoveragePct(stat.courseId);
               return (
                 <div
                   key={stat.courseId}
@@ -303,13 +271,6 @@ export default function ContentOverviewPage() {
                     )}
                   </div>
 
-                  {/* Audio coverage */}
-                  <div style={{ fontSize: 13, color: '#666' }}>
-                    Audio:{' '}
-                    <span style={{ fontWeight: 700, color: coverageColor(audioPct) }}>
-                      {audioPct.toFixed(0)}%
-                    </span>
-                  </div>
                 </div>
               );
             })}
@@ -392,85 +353,7 @@ export default function ContentOverviewPage() {
             )}
           </div>
 
-          {/* ── 4. Audio Coverage ───────────────────────────────── */}
-          <h2 style={{ fontSize: 18, fontWeight: 700, marginBottom: 12 }}>Audio Coverage</h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 32 }}>
-            {filteredAudio.map(ac => {
-              const isExpanded = expandedAudio === ac.courseId;
-              const missingLessons = ac.lessonCoverage.filter(l => l.actual < l.expected);
-              return (
-                <div
-                  key={ac.courseId}
-                  style={{
-                    background: 'white',
-                    borderRadius: 12,
-                    border: '1px solid #E5E5E5',
-                    padding: '16px 20px',
-                  }}
-                >
-                  <div
-                    onClick={() => setExpandedAudio(isExpanded ? null : ac.courseId)}
-                    style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 12 }}
-                  >
-                    <span style={{ fontSize: 15, fontWeight: 700, flex: 1 }}>
-                      {getProfessionIcon(ac.courseId)} {ac.courseName}
-                    </span>
-                    <span style={{ fontSize: 13, color: '#666', whiteSpace: 'nowrap' }}>
-                      {ac.actualFiles}/{ac.expectedFiles} files
-                    </span>
-                    <div style={{ width: 100, height: 8, background: '#F3F4F6', borderRadius: 4, overflow: 'hidden' }}>
-                      <div
-                        style={{
-                          width: `${Math.min(ac.coveragePct, 100)}%`,
-                          height: '100%',
-                          background: coverageColor(ac.coveragePct),
-                          borderRadius: 4,
-                          transition: 'width 0.3s',
-                        }}
-                      />
-                    </div>
-                    <span style={{ fontSize: 13, fontWeight: 700, color: coverageColor(ac.coveragePct), minWidth: 40, textAlign: 'right' }}>
-                      {ac.coveragePct.toFixed(0)}%
-                    </span>
-                    <span style={{ fontSize: 12, color: '#999' }}>{isExpanded ? '▲' : '▼'}</span>
-                  </div>
-
-                  {isExpanded && missingLessons.length > 0 && (
-                    <div style={{ marginTop: 12, maxHeight: 240, overflowY: 'auto' }}>
-                      <div style={{ fontSize: 12, fontWeight: 700, color: '#999', marginBottom: 8 }}>
-                        Lessons with missing audio:
-                      </div>
-                      {missingLessons.map(l => (
-                        <div
-                          key={l.lessonId}
-                          style={{
-                            fontSize: 13,
-                            color: '#555',
-                            padding: '4px 0',
-                            borderBottom: '1px solid #F3F4F6',
-                          }}
-                        >
-                          <span style={{ fontFamily: 'monospace', fontSize: 12, color: '#999' }}>{l.unitTitle} &gt; </span>
-                          {l.lessonTitle}
-                          <span style={{ float: 'right', fontSize: 12, color: RED, fontWeight: 600 }}>
-                            {l.actual}/{l.expected}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {isExpanded && missingLessons.length === 0 && (
-                    <div style={{ marginTop: 12, fontSize: 13, color: GREEN, fontWeight: 600 }}>
-                      All lessons have complete audio coverage.
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* ── 5. Question Quality ─────────────────────────────── */}
+          {/* ── 4. Question Quality ─────────────────────────────── */}
           <h2 style={{ fontSize: 18, fontWeight: 700, marginBottom: 12 }}>Question Quality</h2>
           {filteredQuality.length === 0 ? (
             <p style={{ color: '#999', fontSize: 14, marginBottom: 32 }}>No question data yet.</p>
