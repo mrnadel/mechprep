@@ -1266,17 +1266,17 @@ export const unit12: Unit = {
           type: "multiple-choice",
           question: "A person invests $300/month starting at age 25. Another invests $600/month starting at age 35. Both earn 10% average annual returns and retire at 65. Who has more money?",
           options: [
-            "The person who started at 25 with $300/month. By a LOT",
+            "Impossible to tell without knowing their salaries",
             "The person who started at 35 with $600/month. They invest double",
             "They end up about the same",
-            "Impossible to tell without knowing their salaries",
+            "The person who started at 25 with $300/month. By a LOT",
           ],
-          correctIndex: 0,
+          correctIndex: 3,
           explanation: "Starting at 25: $300/month × 40 years at 10% = ~$1,897,000. Starting at 35: $600/month × 30 years at 10% = ~$1,317,000. The early starter wins by $580,000 despite investing HALF as much per month. Time in the market is the ultimate wealth hack.",
           distractorExplanations: {
+            0: 'Starting at 25: $300/month × 40 years at 10% = ~$1,897,000',
             1: 'Starting at 25: $300/month × 40 years at 10% = ~$1,897,000',
             2: 'Starting at 25: $300/month × 40 years at 10% = ~$1,897,000',
-            3: 'Starting at 25: $300/month × 40 years at 10% = ~$1,897,000',
           },
         },
         {
