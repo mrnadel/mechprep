@@ -18,23 +18,10 @@ export const unit2: Unit = {
       xpReward: 15,
       questions: [
         {
-          id: "pf-u2-bridge",
-          type: "teaching",
-          question: "Time to Build Your Safety Net",
-          explanation: "Your bank accounts are set up and you understand how taxes work. Now let's build a savings system that runs on autopilot.",
-        },
-        {
-          id: "pf-u2-L1-myth1",
-          type: "teaching",
-          question: "Myth: I don't make enough to save",
-          explanation: "You do. People earning $30,000/year have built six-figure savings by automating small amounts. The issue is never the amount, it's the habit. Even $25/month builds the saving muscle and compounds over time.",
-          hint: "This myth persists because saving feels pointless when amounts are small. But $50/month at 7% for 30 years becomes over $56,000.",
-        },
-        {
           id: "pf-u2-L1-T1",
           type: "teaching",
           question: "Your Brain Hates Saving",
-          explanation: "Your brain is wired to spend, not save. Thousands of years of evolution trained it to grab rewards now, because for cavemen, there was no tomorrow.",
+          explanation: "Your bank accounts are set up, now let's build a savings system. Your brain is wired to grab rewards now because evolution trained it that way.",
           hint: "You're not bad with money. You're fighting millions of years of brain wiring, but there are tricks to win.",
         },
         {
@@ -1362,6 +1349,24 @@ export const unit2: Unit = {
           options: ["Late fees", "Impulse purchases", "Overdrafts", "Interest charges"],
           correctIndex: 1,
         },
+        {
+          id: "pf-u2-L14-SQ13",
+          question: "Present bias makes you prefer:",
+          options: ["Saving for later", "Rewards right now", "Long-term goals", "Lower spending"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u2-L14-SQ14",
+          question: "Where should your emergency fund live?",
+          options: ["Stocks", "HYSA", "Crypto", "Checking account"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u2-L14-SQ15",
+          question: "The 50% raise rule means saving _____ of every raise.",
+          options: ["All", "Half", "A quarter", "None"],
+          correctIndex: 1,
+        },
       ],
     },
 
@@ -1377,7 +1382,13 @@ export const unit2: Unit = {
           id: "pf-u2-L10-T1",
           type: "teaching",
           question: "Final Round: Prove You Can Save",
-          explanation: "You've learned why saving is hard, how to automate it, where to keep your money, and how to handle windfalls. This lesson tests everything from the full unit.",
+          explanation: "You've learned why saving is hard, how to automate it, and where to keep your money. This lesson tests everything from the full unit.",
+        },
+        {
+          id: "pf-u2-L10-T2",
+          type: "teaching",
+          question: "The Key Principle",
+          explanation: "Systems beat willpower every time. Automation, sinking funds, and the 50% raise rule work because they remove the need to decide.",
         },
         {
           id: "pf-u2-L10-Q1",

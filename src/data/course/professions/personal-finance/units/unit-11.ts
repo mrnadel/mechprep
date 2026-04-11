@@ -197,10 +197,10 @@ export const unit11: Unit = {
           id: "pf-u11-L2-Q1",
           type: "sort-buckets",
           question: "Sort each feature to the correct plan type:",
-          options: ["Cheapest premiums", "See any doctor freely", "Need a referral for specialists", "Pairs with an HSA", "Highest premiums", "Highest deductible"],
-          buckets: ["HMO", "PPO", "HDHP"],
-          correctBuckets: [0, 1, 0, 2, 1, 2],
-          explanation: "HMO = cheapest premiums but needs referrals. PPO = priciest premiums but maximum freedom. HDHP = highest deductible but pairs with the incredible HSA.",
+          options: ["Cheapest premiums", "See any doctor freely", "Need a referral for specialists", "Highest premiums", "Highest deductible", "Pairs with an HSA"],
+          buckets: ["HMO (restricted)", "PPO/HDHP (flexible)"],
+          correctBuckets: [0, 1, 0, 1, 1, 1],
+          explanation: "HMO plans are cheapest but require referrals and restrict your network. PPO and HDHP plans offer more freedom but cost more in premiums or deductibles.",
         },
         {
           id: "pf-u11-L2-Q2",
@@ -486,7 +486,7 @@ export const unit11: Unit = {
           id: "pf-u11-L4-T2",
           type: "teaching",
           question: "Decoding 100/300/100",
-          explanation: "You'll see auto insurance limits written like '100/300/100.' Here's what those numbers mean. First number ($100K): max payout per PERSON for their injuries.",
+          explanation: "Auto insurance limits like '100/300/100' mean $100K max per person for injuries, $300K total per accident, and $100K for property damage.",
           hint: "Minimum state limits are often dangerously low. Like 25/50/25. A serious accident can easily exceed that, leaving YOU on the hook.",
           variants: {
             GB: "UK car insurance doesn't use numbered limits like 100/300/100. Third-party bodily injury coverage is unlimited by law. Property damage has a minimum but most policies provide generous limits. Focus on your excess (deductible) amount instead.",
@@ -500,9 +500,9 @@ export const unit11: Unit = {
           type: "sort-buckets",
           question: "Which type of auto insurance covers each situation?",
           options: ["You rear-end someone's car", "A hailstorm dents your hood", "You hit a pole and damage your bumper", "Your car is stolen from a parking lot", "A passenger in the other car needs an ambulance", "A deer runs into your car"],
-          buckets: ["Liability", "Collision", "Comprehensive"],
-          correctBuckets: [0, 2, 1, 2, 0, 2],
-          explanation: "Liability pays for damage you cause to others. Collision pays for damage to your car from a crash (regardless of fault). Comprehensive covers everything else. Weather, theft, animals, falling objects.",
+          buckets: ["Liability (damage to others)", "Collision/Comprehensive (your car)"],
+          correctBuckets: [0, 1, 1, 1, 0, 1],
+          explanation: "Liability pays for damage you cause to others. Collision and comprehensive cover damage to your own car, whether from crashes, weather, theft, or animals.",
         },
         {
           id: "pf-u11-L4-Q2",
@@ -572,7 +572,7 @@ export const unit11: Unit = {
           scenario: "Lisa drives a 2010 Honda Civic worth $5,500. She pays $180/month for full coverage with a $500 deductible. She has $8,000 in her emergency fund and a clean driving record.",
           question: "What should Lisa consider to reduce her insurance costs?",
           options: [
-            "Raise her deductible to $1,000 and consider dropping collision (she can afford to replace the car)",
+            "Raise deductible to $1,000 and consider dropping collision since she can replace the car",
             "Drop all insurance since the car is old",
             "Keep everything the same. Never change a working policy",
             "Switch to liability-only and cancel comprehensive too",
@@ -827,7 +827,7 @@ export const unit11: Unit = {
           scenario: "Marcus, 32, just had his first child. He earns $75,000/year, and his wife stays home with the baby. He has no life insurance. His budget is tight. He can afford about $30-40/month for coverage.",
           question: "What should Marcus do?",
           options: [
-            "Get a 20-30 year term policy for $750,000. Affordable at his budget and covers his family until the child is grown",
+            "Get a 20-year term policy for $750K, affordable and covers his family",
             "Get a whole life policy for $100,000. Permanent coverage is more important",
             "Wait until he gets a raise to afford better coverage",
             "Skip it. His wife can go back to work if something happens",
@@ -980,7 +980,7 @@ export const unit11: Unit = {
           scenario: "Rachel, a 34-year-old software engineer earning $95,000, has no disability insurance. She develops a severe repetitive strain injury that prevents her from typing for 8 months. She has $5,000 in savings.",
           question: "What happens to Rachel financially?",
           options: [
-            "She burns through savings in 1-2 months, then has zero income for 6+ months. Potentially devastating",
+            "She burns through savings in 1-2 months, then has zero income for 6+ months",
             "Workers' comp covers her since it's a typing injury",
             "Her health insurance will replace her income",
             "Social Security disability will kick in within a month",
@@ -1076,7 +1076,7 @@ export const unit11: Unit = {
           scenario: "A car dealership offers you GAP insurance for $800. You're buying a $35,000 car with a $3,000 down payment. GAP covers the difference between what you owe and what the car is worth if it's totaled. New cars lose 20% of value in the first year.",
           question: "Is GAP insurance worth it in this situation?",
           options: [
-            "Yes. If the car is totaled in year one, you'd owe ~$31,000 on a car worth ~$28,000, and GAP covers that $3,000 gap",
+            "Yes, but dealer GAP is overpriced; buy through your auto insurer instead",
             "No. You made a big enough down payment that you'll never be underwater",
             "No. GAP insurance is always a scam",
             "Yes. But only buy it through your auto insurer (much cheaper than the dealer)",
@@ -1245,7 +1245,7 @@ export const unit11: Unit = {
           scenario: "Emma gets a text saying 'Your Amazon order #38291 for $847.99 is confirmed. If you didn't place this order, call 1-888-555-0147 immediately.' She didn't order anything from Amazon recently.",
           question: "What should Emma do?",
           options: [
-            "Ignore the text. Log into Amazon directly through the app or website to check for real orders",
+            "Ignore the text and log into Amazon directly to check for real orders",
             "Call the number in the text immediately to cancel the order",
             "Reply 'STOP' to the text to unsubscribe",
             "Click the link to see order details and dispute it",
@@ -1391,7 +1391,7 @@ export const unit11: Unit = {
           scenario: "David pays $250/month for auto insurance with a $500 deductible. He has $6,000 in his emergency fund. He's never compared rates and has been with the same insurer for 5 years. He recently got a safe driver discount but suspects he's overpaying.",
           question: "What's David's best strategy to reduce insurance costs?",
           options: [
-            "Get 3+ competing quotes, raise deductible to $1,000, ask about all discounts, and threaten to switch if his insurer won't match",
+            "Get 3+ competing quotes, raise deductible to $1,000, and ask about all discounts",
             "Just raise the deductible. That'll save enough",
             "Cancel and go with the cheapest option regardless of coverage",
             "He should be fine. 5 years of loyalty means he's getting the best rate",
@@ -1661,6 +1661,18 @@ export const unit11: Unit = {
           options: ["Only collisions", "Theft, weather, and non-collision damage", "Only liability", "Medical payments only"],
           correctIndex: 1,
         },
+        {
+          id: "pf-u11-L12-SQ14",
+          question: "Disability insurance replaces a portion of your:",
+          options: ["Medical bills", "Income", "Car value", "Home value"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u11-L12-SQ15",
+          question: "An umbrella policy provides:",
+          options: ["Rain coverage", "Extra liability above other policies", "Home warranty", "Pet insurance"],
+          correctIndex: 1,
+        },
       ],
     },
     // ===== REVIEW LESSON: Real Estate & Insurance Review =====
@@ -1671,6 +1683,18 @@ export const unit11: Unit = {
       icon: '📝',
       xpReward: 25,
       questions: [
+        {
+          id: "pf-u11-rev-T1",
+          type: "teaching",
+          question: "Review: Protecting Your Wealth",
+          explanation: "You've covered real estate decisions and insurance fundamentals. This review tests everything from both topics.",
+        },
+        {
+          id: "pf-u11-rev-T2",
+          type: "teaching",
+          question: "The Insurance Principle",
+          explanation: "Insurance protects against catastrophic financial losses you couldn't absorb. The right coverage prevents one bad event from erasing years of progress.",
+        },
         {
           id: "pf-u11-rev-Q1",
           type: "multiple-choice",
@@ -1786,7 +1810,7 @@ export const unit11: Unit = {
           scenario: "Sam, 30, rents an apartment, owns a car, and works as a freelancer. He has $20,000 in savings and no dependents. He currently has no insurance at all.",
           options: [
             "Life insurance, since it protects his family",
-            "Health insurance and auto insurance first, since illness or an accident could wipe out his savings",
+            "Health and auto insurance first; illness or an accident could wipe out his savings",
             "Homeowner's insurance to protect his apartment",
             "He doesn't need insurance since he has savings",
           ],

@@ -24,13 +24,6 @@ export const unit6: Unit = {
  explanation: "You've mastered credit scores and know how to borrow smartly. Now let's put your money to work so it grows while you sleep.",
  },
  {
- id: "pf-u6-L1-myth1",
- type: "teaching",
- question: "Myth: I need to pick stocks to invest",
- explanation: "You don't. Index funds let you own the entire market in one purchase with zero stock-picking required. Over 90% of professional stock pickers fail to beat a simple index fund over 15 years. You can outperform most pros by doing less, not more.",
- hint: "Wall Street profits from making investing seem complicated. The truth is boring: buy a broad index fund, contribute regularly, and wait decades.",
- },
- {
  id: "pf-u6-L1-T1",
  type: "teaching",
  question: "Your Savings Account Has a Secret Enemy",
@@ -311,7 +304,7 @@ export const unit6: Unit = {
  id: "pf-u6-L3-T2",
  type: "teaching",
  question: "Two Ways Stocks Make You Money",
- explanation: "Stocks can make you money in two ways. Capital gains: buy at $100, sell at $150, pocket $50. Dividends: the company pays you cash just for holding the stock.",
+ explanation: "Stocks make you money two ways: capital gains (buy at $100, sell at $150) and dividends (the company pays you cash for holding the stock).",
  hint: "Think of capital gains like flipping a house for profit, and dividends like collecting rent every month.",
  },
  {
@@ -436,7 +429,7 @@ export const unit6: Unit = {
  id: "pf-u6-L4-T2",
  type: "teaching",
  question: "Not All Bonds Are Created Equal",
- explanation: "Government bonds are the safest (backed by the government). Corporate bonds pay more interest but carry more risk. The riskier the borrower, the higher the interest rate they must offer.",
+ explanation: "Government bonds are the safest (backed by the government), while corporate bonds pay more interest but carry more risk. The riskier the borrower, the higher the interest rate they must offer.",
  hint: "Think of it like lending to a friend with a great job vs. a friend who's between jobs. You'd charge the second one more interest, right?",
  },
  {
@@ -478,9 +471,9 @@ export const unit6: Unit = {
  type: "sort-buckets",
  question: "Classify each bond type by who you're lending money to:",
  options: ["Treasury bond", "Apple corporate bond", "Municipal bond (city)", "Government savings bond", "Tesla corporate bond", "State highway bond"],
- buckets: ["Government bonds", "Corporate bonds", "Municipal bonds"],
- correctBuckets: [0, 1, 2, 0, 1, 2],
- explanation: "Treasury and savings bonds are issued by the federal government. Corporate bonds come from companies like Apple and Tesla. Municipal bonds are from state or local governments for projects like highways and schools.",
+ buckets: ["Government/Municipal bonds", "Corporate bonds"],
+ correctBuckets: [0, 1, 0, 0, 1, 0],
+ explanation: "Treasury, savings, and municipal bonds are issued by governments. Corporate bonds come from companies like Apple and Tesla.",
  },
  {
  id: "pf-u6-L4-Q5",
@@ -558,7 +551,7 @@ export const unit6: Unit = {
  id: "pf-u6-L5-T1",
  type: "teaching",
  question: "The Ultimate Lazy Strategy (That Actually Works)",
- explanation: "Over any 15-year period, about 90% of professional fund managers fail to beat a simple index fund. An index fund just buys every stock in an index, like the S&P 500 (the 500 biggest U.S. companies).",
+ explanation: "Over any 15-year period, about 90% of pro fund managers fail to beat a simple index fund. An index fund buys every stock in an index like the S&P 500 (the 500 biggest US companies).",
  hint: "Think of it like betting on the entire economy instead of trying to pick winners. The economy has always gone up over the long term.",
  },
  {
@@ -685,8 +678,14 @@ export const unit6: Unit = {
  id: "pf-u6-L6-T1",
  type: "teaching",
  question: "Two Baskets, Different Rules",
- explanation: "Both ETFs and mutual funds are 'baskets' that hold many investments (stocks, bonds, etc.) in one package. The big difference: ETFs trade like stocks throughout the day, while mutual funds trade once at the end of each day.",
- hint: "For most beginners, the difference barely matters. Both can track the same index. But ETFs tend to be more popular with self-directed investors.",
+ explanation: "Both ETFs and mutual funds hold many investments in one package. The big difference: ETFs trade like stocks throughout the day, while mutual funds trade once at day's end.",
+ hint: "For most beginners, the difference barely matters. Both can track the same index.",
+ },
+ {
+ id: "pf-u6-L6-T2",
+ type: "teaching",
+ question: "Costs Matter Over Time",
+ explanation: "ETFs usually have lower expense ratios than mutual funds. Even a 0.5% difference in fees compounds to thousands lost over decades.",
  },
  {
  id: "pf-u6-L6-Q1",
@@ -799,7 +798,7 @@ export const unit6: Unit = {
  id: "pf-u6-L7-T1",
  type: "teaching",
  question: "The Risk-Return Rollercoaster",
- explanation: "In investing, risk and return are permanently linked. Want higher returns? You have to accept more volatility. Want safety? You give up growth potential.",
+ explanation: "In investing, risk and return are permanently linked. Want higher returns? You must accept more volatility, and wanting safety means giving up growth potential.",
  hint: "If a 30% drop in your portfolio would make you panic-sell, you have too much risk. If your money barely grows, you have too little. Find your sweet spot.",
  },
  {
@@ -927,7 +926,7 @@ export const unit6: Unit = {
  id: "pf-u6-L8-myth1",
  type: "teaching",
  question: "Myth: You need a lot of money to start investing",
- explanation: "Most major brokerages have zero minimums and offer fractional shares. You can buy $5 worth of an S&P 500 index fund today. The barrier to entry is not money. It is the decision to start.",
+ explanation: "Most major brokerages have zero minimums and offer fractional shares, so you can buy $5 worth of an S&P 500 index fund today. The real barrier is not money but the decision to start.",
  hint: "This myth survives from the era when brokerages charged $50/trade and required $3,000 minimums. Those days are gone.",
  },
  {
@@ -968,9 +967,9 @@ export const unit6: Unit = {
  type: "sort-buckets",
  question: "Sort each account type by its primary purpose:",
  options: ["Individual brokerage account", "Employer retirement plan", "Tax-advantaged retirement account", "Joint brokerage account", "High-yield savings account", "Taxable brokerage account"],
- buckets: ["Retirement accounts (tax-advantaged)", "General investing accounts", "Cash savings"],
- correctBuckets: [1, 0, 0, 1, 2, 1],
- explanation: "Employer retirement plans and tax-advantaged retirement accounts are designed for long-term retirement saving with tax benefits. Brokerage accounts (individual, joint, taxable) are for general investing with no restrictions. High-yield savings is for cash you need accessible.",
+ buckets: ["Tax-advantaged retirement", "General/Taxable accounts"],
+ correctBuckets: [1, 0, 0, 1, 1, 1],
+ explanation: "Employer retirement plans and tax-advantaged accounts are for long-term retirement saving. Brokerage accounts, HYSA, and taxable accounts are general-purpose with no special tax benefits.",
  },
  {
  id: "pf-u6-L8-Q4",
@@ -1047,8 +1046,14 @@ export const unit6: Unit = {
  id: "pf-u6-L9-T1",
  type: "teaching",
  question: "Same Amount, Every Month, No Excuses",
- explanation: "Dollar-cost averaging (DCA) is simple: invest the same fixed dollar amount at regular intervals, regardless of what the market is doing. Market up? You buy fewer shares. Market down? You buy more.",
+ explanation: "Dollar-cost averaging (DCA) means investing the same fixed amount at regular intervals regardless of the market. When prices are up you buy fewer shares, and when prices drop you buy more.",
  hint: "Automating your DCA is the ultimate power move. Set up recurring purchases and let it run. You'll invest through ups and downs without the emotional drama.",
+ },
+ {
+ id: "pf-u6-L9-T2",
+ type: "teaching",
+ question: "Why DCA Beats Timing",
+ explanation: "Nobody can predict market highs and lows reliably. DCA removes the guesswork by spreading purchases over time, which reduces the risk of buying at a peak.",
  },
  {
  id: "pf-u6-L9-Q1",
@@ -1291,6 +1296,12 @@ export const unit6: Unit = {
  hint: "Reinvesting your dividends (using them to buy more shares) is like compound interest on steroids. Your dividends earn dividends.",
  },
  {
+ id: "pf-u6-L11-T2",
+ type: "teaching",
+ question: "DRIP: Reinvesting Dividends",
+ explanation: "When you reinvest dividends (DRIP), the cash buys more shares automatically. Over time, your dividends earn dividends, compounding your returns.",
+ },
+ {
  id: "pf-u6-L11-Q1",
  type: "multiple-choice",
  question: "What is a dividend?",
@@ -1416,7 +1427,7 @@ export const unit6: Unit = {
  id: "pf-u6-L12-T1",
  type: "teaching",
  question: "The Best Investors Are Boring",
- explanation: "Fidelity once studied which accounts performed best. The top performers were accounts whose owners had forgotten they existed. Doing nothing beat constant trading.",
+ explanation: "Fidelity once studied which accounts performed best, and the top performers were accounts whose owners had forgotten they existed. Doing nothing beat constant trading.",
  hint: "Your portfolio is like a bar of soap, the more you handle it, the smaller it gets. Leave it alone and let compounding do its thing.",
  },
  {
@@ -1662,32 +1673,7 @@ export const unit6: Unit = {
  id: "pf-u6-L13-C7",
  speaker: "Advisor",
  message: "Well... I do have access to some lower-cost index fund options. A total market index fund at 0.05% annual fee with no load. But I'd recommend our active fund for better results.",
- nextNodeId: "pf-u6-L13-C8",
- },
- {
- id: "pf-u6-L13-C8",
- speaker: "You",
- message: "",
- options: [
- {
- text: "Let's go with the index fund. I'd also like to know, are you a fiduciary? Are you legally required to act in my best interest?",
  nextNodeId: "pf-u6-L13-C9",
- quality: "great",
- feedback: "The fiduciary question is the MOST important question you can ask. Fiduciary advisors must put your interest first. Non-fiduciary advisors can legally recommend products that pay them higher commissions.",
- },
- {
- text: "The index fund sounds better. Let's go with that.",
- nextNodeId: "pf-u6-L13-C9",
- quality: "okay",
- feedback: "Great choice on the fund! But you missed asking about fiduciary duty, whether this advisor is legally required to act in YOUR best interest or can prioritize their commissions.",
- },
- {
- text: "Actually, let's do half in each, the active fund and the index fund.",
- nextNodeId: "pf-u6-L13-C9",
- quality: "poor",
- feedback: "Splitting the difference isn't compromise, it's paying high fees on half your money for likely worse performance. Data shows index funds win long-term.",
- },
- ],
  },
  {
  id: "pf-u6-L13-C9",
@@ -1927,6 +1913,24 @@ export const unit6: Unit = {
  id: "pf-u6-L15-SQ12",
  question: "The Rule of 72 estimates:",
  options: ["Your tax rate", "Years to double your money", "Your retirement age", "Your risk level"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u6-L15-SQ13",
+ question: "An expense ratio is:",
+ options: ["A tax on gains", "Annual fund management fee", "A trading commission", "A withdrawal penalty"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u6-L15-SQ14",
+ question: "A bear market means stocks have fallen:",
+ options: ["5%", "10%", "20%+", "50%+"],
+ correctIndex: 2,
+ },
+ {
+ id: "pf-u6-L15-SQ15",
+ question: "Capital gains are profits from:",
+ options: ["Dividends", "Selling an asset for more than you paid", "Interest payments", "Tax refunds"],
  correctIndex: 1,
  },
  ],

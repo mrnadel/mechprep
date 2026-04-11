@@ -55,7 +55,7 @@ export const unit0: Unit = {
           id: "pf-u0-L1-T2",
           type: "teaching",
           question: "Earning and Spending",
-          explanation: "You earn money (income) and you spend money (expenses). If you spend less than you earn, you have money left over. That's the whole game.",
+          explanation: "You earn money (income) and you spend money (expenses). If you spend less than you earn, you have money left over.",
         },
         {
           id: "pf-u0-L1-Q3",

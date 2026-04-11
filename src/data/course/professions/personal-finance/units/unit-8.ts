@@ -390,7 +390,7 @@ export const unit8: Unit = {
  scenario: "Your friend says: 'Bitcoin is way too expensive. It's over $100,000 per coin. I can't afford to buy even one.' They think you need to buy a whole coin.",
  question: "What's the best response?",
  options: [
- "You don't need a whole coin, you can buy $10 worth (a fraction of a Bitcoin, called satoshis)",
+ "You can buy $10 worth of Bitcoin; you don't need a whole coin",
  "You're right, Bitcoin is only for rich people",
  "Just wait for the price to drop to $100",
  "Buy a cheaper coin instead, they're all the same",
@@ -659,7 +659,7 @@ export const unit8: Unit = {
  type: "pick-the-best",
  question: "If you're going to invest in altcoins, which approach is WISEST?",
  options: [
- "Allocate a small percentage (5% or less of your crypto budget) to well-researched altcoins after establishing Bitcoin/ETH positions",
+ "Allocate 5% or less of your crypto budget to researched altcoins after establishing BTC/ETH",
  "Go all-in on the top trending altcoin on social media",
  "Buy every altcoin under $1, they're cheap so they have more upside",
  "Only invest in altcoins that friends recommend",
@@ -739,7 +739,7 @@ export const unit8: Unit = {
  scenario: "You own $25,000 in Bitcoin and $500 in Ethereum that you use for DeFi. Currently, everything sits on a centralized exchange. You've heard about the FTX collapse where users lost billions.",
  question: "What's the safest wallet setup?",
  options: [
- "Move the $25,000 BTC to a cold wallet (Ledger/Trezor) and keep $500 ETH in a hot wallet for DeFi use",
+ "Move BTC to a cold wallet (Ledger/Trezor) and keep $500 ETH in a hot wallet",
  "Leave everything on the exchange, it's insured",
  "Put everything in a hot wallet on your phone",
  "Print out a paper wallet for everything",
@@ -862,14 +862,13 @@ export const unit8: Unit = {
  question: "Put these steps in order for safely buying crypto on a centralized exchange:",
  steps: [
  "Choose a regulated, reputable exchange",
- "Complete identity verification (KYC)",
- "Enable two-factor authentication (2FA)",
- "Deposit funds via bank transfer (lower fees than debit card)",
- "Buy crypto using the advanced/pro trading interface",
+ "Complete identity verification (KYC) and enable 2FA",
+ "Deposit funds via bank transfer (lower fees)",
+ "Buy crypto using the pro trading interface",
  "Transfer large holdings to your personal wallet",
  ],
- correctOrder: [0, 1, 2, 3, 4, 5],
- explanation: "Start with a trusted exchange, verify your identity, lock down security with 2FA, fund via bank (not card, saves 2-3% in fees), use the pro interface for lower trading fees, then move big holdings to your own wallet.",
+ correctOrder: [0, 1, 2, 3, 4],
+ explanation: "Start with a trusted exchange, verify and secure your account, fund via bank to save fees, use the pro interface for lower trading costs, then move big holdings to your own wallet.",
  },
  {
  id: "pf-u8-L7-Q5",
@@ -1005,7 +1004,7 @@ export const unit8: Unit = {
  scenario: "You see a DeFi protocol advertising 850% APY on a new token. The protocol launched 2 weeks ago, has an anonymous team, and the smart contracts haven't been audited. Your friend made 200% in the first week and is telling you to jump in.",
  question: "What's the most likely outcome if you invest?",
  options: [
- "You'll lose most or all of your money, this has every sign of a rug pull or unsustainable yield farm",
+ "You'll likely lose everything; this has every sign of a rug pull",
  "You'll make 850%, the numbers don't lie",
  "It's safe because your friend already made money",
  "Anonymous teams are normal in DeFi so this is fine",
@@ -1198,7 +1197,7 @@ export const unit8: Unit = {
  id: "pf-u8-L10-T2",
  type: "teaching",
  question: "Short-Term vs Long-Term Capital Gains",
- explanation: "How much tax you owe depends on how long you held the crypto. Sold within 1 year: taxed at your regular income rate. Held over 1 year: taxed at lower long-term capital gains rates.",
+ explanation: "How much tax you owe depends on how long you held: sold within 1 year means your regular income rate, held over 1 year means lower capital gains rates.",
  hint: "The single best tax strategy: hold for at least one year before selling. That switch from short-term to long-term rates can save thousands.",
  },
  {
@@ -1242,7 +1241,7 @@ export const unit8: Unit = {
  scenario: "In 2024, you made $5,000 profit selling Bitcoin (held 2 years) and lost $8,000 on an altcoin that crashed. Your regular income is $70,000/year. You're in the 22% tax bracket.",
  question: "What's your tax situation for crypto?",
  options: [
- "The $8,000 loss offsets the $5,000 gain, and you can deduct $3,000 of the remaining loss against income",
+ "The $8K loss offsets the $5K gain, plus you deduct the remaining $3K against income",
  "You owe tax on the $5,000 gain and the loss doesn't matter",
  "You owe nothing because the losses cancel everything out",
  "You can deduct all $8,000 against your regular income",
@@ -1689,32 +1688,7 @@ export const unit8: Unit = {
  id: "pf-u8-L13-C7",
  speaker: "Marcus",
  message: "You're overthinking this. My buddy's cousin made $2 million on Dogecoin. You just gotta get in early.",
- nextNodeId: "pf-u8-L13-C8",
- },
- {
- id: "pf-u8-L13-C8",
- speaker: "You",
- message: "",
- options: [
- {
- text: "For every person who made millions, thousands lost everything. That's survivorship bias. I'd rather build wealth slowly and reliably than gamble on the next meme coin.",
  nextNodeId: "pf-u8-L13-C9",
- quality: "great",
- feedback: "Survivorship bias is the most important concept in crypto investing. You never hear about the 99% who lost money, only the 1% who got rich. Social media amplifies winners and hides losers.",
- },
- {
- text: "I hear you, but I'm going to do my own research first.",
- nextNodeId: "pf-u8-L13-C9",
- quality: "okay",
- feedback: "Standing firm is good. Just make sure 'doing research' means reading actual financial analysis, not scrolling crypto Twitter.",
- },
- {
- text: "You know what, you're right. Send me the link to buy MoonCoin.",
- nextNodeId: "pf-u8-L13-C9",
- quality: "poor",
- feedback: "Social pressure is one of the strongest forces in bad financial decisions. Remember: Marcus isn't risking YOUR financial security, you are.",
- },
- ],
  },
  {
  id: "pf-u8-L13-C9",
@@ -1953,6 +1927,24 @@ export const unit8: Unit = {
  id: "pf-u8-L15-SQ12",
  question: "HODL means:",
  options: ["Buy more", "Hold and don't sell", "Sell at the top", "Trade frequently"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ13",
+ question: "A rug pull is when:",
+ options: ["Prices drop 10%", "Creators steal project funds", "A coin gets delisted", "Fees increase"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ14",
+ question: "KYC stands for:",
+ options: ["Keep Your Crypto", "Know Your Customer", "Key Yield Calculation", "Known Yield Certificate"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ15",
+ question: "Bitcoin mining uses:",
+ options: ["Banks", "Proof of Work", "Proof of Stake", "Central servers"],
  correctIndex: 1,
  },
  ],

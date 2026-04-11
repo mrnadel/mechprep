@@ -34,7 +34,7 @@ export const unit7: Unit = {
  id: "pf-u7-L1-T2",
  type: "teaching",
  question: "Exchanges: Where the Action Happens",
- explanation: "The two biggest U.S. exchanges are the NYSE (New York Stock Exchange) and NASDAQ. The NYSE is the classic one, traders on a floor shouting.",
+ explanation: "The two biggest US exchanges are the NYSE (New York Stock Exchange) and NASDAQ. The NYSE has classic floor traders while NASDAQ is fully electronic.",
  hint: "You never interact with the exchange directly. Your broker is the middleman that handles everything behind the scenes.",
  },
  {
@@ -323,9 +323,9 @@ export const unit7: Unit = {
  type: "sort-buckets",
  question: "Classify each company by market cap size:",
  options: ["$500 billion company", "$8 billion company", "$800 million company", "$3 trillion company", "$1.5 billion company", "$50 billion company"],
- buckets: ["Small cap (under $2B)", "Mid cap ($2-10B)", "Large cap ($10B+)"],
- correctBuckets: [2, 1, 0, 2, 0, 2],
- explanation: "Small cap = under $2B ($800M and $1.5B). Mid cap = $2-10B ($8B). Large cap = $10B+ ($50B, $500B, and $3T). The biggest companies are sometimes called 'mega cap', over $200B.",
+ buckets: ["Small/Mid cap (under $10B)", "Large cap ($10B+)"],
+ correctBuckets: [1, 0, 0, 1, 0, 1],
+ explanation: "Small and mid cap companies are under $10B ($800M, $1.5B, $8B). Large cap is $10B+ ($50B, $500B, $3T).",
  },
  {
  id: "pf-u7-L3-Q4",
@@ -416,7 +416,13 @@ export const unit7: Unit = {
  type: "teaching",
  question: "Two Ways to Pick Stocks",
  explanation: "Growth investing means buying companies growing super fast, even if the stock seems expensive. You're betting their future earnings will catch up to the price.",
- hint: "Growth investors buy the future. Value investors buy the discount. Both can make money, but they have very different risk profiles.",
+ hint: "Growth investors buy the future. Value investors buy the discount.",
+ },
+ {
+ id: "pf-u7-L4-T2",
+ type: "teaching",
+ question: "Value Investing",
+ explanation: "Value investing means finding underpriced companies trading below their true worth. You're buying at a discount and waiting for the market to recognize the value.",
  },
  {
  id: "pf-u7-L4-Q1",
@@ -651,8 +657,14 @@ export const unit7: Unit = {
  id: "pf-u7-L5-T1",
  type: "teaching",
  question: "Bulls Charge Up, Bears Swipe Down",
- explanation: "A bull market is when stocks are rising, generally defined as a 20%+ increase from recent lows. Everyone's optimistic, the economy's humming, and your portfolio looks great.",
- hint: "Remember: a bull charges UP with its horns. A bear swipes DOWN with its paws. That's how you remember which is which.",
+ explanation: "A bull market is when stocks are rising 20%+ from recent lows, with optimism and economic growth. A bear market is a 20%+ decline from recent highs.",
+ hint: "Remember: a bull charges UP with its horns. A bear swipes DOWN with its paws.",
+ },
+ {
+ id: "pf-u7-L5-T2",
+ type: "teaching",
+ question: "Corrections Are Normal",
+ explanation: "A 10% decline is called a correction and happens roughly every 1-2 years. Bear markets (20%+ drops) are rarer but historically always recover.",
  },
  {
  id: "pf-u7-L5-Q1",
@@ -875,8 +887,13 @@ export const unit7: Unit = {
  id: "pf-u7-L7-T1",
  type: "teaching",
  question: "Earnings Season: Report Card Day",
- explanation: "Four times a year (January, April, July, October), public companies report their quarterly earnings. It's like report card day for stocks.",
- hint: "It's not about whether a company made money. It's about whether they made MORE money than Wall Street expected. Expectations are everything.",
+ explanation: "Four times a year, public companies report their quarterly earnings. What matters is not just profit, but whether they beat Wall Street's expectations.",
+ },
+ {
+ id: "pf-u7-L7-T2",
+ type: "teaching",
+ question: "Guidance Matters Too",
+ explanation: "After reporting results, companies give forward guidance on expected future performance. Even a great quarter can tank the stock if future guidance is weak.",
  },
  {
  id: "pf-u7-L7-Q1",
@@ -1017,10 +1034,10 @@ export const unit7: Unit = {
  id: "pf-u7-L8-Q1",
  type: "sort-buckets",
  question: "Sort these order types by when they're most useful:",
- options: ["You want to buy a stock RIGHT NOW", "You want to buy only if the price drops to $50", "You want to auto-sell if your stock drops 15%", "You want to sell only if the price reaches $120"],
- buckets: ["Market order", "Limit order", "Stop-loss order"],
- correctBuckets: [0, 1, 2, 1],
- explanation: "Market = instant execution. Limit = 'only at my price or better' (for both buying low and selling high). Stop-loss = 'auto-sell to protect me from big drops.' Each serves a different purpose.",
+ options: ["Buy a stock RIGHT NOW at current price", "Buy only if the price drops to $50", "Auto-sell if your stock drops 15%", "Sell only if the price reaches $120", "Buy at market open regardless of price", "Sell if stock falls below your entry price"],
+ buckets: ["Market order", "Limit/Stop order"],
+ correctBuckets: [0, 1, 1, 1, 0, 1],
+ explanation: "Market orders execute instantly at the current price. Limit and stop orders let you set specific price conditions for buying or selling.",
  },
  {
  id: "pf-u7-L8-Q2",
@@ -1251,8 +1268,14 @@ export const unit7: Unit = {
  id: "pf-u7-L10-T1",
  type: "teaching",
  question: "The Great Debate: Pick Stocks or Buy the Market?",
- explanation: "Buying individual stocks means researching companies and betting on the ones you think will win. It's exciting but risky, even pros get it wrong more often than you'd think.",
- hint: "Warren Buffett, the greatest stock picker alive, tells most people to just buy an S&P 500 index fund. That should tell you something.",
+ explanation: "Buying individual stocks means researching companies and betting on winners. It's exciting but risky, since even pros get it wrong more often than you'd think.",
+ hint: "Warren Buffett tells most people to just buy an S&P 500 index fund.",
+ },
+ {
+ id: "pf-u7-L10-T2",
+ type: "teaching",
+ question: "The Index Advantage",
+ explanation: "Index funds own hundreds of stocks automatically, giving you instant diversification. They also have lower fees and require zero research on your part.",
  },
  {
  id: "pf-u7-L10-Q1",
@@ -1380,8 +1403,14 @@ export const unit7: Unit = {
  id: "pf-u7-L11-T1",
  type: "teaching",
  question: "Selling Is Harder Than Buying",
- explanation: "Buying a stock feels exciting. Selling is the hard part, because it forces you to admit you were wrong or risk leaving gains on the table.",
- hint: "Ask yourself: 'If I didn't own this stock, would I buy it today at this price?' If yes, hold. If no, it might be time to sell.",
+ explanation: "Buying a stock feels exciting, but selling is the hard part. It forces you to admit you were wrong or risk leaving gains on the table.",
+ hint: "Ask: 'If I didn't own this stock, would I buy it today at this price?'",
+ },
+ {
+ id: "pf-u7-L11-T2",
+ type: "teaching",
+ question: "Have a Sell Plan Before You Buy",
+ explanation: "Write down your reason for buying BEFORE you buy. When that reason no longer holds, it's time to sell, removing emotion from the decision.",
  },
  {
  id: "pf-u7-L11-Q1",
@@ -1470,7 +1499,7 @@ export const unit7: Unit = {
  question: "What's the single best habit for making good sell decisions?",
  options: [
  "Follow what famous investors are doing",
- "Write down your reason for buying BEFORE you buy, and sell when that reason no longer holds",
+ "Write down your buy reason beforehand and sell when that reason no longer holds",
  "Set a rule to sell after a 20% gain",
  "Check the stock price daily and sell if it drops 3 days in a row",
  ],
@@ -1518,7 +1547,7 @@ export const unit7: Unit = {
  id: "pf-u7-L12-T2",
  type: "teaching",
  question: "The FOMO Trap: Buying at the Top",
- explanation: "FOMO in action: a stock goes from $20 to $80 in three months. Social media is going crazy. You buy at $75 because you can't stand watching everyone else profit.",
+ explanation: "FOMO in action: a stock goes from $20 to $80 in three months and social media is going crazy. You buy at $75 because you can't stand watching everyone else profit.",
  hint: "If your barber, Uber driver, and dentist are all talking about the same stock, you're probably too late.",
  },
  {
@@ -1574,7 +1603,7 @@ export const unit7: Unit = {
  question: "What's the smartest move?",
  options: [
  "Put your entire $5,000 in, you can't miss this!",
- "Accept you missed this one, stick to your investment plan, and remember that FOMO has a cost",
+ "Accept you missed it, stick to your plan, and remember FOMO has a cost",
  "Put $2,500 in, that way you're 'in' but not all-in",
  "Take out a loan to invest even more",
  ],
@@ -1735,6 +1764,12 @@ export const unit7: Unit = {
  options: ["5%", "10%", "20%", "50%"],
  correctIndex: 1,
  },
+ {
+ id: "pf-u7-L13-SQ15",
+ question: "FOMO stands for:",
+ options: ["Fund Optimization Method", "Fear Of Missing Out", "First Open Market Order", "Federal Output Measure"],
+ correctIndex: 1,
+ },
  ],
  },
  // ===== LESSON 14: Case Study. The GameStop Frenzy =====
@@ -1826,6 +1861,18 @@ export const unit7: Unit = {
  icon: '📝',
  xpReward: 25,
  questions: [
+ {
+ id: "pf-u7-rev-T1",
+ type: "teaching",
+ question: "Full Review Time",
+ explanation: "You've covered investing basics, retirement accounts, and the stock market. Let's see how much you've retained.",
+ },
+ {
+ id: "pf-u7-rev-T2",
+ type: "teaching",
+ question: "The Core Investing Principles",
+ explanation: "Start early, diversify broadly, keep fees low, and never panic sell. These principles beat stock picking every time.",
+ },
  {
  id: "pf-u7-rev-Q1",
  type: "multiple-choice",
@@ -1941,7 +1988,7 @@ export const unit7: Unit = {
  scenario: "Maria is 28 and just started her first job. Her employer offers a 401(k) with a 50% match up to 6% of her salary. She also has $3,000 in student loans at 5% interest. She's wondering whether to invest or pay off debt first.",
  options: [
  "Skip the 401(k) and put everything toward student loans",
- "Contribute at least 6% to the 401(k) to get the full match, then pay extra on loans",
+ "Contribute 6% to the 401(k) for the full match, then pay extra on loans",
  "Wait until she's 35 to start retirement savings",
  "Put everything into individual stocks for faster growth",
  ],

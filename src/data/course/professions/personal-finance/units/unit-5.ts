@@ -968,14 +968,14 @@ export const unit5: Unit = {
           id: "pf-u5-L7-myth1",
           type: "teaching",
           question: "Myth: I'm in the 22% bracket so I pay 22% on everything",
-          explanation: "Tax brackets are marginal, not flat. Only the income above each threshold is taxed at that rate. If you earn $50,000 and the 22% bracket starts at $44,726, only $5,274 is taxed at 22%. Your effective rate is much lower, probably around 12-14%.",
+          explanation: "Tax brackets are marginal, not flat, so only the income above each threshold is taxed at that rate. Your effective rate is much lower than your top bracket, probably around 12-14%.",
           hint: "This myth causes people to turn down raises or overtime because they think earning more will somehow leave them with less. It never does.",
         },
         {
           id: "pf-u5-L7-T1",
           type: "teaching",
           question: "The Biggest Tax Myth",
-          explanation: "Here's the myth: 'If I earn more, I'll move into a higher tax bracket and take home LESS money.' This is wrong. Most countries use progressive brackets, meaning only the income ABOVE each threshold is taxed at the higher rate.",
+          explanation: "The myth 'earning more means taking home less' is wrong. Most countries use progressive brackets, meaning only the income ABOVE each threshold is taxed at the higher rate.",
           variants: {
             US: "Here's the myth: 'If I earn more, I'll move into a higher tax bracket and take home LESS money.' This is wrong. The US uses progressive marginal brackets. Only the income ABOVE each threshold is taxed at the higher rate. If the 22% bracket starts at $44,726 and you earn $45,000, only $274 is taxed at 22%.",
             GB: "Here's the myth: 'If I earn more, I'll move into a higher tax band and take home LESS money.' This is wrong. The UK uses progressive tax bands. Only the income ABOVE each threshold is taxed at the higher rate. If the 40% rate starts at £50,270 and you earn £51,000, only £730 is taxed at 40%.",
@@ -1031,9 +1031,9 @@ export const unit5: Unit = {
           id: "pf-u5-L7-Q3",
           type: "order-steps",
           question: "Put the 2024 federal tax brackets in order from LOWEST to HIGHEST rate:",
-          steps: ["10%", "12%", "22%", "24%", "32%", "37%"],
-          correctOrder: [0, 1, 2, 3, 4, 5],
-          explanation: "The U.S. has 7 federal tax brackets: 10%, 12%, 22%, 24%, 32%, 35%, and 37%. Each applies only to income within that range.",
+          steps: ["10%", "12%", "22%", "24%", "37%"],
+          correctOrder: [0, 1, 2, 3, 4],
+          explanation: "The U.S. has 7 federal tax brackets ranging from 10% to 37%. Each applies only to income within that range.",
         },
         {
           id: "pf-u5-L7-Q4",
@@ -1052,7 +1052,7 @@ export const unit5: Unit = {
           scenario: "Your coworker says: 'I turned down a $5,000 raise because it would push me into the 22% bracket and I'd actually take home less money.' They currently earn $46,000.",
           question: "Is your coworker right?",
           options: [
-            "No, only the $3,850 above $47,150 would be taxed at 22%, so they'd still take home more",
+            "No, only the amount above $47,150 is taxed at 22%, so they'd still earn more",
             "Yes, the higher bracket means less take-home pay",
             "Maybe, it depends on their state taxes",
             "Yes, they should stay at the lower bracket",
@@ -1223,7 +1223,7 @@ export const unit5: Unit = {
           scenario: "Jordan works a full-time W-2 job earning $55,000/year. She also earns $12,000/year from freelance graphic design work (1099). She's never paid quarterly taxes on the freelance income.",
           question: "What tax problem is Jordan heading toward?",
           options: [
-            "She'll owe a big lump sum at tax time plus potential penalties for not paying quarterly",
+            "She'll owe a big lump sum at tax time plus penalties for skipping quarterly payments",
             "Nothing, the W-2 withholding covers everything",
             "She only owes taxes on the W-2 income",
             "Freelance income under $20,000 is tax-free",
@@ -1898,7 +1898,7 @@ export const unit5: Unit = {
       type: "speed-round",
       xpReward: 20,
       questions: [],
-      speedTimeLimit: 45,
+      speedTimeLimit: 60,
       speedQuestions: [
         {
           id: "pf-u5-L14-SQ1",
@@ -1982,6 +1982,12 @@ export const unit5: Unit = {
           id: "pf-u5-L14-SQ14",
           question: "A tax bracket of 22% means:",
           options: ["All income taxed at 22%", "Only income above a threshold is at 22%", "You lose 22% of your paycheck", "Your refund is 22%"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u5-L14-SQ15",
+          question: "Freelancers must pay estimated taxes:",
+          options: ["Annually", "Quarterly", "Monthly", "Never"],
           correctIndex: 1,
         },
       ],

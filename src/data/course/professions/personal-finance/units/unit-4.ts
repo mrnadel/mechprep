@@ -27,7 +27,7 @@ export const unit4: Unit = {
           id: "pf-u4-L1-T1",
           type: "teaching",
           question: "You Have a Financial GPA",
-          explanation: "Imagine a number between 300 and 850 that follows you everywhere. Banks check it before giving you a loan. This unit uses FICO (the US system), but most countries have similar credit scoring.",
+          explanation: "Imagine a number between 300 and 850 that follows you everywhere, and banks check it before giving you a loan. This unit uses FICO (the US system), but most countries have similar scoring.",
           variants: {
             US: "Imagine a number between 300 and 850 that follows you everywhere. Banks check it before giving you a loan. The US uses FICO scores, calculated by three major bureaus: Equifax, Experian, and TransUnion.",
             GB: "Imagine a number that follows you everywhere. Banks check it before giving you a loan. The UK uses three credit reference agencies: Experian (0-999), Equifax (0-1000), and TransUnion (0-710). Each has its own scoring scale.",
@@ -311,7 +311,7 @@ export const unit4: Unit = {
           id: "pf-u4-L3-T2",
           type: "teaching",
           question: "The Damage Timeline",
-          explanation: "Late payments escalate in stages. 1-29 days late: just a fee from your lender. At 30 days, the bureaus get notified and the real damage begins.",
+          explanation: "Late payments escalate in stages: 1-29 days late is just a fee from your lender. At 30 days, the bureaus get notified and the real damage begins.",
           variants: {
             US: "Late payments escalate in stages. 1-29 days late: just a fee from your lender. At 30 days, the bureaus get notified and the real damage begins. 60 days: bigger score hit. 90+ days: severe damage. Collections: nuclear event.",
             GB: "Late payments escalate in stages. A few days late: your lender may charge a fee. After 1-2 missed payments, it appears on your credit file. After 3-6 missed payments, the account may 'default,' which is a severe mark lasting 6 years.",
@@ -443,7 +443,7 @@ export const unit4: Unit = {
           id: "pf-u4-L4-T2",
           type: "teaching",
           question: "The 30% Myth",
-          explanation: "You've probably heard 'keep utilization under 30%.' That's not wrong, but it's misleading. People with 800+ scores keep theirs under 10%. Lower is always better.",
+          explanation: "You've probably heard 'keep utilization under 30%,' but that's misleading. People with 800+ scores keep theirs under 10%, and lower is always better.",
         },
         {
           id: "pf-u4-L4-Q0",
@@ -765,7 +765,7 @@ export const unit4: Unit = {
           scenario: "Lin is 22, just graduated, and has zero credit history. A car dealer says 'We'll approve your auto loan, the rate is 18%.' Lin's parents have excellent credit.",
           question: "What's Lin's best move?",
           options: [
-            "Become an authorized user on a parent's card, build credit for 6-12 months, then shop for a much better rate",
+            "Become an authorized user on a parent's card, build credit, then get a better rate",
             "Take the 18% loan, at least it builds credit",
             "Wait 5 years until credit magically appears",
             "Pay the full car price in cash to avoid credit entirely",
@@ -932,7 +932,7 @@ export const unit4: Unit = {
           id: "pf-u4-L7-T1",
           type: "teaching",
           question: "Your Credit Report Card. It's Free",
-          explanation: "You're legally entitled to a free credit report from each bureau every year at AnnualCreditReport.com. It's the only federally authorized source.",
+          explanation: "You're legally entitled to a free credit report from each bureau every year at AnnualCreditReport.com, the only federally authorized source.",
           variants: {
             US: "You're legally entitled to a free credit report from each bureau every year at AnnualCreditReport.com. It's the only federally authorized source. You can stagger requests every 4 months for year-round monitoring.",
             GB: "You can check your credit report for free. Use ClearScore (Equifax data), Credit Karma (TransUnion data), or Experian's free service. You're also legally entitled to your full statutory report for £2 from each agency.",
@@ -1075,7 +1075,7 @@ export const unit4: Unit = {
           id: "pf-u4-L8-T1",
           type: "teaching",
           question: "Not All Credit Checks Are Equal",
-          explanation: "When someone checks your credit, it's called an 'inquiry' or 'pull.' Hard pulls (you applied for credit) affect your score. Soft pulls (you checked yourself) don't.",
+          explanation: "When someone checks your credit, it's called an 'inquiry' or 'pull.' Hard pulls (applying for credit) affect your score, but soft pulls (checking yourself) don't.",
           variants: {
             US: "When someone checks your credit, it's called an 'inquiry' or 'pull.' Hard pulls (you applied for credit) affect your score. Soft pulls (you checked yourself, employer check, pre-approved offers) don't.",
             GB: "When someone checks your credit, it's called a 'search.' Hard searches (you applied for credit) appear on your file and may affect your score. Soft searches (you checked yourself, eligibility checkers, quotation searches) don't.",
@@ -1161,7 +1161,7 @@ export const unit4: Unit = {
           scenario: "Tom applies for 3 different credit cards, a personal loan, and a store card all in the same week because he saw good promotional offers.",
           question: "What will happen to his credit?",
           options: [
-            "5 separate hard pulls, each one dings his score, and lenders will see him as high risk",
+            "5 separate hard pulls, each dings his score and flags him as high risk",
             "They all group into one inquiry since it's the same week",
             "Only the first one counts, the rest are free",
             "Nothing, promotional offers are always soft pulls",
@@ -1419,7 +1419,7 @@ export const unit4: Unit = {
           scenario: "Sam has an 800 credit score and feels confident about credit. He stops checking his report, doesn't bother with autopay because 'he always remembers,' and opens 3 store cards for 10% discounts during holiday shopping.",
           question: "What's likely to happen?",
           options: [
-            "Score drops, missed payments from overconfidence, hard pulls from store cards, and potential fraud goes unnoticed",
+            "Score drops from missed payments, hard pulls from store cards, and unnoticed fraud",
             "Nothing, an 800 score is invincible",
             "His score will go up because of the new accounts",
             "Store cards don't affect credit scores",
@@ -1538,6 +1538,18 @@ export const unit4: Unit = {
           question: "A good credit score is generally above:",
           options: ["500", "600", "670", "750"],
           correctIndex: 2,
+        },
+        {
+          id: "pf-u4-L11-SQ14",
+          question: "Checking your own credit report is a:",
+          options: ["Hard pull", "Soft pull", "Medium pull", "No pull"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u4-L11-SQ15",
+          question: "Rate shopping for mortgages within 14-45 days counts as:",
+          options: ["Multiple hard pulls", "One hard pull", "A soft pull", "No inquiry"],
+          correctIndex: 1,
         },
       ],
     },

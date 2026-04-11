@@ -24,13 +24,6 @@ export const unit3: Unit = {
           explanation: "You know how to save and protect your money. Now let's understand debt, so it works for you instead of against you.",
         },
         {
-          id: "pf-u3-L1-myth1",
-          type: "teaching",
-          question: "Myth: All debt is bad",
-          explanation: "Strategic debt can build wealth. A mortgage on an affordable home, a student loan for an in-demand degree, or a business loan with a solid plan can all make you richer over time. The question is whether the debt increases your net worth or earning power more than it costs in interest.",
-          hint: "This belief often comes from watching people drown in consumer debt. But confusing all debt with bad debt means missing opportunities that build wealth.",
-        },
-        {
           id: "pf-u3-L1-T1",
           type: "teaching",
           question: "Debt Isn't Evil. It's a Tool",
@@ -270,7 +263,7 @@ export const unit3: Unit = {
           question: "What should you do?",
           scenario: "You have 2,000 in credit card debt at 24% interest. You just received a 2,000 tax refund. Your friend says 'treat yourself, you earned it.' Your debt costs you about 480/year in interest.",
           options: [
-            "Pay off the credit card, saving 480/year in interest is like getting a guaranteed 24% return",
+            "Pay off the card, saving 480/year is like a guaranteed 24% return",
             "Split it 50/50 between the debt and fun stuff",
             "Save the refund in a HYSA, the interest might beat 24%",
             "Your friend is right, treat yourself",
@@ -313,7 +306,7 @@ export const unit3: Unit = {
           id: "pf-u3-L3-myth1",
           type: "teaching",
           question: "Myth: Credit cards are always bad",
-          explanation: "Credit cards used correctly are one of the best financial tools available. Pay your full balance monthly and you get free fraud protection, purchase insurance, cashback rewards, and a better credit score. The card itself is not the problem. Carrying a balance is.",
+          explanation: "Credit cards used correctly are one of the best financial tools available. Pay your full balance monthly and you get fraud protection, cashback, and a better credit score.",
           hint: "People see credit card horror stories and blame the card. But a knife is dangerous in careless hands and essential in a kitchen. Same principle.",
         },
         {
@@ -1343,7 +1336,13 @@ export const unit3: Unit = {
           id: "pf-u3-L10-T1",
           type: "teaching",
           question: "Final Boss: Your Debt-Free Victory Plan",
-          explanation: "You've learned how debt works, how interest eats your money, how credit cards and loans operate, and strategies to crush debt forever. This final lesson tests everything.",
+          explanation: "You've learned how debt works, how interest compounds, and strategies to crush it. This final lesson tests everything.",
+        },
+        {
+          id: "pf-u3-L10-T2",
+          type: "teaching",
+          question: "The Core Rule of Debt",
+          explanation: "Debt that builds assets or earning power can be smart. Debt that funds consumption at high interest rates is a trap.",
         },
         {
           id: "pf-u3-L10-Q1",
@@ -1466,7 +1465,7 @@ export const unit3: Unit = {
           type: "pick-the-best",
           question: "What's the single most important thing you learned in this unit?",
           options: [
-            "Debt is a tool, understanding how it works gives you the power to use it wisely or avoid its traps",
+            "Debt is a tool; understanding it lets you use it wisely or avoid traps",
             "You should never borrow money for any reason",
             "Minimum payments are a fine strategy if you're patient",
             "Interest rates don't really matter that much",
@@ -1824,6 +1823,24 @@ export const unit3: Unit = {
           options: ["The best deal", "Higher than bank rates", "Interest-free", "Government-backed"],
           correctIndex: 1,
         },
+        {
+          id: "pf-u3-L13-SQ13",
+          question: "Payday loans typically have APRs of:",
+          options: ["5-10%", "20-30%", "50-100%", "300-400%+"],
+          correctIndex: 3,
+        },
+        {
+          id: "pf-u3-L13-SQ14",
+          question: "To avoid credit card interest, pay:",
+          options: ["The minimum", "Half the balance", "The full balance monthly", "Whatever you can"],
+          correctIndex: 2,
+        },
+        {
+          id: "pf-u3-L13-SQ15",
+          question: "Balance transfer cards are useful for:",
+          options: ["Earning rewards", "Moving debt to 0% intro rate", "Building credit fast", "Getting cash back"],
+          correctIndex: 1,
+        },
       ],
     },
     // ===== REVIEW LESSON: Units 0-3 Review =====
@@ -1834,6 +1851,18 @@ export const unit3: Unit = {
       icon: '📝',
       xpReward: 25,
       questions: [
+        {
+          id: "pf-u3-rev-T1",
+          type: "teaching",
+          question: "Review Time",
+          explanation: "You've covered money basics, budgeting, saving, and debt. This review tests your knowledge across all topics.",
+        },
+        {
+          id: "pf-u3-rev-T2",
+          type: "teaching",
+          question: "Key Principles So Far",
+          explanation: "Automate savings, understand needs vs wants, and use debt as a tool, not a crutch. These fundamentals support every financial decision.",
+        },
         {
           id: "pf-u3-rev-Q1",
           type: "multiple-choice",
