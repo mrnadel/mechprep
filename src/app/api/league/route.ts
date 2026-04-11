@@ -89,8 +89,8 @@ export async function PATCH(request: NextRequest) {
   if (!weekStart || !/^\d{4}-\d{2}-\d{2}$/.test(weekStart) || !isMonday(weekStart)) {
     return NextResponse.json({ error: 'Invalid weekStart (must be a Monday)' }, { status: 400 });
   }
-  // Cap per-request XP — covers base XP * accuracy bonus * double-XP * event multiplier
-  const MAX_XP_PER_REQUEST = 500;
+  // Cap per-request XP — covers 10 questions × 200 XP max × accuracy bonus × double-XP × event multiplier
+  const MAX_XP_PER_REQUEST = 2500;
   if (typeof xpDelta !== 'number' || xpDelta <= 0 || xpDelta > MAX_XP_PER_REQUEST) {
     return NextResponse.json({ error: `Invalid xpDelta (must be 1-${MAX_XP_PER_REQUEST})` }, { status: 400 });
   }

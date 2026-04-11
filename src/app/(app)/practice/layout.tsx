@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Practice',
-  description: 'Practice mechanical engineering interview questions with adaptive, topic-based, and real-world modes.',
+  description: 'Practice interview questions with adaptive, topic-based, and daily challenge modes.',
   robots: { index: false },
 };
 

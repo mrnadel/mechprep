@@ -811,6 +811,14 @@ export const useStore = create<AppState>()(
           showAchievementToast: newAchievements.length > 0 ? newAchievements[0] : null,
         });
 
+        // Clear correctly-answered questions from mistakes list
+        const correctIds = Object.entries(session.answers)
+          .filter(([, a]) => a.correct)
+          .map(([id]) => id);
+        if (correctIds.length > 0) {
+          useEngagementStore.getState().removeMistakes(correctIds);
+        }
+
         // Cross-store sync: keep course store's streak in lockstep so the
         // header display and freeze/repair systems stay consistent regardless
         // of which mode the user practices in.

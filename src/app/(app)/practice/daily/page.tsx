@@ -6,13 +6,13 @@ import { Calendar, Star } from 'lucide-react';
 import { StreakFlame } from '@/components/icons/StreakFlame';
 
 const DAY_THEMES = [
-  { dayName: 'Sunday', theme: 'Sunday Systems Review', description: 'Wrap up the week with a cross-topic review — connect concepts across disciplines.' },
-  { dayName: 'Monday', theme: 'Mechanical Monday', description: 'Start the week strong with core mechanical engineering fundamentals.' },
-  { dayName: 'Tuesday', theme: 'Tradeoff Tuesday', description: 'Engineering is all about tradeoffs. Practice weighing competing requirements.' },
-  { dayName: 'Wednesday', theme: 'Materials Wednesday', description: 'Dive into material properties, selection criteria, and failure modes.' },
-  { dayName: 'Thursday', theme: 'Thermo Thursday', description: 'Heat transfer, thermodynamics, and energy systems — stay sharp.' },
-  { dayName: 'Friday', theme: 'Fluids Friday', description: 'Fluid mechanics, pipe flow, and turbomachinery fundamentals.' },
-  { dayName: 'Saturday', theme: 'Saturday Special', description: 'A mixed challenge across all topics — test your breadth.' },
+  { dayName: 'Sunday', theme: 'Fresh Start', description: 'Kick off the week ahead with a broad review across everything you\'ve learned.' },
+  { dayName: 'Monday', theme: 'Quick Review', description: 'Start the week strong with a rapid-fire review of core concepts.' },
+  { dayName: 'Tuesday', theme: 'Mix It Up', description: 'A varied set of questions across topics — keep your knowledge sharp.' },
+  { dayName: 'Wednesday', theme: 'Challenge Mode', description: 'Push yourself with a tougher set of questions today.' },
+  { dayName: 'Thursday', theme: 'Deep Dive', description: 'Take a closer look at concepts you\'ve been building on this week.' },
+  { dayName: 'Friday', theme: 'Speed Round', description: 'Quick questions, fast thinking — finish the week on a high note.' },
+  { dayName: 'Saturday', theme: 'Weekend Warmup', description: 'A mixed challenge across all topics — test your breadth.' },
 ];
 
 export default function DailyChallengePage() {
