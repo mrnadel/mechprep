@@ -286,7 +286,7 @@ export const unit7: Unit = {
           id: "sp-u7-L3-T1",
           type: "teaching",
           question: "The Goldilocks Zone",
-          explanation: "The habitable zone is the range of distances from a star where liquid water could exist on a planet's surface. Too close and water boils. Too far and it freezes.",
+          explanation: "The habitable zone is the range of distances from a star where liquid water could exist on a planet's surface. Too close and water boils, too far and it freezes.",
         },
         {
           id: "sp-u7-L3-Q1",
@@ -320,7 +320,7 @@ export const unit7: Unit = {
           id: "sp-u7-L3-T2",
           type: "teaching",
           question: "Location Depends on the Star",
-          explanation: "A hotter, brighter star pushes the habitable zone farther out. A cooler, dimmer star has a habitable zone much closer in. It's all about the star's energy output.",
+          explanation: "A hotter, brighter star pushes the habitable zone farther out, while a cooler, dimmer star has its habitable zone much closer in. It's all about the star's energy output.",
         },
         {
           id: "sp-u7-L3-Q3",
@@ -328,7 +328,7 @@ export const unit7: Unit = {
           question: "Where should you look for planets with liquid water in this system?",
           scenario: "You discover a new star system. The star is a red dwarf, much cooler and dimmer than our Sun. You want to find planets where liquid water could exist on the surface.",
           options: [
-            "Much closer to the star than Earth is to the Sun, because the star outputs less energy",
+            "Much closer to the star, because the star outputs less energy",
             "At the same distance as Earth is from our Sun",
             "Much farther from the star, because red dwarfs are too hot up close",
             "It doesn't matter. Any distance works for a red dwarf",
@@ -354,7 +354,7 @@ export const unit7: Unit = {
           id: "sp-u7-L3-T3",
           type: "teaching",
           question: "Habitable Does Not Mean Inhabited",
-          explanation: "Being in the habitable zone only means liquid water is possible. It doesn't guarantee an atmosphere, a magnetic field, or actual life. Many factors need to align.",
+          explanation: "Being in the habitable zone only means liquid water is possible, not that life exists. An atmosphere, magnetic field, and many other factors all need to align.",
           hint: "Try this now: look up which exoplanets are in their star's habitable zone on the NASA exoplanet archive.",
         },
         {
@@ -418,7 +418,7 @@ export const unit7: Unit = {
           id: "sp-u7-L4-T1",
           type: "teaching",
           question: "A Zoo of Alien Worlds",
-          explanation: "Exoplanets come in wild varieties we never expected. Some are gas giants orbiting closer to their star than Mercury. Others are rocky worlds bigger than Earth.",
+          explanation: "Exoplanets come in wild varieties, from gas giants orbiting closer to their star than Mercury to rocky worlds bigger than Earth. Many have no equivalent in our solar system.",
         },
         {
           id: "sp-u7-L4-Q1",
@@ -452,7 +452,7 @@ export const unit7: Unit = {
           id: "sp-u7-L4-T2",
           type: "teaching",
           question: "Super-Earths and Mini-Neptunes",
-          explanation: "Super-Earths are rocky planets up to 10 times Earth's mass. Mini-Neptunes are slightly larger with thick gaseous atmospheres. Our solar system has neither type.",
+          explanation: "Super-Earths are rocky planets up to 10 times Earth's mass, while mini-Neptunes are slightly larger with thick gaseous atmospheres. Our solar system has neither type.",
         },
         {
           id: "sp-u7-L4-Q3",
@@ -613,7 +613,7 @@ export const unit7: Unit = {
           id: "sp-u7-L5-T3",
           type: "teaching",
           question: "The Big Uncertainty",
-          explanation: "We know some factors well (star formation rate, fraction with planets). Others are pure guesswork (how often intelligent life evolves, how long civilizations survive). Estimates for N range from 1 to millions.",
+          explanation: "Some Drake Equation factors are well-known (star formation rate, fraction with planets), but others are pure guesswork. Estimates for N range from 1 to millions.",
         },
         {
           id: "sp-u7-L5-Q5",
@@ -724,7 +724,7 @@ export const unit7: Unit = {
           id: "sp-u7-L6-T3",
           type: "teaching",
           question: "Finding Life vs Finding Intelligence",
-          explanation: "Biosignatures could reveal simple microbial life. SETI searches for intelligent, technological civilizations. Finding bacteria on another world would be historic, but finding a signal would change everything.",
+          explanation: "Biosignatures could reveal simple microbial life, while SETI searches for intelligent, technological civilizations. Finding either would be one of history's greatest discoveries.",
         },
         {
           id: "sp-u7-L6-Q5",
@@ -968,6 +968,24 @@ export const unit7: Unit = {
           id: "sp-u7-L8-SQ12",
           question: "Radial velocity detects a star's:",
           options: ["Wobble", "Color", "Age", "Size"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u7-L8-SQ13",
+          question: "Super-Earths are _____ than Earth.",
+          options: ["Larger and rocky", "Smaller", "Gaseous", "Identical"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u7-L8-SQ14",
+          question: "SETI searches for:",
+          options: ["Intelligent life signals", "Asteroids", "Dark matter", "Comets"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u7-L8-SQ15",
+          question: "A hot Jupiter orbits _____ its star.",
+          options: ["Very close to", "Far from", "Behind", "Above"],
           correctIndex: 0,
         },
       ],

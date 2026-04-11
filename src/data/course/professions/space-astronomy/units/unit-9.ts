@@ -21,7 +21,7 @@ export const unit9: Unit = {
           id: "sp-u9-L1-myth1",
           type: "teaching",
           question: "Myth: The Big Bang was an explosion in space",
-          explanation: "The Big Bang was not a bomb going off in empty space. There was no empty space for it to explode into. Instead, space itself began expanding from an extremely hot, dense state. Every point in the universe was the 'center.' Think of dots on an inflating balloon: every dot moves away from every other dot, with no single origin point.",
+          explanation: "The Big Bang was not a bomb going off in empty space; instead, space itself began expanding from an extremely hot, dense state. Every point in the universe was the 'center,' like dots on an inflating balloon all moving away from each other.",
           hint: "The name 'Big Bang' was actually coined by astronomer Fred Hoyle as a mockery of the theory. The misleading name stuck and has been causing confusion ever since.",
         },
         {
@@ -57,13 +57,6 @@ export const unit9: Unit = {
             1: 'The Big Bang wasn\'t an explosion in space',
             3: 'The Big Bang wasn\'t an explosion in space',
           },
-        },
-        {
-          id: "sp-u9-L1-T2",
-          type: "teaching",
-          question: "Not an Explosion",
-          explanation: "The Big Bang wasn't a bomb going off in empty space. Space itself expanded. There was no 'outside' to explode into. Every point in the universe was the center.",
-          hint: "Think of it like dots on a balloon. As you inflate it, every dot moves away from every other dot. No dot is the center.",
         },
         {
           id: "sp-u9-L1-Q3",
@@ -294,7 +287,7 @@ export const unit9: Unit = {
           id: "sp-u9-L3-T1",
           type: "teaching",
           question: "The Invisible Majority",
-          explanation: "About 27% of the universe is dark matter. It doesn't emit, absorb, or reflect light. We know it exists because its gravity affects visible matter, bending light and holding galaxies together.",
+          explanation: "About 27% of the universe is dark matter that doesn't emit, absorb, or reflect light. We know it exists because its gravity affects visible matter, bending light and holding galaxies together.",
         },
         {
           id: "sp-u9-L3-Q1",
@@ -328,7 +321,7 @@ export const unit9: Unit = {
           id: "sp-u9-L3-T2",
           type: "teaching",
           question: "How We Know It's There",
-          explanation: "Galaxies spin too fast for the visible matter to hold them together. Without extra invisible mass providing gravity, they'd fly apart. That extra mass is dark matter.",
+          explanation: "Galaxies spin too fast for visible matter alone to hold them together. Without extra invisible mass (dark matter) providing gravity, they'd fly apart.",
         },
         {
           id: "sp-u9-L3-Q2b",
@@ -346,7 +339,7 @@ export const unit9: Unit = {
           question: "What is the most likely explanation for the extra gravity?",
           scenario: "You measure the rotation speed of a spiral galaxy and find that its outer stars orbit far too fast. Based on all the visible matter (stars, gas, dust), the galaxy should fly apart. Yet it stays together.",
           options: [
-            "An enormous amount of invisible mass (dark matter) provides the extra gravity needed to hold the galaxy together",
+            "Invisible dark matter provides the extra gravity holding the galaxy together",
             "The laws of gravity don't work at galactic scales",
             "The stars are connected by magnetic fields",
             "The galaxy is actually much smaller than it appears",
@@ -371,7 +364,7 @@ export const unit9: Unit = {
           id: "sp-u9-L3-T3",
           type: "teaching",
           question: "What Is Dark Matter Made Of?",
-          explanation: "Nobody knows yet. It's not ordinary atoms, dead stars, or black holes. Leading candidates are undiscovered subatomic particles. Experiments around the world are trying to detect them directly.",
+          explanation: "Nobody knows what dark matter is made of, but it's not ordinary atoms, dead stars, or black holes. Leading candidates are undiscovered subatomic particles that experiments worldwide are trying to detect.",
           hint: "Try this now: search for 'gravitational lensing dark matter' to see how dark matter bends light from distant galaxies.",
         },
         {
@@ -436,7 +429,7 @@ export const unit9: Unit = {
           id: "sp-u9-L4-T1",
           type: "teaching",
           question: "The Expanding Universe",
-          explanation: "The universe has been expanding since the Big Bang. In 1998, scientists discovered something shocking: the expansion is accelerating. Something is pushing the universe apart faster and faster.",
+          explanation: "The universe has been expanding since the Big Bang, but in 1998 scientists discovered the expansion is actually accelerating. Something mysterious is pushing the universe apart faster and faster.",
         },
         {
           id: "sp-u9-L4-Q1",
@@ -470,7 +463,7 @@ export const unit9: Unit = {
           id: "sp-u9-L4-T2",
           type: "teaching",
           question: "What Is Dark Energy?",
-          explanation: "Dark energy is the name for whatever is causing the accelerating expansion. It makes up about 68% of the universe. We don't know what it is, only that it acts like a repulsive force on cosmic scales.",
+          explanation: "Dark energy is the name for whatever is causing the accelerating expansion, making up about 68% of the universe. We don't know what it is, only that it acts like a repulsive force on cosmic scales.",
         },
         {
           id: "sp-u9-L4-Q3",
@@ -502,7 +495,7 @@ export const unit9: Unit = {
           id: "sp-u9-L4-T3",
           type: "teaching",
           question: "The Biggest Mystery in Physics",
-          explanation: "Dark energy is arguably the biggest unsolved problem in physics. It makes up 68% of everything, yet we have almost no idea what it actually is. Some think it's a property of space itself.",
+          explanation: "Dark energy is arguably the biggest unsolved problem in physics, making up 68% of everything yet remaining almost entirely mysterious. Some think it's a property of space itself.",
         },
         {
           id: "sp-u9-L4-Q5",
@@ -590,7 +583,7 @@ export const unit9: Unit = {
           id: "sp-u9-L5-T2",
           type: "teaching",
           question: "The Big Freeze",
-          explanation: "In the most likely scenario, the universe keeps expanding forever. Stars burn out, galaxies drift apart, and everything slowly cools toward absolute zero. This is sometimes called 'heat death.'",
+          explanation: "In the most likely scenario, the universe keeps expanding forever as stars burn out and galaxies drift apart. Everything slowly cools toward absolute zero in what's called 'heat death.'",
         },
         {
           id: "sp-u9-L5-Q3",
@@ -630,7 +623,7 @@ export const unit9: Unit = {
           id: "sp-u9-L5-T3",
           type: "teaching",
           question: "The Big Rip",
-          explanation: "If dark energy gets stronger over time, it could eventually tear apart galaxies, stars, planets, and even atoms. Everything would be ripped apart. Current data suggests this is unlikely but not impossible.",
+          explanation: "If dark energy gets stronger over time, it could eventually tear apart galaxies, stars, planets, and even atoms. Current data suggests this is unlikely but not impossible.",
         },
         {
           id: "sp-u9-L5-Q6",
@@ -657,7 +650,7 @@ export const unit9: Unit = {
           question: "What does this tell you about the universe's fate?",
           scenario: "Scientists measure distant supernovae and discover they are even dimmer than expected, meaning the universe's expansion has been accelerating faster than previous models predicted. Dark energy appears to be getting slightly stronger over time.",
           options: [
-            "If dark energy keeps strengthening, the Big Rip becomes more plausible, where even atoms get torn apart",
+            "Strengthening dark energy makes the Big Rip more plausible, where even atoms get torn apart",
             "The Big Crunch is now the most likely outcome",
             "The universe has stopped expanding",
             "This means dark energy is weakening, leading to a Big Freeze",
@@ -867,6 +860,24 @@ export const unit9: Unit = {
           question: "Dark matter is detected through its:",
           options: ["Sound", "Light", "Heat", "Gravity"],
           correctIndex: 3,
+        },
+        {
+          id: "sp-u9-L7-SQ13",
+          question: "The Big Freeze ends with:",
+          options: ["Cold, empty space", "A new Big Bang", "Stars reforming", "Galaxies colliding"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u9-L7-SQ14",
+          question: "Cosmic microwave background is leftover from:",
+          options: ["The Big Bang", "Star explosions", "Black holes", "Dark energy"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u9-L7-SQ15",
+          question: "Ordinary matter makes up about _____ of the universe.",
+          options: ["5%", "27%", "68%", "50%"],
+          correctIndex: 0,
         },
       ],
     },

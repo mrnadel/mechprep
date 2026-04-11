@@ -25,12 +25,6 @@ export const unit3: Unit = {
           hint: "If distance caused seasons, both hemispheres would have summer at the same time. They don't. The Southern Hemisphere has summer during the Northern Hemisphere's winter, which only makes sense with axial tilt.",
         },
         {
-          id: "sp-u3-L1-T1",
-          type: "teaching",
-          question: "From Solar System to Home",
-          explanation: "You've explored the solar system. Now let's zoom in on something you experience every day: seasons. Most people get the reason wrong. Seasons have nothing to do with how close Earth is to the Sun.",
-        },
-        {
           id: "sp-u3-L1-Q1",
           type: "true-false",
           question: "Seasons happen because Earth gets closer to the Sun in summer.",
@@ -46,7 +40,7 @@ export const unit3: Unit = {
           question: "What is the correct explanation for this observation?",
           scenario: "You notice that in December, the Sun barely rises above the horizon in New York (40 N) and the days are short. Meanwhile your friend in Sydney, Australia reports long, hot summer days with the Sun high overhead.",
           options: [
-            "Earth's tilted axis means the Northern Hemisphere tilts away from the Sun in December while the Southern Hemisphere tilts toward it",
+            "Earth's tilted axis points the Northern Hemisphere away from the Sun in December",
             "The Sun moves closer to the Southern Hemisphere in December",
             "New York's atmosphere blocks sunlight in winter",
             "Australia is closer to the Sun than New York",
@@ -63,7 +57,7 @@ export const unit3: Unit = {
           id: "sp-u3-L1-T2",
           type: "teaching",
           question: "The Power of Directness",
-          explanation: "When sunlight hits at a steep angle, it concentrates energy on a small area (summer). When it hits at a shallow angle, the same energy spreads over a larger area (winter). That angle changes everything.",
+          explanation: "When sunlight hits at a steep angle, it concentrates energy on a small area (summer). When it hits at a shallow angle, the same energy spreads over a larger area (winter).",
           hint: "Try this now: shine a flashlight straight down on a table, then tilt it. Notice how the light spreads out and gets dimmer.",
         },
         {
@@ -105,7 +99,7 @@ export const unit3: Unit = {
           id: "sp-u3-L1-T3",
           type: "teaching",
           question: "Solstices and Equinoxes",
-          explanation: "The summer solstice is the longest day of the year, when your hemisphere tilts most toward the Sun. The winter solstice is the shortest. Equinoxes mark the two days when day and night are roughly equal.",
+          explanation: "The summer solstice is the longest day of the year, and the winter solstice is the shortest. Equinoxes mark the two days when day and night are roughly equal.",
         },
         {
           id: "sp-u3-L1-Q6",
@@ -159,14 +153,14 @@ export const unit3: Unit = {
           id: "sp-u3-L2-myth1",
           type: "teaching",
           question: "Myth: Moon phases are caused by Earth's shadow",
-          explanation: "Earth's shadow only falls on the Moon during a lunar eclipse, which happens a few times per year. Monthly phases are caused by the changing angle between the Sun, Moon, and Earth as the Moon orbits us. We see different amounts of the Moon's sunlit half, not a shadow.",
+          explanation: "Earth's shadow only falls on the Moon during a lunar eclipse, which happens a few times per year. Monthly phases are caused by the changing angle between the Sun, Moon, and Earth as the Moon orbits us.",
           hint: "This is one of the most common astronomy misconceptions. If Earth's shadow caused phases, a full moon would be impossible because the shadow would always be in the way.",
         },
         {
           id: "sp-u3-L2-T1",
           type: "teaching",
           question: "Why the Moon Changes Shape",
-          explanation: "The Moon doesn't actually change shape. We see different amounts of its sunlit side as it orbits Earth. A full orbit takes about 29.5 days, giving us all the phases from new to full and back.",
+          explanation: "The Moon doesn't actually change shape; we see different amounts of its sunlit side as it orbits Earth. A full orbit takes about 29.5 days, giving us all the phases from new to full and back.",
         },
         {
           id: "sp-u3-L2-Q1",
@@ -200,7 +194,7 @@ export const unit3: Unit = {
           id: "sp-u3-L2-T2",
           type: "teaching",
           question: "The Phase Cycle",
-          explanation: "The cycle goes: new Moon (invisible), waxing crescent, first quarter (half lit), waxing gibbous, full Moon, waning gibbous, third quarter, waning crescent, then back to new. \"Waxing\" means growing. \"Waning\" means shrinking.",
+          explanation: "The cycle goes: new Moon, waxing crescent, first quarter, waxing gibbous, full Moon, then waning back to new. \"Waxing\" means growing and \"waning\" means shrinking.",
         },
         {
           id: "sp-u3-L2-Q3",
@@ -226,19 +220,6 @@ export const unit3: Unit = {
           matchTargets: ["Moon invisible", "Entire face lit", "Right half lit", "Thin sliver growing"],
           correctMatches: [0, 1, 2, 3],
           explanation: "Each phase shows a different amount of the Moon's sunlit side, from none (new) to all (full).",
-        },
-        {
-          id: "sp-u3-L2-myth2",
-          type: "teaching",
-          question: "Myth: There is a permanent dark side of the Moon",
-          explanation: "Every part of the Moon receives sunlight as it rotates. The far side (the side facing away from Earth) gets just as much sunlight as the near side. The correct term is 'far side,' not 'dark side.' It is only 'dark' in the sense that we cannot see it from Earth.",
-          hint: "Pink Floyd made the phrase famous, but the Moon rotates once per orbit, so the Sun illuminates all sides equally over a month.",
-        },
-        {
-          id: "sp-u3-L2-T3",
-          type: "teaching",
-          question: "The Same Face, Always",
-          explanation: "The Moon always shows us the same side. It rotates at exactly the same rate it orbits Earth, a phenomenon called tidal locking. The \"far side\" wasn't seen by humans until 1959.",
         },
         {
           id: "sp-u3-L2-Q6",
@@ -303,7 +284,7 @@ export const unit3: Unit = {
           id: "sp-u3-L3-T1",
           type: "teaching",
           question: "A Cosmic Lineup",
-          explanation: "An eclipse happens when the Sun, Earth, and Moon align precisely. In a solar eclipse, the Moon blocks the Sun. In a lunar eclipse, Earth's shadow falls on the Moon.",
+          explanation: "An eclipse happens when the Sun, Earth, and Moon align precisely. In a solar eclipse the Moon blocks the Sun, and in a lunar eclipse Earth's shadow falls on the Moon.",
         },
         {
           id: "sp-u3-L3-Q1",
@@ -327,7 +308,7 @@ export const unit3: Unit = {
           id: "sp-u3-L3-T2",
           type: "teaching",
           question: "The Incredible Coincidence",
-          explanation: "The Sun is about 400 times wider than the Moon but also about 400 times farther away. This means they appear nearly the same size in our sky, making perfect solar eclipses possible. No other known planet has this.",
+          explanation: "The Sun is about 400 times wider than the Moon but also about 400 times farther away, so they appear the same size in our sky. This incredible coincidence makes perfect solar eclipses possible.",
         },
         {
           id: "sp-u3-L3-Q3",
@@ -368,7 +349,7 @@ export const unit3: Unit = {
           id: "sp-u3-L3-T3",
           type: "teaching",
           question: "The Blood Moon",
-          explanation: "During a total lunar eclipse, the Moon turns deep red or copper colored. Earth's atmosphere bends red light into the shadow zone. This is why a total lunar eclipse is often called a \"blood Moon.\"",
+          explanation: "During a total lunar eclipse, the Moon turns deep red because Earth's atmosphere bends red light into the shadow zone. This is why it's often called a \"blood Moon.\"",
         },
         {
           id: "sp-u3-L3-Q6",
@@ -422,7 +403,7 @@ export const unit3: Unit = {
           id: "sp-u3-L4-T1",
           type: "teaching",
           question: "The Moon Moves Oceans",
-          explanation: "The Moon's gravity pulls on Earth's water, creating a bulge of water on the side closest to the Moon. There's also a bulge on the opposite side, caused by centrifugal effects. As Earth rotates, coastlines move through these bulges, creating 2 high tides and 2 low tides each day.",
+          explanation: "The Moon's gravity creates water bulges on both sides of Earth (one facing the Moon, one opposite). As Earth rotates through these bulges, coastlines experience 2 high tides and 2 low tides each day.",
         },
         {
           id: "sp-u3-L4-Q1",
@@ -498,7 +479,7 @@ export const unit3: Unit = {
           id: "sp-u3-L4-T3",
           type: "teaching",
           question: "Gravity: The Universal Glue",
-          explanation: "Gravity is the force that holds everything together: you to Earth, Earth to the Sun, and galaxies in clusters. Every object with mass pulls on every other object. More mass or closer distance means stronger pull.",
+          explanation: "Gravity is the force that holds everything together, from you on Earth to galaxies in clusters. More mass or closer distance means a stronger gravitational pull.",
           hint: "Try this now: jump. You just fought against the gravitational pull of the entire planet, and it won.",
         },
         {
@@ -553,7 +534,7 @@ export const unit3: Unit = {
           id: "sp-u3-L5-T1",
           type: "teaching",
           question: "Earth's Invisible Shield",
-          explanation: "Earth's molten iron core generates a magnetic field that extends far into space. This field, called the magnetosphere, deflects most of the Sun's harmful charged particles. Without it, solar radiation would strip away our atmosphere.",
+          explanation: "Earth's molten iron core generates a magnetic field called the magnetosphere that deflects the Sun's harmful charged particles. Without it, solar radiation would strip away our atmosphere.",
         },
         {
           id: "sp-u3-L5-Q1",
@@ -619,7 +600,7 @@ export const unit3: Unit = {
           id: "sp-u3-L5-T3",
           type: "teaching",
           question: "Aurora Colors",
-          explanation: "Green auroras come from oxygen at lower altitudes. Red comes from oxygen higher up. Purple and blue come from nitrogen. The color depends on which gas the solar particles collide with and at what altitude.",
+          explanation: "Green auroras come from oxygen at lower altitudes, while red comes from oxygen higher up. Purple and blue come from nitrogen collisions.",
         },
         {
           id: "sp-u3-L5-Q6",
@@ -854,6 +835,24 @@ export const unit3: Unit = {
           question: "The longest day of the year is the:",
           options: ["Winter solstice", "Summer solstice", "Spring equinox", "Fall equinox"],
           correctIndex: 1,
+        },
+        {
+          id: "sp-u3-L7-SQ13",
+          question: "The Moon is tidally locked, meaning:",
+          options: ["Same side always faces Earth", "It never rotates", "It has no gravity", "It orbits the Sun"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u3-L7-SQ14",
+          question: "Mars lost its atmosphere partly because it lacks a:",
+          options: ["Magnetic field", "Moon", "Rotation", "Core"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u3-L7-SQ15",
+          question: "An annular eclipse shows a:",
+          options: ["Ring of sunlight", "Blood Moon", "Complete darkness", "Double Sun"],
+          correctIndex: 0,
         },
       ],
     },

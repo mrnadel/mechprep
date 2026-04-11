@@ -55,7 +55,7 @@ export const unit10: Unit = {
           id: "sp-u10-L1-T2",
           type: "teaching",
           question: "The Gateway Station",
-          explanation: "Artemis includes plans for the Lunar Gateway, a small space station orbiting the Moon. It will serve as a staging point for Moon landings and potentially future Mars missions. The Gateway is a truly international project: ESA is building the ESPRIT refueling module, JAXA is contributing life support systems, and CSA (Canada) is providing the Canadarm3 robotic arm.",
+          explanation: "Artemis includes plans for the Lunar Gateway, a small space station orbiting the Moon. It will serve as a staging point for Moon landings and potentially future Mars missions.",
         },
         {
           id: "sp-u10-L1-Q3",
@@ -283,7 +283,7 @@ export const unit10: Unit = {
           id: "sp-u10-L3-T1",
           type: "teaching",
           question: "Tickets to Space",
-          explanation: "Space tourism is now real. Companies like Blue Origin, Virgin Galactic, and SpaceX have sent paying civilians to space. Prices range from hundreds of thousands to tens of millions of dollars.",
+          explanation: "Space tourism is now real, with Blue Origin, Virgin Galactic, and SpaceX sending paying civilians to space. Prices range from hundreds of thousands to tens of millions of dollars.",
         },
         {
           id: "sp-u10-L3-Q1",
@@ -301,7 +301,7 @@ export const unit10: Unit = {
           question: "Which option best fits their requirements?",
           scenario: "A wealthy couple wants to experience weightlessness and see Earth's curvature from space, but they only have a few hours available and a budget of $500,000 per person. They don't need to orbit the Earth.",
           options: [
-            "A suborbital flight with Blue Origin or Virgin Galactic, which offers brief weightlessness and a view of Earth's curvature in a few hours",
+            "A suborbital flight offering brief weightlessness and Earth's curvature view",
             "A SpaceX orbital mission lasting several days",
             "A trip to the International Space Station",
             "Waiting for the first Mars tourism flight",
@@ -341,7 +341,7 @@ export const unit10: Unit = {
           id: "sp-u10-L3-T3",
           type: "teaching",
           question: "The Price of Space",
-          explanation: "A Virgin Galactic suborbital ticket costs about $450,000. SpaceX orbital flights have cost tens of millions per seat. As competition grows and rockets become reusable, prices should drop.",
+          explanation: "A Virgin Galactic suborbital ticket costs about $450,000, while SpaceX orbital flights cost tens of millions per seat. As competition grows and rockets become reusable, prices should drop.",
         },
         {
           id: "sp-u10-L3-Q5",
@@ -447,7 +447,7 @@ export const unit10: Unit = {
           id: "sp-u10-L4-T2",
           type: "teaching",
           question: "Water Is Space Gold",
-          explanation: "Water might be more valuable in space than gold. It can provide drinking water, oxygen for breathing, and hydrogen/oxygen for rocket fuel. Asteroids and the Moon both have water ice.",
+          explanation: "Water might be more valuable in space than gold because it provides drinking water, oxygen, and rocket fuel. Asteroids and the Moon both have water ice waiting to be mined.",
           hint: "In space, water is the ultimate multi-purpose resource. Mining it locally is far cheaper than launching it from Earth.",
         },
         {
@@ -553,7 +553,7 @@ export const unit10: Unit = {
           id: "sp-u10-L5-T1",
           type: "teaching",
           question: "The Distance Problem",
-          explanation: "The nearest star system, Alpha Centauri, is 4.24 light-years away. With current rockets, reaching it would take over 70,000 years. Interstellar travel requires completely new propulsion technology.",
+          explanation: "The nearest star system, Alpha Centauri, is 4.24 light-years away, and with current rockets it would take over 70,000 years to reach. Interstellar travel requires completely new propulsion technology.",
         },
         {
           id: "sp-u10-L5-Q1",
@@ -675,7 +675,7 @@ export const unit10: Unit = {
           id: "sp-u10-L6-T1",
           type: "teaching",
           question: "Where Is Everybody?",
-          explanation: "The universe has billions of galaxies, each with billions of stars. Many have planets in habitable zones. So why haven't we found any evidence of alien civilizations? That's the Fermi Paradox.",
+          explanation: "The universe has billions of galaxies, each with billions of stars and many habitable planets. So why haven't we found any evidence of alien civilizations? That's the Fermi Paradox.",
         },
         {
           id: "sp-u10-L6-Q1",
@@ -709,7 +709,7 @@ export const unit10: Unit = {
           id: "sp-u10-L6-T2",
           type: "teaching",
           question: "Possible Explanations",
-          explanation: "Maybe intelligent life is extremely rare. Maybe civilizations destroy themselves before they can reach the stars. Maybe they exist but are too far away to detect. Or maybe they're deliberately avoiding us.",
+          explanation: "Maybe intelligent life is extremely rare, or maybe civilizations destroy themselves before reaching the stars. They could also be too far away to detect, or deliberately avoiding us.",
         },
         {
           id: "sp-u10-L6-Q3",
@@ -741,7 +741,7 @@ export const unit10: Unit = {
           id: "sp-u10-L6-T3",
           type: "teaching",
           question: "The Great Filter",
-          explanation: "The Great Filter theory suggests there's a barrier that prevents civilizations from becoming interstellar. It might be behind us (life is rare) or ahead of us (civilizations tend to destroy themselves). We don't know which.",
+          explanation: "The Great Filter theory suggests a barrier prevents civilizations from becoming interstellar. It might be behind us (life is rare) or ahead of us (civilizations destroy themselves).",
           hint: "If the filter is behind us, we're incredibly lucky. If it's ahead of us, that's a warning for humanity's future.",
         },
         {
@@ -993,6 +993,18 @@ export const unit10: Unit = {
           question: "The Lunar Gateway is built by:",
           options: ["NASA alone", "Multiple international partners", "SpaceX only", "Russia"],
           correctIndex: 1,
+        },
+        {
+          id: "sp-u10-L8-SQ14",
+          question: "Water in space can provide drinking water, oxygen, and:",
+          options: ["Rocket fuel", "Electricity", "Food", "Gravity"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u10-L8-SQ15",
+          question: "The Great Filter suggests a barrier to:",
+          options: ["Interstellar civilizations", "Planet formation", "Star birth", "Galaxy mergers"],
+          correctIndex: 0,
         },
       ],
     },

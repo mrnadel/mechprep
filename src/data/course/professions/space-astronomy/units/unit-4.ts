@@ -21,7 +21,7 @@ export const unit4: Unit = {
           id: "sp-u4-L0-T1",
           type: "teaching",
           question: "Beyond the Sun",
-          explanation: "In Unit 3 you explored Earth and the Moon. Now we zoom out. The Sun is just one of roughly 200 billion stars in our galaxy alone.",
+          explanation: "Now we zoom out beyond the Sun, which is just one of roughly 200 billion stars in our galaxy alone. Every star has a life story worth knowing.",
         },
         {
           id: "sp-u4-L0-Q1",
@@ -177,7 +177,7 @@ export const unit4: Unit = {
           id: "sp-u4-L1-T2",
           type: "teaching",
           question: "Gravity Does the Work",
-          explanation: "Gravity pulls gas particles together into a clump. As the clump gets denser, it heats up. When the core reaches about 10 million degrees Celsius, fusion begins.",
+          explanation: "Gravity pulls gas particles together into a denser, hotter clump. When the core reaches about 10 million degrees Celsius, fusion begins.",
           hint: "Think of it like squeezing a ball of clay. The tighter you squeeze, the hotter the center gets.",
         },
         {
@@ -218,7 +218,7 @@ export const unit4: Unit = {
           id: "sp-u4-L1-T3",
           type: "teaching",
           question: "A Star Is Born",
-          explanation: "Once fusion starts, the star pushes outward with radiation pressure. This balances gravity's inward pull, and the star stabilizes. It's now a main sequence star.",
+          explanation: "Once fusion starts, outward radiation pressure balances gravity's inward pull and the star stabilizes. It's now a main sequence star.",
         },
         {
           id: "sp-u4-L1-Q6",
@@ -272,7 +272,7 @@ export const unit4: Unit = {
           id: "sp-u4-L2-T1",
           type: "teaching",
           question: "Stars Come in Colors",
-          explanation: "Stars aren't all white. They glow red, orange, yellow, white, or blue depending on their surface temperature. Hotter stars are bluer, cooler stars are redder.",
+          explanation: "Stars glow red, orange, yellow, white, or blue depending on their surface temperature. Hotter stars are bluer and cooler stars are redder.",
         },
         {
           id: "sp-u4-L2-Q1",
@@ -439,7 +439,7 @@ export const unit4: Unit = {
           id: "sp-u4-L3-T2",
           type: "teaching",
           question: "The Main Sequence",
-          explanation: "Stars on the main sequence are fusing hydrogen into helium. Hot, massive stars sit at the top left. Cool, small stars sit at the bottom right.",
+          explanation: "Stars on the main sequence are fusing hydrogen into helium, with hot massive stars at the top left and cool small stars at the bottom right. Our Sun sits right in the middle.",
           hint: "Try this now: search for an HR diagram image online. The main sequence diagonal band is immediately obvious.",
         },
         {
@@ -535,7 +535,7 @@ export const unit4: Unit = {
           id: "sp-u4-L4-T1",
           type: "teaching",
           question: "Every Star Has an Ending",
-          explanation: "When a star runs out of hydrogen fuel, gravity wins. What happens next depends on the star's mass. Small stars fade quietly. Massive stars explode.",
+          explanation: "When a star runs out of hydrogen fuel, gravity wins and what happens next depends entirely on the star's mass. Small stars fade quietly, while massive stars explode.",
         },
         {
           id: "sp-u4-L4-Q1",
@@ -591,7 +591,7 @@ export const unit4: Unit = {
           id: "sp-u4-L4-T3",
           type: "teaching",
           question: "Supernovae Create Everything",
-          explanation: "A supernova blasts heavy elements like iron, gold, and carbon into space. These elements form new stars, planets, and even you. Every atom in your body was forged in a star.",
+          explanation: "A supernova blasts heavy elements like iron, gold, and carbon into space. These elements form new stars, planets, and even you.",
         },
         {
           id: "sp-u4-L4-Q5",
@@ -629,7 +629,7 @@ export const unit4: Unit = {
           options: [
             "It will collapse into a black hole",
             "It will explode as a supernova",
-            "It will swell into a red giant, shed its outer layers, and become a white dwarf",
+            "It will become a red giant, then shed its outer layers as a white dwarf",
             "It will burn forever without changing",
           ],
           correctIndex: 2,
@@ -1004,6 +1004,24 @@ export const unit4: Unit = {
           options: ["Moons", "Planets", "Stars", "Asteroids"],
           correctIndex: 2,
         },
+        {
+          id: "sp-u4-L7-SQ13",
+          question: "A baby star before fusion is called a:",
+          options: ["Protostar", "Pulsar", "Quasar", "Red dwarf"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u4-L7-SQ14",
+          question: "A teaspoon of neutron star material weighs:",
+          options: ["A billion tons", "A kilogram", "A ton", "Nothing"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u4-L7-SQ15",
+          question: "What balances gravity in a stable star?",
+          options: ["Radiation pressure", "Magnetism", "Rotation", "Dark energy"],
+          correctIndex: 0,
+        },
       ],
     },
     // ===== REVIEW LESSON: Night Sky, Solar System, Earth/Moon & Stars Review =====
@@ -1014,6 +1032,18 @@ export const unit4: Unit = {
       icon: '📝',
       xpReward: 25,
       questions: [
+        {
+          id: "sp-u4-rev-T1",
+          type: "teaching",
+          question: "Review Time",
+          explanation: "You've covered stargazing basics, the solar system, Earth-Moon dynamics, and stellar life cycles. Let's test how much you remember.",
+        },
+        {
+          id: "sp-u4-rev-T2",
+          type: "teaching",
+          question: "Key Themes",
+          explanation: "Everything in space connects: gravity shapes stars, tides, and orbits. Mass determines how stars live, shine, and die.",
+        },
         {
           id: "sp-u4-rev-Q1",
           type: "multiple-choice",

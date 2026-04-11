@@ -191,7 +191,7 @@ export const unit8: Unit = {
           id: "sp-u8-L2-T2",
           type: "teaching",
           question: "Spiral Galaxies",
-          explanation: "Spiral galaxies have rotating arms full of young blue stars, gas, and dust. They're actively forming new stars. The Milky Way and Andromeda are both spirals.",
+          explanation: "Spiral galaxies have rotating arms full of young blue stars, gas, and dust that actively form new stars. The Milky Way and Andromeda are both spirals.",
         },
         {
           id: "sp-u8-L2-Q3",
@@ -436,7 +436,7 @@ export const unit8: Unit = {
           id: "sp-u8-L4-myth1",
           type: "teaching",
           question: "Myth: Black holes are cosmic vacuum cleaners",
-          explanation: "Black holes do not 'suck in' everything around them. Their gravity works exactly like any other object with the same mass. If the Sun were magically replaced by a black hole of equal mass, Earth would continue orbiting normally. You only fall in if you get very close to the event horizon.",
+          explanation: "Black holes do not 'suck in' everything around them, and their gravity works exactly like any other object with the same mass. If the Sun became a black hole of equal mass, Earth would continue orbiting normally.",
           hint: "Sci-fi movies show black holes devouring everything in sight. In reality, most black holes sit quietly with stars and gas orbiting them at safe distances, just like planets orbit a star.",
         },
         {
@@ -494,13 +494,6 @@ export const unit8: Unit = {
             2: 'Nothing, not even light traveling at 300,000 km/s, has enough speed to escape a black hole\'s gravitational pull',
             3: 'Nothing, not even light traveling at 300,000 km/s, has enough speed to escape a black hole\'s gravitational pull',
           },
-        },
-        {
-          id: "sp-u8-L4-T3",
-          type: "teaching",
-          question: "Black Holes Don't Suck",
-          explanation: "A common myth is that black holes 'suck in' everything nearby. They don't. Their gravity works like any other object's. You'd only fall in if you got very close.",
-          hint: "Try this now: if the Sun became a black hole (it can't, but hypothetically), Earth would keep orbiting normally. Only the light and heat would disappear.",
         },
         {
           id: "sp-u8-L4-Q5",
@@ -600,7 +593,7 @@ export const unit8: Unit = {
           id: "sp-u8-L5-T2",
           type: "teaching",
           question: "Spaghettification",
-          explanation: "Near a black hole, gravity is much stronger on the side closer to it. This difference stretches objects into long, thin strands, like spaghetti. Scientists actually call this 'spaghettification.'",
+          explanation: "Near a black hole, gravity is much stronger on the side closer to it, stretching objects into long thin strands. Scientists actually call this 'spaghettification.'",
         },
         {
           id: "sp-u8-L5-Q3",
@@ -696,7 +689,7 @@ export const unit8: Unit = {
           id: "sp-u8-L6-T1",
           type: "teaching",
           question: "Giants Among Giants",
-          explanation: "Supermassive black holes contain millions to billions of times the Sun's mass. Nearly every large galaxy has one at its center. They're far more massive than stellar black holes.",
+          explanation: "Supermassive black holes contain millions to billions of times the Sun's mass, and nearly every large galaxy has one at its center. They're far more massive than stellar black holes.",
         },
         {
           id: "sp-u8-L6-Q1",
@@ -1009,6 +1002,24 @@ export const unit8: Unit = {
           options: ["Sagittarius A*", "Cygnus X-1", "M87*", "Andromeda A"],
           correctIndex: 0,
         },
+        {
+          id: "sp-u8-L8-SQ13",
+          question: "The point of no return around a black hole is the:",
+          options: ["Event horizon", "Singularity", "Photon sphere", "Accretion disk"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u8-L8-SQ14",
+          question: "Stretching near a black hole is called:",
+          options: ["Spaghettification", "Compression", "Fusion", "Radiation"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u8-L8-SQ15",
+          question: "Elliptical galaxies are mostly made of:",
+          options: ["Old red stars", "Young blue stars", "Gas clouds", "Dark matter only"],
+          correctIndex: 0,
+        },
       ],
     },
     // ===== REVIEW LESSON: Rockets, Exploration, Exoplanets & Galaxies Review =====
@@ -1019,6 +1030,18 @@ export const unit8: Unit = {
       icon: '📝',
       xpReward: 25,
       questions: [
+        {
+          id: "sp-u8-rev-T1",
+          type: "teaching",
+          question: "Review Time",
+          explanation: "You've covered rockets, space exploration, exoplanets, galaxies, and black holes. Let's see how well you remember it all.",
+        },
+        {
+          id: "sp-u8-rev-T2",
+          type: "teaching",
+          question: "Connecting the Dots",
+          explanation: "From Newton's laws launching rockets to supermassive black holes anchoring galaxies, everything in space is connected by gravity. Scale changes, but the physics stays the same.",
+        },
         {
           id: "sp-u8-rev-Q1",
           type: "multiple-choice",

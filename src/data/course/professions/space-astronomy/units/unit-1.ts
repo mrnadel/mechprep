@@ -22,7 +22,7 @@ export const unit1: Unit = {
           id: "sp-u1-L1-T1",
           type: "teaching",
           question: "Welcome to the Cosmos",
-          explanation: "Right now, you're standing on a rock that's spinning at 1,000 mph and orbiting the Sun at 67,000 mph. You just can't feel it. Welcome to the universe.",
+          explanation: "Right now, you're standing on a rock spinning at 1,000 mph and orbiting the Sun at 67,000 mph. You just can't feel it.",
           diagram: spaceDiagrams['sp-u1-L1-T1'],
         },
         {
@@ -86,7 +86,7 @@ export const unit1: Unit = {
           id: "sp-u1-L1-T3",
           type: "teaching",
           question: "Our Cosmic Address",
-          explanation: "Earth orbits the Sun. The Sun is one of about 200 billion stars in the Milky Way galaxy. And the Milky Way is one of trillions of galaxies in the observable universe.",
+          explanation: "Earth orbits the Sun, which is one of about 200 billion stars in the Milky Way galaxy. The Milky Way itself is one of trillions of galaxies in the observable universe.",
           diagram: spaceDiagrams['sp-u1-L1-T3'],
         },
         {
@@ -152,14 +152,14 @@ export const unit1: Unit = {
           id: "sp-u1-L2-myth1",
           type: "teaching",
           question: "Myth: Stars twinkle because they pulse",
-          explanation: "Stars emit a steady stream of light. The twinkling you see is caused entirely by Earth's atmosphere. As starlight passes through turbulent layers of air at different temperatures, it bends and shifts, creating the flickering effect called scintillation. In space, stars do not twinkle at all.",
+          explanation: "Stars emit steady light, but Earth's atmosphere bends and shifts it, creating the flickering called scintillation. In space, stars don't twinkle at all.",
           hint: "The Hubble Space Telescope sees stars as perfectly steady points of light. The twinkle is an atmospheric distortion, not a property of stars themselves.",
         },
         {
           id: "sp-u1-L2-T1",
           type: "teaching",
           question: "Three Kinds of Bright Dots",
-          explanation: "Stars twinkle because their light passes through layers of atmosphere. Planets shine steadily because they're much closer. Satellites move visibly across the sky in seconds.",
+          explanation: "Stars twinkle because their light passes through turbulent atmosphere, while planets shine steadily because they're much closer. Satellites move visibly across the sky in seconds.",
           diagram: spaceDiagrams['sp-u1-L2-T1'],
         },
         {
@@ -195,7 +195,7 @@ export const unit1: Unit = {
           id: "sp-u1-L2-T2",
           type: "teaching",
           question: "Planets Don't Make Their Own Light",
-          explanation: "Stars generate light through nuclear fusion. Planets don't glow on their own. They reflect sunlight, which is why they look bright but don't twinkle.",
+          explanation: "Stars generate light through nuclear fusion, while planets only reflect sunlight. The brightest satellite, the ISS, orbits Earth every 90 minutes and looks like a fast, non-blinking dot crossing the sky.",
           hint: "If a bright \"star\" isn't twinkling tonight, it's probably a planet.",
           diagram: spaceDiagrams['sp-u1-L2-T2'],
         },
@@ -243,13 +243,6 @@ export const unit1: Unit = {
             2: 'Venus, Mars, Jupiter, and Saturn are all bright enough to see without a telescope',
             3: 'Venus, Mars, Jupiter, and Saturn are all bright enough to see without a telescope',
           },
-        },
-        {
-          id: "sp-u1-L2-T3",
-          type: "teaching",
-          question: "The International Space Station",
-          explanation: "The ISS is the brightest satellite in the sky. It orbits Earth every 90 minutes at about 17,500 mph and looks like a fast, non-blinking dot crossing the sky.",
-          diagram: spaceDiagrams['sp-u1-L2-T3'],
         },
         {
           id: "sp-u1-L2-Q6",
@@ -315,7 +308,7 @@ export const unit1: Unit = {
           id: "sp-u1-L3-T1",
           type: "teaching",
           question: "Patterns in the Sky",
-          explanation: "Constellations are patterns of stars that people connected into shapes thousands of years ago. There are 88 official constellations recognized today, covering the entire sky. The 88 we use today were formalized by European astronomers, but every culture on Earth created its own star patterns. The same stars told different stories depending on where you lived.",
+          explanation: "Constellations are patterns of stars that people connected into shapes thousands of years ago. There are 88 official constellations recognized today, covering the entire sky.",
           diagram: spaceDiagrams['sp-u1-L3-T1'],
         },
         {
@@ -350,7 +343,7 @@ export const unit1: Unit = {
           id: "sp-u1-L3-T2",
           type: "teaching",
           question: "Finding Your Way with Stars",
-          explanation: "For thousands of years, travelers navigated using constellations. In the Northern Hemisphere, the North Star (Polaris) always points north. Sailors depended on it. In the Southern Hemisphere, there is no bright pole star. Instead, navigators used the Southern Cross (Crux) to find south. Polynesian wayfinders crossed the entire Pacific Ocean using star positions, wave patterns, and bird behavior, navigating thousands of miles without instruments.",
+          explanation: "For thousands of years, travelers navigated using constellations like Polaris (pointing north) and the Southern Cross (pointing south). Polynesian wayfinders even crossed the entire Pacific Ocean using star positions alone.",
           hint: "Try this now: find the Big Dipper tonight. The two stars at the edge of its \"cup\" point straight to Polaris.",
           diagram: spaceDiagrams['sp-u1-L3-T2'],
         },
@@ -434,13 +427,6 @@ export const unit1: Unit = {
           diagram: spaceDiagrams['sp-u1-L3-Q8'],
         },
         {
-          id: "sp-u1-L3-T4",
-          type: "teaching",
-          question: "The Southern Hemisphere Sky",
-          explanation: "If you travel south of the equator, the sky changes dramatically. The Southern Cross (Crux) replaces Polaris as the navigation anchor. The Large and Small Magellanic Clouds, two dwarf galaxies orbiting the Milky Way, are visible to the naked eye and look like detached pieces of the Milky Way. They're only visible from the Southern Hemisphere.",
-          hint: "The Southern Hemisphere also offers a better view of the Milky Way's bright center, which passes nearly overhead from places like Australia, South Africa, and Chile.",
-        },
-        {
           id: "sp-u1-L3-Q9",
           type: "multiple-choice",
           question: "What are the Magellanic Clouds?",
@@ -459,13 +445,6 @@ export const unit1: Unit = {
           },
         },
         {
-          id: "sp-u1-L3-T5",
-          type: "teaching",
-          question: "Star Names Are Arabic",
-          explanation: "Many of the brightest star names come from Arabic. Aldebaran ('the follower'), Betelgeuse ('hand of the giant'), Rigel ('foot'), Vega, Altair, Deneb: all Arabic. During the Islamic Golden Age (8th to 14th centuries), Arab astronomers preserved and expanded ancient Greek star catalogs, and their names stuck.",
-          hint: "Next time you hear a star name, listen for the Arabic. If it starts with 'Al-' (like Aldebaran, Algol, Altair), it's almost certainly Arabic in origin.",
-        },
-        {
           id: "sp-u1-L3-Q10",
           type: "match-pairs",
           question: "Match each Arabic-origin star name to its meaning:",
@@ -473,12 +452,6 @@ export const unit1: Unit = {
           matchTargets: ["The follower", "Hand of the giant", "Foot", "The flying eagle"],
           correctMatches: [0, 1, 2, 3],
           explanation: "Arab astronomers named these stars during the Islamic Golden Age (8th to 14th centuries). Their names became the standard used worldwide.",
-        },
-        {
-          id: "sp-u1-L3-T6",
-          type: "teaching",
-          question: "Astronomy Beyond Europe",
-          explanation: "Every civilization watched the sky. Aboriginal Australians are among the world's oldest astronomers, using the dark shapes between stars (not just the bright stars) to see figures like the Emu in the Sky. Polynesian navigators crossed the Pacific using star paths, memorizing which stars rose and set over specific islands. Chinese astronomers recorded supernovae, comets, and eclipses for thousands of years. Astronomy is a truly global heritage.",
         },
         {
           id: "sp-u1-L3-Q11",
@@ -504,7 +477,7 @@ export const unit1: Unit = {
           id: "sp-u1-L4-T1",
           type: "teaching",
           question: "Looking Back in Time",
-          explanation: "Light travels fast, but space is enormous. When you see a star 100 light-years away, you're seeing it as it looked 100 years ago. The night sky is a time machine.",
+          explanation: "Light travels fast, but space is enormous. When you see a star 100 light-years away, you're seeing it as it looked 100 years ago.",
           diagram: spaceDiagrams['sp-u1-L4-T1'],
         },
         {
@@ -678,7 +651,7 @@ export const unit1: Unit = {
           id: "sp-u1-L5-T2",
           type: "teaching",
           question: "What to Look For First",
-          explanation: "Start with the brightest objects. The Moon is obvious. Next, find any steady, bright light: that's likely a planet. Then look for familiar patterns like the Big Dipper or Orion.",
+          explanation: "Start with the brightest objects like the Moon and any steady, bright light (likely a planet). Then look for familiar patterns like the Big Dipper or Orion.",
           diagram: spaceDiagrams['sp-u1-L5-T2'],
         },
         {
@@ -720,7 +693,7 @@ export const unit1: Unit = {
           id: "sp-u1-L5-T3",
           type: "teaching",
           question: "Best Times to Stargaze",
-          explanation: "New Moon nights are darkest and best for stargazing. Meteor showers have specific peak dates each year. Clear, dry nights offer the steadiest views.",
+          explanation: "New Moon nights are darkest and best for stargazing, and meteor showers have specific peak dates each year. Clear, dry nights offer the steadiest views.",
           diagram: spaceDiagrams['sp-u1-L5-T3'],
         },
         {
@@ -975,6 +948,12 @@ export const unit1: Unit = {
           id: "sp-u1-L7-SQ14",
           question: "The Southern Cross helps find:",
           options: ["South", "North", "East", "West"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u1-L7-SQ15",
+          question: "The ISS orbits Earth every:",
+          options: ["90 minutes", "24 hours", "7 days", "30 minutes"],
           correctIndex: 0,
         },
       ],

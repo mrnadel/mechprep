@@ -272,7 +272,7 @@ export const unit6: Unit = {
           id: "sp-u6-L2-T1",
           type: "teaching",
           question: "The Apollo Program",
-          explanation: "Apollo was NASA's Moon landing program. Between 1969 and 1972, 6 missions landed on the Moon. 12 astronauts walked on its surface. No one has been back since.",
+          explanation: "Apollo was NASA's Moon landing program that put 12 astronauts on the Moon across 6 missions from 1969 to 1972. No one has been back since.",
         },
         {
           id: "sp-u6-L2-Q1",
@@ -544,7 +544,7 @@ export const unit6: Unit = {
           id: "sp-u6-L4-T1",
           type: "teaching",
           question: "Robots on Mars",
-          explanation: "Since 1997, NASA has landed 5 rovers on Mars. They drive across the surface, analyze rocks, take photos, and search for signs of ancient life. Each one pushed the boundaries further. NASA isn't alone on Mars: China's CNSA landed the Zhurong rover in 2021, making China the second country to successfully operate a rover on Mars. India's ISRO also reached Mars orbit with its Mangalyaan mission in 2014, on a budget smaller than many Hollywood movies.",
+          explanation: "Since 1997, NASA has landed 5 rovers on Mars that drive across the surface, analyze rocks, and search for ancient life. China's Zhurong rover (2021) made it the second country to operate a rover on Mars.",
         },
         {
           id: "sp-u6-L4-Q1",
@@ -570,7 +570,7 @@ export const unit6: Unit = {
           question: "Why can't the engineers drive the rover in real time?",
           scenario: "You're a NASA engineer trying to steer the Curiosity rover around a boulder on Mars. You send a 'turn left' command, but the rover doesn't respond for 14 minutes. Then its confirmation signal takes another 14 minutes to reach you.",
           options: [
-            "Radio signals take 4 to 24 minutes to travel between Earth and Mars, making real-time control impossible",
+            "Radio signals take 4 to 24 minutes between Earth and Mars, preventing real-time control",
             "The rover's controls are broken",
             "Mars's atmosphere blocks radio signals intermittently",
             "The rover can only accept one command per hour",
@@ -628,7 +628,7 @@ export const unit6: Unit = {
           id: "sp-u6-L4-T3",
           type: "teaching",
           question: "Why Mars Matters",
-          explanation: "Mars is the most Earth-like planet. Evidence shows it once had rivers and lakes. Finding signs of past microbial life would be one of the greatest discoveries in human history.",
+          explanation: "Mars is the most Earth-like planet, with evidence showing it once had rivers and lakes. Finding signs of past microbial life would be one of history's greatest discoveries.",
         },
         {
           id: "sp-u6-L4-Q6",
@@ -655,7 +655,7 @@ export const unit6: Unit = {
           question: "Why was a nuclear power source chosen instead of solar panels?",
           scenario: "Engineers chose to power Curiosity with a plutonium-based nuclear generator instead of solar panels. Mars regularly experiences dust storms lasting weeks that coat everything in fine dust.",
           options: [
-            "A nuclear source works day and night and isn't affected by dust storms covering the panels",
+            "A nuclear source works day and night, unaffected by dust storms",
             "Solar panels hadn't been invented yet when Curiosity launched",
             "Nuclear power makes the rover go faster",
             "Mars is too far from the Sun for any solar power to work",
@@ -879,7 +879,7 @@ export const unit6: Unit = {
           id: "sp-u6-L6-T3",
           type: "teaching",
           question: "The James Webb Space Telescope",
-          explanation: "JWST launched in December 2021. Its gold-plated mirror is 6.5 meters wide (nearly 3 times Hubble's). It orbits 1.5 million km from Earth and can see some of the first galaxies that formed after the Big Bang. JWST is a truly international effort: NASA led the project, but ESA (European Space Agency) built the Ariane 5 rocket that launched it and contributed key instruments. CSA (Canadian Space Agency) provided the fine guidance sensor.",
+          explanation: "JWST launched in December 2021 with a 6.5-meter gold-plated mirror, nearly 3 times wider than Hubble's. It orbits 1.5 million km from Earth and can see some of the first galaxies that formed after the Big Bang.",
         },
         {
           id: "sp-u6-L6-Q5",
@@ -915,7 +915,7 @@ export const unit6: Unit = {
           question: "Why is looking at distant galaxies the same as looking back in time?",
           options: [
             "Telescopes have time-travel features",
-            "Light takes time to travel, so we see objects as they were when the light left them",
+            "Light takes time to travel, so we see distant objects as they were long ago",
             "Distant galaxies move backward in time",
             "Space bends time around telescopes",
           ],
@@ -942,7 +942,7 @@ export const unit6: Unit = {
           id: "sp-u6-L6b-T1",
           type: "teaching",
           question: "Beyond NASA",
-          explanation: "For decades, the US and Russia dominated space. Today, the European Space Agency (ESA), India's ISRO, China's CNSA, and Japan's JAXA are all launching ambitious missions. Space exploration has become a global effort.",
+          explanation: "For decades the US and Russia dominated space, but today ESA, India's ISRO, China's CNSA, and Japan's JAXA all launch ambitious missions. Space exploration has become a truly global effort.",
         },
         {
           id: "sp-u6-L6b-Q1",
@@ -957,7 +957,7 @@ export const unit6: Unit = {
           id: "sp-u6-L6b-T2",
           type: "teaching",
           question: "ESA: Europe's Space Pioneer",
-          explanation: "ESA's Rosetta mission landed a probe (Philae) on a comet in 2014, a first in history. ESA's Huygens probe landed on Saturn's moon Titan in 2005, the farthest landing from Earth ever. ESA also built key instruments for JWST and partners on the ISS.",
+          explanation: "ESA's Rosetta mission landed a probe on a comet in 2014, a first in history. Its Huygens probe also landed on Saturn's moon Titan in 2005, the farthest landing from Earth ever.",
           hint: "Huygens revealed that Titan has lakes of liquid methane and an atmosphere thicker than Earth's. It's one of the most alien landscapes we've ever photographed.",
         },
         {
@@ -982,7 +982,7 @@ export const unit6: Unit = {
           id: "sp-u6-L6b-T3",
           type: "teaching",
           question: "India and China Reach for the Moon",
-          explanation: "India's ISRO made history with the Chandrayaan missions. Chandrayaan-3 landed near the Moon's south pole in 2023, making India the 4th country to soft-land on the Moon. China's CNSA landed the Chang'e 4 on the far side of the Moon in 2019 (a world first) and operates the Tiangong space station.",
+          explanation: "India's Chandrayaan-3 landed near the Moon's south pole in 2023, making India the 4th country to soft-land there. China's Chang'e 4 landed on the Moon's far side in 2019, a world first.",
         },
         {
           id: "sp-u6-L6b-Q3",
@@ -1023,11 +1023,11 @@ export const unit6: Unit = {
         {
           id: "sp-u6-L6b-Q6",
           type: "sort-buckets",
-          question: "Sort each achievement by the space agency that did it:",
+          question: "Sort each achievement by region:",
           options: ["Rosetta comet landing", "Chandrayaan-3 Moon landing", "Chang'e 4 far-side Moon landing", "Hayabusa2 asteroid sample return", "Mangalyaan Mars orbiter", "Huygens landing on Titan"],
-          buckets: ["ESA", "ISRO", "CNSA", "JAXA"],
-          correctBuckets: [0, 1, 2, 3, 1, 0],
-          explanation: "ESA: Rosetta and Huygens. ISRO: Chandrayaan-3 and Mangalyaan. CNSA: Chang'e 4. JAXA: Hayabusa2. Space is a global endeavor.",
+          buckets: ["European (ESA)", "Asian (ISRO/CNSA/JAXA)"],
+          correctBuckets: [0, 1, 1, 1, 1, 0],
+          explanation: "ESA led Rosetta and Huygens. Chandrayaan-3 and Mangalyaan were ISRO (India), Chang'e 4 was CNSA (China), and Hayabusa2 was JAXA (Japan).",
         },
         {
           id: "sp-u6-L6b-Q7",
@@ -1270,6 +1270,12 @@ export const unit6: Unit = {
           id: "sp-u6-L8-SQ14",
           question: "ESA's Rosetta mission landed on a:",
           options: ["Comet", "Moon", "Asteroid", "Mars"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u6-L8-SQ15",
+          question: "Chang'e 4 was first to land on the Moon's:",
+          options: ["Far side", "North pole", "Equator", "Near side"],
           correctIndex: 0,
         },
       ],

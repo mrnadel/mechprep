@@ -87,7 +87,7 @@ export const unit5: Unit = {
           id: "sp-u5-L0-T3",
           type: "teaching",
           question: "It Takes Incredible Speed",
-          explanation: "To reach orbit, a rocket must accelerate to about 28,000 km/h. That's roughly 8 km every second. It's not just about going up, it's about going fast enough to stay up.",
+          explanation: "To reach orbit, a rocket must accelerate to about 28,000 km/h, or roughly 8 km every second. It's not just about going up; it's about going fast enough to stay up.",
           hint: "A bullet travels about 1 km/s. Orbital velocity is 8 times faster than a bullet.",
         },
         {
@@ -157,7 +157,7 @@ export const unit5: Unit = {
           id: "sp-u5-L1-T2",
           type: "teaching",
           question: "No Air Needed",
-          explanation: "Rockets work in the vacuum of space because they carry their own fuel and oxidizer. They don't push against air. They push against their own exhaust.",
+          explanation: "Rockets work in the vacuum of space because they carry their own fuel and oxidizer. They push against their own exhaust, not air.",
           hint: "Try this now: blow up a balloon and let it go. It flies because the air rushing out pushes it forward. Same principle as a rocket.",
         },
         {
@@ -282,7 +282,7 @@ export const unit5: Unit = {
           id: "sp-u5-L2-T2",
           type: "teaching",
           question: "Escape Velocity Depends on Mass",
-          explanation: "Bigger planets have higher escape velocities. The Moon's is only 2.4 km/s. Jupiter's is 59.5 km/s. More mass means a stronger gravitational grip.",
+          explanation: "Bigger planets have higher escape velocities, from the Moon's 2.4 km/s to Jupiter's 59.5 km/s. More mass means a stronger gravitational grip.",
         },
         {
           id: "sp-u5-L2-Q2b",
@@ -333,7 +333,7 @@ export const unit5: Unit = {
           id: "sp-u5-L2-T3",
           type: "teaching",
           question: "Orbit vs Escape",
-          explanation: "Orbital velocity (staying in orbit) is about 7.8 km/s for Earth. Escape velocity (leaving entirely) is 11.2 km/s. Getting to orbit is hard. Leaving entirely is even harder.",
+          explanation: "Orbital velocity (staying in orbit) is about 7.8 km/s for Earth, while escape velocity (leaving entirely) is 11.2 km/s. Getting to orbit is hard, but leaving entirely is even harder.",
         },
         {
           id: "sp-u5-L2-Q5b",
@@ -397,21 +397,21 @@ export const unit5: Unit = {
           id: "sp-u5-L3-myth1",
           type: "teaching",
           question: "Myth: There is no gravity in space",
-          explanation: "Gravity extends infinitely and never truly disappears. At ISS altitude (400 km), gravity is still about 90% as strong as on Earth's surface. Astronauts float because they are in continuous free fall alongside their spacecraft, not because gravity is absent. The correct term is 'microgravity,' not 'zero gravity.'",
+          explanation: "Gravity extends infinitely and at ISS altitude (400 km) is still about 90% as strong as on Earth's surface. Astronauts float because they're in continuous free fall alongside their spacecraft, not because gravity is absent.",
           hint: "If there were no gravity in space, the Moon would fly away and Earth would leave its orbit around the Sun. Gravity is what holds the entire universe together.",
         },
         {
           id: "sp-u5-L3-myth2",
           type: "teaching",
           question: "Myth: Sound travels in space",
-          explanation: "Sound requires a medium (air, water, or solid material) to travel. Space is a near-perfect vacuum with essentially no molecules to vibrate. Explosions in space are completely silent. Every movie that shows booming spacecraft engines or dramatic explosion sounds in space is wrong.",
+          explanation: "Sound requires a medium like air or water to travel, and space is a near-perfect vacuum. Explosions in space are completely silent, despite what movies show.",
           hint: "In the movie Alien, the tagline 'In space, no one can hear you scream' is scientifically accurate. Most other sci-fi films ignore this fact entirely.",
         },
         {
           id: "sp-u5-L3-T1",
           type: "teaching",
           question: "Falling with Style",
-          explanation: "An orbit is continuous free fall. A satellite moves sideways so fast that as it falls toward Earth, the ground curves away beneath it. It keeps falling but never lands.",
+          explanation: "An orbit is continuous free fall where a satellite moves sideways so fast that the ground curves away beneath it. It keeps falling but never lands.",
         },
         {
           id: "sp-u5-L3-Q1",
@@ -443,13 +443,6 @@ export const unit5: Unit = {
           },
         },
         {
-          id: "sp-u5-L3-T2",
-          type: "teaching",
-          question: "Newton's Cannonball",
-          explanation: "Newton imagined firing a cannonball from a mountain. Fire it slow, it falls nearby. Fire it fast enough, and the curve of the fall matches the curve of the Earth. That's an orbit.",
-          hint: "Astronauts on the ISS feel weightless not because there's no gravity, but because they're in free fall alongside the station.",
-        },
-        {
           id: "sp-u5-L3-Q3",
           type: "true-false",
           question: "There is no gravity on the International Space Station.",
@@ -476,12 +469,6 @@ export const unit5: Unit = {
             1: 'The correct answer is About 90% as strong, not About 50% as strong',
             2: 'At 400 km, gravity is still about 90% of surface strength',
           },
-        },
-        {
-          id: "sp-u5-L3-T3",
-          type: "teaching",
-          question: "Higher Orbit, Slower Speed",
-          explanation: "Satellites closer to Earth orbit faster. The ISS at 400 km takes 90 minutes to circle Earth. GPS satellites at 20,200 km take 12 hours.",
         },
         {
           id: "sp-u5-L3-Q5",
@@ -553,7 +540,7 @@ export const unit5: Unit = {
           id: "sp-u5-L4-T1",
           type: "teaching",
           question: "Not All Orbits Are Equal",
-          explanation: "Different missions need different orbits. Low orbits for the ISS and imaging satellites. High orbits for communications. Polar orbits for Earth observation.",
+          explanation: "Different missions need different orbits: low for the ISS and imaging, high for communications, and polar for Earth observation. The altitude determines everything about the mission.",
         },
         {
           id: "sp-u5-L4-Q1",
@@ -587,7 +574,7 @@ export const unit5: Unit = {
           id: "sp-u5-L4-T2",
           type: "teaching",
           question: "Geostationary Orbit",
-          explanation: "At exactly 35,786 km above the equator, a satellite's orbital period matches Earth's rotation: 24 hours. From the ground, it appears motionless. That's why your satellite dish doesn't need to move.",
+          explanation: "At exactly 35,786 km above the equator, a satellite's orbital period matches Earth's 24-hour rotation. From the ground it appears motionless, which is why your satellite dish doesn't need to move.",
           hint: "Try this now: look at a satellite TV dish on a building. It points at one fixed spot in the sky where a geostationary satellite sits.",
         },
         {
@@ -676,7 +663,7 @@ export const unit5: Unit = {
           id: "sp-u5-L5-T1",
           type: "teaching",
           question: "The Tyranny of the Rocket Equation",
-          explanation: "A rocket must carry all its fuel from the start. But carrying fuel adds weight, which requires more fuel to lift. About 85-90% of a rocket's launch weight is just fuel.",
+          explanation: "A rocket must carry all its fuel from the start, but carrying fuel adds weight which requires even more fuel. About 85-90% of a rocket's launch weight is just fuel.",
         },
         {
           id: "sp-u5-L5-Q1",
@@ -710,7 +697,7 @@ export const unit5: Unit = {
           id: "sp-u5-L5-T2",
           type: "teaching",
           question: "Why Rockets Have Stages",
-          explanation: "Once a fuel tank is empty, it's dead weight. Staging means dropping empty tanks mid-flight so the remaining engines push less mass. This is far more efficient than a single giant rocket.",
+          explanation: "Once a fuel tank is empty, it's dead weight that staging drops mid-flight. This makes the remaining rocket far more efficient than a single giant vehicle.",
         },
         {
           id: "sp-u5-L5-Q2b",
@@ -805,7 +792,7 @@ export const unit5: Unit = {
           id: "sp-u5-L6-T1",
           type: "teaching",
           question: "The Reusability Problem",
-          explanation: "Before SpaceX, every rocket was thrown away after one use. Imagine buying a new airplane for every flight. Reusability was the key to making space affordable.",
+          explanation: "Before SpaceX, every rocket was thrown away after one use, like buying a new airplane for every flight. Reusability was the key to making space affordable.",
         },
         {
           id: "sp-u5-L6-Q1",
@@ -1123,6 +1110,24 @@ export const unit5: Unit = {
           question: "Rockets work in space because they push against:",
           options: ["Air", "Their own exhaust", "Gravity", "Magnetic fields"],
           correctIndex: 1,
+        },
+        {
+          id: "sp-u5-L8-SQ13",
+          question: "Sound in space is:",
+          options: ["Silent", "Loud", "Echoing", "Muffled"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u5-L8-SQ14",
+          question: "Polar orbits are used for:",
+          options: ["Earth observation", "TV broadcast", "GPS", "Space tourism"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u5-L8-SQ15",
+          question: "Orbital velocity for Earth is about:",
+          options: ["7.8 km/s", "11.2 km/s", "3 km/s", "1 km/s"],
+          correctIndex: 0,
         },
       ],
     },

@@ -21,7 +21,7 @@ export const unit2: Unit = {
           id: "sp-u2-L1-T1",
           type: "teaching",
           question: "From Stars to Our Star",
-          explanation: "In Unit 1 you learned that the Sun is a star. Now let's get up close. The Sun contains 99.86% of all the mass in our solar system. Everything else, every planet, moon, and asteroid, is a rounding error.",
+          explanation: "The Sun contains 99.86% of all the mass in our solar system. Every planet, moon, and asteroid combined is a rounding error.",
         },
         {
           id: "sp-u2-L1-Q1",
@@ -55,14 +55,8 @@ export const unit2: Unit = {
           id: "sp-u2-L1-myth1",
           type: "teaching",
           question: "Myth: The Sun is yellow",
-          explanation: "The Sun emits all visible wavelengths almost equally, making it a white star. It appears yellow, orange, or red from Earth's surface because our atmosphere scatters shorter blue wavelengths (Rayleigh scattering), leaving the warmer colors to dominate. Astronauts in space see the Sun as brilliant white.",
+          explanation: "The Sun actually emits all visible wavelengths almost equally, making it a white star. It appears yellow or orange from Earth because our atmosphere scatters blue wavelengths away.",
           hint: "Every crayon drawing shows a yellow sun, so we grow up believing it. But the Sun's peak emission is actually in the green part of the spectrum, and the mix of all wavelengths appears white.",
-        },
-        {
-          id: "sp-u2-L1-T2",
-          type: "teaching",
-          question: "The Sun's Vital Stats",
-          explanation: "The Sun is about 864,000 miles across, roughly 109 times Earth's diameter. Its surface temperature is about 10,000 degrees Fahrenheit, and its core reaches 27 million degrees.",
         },
         {
           id: "sp-u2-L1-Q2b",
@@ -106,7 +100,7 @@ export const unit2: Unit = {
           id: "sp-u2-L1-T3",
           type: "teaching",
           question: "Solar Flares and Space Weather",
-          explanation: "The Sun regularly blasts out bursts of energy called solar flares. These can disrupt satellites, radio signals, and power grids on Earth. They also create auroras near the poles.",
+          explanation: "The Sun regularly blasts out bursts of energy called solar flares that can disrupt satellites, radio signals, and power grids. They also create auroras near the poles.",
           hint: "Try this now: search \"aurora forecast\" to see if solar activity might create visible auroras near you.",
         },
         {
@@ -161,7 +155,7 @@ export const unit2: Unit = {
           id: "sp-u2-L2-T1",
           type: "teaching",
           question: "The Inner Four",
-          explanation: "Mercury, Venus, Earth, and Mars are the 4 rocky (terrestrial) planets. They're small, dense, and have solid surfaces you could stand on. They're the closest planets to the Sun.",
+          explanation: "Mercury, Venus, Earth, and Mars are the 4 rocky (terrestrial) planets. They're small, dense, and have solid surfaces, making them the closest planets to the Sun.",
         },
         {
           id: "sp-u2-L2-Q1",
@@ -185,7 +179,7 @@ export const unit2: Unit = {
           id: "sp-u2-L2-T2",
           type: "teaching",
           question: "The Greenhouse Effect Gone Wild",
-          explanation: "Venus shows what happens when a greenhouse effect runs out of control. Its thick CO2 atmosphere traps so much heat that lead would melt on its surface. It's a warning from space.",
+          explanation: "Venus shows what happens when a greenhouse effect runs wild. Its thick CO2 atmosphere traps so much heat that lead would melt on its surface.",
         },
         {
           id: "sp-u2-L2-Q3",
@@ -227,7 +221,7 @@ export const unit2: Unit = {
           id: "sp-u2-L2-T3",
           type: "teaching",
           question: "Mars: The Next Frontier",
-          explanation: "Mars is the most explored planet after Earth. Multiple rovers have driven on its surface. Scientists think Mars once had liquid water and may have supported microbial life.",
+          explanation: "Mars is the most explored planet after Earth, with multiple rovers on its surface. Scientists think it once had liquid water and may have supported microbial life.",
         },
         {
           id: "sp-u2-L2-Q6",
@@ -357,7 +351,7 @@ export const unit2: Unit = {
           id: "sp-u2-L3-T3",
           type: "teaching",
           question: "Saturn Would Float",
-          explanation: "Saturn's average density is lower than water. If you could find a bathtub big enough, Saturn would float in it. It's the least dense planet in the solar system.",
+          explanation: "Saturn's average density is lower than water, so if you could find a bathtub big enough, it would float. It's the least dense planet in the solar system.",
         },
         {
           id: "sp-u2-L3-Q6",
@@ -400,7 +394,7 @@ export const unit2: Unit = {
           id: "sp-u2-L4-T1",
           type: "teaching",
           question: "The Forgotten Worlds",
-          explanation: "Uranus and Neptune are ice giants: smaller than gas giants but still massive. They contain water, ammonia, and methane ices under thick atmospheres. Only Voyager 2 has ever visited them.",
+          explanation: "Uranus and Neptune are ice giants containing water, ammonia, and methane ices under thick atmospheres. Only Voyager 2 has ever visited them.",
         },
         {
           id: "sp-u2-L4-Q1",
@@ -434,7 +428,7 @@ export const unit2: Unit = {
           id: "sp-u2-L4-T2",
           type: "teaching",
           question: "Uranus Rolls on Its Side",
-          explanation: "Uranus spins almost completely on its side, tilted 98 degrees. Scientists believe a massive collision early in its history knocked it over. Its seasons are extreme: 42 years of sunlight, then 42 years of darkness at each pole.",
+          explanation: "Uranus spins almost completely on its side, tilted 98 degrees from a massive ancient collision. Its seasons are extreme: 42 years of sunlight, then 42 years of darkness at each pole.",
         },
         {
           id: "sp-u2-L4-Q3",
@@ -475,7 +469,7 @@ export const unit2: Unit = {
           id: "sp-u2-L4-T3",
           type: "teaching",
           question: "One Visit in 40 Years",
-          explanation: "Only Voyager 2 has flown past Uranus (1986) and Neptune (1989). No spacecraft has orbited either. Almost everything we know comes from that single flyby per planet.",
+          explanation: "Only Voyager 2 has flown past Uranus (1986) and Neptune (1989), with no spacecraft orbiting either. Almost everything we know comes from that single flyby per planet.",
         },
         {
           id: "sp-u2-L4-Q6",
@@ -529,7 +523,7 @@ export const unit2: Unit = {
           id: "sp-u2-L5-T1",
           type: "teaching",
           question: "Why Pluto Got Demoted",
-          explanation: "In 2006, astronomers created a new category called \"dwarf planet.\" To be a full planet, you must clear your orbit of other debris. Pluto shares its orbital zone with thousands of other objects, so it was reclassified.",
+          explanation: "In 2006, astronomers created the \"dwarf planet\" category because full planets must clear their orbit of debris. Pluto shares its orbital zone with thousands of objects, so it was reclassified.",
         },
         {
           id: "sp-u2-L5-Q1",
@@ -605,7 +599,7 @@ export const unit2: Unit = {
           id: "sp-u2-L5-T3",
           type: "teaching",
           question: "The Kuiper Belt",
-          explanation: "Beyond Neptune lies the Kuiper Belt, a vast ring of icy objects. Pluto and Eris live here. It's like a second, much larger asteroid belt, but made of ice instead of rock.",
+          explanation: "Beyond Neptune lies the Kuiper Belt, a vast ring of icy objects where Pluto and Eris live. It's like a second, much larger asteroid belt made of ice instead of rock.",
         },
         {
           id: "sp-u2-L5-Q6",
@@ -658,7 +652,7 @@ export const unit2: Unit = {
           id: "sp-u2-L6-T1",
           type: "teaching",
           question: "Not Just Our Moon",
-          explanation: "Our solar system has over 200 known moons. Jupiter alone has 95. Some moons are bigger than planets, some have oceans, and some have active volcanoes. They're worlds in their own right.",
+          explanation: "Our solar system has over 200 known moons, with Jupiter alone having 95. Some are bigger than planets, some have oceans, and some have active volcanoes.",
         },
         {
           id: "sp-u2-L6-Q1",
@@ -735,7 +729,7 @@ export const unit2: Unit = {
           id: "sp-u2-L6-T3",
           type: "teaching",
           question: "Io: A World of Volcanoes",
-          explanation: "Jupiter's moon Io is the most volcanically active body in the solar system. It has over 400 active volcanoes. Jupiter's immense gravity squeezes and stretches Io, generating the heat that drives all that volcanic activity.",
+          explanation: "Jupiter's moon Io is the most volcanically active body in the solar system with over 400 active volcanoes. Jupiter's immense gravity squeezes and stretches Io, generating the heat that drives all that activity.",
         },
         {
           id: "sp-u2-L6-Q6",
@@ -977,6 +971,24 @@ export const unit2: Unit = {
           question: "The most volcanically active body is:",
           options: ["Mars", "Io", "Venus", "Titan"],
           correctIndex: 1,
+        },
+        {
+          id: "sp-u2-L8-SQ13",
+          question: "The largest moon in the solar system is:",
+          options: ["Ganymede", "Titan", "Europa", "Triton"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u2-L8-SQ14",
+          question: "Ice giants contain large amounts of:",
+          options: ["Water and methane ices", "Pure hydrogen", "Liquid iron", "Carbon dioxide"],
+          correctIndex: 0,
+        },
+        {
+          id: "sp-u2-L8-SQ15",
+          question: "The Sun's color from space is:",
+          options: ["White", "Yellow", "Orange", "Red"],
+          correctIndex: 0,
         },
       ],
     },
