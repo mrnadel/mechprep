@@ -150,7 +150,7 @@ export const unit3: Unit = {
           id: "psy-u3-L2-T1",
           type: "teaching",
           question: "Two Memory Systems",
-          explanation: "Short-term memory holds about 7 items for 20-30 seconds. Long-term memory can store unlimited information for years. Getting info from short-term to long-term is the key to learning.",
+          explanation: "Short-term memory holds about 7 items for 20-30 seconds, while long-term memory can store unlimited information for years. Getting info from short-term to long-term is the key to learning.",
         },
         {
           id: "psy-u3-L2-Q1",
@@ -314,7 +314,7 @@ export const unit3: Unit = {
           id: "psy-u3-L3-T2",
           type: "teaching",
           question: "Why Cramming Fails",
-          explanation: "Cramming fights the forgetting curve at its steepest point. You learn everything right before the test, then forget most of it within hours. It's the least efficient way to study.",
+          explanation: "Cramming fights the forgetting curve at its steepest point, so you forget most of it within hours. It's the least efficient way to study.",
           hint: "Try this now: review something you learned yesterday for just 2 minutes. That tiny review dramatically slows forgetting.",
         },
         {
@@ -410,7 +410,7 @@ export const unit3: Unit = {
           id: "psy-u3-L4-myth1",
           type: "teaching",
           question: "Myth: Learning styles are real",
-          explanation: "The idea that people learn best as 'visual,' 'auditory,' or 'kinesthetic' learners has been tested repeatedly. No credible study has found that matching teaching to a student's preferred style improves outcomes. What works is using multiple modalities and active recall, regardless of preference.",
+          explanation: "The idea that people learn best as 'visual,' 'auditory,' or 'kinesthetic' learners has been tested repeatedly with no supporting evidence. What works is using multiple modalities and active recall, regardless of preference.",
           hint: "People have preferences for how they like to study, but preference does not equal effectiveness. You might prefer reading, but testing yourself works better for everyone.",
         },
         {
@@ -490,12 +490,6 @@ export const unit3: Unit = {
           },
         },
         {
-          id: "psy-u3-L4-T3",
-          type: "teaching",
-          question: "Why Struggle Helps",
-          explanation: "When retrieval feels hard, that's actually when learning is strongest. Easy recall means weak learning. Difficult recall means your brain is building stronger connections.",
-        },
-        {
           id: "psy-u3-L4-Q6",
           type: "true-false",
           question: "If recalling something feels easy, it means you've learned it very well.",
@@ -546,7 +540,7 @@ export const unit3: Unit = {
           id: "psy-u3-L5-T1",
           type: "teaching",
           question: "Memory Is Not a Recording",
-          explanation: "Most people think memory works like a video camera. It doesn't. Every time you recall a memory, your brain reconstructs it, and it can change details each time.",
+          explanation: "Memory doesn't work like a video camera. Every time you recall a memory, your brain reconstructs it and can change details each time.",
         },
         {
           id: "psy-u3-L5-Q1",
@@ -719,7 +713,7 @@ export const unit3: Unit = {
           id: "psy-u3-L6-T2",
           type: "teaching",
           question: "Stress: A Double-Edged Sword",
-          explanation: "A little stress sharpens focus and helps encoding. Too much stress floods the brain with cortisol, which blocks memory formation and retrieval. That's why you blank out during stressful exams.",
+          explanation: "A little stress sharpens focus and helps encoding. Too much stress floods the brain with cortisol, blocking memory formation, which is why you blank out during stressful exams.",
           hint: "Try this now: before your next study session, take 5 deep breaths. Lower stress means better encoding.",
         },
         {
@@ -779,7 +773,7 @@ export const unit3: Unit = {
           scenario: "Tom has a big exam in 3 days. He studied for 2 hours today but panics and decides to pull an all-nighter tomorrow to cram everything. He plans to drink 4 coffees to stay awake, skip his morning run, and study nonstop until the exam.",
           question: "Based on memory science, what is wrong with Tom's plan?",
           options: [
-            "Skipping sleep prevents memory consolidation, and high stress from cramming floods his brain with cortisol, blocking recall",
+            "Skipping sleep prevents memory consolidation and cramming stress blocks recall",
             "Nothing is wrong. More study hours always means more learning",
             "He should drink 6 coffees instead of 4 for better focus",
             "The morning run is the only real problem with his plan",
@@ -886,47 +880,22 @@ export const unit3: Unit = {
           message: "The exam is in 5 days. Should I just study everything again the night before?",
           options: [
             {
-              text: "No! Spread your study across all 5 days. Review today, skip a day, review again. Spaced repetition beats cramming every time.",
-              nextNodeId: "psy-u3-L7-C5",
+              text: "No! Spread your study across all 5 days with good sleep. Spaced repetition plus sleep beats cramming every time.",
+              nextNodeId: "psy-u3-L7-C6",
               quality: "great",
-              feedback: "Spaced repetition is the other power technique. Spreading reviews over days creates far stronger memories than one marathon session.",
+              feedback: "Spaced repetition and sleep are the power combo. Spreading reviews over days with proper rest creates far stronger memories.",
             },
             {
               text: "Yeah, one big session the night before should lock it in.",
-              nextNodeId: "psy-u3-L7-C5",
+              nextNodeId: "psy-u3-L7-C6",
               quality: "poor",
               feedback: "Cramming leads to rapid forgetting. The forgetting curve is steepest right after a single study session.",
             },
             {
               text: "Study every day for as long as possible until the exam.",
-              nextNodeId: "psy-u3-L7-C5",
-              quality: "okay",
-              feedback: "Daily study is good, but marathon sessions have diminishing returns. Shorter, spaced sessions work better.",
-            },
-          ],
-        },
-        {
-          id: "psy-u3-L7-C5",
-          speaker: "Alex",
-          message: "One more thing: I've been staying up past 2 AM to study. That's dedication, right?",
-          options: [
-            {
-              text: "That's actually hurting you. Your brain consolidates memories during sleep. Cutting sleep means cutting your ability to remember what you studied.",
-              nextNodeId: "psy-u3-L7-C6",
-              quality: "great",
-              feedback: "Sleep is when memory consolidation happens. Sacrificing sleep for study time is like pouring water into a bucket with no bottom.",
-            },
-            {
-              text: "Yeah, the more hours you put in, the more you learn.",
-              nextNodeId: "psy-u3-L7-C6",
-              quality: "poor",
-              feedback: "More hours awake doesn't mean more learning. Sleep-deprived brains encode and retrieve memories poorly.",
-            },
-            {
-              text: "It's fine as long as you drink enough coffee.",
               nextNodeId: "psy-u3-L7-C6",
               quality: "okay",
-              feedback: "Coffee keeps you awake but doesn't replace sleep's role in memory consolidation. You'll feel alert but still forget more.",
+              feedback: "Daily study is good, but marathon sessions have diminishing returns. Shorter, spaced sessions with good sleep work better.",
             },
           ],
         },
@@ -1019,6 +988,24 @@ export const unit3: Unit = {
           id: "psy-u3-L8-SQ12",
           question: "Cramming is bad because it:",
           options: ["Uses too much paper", "Causes fast forgetting", "Takes too little time", "Is too easy"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u3-L8-SQ13",
+          question: "Misleading info after an event changes memory via the:",
+          options: ["Placebo effect", "Misinformation effect", "Halo effect", "Anchoring effect"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u3-L8-SQ14",
+          question: "About what percent of wrongful convictions involve faulty eyewitness ID?",
+          options: ["10%", "30%", "70%", "90%"],
+          correctIndex: 2,
+        },
+        {
+          id: "psy-u3-L8-SQ15",
+          question: "Confidence in a memory means the memory is:",
+          options: ["Always accurate", "Not necessarily accurate", "Perfectly stored", "Never wrong"],
           correctIndex: 1,
         },
       ],

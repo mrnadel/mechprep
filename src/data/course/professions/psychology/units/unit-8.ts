@@ -21,7 +21,7 @@ export const unit8: Unit = {
           id: "psy-u8-L0-T1",
           type: "teaching",
           question: "Decisions Meet Money",
-          explanation: "In Unit 7 you learned how your brain takes shortcuts when deciding. Now let's see what happens when those shortcuts meet your wallet. The results are predictably irrational.",
+          explanation: "In Unit 7 you learned how your brain takes shortcuts when deciding. Now let's see what happens when those shortcuts meet your wallet.",
         },
         {
           id: "psy-u8-L0-Q1",
@@ -107,7 +107,7 @@ export const unit8: Unit = {
           id: "psy-u8-L0-T3",
           type: "teaching",
           question: "Predictably Irrational",
-          explanation: "The key word is 'predictably.' You don't make random mistakes with money. You make the same ones, over and over, in patterns that companies exploit daily.",
+          explanation: "You don't make random mistakes with money - you make the same predictable ones over and over. Companies exploit these patterns daily.",
         },
         {
           id: "psy-u8-L0-Q7",
@@ -394,7 +394,7 @@ export const unit8: Unit = {
           id: "psy-u8-L3-T1",
           type: "teaching",
           question: "Owning Changes Value",
-          explanation: "Once you own something, you value it more than before you owned it. This is called the endowment effect. It explains why sellers always think their stuff is worth more than buyers will pay.",
+          explanation: "Once you own something, you value it more than before you owned it - this is the endowment effect. It explains why sellers always think their stuff is worth more than buyers will pay.",
           hint: "The original coffee mug experiments were run at American universities. The endowment effect appears in most cultures tested, but it may be weaker in cultures where sharing and communal ownership are the norm.",
         },
         {
@@ -550,7 +550,7 @@ export const unit8: Unit = {
           id: "psy-u8-L4-T2",
           type: "teaching",
           question: "The Decoy Effect",
-          explanation: "A decoy is an option nobody is meant to pick. Its job is to make another option look better by comparison. Subscription plans use this constantly.",
+          explanation: "A decoy is an option nobody is meant to pick - its job is to make another option look better by comparison. Subscription plans use this constantly.",
           hint: "Next time you see 3 pricing tiers, look for the one that seems like a bad deal. That's probably the decoy.",
         },
         {
@@ -890,7 +890,7 @@ export const unit8: Unit = {
           scenario: "You are browsing an online store and find a jacket you like. The page shows: 'Was $200, now $89!' with a countdown timer reading '2 hours left!' and '23 people are viewing this right now.' You were not planning to buy a jacket today.",
           question: "How many behavioral economics tactics are being used on you in this moment?",
           options: [
-            "At least 3: price anchoring ($200 original), artificial scarcity (countdown timer), and social proof (23 viewers)",
+            "At least 3: price anchoring, artificial scarcity, and social proof",
             "Just 1: the discount is a genuine sale",
             "None. This is standard, honest product display",
             "2: the timer and the viewer count are tricks, but the price is real",
@@ -1006,7 +1006,32 @@ export const unit8: Unit = {
         {
           id: "psy-u8-L7-C6",
           speaker: "Alex",
-          message: "I can't believe I almost paid $300 for a $310 jacket and thought I was saving money. Thanks for the reality check!",
+          message: "Wow, so the 'deal' was barely a discount at all. How do I protect myself from this kind of thing in the future?",
+          options: [
+            {
+              text: "Always check the real market price before trusting a 'discount.' The 24-hour rule and comparison shopping are your best defenses.",
+              nextNodeId: "psy-u8-L7-C7",
+              quality: "great",
+              feedback: "Those two habits neutralize anchoring, scarcity pressure, and mental accounting in one go.",
+            },
+            {
+              text: "Just never buy anything on sale. Sales are always scams.",
+              nextNodeId: "psy-u8-L7-C7",
+              quality: "poor",
+              feedback: "Some sales are genuine. The point is to verify, not to avoid all spending.",
+            },
+            {
+              text: "Delete all shopping apps so you're never tempted.",
+              nextNodeId: "psy-u8-L7-C7",
+              quality: "okay",
+              feedback: "Reducing exposure helps, but learning to spot the tricks is a more sustainable defense.",
+            },
+          ],
+        },
+        {
+          id: "psy-u8-L7-C7",
+          speaker: "Alex",
+          message: "Got it. Check the real price, wait 24 hours, and don't treat refunds as free money. I feel way smarter about shopping now!",
         },
       ],
     },
@@ -1094,6 +1119,24 @@ export const unit8: Unit = {
           options: ["Endowment effect", "Hyperbolic discounting", "Charm pricing", "Decoy effect"],
           correctIndex: 1,
         },
+        {
+          id: "psy-u8-L8-SQ13",
+          question: "A fake countdown timer creates:",
+          options: ["Trust", "Artificial scarcity", "Loyalty", "Savings"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u8-L8-SQ14",
+          question: "You value something more once you own it due to the:",
+          options: ["Halo effect", "Endowment effect", "Framing effect", "Decoy effect"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u8-L8-SQ15",
+          question: "The best defense against price anchoring is:",
+          options: ["Ignoring all prices", "Checking real market value first", "Always buying cheapest", "Waiting forever"],
+          correctIndex: 1,
+        },
       ],
     },
     // ===== REVIEW LESSON: Social, Personality, Decisions & Behavioral Econ Review =====
@@ -1104,6 +1147,18 @@ export const unit8: Unit = {
       icon: '📝',
       xpReward: 25,
       questions: [
+        {
+          id: "psy-u8-rev-T1",
+          type: "teaching",
+          question: "Review: Social Forces to Money Traps",
+          explanation: "This review covers Units 5-8: social influence, personality science, decision-making, and behavioral economics. These topics connect because understanding how others and your own brain influence you is the key to better choices.",
+        },
+        {
+          id: "psy-u8-rev-T2",
+          type: "teaching",
+          question: "Key Themes",
+          explanation: "Groups pressure you to conform, personality shapes your tendencies, decision shortcuts can mislead, and money triggers predictable irrationality. Awareness of all four makes you harder to manipulate.",
+        },
         {
           id: "psy-u8-rev-Q1",
           type: "multiple-choice",
@@ -1182,7 +1237,7 @@ export const unit8: Unit = {
           question: "Why do psychologists consider Myers-Briggs (MBTI) less reliable than the Big Five?",
           options: [
             "MBTI has too many categories",
-            "MBTI puts people in fixed boxes, while Big Five measures traits on a spectrum with strong research support",
+            "MBTI uses fixed boxes; Big Five measures traits on a spectrum",
             "MBTI was invented more recently",
             "Big Five only measures intelligence",
           ],

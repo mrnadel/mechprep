@@ -21,7 +21,7 @@ export const unit2: Unit = {
           id: "psy-u2-L1-T1",
           type: "teaching",
           question: "Your Brain Loves Shortcuts",
-          explanation: "Your brain processes millions of inputs every day. To keep up, it uses mental shortcuts called heuristics. They're fast and usually helpful, but sometimes they lead to predictable errors called cognitive biases.",
+          explanation: "Your brain processes millions of inputs every day using mental shortcuts called heuristics. They're usually helpful, but sometimes they lead to predictable errors called cognitive biases.",
           hint: "Most cognitive bias research was conducted with Western, educated participants. Some biases (like the availability heuristic) appear universal, while others vary across cultures.",
         },
         {
@@ -80,7 +80,7 @@ export const unit2: Unit = {
           id: "psy-u2-L1-T3",
           type: "teaching",
           question: "Over 180 Cognitive Biases",
-          explanation: "Psychologists have identified over 180 cognitive biases. You don't need to memorize them all. The most powerful step is simply knowing that your brain takes shortcuts.",
+          explanation: "Psychologists have identified over 180 cognitive biases. The most powerful step is simply knowing that your brain takes shortcuts.",
         },
         {
           id: "psy-u2-L1-Q5",
@@ -446,7 +446,7 @@ export const unit2: Unit = {
           id: "psy-u2-L4-T2",
           type: "teaching",
           question: "The Media Effect",
-          explanation: "News outlets report dramatic, unusual events because they attract attention. This floods your memory with rare events, making your brain treat them as common. The news is a highlight reel, not a statistical report.",
+          explanation: "News outlets report dramatic, unusual events because they attract attention. This floods your memory with rare events, making your brain treat them as common.",
           hint: "Try this now: think about what you'd estimate as the biggest health risk. Then look up the actual leading causes of death. Surprised?",
         },
         {
@@ -576,7 +576,7 @@ export const unit2: Unit = {
           id: "psy-u2-L5-T2",
           type: "teaching",
           question: "The Flip Side: Impostor Syndrome",
-          explanation: "Impostor syndrome is when skilled, accomplished people feel like frauds who will be 'found out.' About 70% of people experience it at some point. It's especially common after promotions or achievements.",
+          explanation: "Impostor syndrome is when skilled, accomplished people feel like frauds who will be 'found out.' About 70% of people experience it at some point, especially after promotions or achievements.",
           hint: "Try this now: think of something you're good at. Do you sometimes feel like you just got lucky? That's a taste of impostor syndrome.",
         },
         {
@@ -636,7 +636,7 @@ export const unit2: Unit = {
           scenario: "Marcus just finished a 2-hour online course on stock trading. He immediately tells his friends he is ready to quit his job and become a day trader. He says, 'I have figured out how the market works. It is not that complicated.'",
           question: "What cognitive bias is Marcus most likely experiencing?",
           options: [
-            "The Dunning-Kruger effect: he overestimates his ability because he does not yet see what he does not know",
+            "Dunning-Kruger effect: he overestimates his ability because he can't see his gaps",
             "Impostor syndrome: he secretly doubts himself but acts confident",
             "Confirmation bias: he only sees evidence that supports his plan",
             "Loss aversion: he is afraid of losing his current job",
@@ -994,6 +994,24 @@ export const unit2: Unit = {
           question: "The best first defense against biases is:",
           options: ["Eliminating emotions", "Awareness", "Avoiding decisions", "Being smarter"],
           correctIndex: 1,
+        },
+        {
+          id: "psy-u2-L8-SQ13",
+          question: "Smart people are immune to biases:",
+          options: ["True", "False", "Only experts", "Only with training"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u2-L8-SQ14",
+          question: "After a plane crash, people overestimate flying risk due to:",
+          options: ["Anchoring", "Confirmation bias", "Availability heuristic", "Framing"],
+          correctIndex: 2,
+        },
+        {
+          id: "psy-u2-L8-SQ15",
+          question: "Asking 'What would change my mind?' fights:",
+          options: ["Anchoring", "Availability", "Confirmation bias", "Sunk cost"],
+          correctIndex: 2,
         },
       ],
     },

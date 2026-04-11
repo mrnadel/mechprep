@@ -55,7 +55,7 @@ export const unit6: Unit = {
           id: "psy-u6-L0-T2",
           type: "teaching",
           question: "Traits vs States",
-          explanation: "A trait is a stable pattern (you're generally anxious). A state is temporary (you feel anxious right now because of an exam). Personality psychology focuses on traits.",
+          explanation: "A trait is a stable pattern (you're generally anxious), while a state is temporary (you feel anxious right now because of an exam). Personality psychology focuses on traits.",
         },
         {
           id: "psy-u6-L0-Q3",
@@ -150,7 +150,7 @@ export const unit6: Unit = {
           id: "psy-u6-L1-T2",
           type: "teaching",
           question: "Spectrums, Not Labels",
-          explanation: "You're not 'an extrovert' or 'an introvert.' You fall somewhere on the extraversion spectrum. Most people are in the middle, not at the extremes.",
+          explanation: "You're not 'an extrovert' or 'an introvert' - you fall somewhere on the extraversion spectrum. Most people are in the middle, not at the extremes.",
         },
         {
           id: "psy-u6-L1-Q3",
@@ -289,7 +289,7 @@ export const unit6: Unit = {
           id: "psy-u6-L2-T2",
           type: "teaching",
           question: "Types vs Spectrums",
-          explanation: "MBTI puts you in a box: you're either Thinking or Feeling. But personality traits exist on a spectrum. Someone who scores 51% Thinking and 49% Feeling gets labeled 'Thinker,' hiding the nuance.",
+          explanation: "MBTI puts you in a box: you're either Thinking or Feeling, but personality traits exist on a spectrum. Someone who scores 51% Thinking gets labeled 'Thinker,' hiding the nuance.",
         },
         {
           id: "psy-u6-L2-Q3",
@@ -330,7 +330,7 @@ export const unit6: Unit = {
           id: "psy-u6-L2-T3",
           type: "teaching",
           question: "Why People Love It Anyway",
-          explanation: "MBTI is popular because the types feel meaningful and personal. It gives you a label and a community. The Barnum effect also helps: descriptions are vague enough to feel accurate for almost anyone.",
+          explanation: "MBTI is popular because the types feel meaningful and personal, giving you a label and a community. The Barnum effect helps too - descriptions are vague enough to feel accurate for almost anyone.",
         },
         {
           id: "psy-u6-L2-Q6",
@@ -366,9 +366,9 @@ export const unit6: Unit = {
           scenario: "A tech company rejected a strong software engineer candidate because her MBTI type was ISFP, and the hiring manager believes only INTJ and ENTJ types make good engineers. The candidate had 8 years of experience and excellent references.",
           question: "What is wrong with the hiring manager's approach?",
           options: [
-            "MBTI has low test-retest reliability, does not predict job performance, and the decision ignores actual evidence of competence",
+            "MBTI has low reliability, doesn't predict job performance, and ignores her actual competence",
             "Nothing. Personality types are a valid way to predict job fit",
-            "The problem is that ISFP types can be good engineers too, but only in creative roles",
+            "ISFP types can be good engineers too, but only in creative roles",
             "MBTI is fine for hiring, but the manager should also check other personality tests",
           ],
           correctIndex: 0,
@@ -394,7 +394,7 @@ export const unit6: Unit = {
           id: "psy-u6-L3-T1",
           type: "teaching",
           question: "The Oldest Debate in Psychology",
-          explanation: "Nature is what you're born with (genes, biology). Nurture is your environment (parenting, culture, experiences). Modern psychology says it's never one or the other. It's always both.",
+          explanation: "Nature is what you're born with (genes, biology), while nurture is your environment (parenting, culture, experiences). Modern psychology says it's always both working together.",
         },
         {
           id: "psy-u6-L3-Q1",
@@ -418,7 +418,7 @@ export const unit6: Unit = {
           id: "psy-u6-L3-T2",
           type: "teaching",
           question: "Genes Are Not Destiny",
-          explanation: "Genes create predispositions, not certainties. You might have a genetic tendency toward anxiety, but your environment determines whether it develops. Genes load the gun, environment pulls the trigger.",
+          explanation: "Genes create predispositions, not certainties - you might have a genetic tendency toward anxiety, but your environment determines whether it develops. Genes load the gun, environment pulls the trigger.",
         },
         {
           id: "psy-u6-L3-Q3",
@@ -571,7 +571,7 @@ export const unit6: Unit = {
           id: "psy-u6-L4-T3",
           type: "teaching",
           question: "Self-Concept Can Change",
-          explanation: "Your self-concept isn't fixed. New experiences, feedback, and deliberate effort can reshape how you see yourself. Therapy, mentoring, and even small wins can shift deeply held beliefs.",
+          explanation: "Your self-concept isn't fixed - new experiences, feedback, and deliberate effort can reshape how you see yourself. Even small wins can shift deeply held beliefs about who you are.",
         },
         {
           id: "psy-u6-L4-Q6",
@@ -634,7 +634,7 @@ export const unit6: Unit = {
           id: "psy-u6-L5-T1",
           type: "teaching",
           question: "Two Ways to See Ability",
-          explanation: "Carol Dweck's research found two mindsets. Fixed mindset: 'My intelligence is set, I can't change it.' Growth mindset: 'I can develop my abilities through effort and learning.'",
+          explanation: "Carol Dweck's research found two mindsets: fixed ('My intelligence is set') and growth ('I can develop my abilities through effort'). Your mindset shapes how you respond to challenges.",
         },
         {
           id: "psy-u6-L5-Q1",
@@ -709,7 +709,7 @@ export const unit6: Unit = {
           id: "psy-u6-L5-T3",
           type: "teaching",
           question: "Mindset Is Not All-or-Nothing",
-          explanation: "You can have a growth mindset about some things and a fixed mindset about others. You might believe you can improve at cooking but feel 'I'll never be good at math.' Awareness is the first step to shifting.",
+          explanation: "You can have a growth mindset about some things and a fixed mindset about others. Awareness of where you feel 'stuck' is the first step to shifting.",
           hint: "Try this now: think of one skill you believe you 'just can't' do. Would a growth mindset change your approach?",
         },
         {
@@ -928,6 +928,36 @@ export const unit6: Unit = {
           question: "Epigenetics shows that environment can:",
           options: ["Turn genes on/off", "Delete DNA", "Create new genes", "Stop aging"],
           correctIndex: 0,
+        },
+        {
+          id: "psy-u6-L7-SQ11",
+          question: "Self-concept is:",
+          options: ["Your IQ score", "How you see yourself", "Your blood type", "Your birth order"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u6-L7-SQ12",
+          question: "Growth mindset believes abilities are:",
+          options: ["Fixed at birth", "Developable through effort", "Determined by genes", "Unchangeable"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u6-L7-SQ13",
+          question: "The Barnum effect makes vague descriptions feel:",
+          options: ["Boring", "Personally accurate", "Scientific", "Useless"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u6-L7-SQ14",
+          question: "MBTI test-retest reliability is:",
+          options: ["Very high", "Low", "Perfect", "Unmeasured"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u6-L7-SQ15",
+          question: "Twin studies help separate:",
+          options: ["Age and height", "Nature and nurture", "Left and right brain", "Memory types"],
+          correctIndex: 1,
         },
       ],
     },

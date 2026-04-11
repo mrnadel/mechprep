@@ -21,7 +21,7 @@ export const unit4: Unit = {
           id: "psy-u4-L1-T1",
           type: "teaching",
           question: "More Than Just Feelings",
-          explanation: "Emotions aren't random. They're your brain's fast-alert system, evolved to help you survive. Fear keeps you from danger. Disgust keeps you from rotten food. Every emotion has a job.",
+          explanation: "Emotions aren't random - they're your brain's fast-alert system, evolved to help you survive. Fear keeps you from danger, disgust keeps you from rotten food, and every emotion has a job.",
         },
         {
           id: "psy-u4-L1-Q1",
@@ -97,7 +97,7 @@ export const unit4: Unit = {
           id: "psy-u4-L1-T3",
           type: "teaching",
           question: "Emotions vs Moods",
-          explanation: "Emotions are short and intense: you feel fear for seconds or minutes. Moods are longer and milder: you feel 'down' for hours or days. Emotions have clear triggers. Moods often don't.",
+          explanation: "Emotions are short and intense with clear triggers, while moods are longer, milder, and often have no obvious cause. Fear lasts seconds, but feeling 'off' can last all day.",
         },
         {
           id: "psy-u4-L1-Q6",
@@ -151,15 +151,8 @@ export const unit4: Unit = {
           id: "psy-u4-L2-myth1",
           type: "teaching",
           question: "Myth: Venting anger helps reduce it",
-          explanation: "Research consistently shows that venting (punching pillows, screaming, ranting) actually increases anger and aggression rather than reducing them. It rehearses the emotion instead of resolving it. What does work: pausing, deep breathing, and cognitive reappraisal (reframing the situation).",
+          explanation: "Research consistently shows that venting (punching pillows, screaming, ranting) actually increases anger rather than reducing it. What does work is pausing, deep breathing, and reframing the situation.",
           hint: "The catharsis myth goes back to Freud, but modern studies show 'letting it out' primes your brain for more anger, not less. Cool-down strategies beat blowups every time.",
-        },
-        {
-          id: "psy-u4-L2-myth2",
-          type: "teaching",
-          question: "Myth: People grieve in 5 stages",
-          explanation: "Kubler-Ross's five stages (denial, anger, bargaining, depression, acceptance) were originally about people facing their own death, not general grief. Research shows grief is messy and nonlinear. Most people do not move through neat stages. They oscillate between coping and confronting loss in their own way.",
-          hint: "The stages model became popular because it feels orderly. But real grief does not follow a script, and telling grieving people they are 'in the wrong stage' can be harmful.",
         },
         {
           id: "psy-u4-L2-T1",
@@ -196,12 +189,6 @@ export const unit4: Unit = {
           },
         },
         {
-          id: "psy-u4-L2-T2",
-          type: "teaching",
-          question: "Why These Six?",
-          explanation: "Each basic emotion solved a recurring survival problem. Happiness motivates repeating good behaviors. Fear avoids danger. Disgust avoids disease. Anger protects resources. Sadness signals for help. Surprise triggers alertness.",
-        },
-        {
           id: "psy-u4-L2-Q3",
           type: "order-steps",
           question: "Put these emotional response steps in order from trigger to action:",
@@ -230,7 +217,7 @@ export const unit4: Unit = {
           id: "psy-u4-L2-T3",
           type: "teaching",
           question: "Beyond the Big Six",
-          explanation: "Some researchers argue there are more basic emotions (like contempt or awe). Others say there are fewer. But Ekman's 6 remain the most widely accepted starting point in emotion science.",
+          explanation: "Some researchers argue there are more basic emotions (like contempt or awe), while others say there are fewer. Ekman's 6 remain the most widely accepted starting point in emotion science.",
         },
         {
           id: "psy-u4-L2-Q6",
@@ -293,7 +280,7 @@ export const unit4: Unit = {
           id: "psy-u4-L3-T1",
           type: "teaching",
           question: "Your Built-In Alarm System",
-          explanation: "When your brain detects a threat, it triggers the fight-flight-freeze response in milliseconds. Your heart races, muscles tense, and digestion stops. Your body is preparing for survival.",
+          explanation: "When your brain detects a threat, it triggers the fight-flight-freeze response in milliseconds. Your heart races, muscles tense, and digestion stops as your body prepares for survival.",
         },
         {
           id: "psy-u4-L3-Q1",
@@ -327,7 +314,7 @@ export const unit4: Unit = {
           id: "psy-u4-L3-T2",
           type: "teaching",
           question: "What Happens in Your Body",
-          explanation: "During fight-or-flight, adrenaline floods your system. Your heart pumps faster, breathing speeds up, pupils dilate, and non-essential functions (like digestion) shut down. Everything redirects to survival.",
+          explanation: "During fight-or-flight, adrenaline floods your system and non-essential functions like digestion shut down. Everything redirects to survival: faster heart rate, quicker breathing, and dilated pupils.",
           hint: "Try this now: recall a time you were startled. Did you notice a racing heart, fast breathing, or tunnel vision? That was fight-or-flight.",
         },
         {
@@ -369,7 +356,7 @@ export const unit4: Unit = {
           id: "psy-u4-L3-T3",
           type: "teaching",
           question: "The Freeze Response",
-          explanation: "Fight and flight get all the attention, but freeze is just as common. When a threat feels overwhelming, your body locks up. It's why people 'go blank' during exams or 'freeze up' during confrontations.",
+          explanation: "Fight and flight get all the attention, but freeze is just as common. When a threat feels overwhelming, your body locks up, which is why people 'go blank' during exams.",
         },
         {
           id: "psy-u4-L3-Q6",
@@ -385,9 +372,9 @@ export const unit4: Unit = {
           id: "psy-u4-L3-Q7",
           type: "order-steps",
           question: "Put the fight-or-flight response in order from trigger to recovery:",
-          steps: ["Your brain detects a potential threat", "The amygdala sends an alarm signal", "Adrenaline floods your body", "Heart rate and breathing increase", "You fight, flee, or freeze", "The threat passes and your body slowly calms down"],
-          correctOrder: [0, 1, 2, 3, 4, 5],
-          explanation: "The stress response follows a clear sequence: threat detection, amygdala alarm, adrenaline release, physical changes, behavioral response, and then gradual recovery.",
+          steps: ["Your brain detects a potential threat", "The amygdala sends an alarm and adrenaline floods your body", "Heart rate and breathing increase, muscles tense", "You fight, flee, or freeze", "The threat passes and your body slowly calms down"],
+          correctOrder: [0, 1, 2, 3, 4],
+          explanation: "The stress response follows a clear sequence: threat detection, amygdala alarm with adrenaline release, physical changes, behavioral response, and then gradual recovery.",
         },
         {
           id: "psy-u4-L3-Q8",
@@ -498,7 +485,7 @@ export const unit4: Unit = {
           id: "psy-u4-L4-T3",
           type: "teaching",
           question: "When Rewards Do Work",
-          explanation: "Extrinsic rewards work well for tasks that are boring or repetitive, where there's no intrinsic motivation to undermine. Paying someone to do data entry makes sense. Paying an artist per painting can backfire.",
+          explanation: "Extrinsic rewards work well for boring or repetitive tasks where there's no intrinsic motivation to undermine. Paying someone for data entry makes sense, but paying an artist per painting can backfire.",
         },
         {
           id: "psy-u4-L4-Q6",
@@ -562,7 +549,7 @@ export const unit4: Unit = {
           id: "psy-u4-L5-T1",
           type: "teaching",
           question: "The Motivation Molecule",
-          explanation: "Dopamine isn't really the 'pleasure chemical.' It's the 'wanting' chemical. It makes you anticipate rewards and drives you to seek them. The craving, not the satisfaction, is dopamine's job.",
+          explanation: "Dopamine isn't really the 'pleasure chemical' - it's the 'wanting' chemical that makes you anticipate rewards. The craving, not the satisfaction, is dopamine's job.",
         },
         {
           id: "psy-u4-L5-Q1",
@@ -596,7 +583,7 @@ export const unit4: Unit = {
           id: "psy-u4-L5-T2",
           type: "teaching",
           question: "Variable Rewards: The Slot Machine Effect",
-          explanation: "Unpredictable rewards trigger more dopamine than predictable ones. That's why checking social media is addictive: you never know if you'll get 0 likes or 100. Slot machines use the same principle.",
+          explanation: "Unpredictable rewards trigger more dopamine than predictable ones. That's why social media and slot machines are so addictive - you never know what you'll get.",
         },
         {
           id: "psy-u4-L5-Q3",
@@ -637,7 +624,7 @@ export const unit4: Unit = {
           id: "psy-u4-L5-T3",
           type: "teaching",
           question: "Tolerance and the Hedonic Treadmill",
-          explanation: "Your brain adapts to repeated rewards by reducing its dopamine response. The first bite of cake is amazing. The tenth is just okay. This is why you need more and more of something to feel the same level of excitement.",
+          explanation: "Your brain adapts to repeated rewards by reducing its dopamine response, so the first bite of cake is amazing but the tenth is just okay. This is why you need more and more of something to feel the same excitement.",
         },
         {
           id: "psy-u4-L5-Q6",
@@ -1004,6 +991,24 @@ export const unit4: Unit = {
           options: ["Boring", "Exciting", "Overwhelming", "Predictable"],
           correctIndex: 2,
         },
+        {
+          id: "psy-u4-L8-SQ13",
+          question: "Intrinsic motivation comes from:",
+          options: ["External rewards", "Fear of punishment", "Personal enjoyment", "Social pressure"],
+          correctIndex: 2,
+        },
+        {
+          id: "psy-u4-L8-SQ14",
+          question: "The overjustification effect means external rewards can:",
+          options: ["Boost creativity", "Kill intrinsic motivation", "Improve focus", "Build habits"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u4-L8-SQ15",
+          question: "Your brain adapts to repeated rewards through:",
+          options: ["Sensitization", "Tolerance", "Amplification", "Deletion"],
+          correctIndex: 1,
+        },
       ],
     },
     // ===== REVIEW LESSON: Brain, Biases, Memory & Emotions Review =====
@@ -1014,6 +1019,18 @@ export const unit4: Unit = {
       icon: '📝',
       xpReward: 25,
       questions: [
+        {
+          id: "psy-u4-rev-T1",
+          type: "teaching",
+          question: "Review: Your Brain and Biases",
+          explanation: "You've learned how your brain processes information using shortcuts that sometimes lead to errors. This review tests your understanding of the brain, cognitive biases, memory, and emotions.",
+        },
+        {
+          id: "psy-u4-rev-T2",
+          type: "teaching",
+          question: "Key Themes So Far",
+          explanation: "The big ideas: your brain takes shortcuts (biases), memory is reconstructive (not a recording), and emotions are fast survival signals. Awareness of these patterns is the first step to thinking clearly.",
+        },
         {
           id: "psy-u4-rev-Q1",
           type: "multiple-choice",

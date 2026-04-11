@@ -18,12 +18,6 @@ export const unit1: Unit = {
       xpReward: 10,
       questions: [
         {
-          id: "psy-u1-L1-T0",
-          type: "teaching",
-          question: "Welcome to Psychology",
-          explanation: "This course explores how your mind works. You'll discover why you think, feel, and act the way you do. No textbook required, just curiosity.",
-        },
-        {
           id: "psy-u1-L1-Q1",
           type: "true-false",
           question: "Your brain controls your thoughts, emotions, and movements.",
@@ -37,15 +31,8 @@ export const unit1: Unit = {
           id: "psy-u1-L1-myth1",
           type: "teaching",
           question: "Myth: Psychology is just common sense",
-          explanation: "Many psychological findings directly contradict common sense. People predict they would refuse to shock someone in Milgram's experiment, yet 65% obeyed. We think venting anger helps, but it increases it. 'Common sense' often means untested assumptions that feel right but are wrong.",
+          explanation: "Many psychological findings directly contradict common sense. 'Common sense' often means untested assumptions that feel right but are wrong.",
           hint: "Common sense said the Earth was flat and that heavier objects fall faster. Psychology replaced gut feelings with experiments, and the results surprised everyone.",
-        },
-        {
-          id: "psy-u1-L1-myth2",
-          type: "teaching",
-          question: "Myth: We only use 10% of our brain",
-          explanation: "Brain scans show that virtually every region of the brain is active over the course of a day. Even during sleep, large networks remain engaged. There is no dormant 90% waiting to be unlocked. The myth is completely false.",
-          hint: "This myth sells self-help books and sci-fi movies. It likely started from a misquote about how we only understand 10% of how the brain works, which was then twisted into 'we only use 10%.'",
         },
         {
           id: "psy-u1-L1-T1",
@@ -84,7 +71,7 @@ export const unit1: Unit = {
           id: "psy-u1-L1-T2",
           type: "teaching",
           question: "Three Key Brain Regions",
-          explanation: "The cerebrum handles thinking and decision-making. The cerebellum manages balance and coordination. The brain stem controls automatic functions like breathing.",
+          explanation: "The cerebrum handles thinking, the cerebellum manages balance, and the brain stem controls automatic functions like breathing. Each region specializes in different tasks.",
         },
         {
           id: "psy-u1-L1-Q4",
@@ -121,13 +108,6 @@ export const unit1: Unit = {
             2: 'The frontal lobe handles planning, decision-making, and personality',
             3: 'The frontal lobe handles planning, decision-making, and personality',
           },
-        },
-        {
-          id: "psy-u1-L1-T3",
-          type: "teaching",
-          question: "Your Brain Never Stops",
-          explanation: "Even while you sleep, your brain stays active. It processes memories, repairs cells, and clears out waste products. Sleep isn't downtime for your brain.",
-          hint: "Try this now: tonight, notice how a problem feels easier to solve after sleeping on it.",
         },
         {
           id: "psy-u1-L1-Q7",
@@ -188,7 +168,7 @@ export const unit1: Unit = {
           id: "psy-u1-L2-T2",
           type: "teaching",
           question: "How Neurons Talk to Each Other",
-          explanation: "Neurons don't actually touch. There's a tiny gap between them called a synapse. Chemicals called neurotransmitters carry the message across this gap.",
+          explanation: "Neurons don't actually touch - there's a tiny gap between them called a synapse. Chemicals called neurotransmitters carry the message across this gap.",
           hint: "Think of it like passing a note across a desk. The note is the neurotransmitter, the gap is the synapse.",
         },
         {
@@ -275,14 +255,8 @@ export const unit1: Unit = {
           id: "psy-u1-L3-myth1",
           type: "teaching",
           question: "Myth: Left-brain = logical, right-brain = creative",
-          explanation: "A University of Utah study scanned over 1,000 brains and found zero evidence that people are dominated by one hemisphere. Both sides work together on every task. You are not 'left-brained' or 'right-brained.' You are whole-brained.",
+          explanation: "A University of Utah study scanned over 1,000 brains and found zero evidence of hemisphere dominance. Both sides work together on every task.",
           hint: "This myth spread because certain functions do lean slightly toward one hemisphere (language = left, spatial = right). But 'lean slightly' became 'completely separate' in pop culture.",
-        },
-        {
-          id: "psy-u1-L3-T1",
-          type: "teaching",
-          question: "The Left Brain / Right Brain Myth",
-          explanation: "You've probably heard that logical people are 'left-brained' and creative people are 'right-brained.' Brain scans show this isn't how it works. Both sides work together on virtually everything.",
         },
         {
           id: "psy-u1-L3-Q1",
@@ -340,7 +314,7 @@ export const unit1: Unit = {
           id: "psy-u1-L3-T3",
           type: "teaching",
           question: "Why Brain Myths Matter",
-          explanation: "Brain myths can limit people. If you believe you're 'not a math person' because you're 'right-brained,' you might stop trying. Understanding neuroplasticity means knowing you can improve at anything.",
+          explanation: "Brain myths can limit people - believing you're 'not a math person' because you're 'right-brained' might stop you from trying. Understanding neuroplasticity means knowing you can improve at anything.",
         },
         {
           id: "psy-u1-L3-Q5",
@@ -516,7 +490,7 @@ export const unit1: Unit = {
           scenario: "Lena is studying for an exam tomorrow. She has her phone next to her with notifications on, 15 browser tabs open, and the TV playing in the background. She has been switching between her notes and texting for 2 hours and feels like she has not learned anything.",
           question: "Based on what you know about attention, what should Lena do?",
           options: [
-            "Put her phone in another room, close extra tabs, turn off the TV, and do 25-minute focused blocks",
+            "Remove all distractions and do 25-minute focused blocks",
             "Keep multitasking but try harder to concentrate",
             "Add music to help her focus while keeping everything else the same",
             "Study for another 4 hours the same way to make up for lost time",
@@ -608,38 +582,7 @@ export const unit1: Unit = {
         {
           id: "psy-u1-L5-C5",
           speaker: "Alex",
-          message: "That makes sense. So Freud was the one who really popularized the idea of the unconscious mind. He compared it to an iceberg, right?",
-          nextNodeId: "psy-u1-L5-C6",
-        },
-        {
-          id: "psy-u1-L5-C6",
-          speaker: "Alex",
-          message: "In Freud's iceberg model, what does the part above water represent?",
-          options: [
-            {
-              text: "The conscious mind: everything you're currently aware of thinking and feeling.",
-              nextNodeId: "psy-u1-L5-C7",
-              quality: "great",
-              feedback: "That's right. Freud said the tip of the iceberg is your conscious awareness, while the vast mass below the surface is unconscious.",
-            },
-            {
-              text: "The unconscious mind, because that's the most important part.",
-              nextNodeId: "psy-u1-L5-C7",
-              quality: "poor",
-              feedback: "It's actually the opposite. The tip above water is the small conscious part. The huge mass below is the unconscious.",
-            },
-            {
-              text: "Your memories, since they're always accessible.",
-              nextNodeId: "psy-u1-L5-C7",
-              quality: "okay",
-              feedback: "Some memories are conscious, but many are stored below awareness. Freud placed most memories in the preconscious or unconscious.",
-            },
-          ],
-        },
-        {
-          id: "psy-u1-L5-C7",
-          speaker: "Narrator",
-          message: "You and Alex agree that the unconscious mind is like a powerful engine running beneath the surface. It handles pattern recognition, habits, emotions, and so much more, all without asking for your permission.",
+          message: "That makes sense. Freud compared the unconscious to an iceberg, with the conscious mind as just the tip above water. The vast mass below represents everything happening outside your awareness.",
           nextNodeId: "psy-u1-L5-C8",
         },
         {
@@ -756,6 +699,24 @@ export const unit1: Unit = {
           id: "psy-u1-L6-SQ12",
           question: "After an interruption, full refocus takes about:",
           options: ["2 minutes", "23 minutes", "5 seconds", "1 hour"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u1-L6-SQ13",
+          question: "The frontal lobe is responsible for:",
+          options: ["Vision", "Planning and personality", "Hearing", "Balance"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u1-L6-SQ14",
+          question: "Repeated practice strengthens neural:",
+          options: ["Bones", "Connections", "Fluids", "Membranes"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u1-L6-SQ15",
+          question: "The brain stem controls:",
+          options: ["Creative thinking", "Automatic functions", "Decision making", "Language"],
           correctIndex: 1,
         },
       ],

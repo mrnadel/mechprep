@@ -21,7 +21,7 @@ export const unit7: Unit = {
           id: "psy-u7-L1-T1",
           type: "teaching",
           question: "Two Systems in Your Brain",
-          explanation: "Daniel Kahneman described two thinking modes. System 1 is fast, automatic, and effortless (catching a ball). System 2 is slow, deliberate, and effortful (solving 17 x 24).",
+          explanation: "Daniel Kahneman described two thinking modes: System 1 is fast and automatic (catching a ball), while System 2 is slow and deliberate (solving 17 x 24). Most of your daily thinking uses System 1.",
         },
         {
           id: "psy-u7-L1-Q1",
@@ -55,7 +55,7 @@ export const unit7: Unit = {
           id: "psy-u7-L1-T2",
           type: "teaching",
           question: "System 1 Is Always Running",
-          explanation: "System 1 works nonstop. It's reading body language, making snap judgments, and guiding routine behavior. System 2 only activates when something needs focused attention. It's lazy and avoids work when possible.",
+          explanation: "System 1 works nonstop, reading body language and guiding routine behavior. System 2 only activates when focused attention is needed, and it's lazy by design.",
         },
         {
           id: "psy-u7-L1-Q2b",
@@ -311,7 +311,7 @@ export const unit7: Unit = {
           id: "psy-u7-L3-T1",
           type: "teaching",
           question: "More Choice, Less Happiness",
-          explanation: "Barry Schwartz found that having too many options leads to decision paralysis, lower satisfaction, and more regret. 6 choices feel manageable. 30 choices feel overwhelming.",
+          explanation: "Barry Schwartz found that having too many options leads to decision paralysis, lower satisfaction, and more regret. Six choices feel manageable, but 30 feel overwhelming.",
           hint: "The paradox of choice was studied primarily in American consumer contexts. Research in collectivist cultures (where decisions are often shared with family or community) shows the effect may be weaker when others help you decide.",
         },
         {
@@ -387,7 +387,7 @@ export const unit7: Unit = {
           id: "psy-u7-L3-T3",
           type: "teaching",
           question: "Satisficers vs Maximizers",
-          explanation: "Satisficers choose the first option that meets their standards. Maximizers search for the absolute best. Research shows satisficers are happier with their choices even though maximizers technically choose 'better' options.",
+          explanation: "Satisficers choose the first option that meets their standards, while maximizers search for the absolute best. Research shows satisficers are happier even though maximizers technically choose 'better' options.",
           hint: "Try this now: next time you need to make a purchase, set 3 criteria in advance and pick the first option that meets all 3.",
         },
         {
@@ -467,7 +467,7 @@ export const unit7: Unit = {
           id: "psy-u7-L4-T2",
           type: "teaching",
           question: "Three Key Heuristics",
-          explanation: "Availability: judging by what comes to mind easily. Representativeness: judging by how well something matches a stereotype. Anchoring: being influenced by the first number you see.",
+          explanation: "The three key heuristics are availability (judging by what comes to mind easily), representativeness (judging by stereotypes), and anchoring (being influenced by the first number you see). Each one is fast but can mislead.",
         },
         {
           id: "psy-u7-L4-Q3",
@@ -516,7 +516,7 @@ export const unit7: Unit = {
           id: "psy-u7-L4-T3",
           type: "teaching",
           question: "Heuristics Are Tools, Not Flaws",
-          explanation: "Heuristics evolved because they work well enough most of the time. The goal isn't to eliminate them. It's to notice when they might lead you astray on important decisions.",
+          explanation: "Heuristics evolved because they work well enough most of the time. The goal isn't to eliminate them, but to notice when they might lead you astray on important decisions.",
         },
         {
           id: "psy-u7-L4-Q7",
@@ -596,7 +596,7 @@ export const unit7: Unit = {
           id: "psy-u7-L5-T2",
           type: "teaching",
           question: "Risk-Averse for Gains, Risk-Seeking for Losses",
-          explanation: "Here's the twist: when facing losses, people become risk-seekers. They'll gamble to avoid a sure loss. That's why people double down on losing investments instead of cutting their losses.",
+          explanation: "When facing losses, people become risk-seekers and will gamble to avoid a sure loss. That's why people double down on losing investments instead of cutting their losses.",
         },
         {
           id: "psy-u7-L5-Q3",
@@ -673,7 +673,7 @@ export const unit7: Unit = {
           scenario: "David bought a stock for $10,000 and it dropped to $6,000. His friend bought a different stock for $10,000 and it rose to $14,000. David refuses to sell ('it will come back'), while his friend immediately sells ('I want to lock in my profit'). Both could earn more with different strategies.",
           question: "Which prospect theory concepts explain their behavior?",
           options: [
-            "David is risk-seeking with losses (gambling on recovery). His friend is risk-averse with gains (locking in the sure thing).",
+            "David is risk-seeking with losses; his friend is risk-averse with gains",
             "Both are making perfectly rational investment decisions",
             "David has loss aversion and his friend has the endowment effect",
             "David is anchoring to the original price and his friend is using the availability heuristic",
@@ -785,7 +785,7 @@ export const unit7: Unit = {
           id: "psy-u7-L6-T3",
           type: "teaching",
           question: "The Ethics of Nudging",
-          explanation: "Nudges are powerful, which raises ethical questions. Good nudges help people achieve their own goals (saving more, eating better). Bad nudges manipulate people against their interests (dark patterns in apps).",
+          explanation: "Nudges are powerful, which raises ethical questions. Good nudges help people achieve their own goals, while bad nudges manipulate people against their interests.",
         },
         {
           id: "psy-u7-L6-Q7",
@@ -994,6 +994,36 @@ export const unit7: Unit = {
           question: "A satisficer chooses the first _____ option.",
           options: ["Cheapest", "Perfect", "Good enough", "Popular"],
           correctIndex: 2,
+        },
+        {
+          id: "psy-u7-L8-SQ11",
+          question: "Nudges work by changing:",
+          options: ["Laws", "Default options", "Prices", "Beliefs"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u7-L8-SQ12",
+          question: "Sunk cost fallacy means continuing because you:",
+          options: ["Enjoy it", "Already invested", "Are curious", "Were told to"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u7-L8-SQ13",
+          question: "People are risk-seeking when facing:",
+          options: ["Gains", "Losses", "Certainty", "Easy choices"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u7-L8-SQ14",
+          question: "Too many choices leads to decision:",
+          options: ["Speed", "Confidence", "Paralysis", "Accuracy"],
+          correctIndex: 2,
+        },
+        {
+          id: "psy-u7-L8-SQ15",
+          question: "Representativeness heuristic judges by:",
+          options: ["Data", "Stereotypes", "Logic", "Experience"],
+          correctIndex: 1,
         },
       ],
     },

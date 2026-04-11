@@ -21,7 +21,7 @@ export const unit10: Unit = {
           id: "psy-u10-L0-T1",
           type: "teaching",
           question: "Your Brain Is the Target",
-          explanation: "In Unit 9 you learned to think clearly. Now let's explore who profits from you NOT thinking clearly. Advertisers, social media, and manipulative designs all exploit the biases you've studied.",
+          explanation: "In Unit 9 you learned to think clearly - now let's explore who profits from you NOT thinking clearly. Advertisers, social media, and manipulative designs all exploit the biases you've studied.",
         },
         {
           id: "psy-u10-L0-Q1",
@@ -55,7 +55,7 @@ export const unit10: Unit = {
           id: "psy-u10-L0-T2",
           type: "teaching",
           question: "Why This Unit Matters Most",
-          explanation: "This isn't about becoming paranoid. It's about becoming informed. When you can name the tactic being used on you, it loses most of its power.",
+          explanation: "This isn't about becoming paranoid - it's about becoming informed. When you can name the tactic being used on you, it loses most of its power.",
           hint: "The best defense isn't avoidance. It's recognition.",
         },
         {
@@ -158,7 +158,7 @@ export const unit10: Unit = {
           id: "psy-u10-L1-T2",
           type: "teaching",
           question: "The Mere Exposure Effect",
-          explanation: "The more you see something, the more you like it. Brands repeat their name, logo, and jingle hundreds of times so they feel familiar. Familiarity breeds preference.",
+          explanation: "The more you see something, the more you like it - brands repeat their name, logo, and jingle hundreds of times so they feel familiar. Familiarity breeds preference.",
           hint: "Try this now: think of a jingle or slogan you know by heart. That repetition wasn't accidental.",
         },
         {
@@ -329,7 +329,7 @@ export const unit10: Unit = {
           id: "psy-u10-L2-T3",
           type: "teaching",
           question: "The Comparison Trap",
-          explanation: "Social media shows highlight reels, not real life. You compare your everyday to everyone else's best moments. This creates a gap that makes you feel inadequate.",
+          explanation: "Social media shows highlight reels, not real life, so you compare your everyday to everyone else's best moments. This creates a gap that makes you feel inadequate.",
         },
         {
           id: "psy-u10-L2-Q6",
@@ -382,7 +382,7 @@ export const unit10: Unit = {
           id: "psy-u10-L3-T1",
           type: "teaching",
           question: "How Propaganda Works",
-          explanation: "Propaganda doesn't need to be true. It needs to be repeated, emotional, and simple. Say something loud enough and long enough, and people start to believe it.",
+          explanation: "Propaganda doesn't need to be true - it needs to be repeated, emotional, and simple. Say something loud enough and long enough, and people start to believe it.",
         },
         {
           id: "psy-u10-L3-Q1",
@@ -466,7 +466,7 @@ export const unit10: Unit = {
           scenario: "You see a viral social media post claiming that a common food additive causes cancer. The post has been shared 100,000 times. It uses an emotional story about one person who got sick, includes no scientific sources, and was originally posted by a blog selling 'natural' supplements.",
           question: "How many red flags for misinformation can you identify?",
           options: [
-            "At least 4: emotional anecdote instead of data, no scientific sources, conflict of interest (supplement sales), and the illusory truth effect from viral sharing",
+            "At least 4: emotional anecdote, no sources, conflict of interest, and illusory truth effect",
             "Just 1: the post might be inaccurate",
             "None. If 100,000 people shared it, there must be some truth to it",
             "2: the lack of sources and the supplement sales are concerning",
@@ -598,7 +598,7 @@ export const unit10: Unit = {
           id: "psy-u10-L4-T3",
           type: "teaching",
           question: "Misdirection and Visual Tricks",
-          explanation: "Dark patterns use color, size, and placement to guide you toward the choice the company wants. The 'Accept all cookies' button is big and bright. The 'Decline' link is tiny and gray.",
+          explanation: "Dark patterns use color, size, and placement to guide you toward the choice the company wants. The 'Accept all' button is big and bright, while the 'Decline' link is tiny and gray.",
         },
         {
           id: "psy-u10-L4-Q6",
@@ -652,15 +652,8 @@ export const unit10: Unit = {
           id: "psy-u10-L5-myth1",
           type: "teaching",
           question: "Myth: Schizophrenia means split personality",
-          explanation: "Schizophrenia and dissociative identity disorder (split personality) are completely different conditions. Schizophrenia involves hallucinations, delusions, and disordered thinking. It has nothing to do with having multiple personalities. The name comes from Greek roots meaning 'split mind,' which refers to a disconnect from reality, not multiple selves.",
+          explanation: "Schizophrenia and dissociative identity disorder (split personality) are completely different conditions. Schizophrenia involves hallucinations and disordered thinking, not multiple personalities.",
           hint: "Movies like Split and Dr. Jekyll & Mr. Hyde cemented this confusion. The media almost always gets this wrong, and the stigma makes life harder for people with schizophrenia.",
-        },
-        {
-          id: "psy-u10-L5-myth2",
-          type: "teaching",
-          question: "Myth: Therapy means lying on a couch",
-          explanation: "The Freudian couch is mostly a Hollywood image. Modern therapy includes dozens of evidence-based approaches: cognitive behavioral therapy (CBT), exposure therapy, EMDR, dialectical behavior therapy, and more. Most sessions involve sitting in a chair, talking, and practicing concrete skills. Some don't even require an office.",
-          hint: "Freud used a couch in the 1890s. Therapy has evolved enormously since then, but pop culture is stuck 130 years in the past.",
         },
         {
           id: "psy-u10-L5-T1",
@@ -695,13 +688,6 @@ export const unit10: Unit = {
             1: 'Those first 30 minutes set your brain\'s agenda for the day',
             2: 'Those first 30 minutes set your brain\'s agenda for the day',
           },
-        },
-        {
-          id: "psy-u10-L5-T2",
-          type: "teaching",
-          question: "The SIFT Method for Information",
-          explanation: "SIFT: Stop, Investigate the source, Find better coverage, Trace claims to the original. Use it anytime a headline triggers a strong emotional reaction.",
-          hint: "Try this now: find a news headline that made you angry recently. Run it through SIFT. Did the story hold up?",
         },
         {
           id: "psy-u10-L5-Q3",
@@ -742,7 +728,7 @@ export const unit10: Unit = {
           id: "psy-u10-L5-T3",
           type: "teaching",
           question: "Building Friction Into Your Life",
-          explanation: "Add small barriers between you and impulsive behavior. Delete shopping apps from your phone. Log out of social media. Remove saved credit cards. Friction is your friend.",
+          explanation: "Add small barriers between you and impulsive behavior, like deleting shopping apps or removing saved credit cards. Friction is your friend.",
         },
         {
           id: "psy-u10-L5-Q6",
@@ -866,7 +852,32 @@ export const unit10: Unit = {
         {
           id: "psy-u10-L6-C6",
           speaker: "Riley",
-          message: "I almost shared a fake story to 400 friends because it made me angry and had lots of shares. That's scary. Thanks for talking me through SIFT!",
+          message: "Okay, so it's probably fake. But what if I see something like this again? How do I build a habit of checking first?",
+          options: [
+            {
+              text: "Make a rule: if a post triggers strong emotions, that's your signal to SIFT before sharing. Emotion is the manipulation trigger.",
+              nextNodeId: "psy-u10-L6-C7",
+              quality: "great",
+              feedback: "Using your emotional reaction as a cue to verify is exactly the right habit. Strong feelings are the sign to slow down, not speed up.",
+            },
+            {
+              text: "Just stop using social media entirely.",
+              nextNodeId: "psy-u10-L6-C7",
+              quality: "poor",
+              feedback: "That's one approach, but learning to critically evaluate information is a more practical life skill.",
+            },
+            {
+              text: "Only share things from accounts with lots of followers.",
+              nextNodeId: "psy-u10-L6-C7",
+              quality: "okay",
+              feedback: "Follower count doesn't guarantee accuracy. Even popular accounts share misinformation. SIFT is more reliable.",
+            },
+          ],
+        },
+        {
+          id: "psy-u10-L6-C7",
+          speaker: "Riley",
+          message: "So strong emotions are actually a warning sign, not proof something is true. That's a game-changer. Thanks for walking me through SIFT!",
         },
       ],
     },
@@ -953,6 +964,24 @@ export const unit10: Unit = {
           question: "Red notification badges trigger feelings of:",
           options: ["Urgency", "Calm", "Boredom", "Safety"],
           correctIndex: 0,
+        },
+        {
+          id: "psy-u10-L7-SQ13",
+          question: "SIFT stands for Stop, Investigate, Find better coverage, and:",
+          options: ["Think", "Trace claims", "Tell friends", "Test again"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u10-L7-SQ14",
+          question: "The best defense against manipulation is:",
+          options: ["Avoidance", "Anger", "Recognition", "Ignorance"],
+          correctIndex: 2,
+        },
+        {
+          id: "psy-u10-L7-SQ15",
+          question: "Adding barriers to impulsive behavior is called building:",
+          options: ["Walls", "Friction", "Habits", "Confidence"],
+          correctIndex: 1,
         },
       ],
     },

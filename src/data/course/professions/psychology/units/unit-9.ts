@@ -21,7 +21,7 @@ export const unit9: Unit = {
           id: "psy-u9-L0-T1",
           type: "teaching",
           question: "Thinking About Thinking",
-          explanation: "In Unit 8 you saw how biases distort financial decisions. But bad thinking doesn't stop at money. This unit gives you mental models: reusable frameworks for reasoning clearly about anything.",
+          explanation: "In Unit 8 you saw how biases distort financial decisions, but bad thinking doesn't stop at money. This unit gives you mental models: reusable frameworks for reasoning clearly about anything.",
         },
         {
           id: "psy-u9-L0-Q1",
@@ -97,7 +97,7 @@ export const unit9: Unit = {
           id: "psy-u9-L0-T3",
           type: "teaching",
           question: "Quality Over Speed",
-          explanation: "Critical thinking isn't about being smarter. It's about being slower and more deliberate when it counts. These tools help you pause before your brain jumps to easy answers.",
+          explanation: "Critical thinking isn't about being smarter - it's about being slower and more deliberate when it counts. These tools help you pause before your brain jumps to easy answers.",
         },
         {
           id: "psy-u9-L0-Q6",
@@ -158,7 +158,7 @@ export const unit9: Unit = {
           id: "psy-u9-L1-T2",
           type: "teaching",
           question: "Analogy vs First Principles",
-          explanation: "Reasoning by analogy says 'This is how it's always been done.' First principles says 'Forget what's been done. What's actually true?' Analogy is fast. First principles is powerful.",
+          explanation: "Reasoning by analogy says 'This is how it's always been done,' while first principles says 'What's actually true?' Analogy is fast, but first principles is more powerful for novel problems.",
           hint: "Try this now: pick a belief you hold and ask 'What's the actual evidence for this, separate from tradition?'",
         },
         {
@@ -200,7 +200,7 @@ export const unit9: Unit = {
           id: "psy-u9-L1-T3",
           type: "teaching",
           question: "When to Use First Principles",
-          explanation: "First principles thinking is slow and effortful. Use it for big decisions, not for choosing lunch. Save it for problems where conventional wisdom might be wrong.",
+          explanation: "First principles thinking is slow and effortful, so save it for big decisions where conventional wisdom might be wrong. Don't use it for choosing lunch.",
         },
         {
           id: "psy-u9-L1-Q6",
@@ -383,7 +383,7 @@ export const unit9: Unit = {
           id: "psy-u9-L3-T1",
           type: "teaching",
           question: "Together Doesn't Mean Because",
-          explanation: "Correlation means two things happen together. Causation means one actually causes the other. Most of the time, a third factor explains both.",
+          explanation: "Correlation means two things happen together, while causation means one actually causes the other. Most of the time, a third factor explains both.",
         },
         {
           id: "psy-u9-L3-Q1",
@@ -513,7 +513,7 @@ export const unit9: Unit = {
           id: "psy-u9-L4-T1",
           type: "teaching",
           question: "The Base Rate Changes Everything",
-          explanation: "A base rate is how common something is in the general population. If a disease affects 1 in 10,000 people, that's the base rate. Ignoring it leads to wildly wrong conclusions.",
+          explanation: "A base rate is how common something is in the general population (e.g., a disease affecting 1 in 10,000). Ignoring it leads to wildly wrong conclusions.",
         },
         {
           id: "psy-u9-L4-Q1",
@@ -628,7 +628,7 @@ export const unit9: Unit = {
             "People calculate risk perfectly but choose to worry about terrorism anyway",
             "Terrorism is actually more dangerous than heart disease",
             "Heart disease has been solved by modern medicine",
-            "Terrorism is vivid and dramatic, making people ignore the base rate of heart disease being far more common",
+            "Terrorism is vivid, so people ignore the base rate that heart disease kills far more",
           ],
           correctIndex: 3,
           explanation: "Dramatic events override base rates. Heart disease kills far more people, but it's not on the news every night, so it feels less threatening.",
@@ -782,7 +782,7 @@ export const unit9: Unit = {
           id: "psy-u9-L6-T1",
           type: "teaching",
           question: "You Can't Delete Biases",
-          explanation: "Cognitive biases are hardwired. You can't remove them, but you can build systems that catch them. Debiasing is about creating checkpoints, not achieving perfection.",
+          explanation: "Cognitive biases are hardwired, so you can't remove them, but you can build systems that catch them. Debiasing is about creating checkpoints, not achieving perfection.",
         },
         {
           id: "psy-u9-L6-Q1",
@@ -816,7 +816,7 @@ export const unit9: Unit = {
           id: "psy-u9-L6-T2",
           type: "teaching",
           question: "The Red Team Approach",
-          explanation: "A red team is a group whose job is to argue against a plan. They actively look for flaws, weaknesses, and blind spots. It's organized devil's advocacy.",
+          explanation: "A red team is a group whose job is to argue against a plan, actively looking for flaws and blind spots. It's organized devil's advocacy.",
           hint: "Try this now: before your next big decision, ask someone you trust to argue against it. Their objections are free stress tests.",
         },
         {
@@ -858,7 +858,7 @@ export const unit9: Unit = {
           id: "psy-u9-L6-T3",
           type: "teaching",
           question: "The Decision Journal",
-          explanation: "Write down important decisions, your reasoning, and what you expected. Review them later. This reveals patterns in your thinking you'd never notice in real time.",
+          explanation: "Write down important decisions, your reasoning, and what you expected, then review them later. This reveals patterns in your thinking you'd never notice in real time.",
         },
         {
           id: "psy-u9-L6-Q6",
@@ -866,7 +866,7 @@ export const unit9: Unit = {
           scenario: "A startup team is about to launch a new product. Everyone is excited and confident. The CEO asks 'Does anyone see any problems?' Nobody speaks up. They launch, and the product fails because of a flaw that 3 team members noticed but did not mention.",
           question: "Which debiasing technique would have most likely prevented this failure?",
           options: [
-            "A pre-mortem: imagining the product has already failed and asking 'why did it fail?' would have surfaced the hidden concerns",
+            "A pre-mortem: imagining failure in advance would have surfaced hidden concerns",
             "A decision journal: writing down the launch date would have helped",
             "Better hiring: the team simply was not smart enough",
             "More confidence: the CEO should have been even more enthusiastic",
@@ -1098,6 +1098,24 @@ export const unit9: Unit = {
           question: "Two things happening together is called:",
           options: ["Confirmation", "Causation", "Correlation", "Cognition"],
           correctIndex: 2,
+        },
+        {
+          id: "psy-u9-L8-SQ13",
+          question: "A red team's job is to:",
+          options: ["Agree with plans", "Argue against plans", "Write reports", "Celebrate success"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u9-L8-SQ14",
+          question: "A decision journal helps reveal:",
+          options: ["Other people's biases", "Patterns in your thinking", "Future events", "Random errors"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u9-L8-SQ15",
+          question: "Base rate neglect means ignoring how _____ something is.",
+          options: ["Expensive", "Common", "Interesting", "Old"],
+          correctIndex: 1,
         },
       ],
     },

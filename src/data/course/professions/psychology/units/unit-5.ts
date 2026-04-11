@@ -124,7 +124,7 @@ export const unit5: Unit = {
           id: "psy-u5-L1-T1",
           type: "teaching",
           question: "What Is Conformity?",
-          explanation: "Conformity is changing your behavior or beliefs to match a group. It's not always bad. Stopping at red lights is conformity. But sometimes it makes you agree with things you know are wrong.",
+          explanation: "Conformity is changing your behavior or beliefs to match a group. It's not always bad (stopping at red lights is conformity), but sometimes it makes you agree with things you know are wrong.",
         },
         {
           id: "psy-u5-L1-Q1",
@@ -320,7 +320,7 @@ export const unit5: Unit = {
           id: "psy-u5-L2-T3",
           type: "teaching",
           question: "Obedience in the Real World",
-          explanation: "Obedience isn't just lab experiments. Employees follow unethical orders from bosses. Soldiers follow commands they disagree with. Recognizing authority pressure is the first step to resisting it.",
+          explanation: "Obedience isn't just lab experiments - employees follow unethical orders and soldiers follow commands they disagree with. Recognizing authority pressure is the first step to resisting it.",
         },
         {
           id: "psy-u5-L2-Q6",
@@ -523,7 +523,7 @@ export const unit5: Unit = {
           id: "psy-u5-L4-myth1",
           type: "teaching",
           question: "Myth: Opposites attract",
-          explanation: "Decades of relationship research show the opposite: similarity attracts. People form stronger, longer-lasting relationships with those who share their values, attitudes, interests, and personality traits. 'Opposites attract' makes for good movies, but in real life, birds of a feather flock together.",
+          explanation: "Decades of relationship research show the opposite: similarity attracts. People form stronger relationships with those who share their values and personality traits.",
           hint: "The myth persists because complementary traits (one partner is organized, the other spontaneous) can feel exciting at first. But long-term compatibility is built on shared values, not differences.",
         },
         {
@@ -560,12 +560,6 @@ export const unit5: Unit = {
           distractorExplanations: {
             0: 'First impressions are fast, not accurate',
           },
-        },
-        {
-          id: "psy-u5-L4-T2",
-          type: "teaching",
-          question: "The Halo Effect",
-          explanation: "The halo effect is when one positive trait (like attractiveness) makes you assume other positive traits (like intelligence or kindness). One good quality creates a 'halo' over everything else.",
         },
         {
           id: "psy-u5-L4-Q3",
@@ -606,7 +600,7 @@ export const unit5: Unit = {
           id: "psy-u5-L4-T3",
           type: "teaching",
           question: "Stereotypes Are Shortcuts",
-          explanation: "Your brain categorizes people to save energy. Stereotypes are those categories applied to groups. They're not always negative, but they're almost always incomplete.",
+          explanation: "Your brain categorizes people to save energy, and stereotypes are those categories applied to groups. They're not always negative, but they're almost always incomplete.",
         },
         {
           id: "psy-u5-L4-Q6",
@@ -704,7 +698,7 @@ export const unit5: Unit = {
           id: "psy-u5-L5-T2",
           type: "teaching",
           question: "Echo Chambers Online",
-          explanation: "Social media algorithms show you content you already agree with. Over time, you only hear your own views echoed back. This is the digital version of groupthink.",
+          explanation: "Social media algorithms show you content you already agree with, so over time you only hear your own views echoed back. This is the digital version of groupthink.",
         },
         {
           id: "psy-u5-L5-Q3",
@@ -745,7 +739,7 @@ export const unit5: Unit = {
           id: "psy-u5-L5-T3",
           type: "teaching",
           question: "Preventing Groupthink",
-          explanation: "Assign a 'devil's advocate' to challenge ideas. Invite outside experts. Let the leader speak last so they don't anchor the discussion. These simple steps save groups from bad decisions.",
+          explanation: "Assign a 'devil's advocate' to challenge ideas and let the leader speak last to avoid anchoring the discussion. These simple steps save groups from bad decisions.",
         },
         {
           id: "psy-u5-L5-Q6",
@@ -1093,6 +1087,36 @@ export const unit5: Unit = {
           question: "Diffusion of responsibility is part of:",
           options: ["Bystander effect", "Halo effect", "Groupthink", "Conformity"],
           correctIndex: 0,
+        },
+        {
+          id: "psy-u5-L8-SQ11",
+          question: "The halo effect makes you assume attractive people are also:",
+          options: ["Dishonest", "Smart and kind", "Aggressive", "Boring"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u5-L8-SQ12",
+          question: "Similarity or opposites leads to stronger relationships?",
+          options: ["Opposites", "Similarity", "Neither", "Random chance"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u5-L8-SQ13",
+          question: "Echo chambers are created by:",
+          options: ["Random news", "Social media algorithms", "Careful research", "Open debate"],
+          correctIndex: 1,
+        },
+        {
+          id: "psy-u5-L8-SQ14",
+          question: "A devil's advocate helps prevent:",
+          options: ["Obedience", "Conformity", "Groupthink", "Bystander effect"],
+          correctIndex: 2,
+        },
+        {
+          id: "psy-u5-L8-SQ15",
+          question: "First impressions form in about:",
+          options: ["10 minutes", "100 milliseconds", "5 seconds", "1 minute"],
+          correctIndex: 1,
         },
       ],
     },
