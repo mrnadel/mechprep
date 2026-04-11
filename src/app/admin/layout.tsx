@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: '/admin/feedback', label: 'Feedback' },
   { href: '/admin/analytics', label: 'Analytics' },
   { href: '/admin/users', label: 'Users' },
+  { href: '/admin/content-overview', label: 'Overview' },
   { href: '/admin/content', label: 'Content' },
   { href: '/admin/subscriptions', label: 'Subs' },
   { href: '/admin/flags', label: 'Flags' },
@@ -69,7 +70,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <nav className="bg-white border-b-2 border-gray-200 overflow-x-auto scrollbar-none">
         <div className="flex px-3 gap-0.5 min-w-max">
           {NAV_LINKS.map(({ href, label }) => {
-            const isActive = pathname.startsWith(href);
+            const isActive = pathname === href || pathname.startsWith(href + '/');
             return (
               <Link
                 key={href}
