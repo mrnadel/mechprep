@@ -45,6 +45,7 @@ export const progressSyncSchema = z.object({
     bookmarkedQuestions: z.array(z.string()).max(500).optional(),
     weakAreas: z.array(z.string()).max(20).optional(),
     strongAreas: z.array(z.string()).max(20).optional(),
+    activeDays: z.array(z.string().regex(/^\d{4}-\d{2}-\d{2}$/)).max(14).optional(),
     topicProgress: z
       .array(
         z.object({
@@ -154,6 +155,25 @@ export const engagementSyncSchema = z.object({
     amount: z.number().int().min(-1000).max(1000),
     source: z.string().max(50),
   })).max(50).optional(),
+  // Gap 10: Daily reward calendar state
+  dailyRewardCalendar: z.object({
+    day: z.number().int().min(1).max(7),
+    lastClaimDate: z.string().nullable(),
+    weekStartDate: z.string(),
+    claimedDays: z.array(z.number().int().min(1).max(7)).max(7),
+  }).optional(),
+});
+
+// ── Friend quest endpoints (Gap 5) ──────────────────────────
+export const friendQuestProgressSchema = z.object({
+  events: z.array(z.object({
+    event: z.enum(['xp_earned', 'lesson_completed', 'accuracy_report']),
+    value: z.number().min(0).max(5000),
+  })).min(1).max(5),
+});
+
+export const friendQuestClaimSchema = z.object({
+  questId: z.string().uuid(),
 });
 
 // Helper to extract the first validation error message

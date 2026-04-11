@@ -4,6 +4,7 @@ import { db } from '@/lib/db';
 import { userProgress, gemTransactions, questProgress, subscriptions } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
 import { engagementSyncSchema } from '@/lib/validation';
+import { insertActivity } from '@/lib/activity-feed';
 
 // Hearts constants (must match client)
 const FREE_MAX_HEARTS = 5;
@@ -65,6 +66,14 @@ const VALID_GEM_SOURCES: Record<string, { maxEarn: number; maxSpend: number }> =
   weekly_chest:       { maxEarn: 40,  maxSpend: 0 },
   league_promotion:   { maxEarn: 25,  maxSpend: 0 },
   '3_star_first_time':{ maxEarn: 10,  maxSpend: 0 },
+  // Gap 5: Friend quests
+  friend_quest_reward:         { maxEarn: 30,  maxSpend: 0 },
+  // Gap 10: Daily rewards
+  daily_reward_calendar:       { maxEarn: 25,  maxSpend: 0 },
+  daily_reward_bonus_overflow: { maxEarn: 15,  maxSpend: 0 },
+  mystery_reward:              { maxEarn: 50,  maxSpend: 0 },
+  // Gap 11: Story narrative
+  story_unlock:                { maxEarn: 15,  maxSpend: 0 },
   // Spending
   shop_purchase:      { maxEarn: 0,   maxSpend: 350 },
   streak_repair:      { maxEarn: 0,   maxSpend: 75 },
@@ -155,6 +164,7 @@ export async function GET() {
       daily: questRows.find((q) => q.questType === 'daily') ?? null,
       weekly: questRows.find((q) => q.questType === 'weekly') ?? null,
     },
+    dailyRewardCalendar: progress?.dailyRewardCalendar ?? null,
   };
 
   return NextResponse.json(engagement);
@@ -220,10 +230,30 @@ export async function POST(request: NextRequest) {
 
   // 4. Upsert engagement columns on userProgress
   const existing = await db
-    .select({ id: userProgress.id })
+    .select({ id: userProgress.id, streakMilestones: userProgress.streakMilestones, streakFreezes: userProgress.streakFreezes })
     .from(userProgress)
     .where(eq(userProgress.userId, userId))
     .limit(1);
+
+  // Validate streak freezes: client can only decrease (use a freeze), not increase.
+  // Increases only happen through daily reward or shop purchase server endpoints.
+  const dbFreezes = existing[0]?.streakFreezes ?? 0;
+  const validatedFreezes = data.streak.freezesOwned <= dbFreezes
+    ? data.streak.freezesOwned  // Client used a freeze — accept decrease
+    : dbFreezes;                // Client claims more — cap at DB value
+
+  // Validate doubleXpExpiry: reject if too far in future or in the past
+  let validatedDoubleXpExpiry = data.doubleXpExpiry;
+  if (validatedDoubleXpExpiry) {
+    const expiry = new Date(validatedDoubleXpExpiry).getTime();
+    const now = Date.now();
+    const DOUBLE_XP_DURATION_MS = 30 * 60 * 1000; // 30 minutes
+    const BUFFER_MS = 60 * 1000; // 1 minute buffer
+
+    if (isNaN(expiry) || expiry <= now || expiry > now + DOUBLE_XP_DURATION_MS + BUFFER_MS) {
+      validatedDoubleXpExpiry = null;
+    }
+  }
 
   const engagementData = {
     gemsBalance: gemTotals.balance,
@@ -231,11 +261,20 @@ export async function POST(request: NextRequest) {
     gemsInventory: data.gems.inventory,
     selectedTitle: data.gems.selectedTitle,
     selectedFrame: data.gems.selectedFrame,
-    streakFreezes: data.streak.freezesOwned,
+    streakFreezes: validatedFreezes,
     streakMilestones: data.streak.milestonesReached,
     heartsCurrent: validatedHearts.current,
     heartsLastRechargeAt: String(validatedHearts.lastRechargeAt),
-    doubleXpExpiry: data.doubleXpExpiry,
+    doubleXpExpiry: validatedDoubleXpExpiry,
+    ...(data.dailyRewardCalendar ? {
+      dailyRewardCalendar: {
+        currentDay: data.dailyRewardCalendar.day,
+        lastClaimDate: data.dailyRewardCalendar.lastClaimDate,
+        todayClaimed: data.dailyRewardCalendar.claimedDays.includes(data.dailyRewardCalendar.day),
+        cycleStartDate: data.dailyRewardCalendar.weekStartDate,
+        cyclesCompleted: 0, // tracked client-side; server just stores latest snapshot
+      },
+    } : {}),
     updatedAt: new Date(),
   };
 
@@ -246,6 +285,17 @@ export async function POST(request: NextRequest) {
       .where(eq(userProgress.userId, userId));
   } else {
     await db.insert(userProgress).values({ userId, ...engagementData });
+  }
+
+  // Check for new streak milestones and insert activities
+  if (data.streak.milestonesReached.length > 0) {
+    const existingMilestones = (existing[0]?.streakMilestones as number[]) ?? [];
+    const newMilestones = data.streak.milestonesReached.filter(
+      (m: number) => !existingMilestones.includes(m),
+    );
+    for (const days of newMilestones) {
+      await insertActivity(userId, 'streak_milestone', { streakDays: days });
+    }
   }
 
   // Upsert quest progress (delete + re-insert; quest data changes frequently)

@@ -333,18 +333,22 @@ export const useEngagementStore = create<EngagementStore>()(
           const quest = allQuests.find((q) => q.definitionId === questId);
           if (!quest || !quest.completed || quest.claimed) return;
 
-          // Mark claimed
+          // Determine quest type and date for server validation
+          const isDaily = state.dailyQuests.some((q) => q.definitionId === questId);
+          const questType = isDaily ? 'daily' : 'weekly';
+          const questDate = isDaily ? state.dailyQuestDate : state.weeklyQuestDate;
+
+          // Optimistic update: mark claimed locally
           const markClaimed = (quests: Quest[]) =>
             quests.map((q) =>
               q.definitionId === questId ? { ...q, claimed: true } : q,
             );
-
           set({
             dailyQuests: markClaimed(state.dailyQuests),
             weeklyQuests: markClaimed(state.weeklyQuests),
           });
 
-          // Award gems
+          // Award gems locally (synced to server via useDbSync)
           get().addGems(quest.reward.gems, 'quest_reward');
         },
 
@@ -1028,6 +1032,11 @@ export const useEngagementStore = create<EngagementStore>()(
               todayClaimed: true,
               cycleStartDate: cal.cycleStartDate ?? today,
             },
+          });
+
+          // Validate with server in the background
+          fetch('/api/daily-reward/claim', { method: 'POST' }).catch(() => {
+            // Network error — keep optimistic update, will reconcile on next hydration
           });
 
           return {

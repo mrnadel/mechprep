@@ -40,12 +40,13 @@ export function useDbSync() {
         hydrateTimeout = setTimeout(() => controller.abort(), 15000);
 
         const fetchOpts = { signal: controller.signal };
-        const [progressRes, courseRes, feedbackRes, contentCourseRes, engagementRes] = await Promise.all([
+        const [progressRes, courseRes, feedbackRes, contentCourseRes, engagementRes, streakRes] = await Promise.all([
           fetch('/api/progress', fetchOpts),
           fetch('/api/course-progress', fetchOpts),
           fetch('/api/content-feedback', fetchOpts),
           fetch(`/api/content/course?profession=${encodeURIComponent(activeProfession)}`, fetchOpts),
           fetch('/api/engagement', fetchOpts),
+          fetch('/api/streak', fetchOpts),
         ]);
         clearTimeout(hydrateTimeout);
 
@@ -58,7 +59,7 @@ export function useDbSync() {
             // data changed while the fetch was in-flight
             const local = useStore.getState().progress;
             const db = data.progress;
-            const restoredStreak = Math.max(db.currentStreak ?? 0, local.currentStreak ?? 0);
+            const restoredStreak = db.currentStreak ?? local.currentStreak ?? 0;
             useStore.setState({
               progress: {
                 ...db,
@@ -67,7 +68,7 @@ export function useDbSync() {
                 longestStreak: Math.max(db.longestStreak ?? 0, local.longestStreak ?? 0),
                 lastActiveDate: (db.lastActiveDate ?? '') > (local.lastActiveDate ?? '')
                   ? db.lastActiveDate : local.lastActiveDate,
-                activeDays: local.activeDays, // client-only field
+                activeDays: [...new Set([...(db.activeDays ?? []), ...(local.activeDays ?? [])])].sort().slice(-14),
               },
             });
 
@@ -124,6 +125,12 @@ export function useDbSync() {
             // Merge courseIntros: DB wins for keys not in local
             const mergedIntros = { ...(db.courseIntros ?? {}), ...(local.courseIntros ?? {}) };
 
+            // Merge viewedStoryUnlocks: union of DB + local (de-duped)
+            const mergedStoryUnlocks = [...new Set([
+              ...(db.viewedStoryUnlocks ?? []),
+              ...(local.viewedStoryUnlocks ?? []),
+            ])];
+
             // Restore activeProfession from DB if local is still the default
             // (indicates localStorage was cleared)
             const dbProfession = data.activeProfession;
@@ -137,14 +144,15 @@ export function useDbSync() {
               progress: {
                 ...db,
                 totalXp: Math.max(db.totalXp, local.totalXp),
-                currentStreak: Math.max(db.currentStreak, local.currentStreak),
+                currentStreak: db.currentStreak ?? local.currentStreak ?? 0,
                 longestStreak: Math.max(db.longestStreak, local.longestStreak),
                 lastActiveDate: db.lastActiveDate > local.lastActiveDate
                   ? db.lastActiveDate : local.lastActiveDate,
-                activeDays: local.activeDays, // client-only field, never from DB
+                activeDays: [...new Set([...(db.activeDays ?? []), ...(local.activeDays ?? [])])].sort().slice(-14),
                 placementUnitIndex: Math.max(db.placementUnitIndex ?? 0, local.placementUnitIndex ?? 0) || undefined,
                 completedLessons: mergedLessons,
                 courseIntros: Object.keys(mergedIntros).length > 0 ? mergedIntros : undefined,
+                viewedStoryUnlocks: mergedStoryUnlocks.length > 0 ? mergedStoryUnlocks : undefined,
               },
             });
           }
@@ -191,7 +199,7 @@ export function useDbSync() {
             },
             streak: {
               ...s.streak,
-              freezesOwned: Math.max(eng.streak.freezesOwned ?? 0, s.streak.freezesOwned),
+              freezesOwned: eng.streak.freezesOwned ?? s.streak.freezesOwned,
               milestonesReached: [...new Set([
                 ...(eng.streak.milestonesReached ?? []),
                 ...s.streak.milestonesReached,
@@ -275,8 +283,56 @@ export function useDbSync() {
             }
           }
 
+          // Hydrate daily reward calendar from DB (Gap 10)
+          if (eng.dailyRewardCalendar) {
+            const dbCal = eng.dailyRewardCalendar as {
+              currentDay: number;
+              lastClaimDate: string | null;
+              todayClaimed: boolean;
+              cycleStartDate: string | null;
+              cyclesCompleted: number;
+            };
+            const localCal = localEng.dailyRewardCalendar;
+            // Use the fresher state (more recent claim date wins)
+            const useDb = (dbCal.lastClaimDate ?? '') > (localCal.lastClaimDate ?? '');
+            if (useDb) {
+              useEngagementStore.setState({ dailyRewardCalendar: dbCal });
+            }
+          }
+
           // Initialize the synced tx count so we don't re-send existing transactions
           lastSyncedGemTxCount = useEngagementStore.getState().gems.transactions.length;
+        }
+
+        // Hydrate streak from server — server is authoritative
+        if (streakRes.ok) {
+          const streakData = await streakRes.json();
+          const serverStreak = streakData.currentStreak ?? 0;
+          const serverLongestStreak = streakData.longestStreak ?? 0;
+          const serverActiveDays: string[] = streakData.activeDays ?? [];
+          const serverLastActive: string = streakData.lastActiveDate ?? '';
+
+          useStore.setState((s) => ({
+            progress: {
+              ...s.progress,
+              currentStreak: serverStreak,
+              longestStreak: Math.max(serverLongestStreak, s.progress.longestStreak),
+              activeDays: serverActiveDays.length > 0 ? serverActiveDays : s.progress.activeDays,
+              lastActiveDate: serverLastActive > (s.progress.lastActiveDate ?? '')
+                ? serverLastActive : s.progress.lastActiveDate,
+            },
+          }));
+
+          useCourseStore.setState((s) => ({
+            progress: {
+              ...s.progress,
+              currentStreak: serverStreak,
+              longestStreak: Math.max(serverLongestStreak, s.progress.longestStreak),
+              activeDays: serverActiveDays.length > 0 ? serverActiveDays : s.progress.activeDays,
+              lastActiveDate: serverLastActive > (s.progress.lastActiveDate ?? '')
+                ? serverLastActive : s.progress.lastActiveDate,
+            },
+          }));
         }
 
         // Merge guest trial XP earned before registration
@@ -407,6 +463,15 @@ export function useDbSync() {
           },
           doubleXpExpiry: eng.doubleXpExpiry,
           newGemTransactions,
+          // Daily reward calendar sync (Gap 10)
+          dailyRewardCalendar: {
+            day: eng.dailyRewardCalendar.currentDay,
+            lastClaimDate: eng.dailyRewardCalendar.lastClaimDate,
+            weekStartDate: eng.dailyRewardCalendar.cycleStartDate ?? '',
+            claimedDays: eng.dailyRewardCalendar.todayClaimed
+              ? Array.from({ length: eng.dailyRewardCalendar.currentDay }, (_, i) => i + 1)
+              : Array.from({ length: eng.dailyRewardCalendar.currentDay - 1 }, (_, i) => i + 1),
+          },
         };
 
         if (includeQuests) {
@@ -440,6 +505,7 @@ export function useDbSync() {
         weeklyQuestDate: state.weeklyQuestDate,
         dailyChestClaimed: state.dailyChestClaimed,
         weeklyChestClaimed: state.weeklyChestClaimed,
+        dailyRewardCalendar: state.dailyRewardCalendar,
       }),
       () => syncEngagement(true),
       { equalityFn: shallow },

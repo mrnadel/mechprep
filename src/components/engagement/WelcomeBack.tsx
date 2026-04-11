@@ -64,7 +64,8 @@ export function WelcomeBack() {
                 key={quest.id}
                 className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl bg-white/10"
               >
-                <span className="text-xl">{quest.icon}</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={quest.icon} alt="" width={28} height={28} className="object-contain" />
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-bold text-white truncate">{quest.title}</p>
                 </div>

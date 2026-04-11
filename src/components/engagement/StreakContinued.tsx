@@ -30,8 +30,21 @@ function getWeekDays() {
 }
 
 export function StreakContinued({ streak, onClose }: Props) {
-  const activeDays = useStore((s) => s.progress.activeDays) ?? [];
+  const storedActiveDays = useStore((s) => s.progress.activeDays) ?? [];
   const weekDays = useMemo(() => getWeekDays(), []);
+
+  // Derive active days from streak count when activeDays array lacks history.
+  // If streak is N, the last N consecutive days (up to today) must have been active.
+  const activeDays = useMemo(() => {
+    const streakDates = new Set(storedActiveDays);
+    const today = new Date();
+    for (let i = 0; i < streak; i++) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      streakDates.add(toLocalDateString(d));
+    }
+    return [...streakDates];
+  }, [storedActiveDays, streak]);
 
   useEffect(() => { playSound('streakMilestone'); }, []);
 

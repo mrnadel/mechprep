@@ -10,6 +10,7 @@ import {
 import { getAuthUserId } from '@/lib/auth-utils';
 import { incrementDailyUsageBatch, canStartPracticeSession } from '@/lib/access-control';
 import { progressSyncSchema } from '@/lib/validation';
+import { insertActivity } from '@/lib/activity-feed';
 import type { UserProgress, TopicProgress, SessionRecord, TopicId } from '@/data/types';
 
 export async function GET() {
@@ -65,7 +66,7 @@ export async function GET() {
     currentStreak: progress?.currentStreak ?? 0,
     longestStreak: progress?.longestStreak ?? 0,
     lastActiveDate: progress?.lastActiveDate ?? '',
-    activeDays: [],  // Client-only field — tracked in localStorage, not DB
+    activeDays: (progress?.activeDays as string[]) ?? [],
     achievementsUnlocked: (progress?.achievementsUnlocked as string[]) ?? [],
     topicProgress: topicProgressData,
     sessionHistory: sessionRecords,
@@ -103,7 +104,7 @@ export async function POST(request: NextRequest) {
 
   // Upsert user_progress row
   const existing = await db
-    .select({ id: userProgress.id })
+    .select({ id: userProgress.id, currentLevel: userProgress.currentLevel })
     .from(userProgress)
     .where(eq(userProgress.userId, userId))
     .limit(1);
@@ -127,6 +128,7 @@ export async function POST(request: NextRequest) {
     bookmarkedQuestions: (progress.bookmarkedQuestions || []).slice(0, MAX_BOOKMARKS),
     weakAreas: (progress.weakAreas || []).slice(0, MAX_AREAS),
     strongAreas: (progress.strongAreas || []).slice(0, MAX_AREAS),
+    activeDays: (progress.activeDays || []).slice(0, 14),
     updatedAt: new Date(),
   };
 
@@ -137,6 +139,15 @@ export async function POST(request: NextRequest) {
       .where(eq(userProgress.userId, userId));
   } else {
     await db.insert(userProgress).values(progressData);
+  }
+
+  // Check if level increased and insert activity
+  if (existing.length > 0 && progress.currentLevel) {
+    const prevLevel = existing[0].currentLevel ?? 1;
+    const newLevel = progress.currentLevel;
+    if (newLevel > prevLevel) {
+      await insertActivity(userId, 'level_up', { level: newLevel });
+    }
   }
 
   // Update display name on user row

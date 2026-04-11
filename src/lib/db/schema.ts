@@ -131,6 +131,12 @@ export const userProgress = pgTable('user_progress', {
   // Hearts (free-tier rate-limit)
   heartsCurrent: integer('hearts_current').default(MAX_HEARTS),
   heartsLastRechargeAt: text('hearts_last_recharge_at'),
+  // Daily reward calendar (Gap 10)
+  dailyRewardCalendar: jsonb('daily_reward_calendar')
+    .$type<{ currentDay: number; lastClaimDate: string | null; todayClaimed: boolean; cycleStartDate: string | null; cyclesCompleted: number }>()
+    .default({ currentDay: 1, lastClaimDate: null, todayClaimed: false, cycleStartDate: null, cyclesCompleted: 0 }),
+  // Active days for streak week tracker (last 14 ISO date strings)
+  activeDays: jsonb('active_days').$type<string[]>().default([]),
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
   updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
 });
@@ -656,7 +662,9 @@ export const friendQuests = pgTable(
     progressUser: integer('progress_user').notNull().default(0),
     progressPartner: integer('progress_partner').notNull().default(0),
     completed: boolean('completed').notNull().default(false),
-    rewardClaimed: boolean('reward_claimed').notNull().default(false),
+    rewardClaimedUser: boolean('reward_claimed_user').notNull().default(false),
+    rewardClaimedPartner: boolean('reward_claimed_partner').notNull().default(false),
+    rewardGems: integer('reward_gems').notNull().default(0),
     createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
   },
   (table) => [
