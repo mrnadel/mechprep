@@ -101,9 +101,6 @@ export default function PracticePage() {
 
         {/* Daily Challenge is always available, even when practice is locked */}
         <div className="px-4 pb-4 pt-4">
-          <p className="text-xs font-extrabold text-gray-400 dark:text-surface-400 uppercase tracking-wider px-1 pb-3">
-            Available now
-          </p>
           <button
             onClick={() => router.push('/practice/daily')}
             className="w-full flex items-center gap-3.5 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 mb-3 text-left bg-white dark:bg-surface-900"
