@@ -3,21 +3,35 @@ import type { Lesson } from '../types';
 export const lesson3: Lesson = {
   id: 'htw-L3',
   title: 'Around the House',
-  description: 'Discover the mechanical engineering principles hiding in everyday household items — from door hinges to AC units.',
+  description: 'Discover the mechanical engineering principles hiding in everyday household items - from door hinges to AC units.',
   icon: '🏠',
   xpReward: 25,
   levels: 4,
   questions: [
+    {
+      id: 'htw-L3-T1',
+      type: 'teaching',
+      question: 'Engineering in your home',
+      explanation: 'Door hinges are pin joints, toilets use float-valve feedback control, and your washing machine is a vibration isolation problem. Every household item applies fundamental engineering principles.',
+      hint: 'Look for forces, energy flows, and control systems in everyday objects.',
+    },
+    {
+      id: 'htw-L3-T2',
+      type: 'teaching',
+      question: 'Torque and mechanical advantage at home',
+      explanation: 'A wrench, a door handle, and a bottle opener all use torque (force times lever arm) to amplify your effort. Longer lever arms require less force to produce the same torque.',
+      hint: 'Door handles are placed far from the hinge to maximize your mechanical advantage.',
+    },
     // --- DOOR HINGE / DOOR CLOSER ---
     {
       id: 'htw-L3-Q1',
       type: 'multiple-choice',
       question: 'A door hinge allows the door to rotate about a fixed axis. In structural analysis, what type of support does a hinge pin represent?',
       options: [
-        'Fixed support — constrains both translation and rotation',
-        'Pin joint — constrains translation but allows free rotation',
-        'Roller support — constrains translation in one direction only',
-        'Moment connection — transmits bending moment across the joint',
+        'Fixed support - constrains both translation and rotation',
+        'Pin joint - constrains translation but allows free rotation',
+        'Roller support - constrains translation in one direction only',
+        'Moment connection - transmits bending moment across the joint',
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="8" y="15" width="6" height="50" rx="1" fill="#3B8700" fill-opacity="0.2" stroke="#3B8700" stroke-width="1.5"/><circle cx="14" cy="30" r="3.5" stroke="#3B8700" stroke-width="2" fill="none"/><circle cx="14" cy="30" r="1.2" fill="#3B8700"/><rect x="14" y="22" width="40" height="16" rx="2" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.15"><animateTransform attributeName="transform" type="rotate" values="0 14 30;12 14 30;0 14 30" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></rect><line x1="14" y1="30" x2="8" y2="36" stroke="#58CC02" stroke-width="1.5" marker-end="url(#ap1)"/><line x1="14" y1="30" x2="8" y2="24" stroke="#58CC02" stroke-width="1.5" marker-end="url(#ap1)"/><text x="3" y="30" font-size="3.5" fill="#58CC02">R</text><defs><marker id="ap1" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><text x="40" y="56" text-anchor="middle" font-size="4" fill="#334155">Pin joint</text><text x="40" y="64" text-anchor="middle" font-size="3.5" fill="#6B7280">Rx, Ry reactions</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#6B7280">M = 0 (free rotation)</text></svg>`,
       correctIndex: 1,
@@ -65,7 +79,7 @@ export const lesson3: Lesson = {
   <text x="40" y="74" font-size="4" fill="#6B7280" text-anchor="middle">Torque = F × d</text>
 </svg>`,
       correctIndex: 2,
-      explanation: 'Torque = Force × distance. To balance 8 N·m at 0.9 m: F = 8 / 0.9 ≈ 8.9 N. This is a direct application of moment equilibrium about the hinge axis — the same principle used to size actuators and select motors.',
+      explanation: 'Torque = Force × distance. To balance 8 N·m at 0.9 m: F = 8 / 0.9 ≈ 8.9 N. This is a direct application of moment equilibrium about the hinge axis - the same principle used to size actuators and select motors.',
       distractorExplanations: {
         0: '4.5 is approximately half the correct answer, likely from omitting a required factor of 2.',
         1: 'This value results from an incorrect approach; About 7.2 N.',
@@ -125,7 +139,7 @@ export const lesson3: Lesson = {
     {
       id: 'htw-L3-Q4',
       type: 'true-false',
-      question: 'A toilet fill valve uses a float mechanism that acts as a feedback control system: the rising water level lifts the float, which closes the valve to stop filling — analogous to a proportional controller.',
+      question: 'A toilet fill valve uses a float mechanism that acts as a feedback control system: the rising water level lifts the float, which closes the valve to stop filling - analogous to a proportional controller.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="15" y="20" width="30" height="40" rx="2" stroke="#3B8700" stroke-width="2" fill="#58CC02" fill-opacity="0.08"/><rect x="15" y="40" width="30" height="20" fill="#58CC02" fill-opacity="0.15"><animate attributeName="y" values="50;30;50" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/><animate attributeName="height" values="10;30;10" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></rect><circle cx="38" cy="45" r="4" fill="#A5E86C" fill-opacity="0.4" stroke="#3B8700" stroke-width="1.5"><animate attributeName="cy" values="50;30;50" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></circle><text x="44" y="38" font-size="3" fill="#334155">float</text><line x1="38" y1="45" x2="50" y2="25" stroke="#3B8700" stroke-width="1.5"/><rect x="48" y="20" width="8" height="10" rx="1" stroke="#3B8700" stroke-width="1.5" fill="#3B8700" fill-opacity="0.15"/><text x="52" y="17" text-anchor="middle" font-size="3" fill="#6B7280">valve</text><path d="M56,25 L64,25 L64,30 L56,30" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 1"/><text x="64" y="24" font-size="3" fill="#6B7280">supply</text><text x="40" y="70" text-anchor="middle" font-size="3.5" fill="#334155">Negative feedback loop</text><text x="40" y="77" text-anchor="middle" font-size="3.5" fill="#6B7280">Level↑ → float↑ → valve closes</text></svg>`,
       correctAnswer: true,
       explanation: 'The float-valve is a classic negative feedback loop. The controlled variable (water level) is sensed by the float, which mechanically adjusts the valve opening. As level rises, the valve progressively closes. This proportional control concept appears in pressure regulators, thermostats, and governor mechanisms throughout engineering.',
@@ -175,14 +189,14 @@ export const lesson3: Lesson = {
   <!-- Connecting pipes -->
   <line x1="32" y1="17" x2="48" y2="17" stroke="#3B8700" stroke-width="1.5"/>
   <line x1="32" y1="25" x2="48" y2="25" stroke="#3B8700" stroke-width="1.5"/>
-  <!-- Animated refrigerant dots — top pipe (to condenser) -->
+  <!-- Animated refrigerant dots - top pipe (to condenser) -->
   <circle r="1.8" fill="#58CC02">
     <animateMotion dur="2s" repeatCount="indefinite" path="M 32 17 L 48 17" calcMode="spline" keySplines="0.3 0 0.7 1"/>
   </circle>
   <circle r="1.8" fill="#58CC02">
     <animateMotion dur="2s" repeatCount="indefinite" path="M 32 17 L 48 17" calcMode="spline" keySplines="0.3 0 0.7 1" begin="1s"/>
   </circle>
-  <!-- Animated refrigerant dots — bottom pipe (to evaporator) -->
+  <!-- Animated refrigerant dots - bottom pipe (to evaporator) -->
   <circle r="1.8" fill="#3B8700">
     <animateMotion dur="2s" repeatCount="indefinite" path="M 48 25 L 32 25" calcMode="spline" keySplines="0.3 0 0.7 1"/>
   </circle>
@@ -231,7 +245,7 @@ export const lesson3: Lesson = {
         2: 'This focuses on derivative/damping, which is not the correct mechanism or principle for this problem.',
         3: 'This focuses on open-loop/feedforward, which is not the correct mechanism or principle for this problem.',
       },
-      hint: 'The compressor is either 100% on or 100% off — no in-between.',
+      hint: 'The compressor is either 100% on or 100% off - no in-between.',
     },
     // --- LIGHT SWITCH ---
     {
@@ -240,7 +254,7 @@ export const lesson3: Lesson = {
       question: 'A standard household light switch uses a snap-action (over-center) mechanism with a spring to ensure rapid contact transition, which minimizes electrical arcing.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="28" y="16" width="24" height="44" rx="3" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.1"/><circle cx="40" cy="30" r="3" fill="#3B8700"/><circle cx="40" cy="50" r="3" fill="#3B8700"/><line x1="40" y1="30" x2="40" y2="50" stroke="#58CC02" stroke-width="2"><animateTransform attributeName="transform" type="rotate" values="20 40 50;-20 40 50;20 40 50" dur="1s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><path d="M36,40 Q40,35 44,40" stroke="#3B8700" stroke-width="1.5" fill="none"/><text x="48" y="40" font-size="3" fill="#3B8700">spring</text><text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#334155">Snap-action switch</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#6B7280">Fast flip → min arcing</text></svg>`,
       correctAnswer: true,
-      explanation: 'The snap-action mechanism stores elastic energy in a spring that rapidly flips the contacts past the unstable equilibrium point. This fast transition minimizes the time contacts spend partially separated — when arcing and contact erosion are worst. This bistable mechanism concept appears in circuit breakers, relay contacts, and MEMS switches.',
+      explanation: 'The snap-action mechanism stores elastic energy in a spring that rapidly flips the contacts past the unstable equilibrium point. This fast transition minimizes the time contacts spend partially separated - when arcing and contact erosion are worst. This bistable mechanism concept appears in circuit breakers, relay contacts, and MEMS switches.',
       distractorExplanations: {
         1: 'The snap-action mechanism stores elastic energy in a spring that rapidly flips the contacts past the unstable equilibrium point.',
       },
@@ -271,7 +285,7 @@ export const lesson3: Lesson = {
       question: 'During the spin cycle, a washing machine removes water from clothes by spinning the drum at high speed. What force drives the water out through the drum perforations?',
       options: [
         'Gravitational force pulling the water downward through the perforations',
-        'Centrifugal effect — water\'s inertia carries it radially outward as the drum spins',
+        'Centrifugal effect - water\'s inertia carries it radially outward as the drum spins',
         'Vacuum suction created at the drum center drawing water inward then out',
         'Electromagnetic force from the motor field repelling the water molecules',
       ],
@@ -334,7 +348,7 @@ export const lesson3: Lesson = {
         2: 'This focuses on vacuum/suction, which is not the correct mechanism or principle for this problem.',
         3: 'This focuses on electromagnetic/force, which is not the correct mechanism or principle for this problem.',
       },
-      hint: 'Think about what happens to objects in a rotating frame — Newton\'s first law.',
+      hint: 'Think about what happens to objects in a rotating frame - Newton\'s first law.',
     },
     {
       id: 'htw-L3-Q11',
@@ -351,7 +365,7 @@ export const lesson3: Lesson = {
       question: 'An unbalanced load in a spinning washing machine drum can cause dangerous resonance if the spin-up speed passes through the drum\'s natural frequency.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="10" y1="60" x2="72" y2="60" stroke="#3B8700" stroke-width="1.5"/><line x1="10" y1="60" x2="10" y2="8" stroke="#3B8700" stroke-width="1.5"/><text x="6" y="34" font-size="3.5" fill="#334155" transform="rotate(-90 6 34)">Amp</text><text x="42" y="68" font-size="3.5" fill="#334155">RPM</text><path d="M12,58 C20,56 28,50 35,15 C38,8 42,8 45,15 C52,50 60,56 68,58" stroke="#58CC02" stroke-width="2.5" fill="none"/><line x1="40" y1="60" x2="40" y2="10" stroke="#6B7280" stroke-width="0.8" stroke-dasharray="2 1.5"/><text x="40" y="7" text-anchor="middle" font-size="3.5" fill="#58CC02">resonance</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#6B7280">ω_spin = ω_natural</text></svg>`,
       correctAnswer: true,
-      explanation: 'As the drum accelerates, it passes through a range of frequencies. If an unbalanced mass is present and the rotational frequency matches the system\'s natural frequency, resonance occurs — dramatically amplifying vibrations. Modern machines use accelerometers to detect this and redistribute the load before reaching critical speed. This is identical to the critical speed problem in rotating shafts.',
+      explanation: 'As the drum accelerates, it passes through a range of frequencies. If an unbalanced mass is present and the rotational frequency matches the system\'s natural frequency, resonance occurs - dramatically amplifying vibrations. Modern machines use accelerometers to detect this and redistribute the load before reaching critical speed. This is identical to the critical speed problem in rotating shafts.',
       distractorExplanations: {
         1: 'As the drum accelerates, it passes through a range of frequencies.',
       },
@@ -369,7 +383,7 @@ export const lesson3: Lesson = {
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="10" y1="40" x2="70" y2="40" stroke="#3B8700" stroke-width="2.5"/><polygon points="10,42 10,48 14,48" fill="#6B7280"/><line x1="8" y1="48" x2="16" y2="48" stroke="#6B7280" stroke-width="1"/><circle cx="70" cy="43" r="2.5" fill="none" stroke="#6B7280" stroke-width="1"/><line x1="67" y1="47" x2="73" y2="47" stroke="#6B7280" stroke-width="1"/><line x1="15" y1="32" x2="15" y2="38" stroke="#58CC02" stroke-width="1.5" marker-end="url(#au1)"/><line x1="25" y1="32" x2="25" y2="38" stroke="#58CC02" stroke-width="1.5" marker-end="url(#au1)"/><line x1="35" y1="32" x2="35" y2="38" stroke="#58CC02" stroke-width="1.5" marker-end="url(#au1)"/><line x1="45" y1="32" x2="45" y2="38" stroke="#58CC02" stroke-width="1.5" marker-end="url(#au1)"/><line x1="55" y1="32" x2="55" y2="38" stroke="#58CC02" stroke-width="1.5" marker-end="url(#au1)"/><line x1="65" y1="32" x2="65" y2="38" stroke="#58CC02" stroke-width="1.5" marker-end="url(#au1)"/><line x1="12" y1="30" x2="68" y2="30" stroke="#58CC02" stroke-width="1.5"/><text x="40" y="26" text-anchor="middle" font-size="4" fill="#58CC02" font-style="italic">w (N/m)</text><defs><marker id="au1" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><text x="40" y="60" text-anchor="middle" font-size="4" fill="#334155">Uniformly Distributed Load</text><text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#6B7280">~1.9 kPa residential</text></svg>`,
       correctIndex: 1,
-      explanation: 'Building codes model floor loads as uniformly distributed loads (UDL), typically specified in kPa or psf. For residential floors, this is usually about 1.9 kPa (40 psf). Structural engineers use this UDL to calculate bending moments and deflections in beams and joists — the same beam analysis used in machine frame design.',
+      explanation: 'Building codes model floor loads as uniformly distributed loads (UDL), typically specified in kPa or psf. For residential floors, this is usually about 1.9 kPa (40 psf). Structural engineers use this UDL to calculate bending moments and deflections in beams and joists - the same beam analysis used in machine frame design.',
       distractorExplanations: {
         0: 'This focuses on concentrated/point, which is not the correct mechanism or principle for this problem.',
         2: 'This focuses on moment/couple, which is not the correct mechanism or principle for this problem.',
@@ -388,7 +402,7 @@ export const lesson3: Lesson = {
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="10" y1="30" x2="70" y2="30" stroke="#6B7280" stroke-width="0.8" stroke-dasharray="2 1.5"/><line x1="10" y1="30" x2="10" y2="50" stroke="#3B8700" stroke-width="2"/><line x1="70" y1="30" x2="70" y2="50" stroke="#3B8700" stroke-width="2"/><path d="M10,30 Q40,45 70,30" stroke="#58CC02" stroke-width="2.5" fill="none"/><line x1="40" y1="30" x2="40" y2="38" stroke="#334155" stroke-width="1" stroke-dasharray="1 1"/><text x="44" y="38" font-size="4" fill="#334155" font-style="italic">δ</text><line x1="10" y1="54" x2="70" y2="54" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 1"/><text x="40" y="52" text-anchor="middle" font-size="3.5" fill="#6B7280" font-style="italic">L</text><text x="40" y="64" text-anchor="middle" font-size="4" fill="#334155">δ_max ≤ L/360</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#6B7280">Serviceability, not strength</text></svg>`,
       correctIndex: 1,
-      explanation: 'The L/360 limit is a serviceability criterion, not a strength criterion. Excessive deflection can crack plaster and tile, cause doors to jam, make floors feel bouncy, and create visible sagging. Serviceability limits are equally important in machine design — shaft deflection limits prevent gear misalignment and bearing damage.',
+      explanation: 'The L/360 limit is a serviceability criterion, not a strength criterion. Excessive deflection can crack plaster and tile, cause doors to jam, make floors feel bouncy, and create visible sagging. Serviceability limits are equally important in machine design - shaft deflection limits prevent gear misalignment and bearing damage.',
       distractorExplanations: {
         0: 'This focuses on beyond/l/360, which is not the correct mechanism or principle for this problem.',
         2: 'This focuses on l/360/yield, which is not the correct mechanism or principle for this problem.',
@@ -404,7 +418,7 @@ export const lesson3: Lesson = {
       blanks: ['gas', 'conductivity'],
       wordBank: ['gas', 'conductivity', 'capacity', 'liquid', 'density'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="18" y="12" width="5" height="52" rx="1" fill="#58CC02" fill-opacity="0.15" stroke="#3B8700" stroke-width="1.5"/><rect x="38" y="12" width="5" height="52" rx="1" fill="#58CC02" fill-opacity="0.15" stroke="#3B8700" stroke-width="1.5"/><rect x="23" y="12" width="15" height="52" rx="0" fill="#A5E86C" fill-opacity="0.08"/><text x="30" y="40" text-anchor="middle" font-size="3.5" fill="#6B7280" transform="rotate(-90 30 40)">gas layer</text><text x="10" y="40" text-anchor="middle" font-size="4" fill="#58CC02" font-weight="bold">HOT</text><text x="52" y="40" text-anchor="middle" font-size="4" fill="#334155" font-weight="bold">COLD</text><line x1="12" y1="38" x2="18" y2="38" stroke="#58CC02" stroke-width="1.5" marker-end="url(#aw2)"/><line x1="43" y1="38" x2="48" y2="38" stroke="#334155" stroke-width="1" marker-end="url(#aw3)"/><defs><marker id="aw2" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker><marker id="aw3" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#334155" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155">k_gas ≈ 0.025 W/m·K</text><text x="40" y="78" text-anchor="middle" font-size="3.5" fill="#6B7280">Low k → high R</text></svg>`,
-      explanation: 'The trapped gas layer (air or argon) has low thermal conductivity (~0.025 W/m·K for air), creating a high thermal resistance barrier. The narrow gap also suppresses natural convection currents. This is the same insulation principle used in vacuum flasks and double-walled piping — minimizing conduction paths to reduce overall heat transfer.',
+      explanation: 'The trapped gas layer (air or argon) has low thermal conductivity (~0.025 W/m·K for air), creating a high thermal resistance barrier. The narrow gap also suppresses natural convection currents. This is the same insulation principle used in vacuum flasks and double-walled piping - minimizing conduction paths to reduce overall heat transfer.',
       hint: 'Think about what fills the space between the panes and what mode of heat transfer it blocks.',
     },
     {
@@ -413,7 +427,7 @@ export const lesson3: Lesson = {
       question: 'Window glass expands when heated by sunlight. If the glass is rigidly constrained in the frame with no expansion gap, what type of stress develops?',
       options: [
         'Shear stress from differential heating across the thickness',
-        'Compressive stress — the glass wants to expand but cannot',
+        'Compressive stress - the glass wants to expand but cannot',
         'Tensile stress pulling the glass away from the frame',
         'Torsional stress twisting the pane about its center',
       ],
@@ -432,7 +446,7 @@ export const lesson3: Lesson = {
       question: 'The U-value of a window measures its insulating ability: a lower U-value means better insulation and less heat loss.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="10" y="18" width="25" height="36" rx="3" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.1"/><text x="22" y="32" text-anchor="middle" font-size="3.5" fill="#334155">Single</text><text x="22" y="40" text-anchor="middle" font-size="4" fill="#3B8700">U = 5.8</text><text x="22" y="48" text-anchor="middle" font-size="3" fill="#6B7280">poor</text><rect x="45" y="18" width="25" height="36" rx="3" stroke="#58CC02" stroke-width="1.5" fill="#58CC02" fill-opacity="0.1"/><text x="57" y="32" text-anchor="middle" font-size="3.5" fill="#334155">Double</text><text x="57" y="40" text-anchor="middle" font-size="4" fill="#58CC02">U = 1.2</text><text x="57" y="48" text-anchor="middle" font-size="3" fill="#6B7280">better</text><text x="40" y="64" text-anchor="middle" font-size="4" fill="#334155">Lower U → less heat loss</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#6B7280">U = 1/R (W/m²·K)</text></svg>`,
       correctAnswer: true,
-      explanation: 'U-value (overall heat transfer coefficient, W/m²·K) represents total heat flow per unit area per degree of temperature difference. Lower U-value = less heat transfer = better insulation. This is the reciprocal of total thermal resistance (R-value). Engineers use U-values to calculate building heat loads and select HVAC equipment — the same thermal resistance network analysis used in electronics cooling.',
+      explanation: 'U-value (overall heat transfer coefficient, W/m²·K) represents total heat flow per unit area per degree of temperature difference. Lower U-value = less heat transfer = better insulation. This is the reciprocal of total thermal resistance (R-value). Engineers use U-values to calculate building heat loads and select HVAC equipment - the same thermal resistance network analysis used in electronics cooling.',
       distractorExplanations: {
         1: 'U-value (overall heat transfer coefficient, W/m²·K) represents total heat flow per unit area per degree of temperature difference.',
       },
@@ -445,7 +459,7 @@ export const lesson3: Lesson = {
       blanks: ['moment', 'torque'],
       wordBank: ['moment', 'torque', 'pressure', 'velocity', 'friction'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="10" cy="40" r="3" stroke="#3B8700" stroke-width="2" fill="none"/><circle cx="10" cy="40" r="1" fill="#3B8700"/><rect x="10" y="32" width="55" height="16" rx="2" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.12"/><text x="38" y="42" text-anchor="middle" font-size="3.5" fill="#6B7280">Door</text><line x1="60" y1="26" x2="60" y2="30" stroke="#58CC02" stroke-width="2.5" marker-end="url(#am1)"/><text x="63" y="24" font-size="4" fill="#58CC02" font-style="italic">F</text><line x1="20" y1="26" x2="20" y2="30" stroke="#3B8700" stroke-width="1.5" marker-end="url(#am2)"/><text x="23" y="24" font-size="4" fill="#3B8700" font-style="italic">F'</text><defs><marker id="am1" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker><marker id="am2" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#3B8700" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><line x1="10" y1="52" x2="60" y2="52" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 1"/><text x="35" y="58" text-anchor="middle" font-size="3.5" fill="#6B7280" font-style="italic">d (long)</text><line x1="10" y1="56" x2="20" y2="56" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 1"/><text x="15" y="62" text-anchor="middle" font-size="3" fill="#6B7280" font-style="italic">d (short)</text><text x="40" y="72" text-anchor="middle" font-size="4" fill="#334155">τ = F × d</text></svg>`,
-      explanation: 'Torque (moment) = Force × perpendicular distance from the pivot. A shorter moment arm means less torque for the same applied force, so you must push harder. This is why door handles are placed far from hinges, and why longer wrenches make bolts easier to turn — the fundamental lever principle in mechanical engineering.',
+      explanation: 'Torque (moment) = Force × perpendicular distance from the pivot. A shorter moment arm means less torque for the same applied force, so you must push harder. This is why door handles are placed far from hinges, and why longer wrenches make bolts easier to turn - the fundamental lever principle in mechanical engineering.',
     },
     // --- MORE AC ---
     {
@@ -460,7 +474,7 @@ export const lesson3: Lesson = {
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="25" y="28" width="30" height="20" rx="4" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.12"/><text x="40" y="41" text-anchor="middle" font-size="4" fill="#334155">AC</text><line x1="40" y1="20" x2="40" y2="26" stroke="#58CC02" stroke-width="2"/><text x="40" y="16" text-anchor="middle" font-size="5" fill="#58CC02">4 kW</text><text x="40" y="10" text-anchor="middle" font-size="3.5" fill="#6B7280">Q_cold</text><line x1="60" y1="38" x2="57" y2="38" stroke="#334155" stroke-width="2"/><text x="66" y="40" font-size="5" fill="#334155">1 kW</text><text x="66" y="46" font-size="3" fill="#6B7280">W_in</text><line x1="40" y1="50" x2="40" y2="56" stroke="#3B8700" stroke-width="2.5"/><text x="40" y="64" text-anchor="middle" font-size="5" fill="#3B8700" font-weight="bold">5 kW</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#6B7280">Q_hot = Q_cold + W</text></svg>`,
       correctIndex: 2,
-      explanation: 'By energy conservation: Q_hot = Q_cold + W. With COP_cooling = Q_cold/W = 4, then Q_cold = 4 kW. Therefore Q_hot = 4 + 1 = 5 kW. The condenser must reject both the heat absorbed from the room AND the work input. This is why outdoor units blow hot air — they expel more heat than the indoor unit removes.',
+      explanation: 'By energy conservation: Q_hot = Q_cold + W. With COP_cooling = Q_cold/W = 4, then Q_cold = 4 kW. Therefore Q_hot = 4 + 1 = 5 kW. The condenser must reject both the heat absorbed from the room AND the work input. This is why outdoor units blow hot air - they expel more heat than the indoor unit removes.',
       distractorExplanations: {
         0: 'This numerical value does not result from the correct formula applied to the given parameters.',
         1: 'This numerical value does not result from the correct formula applied to the given parameters.',
@@ -481,7 +495,7 @@ export const lesson3: Lesson = {
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="8" y="40" width="20" height="28" rx="2" stroke="#3B8700" stroke-width="1.5" fill="#58CC02" fill-opacity="0.1"/><line x1="18" y1="40" x2="18" y2="8" stroke="#3B8700" stroke-width="2"/><path d="M18,8 Q18,4 22,4 L40,4 Q44,4 44,8" stroke="#3B8700" stroke-width="2" fill="none"/><line x1="44" y1="8" x2="44" y2="68" stroke="#3B8700" stroke-width="2"/><line x1="18" y1="45" x2="8" y2="45" stroke="#6B7280" stroke-width="0.8" stroke-dasharray="2 1"/><line x1="18" y1="8" x2="8" y2="8" stroke="#6B7280" stroke-width="0.8" stroke-dasharray="2 1"/><line x1="6" y1="45" x2="6" y2="8" stroke="#6B7280" stroke-width="1"/><text x="4" y="28" font-size="3.5" fill="#334155" transform="rotate(-90 4 28)">10.3 m</text><text x="55" y="38" font-size="3.5" fill="#6B7280">P_atm</text><line x1="52" y1="40" x2="52" y2="45" stroke="#6B7280" stroke-width="1.5" marker-end="url(#as2)"/><defs><marker id="as2" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#6B7280" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><circle r="1.5" fill="#58CC02"><animateMotion dur="2s" repeatCount="indefinite" path="M18,45 L18,8 Q18,4 22,4 L40,4 Q44,4 44,8 L44,50"/></circle><text x="40" y="76" text-anchor="middle" font-size="4" fill="#334155">Max height = P_atm / ρg</text></svg>`,
       correctIndex: 1,
-      explanation: 'Atmospheric pressure (101.3 kPa) equals the hydrostatic pressure of a 10.3 m water column (ρgh). Above this height, the absolute pressure at the siphon crest would need to go negative, which is physically impossible — the water column breaks and the siphon fails. This same limit applies to suction pumps, which is why deep wells require submersible pumps rather than surface suction pumps.',
+      explanation: 'Atmospheric pressure (101.3 kPa) equals the hydrostatic pressure of a 10.3 m water column (ρgh). Above this height, the absolute pressure at the siphon crest would need to go negative, which is physically impossible - the water column breaks and the siphon fails. This same limit applies to suction pumps, which is why deep wells require submersible pumps rather than surface suction pumps.',
       distractorExplanations: {
         0: 'This focuses on viscosity/increases, which is not the correct mechanism or principle for this problem.',
         2: 'This focuses on surface/tension, which is not the correct mechanism or principle for this problem.',
@@ -494,11 +508,25 @@ export const lesson3: Lesson = {
 export const lesson4: Lesson = {
   id: 'htw-L4',
   title: 'Tools & Workshop',
-  description: 'Analyze the engineering mechanics behind common hand tools and workshop equipment — torque, leverage, hydraulics, and more.',
+  description: 'Analyze the engineering mechanics behind common hand tools and workshop equipment - torque, leverage, hydraulics, and more.',
   icon: '🔧',
   xpReward: 25,
   levels: 4,
   questions: [
+    {
+      id: 'htw-L4-T1',
+      type: 'teaching',
+      question: 'Leverage and mechanical advantage',
+      explanation: 'Most hand tools are levers or wedges that multiply your input force. A longer wrench handle reduces the force needed because torque = force times lever arm.',
+      hint: 'A cheater pipe doubles the handle length, halving the required force.',
+    },
+    {
+      id: 'htw-L4-T2',
+      type: 'teaching',
+      question: 'Hydraulic systems in the workshop',
+      explanation: 'Hydraulic jacks use Pascal\'s law: pressure applied anywhere in a confined fluid transmits equally everywhere. A small pump piston can lift heavy loads through a large output piston.',
+      hint: 'The mechanical advantage equals the ratio of output piston area to input piston area.',
+    },
     // --- WRENCH / SPANNER ---
     {
       id: 'htw-L4-Q1',
@@ -507,7 +535,7 @@ export const lesson4: Lesson = {
       options: [
         'The required force is cut in half',
         'The required force is reduced to one-third',
-        'The required force stays the same — only speed changes',
+        'The required force stays the same - only speed changes',
         'The required force is reduced to one-quarter',
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
@@ -550,7 +578,7 @@ export const lesson4: Lesson = {
     {
       id: 'htw-L4-Q2',
       type: 'true-false',
-      question: 'When tightening a bolt with a torque wrench, the applied torque directly equals the clamping force times the bolt diameter — friction plays a negligible role.',
+      question: 'When tightening a bolt with a torque wrench, the applied torque directly equals the clamping force times the bolt diameter - friction plays a negligible role.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="30" y="10" width="20" height="40" rx="2" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.1"/><rect x="26" y="8" width="28" height="6" rx="1" fill="#334155" fill-opacity="0.3"/><line x1="40" y1="50" x2="40" y2="62" stroke="#58CC02" stroke-width="2" marker-end="url(#af2)"/><text x="44" y="58" font-size="4" fill="#58CC02" font-style="italic">F_clamp</text><defs><marker id="af2" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><rect x="14" y="22" width="12" height="4" rx="0.5" fill="#3B8700" fill-opacity="0.3"/><text x="15" y="20" font-size="3" fill="#3B8700">~50% head</text><rect x="32" y="22" width="16" height="4" rx="0.5" fill="#3B8700" fill-opacity="0.3"/><text x="34" y="20" font-size="3" fill="#3B8700">~40% thread</text><rect x="50" y="22" width="6" height="4" rx="0.5" fill="#58CC02" fill-opacity="0.3"/><text x="57" y="20" font-size="3" fill="#58CC02">10%</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155">~90% torque lost to friction</text><text x="40" y="78" text-anchor="middle" font-size="3.5" fill="#6B7280">T = K·F·d</text></svg>`,
       correctAnswer: false,
       explanation: 'Friction is NOT negligible. Typically, about 90% of the applied torque is consumed by friction (under the bolt head and in the threads), and only about 10% actually generates clamping force (bolt stretch). This is why the torque-tension relationship T = K·F·d includes a friction-dependent "nut factor" K, and why lubricated vs. dry bolts produce vastly different clamping forces at the same torque.',
@@ -586,7 +614,7 @@ export const lesson4: Lesson = {
       blanks: ['scroll', 'radial'],
       wordBank: ['scroll', 'radial', 'axial', 'helical', 'tangential'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="40" cy="36" r="20" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.08"/><line x1="40" y1="16" x2="40" y2="22" stroke="#334155" stroke-width="3"/><line x1="24" y1="48" x2="28" y2="44" stroke="#334155" stroke-width="3"/><line x1="56" y1="48" x2="52" y2="44" stroke="#334155" stroke-width="3"/><text x="40" y="12" text-anchor="middle" font-size="3" fill="#334155">jaw</text><line x1="40" y1="22" x2="40" y2="30" stroke="#58CC02" stroke-width="1.5" marker-end="url(#ac7)"/><line x1="28" y1="44" x2="34" y2="38" stroke="#58CC02" stroke-width="1.5" marker-end="url(#ac7)"/><line x1="52" y1="44" x2="46" y2="38" stroke="#58CC02" stroke-width="1.5" marker-end="url(#ac7)"/><defs><marker id="ac7" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><circle cx="40" cy="36" r="3" fill="#6B7280" fill-opacity="0.3"/><text x="40" y="38" text-anchor="middle" font-size="3" fill="#334155">bit</text><path d="M20,28 A20,20 0 0,1 28,20" stroke="#6B7280" stroke-width="1" fill="none"/><text x="16" y="22" font-size="3" fill="#6B7280">rotate</text><text x="40" y="66" text-anchor="middle" font-size="4" fill="#334155">3-jaw self-centering</text><text x="40" y="74" text-anchor="middle" font-size="3.5" fill="#6B7280">Scroll → radial clamp</text></svg>`,
-      explanation: 'The chuck uses a scroll plate (a spiral cam or conical thread) that converts rotation of the outer sleeve into simultaneous radial movement of all three jaws. This self-centering mechanism ensures the bit is gripped concentrically. The scroll thread provides mechanical advantage, converting low-effort rotation into high clamping force — similar to a lead screw converting rotation to linear motion.',
+      explanation: 'The chuck uses a scroll plate (a spiral cam or conical thread) that converts rotation of the outer sleeve into simultaneous radial movement of all three jaws. This self-centering mechanism ensures the bit is gripped concentrically. The scroll thread provides mechanical advantage, converting low-effort rotation into high clamping force - similar to a lead screw converting rotation to linear motion.',
     },
     // --- HYDRAULIC JACK ---
     {
@@ -594,7 +622,7 @@ export const lesson4: Lesson = {
       type: 'multiple-choice',
       question: 'A hydraulic jack has a small piston of area 5 cm² and a large piston of area 50 cm². If you apply 100 N of force to the small piston, what force does the large piston exert?',
       options: [
-        '100 N — force is conserved in hydraulic systems',
+        '100 N - force is conserved in hydraulic systems',
         '500 N',
         '1,000 N',
         '5,000 N',
@@ -639,7 +667,7 @@ export const lesson4: Lesson = {
   <text x="40" y="73" font-size="4" fill="#334155" text-anchor="middle">P = F&#x2081;/A&#x2081; = F&#x2082;/A&#x2082;</text>
 </svg>`,
       correctIndex: 2,
-      explanation: 'Pascal\'s law states that pressure is transmitted uniformly in an enclosed fluid. Pressure = 100 N / 5 cm² = 20 N/cm². Force on large piston = 20 N/cm² × 50 cm² = 1,000 N. The mechanical advantage is the area ratio (50/5 = 10×). However, the small piston must travel 10× farther — energy is conserved, not force.',
+      explanation: 'Pascal\'s law states that pressure is transmitted uniformly in an enclosed fluid. Pressure = 100 N / 5 cm² = 20 N/cm². Force on large piston = 20 N/cm² × 50 cm² = 1,000 N. The mechanical advantage is the area ratio (50/5 = 10×). However, the small piston must travel 10× farther - energy is conserved, not force.',
       distractorExplanations: {
         0: '100 is an order of magnitude too small, likely from a unit conversion error.',
         1: '500 is approximately half the correct answer, likely from omitting a required factor of 2.',
@@ -658,7 +686,7 @@ export const lesson4: Lesson = {
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="8" y="20" width="28" height="30" rx="3" stroke="#3B8700" stroke-width="1.5" fill="#58CC02" fill-opacity="0.12"/><text x="22" y="38" text-anchor="middle" font-size="4" fill="#334155">Oil</text><text x="22" y="46" text-anchor="middle" font-size="3" fill="#58CC02">incompressible</text><rect x="44" y="20" width="28" height="30" rx="3" stroke="#6B7280" stroke-width="1.5" fill="#6B7280" fill-opacity="0.08"/><text x="58" y="38" text-anchor="middle" font-size="4" fill="#334155">Air</text><text x="58" y="46" text-anchor="middle" font-size="3" fill="#6B7280">compressible</text><line x1="22" y1="16" x2="22" y2="20" stroke="#58CC02" stroke-width="2" marker-end="url(#ao1)"/><line x1="22" y1="50" x2="22" y2="54" stroke="#58CC02" stroke-width="2" marker-end="url(#ao1)"/><line x1="58" y1="16" x2="58" y2="20" stroke="#6B7280" stroke-width="2"/><text x="58" y="14" font-size="3" fill="#6B7280">spongy</text><defs><marker id="ao1" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><text x="40" y="66" text-anchor="middle" font-size="4" fill="#334155">Rigid force transmission</text></svg>`,
       correctIndex: 1,
-      explanation: 'Hydraulic systems rely on fluid incompressibility. When you push the small piston, the fluid volume displaced must go somewhere immediately — it pushes the large piston. If the fluid were compressible (like air in pneumatic systems), energy would be wasted compressing the fluid before the output piston moves. This is why hydraulic systems provide rigid, precise force transmission for presses, excavators, and aircraft controls.',
+      explanation: 'Hydraulic systems rely on fluid incompressibility. When you push the small piston, the fluid volume displaced must go somewhere immediately - it pushes the large piston. If the fluid were compressible (like air in pneumatic systems), energy would be wasted compressing the fluid before the output piston moves. This is why hydraulic systems provide rigid, precise force transmission for presses, excavators, and aircraft controls.',
       distractorExplanations: {
         0: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
         2: 'This focuses on lighter/water,, which is not the correct mechanism or principle for this problem.',
@@ -671,7 +699,7 @@ export const lesson4: Lesson = {
       question: 'A hydraulic jack with a 20:1 area ratio can lift 20 times the input force, but the small piston must be pumped through 20 times the distance that the large piston rises.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="8" y="20" width="8" height="30" rx="1" stroke="#3B8700" stroke-width="1.5" fill="none"/><rect x="48" y="20" width="24" height="30" rx="1" stroke="#3B8700" stroke-width="1.5" fill="none"/><rect x="16" y="42" width="32" height="6" stroke="#3B8700" stroke-width="1.5" fill="#58CC02" fill-opacity="0.1"/><line x1="12" y1="10" x2="12" y2="30" stroke="#58CC02" stroke-width="2"><animate attributeName="y2" values="26;38;26" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><text x="12" y="8" text-anchor="middle" font-size="4" fill="#334155" font-style="italic">20d</text><line x1="60" y1="18" x2="60" y2="22" stroke="#58CC02" stroke-width="2.5"><animate attributeName="y2" values="22;21;22" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><text x="60" y="14" text-anchor="middle" font-size="4" fill="#334155" font-style="italic">d</text><text x="12" y="58" text-anchor="middle" font-size="4" fill="#58CC02">F</text><text x="60" y="58" text-anchor="middle" font-size="4" fill="#58CC02">20F</text><text x="40" y="70" text-anchor="middle" font-size="4" fill="#334155">W_in = W_out</text><text x="40" y="78" text-anchor="middle" font-size="3.5" fill="#6B7280">F×20d = 20F×d</text></svg>`,
       correctAnswer: true,
-      explanation: 'Conservation of energy requires that Work_in = Work_out (ignoring friction). Since W = F × d, if force is multiplied by 20, distance is divided by 20. You pump many short strokes to raise a heavy load a small distance. This work conservation principle applies to all simple machines — mechanical advantage in force always comes at the cost of distance.',
+      explanation: 'Conservation of energy requires that Work_in = Work_out (ignoring friction). Since W = F × d, if force is multiplied by 20, distance is divided by 20. You pump many short strokes to raise a heavy load a small distance. This work conservation principle applies to all simple machines - mechanical advantage in force always comes at the cost of distance.',
       distractorExplanations: {
         1: 'Conservation of energy requires that Work_in = Work_out (ignoring friction).',
       },
@@ -713,9 +741,9 @@ export const lesson4: Lesson = {
       type: 'multiple-choice',
       question: 'Standard pliers have the fulcrum (pivot) between the effort (handles) and the load (jaws). What class of lever is this?',
       options: [
-        'First-class lever — fulcrum between effort and load',
-        'Second-class lever — load between fulcrum and effort',
-        'Third-class lever — effort between fulcrum and load',
+        'First-class lever - fulcrum between effort and load',
+        'Second-class lever - load between fulcrum and effort',
+        'Third-class lever - effort between fulcrum and load',
         'It is not a lever system; it operates on hydraulic principles',
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
@@ -763,7 +791,7 @@ export const lesson4: Lesson = {
   <text x="40" y="73" font-size="4" fill="#334155" text-anchor="middle">1st-class lever</text>
 </svg>`,
       correctIndex: 0,
-      explanation: 'Pliers and scissors are first-class levers: the pivot (fulcrum) sits between your hand force (effort) and the gripping/cutting force (load). Mechanical advantage = distance from fulcrum to handle / distance from fulcrum to jaw tip. Longer handles or a fulcrum closer to the jaws increases the gripping force — the same trade-off in all lever mechanisms.',
+      explanation: 'Pliers and scissors are first-class levers: the pivot (fulcrum) sits between your hand force (effort) and the gripping/cutting force (load). Mechanical advantage = distance from fulcrum to handle / distance from fulcrum to jaw tip. Longer handles or a fulcrum closer to the jaws increases the gripping force - the same trade-off in all lever mechanisms.',
       distractorExplanations: {
         1: 'This focuses on second-class, which is not the correct mechanism or principle for this problem.',
         2: 'This focuses on third-class, which is not the correct mechanism or principle for this problem.',
@@ -795,7 +823,7 @@ export const lesson4: Lesson = {
       question: 'Tweezers are a third-class lever because the effort (your finger force) is applied between the fulcrum (the joined end) and the load (the tip), meaning they always have a mechanical advantage less than 1.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><path d="M10,30 Q20,40 65,38" stroke="#3B8700" stroke-width="2.5" fill="none"/><path d="M10,50 Q20,40 65,42" stroke="#3B8700" stroke-width="2.5" fill="none"/><circle cx="10" cy="40" r="3" fill="#6B7280" fill-opacity="0.3"/><text x="10" y="26" text-anchor="middle" font-size="3.5" fill="#6B7280">Fulcrum</text><line x1="30" y1="34" x2="30" y2="28" stroke="#58CC02" stroke-width="2" marker-end="url(#al2)"/><line x1="30" y1="46" x2="30" y2="52" stroke="#58CC02" stroke-width="2" marker-end="url(#al2)"/><text x="30" y="24" text-anchor="middle" font-size="3.5" fill="#58CC02">Effort</text><circle cx="65" cy="40" r="2.5" fill="#A5E86C" fill-opacity="0.4"/><text x="65" y="34" text-anchor="middle" font-size="3.5" fill="#3B8700">Load</text><defs><marker id="al2" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><text x="40" y="66" text-anchor="middle" font-size="4" fill="#334155">3rd-class lever: MA < 1</text><text x="40" y="74" text-anchor="middle" font-size="3.5" fill="#6B7280">Precision > force</text></svg>`,
       correctAnswer: true,
-      explanation: 'In tweezers, the fulcrum is at the joined/bent end, your fingers apply force in the middle, and the tips grip the object. Since the effort arm is shorter than the load arm, MA < 1 — you must squeeze harder than the gripping force. The trade-off is increased precision and range of motion at the tips, which is why third-class levers are used where control matters more than force (e.g., human forearm, fishing rod).',
+      explanation: 'In tweezers, the fulcrum is at the joined/bent end, your fingers apply force in the middle, and the tips grip the object. Since the effort arm is shorter than the load arm, MA < 1 - you must squeeze harder than the gripping force. The trade-off is increased precision and range of motion at the tips, which is why third-class levers are used where control matters more than force (e.g., human forearm, fishing rod).',
       distractorExplanations: {
         1: 'In tweezers, the fulcrum is at the joined/bent end, your fingers apply force in the middle, and the tips grip the object.',
       },
@@ -806,14 +834,14 @@ export const lesson4: Lesson = {
       type: 'multiple-choice',
       question: 'A tape measure retracts automatically because of a coiled spring inside. As you pull the tape out further, the retraction force:',
       options: [
-        'Stays constant — it uses a constant-force spring',
-        'Increases linearly — like a standard Hookean spring',
+        'Stays constant - it uses a constant-force spring',
+        'Increases linearly - like a standard Hookean spring',
         'Decreases because the spring unwinds and loses tension',
         'Fluctuates randomly depending on tape curvature',
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="12" y1="55" x2="12" y2="10" stroke="#3B8700" stroke-width="1.5"/><line x1="12" y1="55" x2="72" y2="55" stroke="#3B8700" stroke-width="1.5"/><text x="6" y="34" font-size="4" fill="#334155" transform="rotate(-90 6 34)">F</text><text x="42" y="64" font-size="4" fill="#334155">x (extension)</text><line x1="15" y1="30" x2="68" y2="30" stroke="#58CC02" stroke-width="2.5"/><text x="40" y="26" text-anchor="middle" font-size="3.5" fill="#58CC02">constant force</text><path d="M15,48 L68,20" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="3 2"/><text x="55" y="18" font-size="3" fill="#6B7280">Hooke (F=kx)</text><text x="40" y="44" text-anchor="middle" font-size="3.5" fill="#334155">Negator spring</text></svg>`,
       correctIndex: 0,
-      explanation: 'Most tape measures use a constant-force spring (also called a Negator spring). Unlike a Hookean spring (F = kx), a constant-force spring provides nearly uniform force regardless of extension. It achieves this through its geometry — a tightly wound strip that naturally wants to remain coiled. This constant-force characteristic is also used in counterbalance mechanisms, window blinds, and cable retractors.',
+      explanation: 'Most tape measures use a constant-force spring (also called a Negator spring). Unlike a Hookean spring (F = kx), a constant-force spring provides nearly uniform force regardless of extension. It achieves this through its geometry - a tightly wound strip that naturally wants to remain coiled. This constant-force characteristic is also used in counterbalance mechanisms, window blinds, and cable retractors.',
       distractorExplanations: {
         1: 'This focuses on increases/linearly, which is not the correct mechanism or principle for this problem.',
         2: 'This focuses on decreases/because, which is not the correct mechanism or principle for this problem.',
@@ -827,7 +855,7 @@ export const lesson4: Lesson = {
       blanks: ['elastic', 'kinetic'],
       wordBank: ['elastic', 'kinetic', 'thermal', 'potential', 'electrical'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="22" cy="36" r="12" stroke="#3B8700" stroke-width="1.5" fill="none"/><path d="M22,36 A3,3 0 1,1 25,36 A5,5 0 1,1 28,36 A7,7 0 1,1 31,36" stroke="#58CC02" stroke-width="1.5" fill="none"/><text x="22" y="54" text-anchor="middle" font-size="3.5" fill="#58CC02">elastic E</text><line x1="34" y1="36" x2="68" y2="36" stroke="#3B8700" stroke-width="2"><animate attributeName="x2" values="68;40;68" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><line x1="64" y1="36" x2="58" y2="36" stroke="#58CC02" stroke-width="1.5" marker-end="url(#an1)"><animate attributeName="x1" values="64;38;64" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><defs><marker id="an1" markerWidth="4" markerHeight="3" refX="0" refY="1.5" orient="auto"><path fill="#58CC02" d="M4,0 L0,1.5 L4,3Z"/></marker></defs><text x="56" y="30" font-size="3.5" fill="#334155" font-style="italic">v</text><text x="40" y="68" text-anchor="middle" font-size="4" fill="#334155">Elastic → Kinetic</text></svg>`,
-      explanation: 'When you extend the tape, you do work against the spring force, storing elastic potential energy in the deformed spring. When released, this elastic energy converts to kinetic energy of the moving tape (and some heat from friction). This energy conversion — elastic to kinetic — is the same principle in spring-powered mechanisms, clock mainsprings, and even vehicle suspension rebound.',
+      explanation: 'When you extend the tape, you do work against the spring force, storing elastic potential energy in the deformed spring. When released, this elastic energy converts to kinetic energy of the moving tape (and some heat from friction). This energy conversion - elastic to kinetic - is the same principle in spring-powered mechanisms, clock mainsprings, and even vehicle suspension rebound.',
     },
     // --- SCREWDRIVER ---
     {
@@ -842,7 +870,7 @@ export const lesson4: Lesson = {
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="22" cy="32" r="6" stroke="#6B7280" stroke-width="1.5" fill="#6B7280" fill-opacity="0.1"/><line x1="22" y1="38" x2="22" y2="56" stroke="#6B7280" stroke-width="2"/><text x="22" y="16" text-anchor="middle" font-size="3.5" fill="#6B7280">small r</text><text x="22" y="22" text-anchor="middle" font-size="3.5" fill="#6B7280">low τ</text><circle cx="58" cy="32" r="12" stroke="#58CC02" stroke-width="2" fill="#58CC02" fill-opacity="0.1"/><line x1="58" y1="44" x2="58" y2="56" stroke="#3B8700" stroke-width="2"/><text x="58" y="14" text-anchor="middle" font-size="3.5" fill="#58CC02">large R</text><text x="58" y="22" text-anchor="middle" font-size="3.5" fill="#58CC02">high τ</text><line x1="22" y1="32" x2="28" y2="32" stroke="#6B7280" stroke-width="1" stroke-dasharray="1 1"/><text x="25" y="30" font-size="3" fill="#6B7280">r</text><line x1="58" y1="32" x2="70" y2="32" stroke="#58CC02" stroke-width="1" stroke-dasharray="1 1"/><text x="64" y="30" font-size="3" fill="#58CC02">R</text><text x="40" y="68" text-anchor="middle" font-size="4" fill="#334155">τ = F × r</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#6B7280">Bigger handle → more torque</text></svg>`,
       correctIndex: 1,
-      explanation: 'Torque = Force × radius. A larger handle radius means more torque is transmitted to the screw for the same grip force. This is why stubby screwdrivers (short but fat handles) and T-handle drivers exist — they maximize the moment arm. The same principle explains why steering wheels, valve handwheels, and capstan mechanisms use large diameters.',
+      explanation: 'Torque = Force × radius. A larger handle radius means more torque is transmitted to the screw for the same grip force. This is why stubby screwdrivers (short but fat handles) and T-handle drivers exist - they maximize the moment arm. The same principle explains why steering wheels, valve handwheels, and capstan mechanisms use large diameters.',
       distractorExplanations: {
         0: 'This focuses on handle/weighs, which is not the correct mechanism or principle for this problem.',
         2: 'Friction is not the governing mechanism here; the correct answer involves a different physical principle.',
@@ -861,13 +889,13 @@ export const lesson4: Lesson = {
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="12" y="18" width="8" height="40" rx="1" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.1"/><line x1="8" y1="22" x2="24" y2="22" stroke="#3B8700" stroke-width="1"/><line x1="8" y1="30" x2="24" y2="30" stroke="#3B8700" stroke-width="1"/><line x1="8" y1="38" x2="24" y2="38" stroke="#3B8700" stroke-width="1"/><line x1="8" y1="46" x2="24" y2="46" stroke="#3B8700" stroke-width="1"/><line x1="8" y1="54" x2="24" y2="54" stroke="#3B8700" stroke-width="1"/><text x="16" y="14" text-anchor="middle" font-size="3.5" fill="#6B7280">Coarse</text><rect x="48" y="18" width="8" height="40" rx="1" stroke="#58CC02" stroke-width="1.5" fill="#58CC02" fill-opacity="0.1"/><line x1="44" y1="21" x2="60" y2="21" stroke="#58CC02" stroke-width="1"/><line x1="44" y1="25" x2="60" y2="25" stroke="#58CC02" stroke-width="1"/><line x1="44" y1="29" x2="60" y2="29" stroke="#58CC02" stroke-width="1"/><line x1="44" y1="33" x2="60" y2="33" stroke="#58CC02" stroke-width="1"/><line x1="44" y1="37" x2="60" y2="37" stroke="#58CC02" stroke-width="1"/><line x1="44" y1="41" x2="60" y2="41" stroke="#58CC02" stroke-width="1"/><line x1="44" y1="45" x2="60" y2="45" stroke="#58CC02" stroke-width="1"/><line x1="44" y1="49" x2="60" y2="49" stroke="#58CC02" stroke-width="1"/><line x1="44" y1="53" x2="60" y2="53" stroke="#58CC02" stroke-width="1"/><text x="52" y="14" text-anchor="middle" font-size="3.5" fill="#58CC02">Fine</text><text x="16" y="64" text-anchor="middle" font-size="3" fill="#6B7280">fast, low F</text><text x="52" y="64" text-anchor="middle" font-size="3" fill="#58CC02">slow, high F</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#334155">Finer pitch → higher MA</text></svg>`,
       correctIndex: 2,
-      explanation: 'A finer pitch means less linear advance per revolution, which increases the mechanical advantage (MA = 2πr / pitch). For the same input torque, a finer thread generates more axial (clamping) force. The trade-off: more turns are needed to drive the screw to the same depth. This is directly analogous to gear ratios — lower "gear" means more force but slower motion.',
+      explanation: 'A finer pitch means less linear advance per revolution, which increases the mechanical advantage (MA = 2πr / pitch). For the same input torque, a finer thread generates more axial (clamping) force. The trade-off: more turns are needed to drive the screw to the same depth. This is directly analogous to gear ratios - lower "gear" means more force but slower motion.',
       distractorExplanations: {
         0: 'This focuses on require/drive, which is not the correct mechanism or principle for this problem.',
         1: 'This focuses on faster/provide, which is not the correct mechanism or principle for this problem.',
         3: 'This focuses on identical/mechanical, which is not the correct mechanism or principle for this problem.',
       },
-      hint: 'Think of the screw as an inclined plane wrapped around a cylinder — a shallower angle means higher mechanical advantage.',
+      hint: 'Think of the screw as an inclined plane wrapped around a cylinder - a shallower angle means higher mechanical advantage.',
     },
     {
       id: 'htw-L4-Q17',
@@ -887,13 +915,13 @@ export const lesson4: Lesson = {
       question: 'A spirit level (bubble level) works because the bubble inside the curved vial always moves to the highest point. What principle governs the bubble\'s position?',
       options: [
         'Surface tension pulls the bubble toward the center of the curved vial',
-        'Buoyancy — the less-dense air bubble floats to the highest point',
+        'Buoyancy - the less-dense air bubble floats to the highest point',
         'Magnetic forces in the liquid align the bubble with Earth\'s field',
         'Atmospheric pressure pushes the bubble toward the low-pressure zone',
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="8" y="30" width="64" height="16" rx="3" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.08"/><path d="M15,38 Q40,28 65,38" stroke="#58CC02" stroke-width="1.5" fill="#58CC02" fill-opacity="0.1"/><ellipse cx="40" cy="34" rx="6" ry="3" fill="none" stroke="#58CC02" stroke-width="2"/><text x="40" y="36" text-anchor="middle" font-size="3" fill="#58CC02">bubble</text><line x1="40" y1="32" x2="40" y2="24" stroke="#6B7280" stroke-width="1" stroke-dasharray="1 1"/><text x="40" y="22" text-anchor="middle" font-size="3" fill="#6B7280">highest</text><text x="40" y="56" text-anchor="middle" font-size="4" fill="#334155">Buoyancy → floats up</text><text x="40" y="64" text-anchor="middle" font-size="3.5" fill="#6B7280">ρ_air < ρ_liquid</text></svg>`,
       correctIndex: 1,
-      explanation: 'The bubble (air) is less dense than the liquid (typically ethanol-based). By Archimedes\' principle, the buoyant force pushes the bubble upward. In a curved vial, "upward" means toward the highest point of the vial curvature. When the surface is level, the highest point is exactly at the center marks. This is hydrostatics in action — the same buoyancy principle used in hydrometers, submarines, and ship stability analysis.',
+      explanation: 'The bubble (air) is less dense than the liquid (typically ethanol-based). By Archimedes\' principle, the buoyant force pushes the bubble upward. In a curved vial, "upward" means toward the highest point of the vial curvature. When the surface is level, the highest point is exactly at the center marks. This is hydrostatics in action - the same buoyancy principle used in hydrometers, submarines, and ship stability analysis.',
       distractorExplanations: {
         0: 'This focuses on surface/tension, which is not the correct mechanism or principle for this problem.',
         2: 'This focuses on magnetic/forces, which is not the correct mechanism or principle for this problem.',
@@ -907,7 +935,7 @@ export const lesson4: Lesson = {
       question: 'The vial of a spirit _____ is slightly curved (barrel-shaped) so that the bubble acts as an _____, seeking the highest point of the vial when the surface is.',
       blanks: ['indicator', 'level'],
       wordBank: ['indicator', 'level', 'tilted', 'inclined', 'accelerometer'],
-      explanation: 'The curved vial creates a restoring force: when the level tilts, the bubble moves away from center (toward the high side), indicating the direction of tilt. When the surface is truly level, the bubble rests at the geometric center. The vial curvature radius determines sensitivity — a larger radius (flatter curve) makes the bubble more responsive to small tilts.',
+      explanation: 'The curved vial creates a restoring force: when the level tilts, the bubble moves away from center (toward the high side), indicating the direction of tilt. When the surface is truly level, the bubble rests at the geometric center. The vial curvature radius determines sensitivity - a larger radius (flatter curve) makes the bubble more responsive to small tilts.',
     },
     {
       id: 'htw-L4-Q20',
@@ -916,7 +944,7 @@ export const lesson4: Lesson = {
       question: 'You are using a spirit level inside an elevator that is accelerating upward. How does the accelerating reference frame affect the level\'s reading?',
       options: [
         'The bubble becomes unstable and oscillates randomly in the vial',
-        'The level reads correctly — vertical acceleration doesn\'t affect it',
+        'The level reads correctly - vertical acceleration doesn\'t affect it',
         'The bubble shifts to one end, giving a false tilt reading',
         'The bubble shrinks under increased effective pressure in the vial',
       ],

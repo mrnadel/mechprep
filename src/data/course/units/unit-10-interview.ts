@@ -171,7 +171,7 @@ export const unit10: Unit = {
           id: 'u10-L1b-NEW-T2',
           type: 'teaching',
           question: 'Always Sanity-Check Your Answer',
-          explanation: 'After calculating, compare your result to something you know. If your estimate says a car weighs 100 kg, something went wrong. A typical car weighs about 1,500 kg.',
+          explanation: 'After calculating, compare your result to something you know. If your estimate says a car weighs 100 kg, something went wrong, and a typical car weighs about 1,500 kg.',
           hint: 'Try this now: check if your bathtub holds about 150 liters.',
         },
         {
@@ -219,7 +219,7 @@ export const unit10: Unit = {
           id: 'u10-L1c-NEW-T1',
           type: 'teaching',
           question: 'Power Laws Speed Up Estimation',
-          explanation: 'Many quantities follow simple power laws. If you double the diameter of a pipe, flow capacity goes up by 2^(5/2) = 5.66x. Knowing these exponents saves you from recalculating.',
+          explanation: 'Many quantities follow simple power laws. If you double the diameter of a pipe, flow capacity goes up by 2^(5/2) = 5.66x, and knowing these exponents saves you from recalculating.',
           hint: 'Try this now: if you double beam depth, how does deflection change?',
         },
         {
@@ -294,7 +294,7 @@ export const unit10: Unit = {
           id: 'u10-L1c-NEW-T2',
           type: 'teaching',
           question: 'Combining Estimates for Complex Problems',
-          explanation: 'Real interview problems require chaining estimates. First estimate the volume, then use density for mass, then use material strength for load capacity. Each step builds on the last.',
+          explanation: 'Real interview problems require chaining estimates. First estimate the volume, then use density for mass, then use material strength for load capacity, and each step builds on the last.',
           hint: 'Try this now: estimate the weight of the Eiffel Tower step by step.',
         },
         {
@@ -350,7 +350,7 @@ export const unit10: Unit = {
           id: 'u10-L2-NEW-T1',
           type: 'teaching',
           question: 'Reading Fracture Surfaces',
-          explanation: 'A fracture surface is like a crime scene. Beach marks mean fatigue. Chevrons mean brittle overload. Cup-and-cone means ductile overload. Learn to read these clues first.',
+          explanation: 'A fracture surface is like a crime scene. Beach marks mean fatigue.',
           hint: 'Try this now: look at a broken item and identify the fracture origin.',
         },
         {
@@ -498,7 +498,7 @@ export const unit10: Unit = {
           id: 'u10-L2b-NEW-T2',
           type: 'teaching',
           question: 'FMEA Prioritizes Risks',
-          explanation: 'FMEA rates each failure mode by Severity, Occurrence, and Detection. Multiply them together to get a Risk Priority Number (RPN). Fix the highest RPNs first.',
+          explanation: 'FMEA rates each failure mode by Severity, Occurrence, and Detection. Multiply them together to get a Risk Priority Number (RPN), and fix the highest RPNs first.',
           hint: 'Try this now: rate a common product failure by severity (1-10), occurrence (1-10), and detection (1-10).',
         },
         {
@@ -823,7 +823,7 @@ export const unit10: Unit = {
           id: 'u10-L3b-NEW-T2',
           type: 'teaching',
           question: 'Tolerances Drive Cost',
-          explanation: 'Tighter tolerances cost more. A part machined to +/- 0.01 mm costs much more than one at +/- 0.1 mm. Only tighten tolerances where function actually requires it.',
+          explanation: 'Tighter tolerances cost more. A part machined to +/- 0.01 mm costs much more than one at +/- 0.1 mm, and only tighten tolerances where function actually requires it.',
           hint: 'Try this now: think about which dimensions on a bracket actually need tight tolerances.',
         },
         {
@@ -871,7 +871,7 @@ export const unit10: Unit = {
           id: 'u10-L3c-NEW-T1',
           type: 'teaching',
           question: 'Structured Decision Making',
-          explanation: 'A Pugh matrix compares design concepts against a reference design. Rate each concept as better (+), same (S), or worse (-) on each criterion. The concept with the most plusses wins.',
+          explanation: 'A Pugh matrix compares design concepts against a reference design. Rate each concept as better (+), same (S), or worse (-) on each criterion, and the concept with the most plusses wins.',
           hint: 'Try this now: compare two phone cases on 5 criteria using +/S/-.',
         },
         {
@@ -946,7 +946,7 @@ export const unit10: Unit = {
           id: 'u10-L3c-NEW-T2',
           type: 'teaching',
           question: 'Weight Your Criteria',
-          explanation: 'Not all criteria matter equally. A weighted decision matrix multiplies each score by the criterion\'s importance weight. Safety might get weight 10 while color gets weight 1.',
+          explanation: 'Not all criteria matter equally. A weighted decision matrix multiplies each score by the criterion\'s importance weight, and safety might get weight 10 while color gets weight 1.',
           hint: 'Try this now: rank 5 criteria for buying a car by importance.',
         },
         {
@@ -992,7 +992,7 @@ export const unit10: Unit = {
           id: 'u10-L4-NEW-T1',
           type: 'teaching',
           question: 'FEA Approximates Reality',
-          explanation: 'Finite Element Analysis divides a complex shape into simple elements, solves equations for each, and assembles the results. It\'s an approximation. Finer mesh means better accuracy but longer solve time.',
+          explanation: 'Finite Element Analysis divides a complex shape into simple elements, solves equations for each, and assembles the results. It\'s an approximation, and finer mesh means better accuracy but longer solve time.',
           hint: 'Try this now: imagine dividing a bracket into tiny triangles.',
         },
         {
@@ -1106,7 +1106,7 @@ export const unit10: Unit = {
           id: 'u10-L4b-NEW-T1',
           type: 'teaching',
           question: 'Boundary Conditions Make or Break FEA',
-          explanation: 'Wrong boundary conditions give wrong answers, no matter how fine your mesh. Always verify that your constraints match reality. Over-constraining makes the model too stiff.',
+          explanation: 'Wrong boundary conditions give wrong answers, no matter how fine your mesh. Always verify that your constraints match reality, and over-constraining makes the model too stiff.',
           hint: 'Try this now: think about how you\'d constrain a simply-supported beam in FEA.',
         },
         {
@@ -1139,7 +1139,7 @@ export const unit10: Unit = {
           id: 'u10-L4b-NEW-T2',
           type: 'teaching',
           question: 'Check Convergence Before Trusting Results',
-          explanation: 'Run your model with 2-3 different mesh densities. If the peak stress changes less than 5% between meshes, you\'ve converged. If it keeps changing, refine further.',
+          explanation: 'Run your model with 2-3 different mesh densities. If the peak stress changes less than 5% between meshes, you\'ve converged, and if it keeps changing, refine further.',
           hint: 'Try this now: think about what would happen if you never checked convergence.',
         },
         {
@@ -1187,7 +1187,7 @@ export const unit10: Unit = {
           id: 'u10-L4c-NEW-T1',
           type: 'teaching',
           question: 'Stress Singularities Are Not Real',
-          explanation: 'Sharp corners in FEA produce infinite stress as you refine the mesh. This is a math artifact, not reality. Real parts have fillets, and real stresses are finite. Ignore singularity peaks.',
+          explanation: 'Sharp corners in FEA produce infinite stress as you refine the mesh. This is a math artifact, not reality.',
           hint: 'Try this now: think about why a perfectly sharp corner can\'t exist in the real world.',
         },
         {
@@ -1313,7 +1313,7 @@ export const unit10: Unit = {
           id: 'u10-L5-NEW-T1',
           type: 'teaching',
           question: 'Case Studies Show Your Engineering Judgment',
-          explanation: 'Interviewers use case studies to test how you approach open-ended problems. There\'s rarely one right answer. They want to see structured thinking, clear communication, and sound judgment.',
+          explanation: 'Interviewers use case studies to test how you approach open-ended problems. There\'s rarely one right answer, and they want to see structured thinking, clear communication, and sound judgment.',
           hint: 'Try this now: think about a product failure you\'ve heard of and what you\'d investigate first.',
         },
         {
@@ -1508,7 +1508,7 @@ export const unit10: Unit = {
           id: 'u10-L5c-NEW-T1',
           type: 'teaching',
           question: 'Think Across Disciplines',
-          explanation: 'Real engineering problems don\'t respect subject boundaries. A vibration problem might be caused by a fluid dynamics issue. A corrosion problem might stem from a thermal design choice.',
+          explanation: 'Real engineering problems don\'t respect subject boundaries. A vibration problem might be caused by a fluid dynamics issue, and a corrosion problem might stem from a thermal design choice.',
           hint: 'Try this now: think of a problem where multiple engineering disciplines interact.',
         },
         {
@@ -1588,7 +1588,7 @@ export const unit10: Unit = {
           id: 'u10-L5c-NEW-T2',
           type: 'teaching',
           question: 'Systems Thinking in Design',
-          explanation: 'Every component exists in a system. Changing one part affects others. Before proposing a fix, consider the ripple effects on weight, cost, assembly, maintenance, and other subsystems.',
+          explanation: 'Every component exists in a system. Changing one part affects others, and before proposing a fix, consider the ripple effects on weight, cost, assembly, maintenance, and other subsystems.',
           hint: 'Try this now: think about how making a bracket thicker affects the whole system.',
         },
         {
@@ -1693,7 +1693,7 @@ export const unit10: Unit = {
           id: 'u10-L6-NEW-T2',
           type: 'teaching',
           question: 'Standards vs Codes vs Specifications',
-          explanation: 'Standards define general requirements (ISO 9001). Codes are legally enforceable rules (ASME BPVC). Specifications detail exact requirements for a specific product or process.',
+          explanation: 'Standards define general requirements (ISO 9001). Codes are legally enforceable rules (ASME BPVC), and specifications detail exact requirements for a specific product or process.',
           hint: 'Try this now: think about whether a building code is a standard, code, or specification.',
         },
         {
@@ -1839,7 +1839,7 @@ export const unit10: Unit = {
           id: 'u10-L6c-NEW-T1',
           type: 'teaching',
           question: 'Engineers Need Project Management Skills',
-          explanation: 'Technical skills alone aren\'t enough. You need to plan schedules, manage resources, track milestones, and communicate status. A Gantt chart and a risk register are your basic tools.',
+          explanation: 'Technical skills alone aren\'t enough. You need to plan schedules, manage resources, track milestones, and communicate status, and a Gantt chart and a risk register are your basic tools.',
           hint: 'Try this now: think about the last time a project was late and what caused the delay.',
         },
         {

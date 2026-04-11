@@ -23,7 +23,7 @@ export const unit9: Unit = {
           id: 'u9-L1-T1',
           type: 'teaching',
           question: 'What Are Tolerances?',
-          explanation: 'No part can be made to an exact size. A tolerance is the total permissible variation on a dimension. For example, 50 +/- 0.1 mm means the part can be anywhere from 49.9 to 50.1 mm and still be acceptable.',
+          explanation: 'No part can be made to an exact size. A tolerance is the total permissible variation on a dimension, and for example, 50 +/- 0.1 mm means the part can be anywhere from 49.9 to 50.1 mm and still be acceptable.',
           hint: 'Tighter tolerances cost more because they require more precise machining.',
         },
         {
@@ -62,7 +62,7 @@ export const unit9: Unit = {
           id: 'u9-L1-T2',
           type: 'teaching',
           question: 'Bilateral vs Unilateral Tolerances',
-          explanation: 'A bilateral tolerance allows variation on both sides of the nominal, like 50 +0.05/-0.10 mm. A unilateral tolerance puts all variation on one side, like 50 +0.00/+0.05 mm. The total tolerance is always the difference between the upper and lower limits.',
+          explanation: 'A bilateral tolerance allows variation on both sides of the nominal, like 50 +0.05/-0.10 mm. A unilateral tolerance puts all variation on one side, like 50 +0.00/+0.05 mm, and the total tolerance is always the difference between the upper and lower limits.',
           hint: 'Holes are often toleranced unilateral-positive so the minimum size equals nominal.',
         },
         {
@@ -108,7 +108,7 @@ export const unit9: Unit = {
           id: 'u9-L1-T3',
           type: 'teaching',
           question: 'Clearance, Interference, and Transition Fits',
-          explanation: 'When a shaft goes into a hole, the fit depends on their relative sizes. A clearance fit always has a gap (shaft smaller than hole). An interference fit always has overlap (shaft larger than hole, requiring a press). A transition fit could go either way depending on where each part lands in its tolerance.',
+          explanation: 'When a shaft goes into a hole, the fit depends on their relative sizes. A clearance fit always has a gap (shaft smaller than hole).',
           hint: 'The ISO system uses letter codes (H7/g6) to specify standard fits between holes and shafts.',
         },
         {
@@ -178,7 +178,7 @@ export const unit9: Unit = {
           id: 'u9-L1b-T1',
           type: 'teaching',
           question: 'The ISO Fit System',
-          explanation: 'The ISO system designates fits using letter-number codes. Uppercase letters (like H) describe hole deviations, lowercase letters (like g) describe shaft deviations. The number is the IT tolerance grade. H7/g6 means an H7 hole with a g6 shaft.',
+          explanation: 'The ISO system designates fits using letter-number codes. Uppercase letters (like H) describe hole deviations, lowercase letters (like g) describe shaft deviations.',
           hint: 'H holes have zero lower deviation, meaning the minimum hole size equals nominal. This works with standard reamers.',
         },
         {
@@ -235,7 +235,7 @@ export const unit9: Unit = {
           id: 'u9-L1b-T2',
           type: 'teaching',
           question: 'Hole-Basis vs Shaft-Basis',
-          explanation: 'In a hole-basis system (most common), you fix the hole deviation (H) and vary the shaft letter to achieve different fits. In a shaft-basis system, you fix the shaft (h) and vary the hole. Hole-basis is preferred because adjusting a shaft on a lathe is cheaper than adjusting a hole.',
+          explanation: 'In a hole-basis system (most common), you fix the hole deviation (H) and vary the shaft letter to achieve different fits. In a shaft-basis system, you fix the shaft (h) and vary the hole, and hole-basis is preferred because adjusting a shaft on a lathe is cheaper than adjusting a hole.',
           hint: 'Use shaft-basis when a single drawn bar stock shaft mates with multiple different holes.',
         },
         {
@@ -244,7 +244,7 @@ export const unit9: Unit = {
           question: 'Difference between the hole-basis and shaft-basis fit systems, and when would you prefer the shaft-basis system?',
           options: [
             'There is no real difference, both produce the same results',
-            'In a hole-basis system the hole tolerance zone is fixed (H) and the fit is varied by changing the shaft letter',
+            'In a hole-basis system the hole tolerance zone is fixed (H) and the fit is',
             'Hole-basis is for metric and shaft-basis is for imperial systems',
             'Shaft-basis always produces tighter fits than hole-basis'
           ],
@@ -261,11 +261,11 @@ export const unit9: Unit = {
         {
           id: 'u9-L1-SB1',
           type: 'sort-buckets',
-          question: 'Sort each fit designation into the correct category:',
+          question: 'Sort each fit designation: does the shaft always clear the hole, or can it interfere?',
           options: ['H7/g6', 'H7/s6', 'H7/k6', 'H7/d9', 'H7/p6', 'H7/h6'],
-          buckets: ['Clearance', 'Interference', 'Transition'],
-          correctBuckets: [0, 1, 2, 0, 1, 2],
-          explanation: 'g6 and d9 shafts are undersized (clearance). s6 and p6 shafts are oversized (interference). k6 and h6 sit near nominal (transition/sliding).',
+          buckets: ['Clearance fit', 'Interference or transition fit'],
+          correctBuckets: [0, 1, 1, 0, 1, 1],
+          explanation: 'g6 and d9 shafts are undersized relative to the hole (clearance). s6, p6, k6, and h6 overlap or exceed the hole size (interference or transition).',
         },
         {
           id: 'u9-L1-Q12',
@@ -336,7 +336,7 @@ export const unit9: Unit = {
           id: 'u9-L1c-T1',
           type: 'teaching',
           question: 'Selecting the Right Fit',
-          explanation: 'Fit selection depends on function. H7/h6 gives a sliding fit (hand-insertable, minimal play). H7/k6 is a transition fit for accurate centering. H7/p6 is a light press fit. H7/s6 is a heavy press fit. Always consider how the assembly will be done and what forces the joint must handle.',
+          explanation: 'Fit selection depends on function. H7/h6 gives a sliding fit (hand-insertable, minimal play).',
           hint: 'Try this now: look at a mechanical assembly near you and guess which fit type each joint uses.',
         },
         {
@@ -411,7 +411,7 @@ export const unit9: Unit = {
           id: 'u9-L1c-T2',
           type: 'teaching',
           question: 'ASME Rule #1 and ISO 2768',
-          explanation: 'ASME Rule #1 (the Envelope Principle) says a feature at MMC must have perfect form. ISO uses the Independence Principle by default, where form and size are independent. ISO 2768 provides general tolerances for unchalloted dimensions, using classes like "mK" (m = medium dimensional, K = geometric).',
+          explanation: 'ASME Rule #1 (the Envelope Principle) says a feature at MMC must have perfect form. ISO uses the Independence Principle by default, where form and size are independent, and iSO 2768 provides general tolerances for unchalloted dimensions, using classes like "mK" (m = medium dimensional, K = geometric).',
           hint: 'This is a key difference between ASME and ISO: ASME ties form to size by default, ISO does not.',
         },
         {
@@ -495,7 +495,7 @@ export const unit9: Unit = {
           id: 'u9-L2-T1',
           type: 'teaching',
           question: 'What Is GD&T?',
-          explanation: 'GD&T (Geometric Dimensioning and Tolerancing) controls the geometry of parts beyond just size. It uses symbols in a feature control frame to specify how flat, round, straight, or correctly positioned a feature must be. There are 5 categories: form, orientation, location, profile, and runout.',
+          explanation: 'GD&T (Geometric Dimensioning and Tolerancing) controls the geometry of parts beyond just size. It uses symbols in a feature control frame to specify how flat, round, straight, or correctly positioned a feature must be, and there are 5 categories: form, orientation, location, profile, and runout.',
           hint: 'A feature control frame reads left to right: symbol, tolerance value, modifiers, then datum references.',
         },
         {
@@ -534,7 +534,7 @@ export const unit9: Unit = {
           id: 'u9-L2-T2',
           type: 'teaching',
           question: 'MMC, LMC, and Bonus Tolerance',
-          explanation: 'MMC (Maximum Material Condition) is the size where a feature has the most material: smallest hole, largest shaft. When a feature departs from MMC, it gets "bonus" geometric tolerance because there is more room for the parts to fit. LMC is the opposite, used when minimum wall thickness is the concern.',
+          explanation: 'MMC (Maximum Material Condition) is the size where a feature has the most material: smallest hole, largest shaft. When a feature departs from MMC, it gets "bonus" geometric tolerance because there is more room for the parts to fit, and lMC is the opposite, used when minimum wall thickness is the concern.',
           hint: 'The circled M in a feature control frame means the tolerance applies at MMC with bonus allowed.',
         },
         {
@@ -602,7 +602,7 @@ export const unit9: Unit = {
           question: 'Why is position tolerance almost always applied at MMC rather than RFS for clearance-hole bolt patterns?',
           options: [
             'MMC is simply the default, no functional reason',
-            'At MMC holes are smallest and shafts largest, giving the tightest fit condition, and bonus tolerance helps when parts depart from MMC',
+            'At MMC holes are smallest and shafts largest, giving the tightest fit condition, and bonus',
             'RFS is actually preferred but MMC is cheaper to inspect',
             'MMC only applies to shafts, not holes'
           ],
@@ -720,7 +720,7 @@ export const unit9: Unit = {
           id: 'u9-L2b-T2',
           type: 'teaching',
           question: 'Virtual Condition',
-          explanation: 'The virtual condition is the worst-case boundary a feature can occupy, combining both its size and geometric tolerance. For an external feature at MMC: VC = MMC size + geometric tolerance. For an internal feature at MMC: VC = MMC size minus geometric tolerance.',
+          explanation: 'The virtual condition is the worst-case boundary a feature can occupy, combining both its size and geometric tolerance. For an external feature at MMC: VC = MMC size + geometric tolerance, and for an internal feature at MMC: VC = MMC size minus geometric tolerance.',
           hint: 'Virtual condition is used in stack-up analysis and functional gauge design.',
         },
         {
@@ -808,7 +808,7 @@ export const unit9: Unit = {
           id: 'u9-L2c-T1',
           type: 'teaching',
           question: 'Runout and Profile Tolerances',
-          explanation: 'Circular runout checks individual cross-sections as the part rotates about a datum axis. Total runout checks the entire surface at once. Profile of a surface is the most versatile GD&T tolerance, controlling form, orientation, size, and location simultaneously.',
+          explanation: 'Circular runout checks individual cross-sections as the part rotates about a datum axis. Total runout checks the entire surface at once, and profile of a surface is the most versatile GD&T tolerance, controlling form, orientation, size, and location simultaneously.',
           hint: 'Think of runout as what a dial indicator reads when you spin the part.',
         },
         {
@@ -817,7 +817,7 @@ export const unit9: Unit = {
           question: 'What is the difference between circular runout and total runout?',
           options: [
             'Circular runout applies to round features and total runout to flat features',
-            'Circular runout measures individual cross-sections as the part rotates; total runout checks the entire surface at once',
+            'Circular runout measures individual cross-sections as the part rotates',
             'Total runout is always twice the circular runout value',
             'They are measured with different instruments but control the same thing'
           ],
@@ -904,7 +904,7 @@ export const unit9: Unit = {
           id: 'u9-L2c-T2',
           type: 'teaching',
           question: 'Projected Tolerance Zones',
-          explanation: 'A projected tolerance zone (indicated by circled P) extends from the feature surface into the mating part space. It ensures that a bolt screwed into a tilted tapped hole does not interfere with the mating clearance holes. The projection height is specified in the feature control frame.',
+          explanation: 'A projected tolerance zone (indicated by circled P) extends from the feature surface into the mating part space. It ensures that a bolt screwed into a tilted tapped hole does not interfere with the mating clearance holes, and the projection height is specified in the feature control frame.',
           hint: 'Without a projected tolerance zone, a tilted tapped hole could cause a perfectly good bolt to miss the clearance hole.',
         },
         {
@@ -951,7 +951,7 @@ export const unit9: Unit = {
           question: 'What is the "zero tolerance at MMC" concept?',
           options: [
             'It means no tolerance is applied',
-            'The stated geometric tolerance is zero; all tolerance comes from bonus as features depart from MMC',
+            'The stated geometric tolerance is zero; all tolerance comes from bonus as features depart from',
             'The feature must be exactly at MMC with zero size variation',
             'Zero tolerance at MMC is not a valid concept'
           ],
@@ -992,7 +992,7 @@ export const unit9: Unit = {
           id: 'u9-L3-T1',
           type: 'teaching',
           question: 'What Are Datums?',
-          explanation: 'A datum is a theoretically perfect reference point, line, or plane derived from a real (imperfect) surface on the part. Datums establish the coordinate system from which you measure everything else. They represent how the part sits in its assembly or fixture.',
+          explanation: 'A datum is a theoretically perfect reference point, line, or plane derived from a real (imperfect) surface on the part. Datums establish the coordinate system from which you measure everything else, and they represent how the part sits in its assembly or fixture.',
           hint: 'The physical surface is called the "datum feature." The perfect geometry derived from it is the "datum."',
         },
         {
@@ -1146,7 +1146,7 @@ export const unit9: Unit = {
           id: 'u9-L3b-T1',
           type: 'teaching',
           question: 'Datum Targets',
-          explanation: 'Datum targets specify discrete points, lines, or areas on a surface that establish the datum. They are essential for cast, forged, or sheet metal parts where the entire surface is too rough or warped for reliable full-surface contact. Designated as A1, A2, A3 for three points on datum A.',
+          explanation: 'Datum targets specify discrete points, lines, or areas on a surface that establish the datum. They are essential for cast, forged, or sheet metal parts where the entire surface is too rough or warped for reliable full-surface contact, and designated as A1, A2, A3 for three points on datum A.',
           hint: 'Try this now: imagine a cast engine block. The bottom surface is rough and wavy. Three datum target points give repeatable contact.',
         },
         {
@@ -1203,7 +1203,7 @@ export const unit9: Unit = {
           question: 'What is the physical implication of MMC on datum B (a bore)?',
           options: [
             'Datum axis established at the MMC size of the bore',
-            'Datum simulator is a fixed pin at virtual condition; when bore departs from MMC, it can shift',
+            'Datum simulator is a fixed pin at virtual condition',
             'Tolerance only applies when the bore is at MMC size',
             'Bore must be produced at exactly MMC to be a datum'
           ],
@@ -1219,17 +1219,17 @@ export const unit9: Unit = {
         {
           id: 'u9-L3-SB1',
           type: 'sort-buckets',
-          question: 'Sort each datum feature type by its typical use case:',
+          question: 'Sort each datum approach by whether it uses a single full surface or a targeted/partial contact:',
           options: ['Full-surface datum', 'Datum target points', 'Datum target areas', 'Common datum (A-A)', 'MMC datum modifier', 'RFS datum modifier'],
-          buckets: ['Machined parts', 'Cast/rough parts', 'Advanced features'],
-          correctBuckets: [0, 1, 1, 2, 2, 2],
-          explanation: 'Full-surface datums work on well-machined parts. Datum targets are for cast or rough surfaces. Common datums, MMC modifiers, and RFS modifiers are advanced features for special situations.',
+          buckets: ['Full-surface contact', 'Targeted or partial contact'],
+          correctBuckets: [0, 1, 1, 0, 1, 1],
+          explanation: 'Full-surface datums and common datums use the entire feature surface. Datum targets, MMC modifiers, and RFS modifiers use specific points or conditions rather than the full surface.',
         },
         {
           id: 'u9-L3b-T2',
           type: 'teaching',
           question: 'Datum Shift and MMC Datums',
-          explanation: 'When a datum feature of size (like a bore) is referenced at MMC, the datum simulator is a fixed-size pin at virtual condition. If the actual bore is larger than the pin, the part can "shift" on it. This datum shift provides additional manufacturing flexibility.',
+          explanation: 'When a datum feature of size (like a bore) is referenced at MMC, the datum simulator is a fixed-size pin at virtual condition. If the actual bore is larger than the pin, the part can "shift" on it, and this datum shift provides additional manufacturing flexibility.',
           hint: 'Datum shift is free tolerance that comes from oversized datum features. It is similar to bonus tolerance but applies to the datum reference.',
         },
         {
@@ -1257,7 +1257,7 @@ export const unit9: Unit = {
           question: 'What is the difference between a datum axis established from a bore at RFS vs. MMC?',
           options: [
             'There is no difference',
-            'At RFS, the datum simulator expands to fit the actual bore (no shift). At MMC, it is fixed (shift allowed).',
+            'At RFS, the datum simulator expands to fit the actual bore (no shift). At MMC,',
             'RFS gives larger datum shift than MMC',
             'MMC requires a different bore than RFS'
           ],
@@ -1309,7 +1309,7 @@ export const unit9: Unit = {
           id: 'u9-L3c-T1',
           type: 'teaching',
           question: 'Datums in Manufacturing',
-          explanation: 'The manufacturing fixture must simulate the drawing\'s datum reference frame. If the machining fixture locates differently than the inspection fixture, parts may pass inspection but fail assembly. This is one of the most common causes of GD&T-related production problems.',
+          explanation: 'The manufacturing fixture must simulate the drawing\'s datum reference frame. If the machining fixture locates differently than the inspection fixture, parts may pass inspection but fail assembly, and this is one of the most common causes of GD&T-related production problems.',
           hint: 'Always ask: does the fixture hold the part the same way the drawing says the datums are established?',
         },
         {
@@ -1489,7 +1489,7 @@ export const unit9: Unit = {
           id: 'u9-L4-T1',
           type: 'teaching',
           question: 'What Is Tolerance Stack-Up?',
-          explanation: 'When multiple parts assemble together, their individual tolerances accumulate. A tolerance stack-up analysis predicts the total variation at a critical gap or clearance. If 5 parts each have +/-0.1 mm, the worst case total is +/-0.5 mm, which might be too much.',
+          explanation: 'When multiple parts assemble together, their individual tolerances accumulate. A tolerance stack-up analysis predicts the total variation at a critical gap or clearance, and if 5 parts each have +/-0.1 mm, the worst case total is +/-0.5 mm, which might be too much.',
           hint: 'Always identify the critical gap first, then trace the chain of dimensions that contribute to it.',
         },
         {
@@ -1527,7 +1527,7 @@ export const unit9: Unit = {
           id: 'u9-L4-T2',
           type: 'teaching',
           question: 'Worst-Case vs RSS Analysis',
-          explanation: 'Worst-case analysis adds all tolerances directly, guaranteeing 100% of assemblies will work. RSS (Root Sum Square) uses statistics, predicting about 99.73% success. RSS gives smaller, cheaper tolerances but accepts a tiny risk. Use worst-case for safety-critical applications.',
+          explanation: 'Worst-case analysis adds all tolerances directly, guaranteeing 100% of assemblies will work. RSS (Root Sum Square) uses statistics, predicting about 99.73% success.',
           hint: 'RSS formula: total = square root of (t1 squared + t2 squared + ... + tn squared).',
         },
         {
@@ -1572,7 +1572,7 @@ export const unit9: Unit = {
           question: 'How do you determine whether a dimension is a "positive" or "negative" contributor?',
           options: [
             'Positive dimensions are always the larger ones',
-            'Trace a continuous path: dimensions in the direction of the gap are positive, opposite are negative',
+            'Trace a continuous path: dimensions in the direction of the gap are positive, opposite are',
             'All dimensions from the first part are positive',
             'Positive and negative assignment is arbitrary'
           ],
@@ -1640,7 +1640,7 @@ export const unit9: Unit = {
           id: 'u9-L4b-T1',
           type: 'teaching',
           question: 'RSS Analysis',
-          explanation: 'The RSS (Root Sum Square) method assumes individual dimensions follow normal distributions and are statistically independent. Instead of adding tolerances directly, you square each, add the squares, then take the square root. This gives a smaller total, predicting 99.73% of assemblies will fit.',
+          explanation: 'The RSS (Root Sum Square) method assumes individual dimensions follow normal distributions and are statistically independent. Instead of adding tolerances directly, you square each, add the squares, then take the square root, and this gives a smaller total, predicting 99.73% of assemblies will fit.',
           hint: 'RSS = sqrt(t1^2 + t2^2 + ... + tn^2). For 5 equal tolerances of +/-0.1: RSS = sqrt(5 x 0.01) = +/-0.22, versus WCA = +/-0.50.',
         },
         {
@@ -1705,7 +1705,7 @@ export const unit9: Unit = {
           id: 'u9-L4b-T2',
           type: 'teaching',
           question: 'Process Capability (Cpk)',
-          explanation: 'Cpk measures how well a manufacturing process is centered within its tolerance band. Cpk = 1.0 means the process uses 100% of the band. Cpk = 1.33 uses 75% (good). Cpk = 1.67 uses 60% (excellent). Higher Cpk means fewer defective parts.',
+          explanation: 'Cpk measures how well a manufacturing process is centered within its tolerance band. Cpk = 1.0 means the process uses 100% of the band.',
           hint: 'A process with Cpk = 1.33 produces about 63 defective parts per million. At Cpk = 2.0, it drops to about 2 per billion.',
         },
         {
@@ -1742,7 +1742,7 @@ export const unit9: Unit = {
           question: 'What is the "modified RSS" or "RSS with safety factor" method?',
           options: [
             'RSS applied only to the largest tolerances',
-            'An RSS calculation multiplied by a correction factor (typically 1.2 to 1.5) to account for non-ideal conditions',
+            'An RSS calculation multiplied by a correction factor (typically 1.2 to 1.5) to account for',
             'RSS applied only to the smallest tolerances',
             'A method that uses RSS for some dimensions and worst-case for others'
           ],
@@ -1761,7 +1761,7 @@ export const unit9: Unit = {
           question: 'As the number of contributors increases, what happens to the benefit of RSS vs worst-case?',
           options: [
             'The benefit is constant regardless of count',
-            'As contributors increase, RSS grows as sqrt(n) while WCA grows as n, so the savings increase dramatically',
+            'As contributors increase, RSS grows as sqrt(n) while WCA grows as n',
             'RSS is better only for chains with fewer than 3 contributors',
             'More contributors always favor worst-case'
           ],
@@ -1865,7 +1865,7 @@ export const unit9: Unit = {
           id: 'u9-L4c-T2',
           type: 'teaching',
           question: 'GD&T in Stack-Ups',
-          explanation: 'Geometric tolerances (position, perpendicularity, flatness) contribute to tolerance stack-ups and are often overlooked. A tilted mating surface adds variation to the gap. Always include both dimensional and geometric tolerances in your analysis.',
+          explanation: 'Geometric tolerances (position, perpendicularity, flatness) contribute to tolerance stack-ups and are often overlooked. A tilted mating surface adds variation to the gap, and always include both dimensional and geometric tolerances in your analysis.',
           hint: 'If a mating surface is not perfectly perpendicular, the gap changes across the width of the part.',
         },
         {
@@ -1942,7 +1942,7 @@ export const unit9: Unit = {
           question: 'What is the "virtual condition boundary" approach to tolerance stack-up?',
           options: [
             'It is a 3D CAD visualization method',
-            'Instead of stacking dimensional and geometric tolerances separately, combine each feature into its virtual condition boundary first, then stack those',
+            'Instead of stacking dimensional and geometric tolerances separately, combine each feature into its virtual condition',
             'It ignores geometric tolerances entirely',
             'It is only applicable to position tolerances'
           ],
@@ -1972,7 +1972,7 @@ export const unit9: Unit = {
           id: 'u9-L5-T1',
           type: 'teaching',
           question: 'Surface Roughness Basics',
-          explanation: 'Every machined surface has tiny peaks and valleys. Ra (arithmetic average roughness) is the most common measurement, averaging the height deviations from the mean line. Rz measures the average peak-to-valley height and better captures extreme features. Lower numbers mean smoother surfaces.',
+          explanation: 'Every machined surface has tiny peaks and valleys. Ra (arithmetic average roughness) is the most common measurement, averaging the height deviations from the mean line.',
           hint: 'Ra is a good general indicator, but it can hide deep scratches because it averages everything out.',
         },
         {
@@ -1992,7 +1992,7 @@ export const unit9: Unit = {
           question: 'A sealing surface meets the Ra spec but still leaks. What might Ra be missing?',
           options: [
             'Ra is the only relevant parameter',
-            'Ra averages out the profile and can hide deep scratches or isolated peaks that create leak paths',
+            'Ra averages out the profile and can hide deep scratches or isolated peaks that create',
             'The surface is too smooth, increase Ra',
             'Ra was measured in the wrong direction'
           ],
@@ -2010,7 +2010,7 @@ export const unit9: Unit = {
           id: 'u9-L5-T2',
           type: 'teaching',
           question: 'Surface Finish Symbols and Lay',
-          explanation: 'Drawing callouts specify the maximum allowable roughness (e.g., Ra 1.6 means 1.6 or smoother). The "lay" is the direction of machining marks, shown with symbols like "=" (parallel) or "perpendicular" (perpendicular to the boundary). Lay affects friction, sealing, and wear.',
+          explanation: 'Drawing callouts specify the maximum allowable roughness (e.g., Ra 1.6 means 1.6 or smoother). The "lay" is the direction of machining marks, shown with symbols like "=" (parallel) or "perpendicular" (perpendicular to the boundary), and lay affects friction, sealing, and wear.',
           hint: 'Each manufacturing process has a typical Ra range: grinding 0.1 to 1.6, turning 0.4 to 6.3, sand casting 12.5 to 25.',
         },
         {
@@ -2126,7 +2126,7 @@ export const unit9: Unit = {
           id: 'u9-L5-T3',
           type: 'teaching',
           question: 'CMM and Measurement Tools',
-          explanation: 'A CMM (Coordinate Measuring Machine) is a 3-axis probe system that captures X, Y, Z points on a part surface to verify GD&T. A profilometer measures micro-scale roughness with a fine stylus. They are not interchangeable: CMMs measure macro geometry (flatness, position), profilometers measure surface texture.',
+          explanation: 'A CMM (Coordinate Measuring Machine) is a 3-axis probe system that captures X, Y, Z points on a part surface to verify GD&T. A profilometer measures micro-scale roughness with a fine stylus, and they are not interchangeable: CMMs measure macro geometry (flatness, position), profilometers measure surface texture.',
           hint: 'The standard reference temperature for all dimensional measurement is 20 degrees C (ISO 1).',
         },
         {
@@ -2172,7 +2172,7 @@ export const unit9: Unit = {
           id: 'u9-L5b-T2',
           type: 'teaching',
           question: 'Measurement Uncertainty',
-          explanation: 'Every measurement has uncertainty, arising from the instrument, method, environment, and operator. When a measured value is near the tolerance limit, the uncertainty zone makes accept/reject decisions ambiguous. The gauge maker\'s 10:1 rule says measurement uncertainty should be at most 1/10 of the tolerance being inspected.',
+          explanation: 'Every measurement has uncertainty, arising from the instrument, method, environment, and operator. When a measured value is near the tolerance limit, the uncertainty zone makes accept/reject decisions ambiguous, and the gauge maker\'s 10:1 rule says measurement uncertainty should be at most 1/10 of the tolerance being inspected.',
           hint: 'If your micrometer has 0.002 mm resolution, the 10:1 rule says you should only inspect tolerances of +/-0.020 mm or wider.',
         },
         {
@@ -2181,7 +2181,7 @@ export const unit9: Unit = {
           question: 'What is measurement uncertainty, and why must it be considered?',
           options: [
             'The operator\'s doubt about the measurement',
-            'The quantified range within which the true value is expected to lie, affecting accept/reject decisions near tolerance limits',
+            'The quantified range within which the true value is expected to lie, affecting accept/reject decisions',
             'It is eliminated by using digital readouts',
             'It only applies to manual measurements'
           ],
@@ -2219,7 +2219,7 @@ export const unit9: Unit = {
           question: 'What is gauge R&R, and what is an acceptable result?',
           options: [
             'A test to verify gauges are calibrated',
-            'A study that quantifies measurement variation from the gauge (repeatability) and operators (reproducibility). Less than 10% is acceptable.',
+            'A study that quantifies measurement variation from the gauge (repeatability) and operators (reproducibility). Less than',
             'A method to repair damaged gauges',
             'A comparison between two different gauge brands'
           ],
@@ -2257,7 +2257,7 @@ export const unit9: Unit = {
           question: 'What is a "go/no-go gauge" and what is its advantage for production inspection?',
           options: [
             'A gauge that measures dimensions to high precision',
-            'A fixed-size gauge that checks only whether a feature is within tolerance (pass/fail), enabling fast 100% inspection',
+            'A fixed-size gauge that checks only whether a feature is within tolerance (pass/fail), enabling fast',
             'A gauge that measures both roughness and dimensions',
             'A type of CMM program'
           ],
@@ -2298,7 +2298,7 @@ export const unit9: Unit = {
           id: 'u9-L5c-T1',
           type: 'teaching',
           question: 'Choosing the Right Measurement Tool',
-          explanation: 'Different features need different tools. CMMs verify GD&T on macro geometry. Profilometers measure surface texture. Optical comparators project magnified shadows for 2D profiles. Go/no-go gauges provide fast pass/fail for production. The right tool depends on what you need to verify and at what volume.',
+          explanation: 'Different features need different tools. CMMs verify GD&T on macro geometry.',
           hint: 'Try this now: think about a part you have inspected. Was the measurement method appropriate for the feature and tolerance being checked?',
         },
         {
@@ -2326,7 +2326,7 @@ export const unit9: Unit = {
           question: 'What is an optical comparator (profile projector)?',
           options: [
             'A device that compares two parts side by side',
-            'An instrument that projects a magnified shadow (silhouette) of a part onto a screen for measuring 2D profiles',
+            'An instrument that projects a magnified shadow (silhouette) of a part onto a screen for',
             'A camera that takes photos for visual inspection',
             'A precision scale for comparing part weights'
           ],
@@ -2381,7 +2381,7 @@ export const unit9: Unit = {
           id: 'u9-L5c-T2',
           type: 'teaching',
           question: 'Abbe\'s Principle',
-          explanation: 'Abbe\'s principle states that the measurement axis should be collinear with the dimension being measured. When they are offset, angular errors in the guide multiply by the offset distance, causing "cosine error." A micrometer obeys Abbe\'s principle; a caliper does not.',
+          explanation: 'Abbe\'s principle states that the measurement axis should be collinear with the dimension being measured. When they are offset, angular errors multiply by the offset distance, causing "cosine error" - a micrometer obeys this but a caliper does not.',
           hint: 'This is why micrometers are more accurate than calipers for the same resolution.',
         },
         {
@@ -2446,7 +2446,7 @@ export const unit9: Unit = {
           question: 'What is the "Bearing Area Curve" (Abbott-Firestone curve)?',
           options: [
             'It only applies to bearing surfaces',
-            'It plots the percentage of the surface in contact at successive depth levels, showing how the surface will wear in and support load',
+            'It plots the percentage of the surface in contact at successive depth levels, showing how',
             'It is only used in research, not in industry',
             'It is the same as the Rz measurement plotted differently'
           ],

@@ -68,7 +68,7 @@ export const unit5: Unit = {
           id: 'u5-L1-T2',
           type: 'teaching',
           question: 'Thermal resistance of a flat wall',
-          explanation: 'Thermal resistance works like electrical resistance. For a flat wall: R = L/(k*A). Heat flow is Q = deltaT / R_total.',
+          explanation: 'Thermal resistance works like electrical resistance. For a flat wall: R = L/(k*A), and heat flow is Q = deltaT / R_total.',
           hint: 'Try this now: feel the difference between touching metal vs. wood at the same temperature.',
         },
         {
@@ -113,7 +113,7 @@ export const unit5: Unit = {
           id: 'u5-L1-T3',
           type: 'teaching',
           question: 'Thermal conductivity varies',
-          explanation: 'Thermal conductivity isn\'t constant. For most metals, k decreases slightly with temperature. For gases, k increases with temperature.',
+          explanation: 'Thermal conductivity isn\'t constant. For most metals, k decreases slightly with temperature, and for gases, k increases with temperature.',
           hint: 'Alloys generally have lower k than pure metals.',
         },
         {
@@ -184,7 +184,7 @@ export const unit5: Unit = {
           id: 'u5-L1b-T1',
           type: 'teaching',
           question: 'Thermal resistance circuits',
-          explanation: 'For layers in series, add the resistances: R_total = R1 + R2 + R3. For parallel paths, use 1/R_total = 1/R1 + 1/R2. It works just like electrical circuits.',
+          explanation: 'For layers in series, add the resistances: R_total = R1 + R2 + R3. For parallel paths, use 1/R_total = 1/R1 + 1/R2, and it works just like electrical circuits.',
           hint: 'Contact resistance between surfaces adds another R in series.',
         },
         {
@@ -231,7 +231,7 @@ export const unit5: Unit = {
           id: 'u5-L1b-T2',
           type: 'teaching',
           question: 'Contact resistance',
-          explanation: 'Even "flat" surfaces only touch at microscopic peaks. The air gaps between them add thermal resistance. Thermal paste fills those gaps to reduce contact resistance.',
+          explanation: 'Even "flat" surfaces only touch at microscopic peaks. The air gaps between them add thermal resistance, and thermal paste fills those gaps to reduce contact resistance.',
           hint: 'Try this now: notice how a CPU heatsink always uses thermal paste at the interface.',
         },
         {
@@ -386,7 +386,7 @@ export const unit5: Unit = {
           id: 'u5-L1c-T2',
           type: 'teaching',
           question: 'Critical radius of insulation',
-          explanation: 'Adding insulation to a small pipe can actually increase heat loss. The added surface area boosts convection faster than the insulation resists conduction. This stops at the critical radius: r_cr = k_insulation / h_outside.',
+          explanation: 'Adding insulation to a small pipe can actually increase heat loss. The added surface area boosts convection faster than the insulation resists conduction, and this stops at the critical radius: r_cr = k_insulation / h_outside.',
           hint: 'This matters most for thin wires and small pipes with low h.',
         },
         {
@@ -620,7 +620,7 @@ export const unit5: Unit = {
           id: 'u5-L2-T3',
           type: 'teaching',
           question: 'Laminar vs. turbulent flow',
-          explanation: 'Laminar flow is smooth and orderly. Turbulent flow is chaotic with mixing. Turbulent flow has much higher h because the mixing brings fresh fluid to the surface faster.',
+          explanation: 'Laminar flow is smooth and orderly. Turbulent flow is chaotic with mixing, and turbulent flow has much higher h because the mixing brings fresh fluid to the surface faster.',
           hint: 'Engineers often design heat exchangers for turbulent flow on purpose.',
         },
         {
@@ -716,7 +716,7 @@ export const unit5: Unit = {
           id: 'u5-L2b-T2',
           type: 'teaching',
           question: 'Prandtl number ranges',
-          explanation: 'Pr tells you the relative thickness of velocity and thermal boundary layers. Oils have Pr ~ 100-1,000 (thin thermal BL). Liquid metals have Pr ~ 0.01 (thick thermal BL). Air and water are in between.',
+          explanation: 'Pr tells you the relative thickness of velocity and thermal boundary layers. Oils have Pr ~ 100-1,000 (thin thermal BL).',
           hint: 'Pr > 1 means momentum diffuses faster than heat.',
         },
         {
@@ -824,7 +824,7 @@ export const unit5: Unit = {
           id: 'u5-L2c-T1',
           type: 'teaching',
           question: 'Flat plate correlations',
-          explanation: 'For laminar flow over a flat plate (Re < 5x10^5): Nu = 0.664*Re^0.5*Pr^(1/3). For turbulent: Nu = 0.037*Re^0.8*Pr^(1/3). These use the plate length as the characteristic length.',
+          explanation: 'For laminar flow over a flat plate (Re < 5x10^5): Nu = 0.664*Re^0.5*Pr^(1/3). For turbulent: Nu = 0.037*Re^0.8*Pr^(1/3), and these use the plate length as the characteristic length.',
           hint: 'The laminar correlation has Re^0.5, while turbulent has Re^0.8.',
         },
         {
@@ -871,7 +871,7 @@ export const unit5: Unit = {
           id: 'u5-L2c-T2',
           type: 'teaching',
           question: 'Pipe flow details',
-          explanation: 'For pipe flow, the characteristic length is the diameter. The entry region has higher h because boundary layers are still developing. Fully developed flow has constant h.',
+          explanation: 'For pipe flow, the characteristic length is the diameter. The entry region has higher h because boundary layers are still developing, and fully developed flow has constant h.',
           hint: 'The entry length for turbulent flow is about 10-60 diameters.',
         },
         {
@@ -925,7 +925,7 @@ export const unit5: Unit = {
           id: 'u5-L2c-T3',
           type: 'teaching',
           question: 'Natural convection correlations',
-          explanation: 'For natural convection, Re is replaced by the Rayleigh number Ra = Gr*Pr. Correlations take the form Nu = C*(Ra)^n. Vertical surfaces, horizontal plates, and enclosures each have different correlations.',
+          explanation: 'For natural convection, Re is replaced by the Rayleigh number Ra = Gr*Pr. Correlations take the form Nu = C*(Ra)^n, and vertical surfaces, horizontal plates, and enclosures each have different correlations.',
           hint: 'Ra < 10^9 is usually laminar natural convection. Ra > 10^9 is turbulent.',
         },
         {
@@ -986,7 +986,7 @@ export const unit5: Unit = {
           id: 'u5-L3-T1',
           type: 'teaching',
           question: 'Thermal radiation',
-          explanation: 'Radiation is heat transfer via electromagnetic waves. Every object above 0 K emits radiation. It doesn\'t need a medium, so it works in vacuum.',
+          explanation: 'Radiation is heat transfer via electromagnetic waves. Every object above 0 K emits radiation, and it doesn\'t need a medium, so it works in vacuum.',
           hint: 'The sun heats the earth through 150 million km of vacuum via radiation.',
         },
         {
@@ -1023,7 +1023,7 @@ export const unit5: Unit = {
           id: 'u5-L3-T2',
           type: 'teaching',
           question: 'Emissivity and real surfaces',
-          explanation: 'Real surfaces emit less than a blackbody. Emissivity epsilon (0 to 1) measures how close a surface is to a blackbody. For a real surface: Q = epsilon*sigma*A*T^4.',
+          explanation: 'Real surfaces emit less than a blackbody. Emissivity epsilon (0 to 1) measures how close a surface is to a blackbody, and for a real surface: Q = epsilon*sigma*A*T^4.',
           hint: 'Polished metal has low emissivity (~0.05). Rough/oxidized surfaces have high emissivity (~0.9).',
         },
         {
@@ -1116,11 +1116,12 @@ export const unit5: Unit = {
           type: 'order-steps',
           question: 'Order the heat transfer modes from most dominant at room temperature to most dominant at 2,000 C.',
           steps: [
-            'Convection (often dominant at low deltaT)',
+            'Natural convection (dominant at low deltaT indoors)',
+            'Forced convection (dominant with airflow at moderate T)',
             'Conduction (important in solids at all temperatures)',
             'Radiation (grows as T^4, dominates at high T)',
           ],
-          correctOrder: [0, 1, 2],
+          correctOrder: [0, 1, 2, 3],
           explanation: 'At room temperature, convection often dominates. Radiation becomes increasingly important and dominates above about 500-1,000 C.',
           hint: 'Which mode has the strongest temperature dependence?',
         },
@@ -1233,7 +1234,7 @@ export const unit5: Unit = {
           id: 'u5-L3b-T3',
           type: 'teaching',
           question: 'Radiation resistance network',
-          explanation: 'Gray surface radiation can be modeled with a resistance network. Surface resistance: (1-epsilon)/(epsilon*A). Space resistance: 1/(A1*F_12). Total resistance determines net heat exchange.',
+          explanation: 'Gray surface radiation can be modeled with a resistance network. Surface resistance: (1-epsilon)/(epsilon*A).',
           hint: 'This is the thermal-circuit approach applied to radiation.',
         },
         {
@@ -1275,14 +1276,15 @@ export const unit5: Unit = {
         {
           id: 'u5-L3b-Q9',
           type: 'order-steps',
-          question: 'Order the resistances in series for radiation from surface 1 to surface 2 (gray, diffuse).',
+          question: 'Order the steps for calculating net radiation exchange between two gray, diffuse surfaces.',
           steps: [
-            'Surface resistance of surface 1: (1-e1)/(e1*A1)',
-            'Space resistance: 1/(A1*F_12)',
-            'Surface resistance of surface 2: (1-e2)/(e2*A2)',
+            'Compute surface resistance of surface 1: (1-e1)/(e1*A1)',
+            'Compute view factor F_12 for the geometry',
+            'Compute space resistance: 1/(A1*F_12)',
+            'Compute surface resistance of surface 2: (1-e2)/(e2*A2)',
           ],
-          correctOrder: [0, 1, 2],
-          explanation: 'Radiation must "leave" surface 1 (surface resistance), travel through space (space resistance), and be "accepted" by surface 2 (surface resistance).',
+          correctOrder: [0, 1, 2, 3],
+          explanation: 'Radiation leaves surface 1 (surface resistance), crosses space (space/view-factor resistance), then is accepted by surface 2 (surface resistance).',
           hint: 'The path goes: emission, travel, absorption.',
         },
       ],
@@ -1347,7 +1349,7 @@ export const unit5: Unit = {
           id: 'u5-L3c-T2',
           type: 'teaching',
           question: 'Wien\'s law and the spectrum',
-          explanation: 'Wien\'s displacement law says the peak emission wavelength is lambda_max = 2898/T (micrometers, T in Kelvin). The sun (5,800 K) peaks at visible light. Room-temperature objects peak in the infrared.',
+          explanation: 'Wien\'s displacement law says the peak emission wavelength is lambda_max = 2898/T (micrometers, T in Kelvin). The sun (5,800 K) peaks at visible light, and room-temperature objects peak in the infrared.',
           hint: 'This is why thermal cameras detect infrared, not visible light.',
         },
         {
@@ -1438,11 +1440,12 @@ export const unit5: Unit = {
           type: 'order-steps',
           question: 'Order these temperature ranges by which heat transfer mode typically dominates.',
           steps: [
+            'Cryogenic (<-100 C): conduction dominates',
             'Room temp with gentle air: convection and radiation roughly equal',
             'Moderate temp (100-500 C): convection often dominates',
             'High temp (>1,000 C): radiation dominates',
           ],
-          correctOrder: [0, 1, 2],
+          correctOrder: [0, 1, 2, 3],
           explanation: 'Radiation\'s T^4 dependence makes it increasingly important at higher temperatures, eventually dominating over convection.',
           hint: 'Which mode grows fastest with temperature?',
         },
@@ -1509,7 +1512,7 @@ export const unit5: Unit = {
           id: 'u5-L4-T2',
           type: 'teaching',
           question: 'Flow arrangements',
-          explanation: 'In parallel flow, both fluids enter from the same end. In counter flow, they enter from opposite ends. Counter flow is more efficient because it maintains a larger average temperature difference.',
+          explanation: 'In parallel flow, both fluids enter from the same end. In counter flow, they enter from opposite ends, and counter flow is more efficient because it maintains a larger average temperature difference.',
           hint: 'Counter flow can bring the cold fluid outlet closer to the hot fluid inlet temperature.',
         },
         {
@@ -1561,7 +1564,7 @@ export const unit5: Unit = {
           id: 'u5-L4-T3',
           type: 'teaching',
           question: 'Fouling in heat exchangers',
-          explanation: 'Over time, deposits build up on heat exchanger surfaces. This fouling adds thermal resistance and reduces performance. The fouling factor R_f is added to the resistance calculation.',
+          explanation: 'Over time, deposits build up on heat exchanger surfaces. This fouling adds thermal resistance and reduces performance, and the fouling factor R_f is added to the resistance calculation.',
           hint: 'Regular cleaning schedules prevent excessive fouling.',
         },
         {
@@ -1787,7 +1790,7 @@ export const unit5: Unit = {
           id: 'u5-L4c-T1',
           type: 'teaching',
           question: 'The NTU-effectiveness method',
-          explanation: 'Effectiveness epsilon = Q_actual / Q_max, where Q_max = C_min * (T_h,in - T_c,in). NTU = U*A/C_min. This method works when only inlet temperatures are known.',
+          explanation: 'Effectiveness epsilon = Q_actual / Q_max, where Q_max = C_min * (T_h,in - T_c,in). NTU = U*A/C_min, and this method works when only inlet temperatures are known.',
           hint: 'C_min is the smaller of (m_dot*cp)_hot and (m_dot*cp)_cold.',
         },
         {
@@ -1886,7 +1889,7 @@ export const unit5: Unit = {
           id: 'u5-L4c-T3',
           type: 'teaching',
           question: 'Choosing LMTD vs. NTU',
-          explanation: 'Use LMTD to size a new exchanger (all temperatures known, find A). Use NTU to rate an existing one (A known, find outlet temperatures). Both give the same answer.',
+          explanation: 'Use LMTD to size a new exchanger (all temperatures known, find A). Use NTU to rate an existing one (A known, find outlet temperatures), and both give the same answer.',
           hint: 'Sizing = LMTD. Rating = NTU.',
         },
         {
@@ -2111,7 +2114,7 @@ export const unit5: Unit = {
           id: 'u5-L5b-T1',
           type: 'teaching',
           question: 'Fin efficiency',
-          explanation: 'Fin efficiency eta_fin = Q_actual / Q_ideal. Q_ideal assumes the entire fin is at the base temperature. In reality, the tip is cooler, so eta_fin < 1.',
+          explanation: 'Fin efficiency eta_fin = Q_actual / Q_ideal. Q_ideal assumes the entire fin is at the base temperature, and in reality, the tip is cooler, so eta_fin < 1.',
           hint: 'Typical fin efficiencies are 0.7 to 0.95. Below 0.5 means the fin is too long.',
         },
         {
@@ -2535,7 +2538,7 @@ export const unit5: Unit = {
           id: 'u5-L6-T3',
           type: 'teaching',
           question: 'Time constant',
-          explanation: 'The time constant tau = rho*V*cp/(h*A_s) has units of seconds. Larger mass or lower h means slower response. After 5*tau, the object is within 1% of the final temperature.',
+          explanation: 'The time constant tau = rho*V*cp/(h*A_s) has units of seconds. Larger mass or lower h means slower response, and after 5*tau, the object is within 1% of the final temperature.',
           hint: 'Try this now: heat up a metal spoon and a wooden spoon. The metal one cools faster (lower tau).',
         },
         {
@@ -2598,7 +2601,7 @@ export const unit5: Unit = {
           id: 'u5-L6b-T1',
           type: 'teaching',
           question: 'When lumped fails',
-          explanation: 'When Bi > 0.1, the internal temperature varies with position. You need Heisler charts or the one-term approximation. These give T(x,t) for common shapes: plane wall, cylinder, and sphere.',
+          explanation: 'When Bi > 0.1, the internal temperature varies with position. You need Heisler charts or the one-term approximation, and these give T(x,t) for common shapes: plane wall, cylinder, and sphere.',
           hint: 'The Fourier number Fo = alpha*t/L^2 is the dimensionless time in these solutions.',
         },
         {
@@ -2697,7 +2700,7 @@ export const unit5: Unit = {
           id: 'u5-L6b-T3',
           type: 'teaching',
           question: 'Semi-infinite solid',
-          explanation: 'A semi-infinite solid has a surface but extends infinitely deep. It\'s used for short-time problems where heat hasn\'t penetrated far. Example: touching a hot surface briefly.',
+          explanation: 'A semi-infinite solid has a surface but extends infinitely deep. It\'s used for short-time problems where heat hasn\'t penetrated far, and example: touching a hot surface briefly.',
           hint: 'The penetration depth grows as sqrt(alpha*t).',
         },
         {
@@ -2760,7 +2763,7 @@ export const unit5: Unit = {
           id: 'u5-L6c-T1',
           type: 'teaching',
           question: 'Product solution for 2D/3D',
-          explanation: 'For a rectangular bar (2D), the solution is the product of two 1D plane wall solutions. For a brick (3D), it\'s the product of three. This works for any combination of walls, cylinders, and spheres.',
+          explanation: 'For a rectangular bar (2D), the solution is the product of two 1D plane wall solutions. For a brick (3D), it\'s the product of three, and this works for any combination of walls, cylinders, and spheres.',
           hint: 'theta*_2D(x,y,t) = theta*_wall1(x,t) * theta*_wall2(y,t).',
         },
         {
@@ -2807,7 +2810,7 @@ export const unit5: Unit = {
           id: 'u5-L6c-T2',
           type: 'teaching',
           question: 'Quenching and heat treatment',
-          explanation: 'In quenching, a hot metal part is plunged into liquid. The cooling rate determines the final material properties. Too slow gives soft material. Too fast can cause cracking.',
+          explanation: 'In quenching, a hot metal part is plunged into liquid. The cooling rate determines the final material properties.',
           hint: 'Water quench (h ~ 1,000-10,000) is much faster than oil quench (h ~ 100-1,000).',
         },
         {

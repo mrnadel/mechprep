@@ -23,7 +23,7 @@ export const unit6: Unit = {
           id: 'u6-L1-T1',
           type: 'teaching',
           question: 'What makes a fluid a fluid?',
-          explanation: 'A fluid is any substance that deforms continuously under shear stress. Unlike solids, fluids can\'t resist shear when at rest. The two key properties are density (mass per volume, kg/m3) and viscosity (resistance to flow).',
+          explanation: 'A fluid is any substance that deforms continuously under shear stress. Unlike solids, fluids can\'t resist shear when at rest, and the two key properties are density (mass per volume, kg/m3) and viscosity (resistance to flow).',
           hint: 'Water and air are both fluids, even though one is much denser.',
         },
         {
@@ -251,9 +251,9 @@ export const unit6: Unit = {
           question: 'What is the resultant hydrostatic force on the gate? (rho_water = 1000 kg/m3)',
           options: [
             'F = 0.5 * rho*g * h2 * w = 235.4 kN',
-            'F = rho*g * h * A = 1000 * 9.81 * 4 * 12 = 470.9 kN',
-            'F = rho*g * y_c * A = 1000 * 9.81 * 2 * 12 = 235.4 kN',
-            'F = rho*g * h * w = 1000 * 9.81 * 4 * 3 = 117.7 kN'
+            'F = rho*g * h * A = 1000 * 9.81 * 4 * 12',
+            'F = rho*g * y_c * A = 1000 * 9.81 * 2 * 12',
+            'F = rho*g * h * w = 1000 * 9.81 * 4 * 3'
           ],
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><rect x="5" y="10" width="35" height="55" fill="#A5E86C" opacity="0.1"/><line x1="40" y1="10" x2="40" y2="65" stroke="#3B8700" stroke-width="2.5"/><circle cx="40" cy="65" r="2" fill="#3B8700" opacity="0.5"/><line x1="5" y1="65" x2="75" y2="65" stroke="#3B8700" stroke-width="2"/><circle cx="40" cy="37" r="1.5" fill="#3B8700" opacity="0.6"/><text x="44" y="36" font-size="3" fill="#3B8700" opacity="0.5">CG</text><circle cx="40" cy="44" r="1.5" fill="#58CC02" opacity="0.6"/><text x="44" y="43" font-size="3" fill="#58CC02" opacity="0.5">CP</text><text x="40" y="76" text-anchor="middle" font-size="3" fill="#58CC02" opacity="0.4">CP below CG</text></svg>',
@@ -436,7 +436,7 @@ export const unit6: Unit = {
           id: 'u6-L1c-T2',
           type: 'teaching',
           question: 'Vapor pressure and cavitation',
-          explanation: 'Every liquid has a vapor pressure that increases with temperature. When local pressure in a flow drops below vapor pressure, bubbles form. Their violent collapse is called cavitation, and it damages pump impellers and propellers.',
+          explanation: 'Every liquid has a vapor pressure that increases with temperature. When local pressure in a flow drops below vapor pressure, bubbles form, and their violent collapse is called cavitation, and it damages pump impellers and propellers.',
           hint: 'Try this now: boil water at room temperature by pulling a vacuum on a syringe.',
         },
         {
@@ -704,7 +704,7 @@ export const unit6: Unit = {
           id: 'u6-L2-T3',
           type: 'teaching',
           question: 'Energy line and HGL',
-          explanation: 'The energy line (EL) shows total head: P/(rho*g) + v2/(2g) + z. The hydraulic grade line (HGL) is the EL minus velocity head. When the HGL drops below a pipe, pressure there is below atmospheric.',
+          explanation: 'The energy line (EL) shows total head: P/(rho*g) + v2/(2g) + z. The hydraulic grade line (HGL) is the EL minus velocity head, and when the HGL drops below a pipe, pressure there is below atmospheric.',
           hint: 'Pitot tubes and venturi meters both use Bernoulli to convert pressure measurements into velocity.',
         },
         {
@@ -931,7 +931,7 @@ export const unit6: Unit = {
           id: 'u6-L2c-T2',
           type: 'teaching',
           question: 'Discharge coefficients in practice',
-          explanation: 'Real flow through orifices and nozzles never matches Bernoulli perfectly. The discharge coefficient Cd accounts for losses. A venturi has Cd of about 0.98, a nozzle about 0.96, and an orifice plate about 0.61.',
+          explanation: 'Real flow through orifices and nozzles never matches Bernoulli perfectly. The discharge coefficient Cd accounts for losses, and a venturi has Cd of about 0.98, a nozzle about 0.96, and an orifice plate about 0.61.',
           hint: 'Higher Cd means less energy wasted. Venturis are most efficient but also most expensive.',
         },
         {
@@ -1096,7 +1096,7 @@ export const unit6: Unit = {
           id: 'u6-L3-T2',
           type: 'teaching',
           question: 'Friction losses in pipes',
-          explanation: 'The Darcy-Weisbach equation gives friction head loss: h_f = f*(L/D)*(v2/(2g)). The friction factor f depends on Re and the pipe\'s relative roughness (epsilon/D). You find f from the Moody chart or the Colebrook equation.',
+          explanation: 'The Darcy-Weisbach equation gives friction head loss: h_f = f*(L/D)*(v2/(2g)). The friction factor f depends on Re and the pipe\'s relative roughness (epsilon/D), and you find f from the Moody chart or the Colebrook equation.',
           hint: 'Doubling pipe length doubles friction loss. Halving diameter increases it roughly 32x.',
         },
         {
@@ -1184,7 +1184,7 @@ export const unit6: Unit = {
           id: 'u6-L3-T3',
           type: 'teaching',
           question: 'Minor losses and pipe networks',
-          explanation: 'Fittings, valves, bends, and expansions cause "minor" losses: h_m = K*(v2/(2g)). Despite the name, these can dominate in short systems with many fittings. In parallel pipes, head loss across each branch must be equal.',
+          explanation: 'Fittings, valves, bends, and expansions cause "minor" losses: h_m = K*(v2/(2g)). Despite the name, these can dominate in short systems with many fittings, and in parallel pipes, head loss across each branch must be equal.',
           hint: 'A valve that\'s half-closed can cause more loss than 50 meters of straight pipe.',
         },
         {
@@ -1251,7 +1251,7 @@ export const unit6: Unit = {
           id: 'u6-L3b-T2',
           type: 'teaching',
           question: 'Pipe network basics',
-          explanation: 'In series pipes, total head loss is the sum of all individual losses and flow rate is the same everywhere. In parallel pipes, head loss is equal across branches, and flow rates add up. These rules are like series and parallel resistors.',
+          explanation: 'In series pipes, total head loss is the sum of all individual losses and flow rate is the same everywhere. In parallel pipes, head loss is equal across branches, and flow rates add up, and these rules are like series and parallel resistors.',
           hint: 'Try this now: look at the plumbing diagram in your building and identify series vs parallel runs.',
         },
         {
@@ -1338,7 +1338,7 @@ export const unit6: Unit = {
           id: 'u6-L3c-T1',
           type: 'teaching',
           question: 'Velocity profiles in pipes',
-          explanation: 'In laminar flow, the velocity profile is parabolic with V_max = 2*V_avg at the centerline. In turbulent flow, the profile is much flatter, with V_max about 1.2*V_avg. The difference matters when converting point measurements to average flow.',
+          explanation: 'In laminar flow, the velocity profile is parabolic with V_max = 2*V_avg at the centerline. In turbulent flow, the profile is much flatter, with V_max about 1.2*V_avg, and the difference matters when converting point measurements to average flow.',
           hint: 'A pitot tube at the center reads V_max, not V_avg.',
         },
         {
@@ -1486,7 +1486,7 @@ export const unit6: Unit = {
           id: 'u6-L4-T1',
           type: 'teaching',
           question: 'Two main types of pumps',
-          explanation: 'Centrifugal pumps use a spinning impeller to convert velocity into pressure. They\'re great for high flow at moderate pressure. Positive displacement (PD) pumps trap and push fixed volumes, making them better for high-viscosity fluids or high-pressure, low-flow jobs.',
+          explanation: 'Centrifugal pumps use a spinning impeller to convert velocity into pressure. They\'re great for high flow at moderate pressure, and positive displacement (PD) pumps trap and push fixed volumes, making them better for high-viscosity fluids or high-pressure, low-flow jobs.',
           hint: 'Most water supply systems use centrifugal pumps. Hydraulic systems often use PD pumps.',
         },
         {
@@ -1550,7 +1550,7 @@ export const unit6: Unit = {
           id: 'u6-L4-T2',
           type: 'teaching',
           question: 'Pump head, NPSH, and cavitation',
-          explanation: 'NPSH (net positive suction head) is the margin above the fluid\'s vapor pressure at the pump inlet. If NPSH is too low, bubbles form and collapse violently, which is called cavitation. This damages impellers and reduces performance.',
+          explanation: 'NPSH (net positive suction head) is the margin above the fluid\'s vapor pressure at the pump inlet. If NPSH is too low, bubbles form and collapse violently, which is called cavitation, and this damages impellers and reduces performance.',
           hint: 'Hot liquids have higher vapor pressure, so they cavitate more easily.',
         },
         {
@@ -1630,7 +1630,7 @@ export const unit6: Unit = {
           id: 'u6-L4-T3',
           type: 'teaching',
           question: 'Pump curves and affinity laws',
-          explanation: 'A pump curve plots head vs. flow rate. The operating point is where the pump curve crosses the system curve. The affinity laws let you scale performance with speed: flow is proportional to speed, head to speed squared, and power to speed cubed.',
+          explanation: 'A pump curve plots head vs. flow rate. The operating point is where the pump curve crosses the system curve, and the affinity laws let you scale performance with speed: flow is proportional to speed, head to speed squared, and power to speed cubed.',
           hint: 'Doubling pump speed quadruples the head but increases power 8x.',
         },
         {
@@ -1792,7 +1792,7 @@ export const unit6: Unit = {
           id: 'u6-L4c-T1',
           type: 'teaching',
           question: 'Pump efficiency and hydraulic power',
-          explanation: 'Hydraulic power is P_hydraulic = rho*g*Q*H. Pump efficiency eta = P_hydraulic/P_shaft. Overall efficiency includes motor losses too. A typical centrifugal pump has 60 to 85% efficiency at BEP.',
+          explanation: 'Hydraulic power is P_hydraulic = rho*g*Q*H. Pump efficiency eta = P_hydraulic/P_shaft.',
           hint: 'Power input always exceeds hydraulic power output because no pump is 100% efficient.',
         },
         {
@@ -2015,7 +2015,7 @@ export const unit6: Unit = {
           id: 'u6-L5-T2',
           type: 'teaching',
           question: 'Common dimensionless numbers',
-          explanation: 'Reynolds number (Re = rho*v*L/mu) compares inertia to viscous forces. Froude number (Fr = v/sqrt(g*L)) compares inertia to gravity. Mach number (Ma = v/c) compares flow speed to sound speed.',
+          explanation: 'Reynolds number (Re = rho*v*L/mu) compares inertia to viscous forces. Froude number (Fr = v/sqrt(g*L)) compares inertia to gravity, and mach number (Ma = v/c) compares flow speed to sound speed.',
           hint: 'For pipe flow, match Re. For ship waves, match Fr. For supersonic jets, match Ma.',
         },
         {
@@ -2265,7 +2265,7 @@ export const unit6: Unit = {
           id: 'u6-L5c-T1',
           type: 'teaching',
           question: 'Drag and lift coefficients',
-          explanation: 'Drag coefficient Cd = F_D/(0.5*rho*V2*A) and lift coefficient Cl = F_L/(0.5*rho*V2*A) are dimensionless. They depend on Re, shape, and surface roughness. Using Cd lets you predict drag at any speed or fluid, not just the one tested.',
+          explanation: 'Drag coefficient Cd = F_D/(0.5*rho*V2*A) and lift coefficient Cl = F_L/(0.5*rho*V2*A) are dimensionless. They depend on Re, shape, and surface roughness, and using Cd lets you predict drag at any speed or fluid, not just the one tested.',
           hint: 'A sphere has Cd of about 0.47 in the drag crisis range, but it drops to 0.2 when the boundary layer transitions.',
         },
         {

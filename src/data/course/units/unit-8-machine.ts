@@ -379,7 +379,7 @@ export const unit8: Unit = {
           id: 'u8-L1c-T2',
           type: 'teaching',
           question: 'Marin factors and real-world endurance',
-          explanation: 'Lab endurance limits come from polished, small-diameter specimens. Real shafts have rougher surfaces, larger sizes, and higher temperatures. Marin derating factors (surface, size, reliability, temperature) reduce the lab value to a practical one, often 25 to 50% of the original.',
+          explanation: 'Lab endurance limits come from polished, small-diameter specimens. Real shafts have rougher surfaces, larger sizes, and higher temperatures, and marin derating factors (surface, size, reliability, temperature) reduce the lab value to a practical one, often 25 to 50% of the original.',
           hint: 'Try this now: check how surface finish affects S_e for your next design.',
         },
         {
@@ -496,7 +496,7 @@ export const unit8: Unit = {
           id: 'u8-L2-T1',
           type: 'teaching',
           question: 'Rolling vs plain bearings',
-          explanation: 'Bearings support rotating shafts and reduce friction. Rolling element bearings (ball, roller) use small rolling parts between races. Plain (journal) bearings use an oil film between the shaft and a sleeve.',
+          explanation: 'Bearings support rotating shafts and reduce friction. Rolling element bearings (ball, roller) use small rolling parts between races, and plain (journal) bearings use an oil film between the shaft and a sleeve.',
           hint: 'Most electric motors use ball bearings for their simplicity.',
         },
         {
@@ -562,7 +562,7 @@ export const unit8: Unit = {
           id: 'u8-L2-T1b',
           type: 'teaching',
           question: 'Bearing fits and mounting',
-          explanation: 'When the shaft rotates, the inner race needs an interference fit (tight on shaft, e.g. k5, m5) to prevent creep. The outer race gets a clearance fit in the housing. Reverse the fits when the housing rotates instead.',
+          explanation: 'When the shaft rotates, the inner race needs an interference fit (tight on shaft, e.g. k5, m5) to prevent creep. The outer race gets a clearance fit in the housing, and reverse the fits when the housing rotates instead.',
           hint: 'The race that rotates relative to the load needs an interference fit.',
         },
         {
@@ -725,7 +725,7 @@ export const unit8: Unit = {
           id: 'u8-L2b-T2',
           type: 'teaching',
           question: 'Equivalent dynamic load and reliability',
-          explanation: 'When a bearing sees both radial (Fr) and axial (Fa) loads, you combine them: P = X*Fr + Y*Fa. X and Y come from the bearing catalog based on the Fa/Fr ratio. For higher reliability than 90%, multiply L10 by a factor less than 1 (e.g., 0.21 for 99% reliability).',
+          explanation: 'When a bearing sees both radial (Fr) and axial (Fa) loads, you combine them: P = X*Fr + Y*Fa. X and Y come from the bearing catalog based on the Fa/Fr ratio, and for higher reliability than 90%, multiply L10 by a factor less than 1 (e.g., 0.21 for 99% reliability).',
           hint: 'Try this now: look up X and Y factors in any bearing catalog.',
         },
         {
@@ -822,7 +822,7 @@ export const unit8: Unit = {
           id: 'u8-L2c-T1',
           type: 'teaching',
           question: 'The Stribeck curve and lubrication regimes',
-          explanation: 'The Stribeck curve shows how friction changes with speed. At low speed, surfaces touch directly (boundary lubrication). As speed increases, a partial oil film forms (mixed), then a full film separates the surfaces (hydrodynamic). Journal bearings work best in the hydrodynamic regime.',
+          explanation: 'The Stribeck curve shows how friction changes with speed. At low speed, surfaces touch directly (boundary lubrication).',
           hint: 'Startup is always the most damaging time for journal bearings.',
         },
         {
@@ -880,7 +880,7 @@ export const unit8: Unit = {
           id: 'u8-L2c-T2',
           type: 'teaching',
           question: 'Sommerfeld number and bearing design',
-          explanation: 'The Sommerfeld number S = (mu*N*d)/(P*c^2) is the key dimensionless parameter for journal bearings. It combines viscosity (mu), speed (N), diameter (d), load pressure (P), and clearance (c). Higher S means thicker oil film and lower eccentricity.',
+          explanation: 'The Sommerfeld number S = (mu*N*d)/(P*c^2) is the key dimensionless parameter for journal bearings. It combines viscosity (mu), speed (N), diameter (d), load pressure (P), and clearance (c), and higher S means thicker oil film and lower eccentricity.',
           hint: 'Try this now: increasing clearance c reduces S quadratically.',
         },
         {
@@ -978,7 +978,7 @@ export const unit8: Unit = {
           id: 'u8-L3-T1',
           type: 'teaching',
           question: 'How gears transmit power',
-          explanation: 'Gears transfer rotational power between shafts by meshing teeth. The gear ratio equals the ratio of tooth counts: a 20-tooth pinion driving an 80-tooth gear gives a 4:1 ratio. Speed goes down by that factor, torque goes up by the same factor.',
+          explanation: 'Gears transfer rotational power between shafts by meshing teeth. The gear ratio equals the ratio of tooth counts: a 20-tooth pinion driving an 80-tooth gear gives a 4:1 ratio, and speed goes down by that factor, torque goes up by the same factor.',
           hint: 'P = T x omega, so if speed halves, torque doubles.',
         },
         {
@@ -1132,7 +1132,7 @@ export const unit8: Unit = {
           id: 'u8-L3-T2',
           type: 'teaching',
           question: 'Spur, helical, bevel, and worm gears',
-          explanation: 'Spur gears have straight teeth and are the simplest. Helical gears have angled teeth for smoother, quieter operation but create axial thrust. Bevel gears transfer power between intersecting shafts. Worm gears give very high ratios and can be self-locking.',
+          explanation: 'Spur gears have straight teeth and are the simplest. Helical gears have angled teeth for smoother, quieter operation but create axial thrust.',
           hint: 'Helical gears need thrust bearings to handle axial loads.',
         },
         {
@@ -1278,7 +1278,7 @@ export const unit8: Unit = {
           id: 'u8-L3-T3',
           type: 'teaching',
           question: 'Gear tooth sizing and failure',
-          explanation: 'Gear teeth fail by bending fatigue at the root (Lewis equation) and surface pitting from contact stress (Hertzian). The module (m = D/Z) sets tooth size. AGMA design requires checking both failure modes independently.',
+          explanation: 'Gear teeth fail by bending fatigue at the root (Lewis equation) and surface pitting from contact stress (Hertzian). The module (m = D/Z) sets tooth size, and aGMA design requires checking both failure modes independently.',
           hint: 'The Lewis form factor depends on the number of teeth.',
         },
         {
@@ -1449,7 +1449,7 @@ export const unit8: Unit = {
           id: 'u8-L4-T1',
           type: 'teaching',
           question: 'How bolted joints really work',
-          explanation: 'A bolt isn\'t just a pin. It\'s pre-stretched (preloaded) during tightening, which clamps the joint in compression. When an external load tries to separate the joint, the bolt and clamped members share that load based on their relative stiffnesses.',
+          explanation: 'A bolt isn\'t just a pin. It\'s pre-stretched (preloaded) during tightening, which clamps the joint in compression, and when an external load tries to separate the joint, the bolt and clamped members share that load based on their relative stiffnesses.',
           hint: 'Higher preload means the joint can handle more external load.',
         },
         {
@@ -1487,7 +1487,7 @@ export const unit8: Unit = {
           id: 'u8-L4-T1b',
           type: 'teaching',
           question: 'Bolt grades and strength',
-          explanation: 'Metric bolt classes like 8.8 or 10.9 encode strength. The first number times 100 gives ultimate tensile strength in MPa (8 = 800 MPa). The second is the yield-to-ultimate ratio (0.8 = 80%). So an 8.8 bolt has 640 MPa yield strength.',
+          explanation: 'Metric bolt classes like 8.8 or 10.9 encode strength. The first number times 100 gives ultimate tensile strength in MPa (8 = 800 MPa).',
           hint: 'Try this now: calculate the yield strength of a 10.9 bolt.',
         },
         {
@@ -1584,7 +1584,7 @@ export const unit8: Unit = {
           id: 'u8-L4-T2',
           type: 'teaching',
           question: 'Bolt stiffness and joint separation',
-          explanation: 'The bolt and clamped members act like springs in parallel. The stiffness ratio C = k_b/(k_b + k_c) determines how much of an external load the bolt feels. Joint separation occurs when the external load exceeds F_i/(1 - C), where F_i is the preload.',
+          explanation: 'The bolt and clamped members act like springs in parallel. The stiffness ratio C = k_b/(k_b + k_c) determines how much of an external load the bolt feels, and joint separation occurs when the external load exceeds F_i/(1 - C), where F_i is the preload.',
           hint: 'Stiffer members (larger k_c) mean the bolt feels less of the external load.',
         },
         {
@@ -1640,7 +1640,7 @@ export const unit8: Unit = {
           id: 'u8-L4b-T2',
           type: 'teaching',
           question: 'Gaskets and joint sealing',
-          explanation: 'Gaskets seal joints by filling surface imperfections. They\'re much softer than steel, so they dramatically reduce member stiffness k_c. This means C increases and the bolt feels more of the external load. Gasket factors (m and y) from ASME standards define the required seating and operating pressures.',
+          explanation: 'Gaskets seal joints by filling surface imperfections. They\'re much softer than steel, so they dramatically reduce member stiffness k_c.',
           hint: 'A soft gasket makes the joint more sensitive to external loads.',
         },
         {
@@ -1747,7 +1747,7 @@ export const unit8: Unit = {
           id: 'u8-L4c-T1',
           type: 'teaching',
           question: 'Fillet vs. butt welds',
-          explanation: 'Fillet welds join overlapping plates at right angles. They fail through the throat (0.707 x leg size). Butt welds join plates end-to-end with full penetration. Butt welds are stronger (full cross-section) but require more joint preparation.',
+          explanation: 'Fillet welds join overlapping plates at right angles. They fail through the throat (0.707 x leg size).',
           hint: 'Butt welds can be as strong as the base metal with proper technique.',
         },
         {
@@ -1795,7 +1795,7 @@ export const unit8: Unit = {
           id: 'u8-L4c-T2',
           type: 'teaching',
           question: 'Adhesive joint design',
-          explanation: 'Adhesive joints work best in shear (lap joints). Design rules: maximize overlap area, avoid peel and cleavage loads, control bondline thickness (0.1 to 0.25 mm), and ensure proper surface preparation. Adhesives can join dissimilar materials without heat distortion.',
+          explanation: 'Adhesive joints work best in shear (lap joints). Design rules: maximize overlap area, avoid peel and cleavage loads, control bondline thickness (0.1 to 0.25 mm), and ensure proper surface preparation, and adhesives can join dissimilar materials without heat distortion.',
           hint: 'Try this now: compare the shear strength of a 25 mm overlap vs. a 50 mm overlap.',
         },
         {
@@ -1939,7 +1939,7 @@ export const unit8: Unit = {
           id: 'u8-L5-T1b',
           type: 'teaching',
           question: 'The Wahl correction factor',
-          explanation: 'The basic shear stress formula tau = 8FD/(pi*d^3) underestimates the actual stress on the inner coil. The Wahl factor K_w accounts for curvature and direct shear: K_w = (4C - 1)/(4C - 4) + 0.615/C. For C = 6, K_w is about 1.25.',
+          explanation: 'The basic shear stress formula tau = 8FD/(pi*d^3) underestimates the actual stress on the inner coil. The Wahl factor K_w accounts for curvature and direct shear: K_w = (4C - 1)/(4C - 4) + 0.615/C, and for C = 6, K_w is about 1.25.',
           hint: 'Try this now: calculate K_w for C = 8.',
         },
         {
@@ -2047,7 +2047,7 @@ export const unit8: Unit = {
           id: 'u8-L5b-T1',
           type: 'teaching',
           question: 'Spring fatigue and failure modes',
-          explanation: 'Springs under cyclic loading can fail by fatigue, just like shafts. Shot peening the wire surface creates compressive residual stress that improves fatigue life by 20 to 50%. Springs can also fail by surging (resonance), buckling (if too slender), or yielding (set).',
+          explanation: 'Springs under cyclic loading can fail by fatigue, just like shafts. Shot peening the wire surface creates compressive residual stress that improves fatigue life by 20 to 50%, and springs can also fail by surging (resonance), buckling (if too slender), or yielding (set).',
           hint: 'Presetting (over-compressing) a spring removes permanent set.',
         },
         {
@@ -2095,7 +2095,7 @@ export const unit8: Unit = {
           id: 'u8-L5b-T2',
           type: 'teaching',
           question: 'Seal types and selection',
-          explanation: 'Seals keep fluids in and contaminants out. O-rings are simple, cheap, and work for static and slow dynamic applications. Lip seals handle rotating shafts at moderate speeds. Mechanical (face) seals handle high pressures and speeds in pumps.',
+          explanation: 'Seals keep fluids in and contaminants out. O-rings are simple, cheap, and work for static and slow dynamic applications.',
           hint: 'Try this now: check the PV limit for an O-ring vs. a lip seal.',
         },
         {
@@ -2202,7 +2202,7 @@ export const unit8: Unit = {
           id: 'u8-L5-T3',
           type: 'teaching',
           question: 'Spring end types and solid height',
-          explanation: 'Spring end types affect active coils and stability. Plain ends have Na = N (total coils). Squared and ground ends have Na = N - 2, providing flat seating surfaces. Solid height (all coils touching) limits maximum deflection.',
+          explanation: 'Spring end types affect active coils and stability. Plain ends have Na = N (total coils).',
           hint: 'Squared and ground ends give the most stable seating.',
         },
         {
@@ -2250,7 +2250,7 @@ export const unit8: Unit = {
           id: 'u8-L5c-T2',
           type: 'teaching',
           question: 'Seal material compatibility',
-          explanation: 'Seal material must be compatible with the fluid being sealed. NBR (nitrile) works for petroleum oils. FKM (Viton) handles fuels and high temperatures. EPDM works for water and steam but not petroleum. PTFE handles almost everything but needs a spring energizer.',
+          explanation: 'Seal material must be compatible with the fluid being sealed. NBR (nitrile) works for petroleum oils.',
           hint: 'Try this now: check if your seal material is compatible with the fluid.',
         },
         {

@@ -20,7 +20,7 @@ export const unit3: Unit = {
           id: 'u3-L1-T1',
           type: 'teaching',
           question: 'What Are Stress and Strain?',
-          explanation: 'Stress is force divided by area (sigma = F/A), measured in Pa or MPa. Strain is the change in length divided by original length (epsilon = delta_L/L), and it\'s dimensionless. Stress tells you how hard the material is working. Strain tells you how much it\'s deforming.',
+          explanation: 'Stress is force divided by area (sigma = F/A), measured in Pa or MPa. Strain is the change in length divided by original length (epsilon = delta_L/L), and it\'s dimensionless.',
           hint: 'Stress depends on geometry and load. Strain also depends on the material\'s stiffness (E).',
         },
         {
@@ -106,7 +106,7 @@ export const unit3: Unit = {
           id: 'u3-L1-T2',
           type: 'teaching',
           question: 'The Stress-Strain Curve',
-          explanation: 'Pull a material sample and plot stress vs. strain. The initial straight line is the elastic region (slope = E, Young\'s modulus). Past yield, permanent deformation begins. The peak is the ultimate tensile strength (UTS), and then the sample necks and fractures.',
+          explanation: 'Pull a material sample and plot stress vs. strain. The initial straight line is the elastic region (slope = E, Young\'s modulus).',
           hint: 'Engineering stress uses original area, so it appears to drop after UTS. True stress keeps rising.',
         },
         {
@@ -254,7 +254,7 @@ export const unit3: Unit = {
           question: "Restrained steel bolt heated 50°C (alpha=12e-6/°C, E=200GPa). Thermal stress?",
           options: [
             "120 MPa tensile stress from the temperature change",
-            "120 MPa compressive \u2014 thermal expansion is restrained",
+            "120 MPa compressive, thermal expansion is restrained",
             "60 MPa because only half the thermal expansion is restrained",
             "Zero. the bolt and flanges expand together",
           ],
@@ -420,7 +420,7 @@ export const unit3: Unit = {
           id: 'u3-L1-T3',
           type: 'teaching',
           question: 'Stress Concentrations and Real Parts',
-          explanation: 'Holes, notches, and sharp corners cause local stress to spike well above the average. The stress concentration factor Kt multiplies the nominal stress: sigma_max = Kt * sigma_nominal. Smooth fillets and gradual transitions reduce Kt.',
+          explanation: 'Holes, notches, and sharp corners cause local stress to spike well above the average. The stress concentration factor Kt multiplies the nominal stress: sigma_max = Kt * sigma_nominal, and smooth fillets and gradual transitions reduce Kt.',
           hint: 'A small hole can triple the local stress (Kt = 3 for a circular hole in a plate).',
         },
       ],
@@ -523,7 +523,7 @@ export const unit3: Unit = {
           id: 'u3-L1c-T2',
           type: 'teaching',
           question: 'Elastic Constants and Their Connections',
-          explanation: 'E, G, K, and nu are all related. For isotropic materials, G = E/(2(1+nu)) and K = E/(3(1-2nu)). Only 2 of the 4 are independent.',
+          explanation: 'E, G, K, and nu are all related. For isotropic materials, G = E/(2(1+nu)) and K = E/(3(1-2nu)), and only 2 of the 4 are independent.',
           hint: 'If you know E and nu, you can find G and K.',
         },
         {
@@ -654,7 +654,7 @@ export const unit3: Unit = {
           id: 'u3-L2-T1',
           type: 'teaching',
           question: 'Bending Stress and the Neutral Axis',
-          explanation: 'When a beam bends, one side is in tension and the other in compression. The neutral axis (NA) is the line of zero stress in between, passing through the centroid. Bending stress increases linearly with distance from the NA: sigma = My/I.',
+          explanation: 'When a beam bends, one side is in tension and the other in compression. The neutral axis (NA) is the line of zero stress in between, passing through the centroid, and bending stress increases linearly with distance from the NA: sigma = My/I.',
           hint: 'Maximum stress occurs at the top and bottom surfaces, farthest from the NA.',
         },
         {
@@ -760,7 +760,7 @@ export const unit3: Unit = {
           id: 'u3-L2-T2',
           type: 'teaching',
           question: 'Section Modulus and I-Beams',
-          explanation: 'The section modulus S = I/c gives the maximum bending stress directly: sigma_max = M/S. I-beams are efficient because they concentrate material far from the neutral axis, maximizing I while minimizing weight. That\'s why steel buildings use I-beams, not solid rectangles.',
+          explanation: 'The section modulus S = I/c gives the maximum bending stress directly: sigma_max = M/S. I-beams are efficient because they concentrate material far from the neutral axis, maximizing I while minimizing weight, and that\'s why steel buildings use I-beams, not solid rectangles.',
           hint: 'A deeper beam with the same area has a much higher section modulus.',
         },
         {
@@ -1083,7 +1083,7 @@ export const unit3: Unit = {
           id: 'u3-L2-T3',
           type: 'teaching',
           question: 'Beam Deflection Formulas',
-          explanation: 'Deflection depends on load, span, E, and I. For a simply supported beam with center load: delta = PL^3/(48EI). Deflection scales with L^3 or L^4, so even small span increases cause large deflection jumps. Deeper beams (higher I) deflect less.',
+          explanation: 'Deflection depends on load, span, E, and I. For a simply supported beam with center load: delta = PL^3/(48EI).',
           hint: 'Codes often limit deflection to L/360 even when stress is fine.',
         },
         {
@@ -1288,7 +1288,7 @@ export const unit3: Unit = {
           id: 'u3-L3-T1',
           type: 'teaching',
           question: 'Shear Force and Bending Moment Diagrams',
-          explanation: 'SFD and BMD show how internal shear force and bending moment vary along a beam\'s length. To draw them, start by finding support reactions, then move along the beam tracking how loads change the internal forces. Point loads cause jumps in the SFD, and distributed loads cause slopes.',
+          explanation: 'SFD and BMD show how internal shear force and bending moment vary along a beam\'s length. To draw them, start by finding support reactions, then move along the beam tracking how loads change the internal forces, and point loads cause jumps in the SFD, and distributed loads cause slopes.',
           hint: 'Always start by calculating support reactions using equilibrium.',
         },
         {
@@ -1315,7 +1315,7 @@ export const unit3: Unit = {
           type: 'multiple-choice',
           question: 'SFD shape under UDL, then point load, then unloaded span?',
           options: [
-            'The shape of the shear force diagram depends entirely on the beam material properties, not on the type or distribution of the applied loading',
+            'The shape of the shear force diagram depends on the beam material properties',
             'Parabolic everywhere along the entire beam length',
             'Constant everywhere along the beam',
             'Linear slope (under UDL), then a vertical jump (at point load)',
@@ -1353,7 +1353,7 @@ export const unit3: Unit = {
           id: 'u3-L3-T2',
           type: 'teaching',
           question: 'Key Relationships: Load, Shear, Moment',
-          explanation: 'The slope of the SFD at any point equals the negative of the distributed load (dV/dx = -w). The slope of the BMD equals the shear force (dM/dx = V). So the area under the load diagram gives shear change, and the area under the SFD gives moment change.',
+          explanation: 'The slope of the SFD at any point equals the negative of the distributed load (dV/dx = -w). The slope of the BMD equals the shear force (dM/dx = V), and so the area under the load diagram gives shear change, and the area under the SFD gives moment change.',
           hint: 'Where V = 0, the bending moment reaches a maximum or minimum.',
         },
         {
@@ -1364,7 +1364,7 @@ export const unit3: Unit = {
             'The beam must be statically indeterminate,',
             'This is perfectly normal',
             'Either the support reactions are wrong or a load was missed',
-            'The bending moment diagram can legitimately be non-zero at roller supports whenever there is a distributed load acting',
+            'The bending moment diagram can be non-zero at roller supports whenever there is a distributed',
           ],
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Beam --> <line x1="8" y1="18" x2="72" y2="18" stroke="#3B8700" stroke-width="3" stroke-linecap="round"/> <!-- Supports --> <polygon points="8,18 5,24 11,24" stroke="#3B8700" stroke-width="1" fill="none" opacity="0.3"/> <polygon points="72,18 69,24 75,24" stroke="#3B8700" stroke-width="1" fill="none" opacity="0.3"/> <!-- Point load --> <line x1="40" y1="6" x2="40" y2="16" stroke="#3B8700" stroke-width="2" stroke-linecap="round" opacity="0.5"/> <polygon points="38,15 40,19 42,15" fill="#3B8700" opacity="0.5"/> <text x="40" y="5" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.35" font-weight="bold" font-style="italic">P</text> <!-- Shear Force Diagram (V) --> <line x1="8" y1="38" x2="72" y2="38" stroke="#3B8700" stroke-width="0.5" opacity="0.1"/> <path fill="#58CC02" opacity="0.08"> <animate attributeName="d" values="M8,38 L8,38 L40,38 L40,38 L72,38 Z;M8,38 L8,32 L40,32 L40,44 L72,44 L72,38 Z;M8,38 L8,32 L40,32 L40,44 L72,44 L72,38 Z;M8,38 L8,38 L40,38 L40,38 L72,38 Z" keyTimes="0;0.3;0.7;1" dur="4s" repeatCount="indefinite"/> </path> <path stroke="#58CC02" stroke-width="1.5" fill="none" stroke-linecap="round"> <animate attributeName="d" values="M8,38 L40,38 L40,38 L72,38;M8,32 L40,32 L40,44 L72,44;M8,32 L40,32 L40,44 L72,44;M8,38 L40,38 L40,38 L72,38" keyTimes="0;0.3;0.7;1" dur="4s" repeatCount="indefinite"/> </path> <text x="4" y="37" font-size="4.5" fill="#3B8700" opacity="0.2" font-style="italic">V</text> <!-- Bending Moment Diagram (M) --> <line x1="8" y1="58" x2="72" y2="58" stroke="#3B8700" stroke-width="0.5" opacity="0.1"/> <path fill="#58CC02" opacity="0.06"> <animate attributeName="d" values="M8,58 Q40,58 72,58 Z;M8,58 Q40,48 72,58 Z;M8,58 Q40,48 72,58 Z;M8,58 Q40,58 72,58 Z" keyTimes="0;0.3;0.7;1" dur="4s" repeatCount="indefinite"/> </path> <path stroke="#3B8700" stroke-width="1.5" fill="none" stroke-linecap="round"> <animate attributeName="d" values="M8,58 Q40,58 72,58;M8,58 Q40,48 72,58;M8,58 Q40,48 72,58;M8,58 Q40,58 72,58" keyTimes="0;0.3;0.7;1" dur="4s" repeatCount="indefinite"/> </path> <text x="4" y="57" font-size="4.5" fill="#3B8700" opacity="0.2" font-style="italic">M</text> <!-- M_max label --> <text x="42" y="50" font-size="3.5" fill="#3B8700" opacity="0"> <animate attributeName="opacity" values="0;0.2;0.2;0" keyTimes="0;0.3;0.7;1" dur="4s" repeatCount="indefinite"/>M_max</text> </svg>',
@@ -1470,7 +1470,7 @@ export const unit3: Unit = {
           id: 'u3-L3b-T1',
           type: 'teaching',
           question: 'Drawing SFD and BMD Step by Step',
-          explanation: 'Start by finding support reactions. Then move along the beam: V changes by the load, and M changes by V. Point loads make V jump; distributed loads make V slope.',
+          explanation: 'Start by finding support reactions. Then move along the beam: V changes by the load, and M changes by V, and point loads make V jump; distributed loads make V slope.',
           hint: 'dV/dx = -w and dM/dx = V are the key relationships.',
         },
         {
@@ -1715,7 +1715,7 @@ export const unit3: Unit = {
           id: 'u3-L3-T3',
           type: 'teaching',
           question: 'Statically Determinate vs Indeterminate',
-          explanation: 'A simply supported beam with 2 reactions can be solved using equilibrium alone (statically determinate). Add more supports and you get extra unknowns that require deflection compatibility equations. Indeterminate beams are stiffer but harder to analyze.',
+          explanation: 'A simply supported beam with 2 reactions can be solved using equilibrium alone (statically determinate). Add more supports and you get extra unknowns that require deflection compatibility equations, and indeterminate beams are stiffer but harder to analyze.',
           hint: 'Count reactions vs. equilibrium equations to check determinacy.',
         },
         {
@@ -1929,7 +1929,7 @@ export const unit3: Unit = {
           question: 'Solid vs hollow shaft (same OD) for torque. Key trade-offs?',
           options: [
             'The solid shaft is always preferable in engineering practice',
-            'The hollow shaft is always weaker in direct proportion to the volume of removed core material, losing strength linearly with the material reduction ratio',
+            'The hollow shaft is always weaker in direct proportion to the volume of removed core',
             'The hollow shaft is lighter with only a modest reduction in torsional strength',
             'The hollow shaft is actually stronger than the solid shaft',
           ],
@@ -1978,7 +1978,7 @@ export const unit3: Unit = {
           id: 'u3-L4-T2',
           type: 'teaching',
           question: 'Polar Moment of Inertia',
-          explanation: 'The polar moment of inertia J measures a cross-section\'s resistance to twisting. For a solid circle, J = pi*d^4/32. Hollow shafts have surprisingly high J relative to their weight because the removed core material near the center contributes very little to torsional resistance.',
+          explanation: 'The polar moment of inertia J measures a cross-section\'s resistance to twisting. For a solid circle, J = pi*d^4/32, and hollow shafts have surprisingly high J relative to their weight because the removed core material near the center contributes very little to torsional resistance.',
           hint: 'Doubling the diameter increases J by 16x (it scales with d^4).',
         },
         {
@@ -2106,7 +2106,7 @@ export const unit3: Unit = {
           id: 'u3-L4b-T1',
           type: 'teaching',
           question: 'Power Transmission in Shafts',
-          explanation: 'Power P = T * omega, where omega is in rad/s. Reducing RPM via gearing increases torque proportionally. Always convert RPM to rad/s first: omega = 2*pi*n/60.',
+          explanation: 'Power P = T * omega, where omega is in rad/s. Reducing RPM via gearing increases torque proportionally, and always convert RPM to rad/s first: omega = 2*pi*n/60.',
           hint: 'Halving RPM doubles the required torque.',
         },
         {
@@ -2351,7 +2351,7 @@ export const unit3: Unit = {
           id: 'u3-L4-T3',
           type: 'teaching',
           question: 'Power Transmission in Shafts',
-          explanation: 'Shafts transmit power: P = T * omega, where omega is in rad/s. For the same power, a slower shaft carries more torque and needs a larger diameter. That\'s why gearbox output shafts are thicker than input shafts.',
+          explanation: 'Shafts transmit power: P = T * omega, where omega is in rad/s. For the same power, a slower shaft carries more torque and needs a larger diameter, and that\'s why gearbox output shafts are thicker than input shafts.',
           hint: 'Convert rpm to rad/s with omega = 2*pi*n/60.',
         },
         {
@@ -2548,7 +2548,7 @@ export const unit3: Unit = {
           id: 'u3-L5-T1',
           type: 'teaching',
           question: 'Principal Stresses and Stress Transformation',
-          explanation: 'At any point in a loaded part, stresses change depending on the angle you look at. Principal stresses are the max and min normal stresses, found on planes where shear stress is zero. These are the stresses that matter most for predicting failure.',
+          explanation: 'At any point in a loaded part, stresses change depending on the angle you look at. Principal stresses are the max and min normal stresses, found on planes where shear stress is zero, and these are the stresses that matter most for predicting failure.',
           hint: 'Rotating your viewpoint changes normal and shear stress, but principal stresses stay the same.',
         },
         {
@@ -2557,7 +2557,7 @@ export const unit3: Unit = {
           question: 'Why is Mohr\'s circle such a valuable tool in stress analysis, even when computer tools can compute principal stresses directly? What insight does it provide that a formula alone does not?',
           options: [
             'It is required by all major engineering design codes and must be included',
-            'It is only useful for manual hand calculations and provides no advantage over direct computational methods',
+            'It is only useful for manual hand calculations and provides no advantage over direct computational',
             'It graphically shows the stress-strain constitutive relationship for the material under combined loading conditions',
             'It visually shows how normal and shear stresses transform with orientation',
           ],
@@ -2578,7 +2578,7 @@ export const unit3: Unit = {
           options: [
             'The shaft material is in compression on the diametrically opposite side of the cross-section',
             'There must be an error in the calculation',
-            'The negative stress is residual stress from the manufacturing process rather than from the applied loads',
+            'The negative stress is residual stress from the manufacturing process rather than from the applied',
             'Shear stress on the original element rotates the stress state',
           ],
           correctIndex: 3,
@@ -2967,7 +2967,7 @@ export const unit3: Unit = {
           id: 'u3-L5-T3',
           type: 'teaching',
           question: 'Combined Loading on Shafts',
-          explanation: 'Real shafts usually see bending and torsion at the same time. The critical point is typically at the surface where bending stress is highest. You combine the normal stress from bending with the shear stress from torsion, then use Mohr\'s circle or formulas to find principal stresses.',
+          explanation: 'Real shafts usually see bending and torsion at the same time. The critical point is typically at the surface where bending stress is highest, and you combine the normal stress from bending with the shear stress from torsion, then use Mohr\'s circle or formulas to find principal stresses.',
           hint: 'Always check the point where bending tension and torsional shear add up worst.',
         },
         {
@@ -3073,7 +3073,7 @@ export const unit3: Unit = {
           id: 'u3-L5c-T2',
           type: 'teaching',
           question: 'Plane Stress vs Plane Strain',
-          explanation: 'Plane stress (thin plates): sigma_z = 0. Plane strain (thick bodies): epsilon_z = 0, but sigma_z is not zero. Most textbook problems are plane stress.',
+          explanation: 'Plane stress (thin plates): sigma_z = 0. Plane strain (thick bodies): epsilon_z = 0, but sigma_z is not zero, and most textbook problems are plane stress.',
           hint: 'A thin plate under in-plane loads is plane stress.',
         },
         {
@@ -3182,7 +3182,7 @@ export const unit3: Unit = {
           id: 'u3-L6-T1',
           type: 'teaching',
           question: 'Yield Criteria: Von Mises and Tresca',
-          explanation: 'Under complex loading, you can\'t just compare one stress to the yield strength. Von Mises combines all stress components into a single equivalent stress for comparison. Tresca is simpler: it says yielding occurs when the max shear stress reaches half the yield strength.',
+          explanation: 'Under complex loading, you can\'t just compare one stress to the yield strength. Von Mises combines all stress components into a single equivalent stress for comparison, and tresca is simpler: it says yielding occurs when the max shear stress reaches half the yield strength.',
           hint: 'Von Mises is more accurate for ductile metals. Tresca is more conservative.',
         },
         {
@@ -3239,7 +3239,7 @@ export const unit3: Unit = {
           id: 'u3-L6-T2',
           type: 'teaching',
           question: 'Factor of Safety in Design',
-          explanation: 'The factor of safety (FS) is the ratio of material strength to actual stress. An FS of 2 means the part can handle twice the design load before failing. Engineers choose FS based on consequences of failure, load uncertainty, and material variability.',
+          explanation: 'The factor of safety (FS) is the ratio of material strength to actual stress. An FS of 2 means the part can handle twice the design load before failing, and engineers choose FS based on consequences of failure, load uncertainty, and material variability.',
           hint: 'An FS of 1.0 means zero margin. Typical designs use 1.5 to 4.',
         },
         {
@@ -3278,7 +3278,7 @@ export const unit3: Unit = {
           options: [
             'The safety factor only matters for fatigue loading and cyclic stress conditions',
             'A safety factor of 1.1 is perfectly fine for static loading conditions',
-            'The safety factor should be set to exactly 1.0 for optimal material usage and minimum weight,',
+            'The safety factor should be set to exactly 1.0 for optimal material usage and minimum',
             'A safety factor of 1.1 leaves almost no margin for material variability',
           ],
           correctIndex: 3,
@@ -3367,7 +3367,7 @@ export const unit3: Unit = {
           id: 'u3-L6b-T1',
           type: 'teaching',
           question: 'Factor of Safety in Practice',
-          explanation: 'FoS = material strength / applied stress. Higher FoS means a more conservative design. Typical values: 1.5-3 for static loads, 3-5 for fatigue, 5-10 for unknown loads.',
+          explanation: 'FoS = material strength / applied stress. Higher FoS means a more conservative design, and typical values: 1.5-3 for static loads, 3-5 for fatigue, 5-10 for unknown loads.',
           hint: 'An FoS of 1.0 means zero margin: any uncertainty causes failure.',
         },
         {
@@ -3455,7 +3455,7 @@ export const unit3: Unit = {
           id: 'u3-L6b-T2',
           type: 'teaching',
           question: 'Brittle vs Ductile Failure Criteria',
-          explanation: 'Ductile materials (steel): use Von Mises or Tresca. Brittle materials (cast iron): use max normal stress or Coulomb-Mohr. Using the wrong theory gives wrong predictions.',
+          explanation: 'Ductile materials (steel): use Von Mises or Tresca. Brittle materials (cast iron): use max normal stress or Coulomb-Mohr, and using the wrong theory gives wrong predictions.',
           hint: 'Ductile materials fail by yielding; brittle by fracture.',
         },
         {
@@ -3602,7 +3602,7 @@ export const unit3: Unit = {
           id: 'u3-L6-T3',
           type: 'teaching',
           question: 'Fatigue Failure and S-N Curves',
-          explanation: 'Cyclic loading can cause failure well below the yield strength. S-N curves plot stress amplitude vs. number of cycles to failure. Steel has an endurance limit (a stress below which it can survive infinite cycles), but aluminum does not.',
+          explanation: 'Cyclic loading can cause failure well below the yield strength. S-N curves plot stress amplitude vs. number of cycles to failure, and steel has an endurance limit (a stress below which it can survive infinite cycles), but aluminum does not.',
           hint: 'Most mechanical failures in service are caused by fatigue, not static overload.',
         },
         {
@@ -3817,7 +3817,7 @@ export const unit3: Unit = {
           id: 'u3-L7-T1',
           type: 'teaching',
           question: 'Euler Buckling of Columns',
-          explanation: 'Long, slender columns don\'t fail by crushing. They buckle sideways. Euler\'s formula gives the critical load: P_cr = pi^2*EI/(KL)^2. It depends on stiffness (E and I) and effective length (KL), not on material strength.',
+          explanation: 'Long, slender columns don\'t fail by crushing. They buckle sideways.',
           hint: 'A stronger steel with the same E won\'t resist buckling any better.',
         },
         {
