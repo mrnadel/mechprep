@@ -70,7 +70,7 @@ interface AppState {
   showAchievementToast: string | null;
 
   // Actions — Session
-  startSession: (type: SessionType, options?: { topicId?: TopicId; difficulty?: Difficulty; resolvedQuestions?: PracticeQuestion[] }) => void;
+  startSession: (type: SessionType, options?: { topicId?: TopicId; difficulty?: Difficulty; resolvedQuestions?: PracticeQuestion[]; mistakeQuestionIds?: string[] }) => void;
   answerQuestion: (questionId: string, correct: boolean, confidence?: number, timeSpent?: number) => void;
   nextQuestion: () => void;
   prevQuestion: () => void;
@@ -155,7 +155,7 @@ async function ensureCourseDataLoaded(): Promise<void> {
   useCourseStore.setState({ courseData: fullUnits });
 }
 
-function selectQuestionsForSession(type: SessionType, options?: { topicId?: TopicId; difficulty?: Difficulty; resolvedQuestions?: PracticeQuestion[] }): PracticeQuestion[] {
+function selectQuestionsForSession(type: SessionType, options?: { topicId?: TopicId; difficulty?: Difficulty; resolvedQuestions?: PracticeQuestion[]; mistakeQuestionIds?: string[] }): PracticeQuestion[] {
   if (options?.resolvedQuestions && options.resolvedQuestions.length > 0) {
     return options.resolvedQuestions;
   }
@@ -172,6 +172,7 @@ function selectQuestionsForSession(type: SessionType, options?: { topicId?: Topi
       count = 15;
       break;
     case 'daily-challenge': {
+      if (pool.length === 0) return [];
       // Deterministic daily selection: stable order + date-based offset
       const sorted = pool.sort((a, b) => a.id.localeCompare(b.id));
       const dayNum = parseInt(getTodayString().replace(/-/g, '').slice(-4));
@@ -187,6 +188,14 @@ function selectQuestionsForSession(type: SessionType, options?: { topicId?: Topi
       count = 6;
       break;
     case 'smart-practice': {
+      // Mistakes mode: filter pool to specific mistake question IDs
+      if (options?.mistakeQuestionIds && options.mistakeQuestionIds.length > 0) {
+        const mistakeSet = new Set(options.mistakeQuestionIds);
+        const mistakePool = pool.filter(q => mistakeSet.has(q.id));
+        if (mistakePool.length > 0) {
+          return shuffleArray(mistakePool).slice(0, 10);
+        }
+      }
       const state = useStore.getState();
       const performance = buildPerformance(state.progress.topicProgress, state.progress.sessionHistory);
       // Use pool (already gathered + flattened course questions) as practiceQuestions.
@@ -585,46 +594,51 @@ export const useStore = create<AppState>()(
         const question = session.questions.find(q => q.id === questionId);
         if (!question) return;
 
-        let xp = calculateXP(question, correct, timeSpent, confidence);
+        // Check if this question was already answered earlier in the session (recycled retry)
+        const alreadyAnswered = session.answers[questionId] !== undefined;
 
-        // Apply double XP boost if active (with tamper validation)
-        const engState = useEngagementStore.getState();
-        const doubleXpExpiry = engState.doubleXpExpiry;
-        let shopDoubleXp = false;
-        if (doubleXpExpiry) {
-          const expiry = new Date(doubleXpExpiry).getTime();
-          const now = Date.now();
-          // Validate: expiry must be in the future, not exceed max allowed duration,
-          // and a recent shop_purchase transaction must exist
-          if (!isNaN(expiry) && expiry > now && expiry <= now + DOUBLE_XP_SHOP_DURATION_MS + DOUBLE_XP_BUFFER_MS) {
-            const recentCutoff = now - (DOUBLE_XP_SHOP_DURATION_MS + DOUBLE_XP_RECENT_PURCHASE_WINDOW_MS);
-            shopDoubleXp = engState.gems.transactions.some(
-              (t) => t.source === 'shop_purchase' && t.amount < 0 && new Date(t.timestamp).getTime() > recentCutoff
-            );
+        let xp = alreadyAnswered ? 0 : calculateXP(question, correct, timeSpent, confidence);
+
+        if (!alreadyAnswered) {
+          // Apply double XP boost if active (with tamper validation)
+          const engState = useEngagementStore.getState();
+          const doubleXpExpiry = engState.doubleXpExpiry;
+          let shopDoubleXp = false;
+          if (doubleXpExpiry) {
+            const expiry = new Date(doubleXpExpiry).getTime();
+            const now = Date.now();
+            // Validate: expiry must be in the future, not exceed max allowed duration,
+            // and a recent shop_purchase transaction must exist
+            if (!isNaN(expiry) && expiry > now && expiry <= now + DOUBLE_XP_SHOP_DURATION_MS + DOUBLE_XP_BUFFER_MS) {
+              const recentCutoff = now - (DOUBLE_XP_SHOP_DURATION_MS + DOUBLE_XP_RECENT_PURCHASE_WINDOW_MS);
+              shopDoubleXp = engState.gems.transactions.some(
+                (t) => t.source === 'shop_purchase' && t.amount < 0 && new Date(t.timestamp).getTime() > recentCutoff
+              );
+            }
           }
-        }
 
-        // Time-limited XP events (weekend 2x, power hour, league sprint)
-        const isPro = useSubscriptionStore.getState().tier === 'pro';
-        const eventMultiplier = getEventXpMultiplier(isPro);
-        const shopMultiplier = shopDoubleXp ? 2 : 1;
-        // Shop boost and event boost stack additively (matches useCourseStore.completeLesson)
-        const totalBoostMultiplier = shopMultiplier === 1 && eventMultiplier === 1
-          ? 1
-          : 1 + (shopMultiplier - 1) + (eventMultiplier - 1);
-        xp = Math.round(xp * totalBoostMultiplier);
-        // Cap per-question XP to prevent extreme inflation during event stacking
-        xp = Math.min(xp, 200);
+          // Time-limited XP events (weekend 2x, power hour, league sprint)
+          const isPro = useSubscriptionStore.getState().tier === 'pro';
+          const eventMultiplier = getEventXpMultiplier(isPro);
+          const shopMultiplier = shopDoubleXp ? 2 : 1;
+          // Shop boost and event boost stack additively (matches useCourseStore.completeLesson)
+          const totalBoostMultiplier = shopMultiplier === 1 && eventMultiplier === 1
+            ? 1
+            : 1 + (shopMultiplier - 1) + (eventMultiplier - 1);
+          xp = Math.round(xp * totalBoostMultiplier);
+          // Cap per-question XP to prevent extreme inflation during event stacking
+          xp = Math.min(xp, 200);
+        }
 
         set(state => ({
           session: state.session ? {
             ...state.session,
             answers: {
               ...state.session.answers,
-              [questionId]: { correct, confidence, timeSpent, xpAwarded: xp },
+              [questionId]: { correct, confidence, timeSpent, xpAwarded: alreadyAnswered ? 0 : xp },
             },
           } : null,
-          progress: {
+          progress: alreadyAnswered ? state.progress : {
             ...state.progress,
             totalXp: state.progress.totalXp + xp,
             totalQuestionsAttempted: state.progress.totalQuestionsAttempted + 1,
@@ -637,15 +651,24 @@ export const useStore = create<AppState>()(
           },
         }));
 
-        // Bridge to course store if this is a course question
-        if (questionId.match(/^u\d+-L\d+-Q/)) {
-          useCourseStore.getState().creditPracticeAnswer(questionId, correct);
+        if (!alreadyAnswered) {
+          // Bridge to course store if this is a course question
+          if (questionId.match(/^u\d+-L\d+-Q/)) {
+            useCourseStore.getState().creditPracticeAnswer(questionId, correct);
+          }
+
+          // Track mistakes globally
+          if (!correct) {
+            useEngagementStore.getState().addMistake(questionId);
+          }
         }
 
-        // Wrong-answer recycling for practice sessions
-        if (!correct && session.type === 'smart-practice') {
+        // Wrong-answer recycling for practice sessions (only on first attempt, and not on last question)
+        if (!correct && !alreadyAnswered && session.type === 'smart-practice') {
           set(state => {
             if (!state.session) return {};
+            const isLast = state.session.currentIndex >= state.session.questions.length - 1;
+            if (isLast) return {};
             const questions = [...state.session.questions];
             const insertOffset = 2 + Math.floor(Math.random() * 3); // 2-4 positions later
             const insertAt = Math.min(state.session.currentIndex + insertOffset, questions.length);
@@ -658,11 +681,6 @@ export const useStore = create<AppState>()(
               },
             };
           });
-        }
-
-        // Track mistakes globally
-        if (!correct) {
-          useEngagementStore.getState().addMistake(questionId);
         }
       },
 

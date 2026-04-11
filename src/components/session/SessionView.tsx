@@ -73,7 +73,7 @@ export default function SessionView() {
   const adapter: SessionAdapter = {
     currentQuestion,
     answeredCount: Object.keys(session.answers).length,
-    totalQuestions: session.questions.length,
+    totalQuestions: session.questions.length - (session.retryCount ?? 0),
     isCurrentAnswered: currentQuestion.id in session.answers,
     isLastQuestion: session.currentIndex >= session.questions.length - 1,
     unitColor: PRACTICE_THEME.color,

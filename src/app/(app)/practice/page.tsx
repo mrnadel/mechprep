@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSession, useSessionActions } from '@/store/useStore';
 import { useMistakeQuestionIds } from '@/store/useEngagementStore';
@@ -44,6 +44,14 @@ export default function PracticePage() {
   const [loading, setLoading] = useState(false);
   const [showUpgrade, setShowUpgrade] = useState(false);
   const { unlocked, progress, total } = useIsPracticeUnlocked();
+
+  // Reset loading if startSession failed to produce a session (e.g. empty pool)
+  useEffect(() => {
+    if (loading && !session) {
+      const timer = setTimeout(() => setLoading(false), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [loading, session]);
 
   // If a session is active or summary is showing, render SessionView
   if (session || sessionSummary) {
@@ -133,7 +141,8 @@ export default function PracticePage() {
       setShowUpgrade(true);
       return;
     }
-    startSession('smart-practice');
+    setLoading(true);
+    startSession('smart-practice', { mistakeQuestionIds: mistakeIds });
   }
 
   function handleReview() {
@@ -145,6 +154,7 @@ export default function PracticePage() {
   }
 
   function handleDaily() {
+    setLoading(true);
     startSession('daily-challenge');
   }
 
