@@ -50,15 +50,15 @@ export default function PracticePage() {
   }
 
   return (
-    <div className="min-h-screen" style={{ background: '#131F24' }}>
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-surface-950">
       {/* Header */}
       <div className="px-5 pt-5 pb-1">
-        <h1 className="text-[22px] font-extrabold text-white">Practice</h1>
+        <h1 className="text-[22px] font-extrabold text-gray-800 dark:text-surface-50">Practice</h1>
       </div>
 
-      <div className="px-4 pb-24">
+      <div className="px-4 pb-4">
         {/* TODAY'S PRACTICE */}
-        <p className="text-xs font-extrabold text-[#8BA0A8] uppercase tracking-wider px-1 pt-5 pb-3">
+        <p className="text-xs font-extrabold text-gray-400 dark:text-surface-400 uppercase tracking-wider px-1 pt-5 pb-3">
           Today&apos;s Practice
         </p>
 
@@ -89,15 +89,14 @@ export default function PracticePage() {
         </button>
 
         {/* YOUR COLLECTIONS */}
-        <p className="text-xs font-extrabold text-[#8BA0A8] uppercase tracking-wider px-1 pt-4 pb-3">
+        <p className="text-xs font-extrabold text-gray-400 dark:text-surface-400 uppercase tracking-wider px-1 pt-4 pb-3">
           Your collections
         </p>
 
         {/* Mistakes Card */}
         <button
           onClick={handleMistakes}
-          className="w-full flex items-center gap-3.5 rounded-2xl border-2 border-[#2A3C42] p-4 mb-3 relative overflow-hidden text-left"
-          style={{ background: '#1A2C32' }}
+          className="w-full flex items-center gap-3.5 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 mb-3 relative overflow-hidden text-left bg-white dark:bg-surface-900"
         >
           <div
             className="w-14 h-14 rounded-2xl flex items-center justify-center text-[28px] flex-shrink-0"
@@ -106,11 +105,11 @@ export default function PracticePage() {
             🔄
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-base font-extrabold text-white flex items-center gap-1.5">
+            <h3 className="text-base font-extrabold text-gray-800 dark:text-surface-50 flex items-center gap-1.5">
               Mistakes
-              {!canAccess(FEATURES.PRACTICE_MISTAKES) && <Lock size={14} className="text-[#8BA0A8]" />}
+              {!canAccess(FEATURES.PRACTICE_MISTAKES) && <Lock size={14} className="text-gray-400 dark:text-surface-400" />}
             </h3>
-            <p className="text-xs text-[#8BA0A8] font-medium mt-0.5">
+            <p className="text-xs text-gray-500 dark:text-surface-400 font-medium mt-0.5">
               Practice the questions you got wrong recently
             </p>
           </div>
@@ -124,8 +123,7 @@ export default function PracticePage() {
         {/* Daily Challenge Card */}
         <button
           onClick={handleDaily}
-          className="w-full flex items-center gap-3.5 rounded-2xl border-2 border-[#2A3C42] p-4 mb-3 text-left"
-          style={{ background: '#1A2C32' }}
+          className="w-full flex items-center gap-3.5 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 mb-3 text-left bg-white dark:bg-surface-900"
         >
           <div
             className="w-14 h-14 rounded-2xl flex items-center justify-center text-[28px] flex-shrink-0"
@@ -134,8 +132,8 @@ export default function PracticePage() {
             ⚡
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-base font-extrabold text-white">Daily Challenge</h3>
-            <p className="text-xs text-[#8BA0A8] font-medium mt-0.5">
+            <h3 className="text-base font-extrabold text-gray-800 dark:text-surface-50">Daily Challenge</h3>
+            <p className="text-xs text-gray-500 dark:text-surface-400 font-medium mt-0.5">
               5 themed questions, new every day
             </p>
           </div>
@@ -144,8 +142,7 @@ export default function PracticePage() {
         {/* Review Card */}
         <button
           onClick={handleReview}
-          className="w-full flex items-center gap-3.5 rounded-2xl border-2 border-[#2A3C42] p-4 mb-3 text-left"
-          style={{ background: '#1A2C32' }}
+          className="w-full flex items-center gap-3.5 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 mb-3 text-left bg-white dark:bg-surface-900"
         >
           <div
             className="w-14 h-14 rounded-2xl flex items-center justify-center text-[28px] flex-shrink-0"
@@ -154,11 +151,11 @@ export default function PracticePage() {
             🔮
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-base font-extrabold text-white flex items-center gap-1.5">
+            <h3 className="text-base font-extrabold text-gray-800 dark:text-surface-50 flex items-center gap-1.5">
               Review
-              {!canAccess(FEATURES.PRACTICE_REVIEW) && <Lock size={14} className="text-[#8BA0A8]" />}
+              {!canAccess(FEATURES.PRACTICE_REVIEW) && <Lock size={14} className="text-gray-400 dark:text-surface-400" />}
             </h3>
-            <p className="text-xs text-[#8BA0A8] font-medium mt-0.5">
+            <p className="text-xs text-gray-500 dark:text-surface-400 font-medium mt-0.5">
               Revisit topics before you forget them
             </p>
           </div>
