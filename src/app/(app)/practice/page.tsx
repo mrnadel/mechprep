@@ -1,14 +1,39 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSession, useSessionActions } from '@/store/useStore';
 import { useMistakeQuestionIds } from '@/store/useEngagementStore';
+import { useCourseStore } from '@/store/useCourseStore';
 import { useSubscription } from '@/hooks/useSubscription';
 import SessionView from '@/components/session/SessionView';
 import { UpgradeModal } from '@/components/ui/UpgradeModal';
 import { FEATURES } from '@/lib/pricing';
-import { Loader2, Lock } from 'lucide-react';
+import { Loader2, Lock, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+/** Practice unlocks after completing all lessons in the first section (sectionIndex 0). */
+function useIsPracticeUnlocked(): { unlocked: boolean; progress: number; total: number } {
+  const courseData = useCourseStore((s) => s.courseData);
+  const completedLessons = useCourseStore((s) => s.progress.completedLessons);
+
+  return useMemo(() => {
+    // Get all units in section 0 (the first section)
+    const section0Units = courseData.filter((u) => (u.sectionIndex ?? 0) === 0);
+    if (section0Units.length === 0) return { unlocked: false, progress: 0, total: 0 };
+
+    let total = 0;
+    let completed = 0;
+    for (const unit of section0Units) {
+      for (const lesson of unit.lessons) {
+        total++;
+        if (completedLessons[lesson.id]?.passed) completed++;
+      }
+    }
+
+    return { unlocked: completed >= total && total > 0, progress: completed, total };
+  }, [courseData, completedLessons]);
+}
 
 export default function PracticePage() {
   const router = useRouter();
@@ -18,10 +43,63 @@ export default function PracticePage() {
   const { canAccess } = useSubscription();
   const [loading, setLoading] = useState(false);
   const [showUpgrade, setShowUpgrade] = useState(false);
+  const { unlocked, progress, total } = useIsPracticeUnlocked();
 
   // If a session is active or summary is showing, render SessionView
   if (session || sessionSummary) {
     return <SessionView />;
+  }
+
+  // Locked state: show progress toward unlocking
+  if (!unlocked) {
+    return (
+      <div className="bg-[#FAFAFA] dark:bg-surface-950">
+        <div className="px-5 pt-5 pb-1">
+          <h1 className="text-[22px] font-extrabold text-gray-800 dark:text-surface-50">Practice</h1>
+        </div>
+
+        <div className="px-4 pb-4 flex flex-col items-center pt-12">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="w-24 h-24 rounded-full bg-gray-100 dark:bg-surface-800 flex items-center justify-center mb-6"
+          >
+            <Lock size={40} className="text-gray-300 dark:text-surface-600" />
+          </motion.div>
+
+          <h2 className="text-xl font-extrabold text-gray-800 dark:text-surface-50 mb-2 text-center">
+            Complete your first section to unlock
+          </h2>
+          <p className="text-sm text-gray-500 dark:text-surface-400 text-center mb-8 max-w-[280px]">
+            Finish the intro lessons in your course, then come back to practice what you learned
+          </p>
+
+          {/* Progress bar */}
+          <div className="w-full max-w-[280px]">
+            <div className="flex justify-between text-xs font-bold text-gray-400 dark:text-surface-400 mb-2">
+              <span>Progress</span>
+              <span>{progress} / {total} lessons</span>
+            </div>
+            <div className="h-3 rounded-full bg-gray-100 dark:bg-surface-800 overflow-hidden">
+              <motion.div
+                className="h-full rounded-full bg-brand-500"
+                initial={{ width: 0 }}
+                animate={{ width: total > 0 ? `${(progress / total) * 100}%` : '0%' }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+              />
+            </div>
+          </div>
+
+          <button
+            onClick={() => router.push('/')}
+            className="mt-8 px-6 py-2.5 rounded-xl text-sm font-extrabold text-white bg-brand-500 active:translate-y-0.5 transition-transform"
+            style={{ boxShadow: '0 4px 0 var(--color-brand-700)' }}
+          >
+            Continue Learning
+          </button>
+        </div>
+      </div>
+    );
   }
 
   function handleStartPractice() {
