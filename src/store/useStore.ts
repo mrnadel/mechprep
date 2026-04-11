@@ -124,11 +124,15 @@ function gatherCourseQuestions(): PracticeQuestion[] {
   const all: PracticeQuestion[] = [];
   for (let ui = 0; ui < courseData.length; ui++) {
     const unit = courseData[ui];
-    if (!unit.topicId) continue;
+    // Use topicId if available, otherwise derive from sectionTitle slug
+    const topicId = unit.topicId || (unit.sectionTitle
+      ? unit.sectionTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') as TopicId
+      : null);
+    if (!topicId) continue;
     const difficulty: Difficulty = ui < 4 ? 'beginner' : ui < 8 ? 'intermediate' : 'advanced';
     for (const lesson of unit.lessons) {
       for (const q of lesson.questions) {
-        all.push({ ...q, topic: unit.topicId, subtopic: lesson.title, difficulty });
+        all.push({ ...q, topic: topicId, subtopic: lesson.title, difficulty });
       }
     }
   }
