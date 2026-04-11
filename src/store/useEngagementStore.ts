@@ -348,8 +348,17 @@ export const useEngagementStore = create<EngagementStore>()(
             weeklyQuests: markClaimed(state.weeklyQuests),
           });
 
-          // Award gems locally (synced to server via useDbSync)
+          // Award gems locally (synced to server via engagement POST newGemTransactions)
           get().addGems(quest.reward.gems, 'quest_reward');
+
+          // Server validates and marks claimed in DB (no gem insertion — engagement sync handles that)
+          fetch('/api/quests/claim', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ questId, questType, questDate }),
+          }).catch(() => {
+            // Network error — optimistic update stands, reconciled on next hydration
+          });
         },
 
         // === Action 5: claimChest ===

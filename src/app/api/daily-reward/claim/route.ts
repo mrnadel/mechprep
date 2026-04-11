@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { userProgress, gemTransactions } from '@/lib/db/schema';
+import { userProgress } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 import { getAuthUserId } from '@/lib/auth-utils';
 import { DAILY_REWARD_CYCLE } from '@/data/daily-rewards';
@@ -69,13 +69,9 @@ export async function POST() {
         .where(eq(userProgress.userId, userId));
     }
 
-    if (gemsReward > 0) {
-      await tx.insert(gemTransactions).values({
-        userId,
-        amount: gemsReward,
-        source: 'daily_reward_calendar',
-      });
-    }
+    // NOTE: Do NOT insert gem_transactions here — the client's addGems() creates
+    // a local transaction that is synced via POST /api/engagement (newGemTransactions).
+    // Inserting here would double-credit the user.
 
     return { success: true, gems: gemsReward, day: cal.currentDay, freezeAdded } as const;
   });

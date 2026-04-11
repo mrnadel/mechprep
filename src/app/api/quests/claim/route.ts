@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { questProgress, gemTransactions } from '@/lib/db/schema';
+import { questProgress } from '@/lib/db/schema';
 import { eq, and } from 'drizzle-orm';
 import { getAuthUserId } from '@/lib/auth-utils';
 import { z } from 'zod';
@@ -92,11 +92,9 @@ export async function POST(request: NextRequest) {
         ),
       );
 
-    await tx.insert(gemTransactions).values({
-      userId,
-      amount: gemsReward,
-      source: 'quest_reward',
-    });
+    // NOTE: Do NOT insert gem_transactions here — the client's addGems() creates
+    // a local transaction that is synced via POST /api/engagement (newGemTransactions).
+    // Inserting here would double-credit the user.
 
     return { success: true, gems: gemsReward } as const;
   });
