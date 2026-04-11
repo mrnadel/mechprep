@@ -98,6 +98,30 @@ export default function PracticePage() {
             Continue Learning
           </button>
         </div>
+
+        {/* Daily Challenge is always available, even when practice is locked */}
+        <div className="px-4 pb-4 pt-4">
+          <p className="text-xs font-extrabold text-gray-400 dark:text-surface-400 uppercase tracking-wider px-1 pb-3">
+            Available now
+          </p>
+          <button
+            onClick={() => router.push('/practice/daily')}
+            className="w-full flex items-center gap-3.5 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 mb-3 text-left bg-white dark:bg-surface-900"
+          >
+            <div
+              className="w-14 h-14 rounded-2xl flex items-center justify-center text-[28px] flex-shrink-0"
+              style={{ background: 'linear-gradient(135deg, #58CC02, #46A302)' }}
+            >
+              ⚡
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-base font-extrabold text-gray-800 dark:text-surface-50">Daily Challenge</h3>
+              <p className="text-xs text-gray-500 dark:text-surface-400 font-medium mt-0.5">
+                5 themed questions, new every day
+              </p>
+            </div>
+          </button>
+        </div>
       </div>
     );
   }
