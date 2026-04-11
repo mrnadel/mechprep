@@ -102,7 +102,7 @@ export default function PracticePage() {
         {/* Daily Challenge is always available, even when practice is locked */}
         <div className="px-4 pb-4 pt-4">
           <button
-            onClick={() => router.push('/practice/daily')}
+            onClick={() => startSession('daily-challenge')}
             className="w-full flex items-center gap-3.5 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 mb-3 text-left bg-white dark:bg-surface-900"
           >
             <div
@@ -145,7 +145,7 @@ export default function PracticePage() {
   }
 
   function handleDaily() {
-    router.push('/practice/daily');
+    startSession('daily-challenge');
   }
 
   return (
