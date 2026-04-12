@@ -279,4 +279,5 @@ export interface EngagementState {
   dismissedNudges: NudgeType[];
   doubleXpExpiry: string | null; // ISO timestamp
   mistakeQuestionIds: string[];
+  lastDailyChallengeDate: string | null; // ISO date of last completed daily challenge
 }

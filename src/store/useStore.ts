@@ -497,6 +497,12 @@ export const useStore = create<AppState>()(
       showAchievementToast: null,
 
       startSession: (type, options) => {
+        // Daily challenge: one per day
+        if (type === 'daily-challenge') {
+          const lastDate = useEngagementStore.getState().lastDailyChallengeDate;
+          if (lastDate === getTodayString()) return;
+        }
+
         // Enforce Pro-only session types (client-side fast check)
         if (PRO_SESSION_TYPES.has(type)) {
           const subStore = useSubscriptionStore.getState();
@@ -817,6 +823,11 @@ export const useStore = create<AppState>()(
           .map(([id]) => id);
         if (correctIds.length > 0) {
           useEngagementStore.getState().removeMistakes(correctIds);
+        }
+
+        // Mark daily challenge as completed for today
+        if (session.type === 'daily-challenge') {
+          useEngagementStore.setState({ lastDailyChallengeDate: today });
         }
 
         // Cross-store sync: keep course store's streak in lockstep so the

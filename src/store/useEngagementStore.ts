@@ -140,6 +140,7 @@ function getDefaultState(): EngagementState {
     dismissedNudges: [],
     doubleXpExpiry: null,
     mistakeQuestionIds: [],
+    lastDailyChallengeDate: null,
   };
 }
 
@@ -1177,6 +1178,7 @@ export const useEngagementStore = create<EngagementStore>()(
             dismissedNudges: persisted.dismissedNudges ?? defaults.dismissedNudges,
             doubleXpExpiry: persisted.doubleXpExpiry ?? defaults.doubleXpExpiry,
             mistakeQuestionIds: persisted.mistakeQuestionIds ?? defaults.mistakeQuestionIds,
+            lastDailyChallengeDate: persisted.lastDailyChallengeDate ?? defaults.lastDailyChallengeDate,
           };
         },
       },

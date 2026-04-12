@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSession, useSessionActions } from '@/store/useStore';
-import { useMistakeQuestionIds } from '@/store/useEngagementStore';
+import { useMistakeQuestionIds, useEngagementStore } from '@/store/useEngagementStore';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useSubscription } from '@/hooks/useSubscription';
 import SessionView from '@/components/session/SessionView';
@@ -44,6 +44,8 @@ export default function PracticePage() {
   const [loading, setLoading] = useState(false);
   const [showUpgrade, setShowUpgrade] = useState(false);
   const { unlocked, progress, total } = useIsPracticeUnlocked();
+  const lastDailyDate = useEngagementStore((s) => s.lastDailyChallengeDate);
+  const dailyCompleted = lastDailyDate === new Date().toISOString().slice(0, 10);
 
   // Reset loading if startSession failed to produce a session (e.g. empty pool)
   useEffect(() => {
@@ -110,19 +112,20 @@ export default function PracticePage() {
         {/* Daily Challenge is always available, even when practice is locked */}
         <div className="px-4 pb-4 pt-4">
           <button
-            onClick={() => startSession('daily-challenge')}
-            className="w-full flex items-center gap-3.5 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 mb-3 text-left bg-white dark:bg-surface-900"
+            onClick={() => !dailyCompleted && startSession('daily-challenge')}
+            disabled={dailyCompleted}
+            className={`w-full flex items-center gap-3.5 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 mb-3 text-left bg-white dark:bg-surface-900 ${dailyCompleted ? 'opacity-60' : ''}`}
           >
             <div
               className="w-14 h-14 rounded-2xl flex items-center justify-center text-[28px] flex-shrink-0"
-              style={{ background: 'linear-gradient(135deg, #58CC02, #46A302)' }}
+              style={{ background: dailyCompleted ? '#9CA3AF' : 'linear-gradient(135deg, #58CC02, #46A302)' }}
             >
-              ⚡
+              {dailyCompleted ? '✅' : '⚡'}
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="text-base font-extrabold text-gray-800 dark:text-surface-50">Daily Challenge</h3>
               <p className="text-xs text-gray-500 dark:text-surface-400 font-medium mt-0.5">
-                5 themed questions, new every day
+                {dailyCompleted ? 'Completed today. Come back tomorrow!' : '5 themed questions, new every day'}
               </p>
             </div>
           </button>
@@ -232,18 +235,19 @@ export default function PracticePage() {
         {/* Daily Challenge Card */}
         <button
           onClick={handleDaily}
-          className="w-full flex items-center gap-3.5 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 mb-3 text-left bg-white dark:bg-surface-900"
+          disabled={dailyCompleted}
+          className={`w-full flex items-center gap-3.5 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 mb-3 text-left bg-white dark:bg-surface-900 ${dailyCompleted ? 'opacity-60' : ''}`}
         >
           <div
             className="w-14 h-14 rounded-2xl flex items-center justify-center text-[28px] flex-shrink-0"
-            style={{ background: 'linear-gradient(135deg, #58CC02, #46A302)' }}
+            style={{ background: dailyCompleted ? '#9CA3AF' : 'linear-gradient(135deg, #58CC02, #46A302)' }}
           >
-            ⚡
+            {dailyCompleted ? '✅' : '⚡'}
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="text-base font-extrabold text-gray-800 dark:text-surface-50">Daily Challenge</h3>
             <p className="text-xs text-gray-500 dark:text-surface-400 font-medium mt-0.5">
-              5 themed questions, new every day
+              {dailyCompleted ? 'Completed today. Come back tomorrow!' : '5 themed questions, new every day'}
             </p>
           </div>
         </button>
