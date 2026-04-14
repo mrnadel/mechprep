@@ -70,9 +70,10 @@ interface TeachingCardProps {
   characterId?: string | null;
   characterName?: string | null;
   characterLine?: string | null;
+  lessonId?: string;
 }
 
-export default function TeachingCard({ question, unitColor, onGotIt, hasBackground, bgTheme, characterId, characterName, characterLine }: TeachingCardProps) {
+export default function TeachingCard({ question, unitColor, onGotIt, hasBackground, bgTheme, characterId, characterName, characterLine, lessonId }: TeachingCardProps) {
   const isDark = useIsDark();
   const tc = getTeachingColors({
     isDark,
@@ -143,7 +144,7 @@ export default function TeachingCard({ question, unitColor, onGotIt, hasBackgrou
             <span style={{ fontSize: 11, fontWeight: 800, color: tc.accentSoft, textTransform: 'uppercase', letterSpacing: 0.5 }}>{characterName}</span>
           )}
           {question.explanation && (
-            <AudioButton text={question.explanation} characterId={characterId} color={tc.accentSoft} size={18} />
+            <AudioButton lessonId={lessonId} cardId={question.id} text={question.explanation} color={tc.accentSoft} size={18} />
           )}
         </motion.div>
 

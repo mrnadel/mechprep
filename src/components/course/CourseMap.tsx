@@ -17,6 +17,7 @@ import { UnitHeroHeader, HERO_COMPACT_HEIGHT } from './UnitHeroHeader';
 import { useIsDark } from '@/store/useThemeStore';
 import { useMasteryStore } from '@/store/useMasteryStore';
 import { getDecayedQuestions } from '@/lib/review-engine';
+import { ActiveEventBanner } from '@/components/ui/ActiveEventBanner';
 
 type JumpModalType =
   | { kind: 'within-unit'; unitIndex: number; lessonIndex: number }
@@ -675,10 +676,13 @@ export function CourseMap() {
         />
       )}
 
+      {/* Compact floating XP-event bar below unit header */}
+      <ActiveEventBanner positionStyle={headerStyle} />
+
       {/* Units container */}
       <div
         className="flex flex-col px-3 sm:px-4 mx-auto"
-        style={{ paddingTop: HERO_COMPACT_HEIGHT + 14, paddingBottom: 0, gap: 0, maxWidth: 520 }}
+        style={{ paddingTop: HERO_COMPACT_HEIGHT + 16, paddingBottom: 0, gap: 0, maxWidth: 520 }}
       >
         {currentSection.units.map(({ unit, globalIndex: unitIndex }, localIdx) => {
           const theme = getUnitTheme(unitIndex);

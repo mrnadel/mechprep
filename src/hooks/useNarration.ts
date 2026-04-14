@@ -1,12 +1,34 @@
 'use client';
 
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import { useNarrationStore } from '@/store/useNarrationStore';
-import { getKokoroClient } from '@/lib/kokoro-client';
-import { getVoiceForCharacter } from '@/data/voice-config';
-import { getSharedAudioContext } from '@/lib/kokoro-audio-ctx';
 
-const SAMPLE_RATE = 24000;
+const TTS_BASE_URL = process.env.NEXT_PUBLIC_TTS_BLOB_URL || '';
+
+/** Pick the best available English voice for browser TTS fallback. */
+function pickBestVoice(preferredName: string | null): SpeechSynthesisVoice | null {
+  const voices = speechSynthesis.getVoices();
+  if (voices.length === 0) return null;
+  if (preferredName) {
+    const match = voices.find((v) => v.name === preferredName);
+    if (match) return match;
+  }
+  const english = voices.filter((v) => v.lang.startsWith('en'));
+  if (english.length === 0) return voices[0];
+  const score = (v: SpeechSynthesisVoice) => {
+    let s = 0;
+    const n = v.name.toLowerCase();
+    if (n.includes('natural')) s += 10;
+    if (n.includes('google')) s += 8;
+    if (n.includes('samantha')) s += 7;
+    if (n.includes('neural')) s += 6;
+    if (n.includes('online')) s += 4;
+    if (!v.localService) s += 2;
+    if (v.lang === 'en-US') s += 1;
+    return s;
+  };
+  return english.sort((a, b) => score(b) - score(a))[0];
+}
 
 function cleanTextForSpeech(text: string): string {
   return text
@@ -14,125 +36,103 @@ function cleanTextForSpeech(text: string): string {
     .replace(/\*(.*?)\*/g, '$1')
     .replace(/`(.*?)`/g, '$1')
     .replace(/\[(.*?)\]\(.*?\)/g, '$1')
-    .replace(/[#>-]/g, '')
+    .replace(/^[#>]+\s*/gm, '')
+    .replace(/^-\s+/gm, '')
     .trim();
 }
 
-function playPCM(
-  ctx: AudioContext,
-  pcm: Float32Array,
-  playbackRate: number,
-): AudioBufferSourceNode {
-  const buffer = ctx.createBuffer(1, pcm.length, SAMPLE_RATE);
-  buffer.getChannelData(0).set(pcm);
-  const source = ctx.createBufferSource();
-  source.buffer = buffer;
-  source.playbackRate.value = playbackRate;
-  source.connect(ctx.destination);
-  source.start();
-  return source;
-}
-
+/**
+ * Narration hook that plays pre-generated Kokoro TTS from Vercel Blob,
+ * falling back to browser speechSynthesis when files aren't available.
+ */
 export function useNarration() {
   const enabled = useNarrationStore((s) => s.enabled);
+  const voiceName = useNarrationStore((s) => s.voiceName);
   const rate = useNarrationStore((s) => s.rate);
-  const [modelReady, setModelReady] = useState(false);
-  const [modelProgress, setModelProgress] = useState(0);
-  const sourceRef = useRef<AudioBufferSourceNode | null>(null);
-  const abortRef = useRef(0);
+  const resolvedVoiceRef = useRef<SpeechSynthesisVoice | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Lazy-init the Kokoro model when narration is first enabled
+  // Resolve browser TTS voice
   useEffect(() => {
-    if (!enabled) return;
-    const client = getKokoroClient();
-    if (client.isReady) {
-      setModelReady(true);
-      return;
+    const resolve = () => {
+      const voice = pickBestVoice(voiceName);
+      if (voice) resolvedVoiceRef.current = voice;
+    };
+    resolve();
+    if (!resolvedVoiceRef.current) {
+      speechSynthesis.addEventListener('voiceschanged', resolve, { once: true });
+      return () => speechSynthesis.removeEventListener('voiceschanged', resolve);
     }
-    console.log('[narration] Initializing Kokoro TTS...');
-    client.init(
-      (progress) => {
-        setModelProgress(progress);
-        if (progress % 20 === 0) console.log(`[narration] Loading model: ${progress}%`);
-      },
-      () => {
-        console.log('[narration] Model ready!');
-        setModelReady(true);
-      },
-    ).catch((err) => {
-      console.error('[narration] Model failed to load:', err);
-    });
+  }, [voiceName]);
+
+  // Cleanup on unmount or disable
+  useEffect(() => {
+    if (!enabled) {
+      speechSynthesis.cancel();
+      if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
+    }
+    return () => {
+      speechSynthesis.cancel();
+      if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
+    };
   }, [enabled]);
 
-  useEffect(() => {
-    return () => {
-      try { sourceRef.current?.stop(); } catch { /* */ }
-      sourceRef.current = null;
-    };
-  }, []);
-
   const stop = useCallback(() => {
-    abortRef.current++;
-    if (sourceRef.current) {
-      try { sourceRef.current.stop(); } catch { /* */ }
-      sourceRef.current = null;
-    }
+    speechSynthesis.cancel();
+    if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
   }, []);
 
-  const speakWithCharacter = useCallback(
-    async (text: string, characterId?: string | null) => {
+  /** Speak using browser TTS (fallback). */
+  const speak = useCallback(
+    (text: string) => {
       if (!enabled || !text) return;
       stop();
-
-      const client = getKokoroClient();
-      if (!client.isReady) {
-        console.log('[narration] Model not ready, skipping');
-        return;
-      }
-
       const cleaned = cleanTextForSpeech(text);
       if (!cleaned) return;
-
-      const { voice } = getVoiceForCharacter(characterId ?? null);
-      const token = ++abortRef.current;
-
-      console.log(`[narration] Speaking: voice=${voice}, text="${cleaned.slice(0, 50)}..."`);
-
-      try {
-        const pcm = await client.generate(cleaned, voice, 0.95);
-        if (abortRef.current !== token) return;
-
-        console.log(`[narration] Got audio: ${pcm.length} samples (${(pcm.length / SAMPLE_RATE).toFixed(1)}s)`);
-
-        const ctx = getSharedAudioContext();
-        if (ctx.state === 'suspended') {
-          await ctx.resume();
-        }
-
-        sourceRef.current = playPCM(ctx, pcm, rate);
-        console.log('[narration] Playing audio');
-      } catch (err) {
-        console.error('[narration] Generate/play error:', err);
-      }
+      const utterance = new SpeechSynthesisUtterance(cleaned);
+      if (resolvedVoiceRef.current) utterance.voice = resolvedVoiceRef.current;
+      utterance.rate = rate;
+      speechSynthesis.speak(utterance);
     },
     [enabled, rate, stop],
   );
 
-  const prefetch = useCallback(
-    (texts: { text: string; characterId?: string | null }[]) => {
+  /**
+   * Play pre-generated TTS from Vercel Blob.
+   * Falls back to browser TTS if Blob URL isn't configured or file 404s.
+   */
+  const speakFromFile = useCallback(
+    (lessonId: string, cardId: string, suffix?: 'q' | 'exp', fallbackText?: string) => {
       if (!enabled) return;
-      const client = getKokoroClient();
-      if (!client.isReady) return;
+      stop();
 
-      for (const { text, characterId } of texts) {
-        const cleaned = cleanTextForSpeech(text);
-        if (!cleaned) continue;
-        const { voice } = getVoiceForCharacter(characterId ?? null);
-        client.prefetch(cleaned, voice, 0.95);
+      if (!TTS_BASE_URL) {
+        // No Blob configured — use browser TTS
+        if (fallbackText) speak(fallbackText);
+        return;
       }
+
+      const filename = suffix ? `${cardId}-${suffix}` : cardId;
+      const url = `${TTS_BASE_URL}/tts/${lessonId}/${filename}.ogg`;
+      const audio = new Audio(url);
+      audio.playbackRate = rate;
+      audioRef.current = audio;
+
+      audio.onplay = () => {};
+      audio.onended = () => { audioRef.current = null; };
+      audio.onerror = () => {
+        // File doesn't exist — fall back to browser TTS
+        audioRef.current = null;
+        if (fallbackText) speak(fallbackText);
+      };
+
+      audio.play().catch(() => {
+        audioRef.current = null;
+        if (fallbackText) speak(fallbackText);
+      });
     },
-    [enabled],
+    [enabled, rate, stop, speak],
   );
 
-  return { speakWithCharacter, prefetch, stop, enabled, modelReady, modelProgress };
+  return { speak, speakFromFile, stop, enabled };
 }

@@ -85,7 +85,7 @@ export function CharacterAvatar({ characterId, pose, size = 80, className, prior
       width={size}
       height={size}
       className={className}
-      style={{ width: 'auto', height: 'auto' }}
+      style={{ width: size, height: size, objectFit: 'contain' }}
       draggable={false}
       priority={priority}
       unoptimized

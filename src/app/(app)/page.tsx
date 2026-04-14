@@ -4,7 +4,6 @@ import { useState, useEffect, useMemo, useRef, useCallback, lazy, Suspense } fro
 import { useSession } from 'next-auth/react';
 import { CourseHeader } from '@/components/course/CourseHeader';
 import { CourseMap } from '@/components/course/CourseMap';
-import { ActiveEventBanner } from '@/components/ui/ActiveEventBanner';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useStore } from '@/store/useStore';
 import { useEngagementStore, grantTitle, grantFrame } from '@/store/useEngagementStore';
@@ -336,11 +335,6 @@ export default function HomePage() {
 
       {/* Header */}
       <CourseHeader />
-
-      {/* Active XP events (weekend double XP, power hour, league sprint) */}
-      <div className="px-4 max-w-lg mx-auto">
-        <ActiveEventBanner />
-      </div>
 
       {/* Streak nudge banner for returning users (Day-1 / Day-2) */}
       {flagStreaks && (

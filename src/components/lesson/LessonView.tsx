@@ -769,51 +769,44 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
     return getCelebrationLine(celebration.type, lessonCharacter.id, charLines);
   }, [lessonCharacter, charLines, celebration]);
 
-  // === NARRATION (client-side Kokoro TTS) ===
-  const { speakWithCharacter, prefetch: prefetchAudio, stop: stopNarration, modelReady } = useNarration();
+  // === NARRATION (Kokoro TTS via Blob CDN, browser TTS fallback) ===
+  const { speakFromFile, speak: narrateText, stop: stopNarration } = useNarration();
   const currentCharacterId = lessonCharacter?.id ?? null;
+  const currentLessonId = lessonData?.lesson.id ?? null;
 
-  // Narrate the current card when it changes (or when model finishes loading)
+  // Narrate when card changes
   useEffect(() => {
-    if (!displayQuestion || !modelReady) return;
+    if (!displayQuestion) return;
 
-    if (displayQuestion.type === 'teaching') {
-      if (displayQuestion.explanation) {
-        speakWithCharacter(displayQuestion.explanation, currentCharacterId);
+    if (currentLessonId) {
+      // Try pre-generated Kokoro audio from Blob, fall back to browser TTS
+      if (displayQuestion.type === 'teaching') {
+        speakFromFile(currentLessonId, displayQuestion.id, undefined, displayQuestion.explanation);
+      } else {
+        speakFromFile(currentLessonId, displayQuestion.id, 'q', displayQuestion.question);
       }
     } else {
-      if (displayQuestion.question) {
-        speakWithCharacter(displayQuestion.question, currentCharacterId);
-      }
+      // Practice mode — browser TTS only
+      const parts: string[] = [];
+      if (displayQuestion.question) parts.push(displayQuestion.question);
+      if (displayQuestion.type === 'teaching' && displayQuestion.explanation) parts.push(displayQuestion.explanation);
+      narrateText(parts.join('. '));
     }
-
-    // Look-ahead: pre-generate audio for next 3 cards while user reads this one
-    const idx = activeLesson?.currentQuestionIndex ?? 0;
-    const upcoming: { text: string; characterId?: string | null }[] = [];
-    for (let i = idx + 1; i <= idx + 3 && i < lessonSessionQuestions.length; i++) {
-      const q = lessonSessionQuestions[i];
-      if (!q) continue;
-      if (q.type === 'teaching' && q.explanation) {
-        upcoming.push({ text: q.explanation, characterId: currentCharacterId });
-      } else if (q.question) {
-        upcoming.push({ text: q.question, characterId: currentCharacterId });
-      }
-      if (q.explanation) {
-        upcoming.push({ text: q.explanation, characterId: currentCharacterId });
-      }
-    }
-    if (upcoming.length) prefetchAudio(upcoming);
 
     return () => stopNarration();
-  }, [displayQuestion?.id, modelReady]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [displayQuestion?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Narrate the explanation when an answer is revealed
+  // Narrate explanation when answer is revealed
   useEffect(() => {
     if (lastAnswerCorrect === null || !displayQuestion || displayQuestion.type === 'teaching') return;
     if (!displayQuestion.explanation) return;
 
-    speakWithCharacter(displayQuestion.explanation, currentCharacterId);
-  }, [lastAnswerCorrect, displayQuestion?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+    if (currentLessonId) {
+      speakFromFile(currentLessonId, displayQuestion.id, 'exp', displayQuestion.explanation);
+    } else {
+      narrateText(displayQuestion.explanation);
+    }
+  }, [lastAnswerCorrect, displayQuestion?.id]); // eslint-disable-line react-hooks-exhaustive-deps
 
   if (!displayQuestion && !isNonStandard) return null;
 
@@ -1204,6 +1197,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                     characterId={lessonCharacter?.id}
                     characterName={lessonCharacter?.name}
                     characterLine={teachingLine}
+                    lessonId={currentLessonId ?? undefined}
                   />
                 ) : displayQuestion.type === 'sort-buckets' ? (
                   <SortBucketsCard
@@ -1454,8 +1448,10 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   </p>
                   {displayQuestion.explanation && (
                     <AudioButton
+                      lessonId={currentLessonId ?? undefined}
+                      cardId={displayQuestion.id}
+                      suffix="exp"
                       text={displayQuestion.explanation}
-                      characterId={currentCharacterId}
                       color={lastAnswerCorrect ? '#58A700' : '#EA2B2B'}
                       size={16}
                     />

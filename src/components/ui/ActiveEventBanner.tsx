@@ -2,17 +2,22 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { X } from 'lucide-react';
 import { useSubscription } from '@/hooks/useSubscription';
 import { getActiveXpEvents, formatEventTimeLeft, type ActiveXpEvent } from '@/lib/xp-events';
+import { HERO_COMPACT_HEIGHT } from '@/components/course/UnitHeroHeader';
+import { useIsDark } from '@/store/useThemeStore';
 
-/**
- * Shows active XP event banners (weekend double XP, power hour, league sprint).
- * Auto-refreshes every 30 seconds to detect new events.
- * Per-event countdown updates every second when < 10 min remaining.
- */
-export function ActiveEventBanner() {
+/** Compact floating XP-event pill below the UnitHeroHeader. */
+export function ActiveEventBanner({
+  positionStyle,
+}: {
+  positionStyle: { top: number; left: number; width: number };
+}) {
   const { isProUser } = useSubscription();
+  const isDark = useIsDark();
   const [events, setEvents] = useState<ActiveXpEvent[]>([]);
+  const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
     const refresh = () => setEvents(getActiveXpEvents(isProUser));
@@ -21,85 +26,103 @@ export function ActiveEventBanner() {
     return () => clearInterval(interval);
   }, [isProUser]);
 
-  if (events.length === 0) return null;
-
-  const totalMultiplier = events.reduce((sum, e) => sum + (e.multiplier - 1), 1);
+  if (dismissed || events.length === 0 || !positionStyle) return null;
 
   return (
-    <div className="space-y-2 mb-4" role="region" aria-label="Active XP events">
-      {events.length > 1 && (
-        <div className="text-center text-xs font-bold text-surface-500 dark:text-surface-400">
-          Combined: {totalMultiplier.toFixed(1)}x XP
-        </div>
-      )}
-      <AnimatePresence>
-        {events.map((event) => (
-          <EventCard key={event.id} event={event} />
-        ))}
-      </AnimatePresence>
+    <div
+      style={{
+        position: 'fixed',
+        top: positionStyle.top + HERO_COMPACT_HEIGHT + 2,
+        left: positionStyle.left,
+        width: positionStyle.width,
+        zIndex: 29,
+        pointerEvents: 'none',
+        transition: 'top 0.15s ease',
+      }}
+    >
+      <div className="mx-auto px-3 sm:px-4" style={{ maxWidth: 520, pointerEvents: 'auto' }}>
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+            className="flex items-center justify-center gap-2 rounded-full py-1 px-2.5"
+            style={{
+              background: isDark ? 'rgba(30,41,59,0.92)' : 'rgba(255,255,255,0.92)',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
+              border: isDark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.06)',
+              boxShadow: isDark ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.08)',
+            }}
+            role="region"
+            aria-label="Active XP events"
+          >
+            {events.map((ev) => (
+              <EventChip key={ev.id} event={ev} />
+            ))}
+
+            {/* Close */}
+            <button
+              onClick={() => setDismissed(true)}
+              className="flex items-center justify-center rounded-full opacity-30 hover:opacity-60 transition-opacity"
+              style={{ width: 18, height: 18, flexShrink: 0 }}
+              aria-label="Dismiss event banner"
+            >
+              <X size={12} />
+            </button>
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
 
-function EventCard({ event }: { event: ActiveXpEvent }) {
+function EventChip({ event }: { event: ActiveXpEvent }) {
   const [timeLeft, setTimeLeft] = useState(formatEventTimeLeft(event.endsAt));
+  const isDark = useIsDark();
 
   useEffect(() => {
     const updateTime = () => setTimeLeft(formatEventTimeLeft(event.endsAt));
-    // Use 1-second updates when <10 min remaining, else 30s
     const msRemaining = new Date(event.endsAt).getTime() - Date.now();
     const intervalMs = msRemaining < 10 * 60 * 1000 ? 1000 : 30_000;
     const interval = setInterval(updateTime, intervalMs);
     return () => clearInterval(interval);
   }, [event.endsAt]);
 
-  const gradients: Record<string, string> = {
-    'weekend-double-xp': 'from-purple-100 to-indigo-100 border-purple-300 dark:from-purple-500/20 dark:to-indigo-500/20 dark:border-purple-400/30',
-    'power-hour': 'from-amber-100 to-orange-100 border-amber-300 dark:from-amber-500/20 dark:to-orange-500/20 dark:border-amber-400/30',
-    'league-sprint': 'from-emerald-100 to-teal-100 border-emerald-300 dark:from-emerald-500/20 dark:to-teal-500/20 dark:border-emerald-400/30',
+  const badgeColor: Record<string, string> = {
+    'power-hour': isDark ? '#FCD34D' : '#92400E',
+    'weekend-double-xp': isDark ? '#C084FC' : '#6D28D9',
+    'league-sprint': isDark ? '#6EE7B7' : '#065F46',
   };
 
-  const textColors: Record<string, string> = {
-    'weekend-double-xp': 'text-purple-700 dark:text-purple-300',
-    'power-hour': 'text-amber-700 dark:text-amber-300',
-    'league-sprint': 'text-emerald-700 dark:text-emerald-300',
+  const badgeBg: Record<string, string> = {
+    'power-hour': isDark ? 'rgba(251,191,36,0.2)' : 'rgba(251,191,36,0.15)',
+    'weekend-double-xp': isDark ? 'rgba(168,85,247,0.2)' : 'rgba(139,92,246,0.12)',
+    'league-sprint': isDark ? 'rgba(52,211,153,0.2)' : 'rgba(16,185,129,0.12)',
   };
-
-  const gradient = gradients[event.id] ?? gradients['power-hour'];
-  const textColor = textColors[event.id] ?? textColors['power-hour'];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -8, scale: 0.97 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -8, scale: 0.97 }}
-      transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-      className={`rounded-xl bg-gradient-to-r ${gradient} border px-4 py-3 flex items-center justify-between`}
+    <div
+      className="flex items-center gap-1 cursor-default"
+      title={`${event.name} — ${event.multiplier}x XP for ${timeLeft}`}
     >
-      <div className="flex items-center gap-3">
-        <motion.span
-          className="text-xl"
-          animate={{ scale: [1, 1.15, 1] }}
-          transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-        >
-          {event.icon}
-        </motion.span>
-        <div>
-          <div className={`text-sm font-bold ${textColor}`}>
-            {event.name}
-          </div>
-          <div className="text-xs text-surface-500 dark:text-surface-400">
-            <span aria-live="polite" aria-atomic="true">{timeLeft}</span>
-          </div>
-        </div>
-      </div>
-      <div
-        className="flex items-center gap-1.5 rounded-full bg-white/80 dark:bg-white/10 px-2.5 py-1"
-        aria-label={`${event.multiplier}x XP multiplier`}
+      <span className="text-xs leading-none">{event.icon}</span>
+      <span
+        className="text-[11px] font-bold tabular-nums"
+        style={{ color: isDark ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.45)' }}
       >
-        <span className="text-xs font-black tabular-nums">{event.multiplier}x</span>
-        <span className="text-[10px] font-semibold text-surface-500">XP</span>
-      </div>
-    </motion.div>
+        {timeLeft}
+      </span>
+      <span
+        className="text-[10px] font-black tabular-nums rounded-full px-1.5 py-px"
+        style={{
+          background: badgeBg[event.id] ?? badgeBg['power-hour'],
+          color: badgeColor[event.id] ?? badgeColor['power-hour'],
+        }}
+      >
+        {event.multiplier}x
+      </span>
+    </div>
   );
 }

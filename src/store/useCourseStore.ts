@@ -439,7 +439,7 @@ export const useCourseStore = create<CourseState>()(
 
         // XP based on accuracy performance within this session
         const isFlawless = accuracy === 100 && totalQuestions >= 3;
-        const accuracyMultiplier = isFlawless ? 4 : calculateStars(accuracy); // 4x flawless, 1-3 otherwise
+        const accuracyMultiplier = isFlawless ? 1.5 : 1; // bonus for perfect accuracy
         // Double XP check with tamper validation (shop-purchased boost)
         const engState = useEngagementStore.getState();
         const doubleXpExpiry = engState.doubleXpExpiry;

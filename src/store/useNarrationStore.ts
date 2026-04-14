@@ -28,11 +28,10 @@ export const useNarrationStore = create<NarrationState>()(
         voiceName: state.voiceName,
         rate: state.rate,
       }),
-      // Force narration enabled for new TTS feature rollout
       merge: (persisted, current) => ({
         ...current,
         ...(persisted as Partial<NarrationState>),
-        enabled: true,
+        enabled: false,
       }),
     },
   ),
